@@ -1,17 +1,17 @@
-package app.aaps.ui.compose.testing
+﻿package app.gmaaps.ui.compose.testing
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.TT
-import app.aaps.core.data.model.TTPreset
-import app.aaps.core.interfaces.bolus.BatchExecutor
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.tempTargets.toJson
-import app.aaps.core.keys.StringNonKey
-import app.aaps.ui.compose.tempTarget.TempTargetManagementViewModel
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.data.model.TTPreset
+import app.gmaaps.core.interfaces.bolus.BatchExecutor
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.tempTargets.toJson
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.ui.compose.tempTarget.TempTargetManagementViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -83,3 +83,4 @@ class TempTargetManagementViewModelFixture(private val screen: AapsScreenFixture
         const val NOW = 1_700_000_000_000L
     }
 }
+

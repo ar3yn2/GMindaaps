@@ -1,9 +1,9 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.TABLE_TEMPORARY_TARGETS
-import app.aaps.database.entities.TemporaryTarget
+import app.gmaaps.database.entities.TABLE_TEMPORARY_TARGETS
+import app.gmaaps.database.entities.TemporaryTarget
 
 @Dao
 internal interface TemporaryTargetDao : TraceableDao<TemporaryTarget> {
@@ -51,3 +51,4 @@ internal interface TemporaryTargetDao : TraceableDao<TemporaryTarget> {
     @Query("SELECT * FROM $TABLE_TEMPORARY_TARGETS WHERE dateCreated > :since AND dateCreated <= :until LIMIT :limit OFFSET :offset")
     suspend fun getNewEntriesSince(since: Long, until: Long, limit: Int, offset: Int): List<TemporaryTarget>
 }
+

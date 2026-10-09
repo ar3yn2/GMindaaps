@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.ext
+﻿package app.gmaaps.pump.carelevo.ext
 
 import androidx.annotation.StringRes
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
 
 /**
  * All display resources for one [AlarmCause]: title, notification text ([notificationDescRes]) and
@@ -230,3 +230,4 @@ fun AlarmCause.stringResources(): AlarmStringResources = when (this) {
         R.string.common_btn_ok
     )
 }
+

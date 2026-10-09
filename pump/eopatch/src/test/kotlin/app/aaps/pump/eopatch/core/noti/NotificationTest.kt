@@ -1,7 +1,7 @@
-package app.aaps.pump.eopatch.core.noti
+﻿package app.gmaaps.pump.eopatch.core.noti
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.eopatch.core.code.BolusType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.eopatch.core.code.BolusType
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.mock
@@ -109,3 +109,4 @@ class NotificationTest {
         assertThat(alarm.lastFinishedIndex).isEqualTo(-1)
     }
 }
+

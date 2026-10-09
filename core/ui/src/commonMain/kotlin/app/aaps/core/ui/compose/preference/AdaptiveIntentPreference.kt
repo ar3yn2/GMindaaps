@@ -1,8 +1,8 @@
-/*
+﻿/*
  * Adaptive Intent Preferences for Jetpack Compose
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -11,12 +11,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalUriHandler
-import app.aaps.core.keys.interfaces.IntentPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.ui.compose.ComposeScreenContent
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.keys.interfaces.IntentPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.ui.compose.ComposeScreenContent
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Composable intent preference for use inside card sections.
@@ -137,3 +137,4 @@ fun AdaptiveComposeScreenPreferenceItem(
         } else null
     )
 }
+

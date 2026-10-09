@@ -1,6 +1,6 @@
-package app.aaps.implementation.maintenance.cloud
+﻿package app.gmaaps.implementation.maintenance.cloud
 
-import app.aaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.AAPSLogger
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -26,3 +26,4 @@ class IosAuthRedirectListener(aapsLogger: AAPSLogger) : AuthRedirectListener {
 
     override fun stop() = server.stop()
 }
+

@@ -1,57 +1,57 @@
-package app.aaps.shared.tests
+﻿package app.gmaaps.shared.tests
 
 import android.app.Application
 import android.content.res.Resources
 import android.content.res.TypedArray
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.PS
-import app.aaps.core.interfaces.aps.APSResult
-import app.aaps.core.interfaces.aps.GlucoseStatus
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.db.ProcessedTbrEbData
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.profile.ProfileStore
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.interfaces.utils.HardLimits
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.AppPlatform
-import app.aaps.core.keys.interfaces.BooleanNonPreferenceKey
-import app.aaps.core.keys.interfaces.DoubleNonPreferenceKey
-import app.aaps.core.keys.interfaces.IntNonPreferenceKey
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.UnitDoublePreferenceKey
-import app.aaps.core.objects.extensions.pureProfileFromJson
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.core.ui.R
-import app.aaps.implementation.aps.DetermineBasalResult
-import app.aaps.implementation.profile.ProfileStoreObject
-import app.aaps.implementation.profile.ProfileUtilImpl
-import app.aaps.implementation.pump.PumpEnactResultObject
-import app.aaps.implementation.utils.DecimalFormatterImpl
-import app.aaps.plugins.aps.openAPS.DeltaCalculator
-import app.aaps.plugins.aps.openAPSSMB.GlucoseStatusCalculatorSMB
-import app.aaps.shared.impl.utils.DateUtilImpl
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.aps.GlucoseStatus
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.db.ProcessedTbrEbData
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.profile.ProfileStore
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.interfaces.utils.HardLimits
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.AppPlatform
+import app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.DoubleNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.UnitDoublePreferenceKey
+import app.gmaaps.core.objects.extensions.pureProfileFromJson
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.core.ui.R
+import app.gmaaps.implementation.aps.DetermineBasalResult
+import app.gmaaps.implementation.profile.ProfileStoreObject
+import app.gmaaps.implementation.profile.ProfileUtilImpl
+import app.gmaaps.implementation.pump.PumpEnactResultObject
+import app.gmaaps.implementation.utils.DecimalFormatterImpl
+import app.gmaaps.plugins.aps.openAPS.DeltaCalculator
+import app.gmaaps.plugins.aps.openAPSSMB.GlucoseStatusCalculatorSMB
+import app.gmaaps.shared.impl.utils.DateUtilImpl
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonObject
@@ -76,7 +76,7 @@ open class TestBaseWithProfile : TestBase() {
 
     /**
      * Real English for the five owners `:shared:tests` can see, for the collaborators this base builds
-     * itself. They take a [app.aaps.core.interfaces.resources.TextResolver], and handing them the mocked
+     * itself. They take a [app.gmaaps.core.interfaces.resources.TextResolver], and handing them the mocked
      * [rh] meant an unstubbed string came back as its own name - that is how `result.comment` read
      * "alreadyset" instead of "Already set".
      *
@@ -380,3 +380,4 @@ open class TestBaseWithProfile : TestBase() {
         return ProfileStoreObject(aapsLogger, activePlugin, baseText, hardLimits, dateUtil).with(Json.parseToJsonElement(json.toString()).jsonObject)
     }
 }
+

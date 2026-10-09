@@ -1,23 +1,23 @@
-package app.aaps.implementation.maintenance
+﻿package app.gmaaps.implementation.maintenance
 
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.documentfile.provider.DocumentFile
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LoggerUtils
-import app.aaps.core.interfaces.maintenance.ExportResult
-import app.aaps.core.interfaces.maintenance.FileListProvider
-import app.aaps.core.interfaces.maintenance.Maintenance
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.sync.NsClient
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.implementation.maintenance.cloud.CloudConstants
-import app.aaps.implementation.maintenance.cloud.CloudStorageManager
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LoggerUtils
+import app.gmaaps.core.interfaces.maintenance.ExportResult
+import app.gmaaps.core.interfaces.maintenance.FileListProvider
+import app.gmaaps.core.interfaces.maintenance.Maintenance
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.sync.NsClient
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.implementation.maintenance.cloud.CloudConstants
+import app.gmaaps.implementation.maintenance.cloud.CloudStorageManager
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -197,8 +197,8 @@ class MaintenanceImpl(
         builder.append("Build: " + config.BUILD_VERSION + System.lineSeparator())
         builder.append("Remote: " + config.REMOTE + System.lineSeparator())
         builder.append("Flavor: " + config.FLAVOR + config.BUILD_TYPE + System.lineSeparator())
-        builder.append(rh.gs(app.aaps.core.ui.R.string.configbuilder_nightscoutversion_label) + " " + (nsClient.detectedNsVersion() ?: "UNKNOWN") + System.lineSeparator())
-        if (config.isEngineeringMode()) builder.append(rh.gs(app.aaps.core.ui.R.string.engineering_mode_enabled))
+        builder.append(rh.gs(app.gmaaps.core.ui.R.string.configbuilder_nightscoutversion_label) + " " + (nsClient.detectedNsVersion() ?: "UNKNOWN") + System.lineSeparator())
+        if (config.isEngineeringMode()) builder.append(rh.gs(app.gmaaps.core.ui.R.string.engineering_mode_enabled))
         val body = builder.toString()
         aapsLogger.debug("sending email to $recipient with subject $subject")
         val emailIntent = Intent(Intent.ACTION_SEND)
@@ -211,3 +211,4 @@ class MaintenanceImpl(
         return emailIntent
     }
 }
+

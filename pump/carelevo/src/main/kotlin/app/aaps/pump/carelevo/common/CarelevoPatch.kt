@@ -1,47 +1,47 @@
-package app.aaps.pump.carelevo.common
+﻿package app.gmaaps.pump.carelevo.common
 
-import app.aaps.core.data.model.TE
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventCustomActionsChanged
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.carelevo.ble.CarelevoBleTransport
-import app.aaps.pump.carelevo.ble.UnsolicitedMessage
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotResponse
-import app.aaps.pump.carelevo.ble.commands.InfusionInfoCommand
-import app.aaps.pump.carelevo.ble.data.BleState
-import app.aaps.pump.carelevo.ble.data.DeviceModuleState
-import app.aaps.pump.carelevo.ble.data.isAvailable
-import app.aaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
-import app.aaps.pump.carelevo.common.keys.CarelevoStringNonKey
-import app.aaps.pump.carelevo.common.model.PatchState
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.model.bt.InfusionModeResult.Companion.codeToInfusionModeCommand
-import app.aaps.pump.carelevo.domain.model.bt.InfusionModeResult.Companion.commandToCode
-import app.aaps.pump.carelevo.domain.model.bt.PumpStateResult.Companion.codeToPumpStateCommand
-import app.aaps.pump.carelevo.domain.model.bt.PumpStateResult.Companion.commandToCode
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
-import app.aaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
-import app.aaps.pump.carelevo.domain.usecase.infusion.CarelevoInfusionInfoMonitorUseCase
-import app.aaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpResumeUseCase
-import app.aaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpStopUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchInfoMonitorUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchRptInfusionInfoProcessUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.model.CarelevoPatchRptInfusionInfoRequestModel
-import app.aaps.pump.carelevo.domain.usecase.userSetting.CarelevoCreateUserSettingInfoUseCase
-import app.aaps.pump.carelevo.domain.usecase.userSetting.CarelevoUserSettingInfoMonitorUseCase
-import app.aaps.pump.carelevo.domain.usecase.userSetting.model.CarelevoUserSettingInfoRequestModel
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventCustomActionsChanged
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.carelevo.ble.CarelevoBleTransport
+import app.gmaaps.pump.carelevo.ble.UnsolicitedMessage
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotResponse
+import app.gmaaps.pump.carelevo.ble.commands.InfusionInfoCommand
+import app.gmaaps.pump.carelevo.ble.data.BleState
+import app.gmaaps.pump.carelevo.ble.data.DeviceModuleState
+import app.gmaaps.pump.carelevo.ble.data.isAvailable
+import app.gmaaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
+import app.gmaaps.pump.carelevo.common.keys.CarelevoStringNonKey
+import app.gmaaps.pump.carelevo.common.model.PatchState
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.model.bt.InfusionModeResult.Companion.codeToInfusionModeCommand
+import app.gmaaps.pump.carelevo.domain.model.bt.InfusionModeResult.Companion.commandToCode
+import app.gmaaps.pump.carelevo.domain.model.bt.PumpStateResult.Companion.codeToPumpStateCommand
+import app.gmaaps.pump.carelevo.domain.model.bt.PumpStateResult.Companion.commandToCode
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.CarelevoInfusionInfoMonitorUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpResumeUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpStopUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchInfoMonitorUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchRptInfusionInfoProcessUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.model.CarelevoPatchRptInfusionInfoRequestModel
+import app.gmaaps.pump.carelevo.domain.usecase.userSetting.CarelevoCreateUserSettingInfoUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.userSetting.CarelevoUserSettingInfoMonitorUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.userSetting.model.CarelevoUserSettingInfoRequestModel
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -330,7 +330,7 @@ class CarelevoPatch @Inject constructor(
     }
 
     /**
-     * Persist an infusion-info report decoded by the [app.aaps.pump.carelevo.ble.BleClient] stack.
+     * Persist an infusion-info report decoded by the [app.gmaaps.pump.carelevo.ble.BleClient] stack.
      * [pumpStateRaw]/[modeRaw] are the raw 0x91 bytes; they are normalized through the
      * `codeTo…().commandToCode()` round-trip the persisted codes require, so the persisted values
      * are byte-for-byte identical to a full decode.
@@ -400,7 +400,7 @@ class CarelevoPatch @Inject constructor(
      * reporting e.g. `OUT_OF_INSULIN` as long as insulin is genuinely low, with no per-event id to tell
      * "still the same alarm" apart from "a new one". Treating every poll's alarms as the full active
      * set (as a blind replace would) means a cause the user just acknowledged (removed from the store
-     * by [app.aaps.pump.carelevo.common.CarelevoAlarmActionHandler.acknowledgeAndRemoveAlarm]) gets
+     * by [app.gmaaps.pump.carelevo.common.CarelevoAlarmActionHandler.acknowledgeAndRemoveAlarm]) gets
      * silently reinserted by the very next reconnect, because the underlying condition hasn't cleared —
      * "확인" never sticks. So this only [CarelevoAlarmInfoUseCase.upsertAlarm]s a cause that is newly
      * active compared to the PREVIOUS snapshot (an edge, off→on) — the same semantics the pushed
@@ -695,3 +695,4 @@ class CarelevoPatch @Inject constructor(
         private fun hex(b: Byte) = "0x%02X".format(b.toInt() and 0xFF)
     }
 }
+

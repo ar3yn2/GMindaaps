@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 /**
  * Sealed class representing individual actions that can be part of a Scene.
@@ -54,3 +54,4 @@ sealed class SceneAction {
         val note: String = ""
     ) : SceneAction()
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.desktop.shell
+﻿package app.gmaaps.desktop.shell
 
 import androidx.compose.ui.graphics.decodeToImageBitmap
 import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.painter.Painter
-import app.aaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.Config
 import java.awt.Image
 import java.awt.Taskbar
 import javax.imageio.ImageIO
@@ -91,3 +91,4 @@ internal fun applyDockIcon(path: String) {
         if (taskbar.isSupported(Taskbar.Feature.ICON_IMAGE)) taskbar.iconImage = image
     }
 }
+

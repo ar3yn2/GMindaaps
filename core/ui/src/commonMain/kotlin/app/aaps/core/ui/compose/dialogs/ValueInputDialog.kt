@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -27,13 +27,13 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.formatMinutesAsDuration
-import app.aaps.core.ui.compose.isMinutesUnit
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.formatMinutesAsDuration
+import app.gmaaps.core.ui.compose.isMinutesUnit
+import app.gmaaps.core.ui.compose.stringResource
 import kotlin.math.roundToInt
 
 /**
@@ -222,3 +222,4 @@ fun ValueInputDialog(
         }
     )
 }
+

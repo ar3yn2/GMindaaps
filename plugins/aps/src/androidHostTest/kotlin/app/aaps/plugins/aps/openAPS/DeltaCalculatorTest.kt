@@ -1,8 +1,8 @@
-package app.aaps.plugins.aps.openAPS
+﻿package app.gmaaps.plugins.aps.openAPS
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -232,3 +232,4 @@ class DeltaCalculatorTest : TestBase() {
         )
     }
 }
+

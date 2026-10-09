@@ -1,9 +1,9 @@
-package app.aaps.pump.medtronic.keys
+﻿package app.gmaaps.pump.medtronic.keys
 
-import app.aaps.core.keys.PreferenceType
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.medtronic.R
+import app.gmaaps.core.keys.PreferenceType
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.medtronic.R
 
 enum class MedtronicIntPreferenceKey(
     override val key: String,
@@ -49,3 +49,4 @@ enum class MedtronicIntPreferenceKey(
     override val entries: Map<Int, TextRef> = entriesResIds.mapValues { TextRef.AndroidRes(it.value) }
     override val summary: TextRef? = summaryResId?.let { TextRef.AndroidRes(it) }
 }
+

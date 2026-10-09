@@ -1,4 +1,4 @@
-package app.aaps.implementation.locale
+﻿package app.gmaaps.implementation.locale
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -45,3 +45,4 @@ class LocaleDependentSettingTest {
         assertEquals("time.google.com", ntpServerFor(language = "en", country = "GB"))
     }
 }
+

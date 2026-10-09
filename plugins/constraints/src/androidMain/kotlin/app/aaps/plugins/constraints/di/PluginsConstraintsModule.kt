@@ -1,8 +1,8 @@
-package app.aaps.plugins.constraints.di
+﻿package app.gmaaps.plugins.constraints.di
 
 import android.content.Context
-import app.aaps.core.interfaces.versionChecker.VersionDefinition
-import app.aaps.plugins.constraints.signatureVerifier.SignatureVerifierPlugin
+import app.gmaaps.core.interfaces.versionChecker.VersionDefinition
+import app.gmaaps.plugins.constraints.signatureVerifier.SignatureVerifierPlugin
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -25,3 +25,4 @@ object PluginsConstraintsModule {
             Json.parseToJsonElement(signatureVerifierPlugin.readInputStream(context.assets.open("definition.json"))).jsonObject
         }
 }
+

@@ -1,39 +1,39 @@
-package app.aaps.pump.carelevo.coordinator
+﻿package app.gmaaps.pump.carelevo.coordinator
 
 import android.os.SystemClock
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.Round
-import app.aaps.core.keys.interfaces.TextRef.Companion.withArgs
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.ble.commands.BolusCancelCommand
-import app.aaps.pump.carelevo.ble.commands.ExtendBolusCancelCommand
-import app.aaps.pump.carelevo.ble.commands.ExtendBolusCommand
-import app.aaps.pump.carelevo.ble.commands.ImmediateBolusCommand
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.coordinator.CarelevoBolusCoordinator.Companion.CANCEL_WAIT_TIMEOUT_MS
-import app.aaps.pump.carelevo.coordinator.CarelevoBolusCoordinator.Companion.NEW_STACK_CANCEL_MAX_RETRY
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoCancelExtendBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoCancelImmeBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoFinishImmeBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoStartExtendBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoStartImmeBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.model.StartImmeBolusInfusionResponseModel
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.Round
+import app.gmaaps.core.keys.interfaces.TextRef.Companion.withArgs
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.ble.commands.BolusCancelCommand
+import app.gmaaps.pump.carelevo.ble.commands.ExtendBolusCancelCommand
+import app.gmaaps.pump.carelevo.ble.commands.ExtendBolusCommand
+import app.gmaaps.pump.carelevo.ble.commands.ImmediateBolusCommand
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.coordinator.CarelevoBolusCoordinator.Companion.CANCEL_WAIT_TIMEOUT_MS
+import app.gmaaps.pump.carelevo.coordinator.CarelevoBolusCoordinator.Companion.NEW_STACK_CANCEL_MAX_RETRY
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoCancelExtendBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoCancelImmeBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoFinishImmeBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoStartExtendBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoStartImmeBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.model.StartImmeBolusInfusionResponseModel
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.Provider
@@ -538,7 +538,7 @@ class CarelevoBolusCoordinator @Inject constructor(
             result.success = false
             result.enacted = false
             result.bolusDelivered = 0.0
-            result.comment(rh.gs(app.aaps.core.ui.R.string.stop))
+            result.comment(rh.gs(app.gmaaps.core.ui.R.string.stop))
         }
     }
 
@@ -596,3 +596,4 @@ class CarelevoBolusCoordinator @Inject constructor(
         return ((totalAllowedMs + timeoutMs - 1) / timeoutMs).toInt() - 1
     }
 }
+

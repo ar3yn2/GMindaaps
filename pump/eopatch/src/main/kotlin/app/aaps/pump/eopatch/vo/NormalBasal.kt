@@ -1,8 +1,8 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.pump.eopatch.AppConstant
-import app.aaps.pump.eopatch.code.BasalStatus
-import app.aaps.pump.eopatch.core.util.FloatAdjusters
+import app.gmaaps.pump.eopatch.AppConstant
+import app.gmaaps.pump.eopatch.code.BasalStatus
+import app.gmaaps.pump.eopatch.core.util.FloatAdjusters
 import java.util.Calendar
 import kotlin.math.max
 import kotlin.time.Duration.Companion.minutes
@@ -190,3 +190,4 @@ class NormalBasal : SegmentsEntity<BasalSegment>() {
         }
     }
 }
+

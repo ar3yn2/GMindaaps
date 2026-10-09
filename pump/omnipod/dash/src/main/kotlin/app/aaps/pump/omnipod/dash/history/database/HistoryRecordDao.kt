@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.dash.history.database
+﻿package app.gmaaps.pump.omnipod.dash.history.database
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import app.aaps.pump.omnipod.dash.history.data.InitialResult
-import app.aaps.pump.omnipod.dash.history.data.ResolvedResult
+import app.gmaaps.pump.omnipod.dash.history.data.InitialResult
+import app.gmaaps.pump.omnipod.dash.history.data.ResolvedResult
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Single
 
@@ -40,3 +40,4 @@ abstract class HistoryRecordDao {
     @Query("UPDATE historyrecords SET totalAmountDelivered = :totalAmountDelivered WHERE id = :id ")
     abstract fun setTotalAmountDelivered(id: Long, totalAmountDelivered: Double?): Completable
 }
+

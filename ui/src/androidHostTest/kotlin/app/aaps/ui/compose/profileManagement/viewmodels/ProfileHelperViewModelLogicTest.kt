@@ -1,22 +1,22 @@
-package app.aaps.ui.compose.profileManagement.viewmodels
+﻿package app.gmaaps.ui.compose.profileManagement.viewmodels
 
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.profile.PureProfile
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowDialog
-import app.aaps.core.interfaces.stats.TddCalculator
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.ui.compose.profileHelper.ProfileType
-import app.aaps.ui.compose.profileHelper.defaultProfile.DefaultProfile
-import app.aaps.ui.compose.profileHelper.defaultProfile.DefaultProfileDPV
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.profile.PureProfile
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowDialog
+import app.gmaaps.core.interfaces.stats.TddCalculator
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.ui.compose.profileHelper.ProfileType
+import app.gmaaps.ui.compose.profileHelper.defaultProfile.DefaultProfile
+import app.gmaaps.ui.compose.profileHelper.defaultProfile.DefaultProfileDPV
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -206,3 +206,4 @@ internal class ProfileHelperViewModelLogicTest {
         verify(rxBus, never()).send(any())
     }
 }
+

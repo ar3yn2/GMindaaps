@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.pump.ble
+﻿package app.gmaaps.core.interfaces.pump.ble
 
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -107,3 +107,4 @@ data class PairingState(
     val step: PairingStep = PairingStep.IDLE,
     val errorMessage: String? = null
 )
+

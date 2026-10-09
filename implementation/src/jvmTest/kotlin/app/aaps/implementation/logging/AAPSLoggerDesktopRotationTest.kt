@@ -1,4 +1,4 @@
-package app.aaps.implementation.logging
+﻿package app.gmaaps.implementation.logging
 
 import java.io.File
 import java.nio.file.Files
@@ -91,3 +91,4 @@ class AAPSLoggerDesktopRotationTest {
         assertTrue(logFile.readText().contains("after-the-rotation"))
     }
 }
+

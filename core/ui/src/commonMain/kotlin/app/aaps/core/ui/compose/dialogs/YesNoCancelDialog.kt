@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,9 +10,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.window.DialogProperties
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.htmlToAnnotatedString
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.htmlToAnnotatedString
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * A dialog with Yes, No, and Cancel buttons.
@@ -105,3 +105,4 @@ fun YesNoCancelDialog(
         properties = DialogProperties(dismissOnBackPress = false, dismissOnClickOutside = false)
     )
 }
+

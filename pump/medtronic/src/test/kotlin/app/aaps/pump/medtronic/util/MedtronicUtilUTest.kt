@@ -1,6 +1,6 @@
-package app.aaps.pump.medtronic.util
+﻿package app.gmaaps.pump.medtronic.util
 
-import app.aaps.pump.medtronic.MedtronicTestBase
+import app.gmaaps.pump.medtronic.MedtronicTestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -239,3 +239,4 @@ class MedtronicUtilUTest : MedtronicTestBase() {
         assertThat(MedtronicUtil.isSame(-1.0, 1.0)).isFalse()
     }
 }
+

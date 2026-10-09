@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.CAL
-import app.aaps.database.entities.CalibrationEntry
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.database.entities.CalibrationEntry
 
 fun CalibrationEntry.fromDb(): CAL =
     CAL(
@@ -30,3 +30,4 @@ fun CAL.toDb(): CalibrationEntry =
         sensorMgdlAtPairing = this.sensorMgdlAtPairing,
         interfaceIDs_backing = this.ids.toDb()
     )
+

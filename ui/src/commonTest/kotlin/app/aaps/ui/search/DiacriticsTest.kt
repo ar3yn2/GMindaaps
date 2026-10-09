@@ -1,4 +1,4 @@
-package app.aaps.ui.search
+﻿package app.gmaaps.ui.search
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -47,3 +47,4 @@ class DiacriticsTest {
         assertEquals(once, once.removeDiacritics())
     }
 }
+

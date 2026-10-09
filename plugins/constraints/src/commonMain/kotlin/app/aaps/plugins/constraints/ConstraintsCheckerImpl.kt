@@ -1,18 +1,18 @@
-package app.aaps.plugins.constraints
+﻿package app.gmaaps.plugins.constraints
 
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.constraints.PluginConstraints
-import app.aaps.core.interfaces.constraints.PumpPluginConstraints
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.HardLimits
-import app.aaps.core.keys.interfaces.TextRef.Companion.withArgs
-import app.aaps.core.objects.constraints.ConstraintObject
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.constraints.PluginConstraints
+import app.gmaaps.core.interfaces.constraints.PumpPluginConstraints
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.HardLimits
+import app.gmaaps.core.keys.interfaces.TextRef.Companion.withArgs
+import app.gmaaps.core.objects.constraints.ConstraintObject
+import app.gmaaps.core.ui.CoreUiStrings
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -247,3 +247,4 @@ class ConstraintsCheckerImpl(
     override suspend fun getMaxIOBAllowed(): Constraint<Double> =
         applyMaxIOBConstraints(ConstraintObject(Double.MAX_VALUE, aapsLogger))
 }
+

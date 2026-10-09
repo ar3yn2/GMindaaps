@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.dash.ui.compose
+﻿package app.gmaaps.pump.omnipod.dash.ui.compose
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -34,23 +34,23 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.compose.AapsCard
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.LocalDateUtil
-import app.aaps.pump.common.defs.PumpHistoryEntryGroup
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BolusType
-import app.aaps.pump.omnipod.common.definition.OmnipodCommandType
-import app.aaps.pump.omnipod.dash.R
-import app.aaps.pump.omnipod.dash.history.data.BasalValuesRecord
-import app.aaps.pump.omnipod.dash.history.data.BolusRecord
-import app.aaps.pump.omnipod.dash.history.data.HistoryRecord
-import app.aaps.pump.omnipod.dash.history.data.InitialResult
-import app.aaps.pump.omnipod.dash.history.data.ResolvedResult
-import app.aaps.pump.omnipod.dash.history.data.TempBasalRecord
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.compose.AapsCard
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.LocalDateUtil
+import app.gmaaps.pump.common.defs.PumpHistoryEntryGroup
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BolusType
+import app.gmaaps.pump.omnipod.common.definition.OmnipodCommandType
+import app.gmaaps.pump.omnipod.dash.R
+import app.gmaaps.pump.omnipod.dash.history.data.BasalValuesRecord
+import app.gmaaps.pump.omnipod.dash.history.data.BolusRecord
+import app.gmaaps.pump.omnipod.dash.history.data.HistoryRecord
+import app.gmaaps.pump.omnipod.dash.history.data.InitialResult
+import app.gmaaps.pump.omnipod.dash.history.data.ResolvedResult
+import app.gmaaps.pump.omnipod.dash.history.data.TempBasalRecord
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalLayoutApi::class)
 @Composable
@@ -278,3 +278,4 @@ private fun groupForCommandType(type: OmnipodCommandType): PumpHistoryEntryGroup
 
     OmnipodCommandType.READ_POD_PULSE_LOG -> PumpHistoryEntryGroup.Unknown
 }
+

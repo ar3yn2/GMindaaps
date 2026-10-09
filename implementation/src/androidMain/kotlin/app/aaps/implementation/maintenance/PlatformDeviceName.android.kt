@@ -1,4 +1,4 @@
-package app.aaps.implementation.maintenance
+﻿package app.gmaaps.implementation.maintenance
 
 import android.os.Build
 
@@ -10,3 +10,4 @@ import android.os.Build
  * `commonMain`, and the model is the least wrong thing to say without one.
  */
 actual fun platformDeviceName(): String = "${Build.MANUFACTURER} ${Build.MODEL}"
+

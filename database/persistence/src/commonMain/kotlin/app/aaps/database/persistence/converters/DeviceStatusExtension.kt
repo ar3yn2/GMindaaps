@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.DS
-import app.aaps.database.entities.DeviceStatus
+import app.gmaaps.core.data.model.DS
+import app.gmaaps.database.entities.DeviceStatus
 
 fun DeviceStatus.fromDb(): DS =
     DS(
@@ -34,3 +34,4 @@ fun DS.toDb(): DeviceStatus =
         isCharging = this.isCharging,
         configuration = this.configuration
     )
+

@@ -1,21 +1,21 @@
-package app.aaps.plugins.source.di
+﻿package app.gmaaps.plugins.source.di
 
 import androidx.work.ListenableWorker
-import app.aaps.core.objects.workflow.MetroWorkerCreator
-import app.aaps.core.objects.workflow.WorkerKey
-import app.aaps.plugins.source.AidexPlugin
-import app.aaps.plugins.source.DexcomPlugin
-import app.aaps.plugins.source.GlimpPlugin
-import app.aaps.plugins.source.MM640gPlugin
-import app.aaps.plugins.source.PatchedSiAppPlugin
-import app.aaps.plugins.source.PatchedSinoAppPlugin
-import app.aaps.plugins.source.PoctechPlugin
-import app.aaps.plugins.source.SyaiPlugin
-import app.aaps.plugins.source.TomatoPlugin
-import app.aaps.plugins.source.XdripSourcePlugin
-import app.aaps.plugins.source.instara.InstaraPlugin
-import app.aaps.plugins.source.instara.InstaraStaleCheckWorker
-import app.aaps.plugins.source.notificationreader.NotificationCollectorService
+import app.gmaaps.core.objects.workflow.MetroWorkerCreator
+import app.gmaaps.core.objects.workflow.WorkerKey
+import app.gmaaps.plugins.source.AidexPlugin
+import app.gmaaps.plugins.source.DexcomPlugin
+import app.gmaaps.plugins.source.GlimpPlugin
+import app.gmaaps.plugins.source.MM640gPlugin
+import app.gmaaps.plugins.source.PatchedSiAppPlugin
+import app.gmaaps.plugins.source.PatchedSinoAppPlugin
+import app.gmaaps.plugins.source.PoctechPlugin
+import app.gmaaps.plugins.source.SyaiPlugin
+import app.gmaaps.plugins.source.TomatoPlugin
+import app.gmaaps.plugins.source.XdripSourcePlugin
+import app.gmaaps.plugins.source.instara.InstaraPlugin
+import app.gmaaps.plugins.source.instara.InstaraStaleCheckWorker
+import app.gmaaps.plugins.source.notificationreader.NotificationCollectorService
 import dev.zacsweers.metro.ClassKey
 import dev.zacsweers.metro.GraphExtension
 import dev.zacsweers.metro.IntoMap
@@ -91,3 +91,4 @@ interface SourceMetroGraph {
         injector: MembersInjector<NotificationCollectorService>
     ): MembersInjector<*> = injector
 }
+

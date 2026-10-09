@@ -1,8 +1,8 @@
-package app.aaps.implementation.widget
+﻿package app.gmaaps.implementation.widget
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.widget.WidgetUpdater
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.widget.WidgetUpdater
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -30,3 +30,4 @@ class IosWidgetUpdater(
         aapsLogger.debug(LTag.WIDGET, "No iOS widget to update, ignoring refresh from $from")
     }
 }
+

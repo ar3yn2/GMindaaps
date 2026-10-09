@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.PreferenceChangeDao
-import app.aaps.database.entities.PreferenceChange
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.PreferenceChangeDao
+import app.gmaaps.database.entities.PreferenceChange
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedPreferenceChangeDao(changes: MutableList<DBEntry>, private val dao: PreferenceChangeDao) : DelegatedDao(changes), PreferenceChangeDao by dao {
 

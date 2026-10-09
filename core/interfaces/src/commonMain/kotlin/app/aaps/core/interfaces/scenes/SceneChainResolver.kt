@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.scenes
+﻿package app.gmaaps.core.interfaces.scenes
 
-import app.aaps.core.data.model.Scene
+import app.gmaaps.core.data.model.Scene
 
 /**
  * Resolves the "can we chain to a follow-up scene right now?" policy for the End-Scene dialog. Two
@@ -19,3 +19,4 @@ interface SceneChainResolver {
     /** Client-side: chain target if configured + enabled (ignores local runtime — master re-validates). */
     fun resolveCatalogChainTarget(activeScene: Scene): Scene?
 }
+

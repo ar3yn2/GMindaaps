@@ -1,6 +1,6 @@
-package app.aaps.pump.medtrum.keys
+﻿package app.gmaaps.pump.medtrum.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 
 enum class MedtrumStringNonKey(
     override val key: String,
@@ -12,3 +12,4 @@ enum class MedtrumStringNonKey(
     ActiveAlarms("active_alarms", ""),
     SwVersion("sw_version", ""),
 }
+

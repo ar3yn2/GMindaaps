@@ -1,26 +1,26 @@
-package app.aaps.ui.compose.manageSheet
+﻿package app.gmaaps.ui.compose.manageSheet
 
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.TB
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.bolus.BatchExecutor
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.db.ProcessedTbrEbData
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventCustomActionsChanged
-import app.aaps.core.interfaces.rx.events.EventInitializationChanged
-import app.aaps.core.interfaces.sync.NsClient
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.bolus.BatchExecutor
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.db.ProcessedTbrEbData
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventCustomActionsChanged
+import app.gmaaps.core.interfaces.rx.events.EventInitializationChanged
+import app.gmaaps.core.interfaces.sync.NsClient
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.VisibilityContext
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -105,3 +105,4 @@ internal class ManageViewModelTest {
         assertThat(state.pumpPlugin).isSameInstanceAs(pumpPlugin)
     }
 }
+

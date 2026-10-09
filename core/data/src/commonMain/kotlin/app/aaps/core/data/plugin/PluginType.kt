@@ -1,9 +1,9 @@
-package app.aaps.core.data.plugin
+﻿package app.gmaaps.core.data.plugin
 
 /**
  * Main plugin type
  *
- * set by [app.aaps.core.interfaces.plugin.PluginDescription.mainType]
+ * set by [app.gmaaps.core.interfaces.plugin.PluginDescription.mainType]
  */
 enum class PluginType(
     /** One active plugin per category (radio) vs. multi-select (checkbox). */

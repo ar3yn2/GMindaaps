@@ -1,8 +1,9 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
-import app.aaps.pump.eopatch.core.scan.PatchSelfTestResult
+import app.gmaaps.pump.eopatch.core.scan.PatchSelfTestResult
 
 class TemperatureResponse(val temperature: Int) : BaseResponse(), IPatchSelfTest {
 
     override val result: PatchSelfTestResult get() = PatchSelfTestResult.TEST_SUCCESS
 }
+

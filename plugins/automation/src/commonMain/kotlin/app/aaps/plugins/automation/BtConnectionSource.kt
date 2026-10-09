@@ -1,11 +1,11 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
-import app.aaps.core.interfaces.rx.events.EventBTChange
+import app.gmaaps.core.interfaces.rx.events.EventBTChange
 
 /**
  * Read-only access to the Bluetooth connect/disconnect events the automation runtime has buffered
  * since its last evaluation. Implemented by [AutomationRuntime]; injected by
- * [app.aaps.plugins.automation.triggers.TriggerBTDevice] so the trigger doesn't depend on the
+ * [app.gmaaps.plugins.automation.triggers.TriggerBTDevice] so the trigger doesn't depend on the
  * concrete runtime.
  *
  * Module-internal by design: the buffer has a single reader (the BT trigger). The shared
@@ -17,3 +17,4 @@ interface BtConnectionSource {
     /** Snapshot of BT connect/disconnect events seen since the last `processActions()` drain. */
     fun recentBtConnects(): List<EventBTChange>
 }
+

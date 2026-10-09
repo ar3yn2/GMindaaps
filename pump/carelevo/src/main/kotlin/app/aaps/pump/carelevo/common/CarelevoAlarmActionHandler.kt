@@ -1,16 +1,16 @@
-package app.aaps.pump.carelevo.common
+﻿package app.gmaaps.pump.carelevo.common
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.coordinator.CarelevoAlarmClearCoordinator
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
-import app.aaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
-import app.aaps.pump.carelevo.presentation.model.AlarmEvent
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.coordinator.CarelevoAlarmClearCoordinator
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
+import app.gmaaps.pump.carelevo.presentation.model.AlarmEvent
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -30,7 +30,7 @@ import kotlinx.coroutines.launch
 /**
  * SINGLE owner of the in-memory active-alarm queue and of the per-cause alarm-clear state machine,
  * shared by BOTH clear surfaces: the Android notification action ([CarelevoAlarmNotifier]) and the
- * in-app full-screen alarm ([app.aaps.pump.carelevo.presentation.viewmodel.CarelevoAlarmViewModel],
+ * in-app full-screen alarm ([app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoAlarmViewModel],
  * which delegates here and keeps only sound/UI concerns).
  *
  * Persistence rule: an alarm that has been successfully handled is REMOVED from the persisted
@@ -297,3 +297,4 @@ class CarelevoAlarmActionHandler @Inject constructor(
         aapsLogger.debug(LTag.PUMPCOMM, "alarmQueue empty emit=$ok")
     }
 }
+

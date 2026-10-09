@@ -1,7 +1,7 @@
-package app.aaps.core.utils
+﻿package app.gmaaps.core.utils
 
-import app.aaps.core.utils.MidnightUtils.millisFrom
-import app.aaps.core.utils.MidnightUtils.secondsFrom
+import app.gmaaps.core.utils.MidnightUtils.millisFrom
+import app.gmaaps.core.utils.MidnightUtils.secondsFrom
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.atStartOfDayIn
@@ -118,3 +118,4 @@ object MidnightUtils {
     fun milliSecFromMidnight(timestamp: Long): Long =
         millisFrom(timestamp, TimeZone.currentSystemDefault())
 }
+

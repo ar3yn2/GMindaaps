@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.dash.driver
+﻿package app.gmaaps.pump.omnipod.dash.driver
 
-import app.aaps.pump.omnipod.common.bledriver.event.PodEvent
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertConfiguration
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertTrigger
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BeepType
-import app.aaps.pump.omnipod.common.bledriver.pod.response.ResponseType
+import app.gmaaps.pump.omnipod.common.bledriver.event.PodEvent
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertConfiguration
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertTrigger
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BeepType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.ResponseType
 import io.reactivex.rxjava3.core.Observable
 import java.util.EnumSet
 import java.util.concurrent.CountDownLatch
@@ -43,3 +43,4 @@ interface OmnipodDashManager {
 
     fun connect(stop: CountDownLatch): Observable<PodEvent>
 }
+

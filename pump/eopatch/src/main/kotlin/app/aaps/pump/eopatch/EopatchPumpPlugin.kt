@@ -1,59 +1,59 @@
-package app.aaps.pump.eopatch
+﻿package app.gmaaps.pump.eopatch
 
 import android.os.SystemClock
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.di.PumpDriver
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpPluginBase
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.actions.CustomAction
-import app.aaps.core.interfaces.pump.actions.CustomActionType
-import app.aaps.core.interfaces.pump.comment
-import app.aaps.core.interfaces.pump.defs.fillFor
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.Round
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.TextRef.Companion.withArgs
-import app.aaps.core.keys.interfaces.withEntries
-import app.aaps.core.ui.compose.icons.IcPluginEopatch
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.pump.eopatch.alarm.IAlarmManager
-import app.aaps.pump.eopatch.ble.IPatchManager
-import app.aaps.pump.eopatch.ble.PatchManagerExecutor
-import app.aaps.pump.eopatch.ble.PreferenceManager
-import app.aaps.pump.eopatch.code.BolusExDuration
-import app.aaps.pump.eopatch.compose.EopatchComposeContent
-import app.aaps.pump.eopatch.keys.EopatchBooleanKey
-import app.aaps.pump.eopatch.keys.EopatchIntKey
-import app.aaps.pump.eopatch.keys.EopatchStringNonKey
-import app.aaps.pump.eopatch.vo.NormalBasalManager
-import app.aaps.pump.eopatch.vo.PatchConfig
-import app.aaps.pump.eopatch.vo.TempBasal
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.di.PumpDriver
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpPluginBase
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.actions.CustomAction
+import app.gmaaps.core.interfaces.pump.actions.CustomActionType
+import app.gmaaps.core.interfaces.pump.comment
+import app.gmaaps.core.interfaces.pump.defs.fillFor
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.Round
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef.Companion.withArgs
+import app.gmaaps.core.keys.interfaces.withEntries
+import app.gmaaps.core.ui.compose.icons.IcPluginEopatch
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.pump.eopatch.alarm.IAlarmManager
+import app.gmaaps.pump.eopatch.ble.IPatchManager
+import app.gmaaps.pump.eopatch.ble.PatchManagerExecutor
+import app.gmaaps.pump.eopatch.ble.PreferenceManager
+import app.gmaaps.pump.eopatch.code.BolusExDuration
+import app.gmaaps.pump.eopatch.compose.EopatchComposeContent
+import app.gmaaps.pump.eopatch.keys.EopatchBooleanKey
+import app.gmaaps.pump.eopatch.keys.EopatchIntKey
+import app.gmaaps.pump.eopatch.keys.EopatchStringNonKey
+import app.gmaaps.pump.eopatch.vo.NormalBasalManager
+import app.gmaaps.pump.eopatch.vo.PatchConfig
+import app.gmaaps.pump.eopatch.vo.TempBasal
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -77,7 +77,7 @@ import kotlinx.coroutines.flow.merge
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.runBlocking
 import kotlin.math.abs
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 import dev.zacsweers.metro.IntKey as MetroIntKey
 
 @ContributesIntoMap(AppScope::class, binding = binding<PluginBase>())
@@ -243,12 +243,12 @@ class EopatchPumpPlugin(
         if (patchConfig.isActivated) {
             if (preferenceManager.patchState.isTempBasalActive) {
                 val cancelResult = cancelTempBasal(true)
-                if (!cancelResult.success) return pumpEnactResultProvider().isTempCancel(true).comment(app.aaps.core.ui.R.string.canceling_tbr_failed)
+                if (!cancelResult.success) return pumpEnactResultProvider().isTempCancel(true).comment(app.gmaaps.core.ui.R.string.canceling_tbr_failed)
             }
 
             if (preferenceManager.patchState.isExtBolusActive) {
                 val cancelResult = cancelExtendedBolus()
-                if (!cancelResult.success) return pumpEnactResultProvider().comment(app.aaps.core.ui.R.string.canceling_eb_failed)
+                if (!cancelResult.success) return pumpEnactResultProvider().comment(app.gmaaps.core.ui.R.string.canceling_eb_failed)
             }
             var isSuccess: Boolean? = null
             val result: BehaviorSubject<Boolean> = BehaviorSubject.create()
@@ -278,7 +278,7 @@ class EopatchPumpPlugin(
                 // PROFILE_SET_OK posted centrally (onProfileChanged) on success && enacted.
                 pumpEnactResultProvider().success(true).enacted(true)
             } else {
-                pumpEnactResultProvider().success(false).enacted(false).comment(app.aaps.core.ui.R.string.failed_update_basal_profile)
+                pumpEnactResultProvider().success(false).enacted(false).comment(app.gmaaps.core.ui.R.string.failed_update_basal_profile)
             }
         } else {
             // Patch not activated — the basal is stored now and written when the patch is activated. Deferred,
@@ -480,7 +480,7 @@ class EopatchPumpPlugin(
             .map { pumpEnactResultProvider().success(true).enacted(true) }
             .onErrorReturnItem(
                 pumpEnactResultProvider().success(false).enacted(false).bolusDelivered(0.0)
-                    .comment(rh.gs(app.aaps.core.ui.R.string.error))
+                    .comment(rh.gs(app.gmaaps.core.ui.R.string.error))
             )
             .blockingGet()
     }
@@ -519,7 +519,7 @@ class EopatchPumpPlugin(
             .map { pumpEnactResultProvider().success(true).enacted(true).isTempCancel(true) }
             .onErrorReturnItem(
                 pumpEnactResultProvider().success(false).enacted(false)
-                    .comment(rh.gs(app.aaps.core.ui.R.string.error))
+                    .comment(rh.gs(app.gmaaps.core.ui.R.string.error))
             )
             .blockingGet()
     }
@@ -542,7 +542,7 @@ class EopatchPumpPlugin(
                 .map { pumpEnactResultProvider().success(true).enacted(true).isTempCancel(true) }
                 .onErrorReturnItem(
                     pumpEnactResultProvider().success(false).enacted(false)
-                        .comment(rh.gs(app.aaps.core.ui.R.string.canceling_eb_failed))
+                        .comment(rh.gs(app.gmaaps.core.ui.R.string.canceling_eb_failed))
                 )
                 .blockingGet()
         } else {
@@ -612,3 +612,4 @@ class EopatchPumpPlugin(
     )
 
 }
+

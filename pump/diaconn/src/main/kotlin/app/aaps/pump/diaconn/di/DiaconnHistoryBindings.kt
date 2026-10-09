@@ -1,8 +1,8 @@
-package app.aaps.pump.diaconn.di
+﻿package app.gmaaps.pump.diaconn.di
 
 import android.content.Context
-import app.aaps.pump.diaconn.database.DiaconnHistoryDatabase
-import app.aaps.pump.diaconn.database.DiaconnHistoryRecordDao
+import app.gmaaps.pump.diaconn.database.DiaconnHistoryDatabase
+import app.gmaaps.pump.diaconn.database.DiaconnHistoryRecordDao
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -23,3 +23,4 @@ object DiaconnHistoryBindings {
     fun provideHistoryRecordDao(diaconnHistoryDatabase: DiaconnHistoryDatabase): DiaconnHistoryRecordDao =
         diaconnHistoryDatabase.historyRecordDao()
 }
+

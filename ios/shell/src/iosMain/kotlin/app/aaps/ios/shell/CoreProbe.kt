@@ -1,17 +1,17 @@
-package app.aaps.ios.shell
+﻿package app.gmaaps.ios.shell
 
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.format.NumberFormatPlatform
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.time.systemUtcOffsetAt
-import app.aaps.core.interfaces.concurrent.AapsLock
-import app.aaps.core.interfaces.concurrent.aapsIoDispatcher
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.nssdk.localmodel.Storage
-import app.aaps.core.ui.UiMode
-import app.aaps.core.ui.compose.ScreenMode
-import app.aaps.core.utils.Percentile
-import app.aaps.core.utils.toHex
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.format.NumberFormatPlatform
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.time.systemUtcOffsetAt
+import app.gmaaps.core.interfaces.concurrent.AapsLock
+import app.gmaaps.core.interfaces.concurrent.aapsIoDispatcher
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.nssdk.localmodel.Storage
+import app.gmaaps.core.ui.UiMode
+import app.gmaaps.core.ui.compose.ScreenMode
+import app.gmaaps.core.utils.Percentile
+import app.gmaaps.core.utils.toHex
 
 /**
  * Runs something real out of each `:core` module.
@@ -103,3 +103,4 @@ internal object CoreProbe {
             "$module  FAILED ${e::class.simpleName}: ${e.message}"
         }
 }
+

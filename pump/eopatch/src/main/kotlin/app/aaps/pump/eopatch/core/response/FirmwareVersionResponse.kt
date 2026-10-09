@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
-import app.aaps.pump.eopatch.core.code.PatchBleResultCode
+import app.gmaaps.pump.eopatch.core.code.PatchBleResultCode
 import java.util.Locale
 
 class FirmwareVersionResponse(
@@ -14,3 +14,4 @@ class FirmwareVersionResponse(
     val firmwareVersionString: String?
         get() = if (!isSuccess) null else String.format(Locale.US, "%d.%d.%d.%d", major, minor1, minor2, minor3)
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.defs
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.defs
 
 import java.util.regex.Pattern
 
@@ -39,3 +39,4 @@ enum class RileyLinkFirmwareVersion(val familyMembers: List<RileyLinkFirmwareVer
         }
     }
 }
+

@@ -1,12 +1,12 @@
-package app.aaps.plugins.constraints.storage
+﻿package app.gmaaps.plugins.constraints.storage
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.objects.constraints.ConstraintObject
-import app.aaps.plugins.constraints.ConstraintsStringsValues
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.objects.constraints.ConstraintObject
+import app.gmaaps.plugins.constraints.ConstraintsStringsValues
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -44,3 +44,4 @@ class StorageConstraintPluginTest : TestBase() {
         assertThat(mocked.isClosedLoopAllowed(ConstraintObject(true, aapsLogger)).value()).isTrue()
     }
 }
+

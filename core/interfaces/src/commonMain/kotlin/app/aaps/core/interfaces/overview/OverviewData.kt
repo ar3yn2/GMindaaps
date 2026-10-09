@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.overview
+﻿package app.gmaaps.core.interfaces.overview
 
 interface OverviewData {
 
@@ -6,3 +6,4 @@ interface OverviewData {
     var fromTime: Long // toTime - range
     var endTime: Long // toTime + predictions
 }
+

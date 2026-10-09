@@ -1,10 +1,10 @@
-package app.aaps.pump.danar
+﻿package app.gmaaps.pump.danar
 
-import app.aaps.core.interfaces.pump.rfcomm.RfcommSocket
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.danar.comm.MessageBase
-import app.aaps.pump.danar.comm.MessageHashTableBase
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommSocket
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.danar.comm.MessageBase
+import app.gmaaps.pump.danar.comm.MessageHashTableBase
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
@@ -175,3 +175,4 @@ class SerialIOThreadTest : TestBase() {
         const val BLOCK_TIMEOUT_S = 30L
     }
 }
+

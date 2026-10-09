@@ -1,8 +1,9 @@
-package app.aaps.pump.omnipod.common.queue.command
+﻿package app.gmaaps.pump.omnipod.common.queue.command
 
-import app.aaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.interfaces.queue.CustomCommand
 
 class CommandResumeDelivery : CustomCommand {
 
     override val statusDescription = "RESUME DELIVERY"
 }
+

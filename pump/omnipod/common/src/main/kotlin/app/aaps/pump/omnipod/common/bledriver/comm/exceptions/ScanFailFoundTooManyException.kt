@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.exceptions
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions
 
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.scan.BleDiscoveredDevice
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.scan.BleDiscoveredDevice
 import java.util.Collections
 
 class ScanFailFoundTooManyException(devices: List<BleDiscoveredDevice>) : ScanException("Found more than one Pod") {
@@ -9,3 +9,4 @@ class ScanFailFoundTooManyException(devices: List<BleDiscoveredDevice>) : ScanEx
     val discoveredDevices: List<BleDiscoveredDevice>
         get() = Collections.unmodifiableList(devices)
 }
+

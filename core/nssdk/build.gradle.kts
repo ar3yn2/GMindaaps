@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     id("kotlinx-serialization")
@@ -76,3 +76,4 @@ kotlin {
         }
     }
 }
+

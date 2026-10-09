@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -15,11 +15,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.Role
-import app.aaps.core.keys.interfaces.StringPreferenceKey
-import app.aaps.core.keys.interfaces.StringValidator
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.keys.interfaces.StringPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringValidator
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Inline text field for string preferences — for use in wizards and forms
@@ -105,3 +105,4 @@ fun InlineStringListPreferenceItem(
         }
     }
 }
+

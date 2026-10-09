@@ -1,24 +1,24 @@
-package app.aaps.plugins.constraints.signatureVerifier
+﻿package app.gmaaps.plugins.constraints.signatureVerifier
 
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Handler
 import android.os.HandlerThread
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.constraints.PluginConstraints
-import app.aaps.core.interfaces.di.APS
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.EnforcedState
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginBaseWithPreferences
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.constraints.ConstraintsStrings
-import app.aaps.plugins.constraints.signatureVerifier.keys.SignatureVerifierLongKey
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.constraints.PluginConstraints
+import app.gmaaps.core.interfaces.di.APS
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.EnforcedState
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginBaseWithPreferences
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.constraints.ConstraintsStrings
+import app.gmaaps.plugins.constraints.signatureVerifier.keys.SignatureVerifierLongKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -250,3 +250,4 @@ class SignatureVerifierPlugin(
         return revokedCerts
     }
 }
+

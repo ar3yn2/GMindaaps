@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.clientcontrol
+﻿package app.gmaaps.core.interfaces.clientcontrol
 
 /**
  * What the single app-level client-control modal is currently showing: the action's [progress] plus a
@@ -10,3 +10,4 @@ data class PendingAction(
     val progress: ActionProgress,
     val label: String
 )
+

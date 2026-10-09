@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.manager
+﻿package app.gmaaps.pump.equil.manager
 
 class EquilCmdModel {
 
@@ -9,3 +9,4 @@ class EquilCmdModel {
 
     override fun toString(): String = "EquilCmdModel{code='$code', iv='$iv', tag='$tag', ciphertext='$ciphertext'}"
 }
+

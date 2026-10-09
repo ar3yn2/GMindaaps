@@ -1,9 +1,9 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.BleResponse
-import app.aaps.pump.carelevo.ble.commands.NoticeThresholdCommand.Companion.TYPE_EXPIRY
-import app.aaps.pump.carelevo.ble.commands.NoticeThresholdCommand.Companion.TYPE_LOW_INSULIN
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.commands.NoticeThresholdCommand.Companion.TYPE_EXPIRY
+import app.gmaaps.pump.carelevo.ble.commands.NoticeThresholdCommand.Companion.TYPE_LOW_INSULIN
 
 /**
  * `CMD_NOTICE_THRESHOLD_REQ` (0x15) → `CMD_NOTICE_THRESHOLD_RES` (0x75). Sets a reminder threshold —
@@ -58,3 +58,4 @@ data class NoticeThresholdResponse(
     val thresholdType: Int,
     val resultCode: Int
 ) : BleResponse
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleCommand
 
 /**
  * `CMD_APP_AUTH_IND` (0x4B) → `CMD_APP_AUTH_ACK` (0xBB). The activation app-auth handshake: the app sends its
@@ -44,3 +44,4 @@ class AppAuthCommand(
         private const val MIN_RESPONSE_LENGTH = 2
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.core.ui.clientcontrol
+﻿package app.gmaaps.core.ui.clientcontrol
 
-import app.aaps.core.interfaces.clientcontrol.FailureReason
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.interfaces.clientcontrol.FailureReason
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
 
 /**
  * The single localized-string mapping for a client-control [FailureReason], shared by the phone pending dialog
@@ -30,3 +30,4 @@ fun FailureReason.failText(): TextRef = when (this) {
     FailureReason.Internal           -> CoreUiStrings.clientcontrol_fail_internal
     FailureReason.Unknown            -> CoreUiStrings.clientcontrol_fail_unknown
 }
+

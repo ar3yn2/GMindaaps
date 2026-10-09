@@ -1,4 +1,4 @@
-# Running Mode Specification
+﻿# Running Mode Specification
 
 Single source of truth for the `RM.Mode` subsystem. When you change behavior for any
 mode, update this file in the same PR.
@@ -261,7 +261,7 @@ touches every caller of `runningMode()`.
 
 Until `<commit>`, `plugins/aps/.../runningMode/PumpCommandGate.kt` and
 `core/objects/.../runningMode/PumpCommandGate.kt` were identical files. The plugins/aps
-copy had zero imports and was deleted. **Use `app.aaps.core.objects.runningMode.PumpCommandGate`.**
+copy had zero imports and was deleted. **Use `app.gmaaps.core.objects.runningMode.PumpCommandGate`.**
 
 ## Adding a new mode — checklist
 
@@ -295,3 +295,4 @@ When you add a new `RM.Mode`, edit *all* of:
    `InsulinDialog`/`TreatmentDialog`/`WizardDialog` if record-only logic
    should change for the new mode.
 10. **This doc** — add a row to every table above and any inconsistency notes.
+

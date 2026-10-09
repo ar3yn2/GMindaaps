@@ -1,7 +1,7 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.ComposedKey
-import app.aaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.core.keys.interfaces.ComposedKey
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
 
 /**
  * What an import should DO with a key, which is not the same question as what the key is.
@@ -161,3 +161,4 @@ class PreferenceKeyResolver(
         }
     }
 }
+

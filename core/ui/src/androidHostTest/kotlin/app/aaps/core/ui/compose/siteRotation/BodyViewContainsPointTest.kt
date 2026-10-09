@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.siteRotation
+﻿package app.gmaaps.core.ui.compose.siteRotation
 
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Path
@@ -68,3 +68,4 @@ class BodyViewContainsPointTest {
         assertThat(Path().containsPoint(0f, 0f)).isFalse()
     }
 }
+

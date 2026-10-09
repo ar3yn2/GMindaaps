@@ -1,11 +1,11 @@
-package app.aaps.pump.danar.comm
+﻿package app.gmaaps.pump.danar.comm
 
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.dana.comm.RecordTypes
-import app.aaps.pump.dana.database.DanaHistoryRecord
-import app.aaps.pump.dana.events.EventDanaRSyncStatus
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.dana.comm.RecordTypes
+import app.gmaaps.pump.dana.database.DanaHistoryRecord
+import app.gmaaps.pump.dana.events.EventDanaRSyncStatus
 import dev.zacsweers.metro.HasMemberInjections
 import kotlinx.coroutines.runBlocking
 

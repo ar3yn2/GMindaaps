@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.manager.customCommands
+﻿package app.gmaaps.pump.equil.manager.customCommands
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
@@ -25,3 +25,4 @@ class CmdModeAndHistoryGetTest : TestBase() {
         assertEquals(cmd1.statusDescription, cmd2.statusDescription)
     }
 }
+

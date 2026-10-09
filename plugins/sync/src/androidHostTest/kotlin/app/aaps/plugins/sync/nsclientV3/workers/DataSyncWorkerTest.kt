@@ -1,16 +1,16 @@
-package app.aaps.plugins.sync.nsclientV3.workers
+﻿package app.gmaaps.plugins.sync.nsclientV3.workers
 
 import android.content.Context
 import androidx.work.ListenableWorker.Result.Success
 import androidx.work.WorkerFactory
 import androidx.work.WorkerParameters
 import androidx.work.testing.TestListenableWorkerBuilder
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.plugins.sync.nsclientV3.DataSyncSelectorV3
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.compose.NSClientRepositoryImpl
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.plugins.sync.nsclientV3.DataSyncSelectorV3
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.compose.NSClientRepositoryImpl
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -184,3 +184,4 @@ internal class DataSyncWorkerTest : TestBase() {
         verify(nsClientV3Plugin, never()).endFullSync()
     }
 }
+

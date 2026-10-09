@@ -1,8 +1,8 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.DelegatedAppDatabase
-import app.aaps.database.daos.APSResultDao
-import app.aaps.database.entities.APSResult
+import app.gmaaps.database.DelegatedAppDatabase
+import app.gmaaps.database.daos.APSResultDao
+import app.gmaaps.database.entities.APSResult
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.json.JSONObject
@@ -112,3 +112,4 @@ class InsertOrUpdateApsResultTransactionTest {
         autosensDataJson = null
     ).also { it.id = id }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.overview
+﻿package app.gmaaps.ui.compose.overview
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.MaterialTheme
@@ -8,9 +8,9 @@ import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.interfaces.overview.graph.BgInfoData
-import app.aaps.core.interfaces.overview.graph.BgRange
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.interfaces.overview.graph.BgInfoData
+import app.gmaaps.core.interfaces.overview.graph.BgRange
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -177,3 +177,4 @@ class BgInfoSectionTest {
         compose.onAllNodesWithText("120").assertCountEquals(arrows.size)
     }
 }
+

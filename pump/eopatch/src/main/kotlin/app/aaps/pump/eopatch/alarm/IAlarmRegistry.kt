@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.alarm
+﻿package app.gmaaps.pump.eopatch.alarm
 
-import app.aaps.pump.eopatch.core.code.PatchAeCode
+import app.gmaaps.pump.eopatch.core.code.PatchAeCode
 import io.reactivex.rxjava3.core.Maybe
 
 interface IAlarmRegistry {

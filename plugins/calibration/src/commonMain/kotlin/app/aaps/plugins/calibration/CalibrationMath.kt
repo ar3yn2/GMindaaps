@@ -1,7 +1,7 @@
-package app.aaps.plugins.calibration
+﻿package app.gmaaps.plugins.calibration
 
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.time.T
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.time.T
 import kotlin.math.exp
 
 const val TIME_DECAY_TAU_DAYS = 2L
@@ -130,3 +130,4 @@ fun fitLinearCalibration(entries: List<CAL>, now: Long): CalibrationFit? {
         CalibrationFit(clampedSlope, offsetForClampedSlope, mode = FitMode.SlopeClamped)
     }
 }
+

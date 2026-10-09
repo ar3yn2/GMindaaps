@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.maintenance
+﻿package app.gmaaps.core.interfaces.maintenance
 
-import app.aaps.core.interfaces.rx.weardata.CwfData
+import app.gmaaps.core.interfaces.rx.weardata.CwfData
 
 /** Where to send the export. */
 enum class ExportDestination {

@@ -1,7 +1,7 @@
-package app.aaps.pump.common.hw.rileylink.ble.data.encoding
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data.encoding
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Assertions.assertThrows
@@ -221,3 +221,4 @@ class Encoding4b6bGeoffTest {
         return data
     }
 }
+

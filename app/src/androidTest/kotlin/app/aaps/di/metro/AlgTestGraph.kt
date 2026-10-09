@@ -1,24 +1,24 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.db.ProcessedTbrEbData
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.aps.logger.LoggerCallback
-import app.aaps.plugins.aps.openAPS.APSResultObject
-import app.aaps.plugins.aps.openAPSAMA.DetermineBasalAdapterAMAJS
-import app.aaps.plugins.aps.openAPSAMA.DetermineBasalResultAMAFromJS
-import app.aaps.plugins.aps.openAPSSMB.DetermineBasalAdapterSMBJS
-import app.aaps.plugins.aps.openAPSSMB.DetermineBasalResultSMBFromJS
-import app.aaps.plugins.aps.openAPSSMBAutoISF.DetermineBasalAdapterAutoISFJS
-import app.aaps.plugins.aps.openAPSSMBDynamicISF.DetermineBasalAdapterSMBDynamicISFJS
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.db.ProcessedTbrEbData
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.aps.logger.LoggerCallback
+import app.gmaaps.plugins.aps.openAPS.APSResultObject
+import app.gmaaps.plugins.aps.openAPSAMA.DetermineBasalAdapterAMAJS
+import app.gmaaps.plugins.aps.openAPSAMA.DetermineBasalResultAMAFromJS
+import app.gmaaps.plugins.aps.openAPSSMB.DetermineBasalAdapterSMBJS
+import app.gmaaps.plugins.aps.openAPSSMB.DetermineBasalResultSMBFromJS
+import app.gmaaps.plugins.aps.openAPSSMBAutoISF.DetermineBasalAdapterAutoISFJS
+import app.gmaaps.plugins.aps.openAPSSMBDynamicISF.DetermineBasalAdapterSMBDynamicISFJS
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ClassKey
 import dev.zacsweers.metro.ContributesTo
@@ -130,3 +130,4 @@ interface AlgTestGraph {
         fun create(@Includes leaves: AlgTestLeaves): AlgTestGraph
     }
 }
+

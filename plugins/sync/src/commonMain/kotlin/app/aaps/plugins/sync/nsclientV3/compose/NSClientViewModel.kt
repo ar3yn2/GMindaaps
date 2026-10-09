@@ -1,15 +1,15 @@
-package app.aaps.plugins.sync.nsclientV3.compose
+﻿package app.gmaaps.plugins.sync.nsclientV3.compose
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.nsclient.NSClientLog
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.plugins.sync.nsclientV3.keys.NsclientBooleanKey
+import app.gmaaps.core.interfaces.nsclient.NSClientLog
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.plugins.sync.nsclientV3.keys.NsclientBooleanKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -78,3 +78,4 @@ class NSClientViewModel(
         _uiState.update { it.copy(paused = paused) }
     }
 }
+

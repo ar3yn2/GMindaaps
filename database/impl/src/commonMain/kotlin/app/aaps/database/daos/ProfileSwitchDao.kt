@@ -1,11 +1,11 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.daos.workaround.ProfileSwitchDaoWorkaround
-import app.aaps.database.entities.ProfileSwitch
-import app.aaps.database.entities.TABLE_PROFILE_SWITCHES
-import app.aaps.database.entities.data.checkSanity
+import app.gmaaps.database.daos.workaround.ProfileSwitchDaoWorkaround
+import app.gmaaps.database.entities.ProfileSwitch
+import app.gmaaps.database.entities.TABLE_PROFILE_SWITCHES
+import app.gmaaps.database.entities.data.checkSanity
 
 @Dao
 internal interface ProfileSwitchDao : ProfileSwitchDaoWorkaround {
@@ -75,3 +75,4 @@ internal suspend fun ProfileSwitchDao.updateExistingEntryImpl(entry: ProfileSwit
     if (!entry.targetBlocks.checkSanity()) throw IllegalArgumentException("Sanity check failed for target blocks.")
     return (this as TraceableDao<ProfileSwitch>).updateExistingEntryImpl(entry)
 }
+

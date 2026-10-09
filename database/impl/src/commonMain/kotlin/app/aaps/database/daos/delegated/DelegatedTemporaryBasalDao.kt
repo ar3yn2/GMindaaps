@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.TemporaryBasalDao
-import app.aaps.database.entities.TemporaryBasal
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.TemporaryBasalDao
+import app.gmaaps.database.entities.TemporaryBasal
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedTemporaryBasalDao(changes: MutableList<DBEntry>, private val dao: TemporaryBasalDao) : DelegatedDao(changes), TemporaryBasalDao by dao {
 

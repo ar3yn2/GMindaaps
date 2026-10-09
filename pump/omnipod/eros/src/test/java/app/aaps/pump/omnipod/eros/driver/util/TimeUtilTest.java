@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.util;
+package app.gmaaps.pump.omnipod.eros.driver.util;
 
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;

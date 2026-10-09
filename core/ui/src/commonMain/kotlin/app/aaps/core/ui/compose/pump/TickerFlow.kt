@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
@@ -15,3 +15,4 @@ fun tickerFlow(periodMs: Long = 30_000L): Flow<Unit> = flow {
         delay(periodMs)
     }
 }
+

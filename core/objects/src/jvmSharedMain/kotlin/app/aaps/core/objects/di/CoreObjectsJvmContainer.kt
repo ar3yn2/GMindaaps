@@ -1,8 +1,8 @@
-package app.aaps.core.objects.di
+﻿package app.gmaaps.core.objects.di
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.protection.PasswordHasher
-import app.aaps.core.objects.crypto.CryptoUtil
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.protection.PasswordHasher
+import app.gmaaps.core.objects.crypto.CryptoUtil
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -27,3 +27,4 @@ object CoreObjectsJvmContainer {
     @Provides
     fun passwordHasher(cryptoUtil: CryptoUtil): PasswordHasher = cryptoUtil
 }
+

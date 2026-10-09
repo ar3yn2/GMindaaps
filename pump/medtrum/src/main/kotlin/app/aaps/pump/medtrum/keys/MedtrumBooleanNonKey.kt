@@ -1,6 +1,6 @@
-package app.aaps.pump.medtrum.keys
+﻿package app.gmaaps.pump.medtrum.keys
 
-import app.aaps.core.keys.interfaces.BooleanNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey
 
 enum class MedtrumBooleanNonKey(
     override val key: String,
@@ -9,3 +9,4 @@ enum class MedtrumBooleanNonKey(
 
     PatchPrimed("patch_primed_flag", defaultValue = false),
 }
+

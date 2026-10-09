@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose
+﻿package app.gmaaps.plugins.automation.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -41,13 +41,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.compose.triggers.TriggerEditor
-import app.aaps.plugins.automation.triggers.Trigger
-import app.aaps.plugins.automation.triggers.TriggerConnector
-import app.aaps.plugins.automation.triggers.TriggerLocation
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.compose.triggers.TriggerEditor
+import app.gmaaps.plugins.automation.triggers.Trigger
+import app.gmaaps.plugins.automation.triggers.TriggerConnector
+import app.gmaaps.plugins.automation.triggers.TriggerLocation
 
 /**
  * Compose trigger-tree editor. Mutates [root] in place; callers bump [onChange]
@@ -311,3 +311,4 @@ private fun TriggerConnector.currentType(): TriggerConnector.Type {
     val nameRes = friendlyName()
     return TriggerConnector.Type.entries.firstOrNull { it.stringRes == nameRes } ?: TriggerConnector.Type.AND
 }
+

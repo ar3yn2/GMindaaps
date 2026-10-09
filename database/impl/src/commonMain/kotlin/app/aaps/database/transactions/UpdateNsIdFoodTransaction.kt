@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.Food
+import app.gmaaps.database.entities.Food
 
 class UpdateNsIdFoodTransaction(private val foods: List<Food>) : Transaction<UpdateNsIdFoodTransaction.TransactionResult>() {
 

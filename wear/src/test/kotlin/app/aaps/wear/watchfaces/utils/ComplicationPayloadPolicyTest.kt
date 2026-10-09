@@ -1,4 +1,4 @@
-package app.aaps.wear.watchfaces.utils
+﻿package app.gmaaps.wear.watchfaces.utils
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -83,3 +83,4 @@ internal class ComplicationPayloadPolicyTest {
         assertThat(decide(wireType = WireComplicationData.TYPE_ICON, hasSmallImage = false)).isFalse()
     }
 }
+

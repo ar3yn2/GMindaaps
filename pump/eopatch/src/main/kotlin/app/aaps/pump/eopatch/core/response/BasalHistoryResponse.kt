@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
 class BasalHistoryResponse(
     val seq: Int,
@@ -9,3 +9,4 @@ class BasalHistoryResponse(
     override fun toString(): String =
         "BasalHistoryResponse{injectedDoseValues=${injectedDoseValues.contentToString()}, seq=$seq, isTemp=$isTemp}"
 }
+

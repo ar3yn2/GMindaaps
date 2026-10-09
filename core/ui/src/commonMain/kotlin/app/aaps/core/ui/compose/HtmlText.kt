@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -78,3 +78,4 @@ private fun decodeEntity(name: String): String? = when (name.lowercase()) {
     "nbsp", "#160" -> " "
     else           -> null
 }
+

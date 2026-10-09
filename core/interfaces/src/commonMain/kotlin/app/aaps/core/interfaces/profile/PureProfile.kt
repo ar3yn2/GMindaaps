@@ -1,9 +1,9 @@
-package app.aaps.core.interfaces.profile
+﻿package app.gmaaps.core.interfaces.profile
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.data.Block
-import app.aaps.core.data.model.data.TargetBlock
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.data.Block
+import app.gmaaps.core.data.model.data.TargetBlock
 
 /**
  * Pure profile like it's entered by user. Contains only data.
@@ -29,7 +29,7 @@ class PureProfile(
      * July no European zone is at +01:00, so the document named an unrelated zone instead.
      *
      * Holding the resolved offset makes that impossible: the value is DST aware at the point it is
-     * taken, matching `utcOffset` on every other record and [app.aaps.core.data.time.systemUtcOffsetAt].
+     * taken, matching `utcOffset` on every other record and [app.gmaaps.core.data.time.systemUtcOffsetAt].
      * Nothing is lost that was not already lost - the zone's identity went away the moment `rawOffset`
      * reduced it to a number.
      */

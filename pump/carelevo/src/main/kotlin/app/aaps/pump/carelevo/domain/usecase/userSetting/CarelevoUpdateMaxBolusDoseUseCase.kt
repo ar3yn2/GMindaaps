@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.domain.usecase.userSetting
+﻿package app.gmaaps.pump.carelevo.domain.usecase.userSetting
 
-import app.aaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoUserSettingInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoUserSettingInfoRepository
 import dev.zacsweers.metro.Inject
 import kotlin.time.Clock
 
@@ -28,3 +28,4 @@ class CarelevoUpdateMaxBolusDoseUseCase @Inject constructor(
         )
     }
 }
+

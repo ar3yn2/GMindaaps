@@ -1,11 +1,11 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.interfaces.alerts.ReminderScheduler
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.plugins.automation.AutomationStringsValues
-import app.aaps.plugins.automation.elements.InputString
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.alerts.ReminderScheduler
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.plugins.automation.AutomationStringsValues
+import app.gmaaps.plugins.automation.elements.InputString
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -65,3 +65,4 @@ class ActionAlarmTest : TestBaseWithProfile() {
         assertThat(sut.text.value).isEqualTo("Asd")
     }
 }
+

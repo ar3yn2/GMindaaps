@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.dash.ui.compose
+﻿package app.gmaaps.pump.omnipod.dash.ui.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.FlowRow
@@ -9,7 +9,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.AapsSpacing
 
 @Preview(showBackground = true, name = "History Card - Success with details")
 @Composable
@@ -82,3 +82,4 @@ internal fun PreviewFilterChips() {
         }
     }
 }
+

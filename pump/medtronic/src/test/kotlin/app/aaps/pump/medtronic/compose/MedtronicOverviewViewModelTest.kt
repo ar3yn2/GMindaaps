@@ -1,31 +1,31 @@
-package app.aaps.pump.medtronic.compose
+﻿package app.gmaaps.pump.medtronic.compose
 
 import android.content.Context
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.defs.PumpDeviceState
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventQueueChanged
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.pump.common.events.EventRileyLinkDeviceStatusChange
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
-import app.aaps.pump.common.hw.rileylink.service.tasks.ResetRileyLinkConfigurationTask
-import app.aaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
-import app.aaps.pump.common.hw.rileylink.service.tasks.WakeAndTuneTask
-import app.aaps.pump.medtronic.MedtronicPumpPlugin
-import app.aaps.pump.medtronic.R
-import app.aaps.pump.medtronic.defs.BatteryType
-import app.aaps.pump.medtronic.driver.MedtronicPumpStatus
-import app.aaps.pump.medtronic.events.EventMedtronicPumpConfigurationChanged
-import app.aaps.pump.medtronic.events.EventMedtronicPumpValuesChanged
-import app.aaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.defs.PumpDeviceState
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventQueueChanged
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.pump.common.events.EventRileyLinkDeviceStatusChange
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.ResetRileyLinkConfigurationTask
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.WakeAndTuneTask
+import app.gmaaps.pump.medtronic.MedtronicPumpPlugin
+import app.gmaaps.pump.medtronic.R
+import app.gmaaps.pump.medtronic.defs.BatteryType
+import app.gmaaps.pump.medtronic.driver.MedtronicPumpStatus
+import app.gmaaps.pump.medtronic.events.EventMedtronicPumpConfigurationChanged
+import app.gmaaps.pump.medtronic.events.EventMedtronicPumpValuesChanged
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -42,12 +42,12 @@ import org.mockito.MockitoAnnotations
 import org.mockito.kotlin.any
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.whenever
-import app.aaps.core.ui.R as CoreUiR
-import app.aaps.pump.common.hw.rileylink.R as RileyLinkR
+import app.gmaaps.core.ui.R as CoreUiR
+import app.gmaaps.pump.common.hw.rileylink.R as RileyLinkR
 
 /**
  * Unit test for [MedtronicOverviewViewModel]. Constructs the VM directly with mocked ctor deps and
- * asserts the initial [app.aaps.core.ui.compose.pump.PumpOverviewUiState] produced by buildUiState()
+ * asserts the initial [app.gmaaps.core.ui.compose.pump.PumpOverviewUiState] produced by buildUiState()
  * (evaluated eagerly as the stateIn initialValue). The rendering itself is covered by core:ui's
  * PumpOverviewScreenTest (MedtronicOverviewScreen just delegates to PumpOverviewScreen).
  */
@@ -152,3 +152,4 @@ internal class MedtronicOverviewViewModelTest {
         assertThat(reservoirRow.level).isEqualTo(StatusLevel.CRITICAL)
     }
 }
+

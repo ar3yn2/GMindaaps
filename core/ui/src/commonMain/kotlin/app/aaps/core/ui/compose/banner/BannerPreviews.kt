@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.banner
+﻿package app.gmaaps.core.ui.compose.banner
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
@@ -14,3 +14,4 @@ internal fun ErrorBannerPreview() {
 internal fun WarningBannerPreview() {
     WarningBanner(message = "Bolus will be recorded only (not delivered by pump)")
 }
+

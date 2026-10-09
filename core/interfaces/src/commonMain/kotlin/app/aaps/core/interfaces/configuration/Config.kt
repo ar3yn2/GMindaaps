@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.configuration
+﻿package app.gmaaps.core.interfaces.configuration
 
-import app.aaps.core.keys.interfaces.AppPlatform
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.AppPlatform
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.first
@@ -120,7 +120,7 @@ interface Config {
      * wrong because `ConfigImpl` sets it to "Android" rather than leaving it empty.
      *
      * This is what decides whether a platform-specific piece of UI is drawn, and what
-     * [app.aaps.core.keys.interfaces.PreferenceKey.platforms] is matched against. Deliberately
+     * [app.gmaaps.core.keys.interfaces.PreferenceKey.platforms] is matched against. Deliberately
      * without a default: a new shell has to say what it is rather than inherit someone else's answer.
      */
     val platform: AppPlatform

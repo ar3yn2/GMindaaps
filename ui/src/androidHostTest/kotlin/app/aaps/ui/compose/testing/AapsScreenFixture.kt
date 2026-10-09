@@ -1,26 +1,26 @@
-package app.aaps.ui.compose.testing
+﻿package app.gmaaps.ui.compose.testing
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.test.junit4.ComposeContentTestRule
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.resources.TextRefIdRegistry
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.AapsTheme
-import app.aaps.core.ui.compose.LocalConfig
-import app.aaps.core.ui.compose.LocalDateUtil
-import app.aaps.core.ui.compose.LocalDecimalFormatter
-import app.aaps.core.ui.compose.LocalMasterReachable
-import app.aaps.core.ui.compose.LocalPreferences
-import app.aaps.core.ui.compose.LocalProfileUtil
-import app.aaps.shared.tests.stubTextRefResolution
-import app.aaps.ui.UiStringIds
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.resources.TextRefIdRegistry
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.AapsTheme
+import app.gmaaps.core.ui.compose.LocalConfig
+import app.gmaaps.core.ui.compose.LocalDateUtil
+import app.gmaaps.core.ui.compose.LocalDecimalFormatter
+import app.gmaaps.core.ui.compose.LocalMasterReachable
+import app.gmaaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.ui.compose.LocalProfileUtil
+import app.gmaaps.shared.tests.stubTextRefResolution
+import app.gmaaps.ui.UiStringIds
 import kotlinx.coroutines.flow.MutableStateFlow
 import org.mockito.kotlin.any
 import org.mockito.kotlin.anyVararg
@@ -130,3 +130,4 @@ fun stubResourcesFromRobolectric(rh: ResourceHelper) {
     // Routes the TextRef forms the screens use back to the id stubs above.
     stubTextRefResolution(rh)
 }
+

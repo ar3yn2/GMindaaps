@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
-import app.aaps.pump.eopatch.core.code.PatchBleResultCode
+import app.gmaaps.pump.eopatch.core.code.PatchBleResultCode
 import kotlin.time.Duration.Companion.seconds
 
 abstract class BaseResponse(
@@ -15,3 +15,4 @@ abstract class BaseResponse(
 
     override fun toString(): String = "{resultCode:$resultCode}"
 }
+

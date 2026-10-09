@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.metro)
@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "app.aaps.pump.danar"
+    namespace = "app.gmaaps.pump.danar"
 }
 
 dependencies {

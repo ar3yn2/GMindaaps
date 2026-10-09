@@ -1,8 +1,8 @@
-package app.aaps.pump.eopatch.ble
+﻿package app.gmaaps.pump.eopatch.ble
 
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.pump.eopatch.core.scan.ScanList
-import app.aaps.pump.eopatch.vo.PatchState
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.pump.eopatch.core.scan.ScanList
+import app.gmaaps.pump.eopatch.vo.PatchState
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Single
 import org.junit.jupiter.api.Test
@@ -104,3 +104,4 @@ class IPatchManagerTest {
         verify(patchManager).checkActivationProcess()
     }
 }
+

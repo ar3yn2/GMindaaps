@@ -1,14 +1,14 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import androidx.annotation.NonNull;
 
 import java.util.EnumSet;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.communication.message.NonceResyncableMessageBlock;
-import app.aaps.pump.omnipod.eros.driver.definition.BeepType;
-import app.aaps.pump.omnipod.eros.driver.definition.DeliveryType;
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.NonceResyncableMessageBlock;
+import app.gmaaps.pump.omnipod.eros.driver.definition.BeepType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.DeliveryType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
 
 public class CancelDeliveryCommand extends NonceResyncableMessageBlock {
 
@@ -75,3 +75,4 @@ public class CancelDeliveryCommand extends NonceResyncableMessageBlock {
                 '}';
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.operations
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.operations
 
 /**
  * Created by geoff on 5/26/16.
@@ -18,3 +18,4 @@ class BLECommOperationResult {
         const val RESULT_NOT_CONFIGURED: Int = 5
     }
 }
+

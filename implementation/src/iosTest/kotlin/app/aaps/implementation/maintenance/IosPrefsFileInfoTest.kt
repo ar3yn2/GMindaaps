@@ -1,15 +1,15 @@
-package app.aaps.implementation.maintenance
+﻿package app.gmaaps.implementation.maintenance
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.maintenance.PrefMetadata
-import app.aaps.core.interfaces.maintenance.Prefs
-import app.aaps.core.interfaces.protection.SecureEncrypt
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.objects.crypto.platformCryptoPrimitives
-import app.aaps.implementation.maintenance.data.PrefsStatusImpl
-import app.aaps.implementation.maintenance.formats.PrefsFormatCodec
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.maintenance.PrefMetadata
+import app.gmaaps.core.interfaces.maintenance.Prefs
+import app.gmaaps.core.interfaces.protection.SecureEncrypt
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.objects.crypto.platformCryptoPrimitives
+import app.gmaaps.implementation.maintenance.data.PrefsStatusImpl
+import app.gmaaps.implementation.maintenance.formats.PrefsFormatCodec
 import platform.Foundation.NSTemporaryDirectory
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -158,3 +158,4 @@ class IosPrefsFileInfoTest {
         override fun list(): List<Pair<String, String>> = written.entries.map { it.key to it.value }
     }
 }
+

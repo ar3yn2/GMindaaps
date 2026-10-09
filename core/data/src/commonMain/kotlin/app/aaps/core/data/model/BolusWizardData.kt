@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 /**
  * Immutable result of a bolus-wizard calculation — the computed dose plus the per-component breakdown a
@@ -44,3 +44,4 @@ data class BolusWizardData(
     val useTrend: Boolean,
     val useSuperBolus: Boolean
 )
+

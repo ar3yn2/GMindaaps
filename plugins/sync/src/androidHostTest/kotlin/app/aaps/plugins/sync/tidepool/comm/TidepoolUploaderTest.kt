@@ -1,18 +1,18 @@
-package app.aaps.plugins.sync.tidepool.comm
+﻿package app.gmaaps.plugins.sync.tidepool.comm
 
 import android.content.Context
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.L
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.sync.nsclientV3.ReceiverDelegate
-import app.aaps.plugins.sync.tidepool.auth.AuthFlowOut
-import app.aaps.plugins.sync.tidepool.events.EventTidepoolStatus
-import app.aaps.plugins.sync.tidepool.messages.AuthReplyMessage
-import app.aaps.plugins.sync.tidepool.messages.DatasetReplyMessage
-import app.aaps.plugins.sync.tidepool.utils.RateLimit
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.L
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.sync.nsclientV3.ReceiverDelegate
+import app.gmaaps.plugins.sync.tidepool.auth.AuthFlowOut
+import app.gmaaps.plugins.sync.tidepool.events.EventTidepoolStatus
+import app.gmaaps.plugins.sync.tidepool.messages.AuthReplyMessage
+import app.gmaaps.plugins.sync.tidepool.messages.DatasetReplyMessage
+import app.gmaaps.plugins.sync.tidepool.utils.RateLimit
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import net.openid.appauth.AuthState
@@ -316,3 +316,4 @@ class TidepoolUploaderTest {
         assertThat(statusMessages().any { it.contains("no route to host") }).isTrue()
     }
 }
+

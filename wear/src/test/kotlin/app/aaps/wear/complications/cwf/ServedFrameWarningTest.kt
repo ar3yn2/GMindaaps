@@ -1,4 +1,4 @@
-package app.aaps.wear.complications.cwf
+﻿package app.gmaaps.wear.complications.cwf
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -36,3 +36,4 @@ class ServedFrameWarningTest {
             .isEqualTo("a gap of 20 s before 30000")
     }
 }
+

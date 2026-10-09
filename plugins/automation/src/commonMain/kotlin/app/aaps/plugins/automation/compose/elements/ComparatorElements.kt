@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose.elements
+﻿package app.gmaaps.plugins.automation.compose.elements
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,10 +18,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.automation.elements.Comparator
-import app.aaps.plugins.automation.elements.ComparatorConnect
-import app.aaps.plugins.automation.elements.ComparatorExists
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.automation.elements.Comparator
+import app.gmaaps.plugins.automation.elements.ComparatorConnect
+import app.gmaaps.plugins.automation.elements.ComparatorExists
 
 private fun Comparator.Compare.glyph(): String = when (this) {
     Comparator.Compare.IS_LESSER           -> "<"
@@ -137,3 +137,4 @@ fun CompareRow(
         }
     }
 }
+

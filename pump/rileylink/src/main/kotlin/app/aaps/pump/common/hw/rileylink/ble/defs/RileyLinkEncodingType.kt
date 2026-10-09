@@ -1,7 +1,7 @@
-package app.aaps.pump.common.hw.rileylink.ble.defs
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.defs
 
 import androidx.annotation.StringRes
-import app.aaps.pump.common.hw.rileylink.R
+import app.gmaaps.pump.common.hw.rileylink.R
 
 enum class RileyLinkEncodingType(val value: Byte, val key: String?, @StringRes val friendlyName: Int? = null) {
     None(0x00, null),  // No encoding on RL
@@ -16,3 +16,4 @@ enum class RileyLinkEncodingType(val value: Byte, val key: String?, @StringRes v
             entries.firstOrNull { it.key == someKey } ?: None
     }
 }
+

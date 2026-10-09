@@ -1,8 +1,8 @@
-package app.aaps.ui.widget
+﻿package app.gmaaps.ui.widget
 
 import androidx.annotation.DrawableRes
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.ui.R
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.ui.R
 
 @DrawableRes
 fun TrendArrow.directionToDrawableRes(): Int =
@@ -18,3 +18,4 @@ fun TrendArrow.directionToDrawableRes(): Int =
         TrendArrow.TRIPLE_UP       -> R.drawable.ic_widget_arrow_invalid
         TrendArrow.NONE            -> R.drawable.ic_widget_arrow_invalid
     }
+

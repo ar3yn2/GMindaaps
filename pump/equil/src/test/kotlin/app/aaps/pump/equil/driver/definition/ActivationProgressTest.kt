@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.driver.definition
+﻿package app.gmaaps.pump.equil.driver.definition
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
@@ -76,3 +76,4 @@ class ActivationProgressTest : TestBase() {
         assertEquals(lastOrdinal, ActivationProgress.COMPLETED.ordinal)
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.ui.wizard.compose.steps
+﻿package app.gmaaps.pump.omnipod.common.ui.wizard.compose.steps
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -29,3 +29,4 @@ internal fun PreviewInfoStepFinish() {
         )
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.plugins.automation.AutomationStrings
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.plugins.automation.AutomationStrings
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -102,3 +102,4 @@ class ActionSmoothingChangeTest : ActionsTestBase() {
         assertThat(clone.smoothingPlugin.value).isEqualTo("NoSmoothingPlugin")
     }
 }
+

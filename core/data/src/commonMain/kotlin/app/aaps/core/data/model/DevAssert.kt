@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 /**
  * A developer check that behaves like `assert` on every target.
@@ -14,3 +14,4 @@ package app.aaps.core.data.model
  * shipped code.
  */
 expect fun devAssert(value: Boolean)
+

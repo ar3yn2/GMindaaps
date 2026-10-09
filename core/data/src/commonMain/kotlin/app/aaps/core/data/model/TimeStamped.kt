@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 /**
  * Marker interface for entities that represent a time-stamped event.
@@ -10,3 +10,4 @@ interface TimeStamped {
     /** Event time in milliseconds since the epoch. */
     val timestamp: Long
 }
+

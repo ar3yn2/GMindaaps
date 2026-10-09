@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.constraints
+﻿package app.gmaaps.core.interfaces.constraints
 
-import app.aaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.Profile
 
 /**
  * Constraints interface
@@ -8,7 +8,7 @@ import app.aaps.core.interfaces.profile.Profile
  * Every function has a param from previous chained call
  * Function can limit the value even more and add another reason of restriction
  *
- * see [app.aaps.plugins.constraints.ConstraintsCheckerImpl]
+ * see [app.gmaaps.plugins.constraints.ConstraintsCheckerImpl]
  * which iterates over all registered plugins with [ConstraintsChecker] implemented
  */
 interface ConstraintsChecker : PluginConstraints {
@@ -34,3 +34,4 @@ interface ConstraintsChecker : PluginConstraints {
     fun getMaxCarbsAllowed(): Constraint<Int>
     suspend fun getMaxIOBAllowed(): Constraint<Double>
 }
+

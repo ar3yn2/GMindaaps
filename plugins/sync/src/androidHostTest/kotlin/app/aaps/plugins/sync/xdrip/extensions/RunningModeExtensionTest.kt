@@ -1,11 +1,11 @@
-package app.aaps.plugins.sync.xdrip.extensions
+﻿package app.gmaaps.plugins.sync.xdrip.extensions
 
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -59,3 +59,4 @@ class RunningModeExtensionTest : TestBase() {
         assertThat(json.getString("_id")).isEqualTo("N")
     }
 }
+

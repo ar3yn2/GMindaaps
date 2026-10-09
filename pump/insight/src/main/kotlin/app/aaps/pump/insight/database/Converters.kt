@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.database
+﻿package app.gmaaps.pump.insight.database
 
 import androidx.room.TypeConverter
 

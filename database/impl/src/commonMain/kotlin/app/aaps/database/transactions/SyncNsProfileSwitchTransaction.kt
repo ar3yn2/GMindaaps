@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.ProfileSwitch
+import app.gmaaps.database.entities.ProfileSwitch
 
 /**
  * Sync the ProfileSwitch from NS
@@ -62,3 +62,4 @@ class SyncNsProfileSwitchTransaction(private val profileSwitches: List<ProfileSw
         val updatedDuration = mutableListOf<ProfileSwitch>()
     }
 }
+

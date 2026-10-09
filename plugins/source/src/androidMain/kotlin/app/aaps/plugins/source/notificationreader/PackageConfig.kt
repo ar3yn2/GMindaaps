@@ -1,6 +1,6 @@
-package app.aaps.plugins.source.notificationreader
+﻿package app.gmaaps.plugins.source.notificationreader
 
-import app.aaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.SourceSensor
 import org.json.JSONObject
 import kotlin.math.abs
 
@@ -73,3 +73,4 @@ class PackageConfig(
             KNOWN_INTERVALS_MIN.minBy { abs(it - value) }
     }
 }
+

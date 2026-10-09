@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.calibration
+﻿package app.gmaaps.core.interfaces.calibration
 
 /**
  * Outcome of [Calibration.addEntry]. Lets callers distinguish "persisted" from
@@ -31,3 +31,4 @@ sealed interface AddEntryResult {
         data object NoSession : Rejected
     }
 }
+

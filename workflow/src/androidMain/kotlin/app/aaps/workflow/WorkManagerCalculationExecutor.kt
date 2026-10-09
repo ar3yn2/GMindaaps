@@ -1,4 +1,4 @@
-package app.aaps.workflow
+﻿package app.gmaaps.workflow
 
 import android.content.Context
 import androidx.work.Data
@@ -6,9 +6,9 @@ import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.worker.then
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.worker.then
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -129,3 +129,4 @@ class WorkManagerCalculationExecutor(
         private const val IDLE_POLL_MS = 500L
     }
 }
+

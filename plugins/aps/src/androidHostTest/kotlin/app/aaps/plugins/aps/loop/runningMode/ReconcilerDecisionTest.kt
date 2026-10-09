@@ -1,7 +1,7 @@
-package app.aaps.plugins.aps.loop.runningMode
+﻿package app.gmaaps.plugins.aps.loop.runningMode
 
-import app.aaps.core.data.model.RM
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -262,3 +262,4 @@ class ReconcilerDecisionTest : TestBase() {
         }
     }
 }
+

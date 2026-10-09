@@ -1,23 +1,23 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Timeline
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.utils.lenientString
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.InputDropdownMenu
-import app.aaps.plugins.automation.triggers.Trigger
-import app.aaps.plugins.automation.triggers.TriggerDeps
-import app.aaps.plugins.automation.triggers.TriggerSelectedSmoothingNotActive
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.InputDropdownMenu
+import app.gmaaps.plugins.automation.triggers.Trigger
+import app.gmaaps.plugins.automation.triggers.TriggerDeps
+import app.gmaaps.plugins.automation.triggers.TriggerSelectedSmoothingNotActive
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 
@@ -85,3 +85,4 @@ class ActionSmoothingChange(
     private fun resolvePlugin(): PluginBase? =
         activePlugin.getSpecificPluginsList(PluginType.SMOOTHING).firstOrNull { it.pluginId == smoothingPlugin.value }
 }
+

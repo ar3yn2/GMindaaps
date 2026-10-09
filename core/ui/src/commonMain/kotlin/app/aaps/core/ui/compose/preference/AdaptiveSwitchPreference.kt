@@ -1,8 +1,8 @@
-/*
+﻿/*
  * Adaptive Switch Preference for Jetpack Compose
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -10,13 +10,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import app.aaps.core.keys.interfaces.BooleanKeyWithChangeGuard
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.dialogs.OkDialog
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.keys.interfaces.BooleanKeyWithChangeGuard
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.dialogs.OkDialog
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Composable switch preference for use inside card sections.
@@ -97,3 +97,4 @@ fun AdaptiveSwitchPreferenceItem(
         )
     }
 }
+

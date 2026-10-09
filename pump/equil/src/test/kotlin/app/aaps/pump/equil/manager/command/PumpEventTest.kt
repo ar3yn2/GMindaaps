@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.manager.command
+﻿package app.gmaaps.pump.equil.manager.command
 
-import app.aaps.pump.equil.R
+import app.gmaaps.pump.equil.R
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Test
@@ -47,3 +47,4 @@ class PumpEventTest {
         assertNull(PumpEvent.getEventStringRes(4, 0, 0))
     }
 }
+

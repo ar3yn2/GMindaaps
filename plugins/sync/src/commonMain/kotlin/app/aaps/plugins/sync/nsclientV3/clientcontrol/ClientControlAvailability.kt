@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
 
 /**
  * Whether this master will actually serve client commands right now.
@@ -18,3 +18,4 @@ import app.aaps.core.keys.interfaces.Preferences
  */
 internal fun Preferences.clientControlOperational(): Boolean =
     get(BooleanKey.NsClientAllowClientControl) && get(BooleanKey.NsClient3UseWs)
+

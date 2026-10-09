@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.manager
+﻿package app.gmaaps.pump.equil.manager
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.BeforeEach
@@ -197,3 +197,4 @@ class EquilCmdModelTest : TestBase() {
         assert(str.contains("ABC123"))
     }
 }
+

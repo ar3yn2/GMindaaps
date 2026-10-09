@@ -1,10 +1,10 @@
-package app.aaps.core.objects.workflow
+﻿package app.gmaaps.core.objects.workflow
 
 import android.content.Context
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
 import kotlinx.coroutines.CoroutineDispatcher
 
 /**
@@ -52,3 +52,4 @@ abstract class RunnerWorker(
             is WorkOutcome.Retry   -> Result.retry()
         }
 }
+

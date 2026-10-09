@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.overview
+﻿package app.gmaaps.ui.compose.overview
 
 import android.content.Context
 import androidx.compose.foundation.layout.PaddingValues
@@ -7,13 +7,13 @@ import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.unit.dp
-import app.aaps.core.data.model.RM
-import app.aaps.core.interfaces.overview.graph.TbrState
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.ui.compose.main.TempTargetChipState
-import app.aaps.ui.compose.testing.AapsScreenFixture
-import app.aaps.ui.compose.testing.OverviewViewModelFixture
-import app.aaps.ui.compose.testing.setAapsContent
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.interfaces.overview.graph.TbrState
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.ui.compose.main.TempTargetChipState
+import app.gmaaps.ui.compose.testing.AapsScreenFixture
+import app.gmaaps.ui.compose.testing.OverviewViewModelFixture
+import app.gmaaps.ui.compose.testing.setAapsContent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
@@ -77,9 +77,9 @@ class OverviewScreenVariantsTest {
         screen = AapsScreenFixture()
         viewModels = OverviewViewModelFixture(screen)
         context = RuntimeEnvironment.getApplication()
-        statusHeading = context.getString(app.aaps.core.ui.R.string.status)
-        expandLabel = context.getString(app.aaps.core.ui.R.string.expand)
-        collapseLabel = context.getString(app.aaps.core.ui.R.string.collapse)
+        statusHeading = context.getString(app.gmaaps.core.ui.R.string.status)
+        expandLabel = context.getString(app.gmaaps.core.ui.R.string.expand)
+        collapseLabel = context.getString(app.gmaaps.core.ui.R.string.collapse)
     }
 
     @After
@@ -87,7 +87,7 @@ class OverviewScreenVariantsTest {
 
     private val statusLightsDef = PreferenceSubScreenDef(
         key = "statuslights",
-        titleResId = app.aaps.core.ui.R.string.statuslights
+        titleResId = app.gmaaps.core.ui.R.string.statuslights
     )
 
     private enum class Variant { STACKED, SPLIT, TABLET }
@@ -248,3 +248,4 @@ class OverviewScreenVariantsTest {
         private const val NO_BG_PLACEHOLDER = "---"
     }
 }
+

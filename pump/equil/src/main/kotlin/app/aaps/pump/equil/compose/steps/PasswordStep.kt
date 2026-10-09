@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.compose.steps
+﻿package app.gmaaps.pump.equil.compose.steps
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -21,13 +21,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.banner.ErrorBanner
-import app.aaps.core.ui.compose.clearFocusOnTap
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.equil.R
-import app.aaps.pump.equil.compose.EquilWizardViewModel
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.banner.ErrorBanner
+import app.gmaaps.core.ui.compose.clearFocusOnTap
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.equil.R
+import app.gmaaps.pump.equil.compose.EquilWizardViewModel
 
 private val HEX_4_PATTERN = Regex("^[A-F0-9]{4}$")
 
@@ -47,13 +47,13 @@ internal fun PasswordStep(
     val focusManager = LocalFocusManager.current
 
     var password by rememberSaveable { mutableStateOf("") }
-    val passwordErrorText = stringResource(app.aaps.core.ui.R.string.error_mustbe4hexadidits)
+    val passwordErrorText = stringResource(app.gmaaps.core.ui.R.string.error_mustbe4hexadidits)
     val isPasswordValid = password.isEmpty() || HEX_4_PATTERN.matches(password)
 
     WizardStepLayout(
         modifier = Modifier.clearFocusOnTap(focusManager),
         secondaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.cancel),
+            text = stringResource(app.gmaaps.core.ui.R.string.cancel),
             onClick = onCancel
         )
     ) {
@@ -100,7 +100,7 @@ internal fun PasswordStep(
                 )
             } else {
                 Text(
-                    text = if (scanError != null) stringResource(app.aaps.core.ui.R.string.retry)
+                    text = if (scanError != null) stringResource(app.gmaaps.core.ui.R.string.retry)
                     else stringResource(R.string.equil_pair)
                 )
             }
@@ -111,3 +111,4 @@ internal fun PasswordStep(
         }
     }
 }
+

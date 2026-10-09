@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.quickLaunch
+﻿package app.gmaaps.ui.compose.quickLaunch
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -88,3 +88,4 @@ class QuickLaunchSerializerTest {
         assertThat(QuickLaunchSerializer.fromJson("[]")).isEqualTo(listOf(QuickLaunchAction.QuickLaunchConfig))
     }
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.pump.eopatch.core.scan
+﻿package app.gmaaps.pump.eopatch.core.scan
 
 import android.content.Context
-import app.aaps.pump.eopatch.core.ble.PatchFunc
-import app.aaps.pump.eopatch.core.noti.AlarmNotification
-import app.aaps.pump.eopatch.core.noti.InfoNotification
+import app.gmaaps.pump.eopatch.core.ble.PatchFunc
+import app.gmaaps.pump.eopatch.core.noti.AlarmNotification
+import app.gmaaps.pump.eopatch.core.noti.InfoNotification
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
 
@@ -22,3 +22,4 @@ interface IBleDevice {
     val isSeqReady: Boolean
     fun updateEncryptionParam(sharedKey: ByteArray)
 }
+

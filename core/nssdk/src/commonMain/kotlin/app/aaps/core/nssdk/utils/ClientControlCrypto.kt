@@ -1,11 +1,11 @@
-package app.aaps.core.nssdk.utils
+﻿package app.gmaaps.core.nssdk.utils
 
-import app.aaps.core.nssdk.localmodel.clientcontrol.AckEnvelope
-import app.aaps.core.nssdk.localmodel.clientcontrol.ProgressEnvelope
-import app.aaps.core.nssdk.localmodel.clientcontrol.SignedEnvelope
-import app.aaps.core.nssdk.utils.ClientControlCrypto.bytesToHex
-import app.aaps.core.nssdk.utils.ClientControlCrypto.hexToBytes
-import app.aaps.core.nssdk.utils.ClientControlCrypto.timestampWithinSkew
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.AckEnvelope
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.ProgressEnvelope
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.SignedEnvelope
+import app.gmaaps.core.nssdk.utils.ClientControlCrypto.bytesToHex
+import app.gmaaps.core.nssdk.utils.ClientControlCrypto.hexToBytes
+import app.gmaaps.core.nssdk.utils.ClientControlCrypto.timestampWithinSkew
 import dev.whyoleg.cryptography.CryptographyProvider
 import dev.whyoleg.cryptography.algorithms.HMAC
 import dev.whyoleg.cryptography.algorithms.SHA256
@@ -148,3 +148,4 @@ object ClientControlCrypto {
         return diff == 0
     }
 }
+

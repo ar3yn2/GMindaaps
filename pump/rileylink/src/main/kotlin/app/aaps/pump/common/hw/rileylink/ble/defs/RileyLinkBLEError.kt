@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.defs
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.defs
 
 /**
  * Created by andy on 11/24/18.
@@ -11,3 +11,4 @@ enum class RileyLinkBLEError(val description: String) {
     NoResponse("No response from RileyLink"),
     TooShortOrNullResponse("Too short or null decoded response.");
 }
+

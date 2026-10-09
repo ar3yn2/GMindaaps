@@ -1,9 +1,9 @@
-package app.aaps.ui.widget.glance
+﻿package app.gmaaps.ui.widget.glance
 
 import android.content.Context
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.di.injectMetroMembers
-import app.aaps.ui.widget.glance.WidgetDependencies.Companion.from
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.di.injectMetroMembers
+import app.gmaaps.ui.widget.glance.WidgetDependencies.Companion.from
 import dev.zacsweers.metro.Inject
 
 /**
@@ -17,7 +17,7 @@ import dev.zacsweers.metro.Inject
  * Each [androidx.glance.appwidget.GlanceAppWidget] should therefore have a no-arg constructor and call
  * [from] inside `provideGlance(context, id)`.
  *
- * The entry needed for [from] to work lives in [app.aaps.ui.di.UiMemberInjectors]; without it
+ * The entry needed for [from] to work lives in [app.gmaaps.ui.di.UiMemberInjectors]; without it
  * `injectMetroMembers` fails loudly rather than leaving the fields unset.
  */
 class WidgetDependencies {
@@ -32,3 +32,4 @@ class WidgetDependencies {
             WidgetDependencies().also { context.injectMetroMembers(it) }
     }
 }
+

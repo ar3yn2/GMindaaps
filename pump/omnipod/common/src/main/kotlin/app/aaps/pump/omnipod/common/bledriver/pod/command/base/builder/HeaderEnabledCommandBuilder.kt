@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command.base.builder
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.builder
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.Command
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.Command
 
 @Suppress("UNCHECKED_CAST")
 abstract class HeaderEnabledCommandBuilder<T : HeaderEnabledCommandBuilder<T, R>, R : Command> : CommandBuilder<R> {
@@ -32,3 +32,4 @@ abstract class HeaderEnabledCommandBuilder<T : HeaderEnabledCommandBuilder<T, R>
 
     protected abstract fun buildCommand(): R
 }
+

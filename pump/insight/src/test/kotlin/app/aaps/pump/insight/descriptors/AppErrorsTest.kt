@@ -1,6 +1,6 @@
-package app.aaps.pump.insight.descriptors
+﻿package app.gmaaps.pump.insight.descriptors
 
-import app.aaps.pump.insight.exceptions.app_layer_errors.AppLayerErrorException
+import app.gmaaps.pump.insight.exceptions.app_layer_errors.AppLayerErrorException
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import java.lang.reflect.Modifier
@@ -78,3 +78,4 @@ class AppErrorsTest {
         assertThat(AppErrors.fromId(Int.MAX_VALUE)).isNull()
     }
 }
+

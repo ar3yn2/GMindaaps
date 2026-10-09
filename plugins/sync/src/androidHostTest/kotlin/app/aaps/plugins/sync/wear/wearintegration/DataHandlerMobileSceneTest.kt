@@ -1,33 +1,33 @@
-package app.aaps.plugins.sync.wear.wearintegration
+﻿package app.gmaaps.plugins.sync.wear.wearintegration
 
-import app.aaps.core.data.model.ActiveSceneState
-import app.aaps.core.data.model.Scene
-import app.aaps.core.data.model.SceneLifecycle
-import app.aaps.core.data.ui.ConfirmationRole
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.automation.Automation
-import app.aaps.core.interfaces.bolus.BatchExecutor
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
-import app.aaps.core.interfaces.bolus.WizardExecutor
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.maintenance.ImportExportPrefs
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.pump.PumpStatusProvider
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.rx.events.EventMobileToWear
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.interfaces.scenes.ActiveSceneSync
-import app.aaps.core.interfaces.scenes.SceneActions
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.core.interfaces.scenes.SceneChainResolver
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.TrendCalculator
-import app.aaps.core.objects.runningMode.RunningModeGuard
-import app.aaps.core.objects.wizard.QuickWizard
-import app.aaps.plugins.sync.SyncStringsValues
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.ActiveSceneState
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.data.model.SceneLifecycle
+import app.gmaaps.core.data.ui.ConfirmationRole
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.automation.Automation
+import app.gmaaps.core.interfaces.bolus.BatchExecutor
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.bolus.WizardExecutor
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.maintenance.ImportExportPrefs
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.pump.PumpStatusProvider
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.rx.events.EventMobileToWear
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.scenes.ActiveSceneSync
+import app.gmaaps.core.interfaces.scenes.SceneActions
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.core.interfaces.scenes.SceneChainResolver
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.TrendCalculator
+import app.gmaaps.core.objects.runningMode.RunningModeGuard
+import app.gmaaps.core.objects.wizard.QuickWizard
+import app.gmaaps.plugins.sync.SyncStringsValues
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
@@ -203,3 +203,4 @@ class DataHandlerMobileSceneTest : TestBaseWithProfile() {
         verify(activeSceneSync, never()).getActiveState()
     }
 }
+

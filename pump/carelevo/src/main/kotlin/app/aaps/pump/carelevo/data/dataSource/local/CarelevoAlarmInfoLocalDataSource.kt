@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.data.dataSource.local
+﻿package app.gmaaps.pump.carelevo.data.dataSource.local
 
-import app.aaps.pump.carelevo.data.model.entities.CarelevoAlarmInfoEntity
+import app.gmaaps.pump.carelevo.data.model.entities.CarelevoAlarmInfoEntity
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single

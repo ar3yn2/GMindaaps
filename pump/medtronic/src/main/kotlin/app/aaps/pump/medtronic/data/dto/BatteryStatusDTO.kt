@@ -1,6 +1,6 @@
-package app.aaps.pump.medtronic.data.dto
+﻿package app.gmaaps.pump.medtronic.data.dto
 
-import app.aaps.pump.medtronic.defs.BatteryType
+import app.gmaaps.pump.medtronic.defs.BatteryType
 import com.google.gson.annotations.Expose
 import java.util.Locale
 
@@ -42,3 +42,4 @@ class BatteryStatusDTO {
         Unknown
     }
 }
+

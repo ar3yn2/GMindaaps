@@ -1,20 +1,20 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.automation.AutomationEvent
-import app.aaps.core.interfaces.automation.AutomationIconData
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.compose.icons.IcUserOptions
-import app.aaps.core.utils.lenientBoolean
-import app.aaps.core.utils.lenientString
-import app.aaps.core.utils.lenientStringOrNull
-import app.aaps.plugins.automation.actions.Action
-import app.aaps.plugins.automation.actions.ActionFactory
-import app.aaps.plugins.automation.actions.ActionStopProcessing
-import app.aaps.plugins.automation.triggers.TriggerConnector
-import app.aaps.plugins.automation.triggers.TriggerDeps
-import app.aaps.plugins.automation.triggers.TriggerFactory
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.automation.AutomationEvent
+import app.gmaaps.core.interfaces.automation.AutomationIconData
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.compose.icons.IcUserOptions
+import app.gmaaps.core.utils.lenientBoolean
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.core.utils.lenientStringOrNull
+import app.gmaaps.plugins.automation.actions.Action
+import app.gmaaps.plugins.automation.actions.ActionFactory
+import app.gmaaps.plugins.automation.actions.ActionStopProcessing
+import app.gmaaps.plugins.automation.triggers.TriggerConnector
+import app.gmaaps.plugins.automation.triggers.TriggerDeps
+import app.gmaaps.plugins.automation.triggers.TriggerFactory
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonObject
@@ -176,3 +176,4 @@ class AutomationEventObject(private val factory: AutomationEventFactory) : Autom
         fun nextUiKey(): Long = uiKeyCounter.incrementAndFetch()
     }
 }
+

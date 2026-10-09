@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
 
 public abstract class MessageBlock {
     protected byte[] encodedData = new byte[0];
@@ -29,3 +29,4 @@ public abstract class MessageBlock {
         return stream.toByteArray();
     }
 }
+

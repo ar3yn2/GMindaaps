@@ -1,15 +1,15 @@
-package app.aaps.implementation.insulin
+﻿package app.gmaaps.implementation.insulin
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.stubTextRefResolution
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.stubTextRefResolution
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import org.junit.jupiter.api.BeforeEach
@@ -120,3 +120,4 @@ class ConcentrationHelperImplTest : TestBase() {
         assertThat(s.bolusProgressString(PumpInsulin(1.0), total = 5.0, isPriming = false)).isEqualTo("s")
     }
 }
+

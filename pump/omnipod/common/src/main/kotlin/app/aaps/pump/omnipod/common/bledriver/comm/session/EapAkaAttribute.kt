@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.session
 
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.MessageIOException
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.MessageIOException
 import java.util.LinkedList
 
 enum class EapAkaAttributeType(val type: Byte) {
@@ -221,3 +221,4 @@ data class EapAkaAttributeClientErrorCode(val payload: ByteArray) : EapAkaAttrib
         const val SIZE = 4 // type, size=1, payload:2
     }
 }
+

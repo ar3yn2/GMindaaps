@@ -1,11 +1,11 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.pump.eopatch.core.api.TempBasalScheduleStart
-import app.aaps.pump.eopatch.core.response.TempBasalScheduleSetResponse
-import app.aaps.pump.eopatch.vo.TempBasal
-import app.aaps.pump.eopatch.vo.TempBasalManager
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.pump.eopatch.core.api.TempBasalScheduleStart
+import app.gmaaps.pump.eopatch.core.response.TempBasalScheduleSetResponse
+import app.gmaaps.pump.eopatch.vo.TempBasal
+import app.gmaaps.pump.eopatch.vo.TempBasalManager
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -42,3 +42,4 @@ class StartTempBasalTask(
         checkPatchConnected()
     }
 }
+

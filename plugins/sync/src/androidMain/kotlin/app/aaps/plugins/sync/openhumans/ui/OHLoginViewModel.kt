@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.openhumans.ui
+﻿package app.gmaaps.plugins.sync.openhumans.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.plugins.sync.di.OpenHumansScope
-import app.aaps.plugins.sync.openhumans.OpenHumansUploaderPlugin
+import app.gmaaps.plugins.sync.di.OpenHumansScope
+import app.gmaaps.plugins.sync.openhumans.OpenHumansUploaderPlugin
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.binding
@@ -76,3 +76,4 @@ internal class OHLoginViewModel(
         DONE
     }
 }
+

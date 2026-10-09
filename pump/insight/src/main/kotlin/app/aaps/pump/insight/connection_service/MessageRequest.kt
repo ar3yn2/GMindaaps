@@ -1,8 +1,8 @@
-package app.aaps.pump.insight.connection_service
+﻿package app.gmaaps.pump.insight.connection_service
 
-import app.aaps.core.utils.wait
-import app.aaps.core.utils.waitMillis
-import app.aaps.pump.insight.app_layer.AppLayerMessage
+import app.gmaaps.core.utils.wait
+import app.gmaaps.core.utils.waitMillis
+import app.gmaaps.pump.insight.app_layer.AppLayerMessage
 
 open class MessageRequest<T : AppLayerMessage> internal constructor(var request: T) : Comparable<MessageRequest<*>> {
 

@@ -1,11 +1,11 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.UnitDoubleKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.UnitDoubleKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.double
@@ -182,3 +182,4 @@ class JSONObjectExtTest {
 
     // endregion
 }
+

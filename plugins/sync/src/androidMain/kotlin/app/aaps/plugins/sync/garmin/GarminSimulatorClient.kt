@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.garmin
+﻿package app.gmaaps.plugins.sync.garmin
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import com.garmin.android.connectiq.IQApp
 import com.garmin.android.connectiq.IQApp.IQAppStatus
 import io.reactivex.rxjava3.disposables.Disposable

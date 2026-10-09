@@ -1,16 +1,16 @@
-package app.aaps.keys
+﻿package app.gmaaps.keys
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.PreferenceKeyResolver
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.di.metro.AppRootGraph
-import app.aaps.implementation.maintenance.migration.FileKeyValueStore
-import app.aaps.implementation.maintenance.migration.PreferenceMigrations
-import app.aaps.shared.tests.aapsClassesOnClasspath
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.PreferenceKeyResolver
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.di.metro.AppRootGraph
+import app.gmaaps.implementation.maintenance.migration.FileKeyValueStore
+import app.gmaaps.implementation.maintenance.migration.PreferenceMigrations
+import app.gmaaps.shared.tests.aapsClassesOnClasspath
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Test
@@ -118,3 +118,4 @@ class PreferenceMigrationRoundTripTest {
         const val SCHEDULE = "[{\"time\":\"00:00\",\"timeAsSeconds\":0,\"value\":3}]"
     }
 }
+

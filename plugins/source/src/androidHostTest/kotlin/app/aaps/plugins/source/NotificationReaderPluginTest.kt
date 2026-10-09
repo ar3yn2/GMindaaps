@@ -1,6 +1,6 @@
-package app.aaps.plugins.source
+﻿package app.gmaaps.plugins.source
 
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -31,3 +31,4 @@ class NotificationReaderPluginTest : TestBaseWithProfile() {
             .contains(NotificationReaderPlugin.PERMISSION_NOTIFICATION_LISTENER)
     }
 }
+

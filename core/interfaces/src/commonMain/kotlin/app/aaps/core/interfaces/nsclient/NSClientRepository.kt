@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.nsclient
+﻿package app.gmaaps.core.interfaces.nsclient
 
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.serialization.json.JsonElement
@@ -46,3 +46,4 @@ interface NSClientRepository {
     /** Clear all log entries */
     fun clearLog()
 }
+

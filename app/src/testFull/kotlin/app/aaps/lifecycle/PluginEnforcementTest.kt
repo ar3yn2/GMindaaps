@@ -1,8 +1,8 @@
-package app.aaps.lifecycle
+﻿package app.gmaaps.lifecycle
 
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.di.metro.AppRootGraph
-import app.aaps.shared.tests.aapsClassesOnClasspath
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.di.metro.AppRootGraph
+import app.gmaaps.shared.tests.aapsClassesOnClasspath
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import java.io.File
@@ -105,3 +105,4 @@ class PluginEnforcementTest {
             .toMap()
     }
 }
+

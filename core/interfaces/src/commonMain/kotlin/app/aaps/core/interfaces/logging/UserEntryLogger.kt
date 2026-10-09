@@ -1,9 +1,9 @@
-package app.aaps.core.interfaces.logging
+﻿package app.gmaaps.core.interfaces.logging
 
-import app.aaps.core.data.model.UE
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.data.model.UE
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
 
 interface UserEntryLogger {
 

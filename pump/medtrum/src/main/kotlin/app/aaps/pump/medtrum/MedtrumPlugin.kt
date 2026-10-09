@@ -1,61 +1,61 @@
-package app.aaps.pump.medtrum
+﻿package app.gmaaps.pump.medtrum
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.os.IBinder
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.di.PumpDriver
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.Medtrum
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpPluginBase
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.TemporaryBasalStorage
-import app.aaps.core.interfaces.pump.comment
-import app.aaps.core.interfaces.pump.defs.fillFor
-import app.aaps.core.interfaces.pump.mapState
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventAppExit
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.withEntriesProvider
-import app.aaps.core.ui.compose.icons.IcPluginMedtrum
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.pump.medtrum.comm.enums.MedtrumPumpState
-import app.aaps.pump.medtrum.compose.MedtrumComposeContent
-import app.aaps.pump.medtrum.keys.MedtrumBooleanKey
-import app.aaps.pump.medtrum.keys.MedtrumBooleanNonKey
-import app.aaps.pump.medtrum.keys.MedtrumDoubleNonKey
-import app.aaps.pump.medtrum.keys.MedtrumIntKey
-import app.aaps.pump.medtrum.keys.MedtrumIntNonKey
-import app.aaps.pump.medtrum.keys.MedtrumLongNonKey
-import app.aaps.pump.medtrum.keys.MedtrumStringKey
-import app.aaps.pump.medtrum.keys.MedtrumStringNonKey
-import app.aaps.pump.medtrum.services.MedtrumService
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.di.PumpDriver
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.Medtrum
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpPluginBase
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.TemporaryBasalStorage
+import app.gmaaps.core.interfaces.pump.comment
+import app.gmaaps.core.interfaces.pump.defs.fillFor
+import app.gmaaps.core.interfaces.pump.mapState
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventAppExit
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.withEntriesProvider
+import app.gmaaps.core.ui.compose.icons.IcPluginMedtrum
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.pump.medtrum.comm.enums.MedtrumPumpState
+import app.gmaaps.pump.medtrum.compose.MedtrumComposeContent
+import app.gmaaps.pump.medtrum.keys.MedtrumBooleanKey
+import app.gmaaps.pump.medtrum.keys.MedtrumBooleanNonKey
+import app.gmaaps.pump.medtrum.keys.MedtrumDoubleNonKey
+import app.gmaaps.pump.medtrum.keys.MedtrumIntKey
+import app.gmaaps.pump.medtrum.keys.MedtrumIntNonKey
+import app.gmaaps.pump.medtrum.keys.MedtrumLongNonKey
+import app.gmaaps.pump.medtrum.keys.MedtrumStringKey
+import app.gmaaps.pump.medtrum.keys.MedtrumStringNonKey
+import app.gmaaps.pump.medtrum.services.MedtrumService
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -198,7 +198,7 @@ class MedtrumPlugin(
             if (medtrumService != null) {
                 aapsLogger.debug(LTag.PUMP, "Medtrum connect - Attempt connection!")
                 val success = medtrumService?.connect(reason) == true
-                if (!success) rxBus.send(EventShowSnackbar(rh.gs(app.aaps.core.ui.R.string.ble_not_supported_or_not_paired), EventShowSnackbar.Type.Error))
+                if (!success) rxBus.send(EventShowSnackbar(rh.gs(app.gmaaps.core.ui.R.string.ble_not_supported_or_not_paired), EventShowSnackbar.Type.Error))
             }
         }
     }
@@ -245,7 +245,7 @@ class MedtrumPlugin(
             pumpEnactResultProvider().success(true).enacted(true)
         } else {
             // FAILED_UPDATE_PROFILE posted centrally (onProfileChanged) from success=false; comment carries the reason.
-            pumpEnactResultProvider().success(false).enacted(false).comment(app.aaps.core.ui.R.string.failed_update_basal_profile)
+            pumpEnactResultProvider().success(false).enacted(false).comment(app.gmaaps.core.ui.R.string.failed_update_basal_profile)
         }
     }
 
@@ -295,7 +295,7 @@ class MedtrumPlugin(
         if (!result.success) {
             result.comment(medtrumPump.bolusErrorReason ?: rh.gs(R.string.bolus_error_reason_pump_error))
         } else {
-            result.comment(app.aaps.core.ui.R.string.ok)
+            result.comment(app.gmaaps.core.ui.R.string.ok)
         }
         aapsLogger.debug(LTag.PUMP, "deliverTreatment: OK. Success: ${result.success} Asked: ${detailedBolusInfo.insulin} Delivered: ${result.bolusDelivered}")
         return result
@@ -431,7 +431,7 @@ class MedtrumPlugin(
                 MedtrumIntKey.MedtrumDailyMaxInsulin,
                 PreferenceSubScreenDef(
                     key = "medtrum_advanced",
-                    titleResId = app.aaps.core.ui.R.string.advanced_settings_title,
+                    titleResId = app.gmaaps.core.ui.R.string.advanced_settings_title,
                     items = listOf(
                         MedtrumBooleanKey.MedtrumScanOnConnectionErrors
                     )
@@ -486,3 +486,4 @@ class MedtrumPlugin(
     }
 
 }
+

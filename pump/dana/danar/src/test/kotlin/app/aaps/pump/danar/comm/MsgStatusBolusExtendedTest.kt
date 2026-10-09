@@ -1,6 +1,6 @@
-package app.aaps.pump.danar.comm
+﻿package app.gmaaps.pump.danar.comm
 
-import app.aaps.core.data.time.T
+import app.gmaaps.core.data.time.T
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

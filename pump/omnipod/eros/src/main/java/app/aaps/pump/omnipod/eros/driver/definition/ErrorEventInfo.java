@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
-import app.aaps.core.utils.pump.ByteUtil;
+import app.gmaaps.core.utils.pump.ByteUtil;
 
 public final class ErrorEventInfo {
     private final boolean insulinStateTableCorruption;
@@ -50,3 +50,4 @@ public final class ErrorEventInfo {
                 '}';
     }
 }
+

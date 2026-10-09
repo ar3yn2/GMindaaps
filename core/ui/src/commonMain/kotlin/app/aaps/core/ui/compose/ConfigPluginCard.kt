@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -35,7 +35,7 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.CoreUiStrings
 
 /**
  * How a plugin category lets the user choose plugins.
@@ -259,3 +259,4 @@ private fun InCardActionRow(
         )
     }
 }
+

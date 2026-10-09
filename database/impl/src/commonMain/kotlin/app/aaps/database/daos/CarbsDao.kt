@@ -1,10 +1,10 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.Carbs
-import app.aaps.database.entities.TABLE_CARBS
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.entities.Carbs
+import app.gmaaps.database.entities.TABLE_CARBS
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 
 @Dao
 internal interface CarbsDao : TraceableDao<Carbs> {
@@ -61,3 +61,4 @@ internal interface CarbsDao : TraceableDao<Carbs> {
     @Query("SELECT * FROM $TABLE_CARBS WHERE dateCreated > :since AND dateCreated <= :until LIMIT :limit OFFSET :offset")
     suspend fun getNewEntriesSince(since: Long, until: Long, limit: Int, offset: Int): List<Carbs>
 }
+

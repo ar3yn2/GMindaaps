@@ -1,17 +1,17 @@
-package app.aaps.plugins.sensitivity
+﻿package app.gmaaps.plugins.sensitivity
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.aps.APS
-import app.aaps.core.interfaces.aps.APSResult
-import app.aaps.core.interfaces.aps.AutosensDataStore
-import app.aaps.core.interfaces.aps.Sensitivity
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.IntKey
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.aps.APS
+import app.gmaaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.core.interfaces.aps.Sensitivity
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.IntKey
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -165,3 +165,4 @@ class SensitivityWeightedAveragePluginTest : SensitivityTestBase() {
         assertThat(sut.showInList()).isFalse()
     }
 }
+

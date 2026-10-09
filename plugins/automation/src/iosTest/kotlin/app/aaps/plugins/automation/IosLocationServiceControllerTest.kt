@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import kotlin.test.Test
 import kotlin.test.assertNull
@@ -37,3 +37,4 @@ class IosLocationServiceControllerTest {
         assertNull(sut.lastLocation())
     }
 }
+

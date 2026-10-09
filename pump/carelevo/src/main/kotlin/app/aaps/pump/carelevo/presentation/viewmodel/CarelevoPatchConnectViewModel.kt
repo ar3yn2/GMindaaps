@@ -1,30 +1,30 @@
-package app.aaps.pump.carelevo.presentation.viewmodel
+﻿package app.gmaaps.pump.carelevo.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.ble.ScannedDevice
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.ble.CarelevoBleTransport
-import app.aaps.pump.carelevo.command.CmdDiscard
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.common.MutableEventFlow
-import app.aaps.pump.carelevo.common.asEventFlow
-import app.aaps.pump.carelevo.common.keys.CarelevoBooleanPreferenceKey
-import app.aaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
-import app.aaps.pump.carelevo.common.model.Event
-import app.aaps.pump.carelevo.common.model.PatchState
-import app.aaps.pump.carelevo.common.model.State
-import app.aaps.pump.carelevo.common.model.UiState
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoConnectNewPatchUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchForceDiscardUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.model.CarelevoConnectNewPatchRequestModel
-import app.aaps.pump.carelevo.presentation.model.CarelevoConnectPrepareEvent
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.ble.ScannedDevice
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.ble.CarelevoBleTransport
+import app.gmaaps.pump.carelevo.command.CmdDiscard
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.common.MutableEventFlow
+import app.gmaaps.pump.carelevo.common.asEventFlow
+import app.gmaaps.pump.carelevo.common.keys.CarelevoBooleanPreferenceKey
+import app.gmaaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
+import app.gmaaps.pump.carelevo.common.model.Event
+import app.gmaaps.pump.carelevo.common.model.PatchState
+import app.gmaaps.pump.carelevo.common.model.State
+import app.gmaaps.pump.carelevo.common.model.UiState
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoConnectNewPatchUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchForceDiscardUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.model.CarelevoConnectNewPatchRequestModel
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoConnectPrepareEvent
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -300,3 +300,4 @@ class CarelevoPatchConnectViewModel @Inject constructor(
         private const val MIN_SCAN_RSSI = -45
     }
 }
+

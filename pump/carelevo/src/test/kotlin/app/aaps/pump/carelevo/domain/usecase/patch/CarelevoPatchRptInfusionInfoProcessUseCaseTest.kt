@@ -1,11 +1,11 @@
-package app.aaps.pump.carelevo.domain.usecase.patch
+﻿package app.gmaaps.pump.carelevo.domain.usecase.patch
 
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
-import app.aaps.pump.carelevo.domain.usecase.patch.model.CarelevoPatchRptInfusionInfoDefaultRequestModel
-import app.aaps.pump.carelevo.domain.usecase.patch.model.CarelevoPatchRptInfusionInfoRequestModel
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
+import app.gmaaps.pump.carelevo.domain.usecase.patch.model.CarelevoPatchRptInfusionInfoDefaultRequestModel
+import app.gmaaps.pump.carelevo.domain.usecase.patch.model.CarelevoPatchRptInfusionInfoRequestModel
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.any
@@ -77,3 +77,4 @@ internal class CarelevoPatchRptInfusionInfoProcessUseCaseTest {
         )
     }
 }
+

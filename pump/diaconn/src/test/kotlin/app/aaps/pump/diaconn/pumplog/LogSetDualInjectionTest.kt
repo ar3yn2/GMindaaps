@@ -1,6 +1,6 @@
-package app.aaps.pump.diaconn.pumplog
+﻿package app.gmaaps.pump.diaconn.pumplog
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -122,3 +122,4 @@ class LogSetDualInjectionTest : TestBase() {
         assertThat(LogSetDualInjection.LOG_KIND).isEqualTo(0x0F.toByte())
     }
 }
+

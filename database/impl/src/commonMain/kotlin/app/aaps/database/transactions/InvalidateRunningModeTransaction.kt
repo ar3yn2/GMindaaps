@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.RunningMode
+import app.gmaaps.database.entities.RunningMode
 
 class InvalidateRunningModeTransaction(val id: Long) : Transaction<InvalidateRunningModeTransaction.TransactionResult>() {
 

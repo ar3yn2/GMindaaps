@@ -1,9 +1,9 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.CalibrationEntry
-import app.aaps.database.entities.TABLE_CALIBRATION_ENTRIES
+import app.gmaaps.database.entities.CalibrationEntry
+import app.gmaaps.database.entities.TABLE_CALIBRATION_ENTRIES
 
 @Dao
 internal interface CalibrationEntryDao : TraceableDao<CalibrationEntry> {
@@ -42,3 +42,4 @@ internal interface CalibrationEntryDao : TraceableDao<CalibrationEntry> {
     @Query("SELECT * FROM $TABLE_CALIBRATION_ENTRIES WHERE id = :referenceId")
     suspend fun getCurrentFromHistoric(referenceId: Long): CalibrationEntry?
 }
+

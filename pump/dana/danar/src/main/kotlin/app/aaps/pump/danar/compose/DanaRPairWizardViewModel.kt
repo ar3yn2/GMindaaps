@@ -1,22 +1,22 @@
-package app.aaps.pump.danar.compose
+﻿package app.gmaaps.pump.danar.compose
 
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.rfcomm.RfcommTransport
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventInitializationChanged
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.events.EventDanaRNewStatus
-import app.aaps.pump.dana.keys.DanaIntNonKey
-import app.aaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommTransport
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventInitializationChanged
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.events.EventDanaRNewStatus
+import app.gmaaps.pump.dana.keys.DanaIntNonKey
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -151,7 +151,7 @@ class DanaRPairWizardViewModel(
 
         // Trigger connection
         pumpSync.connectNewPump(true)
-        viewModelScope.launch { commandQueue.readStatus(rh.gs(app.aaps.core.ui.R.string.device_changed)) }
+        viewModelScope.launch { commandQueue.readStatus(rh.gs(app.gmaaps.core.ui.R.string.device_changed)) }
     }
 
     fun goBack() {
@@ -168,3 +168,4 @@ class DanaRPairWizardViewModel(
         _events.tryEmit(DanaRPairWizardEvent.Finish)
     }
 }
+

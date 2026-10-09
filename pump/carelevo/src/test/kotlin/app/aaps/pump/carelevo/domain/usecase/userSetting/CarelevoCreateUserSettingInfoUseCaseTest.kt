@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.domain.usecase.userSetting
+﻿package app.gmaaps.pump.carelevo.domain.usecase.userSetting
 
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.repository.CarelevoUserSettingInfoRepository
-import app.aaps.pump.carelevo.domain.usecase.userSetting.model.CarelevoUserSettingInfoRequestModel
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoUserSettingInfoRepository
+import app.gmaaps.pump.carelevo.domain.usecase.userSetting.model.CarelevoUserSettingInfoRequestModel
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.any
@@ -29,3 +29,4 @@ internal class CarelevoCreateUserSettingInfoUseCaseTest {
         assertThat(result).isInstanceOf(ResponseResult.Success::class.java)
     }
 }
+

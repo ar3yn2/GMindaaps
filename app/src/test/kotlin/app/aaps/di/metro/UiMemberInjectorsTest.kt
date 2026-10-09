@@ -1,13 +1,13 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
-import app.aaps.ui.activities.ErrorActivity
-import app.aaps.ui.widget.BgGraphWidget
-import app.aaps.ui.widget.CompactBgWidget
-import app.aaps.ui.widget.GlucoseCircleWidget
-import app.aaps.ui.widget.SmallWidget
-import app.aaps.ui.widget.Widget
-import app.aaps.ui.widget.WidgetConfigureActivity
-import app.aaps.ui.widget.glance.WidgetDependencies
+import app.gmaaps.ui.activities.ErrorActivity
+import app.gmaaps.ui.widget.BgGraphWidget
+import app.gmaaps.ui.widget.CompactBgWidget
+import app.gmaaps.ui.widget.GlucoseCircleWidget
+import app.gmaaps.ui.widget.SmallWidget
+import app.gmaaps.ui.widget.Widget
+import app.gmaaps.ui.widget.WidgetConfigureActivity
+import app.gmaaps.ui.widget.glance.WidgetDependencies
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -50,3 +50,4 @@ class UiMemberInjectorsTest {
         assertThat(injectors.keys).contains(WidgetDependencies::class)
     }
 }
+

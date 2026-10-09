@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3.services
+﻿package app.gmaaps.plugins.sync.nsclientV3.services
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -6,29 +6,29 @@ import android.os.Binder
 import android.os.IBinder
 import android.os.PowerManager
 import androidx.annotation.OpenForTesting
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.di.ApplicationScope
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.nsclient.NSAlarm
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.nsclient.StoreDataForDb
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.nssdk.interfaces.RunningConfiguration
-import app.aaps.core.objects.workflow.MetroService
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.NsIncomingDataProcessor
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector
-import app.aaps.plugins.sync.nsclientV3.data.NSDeviceStatusHandler
-import app.aaps.plugins.sync.nsclientV3.keys.NsclientBooleanKey
-import app.aaps.plugins.sync.nsclientV3.ws.NsConnectHandler
-import app.aaps.plugins.sync.nsclientV3.ws.NsFrameHandler
-import app.aaps.plugins.sync.nsclientV3.ws.NsSocket
-import app.aaps.plugins.sync.nsclientV3.ws.NsSocketFactory
-import app.aaps.plugins.sync.nsclientV3.ws.ServiceNsConnection
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.di.ApplicationScope
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.nsclient.NSAlarm
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.nsclient.StoreDataForDb
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.nssdk.interfaces.RunningConfiguration
+import app.gmaaps.core.objects.workflow.MetroService
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.NsIncomingDataProcessor
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector
+import app.gmaaps.plugins.sync.nsclientV3.data.NSDeviceStatusHandler
+import app.gmaaps.plugins.sync.nsclientV3.keys.NsclientBooleanKey
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsConnectHandler
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsFrameHandler
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsSocket
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsSocketFactory
+import app.gmaaps.plugins.sync.nsclientV3.ws.ServiceNsConnection
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CoroutineScope
 import java.lang.ref.WeakReference
@@ -209,3 +209,4 @@ class NSClientV3Service : MetroService() {
     internal val onUrgentAlarm: (String) -> Unit = { raw -> nsFrameHandler.onUrgentAlarm(raw) }
     internal val onClearAlarm: (String) -> Unit = { raw -> nsFrameHandler.onClearAlarm(raw) }
 }
+

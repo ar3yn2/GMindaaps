@@ -1,14 +1,14 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import android.app.Application
 import android.content.Intent
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.Mock
@@ -20,7 +20,7 @@ import org.mockito.kotlin.whenever
 
 /**
  * Covers the receiver that rings a reminder scheduled through
- * [app.aaps.core.interfaces.alerts.ReminderScheduler].
+ * [app.gmaaps.core.interfaces.alerts.ReminderScheduler].
  */
 class TimerReminderReceiverTest : TestBase() {
 
@@ -83,3 +83,4 @@ class TimerReminderReceiverTest : TestBase() {
         verify(uiInteraction).runAlarm(status = "AAPS", title = "AAPS", sound = AlarmSound.ALARM)
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.message
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.message
 
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.packet.PayloadJoiner
-import app.aaps.pump.omnipod.common.bledriver.comm.packet.PayloadSplitter
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.packet.PayloadJoiner
+import app.gmaaps.pump.omnipod.common.bledriver.comm.packet.PayloadSplitter
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import java.util.Random
@@ -26,3 +26,4 @@ class PayloadSplitJoinTest {
         }
     }
 }
+

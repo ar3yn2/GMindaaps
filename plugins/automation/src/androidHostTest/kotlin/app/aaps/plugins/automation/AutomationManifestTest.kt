@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -43,3 +43,4 @@ class AutomationManifestTest {
         assertThat(checked).isAtLeast(2)
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.pump.danars.di
+﻿package app.gmaaps.pump.danars.di
 
-import app.aaps.core.interfaces.pump.ble.BleTransport
-import app.aaps.pump.dana.di.DanaAccessors
-import app.aaps.pump.danars.DanaRSPlugin
+import app.gmaaps.core.interfaces.pump.ble.BleTransport
+import app.gmaaps.pump.dana.di.DanaAccessors
+import app.gmaaps.pump.danars.DanaRSPlugin
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesTo
 
@@ -19,3 +19,4 @@ interface DanaRSAccessors : DanaAccessors {
     val danaRSPlugin: DanaRSPlugin
     val bleTransport: BleTransport
 }
+

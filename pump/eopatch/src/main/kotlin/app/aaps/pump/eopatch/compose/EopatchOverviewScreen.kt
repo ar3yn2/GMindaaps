@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.compose
+﻿package app.gmaaps.pump.eopatch.compose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -25,9 +25,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.LocalSnackbarHostState
-import app.aaps.core.ui.compose.pump.PumpOverviewScreen
-import app.aaps.pump.eopatch.R
+import app.gmaaps.core.ui.compose.LocalSnackbarHostState
+import app.gmaaps.core.ui.compose.pump.PumpOverviewScreen
+import app.gmaaps.pump.eopatch.R
 
 /**
  * @see EopatchOverviewActivatedPreview
@@ -65,8 +65,8 @@ fun EopatchOverviewScreen(
     }
 
     // Patch the suspend/resume action onClick to open dialog instead
-    val suspendLabel = stringResource(app.aaps.core.ui.R.string.pump_suspend)
-    val resumeLabel = stringResource(app.aaps.core.ui.R.string.pump_resume)
+    val suspendLabel = stringResource(app.gmaaps.core.ui.R.string.pump_suspend)
+    val resumeLabel = stringResource(app.gmaaps.core.ui.R.string.pump_resume)
     val patchedState = baseState.copy(
         primaryActions = baseState.primaryActions.map { action ->
             when (action.label) {
@@ -82,19 +82,19 @@ fun EopatchOverviewScreen(
         val suspendMessage = remember { viewModel.getSuspendDialogText() }
         AlertDialog(
             onDismissRequest = { showSuspendConfirmDialog = false },
-            title = { Text(stringResource(app.aaps.core.ui.R.string.pump_suspend)) },
+            title = { Text(stringResource(app.gmaaps.core.ui.R.string.pump_suspend)) },
             text = { Text(suspendMessage) },
             confirmButton = {
                 TextButton(onClick = {
                     showSuspendConfirmDialog = false
                     showSuspendTimePicker = true
                 }) {
-                    Text(stringResource(app.aaps.core.ui.R.string.confirm))
+                    Text(stringResource(app.gmaaps.core.ui.R.string.confirm))
                 }
             },
             dismissButton = {
                 TextButton(onClick = { showSuspendConfirmDialog = false }) {
-                    Text(stringResource(app.aaps.core.ui.R.string.cancel))
+                    Text(stringResource(app.gmaaps.core.ui.R.string.cancel))
                 }
             }
         )
@@ -135,7 +135,7 @@ fun EopatchOverviewScreen(
                     viewModel.pauseBasal(suspendDurations[selectedDurationIndex])
                     selectedDurationIndex = 0
                 }) {
-                    Text(stringResource(app.aaps.core.ui.R.string.confirm))
+                    Text(stringResource(app.gmaaps.core.ui.R.string.confirm))
                 }
             },
             dismissButton = {
@@ -143,7 +143,7 @@ fun EopatchOverviewScreen(
                     showSuspendTimePicker = false
                     selectedDurationIndex = 0
                 }) {
-                    Text(stringResource(app.aaps.core.ui.R.string.cancel))
+                    Text(stringResource(app.gmaaps.core.ui.R.string.cancel))
                 }
             }
         )
@@ -160,12 +160,12 @@ fun EopatchOverviewScreen(
                     showResumeDialog = false
                     viewModel.resumeBasal()
                 }) {
-                    Text(stringResource(app.aaps.core.ui.R.string.confirm))
+                    Text(stringResource(app.gmaaps.core.ui.R.string.confirm))
                 }
             },
             dismissButton = {
                 TextButton(onClick = { showResumeDialog = false }) {
-                    Text(stringResource(app.aaps.core.ui.R.string.cancel))
+                    Text(stringResource(app.gmaaps.core.ui.R.string.cancel))
                 }
             }
         )
@@ -175,7 +175,7 @@ fun EopatchOverviewScreen(
         state = patchedState,
         customContent = {
             Image(
-                painter = painterResource(id = app.aaps.core.ui.R.drawable.ic_eopatch2_128),
+                painter = painterResource(id = app.gmaaps.core.ui.R.drawable.ic_eopatch2_128),
                 contentDescription = null,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -185,3 +185,4 @@ fun EopatchOverviewScreen(
         }
     )
 }
+

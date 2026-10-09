@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.TB
-import app.aaps.database.entities.TemporaryBasal
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.database.entities.TemporaryBasal
 
 fun TemporaryBasal.fromDb(): TB =
     TB(

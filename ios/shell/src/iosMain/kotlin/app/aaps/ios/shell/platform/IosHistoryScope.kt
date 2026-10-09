@@ -1,11 +1,11 @@
-package app.aaps.ios.shell.platform
+﻿package app.gmaaps.ios.shell.platform
 
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.overview.OverviewData
-import app.aaps.core.interfaces.overview.graph.OverviewDataCache
-import app.aaps.core.interfaces.workflow.CalculationSignalsEmitter
-import app.aaps.ios.shell.di.IosHistoryWindowGraph
-import app.aaps.ui.compose.history.HistoryScope
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.overview.OverviewData
+import app.gmaaps.core.interfaces.overview.graph.OverviewDataCache
+import app.gmaaps.core.interfaces.workflow.CalculationSignalsEmitter
+import app.gmaaps.ios.shell.di.IosHistoryWindowGraph
+import app.gmaaps.ui.compose.history.HistoryScope
 
 /**
  * The calculation objects behind the History Browser on iOS, the counterpart of `HistoryBrowserData`.
@@ -35,3 +35,4 @@ class IosHistoryScope(window: IosHistoryWindowGraph) : HistoryScope {
     override fun onDestroy() {
     }
 }
+

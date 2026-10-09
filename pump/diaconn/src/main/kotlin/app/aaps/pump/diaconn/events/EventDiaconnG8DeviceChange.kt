@@ -1,5 +1,5 @@
-package app.aaps.pump.diaconn.events
+﻿package app.gmaaps.pump.diaconn.events
 
-import app.aaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.events.Event
 
 class EventDiaconnG8DeviceChange : Event()

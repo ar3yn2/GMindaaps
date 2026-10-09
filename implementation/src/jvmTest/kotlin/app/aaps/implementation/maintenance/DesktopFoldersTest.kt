@@ -1,4 +1,4 @@
-package app.aaps.implementation.maintenance
+﻿package app.gmaaps.implementation.maintenance
 
 import java.io.File
 import kotlin.test.AfterTest
@@ -111,3 +111,4 @@ class DesktopFoldersTest {
         assertTrue(!DesktopFolders.root.name.startsWith("."), "the visible folder must not be the .aaps data directory")
     }
 }
+

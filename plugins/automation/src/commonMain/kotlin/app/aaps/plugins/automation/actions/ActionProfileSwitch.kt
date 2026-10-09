@@ -1,21 +1,21 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.icons.IcProfile
-import app.aaps.core.utils.lenientString
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.InputProfileName
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.icons.IcProfile
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.InputProfileName
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 
@@ -68,7 +68,7 @@ class ActionProfileSwitch(
             durationInMinutes = 0,
             percentage = 100,
             timeShiftInHours = 0,
-            timestamp = dateUtil.now(), action = app.aaps.core.data.ue.Action.PROFILE_SWITCH,
+            timestamp = dateUtil.now(), action = app.gmaaps.core.data.ue.Action.PROFILE_SWITCH,
             source = Sources.Automation,
             note = title,
             listValues = listOf(

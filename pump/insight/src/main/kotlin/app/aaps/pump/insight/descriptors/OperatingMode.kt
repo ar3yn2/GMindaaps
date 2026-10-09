@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.descriptors
+﻿package app.gmaaps.pump.insight.descriptors
 
 enum class OperatingMode(val id: Int) {
     STOPPED(31),

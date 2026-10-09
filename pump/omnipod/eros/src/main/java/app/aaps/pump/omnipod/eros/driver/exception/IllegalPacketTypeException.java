@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
 import java.util.Locale;
 
-import app.aaps.pump.omnipod.eros.driver.definition.PacketType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PacketType;
 
 public class IllegalPacketTypeException extends OmnipodException {
     private final PacketType expected;
@@ -24,3 +24,4 @@ public class IllegalPacketTypeException extends OmnipodException {
     }
 
 }
+

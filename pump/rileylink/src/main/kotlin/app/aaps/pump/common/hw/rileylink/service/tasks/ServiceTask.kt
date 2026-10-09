@@ -1,7 +1,7 @@
-package app.aaps.pump.common.hw.rileylink.service.tasks
+﻿package app.gmaaps.pump.common.hw.rileylink.service.tasks
 
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
 
 open class ServiceTask(val activePlugin: ActivePlugin) : Runnable {
 

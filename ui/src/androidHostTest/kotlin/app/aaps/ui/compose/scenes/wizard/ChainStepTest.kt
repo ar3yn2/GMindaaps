@@ -1,12 +1,12 @@
-package app.aaps.ui.compose.scenes.wizard
+﻿package app.gmaaps.ui.compose.scenes.wizard
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.core.data.model.Scene
-import app.aaps.core.ui.R
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.ui.R
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
@@ -95,3 +95,4 @@ class ChainStepTest {
         assertThat(selected).isEqualTo("s1")
     }
 }
+

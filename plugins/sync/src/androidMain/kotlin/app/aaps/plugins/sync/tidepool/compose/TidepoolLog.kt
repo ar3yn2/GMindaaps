@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.tidepool.compose
+﻿package app.gmaaps.plugins.sync.tidepool.compose
 
 import java.util.concurrent.atomic.AtomicLong
 
@@ -14,3 +14,4 @@ class TidepoolLog(
         private val idCounter = AtomicLong(0)
     }
 }
+

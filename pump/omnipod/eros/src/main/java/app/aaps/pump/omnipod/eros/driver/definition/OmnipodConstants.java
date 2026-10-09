@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
 import org.joda.time.Duration;
 
@@ -34,3 +34,4 @@ public class OmnipodConstants {
     // when the time deviates more than the threshold, the user will get warned and will get the option to change the time
     public static final Duration TIME_DEVIATION_THRESHOLD = Duration.standardMinutes(5);
 }
+

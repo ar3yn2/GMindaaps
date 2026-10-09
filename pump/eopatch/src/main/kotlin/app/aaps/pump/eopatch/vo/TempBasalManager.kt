@@ -1,10 +1,10 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.eopatch.CommonUtils
-import app.aaps.pump.eopatch.GsonHelper
-import app.aaps.pump.eopatch.code.UnitOrPercent
-import app.aaps.pump.eopatch.keys.EopatchStringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.eopatch.CommonUtils
+import app.gmaaps.pump.eopatch.GsonHelper
+import app.gmaaps.pump.eopatch.code.UnitOrPercent
+import app.gmaaps.pump.eopatch.keys.EopatchStringNonKey
 import com.google.common.base.Preconditions
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.subjects.BehaviorSubject
@@ -62,3 +62,4 @@ class TempBasalManager : IPreference<TempBasalManager> {
         return "TempBasalManager(startedBasal=$startedBasal, startTimestamp=$startTimestamp, endTimestamp=$endTimestamp, unit=$unit)"
     }
 }
+

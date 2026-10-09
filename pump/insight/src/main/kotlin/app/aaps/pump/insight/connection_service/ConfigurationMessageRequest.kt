@@ -1,8 +1,8 @@
-package app.aaps.pump.insight.connection_service
+﻿package app.gmaaps.pump.insight.connection_service
 
-import app.aaps.pump.insight.app_layer.AppLayerMessage
-import app.aaps.pump.insight.app_layer.configuration.CloseConfigurationWriteSessionMessage
-import app.aaps.pump.insight.app_layer.configuration.OpenConfigurationWriteSessionMessage
+import app.gmaaps.pump.insight.app_layer.AppLayerMessage
+import app.gmaaps.pump.insight.app_layer.configuration.CloseConfigurationWriteSessionMessage
+import app.gmaaps.pump.insight.app_layer.configuration.OpenConfigurationWriteSessionMessage
 
 class ConfigurationMessageRequest<T : AppLayerMessage>(
     request: T,

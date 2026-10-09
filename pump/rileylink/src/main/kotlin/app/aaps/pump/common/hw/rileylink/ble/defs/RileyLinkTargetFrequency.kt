@@ -1,7 +1,7 @@
-package app.aaps.pump.common.hw.rileylink.ble.defs
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.defs
 
 import androidx.annotation.StringRes
-import app.aaps.pump.common.hw.rileylink.R
+import app.gmaaps.pump.common.hw.rileylink.R
 
 /**
  * Created by andy on 6/7/18.

@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.wear.compose
+﻿package app.gmaaps.plugins.sync.wear.compose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -26,7 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.AapsSpacing
 
 /**
  * @see CwfImportContentPreview
@@ -126,3 +126,4 @@ private fun CwfImportItemCard(
         }
     }
 }
+

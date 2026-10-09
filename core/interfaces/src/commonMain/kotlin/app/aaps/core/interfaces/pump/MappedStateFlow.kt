@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
 import kotlinx.coroutines.ExperimentalForInheritanceCoroutinesApi
 import kotlinx.coroutines.flow.FlowCollector
@@ -31,3 +31,4 @@ class MappedStateFlow<T, R>(
  */
 fun <T, R> StateFlow<T>.mapState(transform: (T) -> R): StateFlow<R> =
     MappedStateFlow(this, transform)
+

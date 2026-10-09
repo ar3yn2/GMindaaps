@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose
+﻿package app.gmaaps.plugins.automation.compose
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,9 +22,9 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.R
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.R
 import org.osmdroid.config.Configuration
 import org.osmdroid.events.MapEventsReceiver
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
@@ -155,3 +155,4 @@ private fun OsmdroidMapView(
 
 /** Android draws the picker with osmdroid, so the map is always available here. */
 actual val isMapPickerAvailable: Boolean = true
+

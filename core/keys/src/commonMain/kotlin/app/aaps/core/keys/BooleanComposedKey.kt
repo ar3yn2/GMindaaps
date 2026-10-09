@@ -1,6 +1,6 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.BooleanComposedNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.BooleanComposedNonPreferenceKey
 
 enum class BooleanComposedKey(
     override val key: String,

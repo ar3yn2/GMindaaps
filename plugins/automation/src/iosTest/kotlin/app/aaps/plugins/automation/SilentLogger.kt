@@ -1,7 +1,7 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 
 /**
  * A logger that says nothing, for tests that need one but do not care what it does.
@@ -31,3 +31,4 @@ internal object SilentLogger : AAPSLogger {
     override fun warn(className: String, methodName: String, lineNumber: Int, tag: LTag, message: String) {}
     override fun error(className: String, methodName: String, lineNumber: Int, tag: LTag, message: String) {}
 }
+

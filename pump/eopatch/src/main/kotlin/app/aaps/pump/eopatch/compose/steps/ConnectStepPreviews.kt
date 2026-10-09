@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.compose.steps
+﻿package app.gmaaps.pump.eopatch.compose.steps
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -10,8 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.eopatch.R
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.eopatch.R
 
 @Preview(showBackground = true, name = "Connect - Scanning")
 @Composable
@@ -26,3 +26,4 @@ internal fun ConnectStepScanningPreview() {
         }
     }
 }
+

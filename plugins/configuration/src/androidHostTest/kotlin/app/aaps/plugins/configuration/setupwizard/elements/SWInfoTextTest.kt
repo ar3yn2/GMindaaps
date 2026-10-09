@@ -1,15 +1,15 @@
-package app.aaps.plugins.configuration.setupwizard.elements
+﻿package app.gmaaps.plugins.configuration.setupwizard.elements
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.protection.PasswordCheck
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.protection.PasswordCheck
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.CoreUiStrings
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -41,7 +41,7 @@ class SWInfoTextTest {
 
     @Before
     fun setUp() {
-        resourceLabel = RuntimeEnvironment.getApplication().getString(app.aaps.core.ui.R.string.result)
+        resourceLabel = RuntimeEnvironment.getApplication().getString(app.gmaaps.core.ui.R.string.result)
     }
 
     @Test
@@ -74,3 +74,4 @@ class SWInfoTextTest {
         compose.onNodeWithText("Hidden text").assertDoesNotExist()
     }
 }
+

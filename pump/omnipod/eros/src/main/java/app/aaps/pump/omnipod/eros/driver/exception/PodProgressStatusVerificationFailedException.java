@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
 
 public class PodProgressStatusVerificationFailedException extends OmnipodException {
     private final PodProgressStatus expectedStatus;
@@ -14,3 +14,4 @@ public class PodProgressStatusVerificationFailedException extends OmnipodExcepti
         return expectedStatus;
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.localmodel.food.NSFood
-import app.aaps.core.nssdk.nsSdkJson
-import app.aaps.core.nssdk.remotemodel.RemoteFood
+import app.gmaaps.core.nssdk.localmodel.food.NSFood
+import app.gmaaps.core.nssdk.nsSdkJson
+import app.gmaaps.core.nssdk.remotemodel.RemoteFood
 
 /**
  * Convert to [RemoteFood] and back to [NSFood]

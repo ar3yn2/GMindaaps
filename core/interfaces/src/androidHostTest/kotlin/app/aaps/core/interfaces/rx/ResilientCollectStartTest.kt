@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.rx
+﻿package app.gmaaps.core.interfaces.rx
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
@@ -83,3 +83,4 @@ class ResilientCollectStartTest {
         assertThat(bus.subscriptionCount.value).isEqualTo(1)
     }
 }
+

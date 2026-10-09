@@ -1,29 +1,29 @@
-package app.aaps.core.objects.di
+﻿package app.gmaaps.core.objects.di
 
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.automation.Automation
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.ui.UiRestart
-import app.aaps.core.interfaces.ui.UiRestartImpl
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.runningMode.RunningModeGuard
-import app.aaps.core.objects.wizard.BolusWizard
-import app.aaps.core.objects.wizard.QuickWizard
-import app.aaps.core.objects.wizard.QuickWizardEntry
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.automation.Automation
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.ui.UiRestart
+import app.gmaaps.core.interfaces.ui.UiRestartImpl
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.runningMode.RunningModeGuard
+import app.gmaaps.core.objects.wizard.BolusWizard
+import app.gmaaps.core.objects.wizard.QuickWizard
+import app.gmaaps.core.objects.wizard.QuickWizardEntry
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.Provides
@@ -106,3 +106,4 @@ object CoreObjectsGraph {
         entryLogger, automationRef, glucose, persistence, deviceStatus, guard, ch, executor, scope
     )
 }
+

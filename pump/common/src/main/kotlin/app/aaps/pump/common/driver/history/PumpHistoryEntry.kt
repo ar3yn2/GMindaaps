@@ -1,7 +1,7 @@
-package app.aaps.pump.common.driver.history
+﻿package app.gmaaps.pump.common.driver.history
 
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.common.defs.PumpHistoryEntryGroup
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.common.defs.PumpHistoryEntryGroup
 
 interface PumpHistoryEntry {
 

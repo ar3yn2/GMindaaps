@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
 
 // BeepConfigType is used only for the $1E Beep Config Command.
@@ -39,3 +39,4 @@ public enum BeepConfigType {
     }
 
 }
+

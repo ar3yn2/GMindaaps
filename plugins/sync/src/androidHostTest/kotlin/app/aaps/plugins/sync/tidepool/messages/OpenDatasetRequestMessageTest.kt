@@ -1,8 +1,8 @@
-package app.aaps.plugins.sync.tidepool.messages
+﻿package app.gmaaps.plugins.sync.tidepool.messages
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.plugins.sync.tidepool.comm.TidepoolUploader
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.plugins.sync.tidepool.comm.TidepoolUploader
 import com.google.common.truth.Truth.assertThat
 import com.google.gson.JsonParser
 import okio.Buffer
@@ -50,3 +50,4 @@ class OpenDatasetRequestMessageTest {
         assertThat(json["computerTime"].asString).isEqualTo("2026-08-05T12:00:00")
     }
 }
+

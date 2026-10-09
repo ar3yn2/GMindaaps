@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
 /**
  * Intent extras used to carry alarm payload from notification PendingIntents into ErrorActivity.
@@ -8,7 +8,7 @@ package app.aaps.core.interfaces.notifications
 object AlarmIntent {
 
     /** Raw sound resource id; the activity uses it to play audio with volume ramp. */
-    /** The [app.aaps.core.interfaces.notifications.AlarmSound] name. A name, not a resource id: an id
+    /** The [app.gmaaps.core.interfaces.notifications.AlarmSound] name. A name, not a resource id: an id
      * is build specific, and this value outlives the process that wrote it. */
     const val EXTRA_SOUND = "sound"
 
@@ -27,3 +27,4 @@ object AlarmIntent {
      */
     const val EXTRA_POSTED_AT_ELAPSED_REALTIME = "postedAtElapsedRealtime"
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
 
 /**
  * `CMD_MAC_ADDR_REQ` (0x3B) → `CMD_MAC_ADDR_RES` (0x9B).
@@ -70,3 +70,4 @@ data class MacAddressResponse(
     val macAddress: String,
     val checkSum: String
 ) : BleResponse
+

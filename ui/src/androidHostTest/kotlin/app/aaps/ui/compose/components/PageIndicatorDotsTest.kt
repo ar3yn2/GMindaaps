@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.components
+﻿package app.gmaaps.ui.compose.components
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.Modifier
@@ -51,3 +51,4 @@ class PageIndicatorDotsTest {
         compose.onNodeWithTag("dots").assertIsDisplayed()
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.definition
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.definition
 
 import java.nio.ByteBuffer
 import kotlin.experimental.or
@@ -57,3 +57,4 @@ class AlertConfiguration(
             '}'
     }
 }
+

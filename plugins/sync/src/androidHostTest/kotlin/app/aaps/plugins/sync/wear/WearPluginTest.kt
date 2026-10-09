@@ -1,17 +1,17 @@
-package app.aaps.plugins.sync.wear
+﻿package app.gmaaps.plugins.sync.wear
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TT
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.rx.events.EventAutosensCalculationFinished
-import app.aaps.core.interfaces.rx.events.EventLoopUpdateGui
-import app.aaps.core.interfaces.rx.events.EventNsClientStatusUpdated
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.plugins.sync.tidepool.utils.RateLimit
-import app.aaps.plugins.sync.wear.wearintegration.DataHandlerMobile
-import app.aaps.plugins.sync.wear.wearintegration.DataLayerListenerServiceMobileHelper
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.rx.events.EventAutosensCalculationFinished
+import app.gmaaps.core.interfaces.rx.events.EventLoopUpdateGui
+import app.gmaaps.core.interfaces.rx.events.EventNsClientStatusUpdated
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.plugins.sync.tidepool.utils.RateLimit
+import app.gmaaps.plugins.sync.wear.wearintegration.DataHandlerMobile
+import app.gmaaps.plugins.sync.wear.wearintegration.DataLayerListenerServiceMobileHelper
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -150,3 +150,4 @@ class WearPluginTest : TestBaseWithProfile() {
         assertThat(reasons).containsExactly("EventLoopUpdateGui")
     }
 }
+

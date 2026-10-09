@@ -1,9 +1,9 @@
-package app.aaps.core.interfaces.bolus
+﻿package app.gmaaps.core.interfaces.bolus
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.ue.Sources
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.ue.Sources
 
 /**
  * One action in a multi-action batch ([WizardBolusExecutor.prepareBatch]) — the dose/carbs a dialog submits
@@ -38,7 +38,7 @@ sealed interface BatchAction {
 
     /**
      * A temp target. [startOffsetMinutes] is from now (an eating-soon/activity TT starts now even when the
-     * bolus is back-dated). [reason] is the [app.aaps.core.data.model.TT.Reason] text.
+     * bolus is back-dated). [reason] is the [app.gmaaps.core.data.model.TT.Reason] text.
      */
     data class TempTarget(
         val reason: String,
@@ -147,3 +147,4 @@ sealed interface BatchAction {
         val source: Sources
     ) : BatchAction
 }
+

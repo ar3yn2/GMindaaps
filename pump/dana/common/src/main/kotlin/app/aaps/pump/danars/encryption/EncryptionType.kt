@@ -1,4 +1,4 @@
-package app.aaps.pump.danars.encryption
+﻿package app.gmaaps.pump.danars.encryption
 
 enum class EncryptionType(val type: Int) {
     ENCRYPTION_DEFAULT(0),

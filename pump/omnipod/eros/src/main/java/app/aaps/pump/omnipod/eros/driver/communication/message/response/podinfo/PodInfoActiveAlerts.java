@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
 
 import androidx.annotation.NonNull;
 
@@ -7,10 +7,10 @@ import org.joda.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSlot;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
-import app.aaps.pump.omnipod.eros.driver.definition.PodInfoType;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSlot;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodInfoType;
 
 public class PodInfoActiveAlerts extends PodInfo {
     private static final int MINIMUM_MESSAGE_LENGTH = 11;
@@ -91,3 +91,4 @@ public class PodInfoActiveAlerts extends PodInfo {
         }
     }
 }
+

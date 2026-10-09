@@ -1,3 +1,4 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
 class InputString(var value: String = "")
+

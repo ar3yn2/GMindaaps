@@ -1,11 +1,11 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.core.api.BolusStop
-import app.aaps.pump.eopatch.core.code.PatchBleResultCode
-import app.aaps.pump.eopatch.core.define.IPatchConstant
-import app.aaps.pump.eopatch.core.response.BolusStopResponse
-import app.aaps.pump.eopatch.core.response.ComboBolusStopResponse
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.core.api.BolusStop
+import app.gmaaps.pump.eopatch.core.code.PatchBleResultCode
+import app.gmaaps.pump.eopatch.core.define.IPatchConstant
+import app.gmaaps.pump.eopatch.core.response.BolusStopResponse
+import app.gmaaps.pump.eopatch.core.response.ComboBolusStopResponse
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -76,3 +76,4 @@ class StopComboBolusTask() : BolusTask(TaskFunc.STOP_COMBO_BOLUS) {
         checkPatchConnected()
     }
 }
+

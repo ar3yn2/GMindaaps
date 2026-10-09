@@ -1,11 +1,11 @@
-package app.aaps.desktop.shell.config
+﻿package app.gmaaps.desktop.shell.config
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.configuration.InitProgress
-import app.aaps.core.keys.interfaces.AppPlatform
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.implementation.maintenance.DesktopFolders
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.configuration.InitProgress
+import app.gmaaps.core.keys.interfaces.AppPlatform
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.implementation.maintenance.DesktopFolders
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -166,3 +166,4 @@ class DesktopClientConfig(
     override fun isEnabled(option: ExternalOptions): Boolean =
         File(extraDir, option.filename).exists()
 }
+

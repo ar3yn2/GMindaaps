@@ -1,25 +1,25 @@
-package app.aaps.implementation.pump
+﻿package app.gmaaps.implementation.pump
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.pump.VirtualPump
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.LongNonKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.pump.VirtualPump
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.LongNonKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
@@ -313,7 +313,7 @@ class PumpSyncConcentrationTest : TestBase() {
 
     @Test
     fun `verifyPumpIdentification returns true for VirtualPump`() {
-        val virtualPump = org.mockito.kotlin.mock<app.aaps.core.interfaces.pump.Pump>(extraInterfaces = arrayOf(VirtualPump::class))
+        val virtualPump = org.mockito.kotlin.mock<app.gmaaps.core.interfaces.pump.Pump>(extraInterfaces = arrayOf(VirtualPump::class))
         whenever(activePump.selectedActivePump()).thenReturn(virtualPump)
 
         val result = sut.verifyPumpIdentification(PumpType.DANA_RS, "99999")
@@ -361,3 +361,4 @@ class PumpSyncConcentrationTest : TestBase() {
         assertThat(sut.verifyPumpIdentification(pumpType, " ")).isTrue() // blank, same as empty
     }
 }
+

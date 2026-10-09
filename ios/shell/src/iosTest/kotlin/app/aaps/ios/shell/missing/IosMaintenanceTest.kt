@@ -1,7 +1,7 @@
-package app.aaps.ios.shell.missing
+﻿package app.gmaaps.ios.shell.missing
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.Foundation.NSFileManager
 import platform.Foundation.NSTemporaryDirectory
@@ -149,3 +149,4 @@ class IosMaintenanceTest {
         override fun error(className: String, methodName: String, lineNumber: Int, tag: LTag, message: String) {}
     }
 }
+

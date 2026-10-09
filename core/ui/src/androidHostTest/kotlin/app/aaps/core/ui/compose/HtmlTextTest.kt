@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.ui.text.font.FontWeight
 import com.google.common.truth.Truth.assertThat
@@ -66,3 +66,4 @@ internal class HtmlTextTest {
         assertThat(result.spanStyles).hasSize(2)
     }
 }
+

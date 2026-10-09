@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardActions
@@ -25,13 +25,13 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.window.DialogProperties
-import app.aaps.core.interfaces.protection.AuthMethod
-import app.aaps.core.interfaces.protection.AuthorizationResult
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.protection.ProtectionResult
-import app.aaps.core.interfaces.protection.ProtectionType
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.interfaces.protection.AuthMethod
+import app.gmaaps.core.interfaces.protection.AuthorizationResult
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.protection.ProtectionResult
+import app.gmaaps.core.interfaces.protection.ProtectionType
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Unified authentication dialog that accepts a single credential input and tries it
@@ -145,3 +145,4 @@ fun UnifiedAuthDialog(
         properties = DialogProperties(dismissOnBackPress = false, dismissOnClickOutside = false)
     )
 }
+

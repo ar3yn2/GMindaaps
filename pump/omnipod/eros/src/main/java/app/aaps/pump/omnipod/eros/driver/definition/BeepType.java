@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
 // BeepType is used for the $19 Configure Alerts and $1F Cancel Commands
 public enum BeepType {
@@ -32,3 +32,4 @@ public enum BeepType {
     }
 
 }
+

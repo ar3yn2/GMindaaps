@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.domain.model.bt
+﻿package app.gmaaps.pump.carelevo.domain.model.bt
 
-import app.aaps.pump.carelevo.domain.model.RepositoryResponse
+import app.gmaaps.pump.carelevo.domain.model.RepositoryResponse
 
 interface BtResponse : RepositoryResponse {
 

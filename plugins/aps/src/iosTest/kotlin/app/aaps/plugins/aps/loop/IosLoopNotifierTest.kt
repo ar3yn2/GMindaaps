@@ -1,4 +1,4 @@
-package app.aaps.plugins.aps.loop
+﻿package app.gmaaps.plugins.aps.loop
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -54,3 +54,4 @@ class IosLoopNotifierTest {
         assertTrue(IosLoopNotifier.NOTIFICATION_ID.startsWith("aaps-"))
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.utils.MidnightUtils
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.utils.MidnightUtils
 
 class InputTime(private val rh: TextResolver, private val dateUtil: DateUtil) {
 
@@ -10,3 +10,4 @@ class InputTime(private val rh: TextResolver, private val dateUtil: DateUtil) {
 
     private fun getMinSinceMidnight(time: Long): Int = MidnightUtils.secondsFromMidnight(time) / 60
 }
+

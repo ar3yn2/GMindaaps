@@ -1,10 +1,10 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.pump.eopatch.core.api.BasalHistoryGetExBig
-import app.aaps.pump.eopatch.core.api.BasalHistoryIndexGet
-import app.aaps.pump.eopatch.core.api.TempBasalHistoryGetExBig
-import app.aaps.pump.eopatch.core.response.BasalHistoryIndexResponse
-import app.aaps.pump.eopatch.core.response.BasalHistoryResponse
+import app.gmaaps.pump.eopatch.core.api.BasalHistoryGetExBig
+import app.gmaaps.pump.eopatch.core.api.BasalHistoryIndexGet
+import app.gmaaps.pump.eopatch.core.api.TempBasalHistoryGetExBig
+import app.gmaaps.pump.eopatch.core.response.BasalHistoryIndexResponse
+import app.gmaaps.pump.eopatch.core.response.BasalHistoryResponse
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn

@@ -1,15 +1,15 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.L
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.StringKey
-import app.aaps.plugins.sync.nsclientV3.DataSyncSelectorV3
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.ReceiverDelegate
-import app.aaps.plugins.sync.nsclientV3.keys.NsclientBooleanKey
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.L
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.plugins.sync.nsclientV3.DataSyncSelectorV3
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.ReceiverDelegate
+import app.gmaaps.plugins.sync.nsclientV3.keys.NsclientBooleanKey
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.emptyFlow
@@ -123,3 +123,4 @@ class SocketNsConnectionTest : TestBaseWithProfile() {
         verify(nsClientRepository).addLog("● WS", "Wrong URL syntax")
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.history.database
+﻿package app.gmaaps.pump.omnipod.eros.history.database
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -18,3 +18,4 @@ interface ErosHistoryRecordDao {
     fun insert(erosHistoryRecordEntity: ErosHistoryRecordEntity): Long
 
 }
+

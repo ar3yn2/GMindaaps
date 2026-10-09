@@ -1,10 +1,10 @@
-package app.aaps.pump.equil.database
+﻿package app.gmaaps.pump.equil.database
 
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import app.aaps.pump.equil.R
+import app.gmaaps.pump.equil.R
 
 @Entity(
     tableName = TABLE_EQUIL_HISTORY_RECORD,
@@ -56,9 +56,10 @@ data class EquilHistoryRecord(
         SET_ALARM_TONE(R.string.equil_common_set_alarm_tone),
         SET_ALARM_TONE_AND_SHAK(R.string.equil_common_set_alarm_tone_and_shake),
         READ_DEVICES(R.string.equil_common_read_devices),
-        EQUIL_ALARM(app.aaps.core.ui.R.string.alarm)
+        EQUIL_ALARM(app.gmaaps.core.ui.R.string.alarm)
     }
 }
+
 
 
 

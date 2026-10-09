@@ -1,18 +1,18 @@
-package app.aaps.pump.eopatch.ble
+﻿package app.gmaaps.pump.eopatch.ble
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.pump.eopatch.ble.task.FetchAlarmTask
-import app.aaps.pump.eopatch.ble.task.InternalSuspendedTask
-import app.aaps.pump.eopatch.ble.task.ReadBolusFinishTimeTask
-import app.aaps.pump.eopatch.ble.task.ReadTempBasalFinishTimeTask
-import app.aaps.pump.eopatch.core.code.BolusType
-import app.aaps.pump.eopatch.vo.NormalBasal
-import app.aaps.pump.eopatch.vo.NormalBasalManager
-import app.aaps.pump.eopatch.vo.PatchConfig
-import app.aaps.pump.eopatch.vo.PatchState
-import app.aaps.pump.eopatch.vo.TempBasalManager
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.pump.eopatch.ble.task.FetchAlarmTask
+import app.gmaaps.pump.eopatch.ble.task.InternalSuspendedTask
+import app.gmaaps.pump.eopatch.ble.task.ReadBolusFinishTimeTask
+import app.gmaaps.pump.eopatch.ble.task.ReadTempBasalFinishTimeTask
+import app.gmaaps.pump.eopatch.core.code.BolusType
+import app.gmaaps.pump.eopatch.vo.NormalBasal
+import app.gmaaps.pump.eopatch.vo.NormalBasalManager
+import app.gmaaps.pump.eopatch.vo.PatchConfig
+import app.gmaaps.pump.eopatch.vo.PatchState
+import app.gmaaps.pump.eopatch.vo.TempBasalManager
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -263,3 +263,4 @@ class PatchStateManager(
         }
     }
 }
+

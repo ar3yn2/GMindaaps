@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.plugin
+﻿package app.gmaaps.core.interfaces.plugin
 
 /**
  * Runtime-permission source for features that are NOT [PluginBase]s.
@@ -11,3 +11,4 @@ interface PermissionProvider {
     /** Runtime permission groups currently required. May change over time. */
     fun requiredPermissions(): List<PermissionGroup>
 }
+

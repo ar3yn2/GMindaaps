@@ -1,26 +1,26 @@
-package app.aaps.pump.equil.compose
+﻿package app.gmaaps.pump.equil.compose
 
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.pump.equil.EquilPumpPlugin
-import app.aaps.pump.equil.R
-import app.aaps.pump.equil.database.EquilHistoryPump
-import app.aaps.pump.equil.database.EquilHistoryPumpDao
-import app.aaps.pump.equil.database.EquilHistoryRecord
-import app.aaps.pump.equil.database.EquilHistoryRecordDao
-import app.aaps.pump.equil.database.ResolvedResult
-import app.aaps.pump.equil.driver.definition.EquilHistoryEntryGroup
-import app.aaps.pump.equil.events.EventEquilDataChanged
-import app.aaps.pump.equil.manager.Utils
-import app.aaps.pump.equil.manager.command.PumpEvent
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.pump.equil.EquilPumpPlugin
+import app.gmaaps.pump.equil.R
+import app.gmaaps.pump.equil.database.EquilHistoryPump
+import app.gmaaps.pump.equil.database.EquilHistoryPumpDao
+import app.gmaaps.pump.equil.database.EquilHistoryRecord
+import app.gmaaps.pump.equil.database.EquilHistoryRecordDao
+import app.gmaaps.pump.equil.database.ResolvedResult
+import app.gmaaps.pump.equil.driver.definition.EquilHistoryEntryGroup
+import app.gmaaps.pump.equil.events.EventEquilDataChanged
+import app.gmaaps.pump.equil.manager.Utils
+import app.gmaaps.pump.equil.manager.command.PumpEvent
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -224,3 +224,4 @@ sealed class PumpEventItem {
         @StringRes val descriptionRes: Int,
     ) : PumpEventItem()
 }
+

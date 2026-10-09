@@ -1,6 +1,6 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
-import app.aaps.plugins.automation.triggers.TriggerTestBase
+import app.gmaaps.plugins.automation.triggers.TriggerTestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -33,3 +33,4 @@ class ComparatorTest : TriggerTestBase() {
         assertThat(c.value).isEqualTo(Comparator.Compare.IS_EQUAL_OR_GREATER)
     }
 }
+

@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.metro)
     alias(libs.plugins.ksp)
@@ -14,7 +14,7 @@ plugins {
 
 android {
 
-    namespace = "app.aaps.pump.insight"
+    namespace = "app.gmaaps.pump.insight"
 }
 
 ksp {

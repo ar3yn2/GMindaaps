@@ -1,9 +1,9 @@
-package app.aaps.pump.medtrum.keys
+﻿package app.gmaaps.pump.medtrum.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.medtrum.R
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.medtrum.R
 
 enum class MedtrumIntKey(
     override val key: String,
@@ -45,3 +45,4 @@ enum class MedtrumIntKey(
     override val title: TextRef = TextRef.AndroidRes(titleResId)
     override val summary: TextRef? = summaryResId?.let { TextRef.AndroidRes(it) }
 }
+

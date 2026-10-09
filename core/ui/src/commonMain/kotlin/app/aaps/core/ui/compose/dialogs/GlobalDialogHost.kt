@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -11,8 +11,8 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.repeatOnLifecycle
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowDialog
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowDialog
 import kotlinx.coroutines.CompletableDeferred
 
 /**
@@ -139,3 +139,4 @@ fun GlobalDialogHost(rxBus: RxBus) {
             )
     }
 }
+

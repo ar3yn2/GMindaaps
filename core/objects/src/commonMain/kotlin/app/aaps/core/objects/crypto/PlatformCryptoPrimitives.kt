@@ -1,4 +1,4 @@
-package app.aaps.core.objects.crypto
+﻿package app.gmaaps.core.objects.crypto
 
 /**
  * The [CryptoPrimitives] of the platform this build runs on.
@@ -9,3 +9,4 @@ package app.aaps.core.objects.crypto
  * against every implementation.
  */
 expect fun platformCryptoPrimitives(): CryptoPrimitives
+

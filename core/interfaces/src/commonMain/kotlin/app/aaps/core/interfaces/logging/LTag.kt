@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.logging
+﻿package app.gmaaps.core.interfaces.logging
 
 enum class LTag(val tag: String, val defaultValue: Boolean = true, val requiresRestart: Boolean = false) {
     CORE("CORE"),

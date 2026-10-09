@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.message
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.message
 
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.packet.PayloadSplitter
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.packet.PayloadSplitter
 import com.google.common.truth.Truth.assertThat
 import com.google.crypto.tink.subtle.Hex
 import org.junit.jupiter.api.Test
@@ -23,3 +23,4 @@ class PayloadSplitterTest {
         assertThat(p2.copyOfRange(0, 10).toHex()).isEqualTo(f2.subSequence(0, 20))
     }
 }
+

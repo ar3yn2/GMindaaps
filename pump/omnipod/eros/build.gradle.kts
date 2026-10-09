@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.metro)
     alias(libs.plugins.ksp)
@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "app.aaps.pump.omnipod.eros"
+    namespace = "app.gmaaps.pump.omnipod.eros"
 }
 
 ksp {
@@ -43,3 +43,4 @@ dependencies {
 
     ksp(libs.androidx.room.compiler)
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.database.di
+﻿package app.gmaaps.database.di
 
 import android.content.Context
 import androidx.room.Room
@@ -6,7 +6,7 @@ import androidx.room.RoomDatabase.Callback
 import androidx.sqlite.SQLiteConnection
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
-import app.aaps.database.AppDatabase
+import app.gmaaps.database.AppDatabase
 
 /**
  * Builds the Room database. Not a DI module any more - `DatabaseBindings` provides the instance and
@@ -63,3 +63,4 @@ open class AppDatabaseBuilder {
     }
 
 }
+

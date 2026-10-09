@@ -1,16 +1,16 @@
-package app.aaps.plugins.sync.wear.receivers
+﻿package app.gmaaps.plugins.sync.wear.receivers
 
 import android.content.Context
 import android.content.Intent
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.receivers.Intents
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventMobileToWear
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.objects.workflow.MetroBroadcastReceiver
-import app.aaps.core.utils.receivers.BundleLogger
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.receivers.Intents
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventMobileToWear
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.objects.workflow.MetroBroadcastReceiver
+import app.gmaaps.core.utils.receivers.BundleLogger
 import dev.zacsweers.metro.HasMemberInjections
 import dev.zacsweers.metro.Inject
 
@@ -52,8 +52,9 @@ open class WearDataReceiver : MetroBroadcastReceiver() {
 
     companion object {
 
-        const val PERMISSION = "app.aaps.weardata.permission"
+        const val PERMISSION = "app.gmaaps.weardata.permission"
         const val CLIENT = "client"
         const val DATA = "data"
     }
 }
+

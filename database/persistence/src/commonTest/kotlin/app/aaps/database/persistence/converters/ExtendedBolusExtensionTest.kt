@@ -1,8 +1,8 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.IDs
-import app.aaps.database.entities.ExtendedBolus
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.database.entities.ExtendedBolus
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -92,3 +92,4 @@ internal class ExtendedBolusExtensionTest {
         assertEquals(40L, back.interfaceIDs_backing?.endId)
     }
 }
+

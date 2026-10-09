@@ -1,4 +1,4 @@
-package app.aaps.pump.insight
+﻿package app.gmaaps.pump.insight
 
 import android.annotation.SuppressLint
 import android.app.PendingIntent
@@ -14,24 +14,24 @@ import android.os.VibratorManager
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.lifecycle.MutableLiveData
-import app.aaps.core.interfaces.di.injectMetroMembers
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.pump.insight.app_layer.activities.InsightAlertActivity
-import app.aaps.pump.insight.app_layer.remote_control.ConfirmAlertMessage
-import app.aaps.pump.insight.app_layer.remote_control.SnoozeAlertMessage
-import app.aaps.pump.insight.app_layer.status.GetActiveAlertMessage
-import app.aaps.pump.insight.connection_service.InsightConnectionService
-import app.aaps.pump.insight.descriptors.Alert
-import app.aaps.pump.insight.descriptors.AlertStatus
-import app.aaps.pump.insight.descriptors.AlertType
-import app.aaps.pump.insight.descriptors.InsightState
-import app.aaps.pump.insight.exceptions.InsightException
-import app.aaps.pump.insight.exceptions.app_layer_errors.AppLayerErrorException
-import app.aaps.pump.insight.utils.AlertUtils
-import app.aaps.pump.insight.utils.ExceptionTranslator
+import app.gmaaps.core.interfaces.di.injectMetroMembers
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.pump.insight.app_layer.activities.InsightAlertActivity
+import app.gmaaps.pump.insight.app_layer.remote_control.ConfirmAlertMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.SnoozeAlertMessage
+import app.gmaaps.pump.insight.app_layer.status.GetActiveAlertMessage
+import app.gmaaps.pump.insight.connection_service.InsightConnectionService
+import app.gmaaps.pump.insight.descriptors.Alert
+import app.gmaaps.pump.insight.descriptors.AlertStatus
+import app.gmaaps.pump.insight.descriptors.AlertType
+import app.gmaaps.pump.insight.descriptors.InsightState
+import app.gmaaps.pump.insight.exceptions.InsightException
+import app.gmaaps.pump.insight.exceptions.app_layer_errors.AppLayerErrorException
+import app.gmaaps.pump.insight.utils.AlertUtils
+import app.gmaaps.pump.insight.utils.ExceptionTranslator
 import dev.zacsweers.metro.Inject
 
 class InsightAlertService : Service(), InsightConnectionService.StateCallback {
@@ -250,7 +250,7 @@ class InsightAlertService : Service(), InsightConnectionService.StateCallback {
         notificationBuilder.setOngoing(true)
         notificationBuilder.setOnlyAlertOnce(true)
         notificationBuilder.setAutoCancel(false)
-        notificationBuilder.setSmallIcon(app.aaps.core.ui.R.drawable.notif_icon)
+        notificationBuilder.setSmallIcon(app.gmaaps.core.ui.R.drawable.notif_icon)
         alert.alertType?.let { notificationBuilder.setContentTitle(alertUtils.getAlertCode(it) + " – " + alertUtils.getAlertTitle(it)) }
         val description = alertUtils.getAlertDescription(alert)
         if (description != null) notificationBuilder.setContentText(description)
@@ -261,16 +261,16 @@ class InsightAlertService : Service(), InsightConnectionService.StateCallback {
             AlertStatus.ACTIVE  -> {
                 val muteIntent = Intent(this, InsightAlertService::class.java).putExtra("command", "mute")
                 val mutePendingIntent = PendingIntent.getService(this, 1, muteIntent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
-                notificationBuilder.addAction(0, resourceHelper.gs(app.aaps.core.ui.R.string.mute), mutePendingIntent)
+                notificationBuilder.addAction(0, resourceHelper.gs(app.gmaaps.core.ui.R.string.mute), mutePendingIntent)
                 val confirmIntent = Intent(this, InsightAlertService::class.java).putExtra("command", "confirm")
                 val confirmPendingIntent = PendingIntent.getService(this, 2, confirmIntent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
-                notificationBuilder.addAction(0, resourceHelper.gs(app.aaps.core.ui.R.string.confirm), confirmPendingIntent)
+                notificationBuilder.addAction(0, resourceHelper.gs(app.gmaaps.core.ui.R.string.confirm), confirmPendingIntent)
             }
 
             AlertStatus.SNOOZED -> {
                 val confirmIntent = Intent(this, InsightAlertService::class.java).putExtra("command", "confirm")
                 val confirmPendingIntent = PendingIntent.getService(this, 2, confirmIntent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
-                notificationBuilder.addAction(0, resourceHelper.gs(app.aaps.core.ui.R.string.confirm), confirmPendingIntent)
+                notificationBuilder.addAction(0, resourceHelper.gs(app.gmaaps.core.ui.R.string.confirm), confirmPendingIntent)
             }
 
             else                -> Unit

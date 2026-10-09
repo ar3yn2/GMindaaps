@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 /**
  * Temporary Target preset configuration.
@@ -28,3 +28,4 @@ data class TTPreset(
     /** Whether this preset can be deleted (false for default presets) */
     val isDeletable: Boolean = true
 )
+

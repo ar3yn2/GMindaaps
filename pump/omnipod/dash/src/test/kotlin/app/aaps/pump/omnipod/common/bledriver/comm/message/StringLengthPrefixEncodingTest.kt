@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.message
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.message
 
-import app.aaps.core.utils.toHex
+import app.gmaaps.core.utils.toHex
 import com.google.common.truth.Truth.assertThat
 import com.google.crypto.tink.subtle.Hex
 import org.junit.jupiter.api.Test
@@ -21,3 +21,4 @@ class StringLengthPrefixEncodingTest {
         assertThat(parsed[0].toHex()).isEqualTo(p0Content.toHex())
     }
 }
+

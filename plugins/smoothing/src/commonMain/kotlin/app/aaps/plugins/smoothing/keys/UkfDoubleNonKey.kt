@@ -1,6 +1,6 @@
-package app.aaps.plugins.smoothing.keys
+﻿package app.gmaaps.plugins.smoothing.keys
 
-import app.aaps.core.keys.interfaces.DoubleNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.DoubleNonPreferenceKey
 
 enum class UkfDoubleNonKey(
     override val key: String,

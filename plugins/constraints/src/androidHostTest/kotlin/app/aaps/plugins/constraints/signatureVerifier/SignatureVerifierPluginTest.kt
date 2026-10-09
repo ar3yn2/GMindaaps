@@ -1,6 +1,6 @@
-package app.aaps.plugins.constraints.signatureVerifier
+﻿package app.gmaaps.plugins.constraints.signatureVerifier
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -29,3 +29,4 @@ class SignatureVerifierPluginTest : TestBase() {
         assertThat(unmapped).isEqualTo("32:99:61:C4:A0:92:E8:D2:C7:65:04:74:04:17:7E:2D:2A:16:2A:5A:63:48:69:6A:0A:C4:53:3C:7C:78:22:95")
     }
 }
+

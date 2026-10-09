@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.ErrorResponse;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.ErrorResponse;
 
 public class PodReturnedErrorResponseException extends OmnipodException {
     private final ErrorResponse errorResponse;
@@ -14,3 +14,4 @@ public class PodReturnedErrorResponseException extends OmnipodException {
         return errorResponse;
     }
 }
+

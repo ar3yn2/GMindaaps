@@ -1,14 +1,14 @@
-package app.aaps.plugins.source.compose
+﻿package app.gmaaps.plugins.source.compose
 
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -146,3 +146,4 @@ internal class BgSourceViewModelTest {
         assertThat(message).contains("5.5")
     }
 }
+

@@ -1,13 +1,13 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.pump.medtrum.MedtrumPump
-import app.aaps.pump.medtrum.comm.enums.BasalType
-import app.aaps.pump.medtrum.comm.enums.CommandType.CANCEL_TEMP_BASAL
-import app.aaps.pump.medtrum.extension.toInt
-import app.aaps.pump.medtrum.extension.toLong
-import app.aaps.pump.medtrum.util.MedtrumTimeUtil
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.pump.medtrum.MedtrumPump
+import app.gmaaps.pump.medtrum.comm.enums.BasalType
+import app.gmaaps.pump.medtrum.comm.enums.CommandType.CANCEL_TEMP_BASAL
+import app.gmaaps.pump.medtrum.extension.toInt
+import app.gmaaps.pump.medtrum.extension.toLong
+import app.gmaaps.pump.medtrum.util.MedtrumTimeUtil
 import dev.zacsweers.metro.Inject
 
 class CancelTempBasalPacket(injector: MetroMemberInjector) : MedtrumPacket(injector) {
@@ -49,3 +49,4 @@ class CancelTempBasalPacket(injector: MetroMemberInjector) : MedtrumPacket(injec
         return success
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.GlucoseValue
+import app.gmaaps.database.entities.GlucoseValue
 
 /**
  * Invalidates the GlucoseValue with the specified id

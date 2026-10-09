@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.FD
-import app.aaps.database.entities.Food
+import app.gmaaps.core.data.model.FD
+import app.gmaaps.database.entities.Food
 
 fun Food.fromDb(): FD =
     FD(
@@ -42,3 +42,4 @@ fun FD.toDb(): Food =
         gi = this.gi,
         interfaceIDs_backing = this.ids.toDb()
     )
+

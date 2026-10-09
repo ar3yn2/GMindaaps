@@ -1,17 +1,17 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.LongNonKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector.Companion.POST_PAIRING_GRACE_MS
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.LongNonKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector.Companion.POST_PAIRING_GRACE_MS
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -76,10 +76,10 @@ class OrphanDetector(
      * `true` while the master still lists this device in its `authorizedClients` roster (or no
      * orphan signal is possible yet — older master, freshly paired within the race window, pristine).
      * Flips to `false` only once a settings doc is seen that excludes this clientId past the race
-     * guard. Folded into [app.aaps.core.interfaces.sync.NsClient.masterReachable] so a revoked
+     * guard. Folded into [app.gmaaps.core.interfaces.sync.NsClient.masterReachable] so a revoked
      * client's edits are gated, not just notified. Optimistic default keeps first-ever pairing usable.
      *
-     * @see app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin.masterReachable for where this term is
+     * @see app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin.masterReachable for where this term is
      *   combined (ws && fresh && paired && authorized) into the overall master-reachable gate.
      */
     val authorized: StateFlow<Boolean> = _authorized.asStateFlow()
@@ -126,3 +126,4 @@ class OrphanDetector(
         const val POST_PAIRING_GRACE_MS = 60_000L
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.pump.common.hw.rileylink.service.tasks
+﻿package app.gmaaps.pump.common.hw.rileylink.service.tasks
 
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventRefreshButtonState
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventRefreshButtonState
 import dev.zacsweers.metro.Inject
 
 @Inject

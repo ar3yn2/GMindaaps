@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
-import app.aaps.plugins.sync.nsclientV3.ws.NsWsPayload.text
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsWsPayload.text
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
@@ -55,3 +55,4 @@ internal object NsWsPayload {
     /** The document a create/update frame carries, or null when the frame has none. */
     fun document(frame: JsonObject): JsonObject? = frame["doc"] as? JsonObject
 }
+

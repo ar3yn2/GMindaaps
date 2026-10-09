@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.domain.usecase.patch
+﻿package app.gmaaps.pump.carelevo.domain.usecase.patch
 
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
 import dev.zacsweers.metro.Inject
 import io.reactivex.rxjava3.core.Observable
 import kotlin.jvm.optionals.getOrNull

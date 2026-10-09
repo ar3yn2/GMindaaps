@@ -1,4 +1,4 @@
-package app.aaps.pump.danars.compose
+﻿package app.gmaaps.pump.danars.compose
 
 import android.content.Context
 import androidx.compose.foundation.layout.RowScope
@@ -15,22 +15,22 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.dialogs.OkDialog
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.core.ui.compose.pump.BlePreCheckHost
-import app.aaps.core.ui.compose.pump.KeepScreenOnEffect
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.R
-import app.aaps.pump.dana.compose.DanaHistoryScreen
-import app.aaps.pump.dana.compose.DanaHistoryViewModel
-import app.aaps.pump.dana.compose.DanaOverviewEvent
-import app.aaps.pump.dana.compose.DanaUserOptionsScreen
-import app.aaps.pump.dana.compose.DanaUserOptionsViewModel
-import app.aaps.pump.dana.compose.UserOptionsEvent
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.dialogs.OkDialog
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.core.ui.compose.pump.BlePreCheckHost
+import app.gmaaps.core.ui.compose.pump.KeepScreenOnEffect
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.R
+import app.gmaaps.pump.dana.compose.DanaHistoryScreen
+import app.gmaaps.pump.dana.compose.DanaHistoryViewModel
+import app.gmaaps.pump.dana.compose.DanaOverviewEvent
+import app.gmaaps.pump.dana.compose.DanaUserOptionsScreen
+import app.gmaaps.pump.dana.compose.DanaUserOptionsViewModel
+import app.gmaaps.pump.dana.compose.UserOptionsEvent
 
 private enum class DanaScreen {
     OVERVIEW,
@@ -84,24 +84,24 @@ class DanaRSComposeContent(
         }
 
         // Toolbar configuration
-        val historyTitle = stringResource(app.aaps.core.ui.R.string.pump_history)
+        val historyTitle = stringResource(app.gmaaps.core.ui.R.string.pump_history)
         val userOptionsTitle = stringResource(R.string.danar_pump_settings)
-        val pairingTitle = stringResource(app.aaps.core.ui.R.string.pairing)
+        val pairingTitle = stringResource(app.gmaaps.core.ui.R.string.pairing)
 
         val overviewNavIcon: @Composable () -> Unit = {
             IconButton(onClick = onNavigateBack) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.aaps.core.ui.R.string.back))
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.gmaaps.core.ui.R.string.back))
             }
         }
         val subScreenNavIcon: @Composable () -> Unit = {
             IconButton(onClick = { currentScreen = DanaScreen.OVERVIEW }) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.aaps.core.ui.R.string.back))
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.gmaaps.core.ui.R.string.back))
             }
         }
         val settingsAction: @Composable RowScope.() -> Unit = {
             onSettings?.let { action ->
                 IconButton(onClick = action) {
-                    Icon(Icons.Filled.Settings, contentDescription = stringResource(app.aaps.core.ui.R.string.settings))
+                    Icon(Icons.Filled.Settings, contentDescription = stringResource(app.gmaaps.core.ui.R.string.settings))
                 }
             }
         }
@@ -194,3 +194,4 @@ class DanaRSComposeContent(
         }
     }
 }
+

@@ -1,18 +1,18 @@
-package app.aaps.pump.danar.compose
+﻿package app.gmaaps.pump.danar.compose
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.rfcomm.RfcommDevice
-import app.aaps.core.interfaces.pump.rfcomm.RfcommTransport
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventInitializationChanged
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.events.EventDanaRNewStatus
-import app.aaps.pump.dana.keys.DanaIntNonKey
-import app.aaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommDevice
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommTransport
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventInitializationChanged
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.events.EventDanaRNewStatus
+import app.gmaaps.pump.dana.keys.DanaIntNonKey
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -257,3 +257,4 @@ internal class DanaRPairWizardViewModelTest {
         private const val DEVICE_ADDRESS = "00:11:22:33:44:55"
     }
 }
+

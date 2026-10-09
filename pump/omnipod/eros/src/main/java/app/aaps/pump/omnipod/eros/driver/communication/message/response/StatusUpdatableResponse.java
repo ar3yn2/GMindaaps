@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response;
 
 import org.joda.time.Duration;
 
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSet;
-import app.aaps.pump.omnipod.eros.driver.definition.DeliveryStatus;
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSet;
+import app.gmaaps.pump.omnipod.eros.driver.definition.DeliveryStatus;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
 
 public interface StatusUpdatableResponse {
     DeliveryStatus getDeliveryStatus();
@@ -25,3 +25,4 @@ public interface StatusUpdatableResponse {
 
     AlertSet getUnacknowledgedAlerts();
 }
+

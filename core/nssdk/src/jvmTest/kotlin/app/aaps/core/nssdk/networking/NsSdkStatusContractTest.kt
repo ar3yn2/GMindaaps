@@ -1,8 +1,8 @@
-package app.aaps.core.nssdk.networking
+﻿package app.gmaaps.core.nssdk.networking
 
-import app.aaps.core.nssdk.NSAndroidClientImpl
-import app.aaps.core.nssdk.exceptions.InvalidParameterNightscoutException
-import app.aaps.core.nssdk.exceptions.UnsuccessfulNightscoutException
+import app.gmaaps.core.nssdk.NSAndroidClientImpl
+import app.gmaaps.core.nssdk.exceptions.InvalidParameterNightscoutException
+import app.gmaaps.core.nssdk.exceptions.UnsuccessfulNightscoutException
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.runTest
@@ -185,3 +185,4 @@ class NsSdkStatusContractTest {
         assertThat(response.identifier).isEqualTo("1bebd84b-8d61-58b2")
     }
 }
+

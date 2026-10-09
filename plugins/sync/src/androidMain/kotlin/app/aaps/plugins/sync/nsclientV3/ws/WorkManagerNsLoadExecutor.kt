@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
 import android.content.Context
 import androidx.work.ExistingWorkPolicy
@@ -6,15 +6,15 @@ import androidx.work.ListenableWorker
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
-import app.aaps.plugins.sync.nsclientV3.workers.DataSyncWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadBgWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadDeviceStatusWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadFoodsWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadLastModificationWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadProfileStoreWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadSettingsWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadStatusWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadTreatmentsWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.DataSyncWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadBgWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadDeviceStatusWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadFoodsWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadLastModificationWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadProfileStoreWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadSettingsWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadStatusWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadTreatmentsWorker
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -102,3 +102,4 @@ class WorkManagerNsLoadExecutor(
         private const val JOB_NAME = "NSClientV3Plugin"
     }
 }
+

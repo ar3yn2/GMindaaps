@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command.base
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command.base
 
-import app.aaps.pump.omnipod.common.bledriver.pod.util.MessageUtil
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.MessageUtil
 import java.nio.ByteBuffer
 
 abstract class HeaderEnabledCommand protected constructor(
@@ -32,3 +32,4 @@ abstract class HeaderEnabledCommand protected constructor(
         internal const val HEADER_LENGTH: Short = 6
     }
 }
+

@@ -1,11 +1,11 @@
-package app.aaps.pump.carelevo.emulator
+﻿package app.gmaaps.pump.carelevo.emulator
 
-import app.aaps.core.interfaces.pump.ble.BleTransportListener
-import app.aaps.core.interfaces.pump.ble.PairingState
-import app.aaps.core.interfaces.pump.ble.PairingStep
-import app.aaps.pump.carelevo.ble.commands.InfusionInfoCommand
-import app.aaps.pump.carelevo.ble.commands.PatchDiscardCommand
-import app.aaps.pump.carelevo.ble.commands.PatchInfoCommand
+import app.gmaaps.core.interfaces.pump.ble.BleTransportListener
+import app.gmaaps.core.interfaces.pump.ble.PairingState
+import app.gmaaps.core.interfaces.pump.ble.PairingStep
+import app.gmaaps.pump.carelevo.ble.commands.InfusionInfoCommand
+import app.gmaaps.pump.carelevo.ble.commands.PatchDiscardCommand
+import app.gmaaps.pump.carelevo.ble.commands.PatchInfoCommand
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test
  * beyond the response opcode needed to tell one notification from the next. What this suite pins down
  * is the wiring the emulator adds on top:
  * - which listener callback each `gatt` call fans out to, and **in what order** — `onCharacteristicWritten`
- *   must precede the `onCharacteristicChanged` frames, because [app.aaps.core.interfaces.pump.ble.BleGatt]
+ *   must precede the `onCharacteristicChanged` frames, because [app.gmaaps.core.interfaces.pump.ble.BleGatt]
  *   answers writes synchronously and a client that saw the reply before the ack would be reading a
  *   reply to a write it does not yet believe it made;
  * - the fault-injection switches (`connectRefused`, `reportConnected`, `silentOpcodes`) that exist
@@ -379,3 +379,4 @@ class CarelevoEmulatorTransportTest {
         const val CHANGED = "changed"
     }
 }
+

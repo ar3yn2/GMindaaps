@@ -1,6 +1,6 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
-import app.aaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.PumpType
 import kotlinx.serialization.Serializable
 
 @Serializable

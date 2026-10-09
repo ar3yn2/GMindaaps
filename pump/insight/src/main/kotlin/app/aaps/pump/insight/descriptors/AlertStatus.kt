@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.descriptors
+﻿package app.gmaaps.pump.insight.descriptors
 
 enum class AlertStatus(val id: Int) {
     ACTIVE(31),

@@ -1,7 +1,7 @@
-package app.aaps.pump.equil.driver.definition
+﻿package app.gmaaps.pump.equil.driver.definition
 
-import app.aaps.pump.equil.R
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.pump.equil.R
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.whenever
@@ -88,3 +88,4 @@ class EquilHistoryEntryGroupTest : TestBaseWithProfile() {
         assertEquals(5, resourceIds.size, "All resource IDs should be unique")
     }
 }
+

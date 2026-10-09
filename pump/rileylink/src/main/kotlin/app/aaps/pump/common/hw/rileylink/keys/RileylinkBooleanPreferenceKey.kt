@@ -1,8 +1,8 @@
-package app.aaps.pump.common.hw.rileylink.keys
+﻿package app.gmaaps.pump.common.hw.rileylink.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.common.hw.rileylink.R
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.common.hw.rileylink.R
 
 enum class RileylinkBooleanPreferenceKey(
     override val key: String,
@@ -28,3 +28,4 @@ enum class RileylinkBooleanPreferenceKey(
     override val title: TextRef = TextRef.AndroidRes(titleResId)
     override val summary: TextRef? = summaryResId?.let { TextRef.AndroidRes(it) }
 }
+

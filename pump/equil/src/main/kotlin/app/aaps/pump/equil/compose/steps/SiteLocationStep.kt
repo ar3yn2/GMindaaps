@@ -1,8 +1,8 @@
-package app.aaps.pump.equil.compose.steps
+﻿package app.gmaaps.pump.equil.compose.steps
 
 import androidx.compose.runtime.Composable
-import app.aaps.core.ui.compose.siteRotation.SiteLocationWizardStep
-import app.aaps.pump.equil.compose.EquilWizardViewModel
+import app.gmaaps.core.ui.compose.siteRotation.SiteLocationWizardStep
+import app.gmaaps.pump.equil.compose.EquilWizardViewModel
 
 @Composable
 internal fun SiteLocationStep(
@@ -11,3 +11,4 @@ internal fun SiteLocationStep(
 ) {
     SiteLocationWizardStep(host = viewModel)
 }
+

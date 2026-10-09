@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.protection
+﻿package app.gmaaps.core.interfaces.protection
 
 interface SecureEncrypt {
 

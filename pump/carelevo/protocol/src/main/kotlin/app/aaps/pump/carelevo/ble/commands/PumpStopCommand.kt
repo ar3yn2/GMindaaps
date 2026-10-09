@@ -1,13 +1,13 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleCommand
 
 /**
  * `CMD_PUMP_STOP_REQ` (0x26) → `CMD_PUMP_STOP_RES` (0x86). **SAFETY-CRITICAL** — suspends (stops) insulin
  * delivery for [durationMinutes], answered with a result-only acknowledgement.
  *
  * The later `CMD_PUMP_STOP_RPT` (0x8A) the pump pushes when the stop period ends is an async/unsolicited
- * report — **not** this command's response; it is handled via [app.aaps.pump.carelevo.ble.BleClient.unsolicitedEvents].
+ * report — **not** this command's response; it is handled via [app.gmaaps.pump.carelevo.ble.BleClient.unsolicitedEvents].
  *
  * Request wire format (4 bytes), splitting the duration into hours+minutes:
  * ```
@@ -59,3 +59,4 @@ class PumpStopCommand(
         private const val MIN_RESPONSE_LENGTH = 2
     }
 }
+

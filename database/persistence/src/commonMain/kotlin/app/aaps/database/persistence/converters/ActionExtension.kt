@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.ue.Action
-import app.aaps.database.entities.UserEntry
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.database.entities.UserEntry
 
 fun UserEntry.Action.fromDb(): Action =
     when (this) {
@@ -216,4 +216,5 @@ fun Action.toDb(): UserEntry.Action =
         Action.SCENE_DEACTIVATED               -> UserEntry.Action.SCENE_DEACTIVATED
         Action.REMOTE_CONFIG_CHANGED           -> UserEntry.Action.REMOTE_CONFIG_CHANGED
     }
+
 

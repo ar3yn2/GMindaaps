@@ -1,4 +1,4 @@
-package app.aaps.desktop.shell.prefs
+﻿package app.gmaaps.desktop.shell.prefs
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
@@ -80,3 +80,4 @@ class DesktopSpTest {
         )
     }
 }
+

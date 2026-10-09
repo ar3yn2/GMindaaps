@@ -1,4 +1,4 @@
-package app.aaps.plugins.source.instara
+﻿package app.gmaaps.plugins.source.instara
 
 import android.app.Application
 import android.content.Context
@@ -7,13 +7,13 @@ import androidx.work.WorkerFactory
 import androidx.work.WorkerParameters
 import androidx.work.testing.TestListenableWorkerBuilder
 import androidx.work.testing.WorkManagerTestInitHelper
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.AAPSLoggerTest
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.AAPSLoggerTest
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
@@ -139,3 +139,4 @@ class InstaraStaleCheckWorkerTest {
         assertTrue(shadowOf(application).broadcastIntents.isEmpty())
     }
 }
+

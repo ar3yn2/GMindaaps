@@ -1,9 +1,9 @@
-package app.aaps.pump.danars
+﻿package app.gmaaps.pump.danars
 
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.danars.comm.DanaRSPacket
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.danars.comm.DanaRSPacket
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import org.junit.jupiter.api.BeforeEach
@@ -53,3 +53,4 @@ open class DanaRSTestBase : TestBaseWithProfile() {
         danaPump = DanaPump(aapsLogger, preferences, dateUtil, decimalFormatter, profileStoreProvider)
     }
 }
+

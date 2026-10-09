@@ -1,36 +1,36 @@
-package app.aaps.pump.medtrum
+﻿package app.gmaaps.pump.medtrum
 
 import android.util.Base64
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.TemporaryBasalStorage
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.medtrum.code.ConnectionState
-import app.aaps.pump.medtrum.comm.enums.AlarmSetting
-import app.aaps.pump.medtrum.comm.enums.AlarmState
-import app.aaps.pump.medtrum.comm.enums.BasalType
-import app.aaps.pump.medtrum.comm.enums.MedtrumPumpState
-import app.aaps.pump.medtrum.comm.enums.ModelType
-import app.aaps.pump.medtrum.extension.toByteArray
-import app.aaps.pump.medtrum.extension.toInt
-import app.aaps.pump.medtrum.keys.MedtrumBooleanKey
-import app.aaps.pump.medtrum.keys.MedtrumBooleanNonKey
-import app.aaps.pump.medtrum.keys.MedtrumDoubleNonKey
-import app.aaps.pump.medtrum.keys.MedtrumIntKey
-import app.aaps.pump.medtrum.keys.MedtrumIntNonKey
-import app.aaps.pump.medtrum.keys.MedtrumLongNonKey
-import app.aaps.pump.medtrum.keys.MedtrumStringKey
-import app.aaps.pump.medtrum.keys.MedtrumStringNonKey
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.TemporaryBasalStorage
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.medtrum.code.ConnectionState
+import app.gmaaps.pump.medtrum.comm.enums.AlarmSetting
+import app.gmaaps.pump.medtrum.comm.enums.AlarmState
+import app.gmaaps.pump.medtrum.comm.enums.BasalType
+import app.gmaaps.pump.medtrum.comm.enums.MedtrumPumpState
+import app.gmaaps.pump.medtrum.comm.enums.ModelType
+import app.gmaaps.pump.medtrum.extension.toByteArray
+import app.gmaaps.pump.medtrum.extension.toInt
+import app.gmaaps.pump.medtrum.keys.MedtrumBooleanKey
+import app.gmaaps.pump.medtrum.keys.MedtrumBooleanNonKey
+import app.gmaaps.pump.medtrum.keys.MedtrumDoubleNonKey
+import app.gmaaps.pump.medtrum.keys.MedtrumIntKey
+import app.gmaaps.pump.medtrum.keys.MedtrumIntNonKey
+import app.gmaaps.pump.medtrum.keys.MedtrumLongNonKey
+import app.gmaaps.pump.medtrum.keys.MedtrumStringKey
+import app.gmaaps.pump.medtrum.keys.MedtrumStringNonKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -686,3 +686,4 @@ class MedtrumPump(
         return if (newRecord) "**NEW** " else ""
     }
 }
+

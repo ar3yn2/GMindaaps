@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
 
 /**
  * `CURRENT_ACTIVE_ALARM_REQ` (0x43) → one of `CURRENT_ACTIVE_ALARM_RPT` (0xA4/0xA5/0xA6).
@@ -144,7 +144,7 @@ data class ActiveAlarmSnapshotFlags(
 /**
  * One snapshot slot. [payloadIndex] is its byte position in the 15-byte report; [causeCode] is the
  * matching `CAUSE` byte from the pushed-alarm reports (0xA1/0xA2/0xA3), which lets a snapshot resolve
- * to the *same* [app.aaps.pump.carelevo.domain.type.AlarmCause] the live alarm would have produced.
+ * to the *same* [app.gmaaps.pump.carelevo.domain.type.AlarmCause] the live alarm would have produced.
  *
  * The slot order is the cause-code order — the two tables are the same table. `USER_FORCED_TERMINATION`
  * is the one slot with no pushed-alarm counterpart, so it has no [causeCode].
@@ -170,3 +170,4 @@ data class ActiveAlarmSnapshotResponse(
     val infusing: Boolean,
     val flags: ActiveAlarmSnapshotFlags
 ) : BleResponse
+

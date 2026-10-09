@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.FoodDao
-import app.aaps.database.entities.Food
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.FoodDao
+import app.gmaaps.database.entities.Food
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedFoodDao(changes: MutableList<DBEntry>, private val dao: FoodDao) : DelegatedDao(changes), FoodDao by dao {
 

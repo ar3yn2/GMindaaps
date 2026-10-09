@@ -1,7 +1,7 @@
-package app.aaps.ui.compose.scenes
+﻿package app.gmaaps.ui.compose.scenes
 
-import app.aaps.core.data.model.ActiveSceneState
-import app.aaps.core.data.model.Scene
+import app.gmaaps.core.data.model.ActiveSceneState
+import app.gmaaps.core.data.model.Scene
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -73,3 +73,4 @@ class ActiveSceneStateTest {
         assertThat(state.remainingMs(5000L)).isNull()
     }
 }
+

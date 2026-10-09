@@ -1,6 +1,6 @@
-package app.aaps.pump.medtrum.ble
+﻿package app.gmaaps.pump.medtrum.ble
 
-import app.aaps.core.interfaces.pump.ble.BleTransport
+import app.gmaaps.core.interfaces.pump.ble.BleTransport
 
 interface MedtrumBleCallback {
 
@@ -35,3 +35,4 @@ interface MedtrumBleTransport : BleTransport {
     /** Pre-seed the cached device address from the wizard BLE scan step. */
     fun setCachedAddress(address: String)
 }
+

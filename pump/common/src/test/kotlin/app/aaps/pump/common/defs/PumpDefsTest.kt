@@ -1,6 +1,6 @@
-package app.aaps.pump.common.defs
+﻿package app.gmaaps.pump.common.defs
 
-import app.aaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.resources.ResourceHelper
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.any
@@ -150,3 +150,4 @@ internal class PumpDefsTest {
         }
     }
 }
+

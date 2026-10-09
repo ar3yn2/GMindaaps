@@ -1,4 +1,4 @@
-package app.aaps.pump.common.compose
+﻿package app.gmaaps.pump.common.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -17,12 +17,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.pump.BleScanStep
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardScreen
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.common.hw.rileylink.R
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.pump.BleScanStep
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardScreen
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.common.hw.rileylink.R
 
 @Composable
 fun RileyLinkPairWizardScreen(
@@ -42,7 +42,7 @@ fun RileyLinkPairWizardScreen(
             onCancel()
         },
         cancelDialogTitle = stringResource(R.string.rileylink_pair),
-        cancelDialogText = stringResource(app.aaps.core.ui.R.string.cancel)
+        cancelDialogText = stringResource(app.gmaaps.core.ui.R.string.cancel)
     ) { step, wizardCancel ->
         when (step) {
             RileyLinkPairStep.BLE_SCAN -> {
@@ -60,7 +60,7 @@ fun RileyLinkPairWizardScreen(
             RileyLinkPairStep.COMPLETE -> {
                 WizardStepLayout(
                     primaryButton = WizardButton(
-                        text = stringResource(app.aaps.core.ui.R.string.ok),
+                        text = stringResource(app.gmaaps.core.ui.R.string.ok),
                         onClick = {
                             viewModel.finish()
                             onFinish()
@@ -97,3 +97,4 @@ fun RileyLinkPairWizardScreen(
         }
     }
 }
+

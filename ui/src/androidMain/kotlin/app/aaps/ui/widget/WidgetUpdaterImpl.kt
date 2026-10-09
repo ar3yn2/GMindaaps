@@ -1,17 +1,17 @@
-package app.aaps.ui.widget
+﻿package app.gmaaps.ui.widget
 
 import android.appwidget.AppWidgetManager
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import androidx.glance.appwidget.updateAll
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.widget.WidgetUpdater
-import app.aaps.ui.widget.glance.AapsGlanceWidget
-import app.aaps.ui.widget.glance.BgGraphGlanceWidget
-import app.aaps.ui.widget.glance.CompactBgGlanceWidget
-import app.aaps.ui.widget.glance.GlucoseCircleGlanceWidget
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.widget.WidgetUpdater
+import app.gmaaps.ui.widget.glance.AapsGlanceWidget
+import app.gmaaps.ui.widget.glance.BgGraphGlanceWidget
+import app.gmaaps.ui.widget.glance.CompactBgGlanceWidget
+import app.gmaaps.ui.widget.glance.GlucoseCircleGlanceWidget
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -66,3 +66,4 @@ class WidgetUpdaterImpl(
         context.sendBroadcast(intent)
     }
 }
+

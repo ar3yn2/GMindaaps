@@ -1,8 +1,8 @@
-package app.aaps.core.interfaces.overview.graph
+﻿package app.gmaaps.core.interfaces.overview.graph
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TT
-import app.aaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.data.model.TrendArrow
 
 /**
  * Domain models for calculated graph data.

@@ -1,14 +1,14 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.pump.eopatch.code.DeactivationStatus
-import app.aaps.pump.eopatch.code.DeactivationStatus.Companion.of
-import app.aaps.pump.eopatch.core.api.DeActivation
-import app.aaps.pump.eopatch.core.code.BolusType
-import app.aaps.pump.eopatch.core.response.PatchBooleanResponse
-import app.aaps.pump.eopatch.vo.PatchLifecycleEvent.Companion.createShutdown
-import app.aaps.pump.eopatch.vo.TempBasalManager
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.pump.eopatch.code.DeactivationStatus
+import app.gmaaps.pump.eopatch.code.DeactivationStatus.Companion.of
+import app.gmaaps.pump.eopatch.core.api.DeActivation
+import app.gmaaps.pump.eopatch.core.code.BolusType
+import app.gmaaps.pump.eopatch.core.response.PatchBooleanResponse
+import app.gmaaps.pump.eopatch.vo.PatchLifecycleEvent.Companion.createShutdown
+import app.gmaaps.pump.eopatch.vo.TempBasalManager
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -111,3 +111,4 @@ class DeactivateTask(
         }
     }
 }
+

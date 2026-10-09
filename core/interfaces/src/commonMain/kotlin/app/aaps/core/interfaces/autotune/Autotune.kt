@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.autotune
+﻿package app.gmaaps.core.interfaces.autotune
 
 interface Autotune {
 

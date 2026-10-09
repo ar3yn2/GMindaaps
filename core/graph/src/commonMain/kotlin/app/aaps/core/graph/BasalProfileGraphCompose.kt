@@ -1,4 +1,4 @@
-package app.aaps.core.graph
+﻿package app.gmaaps.core.graph
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -11,9 +11,9 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
-import app.aaps.core.graph.vico.Square
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.ui.compose.AapsTheme
+import app.gmaaps.core.graph.vico.Square
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.ui.compose.AapsTheme
 import com.patrykandpatrick.vico.compose.cartesian.CartesianChartHost
 import com.patrykandpatrick.vico.compose.cartesian.Zoom
 import com.patrykandpatrick.vico.compose.cartesian.axis.HorizontalAxis
@@ -181,3 +181,4 @@ fun BasalProfileGraphCompose(
             .padding(16.dp)
     )
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -6,10 +6,10 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.Event
-import app.aaps.core.interfaces.rx.events.EventShowDialog
-import app.aaps.core.ui.R
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.events.EventShowDialog
+import app.gmaaps.core.ui.R
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -147,3 +147,4 @@ class GlobalDialogHostTest {
             events.filter { eventType.isInstance(it) } as Flow<T>
     }
 }
+

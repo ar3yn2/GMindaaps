@@ -1,13 +1,13 @@
-package app.aaps.plugins.automation.compose
+﻿package app.gmaaps.plugins.automation.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import app.aaps.core.interfaces.automation.AutomationIconData
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.ui.compose.navigation.color
-import app.aaps.plugins.automation.actions.Action
-import app.aaps.plugins.automation.triggers.Trigger
+import app.gmaaps.core.interfaces.automation.AutomationIconData
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.ui.compose.navigation.color
+import app.gmaaps.plugins.automation.actions.Action
+import app.gmaaps.plugins.automation.triggers.Trigger
 
 /**
  * Resolves the theme-aware icon color for an [Action], prioritizing its [ElementType]
@@ -32,3 +32,4 @@ fun Trigger.iconColor(): Color =
 @Composable
 fun AutomationIconData.iconColor(): Color =
     elementType?.color() ?: MaterialTheme.colorScheme.onSurface
+

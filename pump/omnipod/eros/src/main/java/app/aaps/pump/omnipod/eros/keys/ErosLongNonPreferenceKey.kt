@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.eros.keys
+﻿package app.gmaaps.pump.omnipod.eros.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 enum class ErosLongNonPreferenceKey(
     override val key: String,

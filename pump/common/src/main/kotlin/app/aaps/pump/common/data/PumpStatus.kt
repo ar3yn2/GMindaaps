@@ -1,8 +1,8 @@
-package app.aaps.pump.common.data
+﻿package app.gmaaps.pump.common.data
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.pump.common.defs.TempBasalPair
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.pump.common.defs.TempBasalPair
 import kotlinx.coroutines.flow.MutableStateFlow
 import java.util.Date
 
@@ -126,3 +126,4 @@ abstract class PumpStatus(var pumpType: PumpType) {
     }
 
 }
+

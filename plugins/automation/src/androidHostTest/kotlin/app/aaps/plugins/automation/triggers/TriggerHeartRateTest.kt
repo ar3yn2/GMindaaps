@@ -1,9 +1,9 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.data.model.HR
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.asJsonObject
-import app.aaps.plugins.automation.elements.Comparator
+import app.gmaaps.core.data.model.HR
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.asJsonObject
+import app.gmaaps.plugins.automation.elements.Comparator
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Test
@@ -108,3 +108,4 @@ class TriggerHeartRateTest : TriggerTestBase() {
         assertThat(t.heartRate.value).isWithin(0.01).of(100.0)
     }
 }
+

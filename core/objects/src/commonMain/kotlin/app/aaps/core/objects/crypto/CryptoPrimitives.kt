@@ -1,4 +1,4 @@
-package app.aaps.core.objects.crypto
+﻿package app.gmaaps.core.objects.crypto
 
 /**
  * The cryptographic operations AAPS needs, from whatever the platform provides.
@@ -59,3 +59,4 @@ interface CryptoPrimitives {
     /** Cryptographically secure random bytes, for salts and IVs. */
     fun randomBytes(length: Int): ByteArray
 }
+

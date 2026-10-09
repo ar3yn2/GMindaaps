@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -50,3 +50,4 @@ internal class PumpTypeExtensionTest {
         assertEquals(PumpType.MEDTRUM_NANO, InterfaceIDs.PumpType.MEDTRUM.fromDb())
     }
 }
+

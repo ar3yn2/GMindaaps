@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.compose
+﻿package app.gmaaps.pump.equil.compose
 
 import androidx.compose.ui.unit.dp
 
@@ -7,3 +7,4 @@ internal object EquilUiConstants {
 
     val GIF_MAX_HEIGHT = 300.dp
 }
+

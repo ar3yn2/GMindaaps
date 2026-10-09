@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.MaterialTheme
@@ -18,10 +18,10 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.config.FillConfig
-import app.aaps.pump.carelevo.presentation.type.CarelevoPatchStep
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.config.FillConfig
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoPatchStep
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
@@ -32,7 +32,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * UI test for [CarelevoPatchFlowStep01Start] — the first step of the patch activation wizard — and for
@@ -295,3 +295,4 @@ class CarelevoPatchFlowStep01StartTest {
         }
     }
 }
+

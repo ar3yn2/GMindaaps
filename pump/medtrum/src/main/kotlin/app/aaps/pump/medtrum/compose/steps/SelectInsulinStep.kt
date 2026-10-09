@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.compose.steps
+﻿package app.gmaaps.pump.medtrum.compose.steps
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -10,12 +10,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.R
-import app.aaps.core.ui.compose.insulin.SelectInsulin
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.medtrum.code.PatchStep
-import app.aaps.pump.medtrum.compose.MedtrumPatchViewModel
+import app.gmaaps.core.ui.R
+import app.gmaaps.core.ui.compose.insulin.SelectInsulin
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.medtrum.code.PatchStep
+import app.gmaaps.pump.medtrum.compose.MedtrumPatchViewModel
 
 /**
  * @see PreviewCollapsed
@@ -56,3 +56,4 @@ fun SelectInsulinStep(
         )
     }
 }
+

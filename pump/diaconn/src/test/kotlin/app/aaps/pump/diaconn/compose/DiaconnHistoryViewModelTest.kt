@@ -1,16 +1,16 @@
-package app.aaps.pump.diaconn.compose
+﻿package app.gmaaps.pump.diaconn.compose
 
 import android.content.Context
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.pump.diaconn.common.RecordTypes
-import app.aaps.pump.diaconn.database.DiaconnHistoryRecord
-import app.aaps.pump.diaconn.database.DiaconnHistoryRecordDao
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.pump.diaconn.common.RecordTypes
+import app.gmaaps.pump.diaconn.database.DiaconnHistoryRecord
+import app.gmaaps.pump.diaconn.database.DiaconnHistoryRecordDao
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -100,3 +100,4 @@ internal class DiaconnHistoryViewModelTest {
         assertThat(sut.formatTime(record)).isEqualTo("2026-06-30 12:00")
     }
 }
+

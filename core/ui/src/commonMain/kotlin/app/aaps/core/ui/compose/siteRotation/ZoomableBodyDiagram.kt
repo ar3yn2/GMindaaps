@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.siteRotation
+﻿package app.gmaaps.core.ui.compose.siteRotation
 
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.gestures.detectTransformGestures
@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
-import app.aaps.core.data.model.TE
+import app.gmaaps.core.data.model.TE
 
 private const val MIN_ZOOM = 1f
 private const val MAX_ZOOM = 3f
@@ -106,3 +106,4 @@ fun ZoomableBodyDiagram(
         }
     }
 }
+

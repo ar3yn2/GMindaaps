@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.domain.type
+﻿package app.gmaaps.pump.carelevo.domain.type
 
-import app.aaps.pump.carelevo.domain.model.bt.SafetyCheckResultModel
+import app.gmaaps.pump.carelevo.domain.model.bt.SafetyCheckResultModel
 
 sealed class SafetyProgress {
     data class Progress(val timeoutSec: Long) : SafetyProgress()

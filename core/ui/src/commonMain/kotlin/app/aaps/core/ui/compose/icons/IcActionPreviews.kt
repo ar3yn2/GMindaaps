@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.icons
+﻿package app.gmaaps.core.ui.compose.icons
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -40,3 +40,4 @@ internal fun IcActionIconPreview() {
         android:pathData="M12.75,3.8c0.72,0.41 1.63,0.17 2.05,-0.55c0.41,-0.72 0.17,-1.63 -0.55,-2.05c-0.72,-0.41 -1.63,-0.17 -2.05,0.55C11.79,2.47 12.03,3.39 12.75,3.8z" />
 </vector>
  */
+

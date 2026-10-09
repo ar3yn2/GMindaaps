@@ -1,10 +1,10 @@
-package app.aaps.plugins.configuration.configBuilder
+﻿package app.gmaaps.plugins.configuration.configBuilder
 
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import app.aaps.core.interfaces.configuration.AppExit
+import app.gmaaps.core.interfaces.configuration.AppExit
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -47,3 +47,4 @@ class AndroidAppExit(
         }
     }
 }
+

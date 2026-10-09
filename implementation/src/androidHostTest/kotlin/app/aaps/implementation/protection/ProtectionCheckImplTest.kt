@@ -1,14 +1,14 @@
-package app.aaps.implementation.protection
+﻿package app.gmaaps.implementation.protection
 
-import app.aaps.core.interfaces.protection.AuthorizationResult
-import app.aaps.core.interfaces.protection.PasswordCheck
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.protection.ProtectionResult
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.protection.AuthorizationResult
+import app.gmaaps.core.interfaces.protection.PasswordCheck
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.protection.ProtectionResult
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -340,3 +340,4 @@ class ProtectionCheckImplTest : TestBase() {
         assertThat(result).isEqualTo(ProtectionResult.GRANTED)
     }
 }
+

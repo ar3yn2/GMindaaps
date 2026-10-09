@@ -1,50 +1,50 @@
-package app.aaps.pump.common
+﻿package app.gmaaps.pump.common
 
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.core.interfaces.constraints.PluginConstraints
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpPluginBase
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.PumpSync.TemporaryBasalType
-import app.aaps.core.interfaces.pump.comment
-import app.aaps.core.interfaces.pump.defs.fillFor
-import app.aaps.core.interfaces.pump.mapState
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventAppExit
-import app.aaps.core.interfaces.rx.events.EventCustomActionsChanged
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.common.data.PumpStatus
-import app.aaps.pump.common.defs.PumpDriverAction
-import app.aaps.pump.common.defs.PumpDriverState
-import app.aaps.pump.common.driver.PumpDriverConfiguration
-import app.aaps.pump.common.driver.refresh.PumpDataRefreshAction
-import app.aaps.pump.common.driver.refresh.PumpDataRefreshType
-import app.aaps.pump.common.sync.PumpDbEntryCarbs
-import app.aaps.pump.common.sync.PumpSyncEntriesCreator
-import app.aaps.pump.common.sync.PumpSyncStorage
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.core.interfaces.constraints.PluginConstraints
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpPluginBase
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.PumpSync.TemporaryBasalType
+import app.gmaaps.core.interfaces.pump.comment
+import app.gmaaps.core.interfaces.pump.defs.fillFor
+import app.gmaaps.core.interfaces.pump.mapState
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventAppExit
+import app.gmaaps.core.interfaces.rx.events.EventCustomActionsChanged
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.common.data.PumpStatus
+import app.gmaaps.pump.common.defs.PumpDriverAction
+import app.gmaaps.pump.common.defs.PumpDriverState
+import app.gmaaps.pump.common.driver.PumpDriverConfiguration
+import app.gmaaps.pump.common.driver.refresh.PumpDataRefreshAction
+import app.gmaaps.pump.common.driver.refresh.PumpDataRefreshType
+import app.gmaaps.pump.common.sync.PumpDbEntryCarbs
+import app.gmaaps.pump.common.sync.PumpSyncEntriesCreator
+import app.gmaaps.pump.common.sync.PumpSyncStorage
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
@@ -299,7 +299,7 @@ abstract class PumpPluginAbstract protected constructor(
                 aapsLogger.error("deliverTreatment: Invalid input")
                 pumpEnactResultProvider().success(false).enacted(false)
                     .bolusDelivered(0.0)
-                    .comment(app.aaps.core.ui.R.string.invalid_input)
+                    .comment(app.gmaaps.core.ui.R.string.invalid_input)
             } else if (detailedBolusInfo.insulin > 0) {
                 // bolus needed, ask pump to deliver it
                 deliverBolus(detailedBolusInfo)
@@ -313,7 +313,7 @@ abstract class PumpPluginAbstract protected constructor(
                 aapsLogger.debug(LTag.PUMP, "deliverTreatment: Carb only treatment.")
                 pumpEnactResultProvider().success(true).enacted(true)
                     .bolusDelivered(0.0)
-                    .comment(app.aaps.core.ui.R.string.ok)
+                    .comment(app.gmaaps.core.ui.R.string.ok)
             }
         } finally {
             triggerUIChange()
@@ -486,3 +486,4 @@ abstract class PumpPluginAbstract protected constructor(
     }
 
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.common.keys
+﻿package app.gmaaps.pump.carelevo.common.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 
 /**
  * CareLevo's stored patch and infusion state, as registered keys rather than raw strings.
@@ -50,3 +50,4 @@ enum class CarelevoStringNonKey(
     AlarmInfoList("carelevo_alarm_info_list"),
     LastSnapshotAlarmCauses("carelevo_last_snapshot_alarm_causes"),
 }
+

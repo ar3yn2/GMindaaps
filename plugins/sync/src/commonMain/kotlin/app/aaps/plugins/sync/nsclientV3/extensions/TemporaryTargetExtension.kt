@@ -1,12 +1,12 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.TT
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.nssdk.localmodel.entry.NsUnits
-import app.aaps.core.nssdk.localmodel.treatment.EventType
-import app.aaps.core.nssdk.localmodel.treatment.NSTemporaryTarget
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.nssdk.localmodel.entry.NsUnits
+import app.gmaaps.core.nssdk.localmodel.treatment.EventType
+import app.gmaaps.core.nssdk.localmodel.treatment.NSTemporaryTarget
 
 fun NSTemporaryTarget.toTemporaryTarget(): TT =
     TT(
@@ -43,3 +43,4 @@ fun TT.toNSTemporaryTarget(): NSTemporaryTarget =
 
 fun TT.Reason?.toReason(): NSTemporaryTarget.Reason =
     NSTemporaryTarget.Reason.fromString(this?.text)
+

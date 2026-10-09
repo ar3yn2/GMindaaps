@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import android.app.Application
 import androidx.compose.material3.MaterialTheme
@@ -8,9 +8,9 @@ import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.presentation.type.CarelevoPatchStep
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoPatchStep
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -23,7 +23,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Render + interaction tests for [CarelevoPatchFlowStep04Attach].
@@ -152,3 +152,4 @@ class CarelevoPatchFlowStep04AttachTest {
         verify(viewModel).setPage(CarelevoPatchStep.NEEDLE_INSERTION)
     }
 }
+

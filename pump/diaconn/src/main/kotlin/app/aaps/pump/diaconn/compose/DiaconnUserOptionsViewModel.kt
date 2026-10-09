@@ -1,15 +1,15 @@
-package app.aaps.pump.diaconn.compose
+﻿package app.gmaaps.pump.diaconn.compose
 
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.diaconn.DiaconnG8Pump
-import app.aaps.pump.diaconn.keys.DiaconnIntKey
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.diaconn.DiaconnG8Pump
+import app.gmaaps.pump.diaconn.keys.DiaconnIntKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -124,3 +124,4 @@ class DiaconnUserOptionsViewModel(
         }
     }
 }
+

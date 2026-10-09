@@ -1,16 +1,16 @@
-package app.aaps.plugins.sync.nsclientV3.workers
+﻿package app.gmaaps.plugins.sync.nsclientV3.workers
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.nsclient.StoreDataForDb
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.nsclient.StoreDataForDb
+import app.gmaaps.core.interfaces.utils.DateUtil
 
-import app.aaps.core.nssdk.localmodel.food.NSFood
-import app.aaps.core.objects.workflow.WorkOutcome
+import app.gmaaps.core.nssdk.localmodel.food.NSFood
+import app.gmaaps.core.objects.workflow.WorkOutcome
 
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.NsIncomingDataProcessor
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.NsIncomingDataProcessor
 import dev.zacsweers.metro.Inject
 
 @Inject
@@ -52,3 +52,4 @@ class LoadFoodsRunner(
         return WorkOutcome.Success
     }
 }
+

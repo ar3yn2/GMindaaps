@@ -1,4 +1,4 @@
-# iOS blockers
+﻿# iOS blockers
 
 > **Audited 2026-09-21 at `7e303d9bb5`, on macOS.** Only the claims below were checked against the
 > tree; everything else in this file is as it was and may be older than it looks. Corrected: the
@@ -1064,7 +1064,7 @@ and the warning was the important part of the request.
 
 1. `ProtectionCheckImpl` is in `implementation/src/commonMain/.../protection/`. One correction to the
    survey: it does **not** have "no Android imports at all" - the import list is clean, but it used
-   `app.aaps.core.ui.R.string.*` fully qualified inline in six places, exactly the trap recorded
+   `app.gmaaps.core.ui.R.string.*` fully qualified inline in six places, exactly the trap recorded
    further up this file. They are now `CoreUiStrings` values, so `title` is a real `TextRef` instead
    of `TextRef.AndroidRes(id)` - which also means the prompt title renders as words on iOS rather
    than `res:2131…`. `@Volatile` needed `kotlin.concurrent.Volatile`; `AtomicLong` was already the
@@ -1404,7 +1404,7 @@ code rather than written twice. It should be deleted from both the day the Main 
 ## Heads up: `LazyCalculationExecutor` moved into `:workflow`
 
 Your copy in `ios/shell/.../di/` is deleted and `IosPlatformBindings` now points at
-`app.aaps.workflow.LazyCalculationExecutor`. Nothing about the behaviour changed.
+`app.gmaaps.workflow.LazyCalculationExecutor`. Nothing about the behaviour changed.
 
 The reason is that the desktop target hit the identical cycle - `CalculationExecutor` ->
 `PostCalculationRunner` -> `IobCobCalculator` -> `CalculationWorkflow` -> `CalculationExecutor` - for
@@ -1556,3 +1556,4 @@ strings is one line in `StringOwnerModules.ALL`.
 A module listed there but not generating strings fails the build; a module generating strings but
 missing from the list shows its names on screen. The first is the better direction, which is why the
 list is the source of truth rather than a lookup.
+

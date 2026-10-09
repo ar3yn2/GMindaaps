@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.scenes
+﻿package app.gmaaps.core.interfaces.scenes
 
-import app.aaps.core.data.model.ActiveSceneState
-import app.aaps.core.data.model.SceneLifecycle
+import app.gmaaps.core.data.model.ActiveSceneState
+import app.gmaaps.core.data.model.SceneLifecycle
 import kotlinx.coroutines.flow.StateFlow
 
 /**
@@ -50,3 +50,4 @@ data class ActiveSceneSnapshot(
     val rmNsId: String? = null,
     val teNsId: String? = null
 )
+

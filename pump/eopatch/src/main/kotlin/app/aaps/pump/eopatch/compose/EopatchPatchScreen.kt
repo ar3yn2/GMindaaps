@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.compose
+﻿package app.gmaaps.pump.eopatch.compose
 
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Box
@@ -16,27 +16,27 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.pump.ProfileGateWizardStep
-import app.aaps.core.ui.compose.pump.WizardScreen
-import app.aaps.pump.eopatch.R
-import app.aaps.pump.eopatch.code.PatchStep
-import app.aaps.pump.eopatch.compose.steps.BasalScheduleStep
-import app.aaps.pump.eopatch.compose.steps.ConnectStep
-import app.aaps.pump.eopatch.compose.steps.RemoveNeedleCapStep
-import app.aaps.pump.eopatch.compose.steps.RemoveProtectionTapeStep
-import app.aaps.pump.eopatch.compose.steps.RemoveStep
-import app.aaps.pump.eopatch.compose.steps.RotateKnobStep
-import app.aaps.pump.eopatch.compose.steps.SafeDeactivationStep
-import app.aaps.pump.eopatch.compose.steps.SafetyCheckStep
-import app.aaps.pump.eopatch.compose.steps.SelectInsulinStep
-import app.aaps.pump.eopatch.compose.steps.SiteLocationStep
-import app.aaps.pump.eopatch.compose.steps.TurningOffAlarmStep
-import app.aaps.pump.eopatch.compose.steps.WakeUpStep
+import app.gmaaps.core.ui.compose.pump.ProfileGateWizardStep
+import app.gmaaps.core.ui.compose.pump.WizardScreen
+import app.gmaaps.pump.eopatch.R
+import app.gmaaps.pump.eopatch.code.PatchStep
+import app.gmaaps.pump.eopatch.compose.steps.BasalScheduleStep
+import app.gmaaps.pump.eopatch.compose.steps.ConnectStep
+import app.gmaaps.pump.eopatch.compose.steps.RemoveNeedleCapStep
+import app.gmaaps.pump.eopatch.compose.steps.RemoveProtectionTapeStep
+import app.gmaaps.pump.eopatch.compose.steps.RemoveStep
+import app.gmaaps.pump.eopatch.compose.steps.RotateKnobStep
+import app.gmaaps.pump.eopatch.compose.steps.SafeDeactivationStep
+import app.gmaaps.pump.eopatch.compose.steps.SafetyCheckStep
+import app.gmaaps.pump.eopatch.compose.steps.SelectInsulinStep
+import app.gmaaps.pump.eopatch.compose.steps.SiteLocationStep
+import app.gmaaps.pump.eopatch.compose.steps.TurningOffAlarmStep
+import app.gmaaps.pump.eopatch.compose.steps.WakeUpStep
 
 @Composable
 fun EopatchPatchScreen(
     viewModel: EopatchPatchViewModel,
-    setToolbarConfig: ((app.aaps.core.ui.compose.ToolbarConfig) -> Unit)? = null
+    setToolbarConfig: ((app.gmaaps.core.ui.compose.ToolbarConfig) -> Unit)? = null
 ) {
     val patchStep by viewModel.patchStep.collectAsStateWithLifecycle()
 
@@ -105,7 +105,7 @@ fun EopatchPatchScreen(
             currentStepIndex = viewModel.currentStepIndex,
             canGoBack = canGoBack,
             onBack = { viewModel.handleBack() },
-            cancelDialogTitle = stringResource(app.aaps.core.ui.R.string.confirm),
+            cancelDialogTitle = stringResource(app.gmaaps.core.ui.R.string.confirm),
             cancelDialogText = stringResource(
                 if (patchStep in listOf(
                         PatchStep.SAFE_DEACTIVATION, PatchStep.DISCARDED, PatchStep.DISCARDED_FOR_CHANGE,
@@ -169,7 +169,7 @@ private fun CommErrorDialog(
             title = { Text(stringResource(R.string.patch_communication_failed)) },
             text = { Text("${stringResource(R.string.patch_comm_error_during_discard_desc_2)}\n${stringResource(R.string.patch_communication_check_helper_2)}") },
             confirmButton = {
-                TextButton(onClick = { onDismiss(); viewModel.discardPatch() }) { Text(stringResource(app.aaps.core.ui.R.string.discard)) }
+                TextButton(onClick = { onDismiss(); viewModel.discardPatch() }) { Text(stringResource(app.gmaaps.core.ui.R.string.discard)) }
             },
             dismissButton = {
                 TextButton(onClick = { onDismiss(); viewModel.cancelPatchCommCheck() }) { Text(commCheckCancelLabel) }
@@ -181,7 +181,7 @@ private fun CommErrorDialog(
             title = { Text(stringResource(R.string.patch_communication_failed)) },
             text = { Text("${stringResource(R.string.patch_communication_check_helper_1)}\n${stringResource(R.string.patch_communication_check_helper_2)}") },
             confirmButton = {
-                TextButton(onClick = { onDismiss(); viewModel.retryCheckCommunication() }) { Text(stringResource(app.aaps.core.ui.R.string.retry)) }
+                TextButton(onClick = { onDismiss(); viewModel.retryCheckCommunication() }) { Text(stringResource(app.gmaaps.core.ui.R.string.retry)) }
             },
             dismissButton = {
                 TextButton(onClick = { onDismiss(); viewModel.cancelPatchCommCheck() }) { Text(commCheckCancelLabel) }
@@ -199,7 +199,7 @@ private fun BondedDialog(visible: Boolean, viewModel: EopatchPatchViewModel, onD
         text = { Text(stringResource(R.string.patch_communication_succeed_message)) },
         confirmButton = {
             TextButton(onClick = { onDismiss(); viewModel.dismissPatchCommCheckDialogInternal(true) }) {
-                Text(stringResource(app.aaps.core.ui.R.string.confirm))
+                Text(stringResource(app.gmaaps.core.ui.R.string.confirm))
             }
         }
     )
@@ -224,7 +224,7 @@ private fun ChangePatchDialog(visible: Boolean, viewModel: EopatchPatchViewModel
             TextButton(onClick = { onDismiss(); viewModel.deactivatePatch() }) { Text(stringResource(R.string.string_discard_patch)) }
         },
         dismissButton = {
-            TextButton(onClick = { onDismiss() }) { Text(stringResource(app.aaps.core.ui.R.string.cancel)) }
+            TextButton(onClick = { onDismiss() }) { Text(stringResource(app.gmaaps.core.ui.R.string.cancel)) }
         }
     )
 }
@@ -254,14 +254,14 @@ private fun DiscardDialog(visible: Boolean, viewModel: EopatchPatchViewModel, on
                         viewModel.handleComplete()
                     }
                 }
-            }) { Text(stringResource(app.aaps.core.ui.R.string.discard)) }
+            }) { Text(stringResource(app.gmaaps.core.ui.R.string.discard)) }
         },
         dismissButton = {
             if (!viewModel.isInAlarmHandling) {
                 TextButton(onClick = {
                     onDismiss()
                     viewModel.updateIncompletePatchActivationReminder()
-                }) { Text(stringResource(app.aaps.core.ui.R.string.cancel)) }
+                }) { Text(stringResource(app.gmaaps.core.ui.R.string.cancel)) }
             }
         }
     )
@@ -280,7 +280,8 @@ private fun ForceResetDialog(visible: Boolean, viewModel: EopatchPatchViewModel,
             }
         },
         dismissButton = {
-            TextButton(onClick = { onDismiss() }) { Text(stringResource(app.aaps.core.ui.R.string.cancel)) }
+            TextButton(onClick = { onDismiss() }) { Text(stringResource(app.gmaaps.core.ui.R.string.cancel)) }
         }
     )
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.rx
+﻿package app.gmaaps.core.interfaces.rx
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
@@ -77,3 +77,4 @@ fun <T> Flow<T>.collectResilient(
             }
         }
         .let { flow -> scope.launch(start = start) { flow.collect() } }
+

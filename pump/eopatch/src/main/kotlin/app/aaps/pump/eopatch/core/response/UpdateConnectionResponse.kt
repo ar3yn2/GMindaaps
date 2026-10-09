@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
 class UpdateConnectionResponse(stateBytes: ByteArray) : BaseResponse() {
 
@@ -8,3 +8,4 @@ class UpdateConnectionResponse(stateBytes: ByteArray) : BaseResponse() {
         System.arraycopy(stateBytes, 0, patchState, 0, 20)
     }
 }
+

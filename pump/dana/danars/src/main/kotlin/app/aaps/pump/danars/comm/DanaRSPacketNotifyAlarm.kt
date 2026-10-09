@@ -1,10 +1,10 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.danars.encryption.BleEncryption
-import app.aaps.pump.danars.services.DanaRSAlarmReporter
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.danars.encryption.BleEncryption
+import app.gmaaps.pump.danars.services.DanaRSAlarmReporter
 import dev.zacsweers.metro.Inject
 
 @Inject
@@ -25,43 +25,43 @@ class DanaRSPacketNotifyAlarm(
         var errorString = ""
         when (alarmCode) {
             0x01       ->  // Battery 0% Alarm
-                errorString = rh.gs(app.aaps.pump.dana.R.string.batterydischarged)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.batterydischarged)
 
             0x02       ->  // Pump Error
-                errorString = rh.gs(app.aaps.pump.dana.R.string.pumperror)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.pumperror)
 
             0x03       ->  // Occlusion
-                errorString = rh.gs(app.aaps.pump.dana.R.string.occlusion)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.occlusion)
 
             0x04       ->  // LOW BATTERY
-                errorString = rh.gs(app.aaps.pump.dana.R.string.lowbattery)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.lowbattery)
 
             0x05       ->  // Shutdown
-                errorString = rh.gs(app.aaps.pump.dana.R.string.pumpshutdown)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.pumpshutdown)
 
             0x06       ->  // Basal Compare
-                errorString = rh.gs(app.aaps.pump.dana.R.string.basalcompare)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.basalcompare)
 
             0x07, 0xFF ->  // Blood sugar measurement alert
-                errorString = rh.gs(app.aaps.pump.dana.R.string.bloodsugarmeasurementalert)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.bloodsugarmeasurementalert)
 
             0x08, 0xFE ->  // Remaining insulin level
-                errorString = rh.gs(app.aaps.pump.dana.R.string.remaininsulinalert)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.remaininsulinalert)
 
             0x09       ->  // Empty Reservoir
-                errorString = rh.gs(app.aaps.pump.dana.R.string.emptyreservoir)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.emptyreservoir)
 
             0x0A       ->  // Check shaft
-                errorString = rh.gs(app.aaps.pump.dana.R.string.checkshaft)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.checkshaft)
 
             0x0B       ->  // Basal MAX
-                errorString = rh.gs(app.aaps.pump.dana.R.string.basalmax)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.basalmax)
 
             0x0C       ->  // Daily MAX
-                errorString = rh.gs(app.aaps.pump.dana.R.string.dailymax)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.dailymax)
 
             0xFD       ->  // Blood sugar check miss alarm
-                errorString = rh.gs(app.aaps.pump.dana.R.string.missedbolus)
+                errorString = rh.gs(app.gmaaps.pump.dana.R.string.missedbolus)
         }
         // No error no need to upload anything
         if (errorString == "") {
@@ -74,3 +74,4 @@ class DanaRSPacketNotifyAlarm(
 
     override val friendlyName: String = "NOTIFY__ALARM"
 }
+

@@ -1,15 +1,15 @@
-package app.aaps.pump.carelevo.ble.gatt
+﻿package app.gmaaps.pump.carelevo.ble.gatt
 
-import app.aaps.core.interfaces.pump.ble.BleAdapter
-import app.aaps.core.interfaces.pump.ble.BleGatt
-import app.aaps.core.interfaces.pump.ble.BleScanner
-import app.aaps.core.interfaces.pump.ble.BleTransport
-import app.aaps.core.interfaces.pump.ble.BleTransportListener
-import app.aaps.core.interfaces.pump.ble.PairingState
-import app.aaps.core.interfaces.pump.ble.ScannedDevice
-import app.aaps.pump.carelevo.ble.BleClientImpl
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.core.interfaces.pump.ble.BleAdapter
+import app.gmaaps.core.interfaces.pump.ble.BleGatt
+import app.gmaaps.core.interfaces.pump.ble.BleScanner
+import app.gmaaps.core.interfaces.pump.ble.BleTransport
+import app.gmaaps.core.interfaces.pump.ble.BleTransportListener
+import app.gmaaps.core.interfaces.pump.ble.PairingState
+import app.gmaaps.core.interfaces.pump.ble.ScannedDevice
+import app.gmaaps.pump.carelevo.ble.BleClientImpl
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -28,7 +28,7 @@ import kotlin.test.assertFailsWith
  * shared [BleTransport] listener callbacks, and — the real Phase-1 goal — that the unchanged
  * [BleClientImpl] correlates a request/response end-to-end over the adapter.
  *
- * Uses `runTest` virtual time (no real waits), matching [app.aaps.pump.carelevo.ble.BleClientContractTest].
+ * Uses `runTest` virtual time (no real waits), matching [app.gmaaps.pump.carelevo.ble.BleClientContractTest].
  */
 @OptIn(ExperimentalCoroutinesApi::class)
 internal class BleTransportGattConnectionTest {
@@ -260,3 +260,4 @@ internal class BleTransportGattConnectionTest {
         }
     }
 }
+

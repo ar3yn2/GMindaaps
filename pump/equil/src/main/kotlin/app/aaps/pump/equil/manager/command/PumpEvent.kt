@@ -1,8 +1,8 @@
-package app.aaps.pump.equil.manager.command
+﻿package app.gmaaps.pump.equil.manager.command
 
 import androidx.annotation.StringRes
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.equil.R
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.equil.R
 
 object PumpEvent {
 
@@ -46,3 +46,4 @@ object PumpEvent {
     fun getErrorString(rh: ResourceHelper, port: Int, type: Int, level: Int): String =
         errorResMap[Triple(port, type, level)]?.let { rh.gs(it) } ?: ""
 }
+

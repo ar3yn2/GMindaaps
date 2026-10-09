@@ -1,9 +1,9 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.Food
-import app.aaps.database.entities.TABLE_FOODS
+import app.gmaaps.database.entities.Food
+import app.gmaaps.database.entities.TABLE_FOODS
 
 @Dao
 internal interface FoodDao : TraceableDao<Food> {

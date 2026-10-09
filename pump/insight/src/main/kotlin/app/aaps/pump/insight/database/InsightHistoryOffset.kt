@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.database
+﻿package app.gmaaps.pump.insight.database
 
 import androidx.room.Entity
 import androidx.room.Index
@@ -12,3 +12,4 @@ data class InsightHistoryOffset(
     @PrimaryKey val pumpSerial: String,
     var offset: Long
 )
+

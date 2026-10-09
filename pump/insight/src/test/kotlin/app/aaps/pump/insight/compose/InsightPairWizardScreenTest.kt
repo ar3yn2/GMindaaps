@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.compose
+﻿package app.gmaaps.pump.insight.compose
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -6,7 +6,7 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.pump.insight.R
+import app.gmaaps.pump.insight.R
 import com.google.common.truth.Truth.assertThat
 import org.junit.Rule
 import org.junit.Test
@@ -15,7 +15,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Covers [InsightPairWizardScreen], the four steps of pairing a pump.
@@ -173,3 +173,4 @@ class InsightPairWizardScreenTest {
         compose.onNodeWithText("123456").assertDoesNotExist()
     }
 }
+

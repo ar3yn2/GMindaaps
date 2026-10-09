@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.database.entities.GlucoseValue
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.database.entities.GlucoseValue
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -29,3 +29,4 @@ internal class SourceSensorExtensionTest {
         assertEquals(SourceSensor.ZT_PREDICTION, GlucoseValue.SourceSensor.ZT_PREDICTION.fromDb())
     }
 }
+

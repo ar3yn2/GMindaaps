@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.smsCommunicator.compose
+﻿package app.gmaaps.plugins.sync.smsCommunicator.compose
 
 import androidx.compose.runtime.Immutable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DateUtil
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -61,3 +61,4 @@ class SmsCommunicatorViewModel(
         }
     }
 }
+

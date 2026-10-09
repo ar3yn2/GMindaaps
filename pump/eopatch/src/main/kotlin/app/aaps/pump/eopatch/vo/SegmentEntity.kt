@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
 abstract class SegmentEntity<T : SegmentEntity<T>> {
 
@@ -92,3 +92,4 @@ abstract class SegmentEntity<T : SegmentEntity<T>> {
         const val TIME_BASE = 30
     }
 }
+

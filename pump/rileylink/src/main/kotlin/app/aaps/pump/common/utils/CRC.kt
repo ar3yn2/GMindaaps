@@ -1,4 +1,4 @@
-package app.aaps.pump.common.utils
+﻿package app.gmaaps.pump.common.utils
 
 /**
  * Created by geoff on 4/27/15.
@@ -115,3 +115,4 @@ object CRC {
         return byteArrayOf(((crc and 0xFF00) shr 8).toByte(), (crc and 0xFF).toByte())
     }
 }
+

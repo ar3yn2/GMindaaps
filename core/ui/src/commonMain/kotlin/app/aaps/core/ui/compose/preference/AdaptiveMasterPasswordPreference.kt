@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -6,12 +6,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import app.aaps.core.keys.StringKey
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.LocalPreferences
-import app.aaps.core.ui.compose.dialogs.QueryPasswordDialog
-import app.aaps.core.ui.compose.dialogs.SetPasswordDialog
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.ui.compose.dialogs.QueryPasswordDialog
+import app.gmaaps.core.ui.compose.dialogs.SetPasswordDialog
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Master password preference that requires current password verification before allowing change.
@@ -145,3 +145,4 @@ fun AdaptiveMasterPasswordPreferenceItem(
         )
     }
 }
+

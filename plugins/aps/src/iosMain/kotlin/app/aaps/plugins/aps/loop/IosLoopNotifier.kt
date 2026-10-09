@@ -1,11 +1,11 @@
-package app.aaps.plugins.aps.loop
+﻿package app.gmaaps.plugins.aps.loop
 
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.IosNotificationDelegate
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.plugins.aps.ApsStrings
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.IosNotificationDelegate
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.plugins.aps.ApsStrings
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -148,3 +148,4 @@ class IosLoopNotifier(
         const val IGNORE_PREFIX = "aaps-ignore-"
     }
 }
+

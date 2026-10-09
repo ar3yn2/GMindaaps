@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -52,3 +52,4 @@ class SettingsExtensionTest {
         assertThat("not json {".toRunningConfiguration()).isNull()
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.pump.common.hw.rileylink.ble.command
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.command
 
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersionBase
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersionBase
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
 import org.apache.commons.lang3.NotImplementedException
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -304,3 +304,4 @@ class SetPreambleTest {
         assertEquals(0x01.toByte(), raw[2]) // low byte
     }
 }
+

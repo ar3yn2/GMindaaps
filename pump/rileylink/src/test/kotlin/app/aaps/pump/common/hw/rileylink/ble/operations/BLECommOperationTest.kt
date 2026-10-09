@@ -1,6 +1,6 @@
-package app.aaps.pump.common.hw.rileylink.ble.operations
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.operations
 
-import app.aaps.pump.common.hw.rileylink.ble.RileyLinkBLE
+import app.gmaaps.pump.common.hw.rileylink.ble.RileyLinkBLE
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertNotNull
@@ -195,3 +195,4 @@ class BLECommOperationTest {
         }
     }
 }
+

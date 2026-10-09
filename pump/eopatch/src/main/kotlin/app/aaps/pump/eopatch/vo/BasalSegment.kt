@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.pump.eopatch.AppConstant
+import app.gmaaps.pump.eopatch.AppConstant
 import com.google.common.base.Preconditions
 
 data class BasalSegment(var start: Long, var end: Long, var doseUnitPerHour: Float) : SegmentEntity<BasalSegment>() {
@@ -43,3 +43,4 @@ data class BasalSegment(var start: Long, var end: Long, var doseUnitPerHour: Flo
         }
     }
 }
+

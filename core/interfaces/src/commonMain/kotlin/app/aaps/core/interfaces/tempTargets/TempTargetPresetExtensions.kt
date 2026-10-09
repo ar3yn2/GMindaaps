@@ -1,10 +1,10 @@
-package app.aaps.core.interfaces.tempTargets
+﻿package app.gmaaps.core.interfaces.tempTargets
 
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.TT
-import app.aaps.core.data.model.TTPreset
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.data.model.TTPreset
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonNull
@@ -99,3 +99,4 @@ private fun defaultTTDurationMinutes(reason: TT.Reason): Int = when (reason) {
     TT.Reason.HYPOGLYCEMIA -> Constants.DEFAULT_TT_HYPO_DURATION
     else                   -> Constants.DEFAULT_TT_EATING_SOON_DURATION
 }
+

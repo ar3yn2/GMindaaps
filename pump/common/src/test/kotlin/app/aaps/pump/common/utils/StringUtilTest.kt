@@ -1,7 +1,7 @@
-package app.aaps.pump.common.utils
+﻿package app.gmaaps.pump.common.utils
 
-import app.aaps.core.utils.StringUtil
-import app.aaps.core.utils.formatUS
+import app.gmaaps.core.utils.StringUtil
+import app.gmaaps.core.utils.formatUS
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Test

@@ -1,19 +1,19 @@
-package app.aaps.plugins.automation.compose
+﻿package app.gmaaps.plugins.automation.compose
 
 import androidx.compose.ui.text.AnnotatedString
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.ui.compose.icons.IcUserOptions
-import app.aaps.plugins.automation.AutomationEventFactory
-import app.aaps.plugins.automation.AutomationEventObject
-import app.aaps.plugins.automation.AutomationRuntime
-import app.aaps.plugins.automation.actions.Action
-import app.aaps.plugins.automation.events.EventAutomationUpdateGui
-import app.aaps.plugins.automation.triggers.TriggerConnector
-import app.aaps.plugins.automation.triggers.TriggerLocation
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.ui.compose.icons.IcUserOptions
+import app.gmaaps.plugins.automation.AutomationEventFactory
+import app.gmaaps.plugins.automation.AutomationEventObject
+import app.gmaaps.plugins.automation.AutomationRuntime
+import app.gmaaps.plugins.automation.actions.Action
+import app.gmaaps.plugins.automation.events.EventAutomationUpdateGui
+import app.gmaaps.plugins.automation.triggers.TriggerConnector
+import app.gmaaps.plugins.automation.triggers.TriggerLocation
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
@@ -306,3 +306,4 @@ class AutomationStateHolder(
         }
     }
 }
+

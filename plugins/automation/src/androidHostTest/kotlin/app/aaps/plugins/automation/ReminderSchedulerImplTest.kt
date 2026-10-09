@@ -1,14 +1,14 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import android.app.AlarmManager
 import android.content.Context
 import android.content.Intent
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.Event
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -26,7 +26,7 @@ import org.mockito.kotlin.verify
 import org.mockito.kotlin.whenever
 
 /**
- * Covers the Android implementation of [app.aaps.core.interfaces.alerts.ReminderScheduler].
+ * Covers the Android implementation of [app.gmaaps.core.interfaces.alerts.ReminderScheduler].
  *
  * The point of this class is *which* AlarmManager call it makes. Reminders used to be handed to the
  * system Clock app with `startActivity(ACTION_SET_TIMER)`, which Android blocks from the background,
@@ -127,3 +127,4 @@ class ReminderSchedulerImplTest : TestBase() {
         assertThat(event.type).isEqualTo(EventShowSnackbar.Type.Error)
     }
 }
+

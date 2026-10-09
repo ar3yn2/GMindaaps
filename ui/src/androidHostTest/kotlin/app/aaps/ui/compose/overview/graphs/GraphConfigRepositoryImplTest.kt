@@ -1,8 +1,8 @@
-package app.aaps.ui.compose.overview.graphs
+﻿package app.gmaaps.ui.compose.overview.graphs
 
-import app.aaps.core.interfaces.overview.graph.GraphConfig
-import app.aaps.core.interfaces.overview.graph.SecondaryGraph
-import app.aaps.core.interfaces.overview.graph.SeriesType
+import app.gmaaps.core.interfaces.overview.graph.GraphConfig
+import app.gmaaps.core.interfaces.overview.graph.SecondaryGraph
+import app.gmaaps.core.interfaces.overview.graph.SeriesType
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -99,3 +99,4 @@ class GraphConfigRepositoryImplTest {
         assertThat(restored.bgOverlays).isEmpty()
     }
 }
+

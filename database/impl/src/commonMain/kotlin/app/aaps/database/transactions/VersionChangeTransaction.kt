@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.VersionChange
+import app.gmaaps.database.entities.VersionChange
 import kotlin.time.Clock
 
 class VersionChangeTransaction(

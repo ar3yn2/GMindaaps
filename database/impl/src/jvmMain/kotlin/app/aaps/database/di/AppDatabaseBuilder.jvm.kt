@@ -1,4 +1,4 @@
-package app.aaps.database.di
+﻿package app.gmaaps.database.di
 
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -6,8 +6,8 @@ import androidx.sqlite.SQLiteConnection
 import androidx.sqlite.SQLiteDriver
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import androidx.sqlite.execSQL
-import app.aaps.database.AppDatabase
-import app.aaps.database.AppRepository
+import app.gmaaps.database.AppDatabase
+import app.gmaaps.database.AppRepository
 import kotlinx.coroutines.Dispatchers
 import java.io.File
 
@@ -105,3 +105,4 @@ class JvmAppDatabaseBuilder {
         return file.absolutePath
     }
 }
+

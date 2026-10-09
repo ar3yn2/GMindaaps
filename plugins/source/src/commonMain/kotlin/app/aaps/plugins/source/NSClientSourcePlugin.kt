@@ -1,17 +1,17 @@
-package app.aaps.plugins.source
+﻿package app.gmaaps.plugins.source
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.EnforcedState
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.source.BgSource
-import app.aaps.core.interfaces.source.NSClientSource
-import app.aaps.core.ui.compose.icons.IcPluginNsClientBg
-import app.aaps.plugins.source.compose.BgSourceComposeContent
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.EnforcedState
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.source.BgSource
+import app.gmaaps.core.interfaces.source.NSClientSource
+import app.gmaaps.core.ui.compose.icons.IcPluginNsClientBg
+import app.gmaaps.plugins.source.compose.BgSourceComposeContent
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.ContributesIntoMap
@@ -47,3 +47,4 @@ class NSClientSourcePlugin(
         .setDefault(config.AAPSCLIENT),
     aapsLogger, rh, notificationManager
 ), BgSource, NSClientSource
+

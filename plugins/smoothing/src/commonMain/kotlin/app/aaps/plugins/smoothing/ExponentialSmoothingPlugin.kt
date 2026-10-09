@@ -1,16 +1,16 @@
-package app.aaps.plugins.smoothing
+﻿package app.gmaaps.plugins.smoothing
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Timeline
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.smoothing.Smoothing
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.smoothing.Smoothing
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject

@@ -1,8 +1,8 @@
-package app.aaps.core.interfaces.db
+﻿package app.gmaaps.core.interfaces.db
 
-import app.aaps.core.data.model.TimeStamped
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.TimeStamped
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.utils.DateUtil
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -170,3 +170,4 @@ class ClockSkewCompensationTest {
         job.cancel()
     }
 }
+

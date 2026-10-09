@@ -1,8 +1,8 @@
-package app.aaps.pump.common.hw.rileylink.ble.data
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data
 
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.ble.data.encoding.Encoding4b6b
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.data.encoding.Encoding4b6b
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
 import org.apache.commons.lang3.NotImplementedException
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Assertions.assertThrows
@@ -127,3 +127,4 @@ class RadioPacketTest {
         assertArrayEquals(packetData, radioPacket.pkt)
     }
 }
+

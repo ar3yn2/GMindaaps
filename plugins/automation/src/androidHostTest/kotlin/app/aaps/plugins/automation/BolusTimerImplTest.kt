@@ -1,26 +1,26 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import android.content.Context
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.alerts.ReminderScheduler
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.location.LocationServiceController
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.automation.triggers.TriggerDeps
-import app.aaps.plugins.automation.triggers.TriggerFactory
-import app.aaps.shared.impl.utils.DateUtilImpl
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.alerts.ReminderScheduler
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.location.LocationServiceController
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.automation.triggers.TriggerDeps
+import app.gmaaps.plugins.automation.triggers.TriggerFactory
+import app.gmaaps.shared.impl.utils.DateUtilImpl
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -30,7 +30,7 @@ import org.mockito.kotlin.whenever
 
 class BolusTimerImplTest : TestBase() {
 
-@Mock lateinit var actionFactory: app.aaps.plugins.automation.actions.ActionFactory
+@Mock lateinit var actionFactory: app.gmaaps.plugins.automation.actions.ActionFactory
     private val triggerFactory: TriggerFactory by lazy {
         TriggerFactory(triggerDeps, mock(), sceneApi, receiverStatusStore)
     }
@@ -81,3 +81,4 @@ class BolusTimerImplTest : TestBase() {
         assertThat(automationRuntime.size()).isEqualTo(0)
     }
 }
+

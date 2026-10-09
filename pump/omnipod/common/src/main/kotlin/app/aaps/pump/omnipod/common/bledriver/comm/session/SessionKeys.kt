@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.session
 
-import app.aaps.pump.omnipod.common.bledriver.comm.endecrypt.Nonce
+import app.gmaaps.pump.omnipod.common.bledriver.comm.endecrypt.Nonce
 
 sealed class SessionNegotiationResponse
 
@@ -19,3 +19,4 @@ data class SessionNegotiationResynchronization(
     val synchronizedEapSqn: EapSqn,
     val msgSequenceNumber: Byte
 ) : SessionNegotiationResponse()
+

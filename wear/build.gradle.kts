@@ -1,4 +1,4 @@
-import com.android.build.api.variant.ApplicationAndroidComponentsExtension
+﻿import com.android.build.api.variant.ApplicationAndroidComponentsExtension
 import java.io.ByteArrayOutputStream
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -42,7 +42,7 @@ fun generateDate(): String {
 
 
 android {
-    namespace = "app.aaps.wear"
+    namespace = "app.gmaaps.wear"
 
     defaultConfig {
         minSdk = Versions.wearMinSdk
@@ -126,7 +126,7 @@ allprojects {
  * Validates the Watch Face Push face APKs (built by :wear:watchfacepush, one per face) with
  * Google's offline validator and embeds each APK plus its validation token into this variant's
  * assets under `watchfacepush/`, as `<face>.apk` and `<face>_token.txt`. The token is a hash
- * over the exact APK bytes, so it must be regenerated on every face build — never hardcoded.
+ * over the exact APK bytes, so it must be regenerated on every face build â€” never hardcoded.
  *
  * Both faces are embedded although only one is ever installed: Watch Face Push gives an app one
  * slot, and the wear app fills it with the face the wearer selected (see `WatchFacePushHelper`).
@@ -135,11 +135,11 @@ abstract class EmbedWatchFaceTask @Inject constructor(
     private val execOperations: ExecOperations
 ) : DefaultTask() {
 
-    /** Resolved artifact of :wear:watchfacepush — the APK output directory of the `wfs` face */
+    /** Resolved artifact of :wear:watchfacepush â€” the APK output directory of the `wfs` face */
     @get:InputFiles
     abstract val wfsApkDir: ConfigurableFileCollection
 
-    /** Resolved artifact of :wear:watchfacepush — the APK output directory of the `cwf` face */
+    /** Resolved artifact of :wear:watchfacepush â€” the APK output directory of the `cwf` face */
     @get:InputFiles
     abstract val cwfApkDir: ConfigurableFileCollection
 
@@ -192,7 +192,7 @@ extensions.configure<ApplicationAndroidComponentsExtension>("androidComponents")
         val flavorCap = flavor.replaceFirstChar { it.uppercase() }
         val variantCap = variant.name.replaceFirstChar { it.uppercase() }
         // The faces are always embedded from their release build (signed with the debug key in
-        // the face module) — the wear app's own build type does not change the face APKs.
+        // the face module) â€” the wear app's own build type does not change the face APKs.
         // Consumed as artifact configurations so the producing tasks are wired in automatically,
         // one per face: the face module names them watchfaceApk<Flavor><Face>.
         val faceApkConfigurations = listOf("wfs", "cwf").associateWith { face ->
@@ -269,3 +269,4 @@ dependencies {
     testImplementation(libs.org.robolectric)
     testRuntimeOnly(libs.org.junit.vintage.engine)
 }
+

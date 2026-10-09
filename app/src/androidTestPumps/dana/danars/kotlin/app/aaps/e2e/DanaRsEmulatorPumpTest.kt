@@ -1,23 +1,23 @@
-package app.aaps.e2e
+﻿package app.gmaaps.e2e
 
 import android.Manifest
 import android.os.SystemClock
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.work.WorkManager
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.di.EmulatedOptions
-import app.aaps.di.ResetGraphRule
-import app.aaps.di.testGraphs
-import app.aaps.pump.dana.keys.DanaStringComposedKey
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danars.DanaRSPlugin
-import app.aaps.pump.danars.di.DanaRSAccessors
-import app.aaps.pump.danars.emulator.EmulatorBleTransport
-import app.aaps.testcategories.ShardB
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.di.EmulatedOptions
+import app.gmaaps.di.ResetGraphRule
+import app.gmaaps.di.testGraphs
+import app.gmaaps.pump.dana.keys.DanaStringComposedKey
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danars.DanaRSPlugin
+import app.gmaaps.pump.danars.di.DanaRSAccessors
+import app.gmaaps.pump.danars.emulator.EmulatorBleTransport
+import app.gmaaps.testcategories.ShardB
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import org.junit.After
@@ -315,3 +315,4 @@ class DanaRsEmulatorPumpTest {
         private const val BOLUS_UNITS = 1.0
     }
 }
+

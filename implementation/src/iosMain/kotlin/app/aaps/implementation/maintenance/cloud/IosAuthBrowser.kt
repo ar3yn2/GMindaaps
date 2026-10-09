@@ -1,7 +1,7 @@
-package app.aaps.implementation.maintenance.cloud
+﻿package app.gmaaps.implementation.maintenance.cloud
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -16,7 +16,7 @@ import platform.UIKit.UIViewController
  *
  * `SFSafariViewController` is presented by this app, so AAPS stays the foreground app while the user
  * signs in - which is what keeps the loopback listener alive to catch the redirect. Handing the URL
- * to `UIApplication.openURL` instead, the way [app.aaps.core.interfaces.ui.UrlOpener] does for
+ * to `UIApplication.openURL` instead, the way [app.gmaaps.core.interfaces.ui.UrlOpener] does for
  * ordinary links, switches to Safari and lets iOS suspend AAPS; the redirect then arrives at a port
  * nothing is listening on and the sign in never finishes.
  *
@@ -72,3 +72,4 @@ class IosAuthBrowser(private val aapsLogger: AAPSLogger) : AuthBrowser {
         private const val TAG = "IosAuthBrowser:"
     }
 }
+

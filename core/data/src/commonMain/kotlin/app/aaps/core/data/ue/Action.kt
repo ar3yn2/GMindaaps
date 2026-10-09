@@ -1,4 +1,4 @@
-package app.aaps.core.data.ue
+﻿package app.gmaaps.core.data.ue
 
 enum class Action(val colorGroup: ColorGroup) {
     BOLUS(ColorGroup.InsulinTreatment),
@@ -124,3 +124,4 @@ enum class Action(val colorGroup: ColorGroup) {
         RunningMode
     }
 }
+

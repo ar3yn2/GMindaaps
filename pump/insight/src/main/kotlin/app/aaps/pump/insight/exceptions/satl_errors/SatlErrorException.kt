@@ -1,3 +1,3 @@
-package app.aaps.pump.insight.exceptions.satl_errors
+﻿package app.gmaaps.pump.insight.exceptions.satl_errors
 
-abstract class SatlErrorException : app.aaps.pump.insight.exceptions.InsightException()
+abstract class SatlErrorException : app.gmaaps.pump.insight.exceptions.InsightException()

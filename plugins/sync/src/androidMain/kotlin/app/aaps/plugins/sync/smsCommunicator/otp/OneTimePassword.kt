@@ -1,13 +1,13 @@
-package app.aaps.plugins.sync.smsCommunicator.otp
+﻿package app.gmaaps.plugins.sync.smsCommunicator.otp
 
 import android.util.Base64
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.CoreUiStrings
 import com.eatthepath.otp.HmacOneTimePasswordGenerator
 import com.google.common.io.BaseEncoding
 import dev.zacsweers.metro.AppScope
@@ -128,3 +128,4 @@ class OneTimePassword(
         configured.let { key }?.let { BaseEncoding.base32().encode(it.encoded).replace("=", "") }
 
 }
+

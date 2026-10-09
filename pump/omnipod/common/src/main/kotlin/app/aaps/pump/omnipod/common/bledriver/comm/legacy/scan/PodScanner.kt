@@ -1,20 +1,20 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.legacy.scan
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.scan
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.le.ScanFilter
 import android.bluetooth.le.ScanSettings
 import android.os.ParcelUuid
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.ScanException
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.ScanFailFoundTooManyException
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.ScanException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.ScanFailFoundTooManyException
 import java.util.Arrays
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.scan.PodScanner as PodScannerInterface
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.scan.PodScanner as PodScannerInterface
 
 class PodScanner(private val logger: AAPSLogger, private val bluetoothAdapter: BluetoothAdapter) : PodScannerInterface {
 
     @Throws(InterruptedException::class, ScanException::class)
-    override fun scanForPod(serviceUUID: String?, podID: Long): app.aaps.pump.omnipod.common.bledriver.comm.interfaces.scan.BleDiscoveredDevice {
+    override fun scanForPod(serviceUUID: String?, podID: Long): app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.scan.BleDiscoveredDevice {
         // bluetoothLeScanner is null when Bluetooth is off / the adapter is unavailable (nullable since compileSdk 37).
         val scanner = bluetoothAdapter.bluetoothLeScanner
             ?: throw ScanException("BluetoothLeScanner unavailable (is Bluetooth enabled?)")
@@ -47,3 +47,4 @@ class PodScanner(private val logger: AAPSLogger, private val bluetoothAdapter: B
         private const val SCAN_DURATION_MS = 5000
     }
 }
+

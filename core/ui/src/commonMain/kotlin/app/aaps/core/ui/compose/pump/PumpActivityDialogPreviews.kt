@@ -1,12 +1,12 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.interfaces.pump.BolusProgressState
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.pump.BolusProgressState
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.keys.interfaces.TextRef
 
 @Preview(showBackground = true, widthDp = 360)
 @Composable
@@ -142,3 +142,4 @@ internal fun PreviewPumpStatusOnly() {
         )
     }
 }
+

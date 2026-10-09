@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.treatment
+﻿package app.gmaaps.core.nssdk.localmodel.treatment
 
 class CreateUpdateResponse(
     val response: Int,

@@ -1,4 +1,4 @@
-package app.aaps.ui.widget.glance
+﻿package app.gmaaps.ui.widget.glance
 
 import android.content.Context
 import androidx.annotation.DrawableRes
@@ -38,9 +38,9 @@ import androidx.glance.text.TextAlign
 import androidx.glance.text.TextDecoration
 import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
-import app.aaps.core.interfaces.configuration.awaitInitialized
-import app.aaps.core.ui.compose.DarkGeneralColors
-import app.aaps.core.ui.compose.navigation.DarkElementColors
+import app.gmaaps.core.interfaces.configuration.awaitInitialized
+import app.gmaaps.core.ui.compose.DarkGeneralColors
+import app.gmaaps.core.ui.compose.navigation.DarkElementColors
 
 class AapsGlanceWidget : GlanceAppWidget() {
 
@@ -317,3 +317,4 @@ private fun LoadingContent() {
         )
     }
 }
+

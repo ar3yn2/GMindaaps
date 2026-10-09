@@ -1,14 +1,14 @@
-package app.aaps.pump.equil
+﻿package app.gmaaps.pump.equil
 
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.pump.equil.driver.definition.ActivationProgress
-import app.aaps.pump.equil.manager.EquilManager
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.pump.equil.driver.definition.ActivationProgress
+import app.gmaaps.pump.equil.manager.EquilManager
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.flow.MutableStateFlow
 import org.joda.time.DateTime
 import org.joda.time.Duration

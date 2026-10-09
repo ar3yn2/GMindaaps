@@ -1,4 +1,4 @@
-package app.aaps.plugins.aps.compose
+﻿package app.gmaaps.plugins.aps.compose
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
@@ -31,10 +31,10 @@ import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsCard
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.aps.ApsStrings
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsCard
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.aps.ApsStrings
 
 @Composable
 fun OpenAPSScreen(
@@ -219,3 +219,4 @@ private fun KeyValueRowItem(row: KeyValueRow) {
         }
     }
 }
+

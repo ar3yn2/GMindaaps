@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.response
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.response
 
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
-import app.aaps.pump.omnipod.common.bledriver.pod.response.ResponseType.ActivationResponseType
-import app.aaps.pump.omnipod.common.bledriver.pod.util.byValue
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.ResponseType.ActivationResponseType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.byValue
 import java.nio.ByteBuffer
 
 class SetUniqueIdResponse(
@@ -89,3 +89,4 @@ class SetUniqueIdResponse(
             '}'
     }
 }
+

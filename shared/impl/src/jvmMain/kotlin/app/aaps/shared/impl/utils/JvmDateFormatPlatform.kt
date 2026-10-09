@@ -1,6 +1,6 @@
-package app.aaps.shared.impl.utils
+﻿package app.gmaaps.shared.impl.utils
 
-import app.aaps.core.interfaces.utils.usesTwelveHourClock
+import app.gmaaps.core.interfaces.utils.usesTwelveHourClock
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.time.ZoneId
@@ -45,3 +45,4 @@ class JvmDateFormatPlatform : DateFormatPlatform {
     override fun standardUtcOffsetMillis(): Long =
         TimeZone.getTimeZone(ZoneId.systemDefault()).rawOffset.toLong()
 }
+

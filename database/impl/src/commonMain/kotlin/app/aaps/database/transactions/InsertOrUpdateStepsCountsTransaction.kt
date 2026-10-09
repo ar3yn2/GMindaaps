@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.StepsCount
+import app.gmaaps.database.entities.StepsCount
 
 /**
  * Batch variant of [InsertOrUpdateStepsCountTransaction]. Runs all inserts/updates inside
@@ -27,3 +27,4 @@ class InsertOrUpdateStepsCountsTransaction(private val stepsCounts: List<StepsCo
 
     data class TransactionResult(val inserted: List<StepsCount>, val updated: List<StepsCount>)
 }
+

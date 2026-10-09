@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -17,3 +17,4 @@ internal fun ErrorDialogPreview() {
         )
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.IntNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntNonPreferenceKey
 
 private const val LOCAL_PROFILE = "LocalProfile"
 
@@ -11,3 +11,4 @@ enum class ProfileIntKey(
 
     AmountOfProfiles(LOCAL_PROFILE + "_profiles", 0),
 }
+

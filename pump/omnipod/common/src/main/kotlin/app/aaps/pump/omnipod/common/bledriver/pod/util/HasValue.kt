@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.util
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.util
 
 interface HasValue {
 
@@ -8,3 +8,4 @@ interface HasValue {
 inline fun <reified T> byValue(value: Byte, default: T): T where T : Enum<T>, T : HasValue {
     return enumValues<T>().firstOrNull { it.value == value } ?: default
 }
+

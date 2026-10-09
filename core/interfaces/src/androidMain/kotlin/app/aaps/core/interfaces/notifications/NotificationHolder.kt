@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
 import android.app.Notification
 import android.app.PendingIntent

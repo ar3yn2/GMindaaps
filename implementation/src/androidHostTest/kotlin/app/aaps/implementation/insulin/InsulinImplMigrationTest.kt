@@ -1,20 +1,20 @@
-package app.aaps.implementation.insulin
+﻿package app.gmaaps.implementation.insulin
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.InsulinManager.UpdateResult
-import app.aaps.core.interfaces.insulin.InsulinType
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.utils.HardLimits
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.InsulinManager.UpdateResult
+import app.gmaaps.core.interfaces.insulin.InsulinType
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.utils.HardLimits
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -358,3 +358,4 @@ class InsulinImplMigrationTest : TestBase() {
     // "Which insulin is in use" is no longer answerable from here — it belongs to the running profile and is
     // covered by ProfileFunctionImplTest. This class only owns the catalogue.
 }
+

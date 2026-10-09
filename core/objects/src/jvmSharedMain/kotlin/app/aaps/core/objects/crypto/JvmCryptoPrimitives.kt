@@ -1,6 +1,6 @@
-package app.aaps.core.objects.crypto
+﻿package app.gmaaps.core.objects.crypto
 
-import app.aaps.core.utils.toHex
+import app.gmaaps.core.utils.toHex
 import java.security.MessageDigest
 import java.security.SecureRandom
 import javax.crypto.Cipher
@@ -55,3 +55,4 @@ class JvmCryptoPrimitives : CryptoPrimitives {
 
     override fun randomBytes(length: Int): ByteArray = ByteArray(length).also { secureRandom.nextBytes(it) }
 }
+

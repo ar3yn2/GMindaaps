@@ -1,12 +1,12 @@
-package app.aaps.wear.complications
+﻿package app.gmaaps.wear.complications
 
 import android.app.PendingIntent
 import android.content.Intent
 import androidx.wear.watchface.complications.data.ComplicationType
 import androidx.wear.watchface.complications.data.MonochromaticImageComplicationData
 import androidx.wear.watchface.complications.data.SmallImageComplicationData
-import app.aaps.core.interfaces.rx.weardata.LoopStatusData
-import app.aaps.wear.AAPSLoggerTest
+import app.gmaaps.core.interfaces.rx.weardata.LoopStatusData
+import app.gmaaps.wear.AAPSLoggerTest
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -86,3 +86,4 @@ internal class RunningModeComplicationTest {
         assertThat(sut().getProviderCanonicalName()).contains("RunningModeComplication")
     }
 }
+

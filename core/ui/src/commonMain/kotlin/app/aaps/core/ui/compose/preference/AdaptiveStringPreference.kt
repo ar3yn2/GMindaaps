@@ -1,8 +1,8 @@
-/*
+﻿/*
  * Adaptive String Preference for Jetpack Compose
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardActions
@@ -12,12 +12,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.TextFieldValue
-import app.aaps.core.keys.interfaces.StringPreferenceKey
-import app.aaps.core.keys.interfaces.StringValidator
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.keys.interfaces.StringPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringValidator
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Composable string preference for use inside card sections.
@@ -124,3 +124,4 @@ private fun ValidatedTextField(
         supportingText = errorMessage?.let { { Text(it) } }
     )
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.profileHelper
+﻿package app.gmaaps.ui.compose.profileHelper
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -10,9 +10,9 @@ import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.core.interfaces.resources.TextRefIdRegistry
-import app.aaps.ui.R
-import app.aaps.ui.UiStringIds
+import app.gmaaps.core.interfaces.resources.TextRefIdRegistry
+import app.gmaaps.ui.R
+import app.gmaaps.ui.UiStringIds
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
@@ -22,7 +22,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Robolectric composable test for the bottom action and the comparison tab of
@@ -150,3 +150,4 @@ class ProfileHelperCloneActionTest {
         compose.onNodeWithText("COMPARISON").assertDoesNotExist()
     }
 }
+

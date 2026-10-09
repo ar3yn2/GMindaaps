@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.openhumans.delegates
+﻿package app.gmaaps.plugins.sync.openhumans.delegates
 
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.sync.di.OpenHumansScope
-import app.aaps.plugins.sync.openhumans.OpenHumansState
-import app.aaps.plugins.sync.openhumans.keys.OhLongKey
-import app.aaps.plugins.sync.openhumans.keys.OhStringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.sync.di.OpenHumansScope
+import app.gmaaps.plugins.sync.openhumans.OpenHumansState
+import app.gmaaps.plugins.sync.openhumans.keys.OhLongKey
+import app.gmaaps.plugins.sync.openhumans.keys.OhStringKey
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
 import kotlinx.coroutines.flow.MutableStateFlow

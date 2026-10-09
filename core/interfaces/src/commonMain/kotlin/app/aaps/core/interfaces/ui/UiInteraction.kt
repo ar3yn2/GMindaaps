@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.ui
+﻿package app.gmaaps.core.interfaces.ui
 
-import app.aaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.AlarmSound
 import kotlin.reflect.KClass
 
 /**
@@ -30,3 +30,4 @@ interface UiInteraction {
      */
     fun stopAlarm(reason: String)
 }
+

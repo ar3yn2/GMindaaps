@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.protection.SecureEncrypt
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.nssdk.localmodel.clientcontrol.ClientState
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.protection.SecureEncrypt
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.ClientState
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -193,3 +193,4 @@ internal class AuthorizedClientsRepositoryTest {
         assertThat(stored).isEqualTo(before)
     }
 }
+

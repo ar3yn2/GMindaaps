@@ -1,4 +1,4 @@
-package app.aaps.plugins.calibration.compose
+﻿package app.gmaaps.plugins.calibration.compose
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -38,20 +38,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsCard
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.navigation.LocalPluginNavigationRequest
-import app.aaps.core.ui.compose.navigation.NavigationRequest
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.calibration.CalibrationStrings
-import app.aaps.plugins.calibration.FitMode
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsCard
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.navigation.LocalPluginNavigationRequest
+import app.gmaaps.core.ui.compose.navigation.NavigationRequest
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.calibration.CalibrationStrings
+import app.gmaaps.plugins.calibration.FitMode
 import kotlin.math.roundToInt
 
 @Composable
@@ -419,3 +419,4 @@ private fun EntryRow(
         }
     }
 }
+

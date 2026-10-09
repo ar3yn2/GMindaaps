@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.sync
+﻿package app.gmaaps.core.interfaces.sync
 
-import app.aaps.core.interfaces.nsclient.NSAlarm
+import app.gmaaps.core.interfaces.nsclient.NSAlarm
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

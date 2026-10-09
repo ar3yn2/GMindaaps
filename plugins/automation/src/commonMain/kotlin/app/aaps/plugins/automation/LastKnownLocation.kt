@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 /**
  * The last position the phone reported.
@@ -22,3 +22,4 @@ interface LastKnownLocation {
 
 /** A point on the map, in degrees. */
 data class GeoPosition(val latitude: Double, val longitude: Double)
+

@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.data.repository
+﻿package app.gmaaps.pump.carelevo.data.repository
 
-import app.aaps.pump.carelevo.data.dataSource.local.CarelevoUserSettingInfoDataSource
-import app.aaps.pump.carelevo.data.model.entities.CarelevoUserSettingInfoEntity
-import app.aaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
+import app.gmaaps.pump.carelevo.data.dataSource.local.CarelevoUserSettingInfoDataSource
+import app.gmaaps.pump.carelevo.data.model.entities.CarelevoUserSettingInfoEntity
+import app.gmaaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Observable
 import org.junit.jupiter.api.BeforeEach
@@ -113,3 +113,4 @@ internal class CarelevoUserSettingInfoRepositoryImplTest {
         verify(dataSource).deleteUserSettingInfo()
     }
 }
+

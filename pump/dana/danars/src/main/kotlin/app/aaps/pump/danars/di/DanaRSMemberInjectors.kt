@@ -1,7 +1,7 @@
-package app.aaps.pump.danars.di
+﻿package app.gmaaps.pump.danars.di
 
-import app.aaps.core.interfaces.di.FeatureMemberInjectors
-import app.aaps.pump.danars.services.DanaRSService
+import app.gmaaps.core.interfaces.di.FeatureMemberInjectors
+import app.gmaaps.pump.danars.services.DanaRSService
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ClassKey
@@ -27,3 +27,4 @@ object DanaRSMemberInjectors {
     @ClassKey(DanaRSService::class)
     fun bindDanaRSService(injector: MembersInjector<DanaRSService>): MembersInjector<*> = injector
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.HR
-import app.aaps.core.data.model.IDs
+import app.gmaaps.core.data.model.HR
+import app.gmaaps.core.data.model.IDs
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -88,3 +88,4 @@ internal class HeartRateExtensionTest {
         assertEquals(entity, back)
     }
 }
+

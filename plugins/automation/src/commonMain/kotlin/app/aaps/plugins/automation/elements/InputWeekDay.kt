@@ -1,5 +1,6 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
-import app.aaps.core.ui.elements.WeekDay
+import app.gmaaps.core.ui.elements.WeekDay
 
 class InputWeekDay : WeekDay()
+

@@ -1,10 +1,10 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.localmodel.ApiPermission
-import app.aaps.core.nssdk.localmodel.ApiPermissions
-import app.aaps.core.nssdk.remotemodel.RemoteApiPermission
-import app.aaps.core.nssdk.remotemodel.RemoteApiPermissions
-import app.aaps.core.nssdk.remotemodel.read
+import app.gmaaps.core.nssdk.localmodel.ApiPermission
+import app.gmaaps.core.nssdk.localmodel.ApiPermissions
+import app.gmaaps.core.nssdk.remotemodel.RemoteApiPermission
+import app.gmaaps.core.nssdk.remotemodel.RemoteApiPermissions
+import app.gmaaps.core.nssdk.remotemodel.read
 
 internal fun RemoteApiPermissions.toLocal(): ApiPermissions =
     ApiPermissions(
@@ -30,3 +30,4 @@ internal val RemoteApiPermission.update: Boolean
 
 internal val RemoteApiPermission.delete: Boolean
     get() = this.contains('d')
+

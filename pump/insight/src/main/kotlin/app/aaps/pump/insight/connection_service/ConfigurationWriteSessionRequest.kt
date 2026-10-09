@@ -1,8 +1,8 @@
-package app.aaps.pump.insight.connection_service
+﻿package app.gmaaps.pump.insight.connection_service
 
-import app.aaps.pump.insight.app_layer.configuration.CloseConfigurationWriteSessionMessage
-import app.aaps.pump.insight.app_layer.configuration.OpenConfigurationWriteSessionMessage
-import app.aaps.pump.insight.app_layer.configuration.WriteConfigurationBlockMessage
+import app.gmaaps.pump.insight.app_layer.configuration.CloseConfigurationWriteSessionMessage
+import app.gmaaps.pump.insight.app_layer.configuration.OpenConfigurationWriteSessionMessage
+import app.gmaaps.pump.insight.app_layer.configuration.WriteConfigurationBlockMessage
 
 /**
  * Several configuration blocks written inside ONE write session.
@@ -27,3 +27,4 @@ class ConfigurationWriteSessionRequest(
         closeRequest.await()
     }
 }
+

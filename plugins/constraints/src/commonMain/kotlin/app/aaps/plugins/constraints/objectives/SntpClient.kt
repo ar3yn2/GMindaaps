@@ -1,4 +1,4 @@
-package app.aaps.plugins.constraints.objectives
+﻿package app.gmaaps.plugins.constraints.objectives
 
 /**
  * Asks a time server what the time really is, so an objective can check the device clock.
@@ -41,3 +41,4 @@ interface SntpClient {
         val time: Long
     )
 }
+

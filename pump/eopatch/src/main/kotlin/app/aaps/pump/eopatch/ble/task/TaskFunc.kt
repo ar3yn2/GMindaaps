@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
 enum class TaskFunc {
     START_BOND,
@@ -29,3 +29,4 @@ enum class TaskFunc {
     INFO_REMINDER,
     INTERNAL_SUSPEND
 }
+

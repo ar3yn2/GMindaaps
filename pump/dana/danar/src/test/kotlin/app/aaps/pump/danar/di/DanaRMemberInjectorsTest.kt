@@ -1,7 +1,7 @@
-package app.aaps.pump.danar.di
+﻿package app.gmaaps.pump.danar.di
 
-import app.aaps.pump.danar.comm.MessageBase
-import app.aaps.shared.tests.missingMemberInjectorEntries
+import app.gmaaps.pump.danar.comm.MessageBase
+import app.gmaaps.shared.tests.missingMemberInjectorEntries
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -23,3 +23,4 @@ class DanaRMemberInjectorsTest {
         assertThat(missing).isEmpty()
     }
 }
+

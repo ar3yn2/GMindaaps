@@ -1,4 +1,4 @@
-package app.aaps.implementation.protection
+﻿package app.gmaaps.implementation.protection
 
 import androidx.biometric.BiometricPrompt
 import androidx.biometric.BiometricPrompt.AuthenticationResult
@@ -18,12 +18,12 @@ import androidx.biometric.BiometricPrompt.ERROR_VENDOR
 import androidx.biometric.BiometricPrompt.PromptInfo
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
-import app.aaps.core.interfaces.protection.PasswordCheck
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.keys.StringKey
-import app.aaps.core.ui.R
-import app.aaps.core.ui.extensions.runOnUiThread
+import app.gmaaps.core.interfaces.protection.PasswordCheck
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.ui.R
+import app.gmaaps.core.ui.extensions.runOnUiThread
 
 object BiometricCheck {
 

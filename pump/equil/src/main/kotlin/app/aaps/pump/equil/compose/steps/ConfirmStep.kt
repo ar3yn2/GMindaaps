@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.compose.steps
+﻿package app.gmaaps.pump.equil.compose.steps
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -9,13 +9,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.banner.ErrorBanner
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.equil.R
-import app.aaps.pump.equil.compose.EquilWizardStep
-import app.aaps.pump.equil.compose.EquilWizardViewModel
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.banner.ErrorBanner
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.equil.R
+import app.gmaaps.pump.equil.compose.EquilWizardStep
+import app.gmaaps.pump.equil.compose.EquilWizardViewModel
 
 @Composable
 internal fun ConfirmStep(
@@ -50,12 +50,12 @@ internal fun ConfirmStepContent(
 ) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.finish),
+            text = stringResource(app.gmaaps.core.ui.R.string.finish),
             onClick = onFinish,
             loading = isLoading
         ),
         secondaryButton = if (!isLoading) WizardButton(
-            text = stringResource(if (onBack != null) app.aaps.core.ui.R.string.back else app.aaps.core.ui.R.string.cancel),
+            text = stringResource(if (onBack != null) app.gmaaps.core.ui.R.string.back else app.gmaaps.core.ui.R.string.cancel),
             onClick = onBack ?: onCancel
         ) else null
     ) {
@@ -70,3 +70,4 @@ internal fun ConfirmStepContent(
         }
     }
 }
+

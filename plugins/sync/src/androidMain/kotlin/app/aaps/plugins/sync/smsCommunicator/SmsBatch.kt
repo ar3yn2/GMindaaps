@@ -1,8 +1,8 @@
-package app.aaps.plugins.sync.smsCommunicator
+﻿package app.gmaaps.plugins.sync.smsCommunicator
 
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.bolus.BatchAction
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.bolus.BatchAction
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
 import kotlinx.coroutines.CompletableDeferred
 
 /**
@@ -66,3 +66,4 @@ suspend fun WizardBolusExecutor.runSmsBatch(actions: List<BatchAction>, waitForD
     val doseFailure = if (waitForDose) doseOutcome.await() else failure
     return if (doseFailure == null) SmsBatchResult.Done(prepared) else SmsBatchResult.Failed(doseFailure.comment)
 }
+

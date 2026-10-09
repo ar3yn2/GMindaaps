@@ -1,21 +1,21 @@
-package app.aaps.pump.danars.compose
+﻿package app.gmaaps.pump.danars.compose
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.ble.BleAdapter
-import app.aaps.core.interfaces.pump.ble.BleScanner
-import app.aaps.core.interfaces.pump.ble.BleTransport
-import app.aaps.core.interfaces.pump.ble.BondState
-import app.aaps.core.interfaces.pump.ble.PairingState
-import app.aaps.core.interfaces.pump.ble.PairingStep
-import app.aaps.core.interfaces.pump.ble.ScannedDevice
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danars.DanaRSPlugin
-import app.aaps.pump.danars.services.BLEComm
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.ble.BleAdapter
+import app.gmaaps.core.interfaces.pump.ble.BleScanner
+import app.gmaaps.core.interfaces.pump.ble.BleTransport
+import app.gmaaps.core.interfaces.pump.ble.BondState
+import app.gmaaps.core.interfaces.pump.ble.PairingState
+import app.gmaaps.core.interfaces.pump.ble.PairingStep
+import app.gmaaps.core.interfaces.pump.ble.ScannedDevice
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danars.DanaRSPlugin
+import app.gmaaps.pump.danars.services.BLEComm
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -378,3 +378,4 @@ internal class DanaRSPairWizardViewModelTest {
         runCurrent()
     }
 }
+

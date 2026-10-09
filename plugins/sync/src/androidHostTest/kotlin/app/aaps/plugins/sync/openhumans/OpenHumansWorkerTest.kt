@@ -1,8 +1,8 @@
-package app.aaps.plugins.sync.openhumans
+﻿package app.gmaaps.plugins.sync.openhumans
 
 import androidx.work.ListenableWorker
 import androidx.work.WorkerParameters
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
@@ -35,3 +35,4 @@ class OpenHumansWorkerTest : TestBaseWithProfile() {
         assertIs<ListenableWorker.Result.Failure>(result)
     }
 }
+

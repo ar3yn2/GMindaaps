@@ -1,4 +1,4 @@
-package app.aaps.implementation.notifications
+﻿package app.gmaaps.implementation.notifications
 
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
@@ -12,19 +12,19 @@ import android.media.AudioManager
 import android.media.RingtoneManager
 import android.os.Build
 import androidx.core.app.NotificationCompat
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AapsNotification
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.AlarmSoundPlayer
-import app.aaps.core.interfaces.notifications.NotificationHolder
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.notifications.SystemNotificationPlatform
-import app.aaps.core.interfaces.ui.IconsProvider
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.implementation.androidNotification.AlarmNotificationManager
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AapsNotification
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.AlarmSoundPlayer
+import app.gmaaps.core.interfaces.notifications.NotificationHolder
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.notifications.SystemNotificationPlatform
+import app.gmaaps.core.interfaces.ui.IconsProvider
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.implementation.androidNotification.AlarmNotificationManager
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -198,3 +198,4 @@ class AndroidSystemNotificationPlatform(
         const val EXTRA_INSTANCE_KEY = "instanceKey"
     }
 }
+

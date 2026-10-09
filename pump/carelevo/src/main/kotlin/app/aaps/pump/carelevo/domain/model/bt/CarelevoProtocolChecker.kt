@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.domain.model.bt
+﻿package app.gmaaps.pump.carelevo.domain.model.bt
 
 internal fun isPatchProtocol(command: Int) = when (command) {
     0x11 -> true

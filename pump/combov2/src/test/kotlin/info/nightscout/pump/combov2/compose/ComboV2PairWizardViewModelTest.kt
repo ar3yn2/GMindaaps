@@ -1,7 +1,7 @@
-package info.nightscout.pump.combov2.compose
+﻿package info.nightscout.pump.combov2.compose
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.resources.ResourceHelper
 import com.google.common.truth.Truth.assertThat
 import info.nightscout.comboctl.base.PAIRING_PIN_SIZE
 import info.nightscout.comboctl.base.ProgressReport
@@ -79,3 +79,4 @@ internal class ComboV2PairWizardViewModelTest {
         assertThat(sut.submitPin()).isTrue()
     }
 }
+

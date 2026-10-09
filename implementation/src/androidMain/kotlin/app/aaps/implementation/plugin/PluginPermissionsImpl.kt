@@ -1,4 +1,4 @@
-package app.aaps.implementation.plugin
+﻿package app.gmaaps.implementation.plugin
 
 import android.Manifest
 import android.app.AlarmManager
@@ -10,15 +10,15 @@ import android.os.PowerManager
 import android.provider.Settings
 import android.text.TextUtils
 import androidx.core.content.ContextCompat
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.PermissionGroup
-import app.aaps.core.interfaces.plugin.PermissionProvider
-import app.aaps.core.interfaces.plugin.PluginPermissions
-import app.aaps.core.interfaces.plugin.missingPermissions
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.implementation.R
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.PermissionGroup
+import app.gmaaps.core.interfaces.plugin.PermissionProvider
+import app.gmaaps.core.interfaces.plugin.PluginPermissions
+import app.gmaaps.core.interfaces.plugin.missingPermissions
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.implementation.R
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -54,10 +54,10 @@ class PluginPermissionsImpl(
     companion object {
 
         /** Custom identifier for the AAPS directory selection requirement. */
-        const val PERMISSION_SELECT_DIRECTORY = "app.aaps.permission.SELECT_DIRECTORY"
+        const val PERMISSION_SELECT_DIRECTORY = "app.gmaaps.permission.SELECT_DIRECTORY"
 
         /** Custom identifier for notification listener access. */
-        const val PERMISSION_NOTIFICATION_LISTENER = "app.aaps.permission.NOTIFICATION_LISTENER"
+        const val PERMISSION_NOTIFICATION_LISTENER = "app.gmaaps.permission.NOTIFICATION_LISTENER"
 
         private fun isNotificationListenerEnabled(context: Context): Boolean {
             val flat = Settings.Secure.getString(context.contentResolver, "enabled_notification_listeners")
@@ -178,3 +178,4 @@ class PluginPermissionsImpl(
             permissionProviders().flatMap { it.requiredPermissions() })
             .distinctBy { it.permissions.toSet() }
 }
+

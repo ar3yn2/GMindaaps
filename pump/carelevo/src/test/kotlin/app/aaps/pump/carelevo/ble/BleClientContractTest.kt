@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.ble
+﻿package app.gmaaps.pump.carelevo.ble
 
-import app.aaps.pump.carelevo.ble.gatt.FakeGattConnection
-import app.aaps.pump.carelevo.ble.gatt.GattConnState
-import app.aaps.pump.carelevo.ble.gatt.GattWriteException
+import app.gmaaps.pump.carelevo.ble.gatt.FakeGattConnection
+import app.gmaaps.pump.carelevo.ble.gatt.GattConnState
+import app.gmaaps.pump.carelevo.ble.gatt.GattWriteException
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.TimeoutCancellationException
@@ -298,3 +298,4 @@ internal class BleClientContractTest {
             correlationByte = correlationByte
         )
 }
+

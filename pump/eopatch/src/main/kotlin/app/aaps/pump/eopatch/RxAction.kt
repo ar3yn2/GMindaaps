@@ -1,10 +1,10 @@
-@file:Suppress("unused")
+﻿@file:Suppress("unused")
 
-package app.aaps.pump.eopatch
+package app.gmaaps.pump.eopatch
 
 import android.os.SystemClock
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -58,3 +58,4 @@ class RxAction(
                        })
     }
 }
+

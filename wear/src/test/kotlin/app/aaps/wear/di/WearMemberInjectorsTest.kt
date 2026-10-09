@@ -1,4 +1,4 @@
-package app.aaps.wear.di
+﻿package app.gmaaps.wear.di
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
@@ -67,3 +67,4 @@ class WearMemberInjectorsTest {
         val DECLARES_CLASS = Regex("""^(?:\s*)(?:open\s+|abstract\s+|internal\s+|sealed\s+)*class\s+(\w+)""", RegexOption.MULTILINE)
     }
 }
+

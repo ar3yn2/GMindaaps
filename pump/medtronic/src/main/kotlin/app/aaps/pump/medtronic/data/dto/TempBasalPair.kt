@@ -1,10 +1,10 @@
-package app.aaps.pump.medtronic.data.dto
+﻿package app.gmaaps.pump.medtronic.data.dto
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.pump.common.defs.TempBasalPair
-import app.aaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.pump.common.defs.TempBasalPair
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
 import java.util.Locale
 
 /**

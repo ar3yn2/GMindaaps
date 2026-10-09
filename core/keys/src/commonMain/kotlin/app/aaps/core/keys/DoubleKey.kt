@@ -1,11 +1,11 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.DoublePreferenceKey
-import app.aaps.core.keys.interfaces.SyncChannel
-import app.aaps.core.keys.interfaces.SyncDirection
-import app.aaps.core.keys.interfaces.SyncSpec
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.DoublePreferenceKey
+import app.gmaaps.core.keys.interfaces.SyncChannel
+import app.gmaaps.core.keys.interfaces.SyncDirection
+import app.gmaaps.core.keys.interfaces.SyncSpec
+import app.gmaaps.core.keys.interfaces.TextRef
 
 enum class DoubleKey(
     override val key: String,
@@ -343,3 +343,4 @@ enum class DoubleKey(
     ;
 
 }
+

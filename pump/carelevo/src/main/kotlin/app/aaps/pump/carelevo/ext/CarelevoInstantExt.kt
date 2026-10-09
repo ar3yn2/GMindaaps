@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.ext
+﻿package app.gmaaps.pump.carelevo.ext
 
-import app.aaps.core.data.datetime.parseIsoToEpochMillisOrNull
+import app.gmaaps.core.data.datetime.parseIsoToEpochMillisOrNull
 import kotlin.time.Instant
 
 /**
@@ -20,3 +20,4 @@ internal fun parseIsoInstant(text: String): Instant =
     parseIsoToEpochMillisOrNull(text)
         ?.let { Instant.fromEpochMilliseconds(it) }
         ?: throw IllegalArgumentException("not an ISO 8601 date-time: $text")
+

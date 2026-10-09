@@ -1,7 +1,7 @@
-package app.aaps.shared.impl.sharedPreferences
+﻿package app.gmaaps.shared.impl.sharedPreferences
 
 import android.content.Context
-import app.aaps.shared.impl.SharedPreferencesMock
+import app.gmaaps.shared.impl.SharedPreferencesMock
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -153,3 +153,4 @@ class SPImplTest {
         assertThat(sut.getLong(someResource, 1L)).isEqualTo(1L)
     }
 }
+

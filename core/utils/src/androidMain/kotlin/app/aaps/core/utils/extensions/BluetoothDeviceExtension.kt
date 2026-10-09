@@ -1,4 +1,4 @@
-package app.aaps.core.utils.extensions
+﻿package app.gmaaps.core.utils.extensions
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothDevice
@@ -30,3 +30,4 @@ fun BluetoothDevice.connectGattCompat(
     callback: BluetoothGattCallback,
     transport: Int = BluetoothDevice.TRANSPORT_AUTO
 ): BluetoothGatt? = connectGatt(context, autoConnect, callback, transport)
+

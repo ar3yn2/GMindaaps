@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.utils
+﻿package app.gmaaps.core.interfaces.utils
 
 object SafeParse {
 

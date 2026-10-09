@@ -1,6 +1,6 @@
-package app.aaps.pump.dana.keys
+﻿package app.gmaaps.pump.dana.keys
 
-import app.aaps.core.keys.interfaces.IntNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntNonPreferenceKey
 
 enum class DanaIntNonKey(
     override val key: String,
@@ -9,3 +9,4 @@ enum class DanaIntNonKey(
 
     Password("danar_password", 0),
 }
+

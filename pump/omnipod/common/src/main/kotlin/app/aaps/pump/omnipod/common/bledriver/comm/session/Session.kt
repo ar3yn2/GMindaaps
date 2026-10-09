@@ -1,21 +1,21 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.session
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.Ids
-import app.aaps.pump.omnipod.common.bledriver.comm.endecrypt.EnDecrypt
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.CouldNotParseResponseException
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageIO
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessagePacket
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageSendErrorConfirming
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageSendErrorSending
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageSendSuccess
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageType
-import app.aaps.pump.omnipod.common.bledriver.comm.message.StringLengthPrefixEncoding
-import app.aaps.pump.omnipod.common.bledriver.comm.message.StringLengthPrefixEncoding.Companion.parseKeys
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.Command
-import app.aaps.pump.omnipod.common.bledriver.pod.response.Response
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.Ids
+import app.gmaaps.pump.omnipod.common.bledriver.comm.endecrypt.EnDecrypt
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.CouldNotParseResponseException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageIO
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessagePacket
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageSendErrorConfirming
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageSendErrorSending
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageSendSuccess
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageType
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.StringLengthPrefixEncoding
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.StringLengthPrefixEncoding.Companion.parseKeys
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.Command
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.Response
 
 sealed class CommandSendResult
 object CommandSendSuccess : CommandSendResult()
@@ -166,3 +166,4 @@ class Session(
         private const val MAX_TRIES = 4
     }
 }
+

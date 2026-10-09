@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.compose.compiler)
     id("android-module-dependencies")
@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "app.aaps.pump.omnipod.common"
+    namespace = "app.gmaaps.pump.omnipod.common"
 }
 
 dependencies {
@@ -24,3 +24,4 @@ dependencies {
     testImplementation(project(":shared:tests"))
 
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.plugins.configuration.setupwizard.elements
+﻿package app.gmaaps.plugins.configuration.setupwizard.elements
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -12,20 +12,20 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.protection.PasswordCheck
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.ConfigPluginCard
-import app.aaps.core.ui.compose.ConfigPluginUiModel
-import app.aaps.core.ui.compose.SelectionMode
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.protection.PasswordCheck
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.ConfigPluginCard
+import app.gmaaps.core.ui.compose.ConfigPluginUiModel
+import app.gmaaps.core.ui.compose.SelectionMode
+import app.gmaaps.core.ui.compose.stringResource
 import dev.zacsweers.metro.Inject
 
 @Inject
@@ -130,3 +130,4 @@ class SWPlugin(
 
     private fun isMultiSelect(type: PluginType): Boolean = !type.singleSelect
 }
+

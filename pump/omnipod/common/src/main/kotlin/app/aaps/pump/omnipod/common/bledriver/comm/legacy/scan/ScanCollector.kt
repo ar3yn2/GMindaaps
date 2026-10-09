@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.legacy.scan
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.scan
 
 import android.bluetooth.le.ScanCallback
 import android.bluetooth.le.ScanResult
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.ScanException
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.ScanException
 import java.util.Collections
 import java.util.concurrent.ConcurrentHashMap
 
@@ -47,3 +47,4 @@ class ScanCollector(private val logger: AAPSLogger, private val podID: Long) : S
         return Collections.unmodifiableList(ret)
     }
 }
+

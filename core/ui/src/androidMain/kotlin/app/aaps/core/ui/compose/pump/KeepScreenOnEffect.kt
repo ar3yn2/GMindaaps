@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 import android.content.pm.ActivityInfo
 import android.view.WindowManager
@@ -27,3 +27,4 @@ fun KeepScreenOnEffect() {
         }
     }
 }
+

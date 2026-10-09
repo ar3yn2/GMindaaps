@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.utils
+﻿package app.gmaaps.core.interfaces.utils
 
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 
 interface HardLimits {
     companion object {

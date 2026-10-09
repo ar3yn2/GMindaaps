@@ -1,6 +1,6 @@
-package app.aaps.pump.medtrum.keys
+﻿package app.gmaaps.pump.medtrum.keys
 
-import app.aaps.core.keys.interfaces.DoubleNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.DoubleNonPreferenceKey
 
 enum class MedtrumDoubleNonKey(
     override val key: String,
@@ -10,3 +10,4 @@ enum class MedtrumDoubleNonKey(
     LastBolusAmount("last_bolus_amount", 0.0),
     BolusAmountToBeDelivered("bolus_amount_to_be_delivered", 0.0),
 }
+

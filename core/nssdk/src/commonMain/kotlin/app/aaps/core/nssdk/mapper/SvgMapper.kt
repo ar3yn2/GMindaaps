@@ -1,10 +1,10 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.localmodel.entry.Direction
-import app.aaps.core.nssdk.localmodel.entry.NSSgvV3
-import app.aaps.core.nssdk.localmodel.entry.NsUnits
-import app.aaps.core.nssdk.nsSdkJson
-import app.aaps.core.nssdk.remotemodel.RemoteEntry
+import app.gmaaps.core.nssdk.localmodel.entry.Direction
+import app.gmaaps.core.nssdk.localmodel.entry.NSSgvV3
+import app.gmaaps.core.nssdk.localmodel.entry.NsUnits
+import app.gmaaps.core.nssdk.nsSdkJson
+import app.gmaaps.core.nssdk.remotemodel.RemoteEntry
 
 fun NSSgvV3.convertToRemoteAndBack(): NSSgvV3? =
     toRemoteEntry().toSgv()
@@ -58,4 +58,5 @@ internal fun NSSgvV3.toRemoteEntry(): RemoteEntry =
         unfiltered = this.unfiltered,
         units = this.units.value
     )
+
 

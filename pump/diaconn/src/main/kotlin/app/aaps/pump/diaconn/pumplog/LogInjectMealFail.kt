@@ -1,6 +1,6 @@
-package app.aaps.pump.diaconn.pumplog
+﻿package app.gmaaps.pump.diaconn.pumplog
 
-import app.aaps.pump.common.utils.and
+import app.gmaaps.pump.common.utils.and
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 

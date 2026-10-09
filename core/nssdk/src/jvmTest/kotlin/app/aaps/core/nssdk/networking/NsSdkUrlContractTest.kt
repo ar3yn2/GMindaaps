@@ -1,6 +1,6 @@
-package app.aaps.core.nssdk.networking
+﻿package app.gmaaps.core.nssdk.networking
 
-import app.aaps.core.nssdk.NSAndroidClientImpl
+import app.gmaaps.core.nssdk.NSAndroidClientImpl
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.runTest
@@ -184,3 +184,4 @@ class NsSdkUrlContractTest {
         assertThat(NsUrl.toBaseUrl("https://host.com")).isEqualTo("https://host.com/api/")
     }
 }
+

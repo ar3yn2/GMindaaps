@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action;
 
-import app.aaps.pump.omnipod.eros.driver.communication.action.service.PrimeService;
-import app.aaps.pump.omnipod.eros.driver.definition.ActivationProgress;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalActivationProgressException;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.pump.omnipod.eros.driver.communication.action.service.PrimeService;
+import app.gmaaps.pump.omnipod.eros.driver.definition.ActivationProgress;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalActivationProgressException;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
 
 public class PrimeAction implements OmnipodAction<Void> {
 
@@ -47,3 +47,4 @@ public class PrimeAction implements OmnipodAction<Void> {
         return null;
     }
 }
+

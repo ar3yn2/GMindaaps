@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.descriptors
+﻿package app.gmaaps.pump.insight.descriptors
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -58,3 +58,4 @@ class ParameterBlocksTest {
         assertThat(ids.toSet()).hasSize(ids.size)
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
 import java.util.Locale;
 
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
 
 public class IllegalResponseException extends OmnipodException {
     private final String actualClass;
@@ -23,3 +23,4 @@ public class IllegalResponseException extends OmnipodException {
         return expectedType;
     }
 }
+

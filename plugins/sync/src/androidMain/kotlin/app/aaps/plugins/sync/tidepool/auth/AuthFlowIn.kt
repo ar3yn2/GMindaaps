@@ -1,16 +1,16 @@
-package app.aaps.plugins.sync.tidepool.auth
+﻿package app.gmaaps.plugins.sync.tidepool.auth
 
 import android.content.Intent
 import android.os.Bundle
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.MetroAppCompatActivity
-import app.aaps.plugins.sync.tidepool.comm.TidepoolUploader
-import app.aaps.plugins.sync.tidepool.events.EventTidepoolStatus
-import app.aaps.plugins.sync.tidepool.keys.TidepoolStringNonKey
-import app.aaps.plugins.sync.tidepool.messages.AuthReplyMessage
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.MetroAppCompatActivity
+import app.gmaaps.plugins.sync.tidepool.comm.TidepoolUploader
+import app.gmaaps.plugins.sync.tidepool.events.EventTidepoolStatus
+import app.gmaaps.plugins.sync.tidepool.keys.TidepoolStringNonKey
+import app.gmaaps.plugins.sync.tidepool.messages.AuthReplyMessage
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

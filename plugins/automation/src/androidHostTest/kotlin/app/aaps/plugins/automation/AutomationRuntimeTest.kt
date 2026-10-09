@@ -1,22 +1,22 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import android.Manifest
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.alerts.ReminderScheduler
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.automation.AutomationEvent
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.location.LocationServiceController
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.plugins.automation.actions.Action
-import app.aaps.plugins.automation.triggers.TriggerConnector
-import app.aaps.plugins.automation.triggers.TriggerDeps
-import app.aaps.plugins.automation.triggers.TriggerFactory
-import app.aaps.plugins.automation.triggers.TriggerLocation
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.alerts.ReminderScheduler
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.automation.AutomationEvent
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.location.LocationServiceController
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.plugins.automation.actions.Action
+import app.gmaaps.plugins.automation.triggers.TriggerConnector
+import app.gmaaps.plugins.automation.triggers.TriggerDeps
+import app.gmaaps.plugins.automation.triggers.TriggerFactory
+import app.gmaaps.plugins.automation.triggers.TriggerLocation
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.launchIn
@@ -37,7 +37,7 @@ class AutomationRuntimeTest : TestBaseWithProfile() {
     /** Real English, so an unstubbed automation string fails instead of becoming its own name. */
     private val text = generatedTextResolver("automation" to AutomationStringsValues::textOf)
 
-@Mock lateinit var actionFactory: app.aaps.plugins.automation.actions.ActionFactory
+@Mock lateinit var actionFactory: app.gmaaps.plugins.automation.actions.ActionFactory
     private val triggerFactory: TriggerFactory by lazy {
         // A real provider, not a mock: a mocked Provider hands null to TriggerBTDevice.
         TriggerFactory(triggerDeps, { mock<BtConnectionSource>() }, sceneApi, receiverStatusStore)
@@ -175,3 +175,4 @@ class AutomationRuntimeTest : TestBaseWithProfile() {
         }
     }
 }
+

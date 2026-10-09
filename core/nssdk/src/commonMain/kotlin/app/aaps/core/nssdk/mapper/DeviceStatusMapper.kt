@@ -1,8 +1,8 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.localmodel.devicestatus.NSDeviceStatus
-import app.aaps.core.nssdk.nsSdkJson
-import app.aaps.core.nssdk.remotemodel.RemoteDeviceStatus
+import app.gmaaps.core.nssdk.localmodel.devicestatus.NSDeviceStatus
+import app.gmaaps.core.nssdk.nsSdkJson
+import app.gmaaps.core.nssdk.remotemodel.RemoteDeviceStatus
 
 fun NSDeviceStatus.convertToRemoteAndBack(): NSDeviceStatus =
     toRemoteDeviceStatus().toNSDeviceStatus()
@@ -79,3 +79,4 @@ internal fun NSDeviceStatus.OpenAps.toRemoteDeviceStatusOpenAps(): RemoteDeviceS
         enacted = enacted,
         iob = iob
     )
+

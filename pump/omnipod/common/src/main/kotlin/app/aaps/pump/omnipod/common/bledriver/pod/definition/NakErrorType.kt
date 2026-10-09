@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.definition
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.definition
 
-import app.aaps.pump.omnipod.common.bledriver.pod.util.HasValue
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.HasValue
 
 enum class NakErrorType(override val value: Byte) : HasValue {
 
@@ -35,3 +35,4 @@ enum class NakErrorType(override val value: Byte) : HasValue {
     INVALID_CRC(0x1d.toByte()),
     UNKNOWN(0xff.toByte());
 }
+

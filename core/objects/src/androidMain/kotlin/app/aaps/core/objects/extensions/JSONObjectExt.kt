@@ -1,12 +1,12 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.keys.interfaces.BooleanNonPreferenceKey
-import app.aaps.core.keys.interfaces.DoublePreferenceKey
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.LongPreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
-import app.aaps.core.keys.interfaces.UnitDoublePreferenceKey
+import app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.DoublePreferenceKey
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongPreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.UnitDoublePreferenceKey
 import org.json.JSONObject
 
 fun JSONObject.put(key: IntPreferenceKey, preferences: Preferences): JSONObject =
@@ -68,4 +68,5 @@ fun JSONObject.putIfThereIsValue(key: String, value: Double?): JSONObject =
 
 fun JSONObject.putIfThereIsValue(key: String, value: String?): JSONObject =
     this.also { if (value != null && value.isNotEmpty()) it.put(key, value) }
+
 

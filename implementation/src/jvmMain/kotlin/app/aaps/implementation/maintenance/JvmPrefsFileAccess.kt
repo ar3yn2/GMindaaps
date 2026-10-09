@@ -1,7 +1,7 @@
-package app.aaps.implementation.maintenance
+﻿package app.gmaaps.implementation.maintenance
 
-import app.aaps.implementation.maintenance.DesktopFolders.data
-import app.aaps.implementation.maintenance.DesktopFolders.root
+import app.gmaaps.implementation.maintenance.DesktopFolders.data
+import app.gmaaps.implementation.maintenance.DesktopFolders.root
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -138,3 +138,4 @@ object DesktopFolders {
      */
     val extra: File get() = File(root, "extra")
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.ios.shell
+﻿package app.gmaaps.ios.shell
 
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.format.NumberFormatPlatform
-import app.aaps.core.data.time.systemUtcOffsetAt
-import app.aaps.core.interfaces.concurrent.AapsLock
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.format.NumberFormatPlatform
+import app.gmaaps.core.data.time.systemUtcOffsetAt
+import app.gmaaps.core.interfaces.concurrent.AapsLock
 import kotlin.test.Test
 import kotlin.test.assertContains
 import kotlin.test.assertEquals
@@ -68,3 +68,4 @@ class PlatformActualTest {
         }
     }
 }
+

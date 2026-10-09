@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose.elements
+﻿package app.gmaaps.plugins.automation.compose.elements
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -7,7 +7,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.ui.elements.WeekDay
+import app.gmaaps.core.ui.elements.WeekDay
 
 @Preview(showBackground = true, widthDp = 360)
 @Composable
@@ -26,3 +26,4 @@ internal fun PreviewWeekdays() {
         InputWeekDayEditor(weekdays = wd, onChange = {})
     }
 }
+

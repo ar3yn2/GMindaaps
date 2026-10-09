@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateMapOf
@@ -113,3 +113,4 @@ fun rememberPreferenceSectionState(): PreferenceSectionState {
         PreferenceSectionState()
     }
 }
+

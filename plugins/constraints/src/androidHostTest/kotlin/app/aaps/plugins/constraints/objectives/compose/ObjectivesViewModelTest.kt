@@ -1,16 +1,16 @@
-package app.aaps.plugins.constraints.objectives.compose
+﻿package app.gmaaps.plugins.constraints.objectives.compose
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.constraints.objectives.ObjectivesPlugin
-import app.aaps.plugins.constraints.objectives.SntpClient
-import app.aaps.plugins.constraints.objectives.events.EventObjectivesUpdateGui
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.constraints.objectives.ObjectivesPlugin
+import app.gmaaps.plugins.constraints.objectives.SntpClient
+import app.gmaaps.plugins.constraints.objectives.events.EventObjectivesUpdateGui
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -97,3 +97,4 @@ internal class ObjectivesViewModelTest {
         assertThat(sut.snackbarMessage.value).isNull()
     }
 }
+

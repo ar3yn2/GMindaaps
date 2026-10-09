@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.ui.receiver
+﻿package app.gmaaps.pump.eopatch.ui.receiver
 
 import android.content.BroadcastReceiver
 import android.content.Context

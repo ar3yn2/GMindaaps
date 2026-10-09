@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo
+﻿package app.gmaaps.pump.carelevo
 
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.pump.carelevo.command.CmdTimeZoneUpdate
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.pump.carelevo.command.CmdTimeZoneUpdate
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Test
@@ -80,3 +80,4 @@ class CarelevoPumpPluginStatusTest : CarelevoPumpPluginTestBase() {
         }
     }
 }
+

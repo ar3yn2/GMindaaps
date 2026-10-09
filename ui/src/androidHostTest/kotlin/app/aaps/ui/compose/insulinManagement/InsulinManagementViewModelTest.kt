@@ -1,24 +1,24 @@
-package app.aaps.ui.compose.insulinManagement
+﻿package app.gmaaps.ui.compose.insulinManagement
 
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.interfaces.bolus.BatchExecutor
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.ConcentrationType
-import app.aaps.core.interfaces.insulin.InsulinManager
-import app.aaps.core.interfaces.insulin.InsulinManager.UpdateResult
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.profile.SingleProfile
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.HardLimits
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.interfaces.bolus.BatchExecutor
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.ConcentrationType
+import app.gmaaps.core.interfaces.insulin.InsulinManager
+import app.gmaaps.core.interfaces.insulin.InsulinManager.UpdateResult
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.profile.SingleProfile
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.HardLimits
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -246,3 +246,4 @@ internal class InsulinManagementViewModelTest {
             it.insulinNickname = nickname
         }
 }
+

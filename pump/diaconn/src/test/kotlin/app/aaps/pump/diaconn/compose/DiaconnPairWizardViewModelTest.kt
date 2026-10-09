@@ -1,12 +1,12 @@
-package app.aaps.pump.diaconn.compose
+﻿package app.gmaaps.pump.diaconn.compose
 
 import android.content.Context
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.pump.ble.ScannedDevice
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.diaconn.events.EventDiaconnG8DeviceChange
-import app.aaps.pump.diaconn.keys.DiaconnStringNonKey
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.pump.ble.ScannedDevice
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.diaconn.events.EventDiaconnG8DeviceChange
+import app.gmaaps.pump.diaconn.keys.DiaconnStringNonKey
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -70,3 +70,4 @@ internal class DiaconnPairWizardViewModelTest {
         verify(rxBus).send(any<EventDiaconnG8DeviceChange>())
     }
 }
+

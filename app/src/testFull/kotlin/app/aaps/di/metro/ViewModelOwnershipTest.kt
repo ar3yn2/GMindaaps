@@ -1,9 +1,9 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
-import app.aaps.core.objects.di.CoreObjectsGraph
-import app.aaps.shared.tests.metroScopedProviderTypes
+import app.gmaaps.core.objects.di.CoreObjectsGraph
+import app.gmaaps.shared.tests.metroScopedProviderTypes
 import com.google.common.truth.Truth.assertThat
 import dev.zacsweers.metro.SingleIn
 import org.junit.jupiter.api.Test
@@ -56,10 +56,11 @@ class ViewModelOwnershipTest {
     /**
      * Every view model Metro builds, taken from the graph itself so a new one is covered for free.
      *
-     * This used to be filtered to `app.aaps.pump.` because that is where the failures were. The rule
+     * This used to be filtered to `app.gmaaps.pump.` because that is where the failures were. The rule
      * is not pump specific though, and run against all of them it passes - so the filter was hiding
      * coverage rather than earning anything. Classes it now guards that nothing else does include
      * `DataSyncSelectorV3`, whose second copy would re-upload from a stale Nightscout cursor.
      */
     private fun allViewModels(): List<KClass<out ViewModel>> = testRoot().viewModelProviders.keys.toList()
 }
+

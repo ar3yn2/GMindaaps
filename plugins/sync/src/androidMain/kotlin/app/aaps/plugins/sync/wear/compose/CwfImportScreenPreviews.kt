@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.wear.compose
+﻿package app.gmaaps.plugins.sync.wear.compose
 
 import android.content.res.Configuration
 import androidx.compose.material3.MaterialTheme
@@ -29,8 +29,8 @@ private fun previewImportItem(
     prefCount: Int,
     hasPrefAuth: Boolean
 ) = CwfImportItemState(
-    cwfFile = app.aaps.core.interfaces.rx.weardata.CwfFile(
-        cwfData = app.aaps.core.interfaces.rx.weardata.CwfData("", mutableMapOf(), mutableMapOf()),
+    cwfFile = app.gmaaps.core.interfaces.rx.weardata.CwfFile(
+        cwfData = app.gmaaps.core.interfaces.rx.weardata.CwfData("", mutableMapOf(), mutableMapOf()),
         zipByteArray = ByteArray(0)
     ),
     name = name,
@@ -43,3 +43,4 @@ private fun previewImportItem(
     hasPrefAuthorization = hasPrefAuth,
     watchfaceImage = null
 )
+

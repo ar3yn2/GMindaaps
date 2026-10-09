@@ -1,8 +1,8 @@
-package app.aaps.ui.compose.overview.graphs
+﻿package app.gmaaps.ui.compose.overview.graphs
 
-import app.aaps.core.interfaces.overview.graph.DeviationType
-import app.aaps.core.interfaces.overview.graph.GraphDataPoint
-import app.aaps.core.interfaces.overview.graph.SeriesType
+import app.gmaaps.core.interfaces.overview.graph.DeviationType
+import app.gmaaps.core.interfaces.overview.graph.GraphDataPoint
+import app.gmaaps.core.interfaces.overview.graph.SeriesType
 import com.google.common.truth.Truth.assertThat
 import com.patrykandpatrick.vico.compose.cartesian.CartesianDrawingContext
 import com.patrykandpatrick.vico.compose.cartesian.axis.Axis
@@ -384,3 +384,4 @@ internal class SecondaryGraphScaleHelpersTest {
         }
     }
 }
+

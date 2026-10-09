@@ -1,7 +1,7 @@
-package app.aaps.pump.common.hw.rileylink.ble.command
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.command
 
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
@@ -294,3 +294,4 @@ class SetHardwareEncodingTest {
         assert(rawCommands[0][1] != rawCommands[1][1] || rawCommands[1][1] != rawCommands[2][1])
     }
 }
+

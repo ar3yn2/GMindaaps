@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.BCR
-import app.aaps.core.data.time.T
-import app.aaps.core.nssdk.localmodel.entry.NsUnits
-import app.aaps.core.nssdk.localmodel.treatment.EventType
-import app.aaps.core.nssdk.localmodel.treatment.NSBolusWizard
+import app.gmaaps.core.data.model.BCR
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.nssdk.localmodel.entry.NsUnits
+import app.gmaaps.core.nssdk.localmodel.treatment.EventType
+import app.gmaaps.core.nssdk.localmodel.treatment.NSBolusWizard
 import kotlinx.serialization.json.Json
 
 /**
@@ -59,3 +59,4 @@ fun BCR.toNSBolusWizard(): NSBolusWizard =
         pumpSerial = ids.pumpSerial,
         endId = ids.endId
     )
+

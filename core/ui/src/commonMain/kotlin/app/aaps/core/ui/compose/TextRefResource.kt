@@ -1,8 +1,8 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.Composable
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.TextRef.Companion.withArgs
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef.Companion.withArgs
 
 /**
  * Resolves a [TextRef] to text inside a Composable.
@@ -28,3 +28,4 @@ fun stringResource(ref: TextRef, vararg formatArgs: Any): String =
 /** Same, for an optional reference - returns null so callers can keep using `?.let { }`. */
 @Composable
 fun stringResourceOrNull(ref: TextRef?): String? = ref?.let { stringResource(it) }
+

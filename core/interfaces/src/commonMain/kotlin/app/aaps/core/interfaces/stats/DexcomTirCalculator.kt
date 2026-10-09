@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.stats
+﻿package app.gmaaps.core.interfaces.stats
 
 /**
  * Calculator interface for generating Dexcom-style Time In Range (TIR) statistics.
@@ -17,7 +17,7 @@ package app.aaps.core.interfaces.stats
  * Implementation is typically marked as @Reusable for dependency injection optimization.
  *
  * @see DexcomTIR
- * @see app.aaps.implementation.stats.DexcomTirCalculatorImpl
+ * @see app.gmaaps.implementation.stats.DexcomTirCalculatorImpl
  */
 interface DexcomTirCalculator {
 

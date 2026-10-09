@@ -1,30 +1,30 @@
-package app.aaps.plugins.constraints.safety
+﻿package app.gmaaps.plugins.constraints.safety
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.bgQualityCheck.BgQualityCheck
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.profiling.Profiler
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.stats.TddCalculator
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.objects.constraints.ConstraintObject
-import app.aaps.plugins.aps.openAPSAMA.DetermineBasalAMA
-import app.aaps.plugins.aps.openAPSAMA.OpenAPSAMAPlugin
-import app.aaps.plugins.aps.openAPSSMB.DetermineBasalSMB
-import app.aaps.plugins.aps.openAPSSMB.GlucoseStatusCalculatorSMB
-import app.aaps.plugins.aps.openAPSSMB.OpenAPSSMBPlugin
-import app.aaps.plugins.constraints.ConstraintsStringsValues
-import app.aaps.plugins.source.GlimpPlugin
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.bgQualityCheck.BgQualityCheck
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.profiling.Profiler
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.stats.TddCalculator
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.objects.constraints.ConstraintObject
+import app.gmaaps.plugins.aps.openAPSAMA.DetermineBasalAMA
+import app.gmaaps.plugins.aps.openAPSAMA.OpenAPSAMAPlugin
+import app.gmaaps.plugins.aps.openAPSSMB.DetermineBasalSMB
+import app.gmaaps.plugins.aps.openAPSSMB.GlucoseStatusCalculatorSMB
+import app.gmaaps.plugins.aps.openAPSSMB.OpenAPSSMBPlugin
+import app.gmaaps.plugins.constraints.ConstraintsStringsValues
+import app.gmaaps.plugins.source.GlimpPlugin
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -306,3 +306,4 @@ Safety: Limiting max basal rate to 500.00 U/h because of pump limit
     }
 
 }
+

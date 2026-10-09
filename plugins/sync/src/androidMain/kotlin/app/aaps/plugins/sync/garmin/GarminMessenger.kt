@@ -1,8 +1,8 @@
-package app.aaps.plugins.sync.garmin
+﻿package app.gmaaps.plugins.sync.garmin
 
 import android.content.Context
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import io.reactivex.rxjava3.disposables.Disposable
 
 class GarminMessenger(

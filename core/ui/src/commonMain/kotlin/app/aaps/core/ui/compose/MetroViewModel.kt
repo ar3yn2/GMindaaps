@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.compositionLocalOf
@@ -30,3 +30,4 @@ expect fun platformMetroViewModelFactory(): MetroViewModelFactory
 @Composable
 inline fun <reified VM : ViewModel> metroViewModel(): VM =
     viewModel(factory = LocalMetroViewModelFactory.current ?: platformMetroViewModelFactory())
+

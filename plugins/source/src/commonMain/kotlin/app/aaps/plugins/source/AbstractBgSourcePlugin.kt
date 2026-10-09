@@ -1,16 +1,16 @@
-﻿package app.aaps.plugins.source
+﻿package app.gmaaps.plugins.source
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginBaseWithPreferences
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.source.BgSource
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginBaseWithPreferences
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.source.BgSource
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
 
 abstract class AbstractBgSourcePlugin(
     pluginDescription: PluginDescription,
@@ -33,3 +33,4 @@ abstract class AbstractBgSourcePlugin(
         icon = pluginDescription.icon
     )
 }
+

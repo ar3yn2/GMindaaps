@@ -1,9 +1,9 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.GlucoseValue
-import app.aaps.database.entities.TABLE_GLUCOSE_VALUES
+import app.gmaaps.database.entities.GlucoseValue
+import app.gmaaps.database.entities.TABLE_GLUCOSE_VALUES
 
 @Dao
 internal interface GlucoseValueDao : TraceableDao<GlucoseValue> {

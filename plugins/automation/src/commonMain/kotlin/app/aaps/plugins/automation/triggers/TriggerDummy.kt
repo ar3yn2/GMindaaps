@@ -1,6 +1,6 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlinx.serialization.json.JsonObject
 
 // Used for instantiation of other triggers only

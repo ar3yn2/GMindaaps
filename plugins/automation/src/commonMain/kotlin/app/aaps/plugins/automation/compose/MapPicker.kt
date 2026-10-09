@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose
+﻿package app.gmaaps.plugins.automation.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -33,3 +33,4 @@ expect fun MapPickerScreen(
  * the "pick from map" button rather than offering a button that leads nowhere.
  */
 expect val isMapPickerAvailable: Boolean
+

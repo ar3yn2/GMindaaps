@@ -1,4 +1,4 @@
-package app.aaps.receivers
+﻿package app.gmaaps.receivers
 
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test

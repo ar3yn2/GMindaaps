@@ -1,14 +1,14 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.nsclient.NSAlarm
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.keys.NsclientBooleanKey
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.nsclient.NSAlarm
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.keys.NsclientBooleanKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -223,3 +223,4 @@ class SocketNsConnection(
         val COLLECTIONS = listOf("devicestatus", "entries", "profile", "treatments", "foods", "settings")
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.dana.compose
+﻿package app.gmaaps.pump.dana.compose
 
 import android.content.Context
 import androidx.compose.material.icons.Icons
@@ -9,38 +9,38 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventInitializationChanged
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.ActionCategory
-import app.aaps.core.ui.compose.pump.PumpAction
-import app.aaps.core.ui.compose.pump.PumpCommunicationStatus
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.core.ui.compose.pump.PumpOverviewUiState
-import app.aaps.core.ui.compose.pump.StatusBanner
-import app.aaps.core.ui.compose.pump.tickerFlow
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.R
-import app.aaps.pump.dana.events.EventDanaRNewStatus
-import app.aaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventInitializationChanged
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.ActionCategory
+import app.gmaaps.core.ui.compose.pump.PumpAction
+import app.gmaaps.core.ui.compose.pump.PumpCommunicationStatus
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.core.ui.compose.pump.PumpOverviewUiState
+import app.gmaaps.core.ui.compose.pump.StatusBanner
+import app.gmaaps.core.ui.compose.pump.tickerFlow
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.R
+import app.gmaaps.pump.dana.events.EventDanaRNewStatus
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -59,7 +59,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 sealed class DanaOverviewEvent {
     data object StartPairWizard : DanaOverviewEvent()
@@ -260,7 +260,7 @@ open class DanaOverviewViewModel(
         // Last connection
         val lastConnection = if (lastConnectionTime != 0L) {
             val agoMinutes = ((System.currentTimeMillis() - lastConnectionTime) / 60_000).toInt()
-            dateUtil.timeString(lastConnectionTime) + " (" + rh.gs(app.aaps.core.interfaces.R.string.minago, agoMinutes) + ")"
+            dateUtil.timeString(lastConnectionTime) + " (" + rh.gs(app.gmaaps.core.interfaces.R.string.minago, agoMinutes) + ")"
         } else ""
 
         // Last bolus
@@ -447,3 +447,4 @@ open class DanaOverviewViewModel(
         )
     }
 }
+

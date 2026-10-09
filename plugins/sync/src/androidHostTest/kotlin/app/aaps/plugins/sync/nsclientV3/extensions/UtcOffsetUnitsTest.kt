@@ -1,13 +1,13 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.CA
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.time.T
-import app.aaps.core.nssdk.localmodel.treatment.NSCarbs
-import app.aaps.core.nssdk.mapper.convertToRemoteAndBack
+import app.gmaaps.core.data.model.CA
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.nssdk.localmodel.treatment.NSCarbs
+import app.gmaaps.core.nssdk.mapper.convertToRemoteAndBack
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -95,7 +95,7 @@ internal class UtcOffsetUnitsTest {
         val ns = NSCarbs(
             date = 10000, device = null, identifier = null, units = null, srvModified = null, srvCreated = null,
             utcOffset = null, subject = null, isReadOnly = false, isValid = true,
-            eventType = app.aaps.core.nssdk.localmodel.treatment.EventType.CARBS_CORRECTION,
+            eventType = app.gmaaps.core.nssdk.localmodel.treatment.EventType.CARBS_CORRECTION,
             notes = null, pumpId = null, endId = null, pumpType = null, pumpSerial = null,
             carbs = 1.0, duration = 0
         )
@@ -110,3 +110,4 @@ internal class UtcOffsetUnitsTest {
         assertThat(T.msecs(plusTwoHoursMs).mins()).isEqualTo(plusTwoHoursMin)
     }
 }
+

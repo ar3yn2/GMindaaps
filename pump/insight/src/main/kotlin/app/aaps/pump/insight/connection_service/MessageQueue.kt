@@ -1,7 +1,7 @@
-package app.aaps.pump.insight.connection_service
+﻿package app.gmaaps.pump.insight.connection_service
 
-import app.aaps.core.utils.notifyAll
-import app.aaps.pump.insight.app_layer.AppLayerMessage
+import app.gmaaps.core.utils.notifyAll
+import app.gmaaps.pump.insight.app_layer.AppLayerMessage
 
 @SuppressWarnings("unchecked")
 class MessageQueue {

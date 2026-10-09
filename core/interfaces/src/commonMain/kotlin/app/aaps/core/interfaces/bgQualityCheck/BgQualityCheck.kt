@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.bgQualityCheck
+﻿package app.gmaaps.core.interfaces.bgQualityCheck
 
 import kotlinx.coroutines.flow.StateFlow
 
@@ -16,3 +16,4 @@ interface BgQualityCheck {
     val stateFlow: StateFlow<State>
     fun stateDescription(): String
 }
+

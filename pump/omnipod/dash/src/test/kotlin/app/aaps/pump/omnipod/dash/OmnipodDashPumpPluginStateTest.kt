@@ -1,26 +1,26 @@
-package app.aaps.pump.omnipod.dash
+﻿package app.gmaaps.pump.omnipod.dash
 
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ActivationProgress
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
-import app.aaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
-import app.aaps.pump.omnipod.dash.driver.OmnipodDashManager
-import app.aaps.pump.omnipod.dash.history.DashHistory
-import app.aaps.pump.omnipod.dash.history.database.DashHistoryDatabase
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ActivationProgress
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
+import app.gmaaps.pump.omnipod.dash.driver.OmnipodDashManager
+import app.gmaaps.pump.omnipod.dash.history.DashHistory
+import app.gmaaps.pump.omnipod.dash.history.database.DashHistoryDatabase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -225,3 +225,4 @@ class OmnipodDashPumpPluginStateTest {
 
     // endregion
 }
+

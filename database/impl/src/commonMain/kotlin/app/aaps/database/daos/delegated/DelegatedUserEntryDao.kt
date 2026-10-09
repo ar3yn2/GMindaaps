@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.UserEntryDao
-import app.aaps.database.entities.UserEntry
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.UserEntryDao
+import app.gmaaps.database.entities.UserEntry
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedUserEntryDao(changes: MutableList<DBEntry>, private val dao: UserEntryDao) : DelegatedDao(changes), UserEntryDao by dao {
 

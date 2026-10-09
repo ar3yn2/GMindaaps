@@ -1,13 +1,13 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
 import android.util.Base64
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.nssdk.interfaces.NSAndroidClient
-import app.aaps.core.nssdk.localmodel.clientcontrol.PairingOffer
-import app.aaps.core.nssdk.localmodel.clientcontrol.PairingPayload
-import app.aaps.core.nssdk.utils.ClientControlPairingCrypto
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.nssdk.interfaces.NSAndroidClient
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.PairingOffer
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.PairingPayload
+import app.gmaaps.core.nssdk.utils.ClientControlPairingCrypto
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.runTest
@@ -189,3 +189,4 @@ internal class PairingOfferFetcherTest {
         assertThat((result as PairingOfferFetcher.Result.Success).payload).isEqualTo(expected)
     }
 }
+

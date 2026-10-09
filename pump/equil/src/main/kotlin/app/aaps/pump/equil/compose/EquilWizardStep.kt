@@ -1,7 +1,7 @@
-package app.aaps.pump.equil.compose
+﻿package app.gmaaps.pump.equil.compose
 
-import app.aaps.pump.equil.R
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.pump.equil.R
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Steps for Equil pump activation/deactivation/change-insulin wizards.
@@ -70,3 +70,4 @@ enum class EquilWorkflow {
         )
     }
 }
+

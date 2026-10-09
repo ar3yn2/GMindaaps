@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
 import com.google.common.truth.Truth.assertThat
 import org.apache.commons.codec.binary.Hex
 import org.junit.jupiter.api.Test
@@ -59,3 +59,4 @@ class ProgramTempBasalCommandTest {
         assertThat(command.encoded).asList().containsExactlyElementsIn(Hex.decodeHex("024200011C221A10494E532E0100901838400000F0007000160EC00000186B49D20000186B49D2000132").asList()).inOrder()
     }
 }
+

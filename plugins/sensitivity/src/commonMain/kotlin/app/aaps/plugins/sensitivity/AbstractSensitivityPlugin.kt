@@ -1,22 +1,22 @@
-package app.aaps.plugins.sensitivity
+﻿package app.gmaaps.plugins.sensitivity
 
 import androidx.collection.LongSparseArray
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.model.TE
-import app.aaps.core.interfaces.aps.AutosensData
-import app.aaps.core.interfaces.aps.AutosensDataStore
-import app.aaps.core.interfaces.aps.AutosensResult
-import app.aaps.core.interfaces.aps.Sensitivity
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.Round
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.interfaces.aps.AutosensData
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.core.interfaces.aps.AutosensResult
+import app.gmaaps.core.interfaces.aps.Sensitivity
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.Round
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import kotlin.math.max
 import kotlin.math.min
 
@@ -94,3 +94,4 @@ abstract class AbstractSensitivityPlugin(
         return if (i >= 0) i else i.inv()
     }
 }
+

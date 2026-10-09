@@ -1,6 +1,6 @@
-package info.nightscout.pump.combov2
+﻿package info.nightscout.pump.combov2
 
-import app.aaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.core.interfaces.sharedPreferences.SP
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
@@ -87,3 +87,4 @@ class SPDelegateString(
     override fun setValue(thisRef: Any, property: KProperty<*>, value: String) =
         sp.edit(commit = commit) { putString(key, value) }
 }
+

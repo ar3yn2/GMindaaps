@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 /**
  * Lifecycle phase of an active scene, owned by the master and synced to clients via
@@ -16,3 +16,4 @@ enum class SceneLifecycle {
      */
     EXPIRED
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.diaconn.api
+﻿package app.gmaaps.pump.diaconn.api
 
 import com.google.gson.annotations.SerializedName
 

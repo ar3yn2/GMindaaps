@@ -1,39 +1,39 @@
-package app.aaps.pump.medtrum.compose
+﻿package app.gmaaps.pump.medtrum.compose
 
 import android.os.SystemClock
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.InsulinManager
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.pump.ble.ScannedDevice
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.pump.ProfileGateStepHost
-import app.aaps.core.ui.compose.siteRotation.BodyType
-import app.aaps.core.ui.compose.siteRotation.SiteLocationStepHost
-import app.aaps.pump.medtrum.MedtrumPlugin
-import app.aaps.pump.medtrum.MedtrumPump
-import app.aaps.pump.medtrum.R
-import app.aaps.pump.medtrum.ble.MedtrumBleTransport
-import app.aaps.pump.medtrum.code.ConnectionState
-import app.aaps.pump.medtrum.code.PatchStep
-import app.aaps.pump.medtrum.comm.enums.MedtrumPumpState
-import app.aaps.pump.medtrum.encryption.Crypt
-import app.aaps.pump.medtrum.keys.MedtrumStringNonKey
-import app.aaps.pump.medtrum.services.MedtrumService
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.InsulinManager
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.pump.ble.ScannedDevice
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.pump.ProfileGateStepHost
+import app.gmaaps.core.ui.compose.siteRotation.BodyType
+import app.gmaaps.core.ui.compose.siteRotation.SiteLocationStepHost
+import app.gmaaps.pump.medtrum.MedtrumPlugin
+import app.gmaaps.pump.medtrum.MedtrumPump
+import app.gmaaps.pump.medtrum.R
+import app.gmaaps.pump.medtrum.ble.MedtrumBleTransport
+import app.gmaaps.pump.medtrum.code.ConnectionState
+import app.gmaaps.pump.medtrum.code.PatchStep
+import app.gmaaps.pump.medtrum.comm.enums.MedtrumPumpState
+import app.gmaaps.pump.medtrum.encryption.Crypt
+import app.gmaaps.pump.medtrum.keys.MedtrumStringNonKey
+import app.gmaaps.pump.medtrum.services.MedtrumService
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -51,7 +51,7 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 sealed class PatchEvent {
     data object Finish : PatchEvent()
@@ -807,3 +807,4 @@ class MedtrumPatchViewModel(
         INITIAL, FILLED, PRIMING, PRIMED, ACTIVATED, ERROR, START_DEACTIVATION, STOPPED
     }
 }
+

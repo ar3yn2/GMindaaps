@@ -1,10 +1,10 @@
-package app.aaps.core.interfaces.plugin
+﻿package app.gmaaps.core.interfaces.plugin
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
 
 /**
  * Add preference handling to [PluginBase]
@@ -29,15 +29,15 @@ abstract class PluginBaseWithPreferences(
      *
      * This function is called BEFORE clearing and importing preferences to preserve some current values.
      * Needed content should be stored into plugin variables and then processed and restored
-     * in [app.aaps.core.interfaces.plugin.PluginBaseWithPreferences.afterImport]
+     * in [app.gmaaps.core.interfaces.plugin.PluginBaseWithPreferences.afterImport]
      *
      * The app is NOT restarted after an import. This line used to say it was, and that stopped being
      * true: the import now stops the plugins, replaces the preferences and starts them again in the
      * same process, inside the window where
-     * [app.aaps.core.interfaces.configuration.Config.appInitialized] is false. So whatever is kept
+     * [app.gmaaps.core.interfaces.configuration.Config.appInitialized] is false. So whatever is kept
      * here has to survive in the live object, and nothing may rely on getting a fresh process.
      *
-     * See: [app.aaps.core.interfaces.maintenance.ImportExportPrefs.doImportSharedPreferences]
+     * See: [app.gmaaps.core.interfaces.maintenance.ImportExportPrefs.doImportSharedPreferences]
      */
     open fun beforeImport() {}
 
@@ -47,13 +47,13 @@ abstract class PluginBaseWithPreferences(
      * new content is imported.
      *
      * This function is called AFTER clearing and importing preferences to process and restore
-     * saved state from [app.aaps.core.interfaces.plugin.PluginBaseWithPreferences.beforeImport]
+     * saved state from [app.gmaaps.core.interfaces.plugin.PluginBaseWithPreferences.beforeImport]
      *
      * The app is NOT restarted after an import - see
-     * [app.aaps.core.interfaces.plugin.PluginBaseWithPreferences.beforeImport]. This runs while the
+     * [app.gmaaps.core.interfaces.plugin.PluginBaseWithPreferences.beforeImport]. This runs while the
      * app is still reconfiguring, so it must not assume the plugins around it have started yet.
      *
-     * See: [app.aaps.core.interfaces.maintenance.ImportExportPrefs.doImportSharedPreferences]
+     * See: [app.gmaaps.core.interfaces.maintenance.ImportExportPrefs.doImportSharedPreferences]
      */
     open fun afterImport() {}
 }

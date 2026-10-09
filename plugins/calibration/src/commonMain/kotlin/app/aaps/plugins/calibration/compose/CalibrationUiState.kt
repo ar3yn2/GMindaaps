@@ -1,9 +1,9 @@
-package app.aaps.plugins.calibration.compose
+﻿package app.gmaaps.plugins.calibration.compose
 
 import androidx.compose.runtime.Immutable
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.plugins.calibration.CalibrationFit
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.plugins.calibration.CalibrationFit
 
 @Immutable
 data class CalibrationUiState(
@@ -16,3 +16,4 @@ data class CalibrationUiState(
     val selectedEntryId: Long? = null,
     val glucoseUnit: GlucoseUnit = GlucoseUnit.MGDL
 )
+

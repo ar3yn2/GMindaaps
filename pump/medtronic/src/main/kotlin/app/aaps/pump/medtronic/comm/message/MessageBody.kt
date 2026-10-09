@@ -1,6 +1,6 @@
-package app.aaps.pump.medtronic.comm.message
+﻿package app.gmaaps.pump.medtronic.comm.message
 
-import app.aaps.core.utils.pump.ByteUtil
+import app.gmaaps.core.utils.pump.ByteUtil
 
 /**
  * Created by geoff on 5/29/16.

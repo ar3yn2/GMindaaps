@@ -1,18 +1,18 @@
-package app.aaps.pump.omnipod.eros
+﻿package app.gmaaps.pump.omnipod.eros
 
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryDatabase
-import app.aaps.pump.omnipod.eros.manager.AapsOmnipodErosManager
-import app.aaps.pump.omnipod.eros.util.AapsOmnipodUtil
-import app.aaps.pump.omnipod.eros.util.OmnipodAlertUtil
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryDatabase
+import app.gmaaps.pump.omnipod.eros.manager.AapsOmnipodErosManager
+import app.gmaaps.pump.omnipod.eros.util.AapsOmnipodUtil
+import app.gmaaps.pump.omnipod.eros.util.OmnipodAlertUtil
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.runBlocking
 import org.joda.time.DateTimeZone
 import org.joda.time.tz.UTCProvider
@@ -60,3 +60,4 @@ class OmnipodErosPumpPluginTest : TestBaseWithProfile() {
         }
     }
 }
+

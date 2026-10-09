@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.profile
+﻿package app.gmaaps.core.interfaces.profile
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.interfaces.pump.PumpProfile
 
 /**
  * Profile with applied insulin configuration (Effective profile)
@@ -25,8 +25,8 @@ interface EffectiveProfile : Profile {
     /**
      * Active insulin concentration used
      * @return Insulin concentration (0.2 for U20, 2.0 for U200 insulin)
-     * @See [app.aaps.core.interfaces.pump.PumpRate]
-     * @See [app.aaps.core.interfaces.pump.PumpInsulin]
+     * @See [app.gmaaps.core.interfaces.pump.PumpRate]
+     * @See [app.gmaaps.core.interfaces.pump.PumpInsulin]
      */
     fun insulinConcentration(): Double = iCfg.concentration
 }

@@ -1,4 +1,4 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -167,3 +167,4 @@ class FlowExtensionKtTest {
         assertThat(collected.last()).isTrue()
     }
 }
+

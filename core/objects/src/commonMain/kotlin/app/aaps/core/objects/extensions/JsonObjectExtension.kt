@@ -1,18 +1,18 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.keys.interfaces.BooleanNonPreferenceKey
-import app.aaps.core.keys.interfaces.DoubleNonPreferenceKey
-import app.aaps.core.keys.interfaces.IntNonPreferenceKey
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
-import app.aaps.core.keys.interfaces.UnitDoublePreferenceKey
-import app.aaps.core.utils.lenientBooleanOrNull
-import app.aaps.core.utils.lenientDoubleOrNull
-import app.aaps.core.utils.lenientIntOrNull
-import app.aaps.core.utils.lenientLongOrNull
-import app.aaps.core.utils.lenientStringOrNull
+import app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.DoubleNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.UnitDoublePreferenceKey
+import app.gmaaps.core.utils.lenientBooleanOrNull
+import app.gmaaps.core.utils.lenientDoubleOrNull
+import app.gmaaps.core.utils.lenientIntOrNull
+import app.gmaaps.core.utils.lenientLongOrNull
+import app.gmaaps.core.utils.lenientStringOrNull
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonObjectBuilder
 import kotlinx.serialization.json.JsonPrimitive
@@ -96,3 +96,4 @@ fun JsonObject.with(extra: JsonObjectBuilder.() -> Unit): JsonObject =
         this@with.forEach { (key, value) -> put(key, value) }
         extra()
     }
+

@@ -1,12 +1,12 @@
-package app.aaps.implementation.ui
+﻿package app.gmaaps.implementation.ui
 
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
 import androidx.core.net.toUri
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.ui.UrlOpener
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.ui.UrlOpener
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -33,3 +33,4 @@ class AndroidUrlOpener(
         }
     }
 }
+

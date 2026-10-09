@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.dash.history.data
+﻿package app.gmaaps.pump.omnipod.dash.history.data
 
 enum class InitialResult {
     NOT_SENT, FAILURE_SENDING, SENT
@@ -7,3 +7,4 @@ enum class InitialResult {
 enum class ResolvedResult {
     SUCCESS, FAILURE
 }
+

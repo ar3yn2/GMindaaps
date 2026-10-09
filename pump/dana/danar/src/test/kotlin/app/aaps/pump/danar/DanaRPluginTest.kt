@@ -1,21 +1,21 @@
-package app.aaps.pump.danar
+﻿package app.gmaaps.pump.danar
 
 import android.content.ComponentName
 import android.content.Intent
 import android.content.ServiceConnection
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.database.DanaHistoryDatabase
-import app.aaps.pump.dana.keys.DanaBooleanKey
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danar.services.DanaRExecutionService
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.database.DanaHistoryDatabase
+import app.gmaaps.pump.dana.keys.DanaBooleanKey
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danar.services.DanaRExecutionService
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -49,10 +49,10 @@ class DanaRPluginTest : TestBaseWithProfile() {
     fun prepareMocks() {
         whenever(preferences.get(DanaStringNonKey.MacAddress)).thenReturn("")
         whenever(preferences.get(DanaStringNonKey.RName)).thenReturn("")
-        whenever(rh.gs(app.aaps.core.ui.R.string.pumplimit)).thenReturn("pump limit")
-        whenever(rh.gs(app.aaps.core.ui.R.string.itmustbepositivevalue)).thenReturn("it must be positive value")
-        whenever(rh.gs(app.aaps.core.ui.R.string.limitingbasalratio)).thenReturn("Limiting max basal rate to %1\$.2f U/h because of %2\$s")
-        whenever(rh.gs(app.aaps.core.ui.R.string.limitingpercentrate)).thenReturn("Limiting max percent rate to %1\$d%% because of %2\$s")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.pumplimit)).thenReturn("pump limit")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.itmustbepositivevalue)).thenReturn("it must be positive value")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.limitingbasalratio)).thenReturn("Limiting max basal rate to %1\$.2f U/h because of %2\$s")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.limitingpercentrate)).thenReturn("Limiting max percent rate to %1\$d%% because of %2\$s")
         danaPump = DanaPump(aapsLogger, preferences, dateUtil, decimalFormatter, profileStoreProvider)
         danaRPlugin = DanaRPlugin(
             aapsLogger, rh, preferences, config, commandQueue, rxBus, context, activePlugin, danaPump, dateUtil, pumpSync,
@@ -106,10 +106,11 @@ class DanaRPluginTest : TestBaseWithProfile() {
 
     @Test
     fun failedBolusIsNotEnacted() {
-        whenever(rh.gs(eq(app.aaps.pump.dana.R.string.boluserrorcode), anyOrNull(), anyOrNull(), anyOrNull())).thenReturn("bolus error")
+        whenever(rh.gs(eq(app.gmaaps.pump.dana.R.string.boluserrorcode), anyOrNull(), anyOrNull(), anyOrNull())).thenReturn("bolus error")
         bindBolusService(connectionOk = false, delivered = 0.4)
         val result = runBlocking { danaRPlugin.deliverTreatment(DetailedBolusInfo().apply { insulin = 1.0 }) }
         assertThat(result.success).isFalse()
         assertThat(result.enacted).isFalse()
     }
 }
+

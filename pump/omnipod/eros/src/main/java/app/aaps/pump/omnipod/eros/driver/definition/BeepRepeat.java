@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
 public enum BeepRepeat {
     ONCE((byte) 0x00),
@@ -21,3 +21,4 @@ public enum BeepRepeat {
         return value;
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.shared.impl.logging
+﻿package app.gmaaps.shared.impl.logging
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.keys.interfaces.Preferences
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -45,3 +45,4 @@ class LImplTest {
         assertThat(element.enabled).isTrue()
     }
 }
+

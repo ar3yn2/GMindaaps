@@ -1,4 +1,4 @@
-package app.aaps.di
+﻿package app.gmaaps.di
 
 import androidx.test.core.app.ApplicationProvider
 import org.junit.rules.TestWatcher
@@ -20,3 +20,4 @@ class ResetGraphRule : TestWatcher() {
         EmulatedOptions.enabled = emptySet()
     }
 }
+

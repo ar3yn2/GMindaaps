@@ -1,9 +1,9 @@
-package app.aaps.core.interfaces.pump.defs
+﻿package app.gmaaps.core.interfaces.pump.defs
 
-import app.aaps.core.data.pump.defs.Capability
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.pump.defs.PumpTempBasalType
-import app.aaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.Capability
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpTempBasalType
+import app.gmaaps.core.data.pump.defs.PumpType
 
 fun PumpDescription.fillFor(pumpType: PumpType): PumpDescription {
     resetSettings()

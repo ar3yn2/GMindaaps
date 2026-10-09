@@ -1,12 +1,12 @@
-package app.aaps.core.objects.profile
+﻿package app.gmaaps.core.objects.profile
 
 import android.content.Context
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.objects.extensions.pureProfileFromJson
-import app.aaps.shared.impl.utils.DateUtilImpl
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.TestPumpPlugin
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.objects.extensions.pureProfileFromJson
+import app.gmaaps.shared.impl.utils.DateUtilImpl
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestPumpPlugin
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -113,3 +113,4 @@ class PureNsJsonTest : TestBase() {
         assertThat(reparsed.targetBlocks).isEqualTo(original.targetBlocks)
     }
 }
+

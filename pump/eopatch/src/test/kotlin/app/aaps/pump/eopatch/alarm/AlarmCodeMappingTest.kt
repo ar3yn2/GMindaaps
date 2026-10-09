@@ -1,8 +1,8 @@
-package app.aaps.pump.eopatch.alarm
+﻿package app.gmaaps.pump.eopatch.alarm
 
 import android.content.Intent
 import android.net.Uri
-import app.aaps.pump.eopatch.code.AlarmCategory
+import app.gmaaps.pump.eopatch.code.AlarmCategory
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -133,3 +133,4 @@ class AlarmCodeMappingTest {
         assertThat(AlarmCode.fromIntent(Intent())).isNull()
     }
 }
+

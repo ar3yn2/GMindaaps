@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.compose.steps
+﻿package app.gmaaps.pump.medtrum.compose.steps
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -17,13 +17,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.dialogs.OkDialog
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.medtrum.R
-import app.aaps.pump.medtrum.code.PatchStep
-import app.aaps.pump.medtrum.compose.MedtrumPatchViewModel
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.dialogs.OkDialog
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.medtrum.R
+import app.gmaaps.pump.medtrum.code.PatchStep
+import app.gmaaps.pump.medtrum.compose.MedtrumPatchViewModel
 
 @Composable
 fun RetryActivationStep(
@@ -73,7 +73,7 @@ fun RetryActivationStep(
 
     unexpectedStateMessage?.let { msg ->
         OkDialog(
-            title = stringResource(app.aaps.core.ui.R.string.error),
+            title = stringResource(app.gmaaps.core.ui.R.string.error),
             message = stringResource(R.string.unexpected_state, msg),
             onDismiss = {
                 unexpectedStateMessage = null
@@ -105,12 +105,12 @@ internal fun RetryActivationContent(
         primaryButton = if (isConnecting) {
             null
         } else {
-            WizardButton(text = stringResource(app.aaps.core.ui.R.string.next), onClick = onRetry)
+            WizardButton(text = stringResource(app.gmaaps.core.ui.R.string.next), onClick = onRetry)
         },
         secondaryButton = if (isConnecting) {
-            WizardButton(text = stringResource(app.aaps.core.ui.R.string.cancel), onClick = onCancel)
+            WizardButton(text = stringResource(app.gmaaps.core.ui.R.string.cancel), onClick = onCancel)
         } else {
-            WizardButton(text = stringResource(app.aaps.core.ui.R.string.discard), onClick = onDiscard)
+            WizardButton(text = stringResource(app.gmaaps.core.ui.R.string.discard), onClick = onDiscard)
         }
     ) {
         if (isConnecting) {
@@ -138,3 +138,4 @@ internal fun RetryActivationContent(
         }
     }
 }
+

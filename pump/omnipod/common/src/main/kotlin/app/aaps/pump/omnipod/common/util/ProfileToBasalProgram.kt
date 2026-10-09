@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.util
+﻿package app.gmaaps.pump.omnipod.common.util
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.defs.determineCorrectBasalSize
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.defs.determineCorrectBasalSize
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
 import kotlin.math.roundToInt
 
 fun mapProfileToBasalProgram(profile: Profile, pumpType: PumpType): BasalProgram {
@@ -46,3 +46,4 @@ fun mapProfileToBasalProgram(profile: Profile, pumpType: PumpType): BasalProgram
     )
     return BasalProgram(entries)
 }
+

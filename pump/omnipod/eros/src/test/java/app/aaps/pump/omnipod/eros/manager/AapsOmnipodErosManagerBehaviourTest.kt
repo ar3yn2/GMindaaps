@@ -1,36 +1,36 @@
-package app.aaps.pump.omnipod.eros.manager
+﻿package app.gmaaps.pump.omnipod.eros.manager
 
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.omnipod.eros.R
-import app.aaps.pump.omnipod.eros.definition.PodHistoryEntryType
-import app.aaps.pump.omnipod.eros.driver.definition.FaultEventCode
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType
-import app.aaps.pump.omnipod.eros.driver.exception.CrcMismatchException
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalMessageAddressException
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalMessageSequenceNumberException
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalPacketTypeException
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalResponseException
-import app.aaps.pump.omnipod.eros.driver.exception.MessageDecodingException
-import app.aaps.pump.omnipod.eros.driver.exception.NonceOutOfSyncException
-import app.aaps.pump.omnipod.eros.driver.exception.NonceResyncException
-import app.aaps.pump.omnipod.eros.driver.exception.NotEnoughDataException
-import app.aaps.pump.omnipod.eros.driver.exception.PodFaultException
-import app.aaps.pump.omnipod.eros.driver.exception.PodReturnedErrorResponseException
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
-import app.aaps.pump.omnipod.eros.driver.manager.OmnipodManager
-import app.aaps.pump.omnipod.eros.history.ErosHistory
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryRecordEntity
-import app.aaps.pump.omnipod.eros.util.AapsOmnipodUtil
-import app.aaps.pump.omnipod.eros.util.OmnipodAlertUtil
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.omnipod.eros.R
+import app.gmaaps.pump.omnipod.eros.definition.PodHistoryEntryType
+import app.gmaaps.pump.omnipod.eros.driver.definition.FaultEventCode
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType
+import app.gmaaps.pump.omnipod.eros.driver.exception.CrcMismatchException
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalMessageAddressException
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalMessageSequenceNumberException
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalPacketTypeException
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalResponseException
+import app.gmaaps.pump.omnipod.eros.driver.exception.MessageDecodingException
+import app.gmaaps.pump.omnipod.eros.driver.exception.NonceOutOfSyncException
+import app.gmaaps.pump.omnipod.eros.driver.exception.NonceResyncException
+import app.gmaaps.pump.omnipod.eros.driver.exception.NotEnoughDataException
+import app.gmaaps.pump.omnipod.eros.driver.exception.PodFaultException
+import app.gmaaps.pump.omnipod.eros.driver.exception.PodReturnedErrorResponseException
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
+import app.gmaaps.pump.omnipod.eros.driver.manager.OmnipodManager
+import app.gmaaps.pump.omnipod.eros.history.ErosHistory
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryRecordEntity
+import app.gmaaps.pump.omnipod.eros.util.AapsOmnipodUtil
+import app.gmaaps.pump.omnipod.eros.util.OmnipodAlertUtil
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito
@@ -47,7 +47,7 @@ import org.mockito.kotlin.stub
 import org.mockito.kotlin.verify
 import org.mockito.kotlin.verifyBlocking
 import org.mockito.kotlin.whenever
-import app.aaps.pump.omnipod.common.R as CommonR
+import app.gmaaps.pump.omnipod.common.R as CommonR
 
 /**
  * Behaviour pins for [AapsOmnipodErosManager], written against the **Java** implementation.
@@ -156,7 +156,7 @@ internal class AapsOmnipodErosManagerBehaviourTest {
     /** A pod fault names the fault code and its number - the only branch that formats the fault in. */
     @Test fun `a pod fault reports the pod fault message`() {
         val ex: PodFaultException = mock()
-        val detailedStatus: app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoDetailedStatus = mock()
+        val detailedStatus: app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoDetailedStatus = mock()
         whenever(detailedStatus.faultEventCode).thenReturn(FaultEventCode.FAILED_FLASH_ERASE)
         whenever(ex.detailedStatus).thenReturn(detailedStatus)
 
@@ -341,3 +341,4 @@ internal class AapsOmnipodErosManagerBehaviourTest {
         assertThat(sut().serialNumber()).isEqualTo("520760124")
     }
 }
+

@@ -1,14 +1,14 @@
-package app.aaps.implementation.overview
+﻿package app.gmaaps.implementation.overview
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.aps.AutosensData
-import app.aaps.core.interfaces.aps.AutosensDataStore
-import app.aaps.core.interfaces.aps.AutosensResult
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.aps.AutosensData
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.core.interfaces.aps.AutosensResult
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.BeforeEach
@@ -100,3 +100,4 @@ class SensitivityOverviewImplTest : TestBaseWithProfile() {
         assertThat(data.lines.first()).isEqualTo("Autosens Value: 100%")
     }
 }
+

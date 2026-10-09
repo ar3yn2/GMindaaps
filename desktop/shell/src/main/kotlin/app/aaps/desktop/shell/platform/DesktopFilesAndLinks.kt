@@ -1,13 +1,13 @@
-package app.aaps.desktop.shell.platform
+﻿package app.gmaaps.desktop.shell.platform
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.maintenance.PrefsFile
-import app.aaps.core.interfaces.maintenance.PrefsFileInfo
-import app.aaps.core.interfaces.plugin.PermissionGroup
-import app.aaps.core.interfaces.plugin.PluginPermissions
-import app.aaps.core.interfaces.ui.UrlOpener
-import app.aaps.implementation.maintenance.DesktopFolders
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.maintenance.PrefsFile
+import app.gmaaps.core.interfaces.maintenance.PrefsFileInfo
+import app.gmaaps.core.interfaces.plugin.PermissionGroup
+import app.gmaaps.core.interfaces.plugin.PluginPermissions
+import app.gmaaps.core.interfaces.ui.UrlOpener
+import app.gmaaps.implementation.maintenance.DesktopFolders
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -123,3 +123,4 @@ class DesktopPrefsFileInfo(
         }
     }
 }
+

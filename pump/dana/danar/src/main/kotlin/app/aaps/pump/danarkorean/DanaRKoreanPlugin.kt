@@ -1,42 +1,42 @@
-package app.aaps.pump.danarkorean
+﻿package app.gmaaps.pump.danarkorean
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.os.IBinder
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.di.PumpDriver
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.PumpSync.TemporaryBasalType
-import app.aaps.core.interfaces.pump.comment
-import app.aaps.core.interfaces.pump.defs.fillFor
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventAppExit
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.interfaces.utils.Round
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.database.DanaHistoryDatabase
-import app.aaps.pump.dana.keys.DanaBooleanKey
-import app.aaps.pump.danar.AbstractDanaRPlugin
-import app.aaps.pump.danarkorean.services.DanaRKoreanExecutionService
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.di.PumpDriver
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.PumpSync.TemporaryBasalType
+import app.gmaaps.core.interfaces.pump.comment
+import app.gmaaps.core.interfaces.pump.defs.fillFor
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventAppExit
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.interfaces.utils.Round
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.database.DanaHistoryDatabase
+import app.gmaaps.pump.dana.keys.DanaBooleanKey
+import app.gmaaps.pump.danar.AbstractDanaRPlugin
+import app.gmaaps.pump.danarkorean.services.DanaRKoreanExecutionService
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -96,7 +96,7 @@ class DanaRKoreanPlugin(
     private var scope: CoroutineScope? = null
 
     init {
-        pluginDescription.description(TextRef.AndroidRes(app.aaps.pump.dana.R.string.description_pump_dana_r_korean))
+        pluginDescription.description(TextRef.AndroidRes(app.gmaaps.pump.dana.R.string.description_pump_dana_r_korean))
         pumpDescription.fillFor(PumpType.DANA_R_KOREAN)
     }
 
@@ -142,7 +142,7 @@ class DanaRKoreanPlugin(
 
     // Plugin base interface
     override val name: String
-        get() = rh.gs(app.aaps.pump.dana.R.string.danarkoreanpump)
+        get() = rh.gs(app.gmaaps.pump.dana.R.string.danarkoreanpump)
 
     // Pump interface
     override val isFakingTempsByExtendedBoluses: Boolean
@@ -175,12 +175,12 @@ class DanaRKoreanPlugin(
         result.enacted(result.success && delivered.cU > 0)
         if (!result.success) result.comment(
             rh.gs(
-                app.aaps.pump.dana.R.string.boluserrorcode,
+                app.gmaaps.pump.dana.R.string.boluserrorcode,
                 detailedBolusInfo.insulin,
                 delivered.cU,
                 danaPump.bolusStartErrorCode
             )
-        ) else result.comment(app.aaps.core.ui.R.string.ok)
+        ) else result.comment(app.gmaaps.core.ui.R.string.ok)
         aapsLogger.debug(LTag.PUMP, "deliverTreatment: OK. Asked: " + detailedBolusInfo.insulin + " Delivered: " + result.bolusDelivered)
         if (detailedBolusInfo.insulin > 0)
             pumpSync.syncBolusWithPumpId(
@@ -312,7 +312,7 @@ class DanaRKoreanPlugin(
             return cancelExtendedBolus()
         }
         val result = pumpEnactResultProvider()
-        result.success(true).enacted(false).comment(app.aaps.core.ui.R.string.ok).isTempCancel(true)
+        result.success(true).enacted(false).comment(app.gmaaps.core.ui.R.string.ok).isTempCancel(true)
         return result
     }
 
@@ -332,7 +332,7 @@ class DanaRKoreanPlugin(
                 result.success(true).enacted(true).isTempCancel(true)
             } else result.success(false).enacted(false).isTempCancel(true)
         } else {
-            result.success(true).isTempCancel(true).comment(app.aaps.core.ui.R.string.ok)
+            result.success(true).isTempCancel(true).comment(app.gmaaps.core.ui.R.string.ok)
             aapsLogger.debug(LTag.PUMP, "cancelRealTempBasal: OK")
         }
         return result
@@ -343,7 +343,7 @@ class DanaRKoreanPlugin(
 
     override fun getPreferenceScreenContent() = PreferenceSubScreenDef(
         key = "danar_korean_settings",
-        titleResId = app.aaps.pump.dana.R.string.danar_pump_settings,
+        titleResId = app.gmaaps.pump.dana.R.string.danar_pump_settings,
         items = listOf(
             DanaBooleanKey.UseExtended
         ),

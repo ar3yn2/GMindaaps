@@ -1,9 +1,9 @@
-package app.aaps.pump.eopatch.alarm
+﻿package app.gmaaps.pump.eopatch.alarm
 
 import android.content.Intent
 import android.net.Uri
-import app.aaps.pump.eopatch.R
-import app.aaps.pump.eopatch.code.AlarmCategory
+import app.gmaaps.pump.eopatch.R
+import app.gmaaps.pump.eopatch.code.AlarmCategory
 import java.util.Locale
 import java.util.function.Function
 import java.util.stream.Collectors

@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.tidepool.utils
+﻿package app.gmaaps.plugins.sync.tidepool.utils
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder

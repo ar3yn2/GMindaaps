@@ -1,16 +1,16 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Timeline
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.plugins.automation.AutomationStrings
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.plugins.automation.AutomationStrings
 import kotlinx.serialization.json.JsonObject
 
 /**
  * True when the smoothing plugin selected in the action is installed but not active.
- * Used only as a precondition by [app.aaps.plugins.automation.actions.ActionSmoothingChange],
+ * Used only as a precondition by [app.gmaaps.plugins.automation.actions.ActionSmoothingChange],
  * so the whole automation is skipped (no log entry, no re-run) once the selected
  * smoothing is already active. Not user-selectable and never serialized —
  * preconditions are rebuilt from the action class.
@@ -41,3 +41,4 @@ class TriggerSelectedSmoothingNotActive(deps: TriggerDeps, private val selectedP
 
     override fun duplicate(): Trigger = TriggerSelectedSmoothingNotActive(deps, selectedPluginId)
 }
+

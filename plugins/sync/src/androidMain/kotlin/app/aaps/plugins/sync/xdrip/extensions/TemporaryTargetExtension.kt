@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.xdrip.extensions
+﻿package app.gmaaps.plugins.sync.xdrip.extensions
 
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.model.TT
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.utils.DateUtil
 import org.json.JSONObject
 
 fun TT.toJson(isAdd: Boolean, dateUtil: DateUtil, profileUtil: ProfileUtil): JSONObject =
@@ -23,3 +23,4 @@ fun TT.toJson(isAdd: Boolean, dateUtil: DateUtil, profileUtil: ProfileUtil): JSO
                 .put("units", profileUtil.units.asText)
             if (isAdd && ids.nightscoutId != null) it.put("_id", ids.nightscoutId)
         }
+

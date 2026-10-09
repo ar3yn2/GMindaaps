@@ -1,4 +1,4 @@
-package app.aaps.pump.diaconn.database
+﻿package app.gmaaps.pump.diaconn.database
 
 import android.content.Context
 import androidx.room.Database
@@ -30,3 +30,4 @@ abstract class DiaconnHistoryDatabase : RoomDatabase() {
                 .build()
     }
 }
+

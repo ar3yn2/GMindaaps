@@ -1,6 +1,6 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
-import app.aaps.core.data.time.systemUtcOffsetAt
+import app.gmaaps.core.data.time.systemUtcOffsetAt
 
 /**
  * Calibration pair used by the linear calibration engine: a fingerstick reference value
@@ -19,3 +19,4 @@ data class CAL(
     var fingerstickMgdl: Double,
     var sensorMgdlAtPairing: Double
 ) : HasIDs, TimeStamped
+

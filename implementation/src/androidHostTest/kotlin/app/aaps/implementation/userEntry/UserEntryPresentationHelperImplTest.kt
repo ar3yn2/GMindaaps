@@ -1,14 +1,14 @@
-package app.aaps.implementation.userEntry
+﻿package app.gmaaps.implementation.userEntry
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.test.junit4.v2.createComposeRule
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.interfaces.utils.Translator
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.interfaces.utils.Translator
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
@@ -62,3 +62,4 @@ internal class UserEntryPresentationHelperImplTest {
         assertThat(icons).hasSize(Sources.entries.size)
     }
 }
+

@@ -1,17 +1,17 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.Scene
-import app.aaps.core.data.model.SceneAction
-import app.aaps.core.data.model.SceneEndAction
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.model.TT
-import app.aaps.core.utils.lenientBoolean
-import app.aaps.core.utils.lenientBooleanOrNull
-import app.aaps.core.utils.lenientDoubleOrNull
-import app.aaps.core.utils.lenientInt
-import app.aaps.core.utils.lenientString
-import app.aaps.core.utils.lenientStringOrNull
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.data.model.SceneAction
+import app.gmaaps.core.data.model.SceneEndAction
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.utils.lenientBoolean
+import app.gmaaps.core.utils.lenientBooleanOrNull
+import app.gmaaps.core.utils.lenientDoubleOrNull
+import app.gmaaps.core.utils.lenientInt
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.core.utils.lenientStringOrNull
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonObject
@@ -199,3 +199,4 @@ private fun JsonObject.toSceneEndAction(): SceneEndAction =
 
         else          -> SceneEndAction.Notification
     }
+

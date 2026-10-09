@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleCommand
 
 /**
  * `CMD_ALERT_ALARM_SET_REQ` (0x48) → `CMD_ALERT_ALARM_SET_RES` (0xA8). Sets the patch alert/alarm mode.
@@ -34,3 +34,4 @@ class AlertAlarmSetCommand(
         private const val MIN_RESPONSE_LENGTH = 2
     }
 }
+

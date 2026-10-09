@@ -1,4 +1,4 @@
-package app.aaps.ui.widget.glance
+﻿package app.gmaaps.ui.widget.glance
 
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -8,8 +8,8 @@ import android.graphics.RectF
 import android.graphics.Typeface
 import androidx.annotation.ColorInt
 import androidx.core.graphics.ColorUtils
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.ui.compose.overview.toArcIndicator
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.ui.compose.overview.toArcIndicator
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.sin
@@ -131,3 +131,4 @@ class GlucoseCircleBitmapRenderer {
         const val MIN_PX = 48
     }
 }
+

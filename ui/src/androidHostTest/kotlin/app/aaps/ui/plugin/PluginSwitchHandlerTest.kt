@@ -1,9 +1,9 @@
-package app.aaps.ui.plugin
+﻿package app.gmaaps.ui.plugin
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.PluginBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -134,3 +134,4 @@ internal class PluginSwitchHandlerTest {
         verify(configBuilder, never()).requestPluginSwitch(second, true, PluginType.SYNC)
     }
 }
+

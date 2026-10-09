@@ -1,6 +1,6 @@
-package app.aaps.plugins.source.instara
+﻿package app.gmaaps.plugins.source.instara
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 
 // Instara plugin-local non-preference keys for internal persisted state
 enum class InstaraStringKey(

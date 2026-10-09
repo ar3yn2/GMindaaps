@@ -1,17 +1,17 @@
-package app.aaps.implementation.resources
+﻿package app.gmaaps.implementation.resources
 
 import android.content.Context
 import android.content.res.Configuration
 import androidx.annotation.PluralsRes
 import androidx.annotation.StringRes
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.resources.TextRefIdRegistry
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.CoreUiStringIds
-import app.aaps.core.ui.locale.LocaleHelper
-import app.aaps.implementation.ImplementationStringIds
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.resources.TextRefIdRegistry
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.CoreUiStringIds
+import app.gmaaps.core.ui.locale.LocaleHelper
+import app.gmaaps.implementation.ImplementationStringIds
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -119,5 +119,6 @@ class ResourceHelperImpl(
 
     // Reads the bool resource directly. It used to go through gb(), which was dropped from the
     // interface because this was its only caller.
-    override fun shortTextMode(): Boolean = !context.resources.getBoolean(app.aaps.core.ui.R.bool.isTablet)
+    override fun shortTextMode(): Boolean = !context.resources.getBoolean(app.gmaaps.core.ui.R.bool.isTablet)
 }
+

@@ -1,14 +1,14 @@
-package app.aaps.implementation.receivers
+﻿package app.gmaaps.implementation.receivers
 
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.BatteryManager
 import androidx.annotation.VisibleForTesting
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore.ChargingStatus
-import app.aaps.core.objects.workflow.MetroBroadcastReceiver
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore.ChargingStatus
+import app.gmaaps.core.objects.workflow.MetroBroadcastReceiver
 import dev.zacsweers.metro.Inject
 
 class ChargingStateReceiver : MetroBroadcastReceiver() {
@@ -42,3 +42,4 @@ class ChargingStateReceiver : MetroBroadcastReceiver() {
         return ChargingStatus(isCharging, batteryLevel).also { receiverStatusStore.setChargingStatus(it) }
     }
 }
+

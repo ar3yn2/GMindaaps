@@ -1,22 +1,22 @@
-package app.aaps.database.di
+﻿package app.gmaaps.database.di
 
 import androidx.room.migration.Migration
 import androidx.sqlite.SQLiteConnection
 import androidx.sqlite.execSQL
-import app.aaps.database.entities.TABLE_APS_RESULTS
-import app.aaps.database.entities.TABLE_BOLUSES
-import app.aaps.database.entities.TABLE_CALIBRATION_ENTRIES
-import app.aaps.database.entities.TABLE_EFFECTIVE_PROFILE_SWITCHES
-import app.aaps.database.entities.TABLE_GLUCOSE_VALUES
-import app.aaps.database.entities.TABLE_HEART_RATE
-import app.aaps.database.entities.TABLE_PREFERENCE_CHANGES
-import app.aaps.database.entities.TABLE_PROFILE_SWITCHES
-import app.aaps.database.entities.TABLE_RUNNING_MODE
-import app.aaps.database.entities.TABLE_STEPS_COUNT
-import app.aaps.database.entities.TABLE_TEMPORARY_BASALS
-import app.aaps.database.entities.TABLE_THERAPY_EVENTS
-import app.aaps.database.entities.TABLE_TOTAL_DAILY_DOSES
-import app.aaps.database.entities.TABLE_USER_ENTRY
+import app.gmaaps.database.entities.TABLE_APS_RESULTS
+import app.gmaaps.database.entities.TABLE_BOLUSES
+import app.gmaaps.database.entities.TABLE_CALIBRATION_ENTRIES
+import app.gmaaps.database.entities.TABLE_EFFECTIVE_PROFILE_SWITCHES
+import app.gmaaps.database.entities.TABLE_GLUCOSE_VALUES
+import app.gmaaps.database.entities.TABLE_HEART_RATE
+import app.gmaaps.database.entities.TABLE_PREFERENCE_CHANGES
+import app.gmaaps.database.entities.TABLE_PROFILE_SWITCHES
+import app.gmaaps.database.entities.TABLE_RUNNING_MODE
+import app.gmaaps.database.entities.TABLE_STEPS_COUNT
+import app.gmaaps.database.entities.TABLE_TEMPORARY_BASALS
+import app.gmaaps.database.entities.TABLE_THERAPY_EVENTS
+import app.gmaaps.database.entities.TABLE_TOTAL_DAILY_DOSES
+import app.gmaaps.database.entities.TABLE_USER_ENTRY
 
 /*
  * The database migrations, shared by every platform. The list itself is `databaseMigrations` at the
@@ -355,3 +355,4 @@ internal val databaseMigrations: Array<Migration> = arrayOf(
     migration34to35,
     migration35to36,
 )
+

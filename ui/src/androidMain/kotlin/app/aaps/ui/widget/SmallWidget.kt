@@ -1,4 +1,4 @@
-package app.aaps.ui.widget
+﻿package app.gmaaps.ui.widget
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -8,12 +8,12 @@ import android.content.Intent
 import android.graphics.Paint
 import android.view.View
 import android.widget.RemoteViews
-import app.aaps.core.interfaces.di.injectMetroMembers
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.ui.R
-import app.aaps.ui.widget.glance.WidgetDependencies
-import app.aaps.ui.widget.glance.resolveClientColor
+import app.gmaaps.core.interfaces.di.injectMetroMembers
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.ui.R
+import app.gmaaps.ui.widget.glance.WidgetDependencies
+import app.gmaaps.ui.widget.glance.resolveClientColor
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -27,7 +27,7 @@ import kotlinx.coroutines.launch
  * Layout: profile name on top, big BG + trend arrow, then time-ago / delta and
  * IOB / COB rows. Transparent background. Tap opens AAPS.
  *
- * Data is loaded via [app.aaps.ui.widget.glance.WidgetStateLoader] (same source
+ * Data is loaded via [app.gmaaps.ui.widget.glance.WidgetStateLoader] (same source
  * as the other widgets) inside [goAsync].
  */
 class SmallWidget : AppWidgetProvider() {
@@ -93,3 +93,4 @@ class SmallWidget : AppWidgetProvider() {
         }
     }
 }
+

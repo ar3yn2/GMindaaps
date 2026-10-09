@@ -1,19 +1,19 @@
-package app.aaps.pump.virtual
+﻿package app.gmaaps.pump.virtual
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.keys.StringKey
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -147,3 +147,4 @@ class VirtualPumpPluginTest : TestBaseWithProfile() {
         verifyBlocking(persistenceLayer, never()) { insertOrUpdateBolus(any(), any(), any(), anyOrNull()) }
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.desktop.shell.platform
+﻿package app.gmaaps.desktop.shell.platform
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 
 /**
  * For the bindings the desktop graph needs but has no answer for yet.
@@ -33,3 +33,4 @@ internal fun AAPSLogger.failNotOnDesktopYet(what: String): Nothing {
     error(LTag.CORE, "Not implemented on desktop yet: $what")
     throw NotImplementedError("$what is not implemented on desktop yet")
 }
+

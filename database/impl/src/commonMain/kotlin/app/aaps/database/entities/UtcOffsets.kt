@@ -1,4 +1,4 @@
-package app.aaps.database.entities
+﻿package app.gmaaps.database.entities
 
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.offsetAt
@@ -13,3 +13,4 @@ import kotlin.time.Instant
  */
 fun defaultUtcOffset(timestamp: Long): Long =
     TimeZone.currentSystemDefault().offsetAt(Instant.fromEpochMilliseconds(timestamp)).totalSeconds * 1000L
+

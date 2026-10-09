@@ -1,6 +1,6 @@
-package app.aaps.pump.medtrum.comm
+﻿package app.gmaaps.pump.medtrum.comm
 
-import app.aaps.pump.medtrum.util.CrcUtils.calcCrc8
+import app.gmaaps.pump.medtrum.util.CrcUtils.calcCrc8
 
 class ReadDataPacket(data: ByteArray) {
 
@@ -41,3 +41,4 @@ class ReadDataPacket(data: ByteArray) {
         return failed
     }
 }
+

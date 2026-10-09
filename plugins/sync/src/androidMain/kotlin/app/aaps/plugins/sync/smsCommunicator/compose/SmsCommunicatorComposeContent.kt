@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.smsCommunicator.compose
+﻿package app.gmaaps.plugins.sync.smsCommunicator.compose
 
 import androidx.compose.runtime.Composable
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.metroViewModel
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.metroViewModel
 
 class SmsCommunicatorComposeContent : ComposablePluginContent {
 
@@ -18,3 +18,4 @@ class SmsCommunicatorComposeContent : ComposablePluginContent {
         SmsCommunicatorScreen(viewModel = viewModel)
     }
 }
+

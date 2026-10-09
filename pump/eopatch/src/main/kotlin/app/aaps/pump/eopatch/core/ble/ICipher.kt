@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.ble
+﻿package app.gmaaps.pump.eopatch.core.ble
 
 import io.reactivex.rxjava3.core.Single
 
@@ -19,3 +19,4 @@ interface ICipher {
         const val SEQ2525 = 0x2525
     }
 }
+

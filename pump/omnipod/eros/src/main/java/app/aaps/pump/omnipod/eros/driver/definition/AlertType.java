@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
 public enum AlertType {
     FINISH_PAIRING_REMINDER,
@@ -9,3 +9,4 @@ public enum AlertType {
     LOW_RESERVOIR_ALERT,
     AUTO_OFF_ALARM
 }
+

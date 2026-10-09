@@ -1,8 +1,8 @@
-package app.aaps.plugins.aps.openAPS
+﻿package app.gmaaps.plugins.aps.openAPS
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn

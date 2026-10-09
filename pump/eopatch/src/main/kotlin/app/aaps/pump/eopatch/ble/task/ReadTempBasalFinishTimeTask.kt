@@ -1,9 +1,9 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.core.api.TempBasalFinishTimeGet
-import app.aaps.pump.eopatch.core.response.TempBasalFinishTimeResponse
-import app.aaps.pump.eopatch.vo.TempBasalManager
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.core.api.TempBasalFinishTimeGet
+import app.gmaaps.pump.eopatch.core.response.TempBasalFinishTimeResponse
+import app.gmaaps.pump.eopatch.vo.TempBasalManager
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -42,3 +42,4 @@ class ReadTempBasalFinishTimeTask() : TaskBase(TaskFunc.READ_TEMP_BASAL_FINISH_T
         }
     }
 }
+

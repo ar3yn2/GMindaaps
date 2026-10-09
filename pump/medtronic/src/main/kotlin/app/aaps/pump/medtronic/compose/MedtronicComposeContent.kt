@@ -1,4 +1,4 @@
-package app.aaps.pump.medtronic.compose
+﻿package app.gmaaps.pump.medtronic.compose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -23,20 +23,20 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.LocalSnackbarHostState
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.dialogs.OkDialog
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.core.ui.compose.pump.BlePreCheckHost
-import app.aaps.core.ui.compose.pump.PumpOverviewScreen
-import app.aaps.pump.common.compose.RileyLinkPairWizardEvent
-import app.aaps.pump.common.compose.RileyLinkPairWizardScreen
-import app.aaps.pump.common.compose.RileyLinkPairWizardViewModel
-import app.aaps.pump.common.compose.RileyLinkStatusScreen
-import app.aaps.pump.common.compose.RileyLinkStatusViewModel
-import app.aaps.pump.medtronic.R
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.LocalSnackbarHostState
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.dialogs.OkDialog
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.core.ui.compose.pump.BlePreCheckHost
+import app.gmaaps.core.ui.compose.pump.PumpOverviewScreen
+import app.gmaaps.pump.common.compose.RileyLinkPairWizardEvent
+import app.gmaaps.pump.common.compose.RileyLinkPairWizardScreen
+import app.gmaaps.pump.common.compose.RileyLinkPairWizardViewModel
+import app.gmaaps.pump.common.compose.RileyLinkStatusScreen
+import app.gmaaps.pump.common.compose.RileyLinkStatusViewModel
+import app.gmaaps.pump.medtronic.R
 
 class MedtronicComposeContent(
     private val pluginName: String,
@@ -65,28 +65,28 @@ class MedtronicComposeContent(
         // Toolbar
         val overviewNavIcon: @Composable () -> Unit = {
             IconButton(onClick = onNavigateBack) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.aaps.core.ui.R.string.back))
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.gmaaps.core.ui.R.string.back))
             }
         }
         val settingsAction: @Composable RowScope.() -> Unit = {
             onSettings?.let { action ->
                 IconButton(onClick = action) {
-                    Icon(Icons.Filled.Settings, contentDescription = stringResource(app.aaps.core.ui.R.string.settings))
+                    Icon(Icons.Filled.Settings, contentDescription = stringResource(app.gmaaps.core.ui.R.string.settings))
                 }
             }
         }
 
-        val historyTitle = stringResource(app.aaps.core.ui.R.string.pump_history)
+        val historyTitle = stringResource(app.gmaaps.core.ui.R.string.pump_history)
         val subScreenNavIcon: @Composable () -> Unit = {
             IconButton(onClick = { showHistory = false }) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.aaps.core.ui.R.string.back))
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.gmaaps.core.ui.R.string.back))
             }
         }
 
-        val rlStatsTitle = stringResource(app.aaps.core.ui.R.string.settings)
+        val rlStatsTitle = stringResource(app.gmaaps.core.ui.R.string.settings)
         val rlStatsNavIcon: @Composable () -> Unit = {
             IconButton(onClick = { showRileyLinkStats = false }) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.aaps.core.ui.R.string.back))
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.gmaaps.core.ui.R.string.back))
             }
         }
 
@@ -199,3 +199,4 @@ class MedtronicComposeContent(
         }
     }
 }
+

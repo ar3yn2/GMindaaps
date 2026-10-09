@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.json.JsonObject
@@ -226,3 +226,4 @@ class DeviceStatusMapperTest {
         for (key in expected.keys) assertThat(actual[key]).isEqualTo(expected[key])
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.remotemodel.RemoteApiPermissions
+import app.gmaaps.core.nssdk.remotemodel.RemoteApiPermissions
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -45,3 +45,4 @@ class ApiPermissionMapperTest {
         assertThat(local.settings.create).isFalse()
     }
 }
+

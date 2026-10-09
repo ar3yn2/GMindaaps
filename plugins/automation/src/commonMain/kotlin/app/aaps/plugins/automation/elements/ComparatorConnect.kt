@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.plugins.automation.AutomationStrings
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.plugins.automation.AutomationStrings
 
 class ComparatorConnect(private val rh: TextResolver) {
 
@@ -31,3 +31,4 @@ class ComparatorConnect(private val rh: TextResolver) {
 
     var value = Compare.ON_CONNECT
 }
+

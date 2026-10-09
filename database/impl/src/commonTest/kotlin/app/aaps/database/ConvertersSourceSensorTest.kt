@@ -1,7 +1,7 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
-import app.aaps.database.di.MIGRATION_35_TO_36_PAIRS
-import app.aaps.database.entities.GlucoseValue
+import app.gmaaps.database.di.MIGRATION_35_TO_36_PAIRS
+import app.gmaaps.database.entities.GlucoseValue
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull
@@ -77,3 +77,4 @@ class ConvertersSourceSensorTest {
         assertNull(converters.toSourceSensor(null))
     }
 }
+

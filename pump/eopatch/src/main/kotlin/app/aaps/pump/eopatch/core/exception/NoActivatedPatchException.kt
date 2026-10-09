@@ -1,3 +1,4 @@
-package app.aaps.pump.eopatch.core.exception
+﻿package app.gmaaps.pump.eopatch.core.exception
 
 class NoActivatedPatchException : Exception()
+

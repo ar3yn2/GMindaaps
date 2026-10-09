@@ -1,7 +1,7 @@
-package app.aaps.pump.medtrum.encryption
+﻿package app.gmaaps.pump.medtrum.encryption
 
-import app.aaps.pump.medtrum.extension.toByteArray
-import app.aaps.pump.medtrum.extension.toLong
+import app.gmaaps.pump.medtrum.extension.toByteArray
+import app.gmaaps.pump.medtrum.extension.toLong
 
 class Crypt {
 
@@ -586,3 +586,4 @@ class Crypt {
         return (x ushr n or (x shl (s - n))).toInt()
     }
 }
+

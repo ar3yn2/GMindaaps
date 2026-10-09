@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.data.model.ble
+﻿package app.gmaaps.pump.carelevo.data.model.ble
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -442,3 +442,4 @@ internal class ProtocolBtModelsTest {
         assertThat(rsp).isNotEqualTo(fail)
     }
 }
+

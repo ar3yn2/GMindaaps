@@ -1,16 +1,16 @@
-package app.aaps.ui.compose.scenes.wizard
+﻿package app.gmaaps.ui.compose.scenes.wizard
 
 import androidx.lifecycle.SavedStateHandle
-import app.aaps.core.data.model.SceneAction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.scenes.SceneStore
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.Translator
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.generatedTextResolver
-import app.aaps.ui.compose.scenes.SceneTemplate
+import app.gmaaps.core.data.model.SceneAction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.scenes.SceneStore
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.Translator
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.generatedTextResolver
+import app.gmaaps.ui.compose.scenes.SceneTemplate
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -157,3 +157,4 @@ internal class SceneWizardViewModelTest {
         assertThat(state.ttEnabled).isFalse()
     }
 }
+

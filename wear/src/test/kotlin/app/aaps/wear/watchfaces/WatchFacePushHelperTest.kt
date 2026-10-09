@@ -1,12 +1,12 @@
-package app.aaps.wear.watchfaces
+﻿package app.gmaaps.wear.watchfaces
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventWearToMobile
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.interfaces.sharedPreferences.SP
-import app.aaps.core.keys.PushedWatchfaceId
-import app.aaps.wear.AAPSLoggerTest
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventWearToMobile
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.core.keys.PushedWatchfaceId
+import app.gmaaps.wear.AAPSLoggerTest
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
@@ -110,3 +110,4 @@ internal class WatchFacePushHelperTest {
         verify(sp, never()).putString(any<String>(), any())
     }
 }
+

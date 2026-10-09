@@ -1,4 +1,4 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -139,3 +139,4 @@ class PreferenceKeyResolverTest {
         assertThat(forward.resolve(stored)).isEqualTo(backward.resolve(stored))
     }
 }
+

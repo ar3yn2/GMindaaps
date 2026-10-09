@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.networking
+﻿package app.gmaaps.core.nssdk.networking
 
 /**
  * Turns what the caller supplies into the base URL the client uses.
@@ -24,3 +24,4 @@ internal object NsUrl {
         return "$withScheme/api/"
     }
 }
+

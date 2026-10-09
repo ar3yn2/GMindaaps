@@ -1,6 +1,6 @@
-package app.aaps.pump.common.hw.rileylink.ble.command
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.command
 
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
 
 abstract class RileyLinkCommand {
 
@@ -8,3 +8,4 @@ abstract class RileyLinkCommand {
     abstract fun getRaw(): ByteArray
     fun getByteArray(vararg input: Byte): ByteArray = input
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.history.database;
+package app.gmaaps.pump.omnipod.eros.history.database;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -6,7 +6,7 @@ import androidx.room.Entity;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-import app.aaps.core.utils.DateTimeUtil;
+import app.gmaaps.core.utils.DateTimeUtil;
 
 /**
  * Created by andy on 30.11.2019.
@@ -104,3 +104,4 @@ public class ErosHistoryRecordEntity implements Comparable<ErosHistoryRecordEnti
         return (int) (otherOne.date - this.date);
     }
 }
+

@@ -1,15 +1,15 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.medtrum.MedtrumPump
-import app.aaps.pump.medtrum.comm.enums.AlarmState
-import app.aaps.pump.medtrum.comm.enums.BasalType
-import app.aaps.pump.medtrum.comm.enums.MedtrumPumpState
-import app.aaps.pump.medtrum.extension.toInt
-import app.aaps.pump.medtrum.extension.toLong
-import app.aaps.pump.medtrum.util.MedtrumTimeUtil
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.medtrum.MedtrumPump
+import app.gmaaps.pump.medtrum.comm.enums.AlarmState
+import app.gmaaps.pump.medtrum.comm.enums.BasalType
+import app.gmaaps.pump.medtrum.comm.enums.MedtrumPumpState
+import app.gmaaps.pump.medtrum.extension.toInt
+import app.gmaaps.pump.medtrum.extension.toLong
+import app.gmaaps.pump.medtrum.util.MedtrumTimeUtil
 import dev.zacsweers.metro.Inject
 
 class NotificationPacket(val injector: MetroMemberInjector) {
@@ -407,3 +407,4 @@ class NotificationPacket(val injector: MetroMemberInjector) {
         return offset + SIZE_UNUSED_LEGACY
     }
 }
+

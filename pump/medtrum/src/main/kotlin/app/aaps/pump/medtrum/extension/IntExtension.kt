@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.extension
+﻿package app.gmaaps.pump.medtrum.extension
 
 /** Extensions for different types of conversions needed when doing stuff with bytes */
 fun Int.toByteArray(byteLength: Int): ByteArray {
@@ -8,3 +8,4 @@ fun Int.toByteArray(byteLength: Int): ByteArray {
     }
     return bytes
 }
+

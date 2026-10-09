@@ -1,4 +1,4 @@
-package app.aaps.pump.danars.services
+﻿package app.gmaaps.pump.danars.services
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -6,36 +6,36 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.util.Base64
 import androidx.core.app.ActivityCompat
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.pump.ble.BleTransport
-import app.aaps.core.interfaces.pump.ble.BleTransportListener
-import app.aaps.core.interfaces.pump.ble.PairingState
-import app.aaps.core.interfaces.pump.ble.PairingStep
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.extensions.scanForActivity
-import app.aaps.core.utils.notifyAll
-import app.aaps.core.utils.waitMillis
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.R
-import app.aaps.pump.dana.keys.DanaLongKey
-import app.aaps.pump.dana.keys.DanaStringComposedKey
-import app.aaps.pump.danars.DanaRSPlugin
-import app.aaps.pump.danars.comm.DanaRSMessageHashTable
-import app.aaps.pump.danars.comm.DanaRSPacket
-import app.aaps.pump.danars.comm.DanaRSPacketEtcKeepConnection
-import app.aaps.pump.danars.encryption.BleEncryption
-import app.aaps.pump.danars.encryption.EncryptionType
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.pump.ble.BleTransport
+import app.gmaaps.core.interfaces.pump.ble.BleTransportListener
+import app.gmaaps.core.interfaces.pump.ble.PairingState
+import app.gmaaps.core.interfaces.pump.ble.PairingStep
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.extensions.scanForActivity
+import app.gmaaps.core.utils.notifyAll
+import app.gmaaps.core.utils.waitMillis
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.R
+import app.gmaaps.pump.dana.keys.DanaLongKey
+import app.gmaaps.pump.dana.keys.DanaStringComposedKey
+import app.gmaaps.pump.danars.DanaRSPlugin
+import app.gmaaps.pump.danars.comm.DanaRSMessageHashTable
+import app.gmaaps.pump.danars.comm.DanaRSPacket
+import app.gmaaps.pump.danars.comm.DanaRSPacketEtcKeepConnection
+import app.gmaaps.pump.danars.encryption.BleEncryption
+import app.gmaaps.pump.danars.encryption.EncryptionType
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -99,7 +99,7 @@ class BLEComm(
     @Synchronized
     fun connect(from: String, address: String?): Boolean {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-            rxBus.send(EventShowSnackbar(context.getString(app.aaps.core.ui.R.string.need_connect_permission), EventShowSnackbar.Type.Error))
+            rxBus.send(EventShowSnackbar(context.getString(app.gmaaps.core.ui.R.string.need_connect_permission), EventShowSnackbar.Type.Error))
             aapsLogger.error(LTag.PUMPBTCOMM, "missing permission: $from")
             return false
         }
@@ -577,17 +577,17 @@ class BLEComm(
             // response BUSY: error status
         } else if (decryptedBuffer.size == 6 && decryptedBuffer[2] == 'B'.code.toByte() && decryptedBuffer[3] == 'U'.code.toByte() && decryptedBuffer[4] == 'S'.code.toByte() && decryptedBuffer[5] == 'Y'.code.toByte()) {
             aapsLogger.debug(LTag.PUMPBTCOMM, "<<<<< " + "ENCRYPTION__PUMP_CHECK (BUSY)" + " " + DanaRSPacket.toHexString(decryptedBuffer))
-            bleTransport.updatePairingState(PairingState(step = PairingStep.ERROR, errorMessage = rh.gs(app.aaps.core.ui.R.string.pump_busy)))
+            bleTransport.updatePairingState(PairingState(step = PairingStep.ERROR, errorMessage = rh.gs(app.gmaaps.core.ui.R.string.pump_busy)))
             mSendQueue.clear()
-            rxBus.send(EventPumpStatusChanged(EventPumpStatusChanged.Status.DISCONNECTED, rh.gs(app.aaps.core.ui.R.string.pump_busy)))
+            rxBus.send(EventPumpStatusChanged(EventPumpStatusChanged.Status.DISCONNECTED, rh.gs(app.gmaaps.core.ui.R.string.pump_busy)))
         } else {
             // ERROR in response, wrong serial number
             aapsLogger.debug(LTag.PUMPBTCOMM, "<<<<< " + "ENCRYPTION__PUMP_CHECK (ERROR)" + " " + DanaRSPacket.toHexString(decryptedBuffer))
-            bleTransport.updatePairingState(PairingState(step = PairingStep.ERROR, errorMessage = rh.gs(app.aaps.core.ui.R.string.connection_error)))
+            bleTransport.updatePairingState(PairingState(step = PairingStep.ERROR, errorMessage = rh.gs(app.gmaaps.core.ui.R.string.connection_error)))
             mSendQueue.clear()
-            rxBus.send(EventPumpStatusChanged(EventPumpStatusChanged.Status.DISCONNECTED, rh.gs(app.aaps.core.ui.R.string.connection_error)))
+            rxBus.send(EventPumpStatusChanged(EventPumpStatusChanged.Status.DISCONNECTED, rh.gs(app.gmaaps.core.ui.R.string.connection_error)))
             danaRSPlugin.clearPairing()
-            notificationManager.post(NotificationId.WRONG_SERIAL_NUMBER, TextRef.AndroidRes(app.aaps.core.ui.R.string.password_cleared))
+            notificationManager.post(NotificationId.WRONG_SERIAL_NUMBER, TextRef.AndroidRes(app.gmaaps.core.ui.R.string.password_cleared))
         }
     }
 
@@ -883,3 +883,4 @@ class BLEComm(
     }
 
 }
+

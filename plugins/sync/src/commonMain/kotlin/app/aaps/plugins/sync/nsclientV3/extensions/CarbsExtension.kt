@@ -1,12 +1,12 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.CA
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.utils.HardLimits
-import app.aaps.core.nssdk.localmodel.treatment.EventType
-import app.aaps.core.nssdk.localmodel.treatment.NSCarbs
+import app.gmaaps.core.data.model.CA
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.utils.HardLimits
+import app.gmaaps.core.nssdk.localmodel.treatment.EventType
+import app.gmaaps.core.nssdk.localmodel.treatment.NSCarbs
 import kotlin.math.min
 
 fun NSCarbs.toCarbs(): CA =
@@ -35,3 +35,4 @@ fun CA.toNSCarbs(): NSCarbs =
         pumpSerial = ids.pumpSerial,
         endId = ids.endId
     )
+

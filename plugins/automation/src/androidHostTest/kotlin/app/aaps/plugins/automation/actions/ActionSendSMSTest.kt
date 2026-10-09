@@ -1,7 +1,7 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.InputString
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.InputString
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -50,3 +50,4 @@ class ActionSendSMSTest : ActionsTestBase() {
         assertThat(sut.text.value).isEqualTo("Asd")
     }
 }
+

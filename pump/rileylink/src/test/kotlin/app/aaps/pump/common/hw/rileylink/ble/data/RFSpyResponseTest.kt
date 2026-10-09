@@ -1,7 +1,7 @@
-package app.aaps.pump.common.hw.rileylink.ble.data
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data
 
-import app.aaps.pump.common.hw.rileylink.ble.command.RileyLinkCommand
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
+import app.gmaaps.pump.common.hw.rileylink.ble.command.RileyLinkCommand
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertNotNull
@@ -421,3 +421,4 @@ class RFSpyResponseTest {
         assertEquals("UnknownCommand", rfSpyResponse.toString())
     }
 }
+

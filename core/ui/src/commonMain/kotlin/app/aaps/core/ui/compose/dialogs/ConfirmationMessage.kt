@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -7,9 +7,9 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
-import app.aaps.core.data.ui.ConfirmationLine
-import app.aaps.core.data.ui.ConfirmationRole
-import app.aaps.core.ui.compose.AapsTheme
+import app.gmaaps.core.data.ui.ConfirmationLine
+import app.gmaaps.core.data.ui.ConfirmationRole
+import app.gmaaps.core.ui.compose.AapsTheme
 
 /**
  * Render structured [ConfirmationLine]s into a themed [AnnotatedString]: each line's [ConfirmationRole] is
@@ -62,3 +62,4 @@ fun List<ConfirmationLine>.toAnnotatedString(primaryColor: Color): AnnotatedStri
         }
     }
 }
+

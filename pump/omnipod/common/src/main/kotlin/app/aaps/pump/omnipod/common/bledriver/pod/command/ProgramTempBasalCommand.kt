@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.HeaderEnabledCommand
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.BasalInsulinProgramElement
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util.ProgramBasalUtil
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util.ProgramTempBasalUtil
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.HeaderEnabledCommand
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.BasalInsulinProgramElement
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util.ProgramBasalUtil
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util.ProgramTempBasalUtil
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
 import java.nio.ByteBuffer
 
 // NOT SUPPORTED: percentage temp basal
@@ -129,3 +129,4 @@ class ProgramTempBasalCommand private constructor(
             )
         }
 }
+

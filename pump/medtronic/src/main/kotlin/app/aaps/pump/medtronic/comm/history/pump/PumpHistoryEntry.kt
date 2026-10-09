@@ -1,10 +1,10 @@
-package app.aaps.pump.medtronic.comm.history.pump
+﻿package app.gmaaps.pump.medtronic.comm.history.pump
 
-import app.aaps.core.utils.StringUtil
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.pump.medtronic.comm.history.MedtronicHistoryEntry
-import app.aaps.pump.medtronic.data.dto.BolusDTO
-import app.aaps.pump.medtronic.defs.MedtronicDeviceType
+import app.gmaaps.core.utils.StringUtil
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.pump.medtronic.comm.history.MedtronicHistoryEntry
+import app.gmaaps.pump.medtronic.data.dto.BolusDTO
+import app.gmaaps.pump.medtronic.defs.MedtronicDeviceType
 import com.google.gson.annotations.Expose
 import java.util.Objects
 

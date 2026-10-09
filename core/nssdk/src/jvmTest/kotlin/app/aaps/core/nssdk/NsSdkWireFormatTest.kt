@@ -1,8 +1,8 @@
-package app.aaps.core.nssdk
+﻿package app.gmaaps.core.nssdk
 
-import app.aaps.core.nssdk.localmodel.treatment.EventType
-import app.aaps.core.nssdk.remotemodel.LastModified
-import app.aaps.core.nssdk.remotemodel.RemoteTreatment
+import app.gmaaps.core.nssdk.localmodel.treatment.EventType
+import app.gmaaps.core.nssdk.remotemodel.LastModified
+import app.gmaaps.core.nssdk.remotemodel.RemoteTreatment
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonObject
@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test
  * The specific hazard is that kotlinx's default is the **opposite** of Gson's. Gson writes every
  * non-null field. kotlinx omits any field whose value equals its default unless `encodeDefaults` is
  * on, so `0`, `false` and every field that was given a `= null` default would quietly disappear.
- * See [app.aaps.core.nssdk.nsSdkJson].
+ * See [app.gmaaps.core.nssdk.nsSdkJson].
  */
 class NsSdkWireFormatTest {
 
@@ -149,3 +149,4 @@ class NsSdkWireFormatTest {
             assertThat(written[key]).isEqualTo(before[key])
     }
 }
+

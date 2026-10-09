@@ -1,7 +1,7 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.ui.CoreUiStrings
 
 /**
  * Builds the common [PumpInfoRow] items that every pump shares.
@@ -116,3 +116,4 @@ class PumpOverviewStateBuilder(
         }
     }
 }
+

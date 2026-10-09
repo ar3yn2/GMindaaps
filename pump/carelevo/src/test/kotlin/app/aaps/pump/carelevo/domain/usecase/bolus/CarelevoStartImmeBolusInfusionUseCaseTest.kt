@@ -1,9 +1,9 @@
-package app.aaps.pump.carelevo.domain.usecase.bolus
+﻿package app.gmaaps.pump.carelevo.domain.usecase.bolus
 
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoImmeBolusInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoImmeBolusInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -162,3 +162,4 @@ internal class CarelevoStartImmeBolusInfusionUseCaseTest {
         assertThat(capturedPatch().bolusActionSeq).isEqualTo(0)
     }
 }
+

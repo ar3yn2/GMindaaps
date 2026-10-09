@@ -1,18 +1,18 @@
-package app.aaps.plugins.source
+﻿package app.gmaaps.plugins.source
 
 import androidx.work.ListenableWorker
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.receivers.Intents
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.utils.receivers.DataInbox
-import app.aaps.shared.tests.BundleMock
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.receivers.Intents
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.utils.receivers.DataInbox
+import app.gmaaps.shared.tests.BundleMock
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions
@@ -163,3 +163,4 @@ class XdripSourceWorkerTest : TestBaseWithProfile() {
         putString(Intents.EXTRA_BG_SLOPE_NAME, "Flat")
     }
 }
+

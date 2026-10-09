@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     // NOT com.android.library. AGP 9 refuses that plugin together with the multiplatform plugin.
@@ -14,7 +14,7 @@ plugins {
 }
 
 allOpen {
-    annotation("app.aaps.annotations.OpenForTesting")
+    annotation("app.gmaaps.annotations.OpenForTesting")
 }
 
 // The three qualified plugin buckets are keyed by @AllConfigs, @APS and @NotNSClient, each carrying
@@ -25,7 +25,7 @@ allOpen {
 // it. The strings themselves do not move, and AAPT keeps resolving them on Android exactly as before.
 val generateConstraintsStrings = tasks.register<GenerateKeyStringsTask>("generateConstraintsStrings") {
     resDir.set(layout.projectDirectory.dir("src/androidMain/res"))
-    packageName.set("app.aaps.plugins.constraints")
+    packageName.set("app.gmaaps.plugins.constraints")
     owner.set("constraints")
     objectName.set("ConstraintsStrings")
     idsObjectName.set("ConstraintsStringIds")
@@ -38,7 +38,7 @@ val generateConstraintsStrings = tasks.register<GenerateKeyStringsTask>("generat
 
 kotlin {
     android {
-        namespace = "app.aaps.plugins.constraints"
+        namespace = "app.gmaaps.plugins.constraints"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         androidResources { enable = true }
@@ -139,3 +139,4 @@ tasks.withType<Test> {
         excludes = listOf("jdk.internal.*")
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.profile.ProfileFunction
 
 class InputTempTarget(profileFunction: ProfileFunction) {
 
@@ -13,3 +13,4 @@ class InputTempTarget(profileFunction: ProfileFunction) {
         value = if (units == GlucoseUnit.MMOL) 6.0 else 110.0
     }
 }
+

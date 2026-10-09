@@ -1,31 +1,31 @@
-package app.aaps.pump.carelevo.command
+﻿package app.gmaaps.pump.carelevo.command
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.carelevo.ble.BleResponse
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.ble.commands.AlarmClearResponse
-import app.aaps.pump.carelevo.ble.commands.InfusionThresholdResponse
-import app.aaps.pump.carelevo.ble.commands.NoticeThresholdResponse
-import app.aaps.pump.carelevo.ble.commands.PumpResumeResponse
-import app.aaps.pump.carelevo.ble.commands.SafetyCheckCommand
-import app.aaps.pump.carelevo.ble.commands.SafetyCheckResponse
-import app.aaps.pump.carelevo.ble.commands.SimpleResultResponse
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.SafetyProgress
-import app.aaps.pump.carelevo.domain.usecase.alarm.AlarmClearPatchDiscardUseCase
-import app.aaps.pump.carelevo.domain.usecase.alarm.AlarmClearRequestUseCase
-import app.aaps.pump.carelevo.domain.usecase.basal.CarelevoSetBasalProgramUseCase
-import app.aaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpResumeUseCase
-import app.aaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpStopUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchNeedleInsertionCheckUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchSafetyCheckUseCase
-import app.aaps.pump.carelevo.domain.usecase.userSetting.CarelevoUpdateLowInsulinNoticeAmountUseCase
-import app.aaps.pump.carelevo.domain.usecase.userSetting.CarelevoUpdateMaxBolusDoseUseCase
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.ble.commands.AlarmClearResponse
+import app.gmaaps.pump.carelevo.ble.commands.InfusionThresholdResponse
+import app.gmaaps.pump.carelevo.ble.commands.NoticeThresholdResponse
+import app.gmaaps.pump.carelevo.ble.commands.PumpResumeResponse
+import app.gmaaps.pump.carelevo.ble.commands.SafetyCheckCommand
+import app.gmaaps.pump.carelevo.ble.commands.SafetyCheckResponse
+import app.gmaaps.pump.carelevo.ble.commands.SimpleResultResponse
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.SafetyProgress
+import app.gmaaps.pump.carelevo.domain.usecase.alarm.AlarmClearPatchDiscardUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.alarm.AlarmClearRequestUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.basal.CarelevoSetBasalProgramUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpResumeUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpStopUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchNeedleInsertionCheckUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchSafetyCheckUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.userSetting.CarelevoUpdateLowInsulinNoticeAmountUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.userSetting.CarelevoUpdateMaxBolusDoseUseCase
 import com.google.common.truth.Truth.assertThat
 import dev.zacsweers.metro.Provider
 import io.reactivex.rxjava3.subjects.BehaviorSubject
@@ -52,7 +52,7 @@ import java.util.Optional
  * JVM unit tests for [CarelevoActivationExecutor]. Every op is driven through the public [CarelevoActivationExecutor.execute]
  * entry point (the only public API besides the [CarelevoActivationExecutor.safetyProgress] flow). The
  * coroutine [CarelevoBleSession] and the persistence-only use cases are mocked; suspend calls are stubbed
- * with the module's `whenever { ... }` lambda form (see [app.aaps.pump.carelevo.CarelevoPumpPluginTestBase]).
+ * with the module's `whenever { ... }` lambda form (see [app.gmaaps.pump.carelevo.CarelevoPumpPluginTestBase]).
  */
 @ExtendWith(MockitoExtension::class)
 @MockitoSettings(strictness = Strictness.LENIENT)
@@ -789,3 +789,4 @@ internal class CarelevoActivationExecutorTest {
         override fun cancelled(cancelled: Boolean): PumpEnactResult = apply { this.cancelled = cancelled }
     }
 }
+

@@ -1,11 +1,11 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.CA
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.nssdk.localmodel.treatment.NSCarbs
-import app.aaps.core.nssdk.mapper.convertToRemoteAndBack
-import app.aaps.plugins.sync.extensions.contentEqualsTo
+import app.gmaaps.core.data.model.CA
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.nssdk.localmodel.treatment.NSCarbs
+import app.gmaaps.core.nssdk.mapper.convertToRemoteAndBack
+import app.gmaaps.plugins.sync.extensions.contentEqualsTo
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -51,3 +51,4 @@ internal class CarbsExtensionKtTest {
         assertThat(carbs.ids.contentEqualsTo(carbs2.ids)).isTrue()
     }
 }
+

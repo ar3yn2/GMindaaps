@@ -1,11 +1,11 @@
-package app.aaps.ui.compose.treatments.viewmodels
+﻿package app.gmaaps.ui.compose.treatments.viewmodels
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -99,3 +99,4 @@ internal class RunningModeViewModelTest {
         assertThat(sut.getDeleteConfirmationMessage()).isEqualTo("Are you sure you want to remove 2 items")
     }
 }
+

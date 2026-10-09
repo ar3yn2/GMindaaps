@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.domain.usecase.bolus
+﻿package app.gmaaps.pump.carelevo.domain.usecase.bolus
 
-import app.aaps.pump.carelevo.domain.model.infusion.derivePatchMode
-import app.aaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.pump.carelevo.domain.model.infusion.derivePatchMode
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
 import dev.zacsweers.metro.Inject
 import kotlin.time.Clock
 
@@ -31,3 +31,4 @@ class CarelevoCancelExtendBolusInfusionUseCase @Inject constructor(
         require(patchInfoRepository.updatePatchInfo(patchInfo.copy(updatedAt = Clock.System.now(), mode = mode))) { "update patch info is failed" }
     }.isSuccess
 }
+

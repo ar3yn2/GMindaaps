@@ -1,8 +1,8 @@
-package app.aaps.ios.shell
+﻿package app.gmaaps.ios.shell
 
-import app.aaps.database.di.IosAppDatabaseBuilder
-import app.aaps.database.entities.GlucoseValue
-import app.aaps.database.transactions.CgmSourceTransaction
+import app.gmaaps.database.di.IosAppDatabaseBuilder
+import app.gmaaps.database.entities.GlucoseValue
+import app.gmaaps.database.transactions.CgmSourceTransaction
 import kotlinx.coroutines.runBlocking
 
 /**
@@ -49,3 +49,4 @@ internal object DatabaseProbe {
         "DATABASE FAILED: ${e::class.simpleName}: ${e.message}"
     }
 }
+

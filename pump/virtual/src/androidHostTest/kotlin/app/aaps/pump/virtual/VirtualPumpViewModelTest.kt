@@ -1,20 +1,20 @@
-package app.aaps.pump.virtual
+﻿package app.gmaaps.pump.virtual
 
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventQueueChanged
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.virtual.keys.VirtualBooleanNonPreferenceKey
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventQueueChanged
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.virtual.keys.VirtualBooleanNonPreferenceKey
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -110,3 +110,4 @@ internal class VirtualPumpViewModelTest {
         assertThat(state.managementActions[1].visible).isTrue()
     }
 }
+

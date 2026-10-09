@@ -1,4 +1,4 @@
-package app.aaps.wear.complications
+﻿package app.gmaaps.wear.complications
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -27,3 +27,4 @@ class AmbientReadoutTapTest {
         assertThat(readoutTapAction(dozing = true)).isEqualTo(ComplicationAction.NONE)
     }
 }
+

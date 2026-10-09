@@ -1,9 +1,9 @@
-package app.aaps.pump.equil.manager.command
+﻿package app.gmaaps.pump.equil.manager.command
 
-import app.aaps.pump.equil.database.EquilHistoryRecord
-import app.aaps.pump.equil.manager.EquilManager
-import app.aaps.pump.equil.manager.EquilResponse
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.pump.equil.database.EquilHistoryRecord
+import app.gmaaps.pump.equil.manager.EquilManager
+import app.gmaaps.pump.equil.manager.EquilResponse
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
@@ -113,3 +113,4 @@ class BaseCmdTest : TestBaseWithProfile() {
         assertEquals("0F0F", BaseCmd.DEFAULT_PORT)
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.dana.keys
+﻿package app.gmaaps.pump.dana.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 enum class DanaLongKey(
     override val key: String,
@@ -9,3 +9,4 @@ enum class DanaLongKey(
 
     LastClearKeyRequest("rs_last_clear_key_request", 0),
 }
+

@@ -1,33 +1,33 @@
-package app.aaps.implementation.plugin
+﻿package app.gmaaps.implementation.plugin
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.aps.APS
-import app.aaps.core.interfaces.aps.Sensitivity
-import app.aaps.core.interfaces.calibration.Calibration
-import app.aaps.core.interfaces.constraints.Objectives
-import app.aaps.core.interfaces.constraints.Safety
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AapsNotification
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationAction
-import app.aaps.core.interfaces.notifications.NotificationHandle
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.PermissionGroup
-import app.aaps.core.interfaces.plugin.PermissionProvider
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.smoothing.Smoothing
-import app.aaps.core.interfaces.source.BgSource
-import app.aaps.core.interfaces.sync.Sync
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.aps.APS
+import app.gmaaps.core.interfaces.aps.Sensitivity
+import app.gmaaps.core.interfaces.calibration.Calibration
+import app.gmaaps.core.interfaces.constraints.Objectives
+import app.gmaaps.core.interfaces.constraints.Safety
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AapsNotification
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationAction
+import app.gmaaps.core.interfaces.notifications.NotificationHandle
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.PermissionGroup
+import app.gmaaps.core.interfaces.plugin.PermissionProvider
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.smoothing.Smoothing
+import app.gmaaps.core.interfaces.source.BgSource
+import app.gmaaps.core.interfaces.sync.Sync
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -197,3 +197,4 @@ class IosPluginPermissionsTest {
         assertEquals(sut.collectAllPermissions(), sut.collectMissingPermissions())
     }
 }
+

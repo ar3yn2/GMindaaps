@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.CalibrationEntry
+import app.gmaaps.database.entities.CalibrationEntry
 
 class UpdateNsIdCalibrationEntryTransaction(private val calibrationEntries: List<CalibrationEntry>) : Transaction<UpdateNsIdCalibrationEntryTransaction.TransactionResult>() {
 
@@ -22,3 +22,4 @@ class UpdateNsIdCalibrationEntryTransaction(private val calibrationEntries: List
         val updatedNsId = mutableListOf<CalibrationEntry>()
     }
 }
+

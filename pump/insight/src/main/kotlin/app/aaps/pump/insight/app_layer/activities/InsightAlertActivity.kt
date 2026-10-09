@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.app_layer.activities
+﻿package app.gmaaps.pump.insight.app_layer.activities
 
 import android.app.KeyguardManager
 import android.content.ComponentName
@@ -19,16 +19,16 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.ui.SnackbarHostPresence
-import app.aaps.core.ui.compose.LocalSnackbarHostState
-import app.aaps.core.ui.compose.MetroAppCompatActivity
-import app.aaps.core.ui.compose.dialogs.GlobalSnackbarHost
-import app.aaps.pump.insight.InsightAlertService
-import app.aaps.pump.insight.compose.InsightAlertScreen
-import app.aaps.pump.insight.compose.InsightAlertUiState
-import app.aaps.pump.insight.descriptors.Alert
-import app.aaps.pump.insight.utils.AlertUtils
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.ui.SnackbarHostPresence
+import app.gmaaps.core.ui.compose.LocalSnackbarHostState
+import app.gmaaps.core.ui.compose.MetroAppCompatActivity
+import app.gmaaps.core.ui.compose.dialogs.GlobalSnackbarHost
+import app.gmaaps.pump.insight.InsightAlertService
+import app.gmaaps.pump.insight.compose.InsightAlertScreen
+import app.gmaaps.pump.insight.compose.InsightAlertUiState
+import app.gmaaps.pump.insight.descriptors.Alert
+import app.gmaaps.pump.insight.utils.AlertUtils
 import dev.zacsweers.metro.Inject
 
 class InsightAlertActivity : MetroAppCompatActivity() {
@@ -119,3 +119,4 @@ class InsightAlertActivity : MetroAppCompatActivity() {
         )
     }
 }
+

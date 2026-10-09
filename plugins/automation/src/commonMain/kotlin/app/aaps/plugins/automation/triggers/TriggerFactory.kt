@@ -1,10 +1,10 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.core.utils.lenientString
-import app.aaps.plugins.automation.BtConnectionSource
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.plugins.automation.BtConnectionSource
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -96,3 +96,4 @@ class TriggerFactory(
         return TriggerUnknown(deps, obj)
     }
 }
+

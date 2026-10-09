@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
@@ -8,9 +8,9 @@ import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToIndex
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.config.FillConfig
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.config.FillConfig
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
@@ -26,7 +26,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Robolectric Compose tests for [CarelevoSetAmountStep] — the wizard step that picks the insulin
@@ -261,3 +261,4 @@ class CarelevoSetAmountStepTest {
         compose.onNodeWithText("50").assertExists()
     }
 }
+

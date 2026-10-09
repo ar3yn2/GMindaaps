@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.eros.ui.compose
+﻿package app.gmaaps.pump.omnipod.eros.ui.compose
 
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.omnipod.eros.history.ErosHistory
-import app.aaps.pump.omnipod.eros.util.AapsOmnipodUtil
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.omnipod.eros.history.ErosHistory
+import app.gmaaps.pump.omnipod.eros.util.AapsOmnipodUtil
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -36,3 +36,4 @@ internal class ErosPodHistoryViewModelTest {
         assertThat(sut.records.value).isEmpty()
     }
 }
+

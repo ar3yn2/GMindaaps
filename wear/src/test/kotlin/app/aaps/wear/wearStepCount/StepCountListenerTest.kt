@@ -1,11 +1,11 @@
-package app.aaps.wear.wearStepCount
+﻿package app.gmaaps.wear.wearStepCount
 
 import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorEvent
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.weardata.EventData.ActionStepsRate
-import app.aaps.wear.AAPSLoggerTest
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.weardata.EventData.ActionStepsRate
+import app.gmaaps.wear.AAPSLoggerTest
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Scheduler
 import io.reactivex.rxjava3.disposables.Disposable
@@ -270,3 +270,4 @@ internal class StepCountListenerTest {
         listener.dispose()
     }
 }
+

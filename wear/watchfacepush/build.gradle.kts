@@ -1,4 +1,4 @@
-import com.android.build.api.artifact.SingleArtifact
+﻿import com.android.build.api.artifact.SingleArtifact
 import com.android.build.api.variant.ApplicationAndroidComponentsExtension
 
 plugins {
@@ -43,7 +43,7 @@ android {
     }
 
     signingConfigs {
-        // The face APK is not distributed through a store — it is embedded in the wear app and
+        // The face APK is not distributed through a store â€” it is embedded in the wear app and
         // installed via Watch Face Push, which only requires that the APK carries *a* signature.
         // Signing release with the debug key keeps user builds free of extra signing setup.
         getByName("debug")
@@ -51,10 +51,10 @@ android {
     buildTypes {
         release {
             // R8 with no entry points strips the generated R class entirely, so no classes.dex is
-            // packaged — Watch Face Push validation rejects any APK containing code (same recipe
+            // packaged â€” Watch Face Push validation rejects any APK containing code (same recipe
             // as Google's WatchFaceFormat samples)
             isMinifyEnabled = true
-            // The watch face IS resources — never shrink them. This APK has no code, so the
+            // The watch face IS resources â€” never shrink them. This APK has no code, so the
             // manifest is the shrinker's whole root set, and it does not name the face: Watch
             // Face Format finds res/xml/watch_face.xml by convention. With shrinking on, the
             // face would be stripped.
@@ -111,7 +111,7 @@ android {
         resources.excludes += setOf("kotlin/**", "META-INF/*.version", "META-INF/*.kotlin_module")
     }
     lint {
-        // Code-free resource-only APK — nothing to lint, and lintVital would otherwise run on
+        // Code-free resource-only APK â€” nothing to lint, and lintVital would otherwise run on
         // every wear release build
         checkReleaseBuilds = false
     }
@@ -119,7 +119,7 @@ android {
 
 // The root build wires kotlin-stdlib into every project; this APK must stay code-free
 // (Watch Face Push validation rejects any classes.dex or other non-res files), so strip it from
-// the app classpaths — ONLY those: a blanket exclude would also break tool classpaths (lint runs
+// the app classpaths â€” ONLY those: a blanket exclude would also break tool classpaths (lint runs
 // on Kotlin itself)
 configurations.configureEach {
     if (name.endsWith("RuntimeClasspath") || name.endsWith("CompileClasspath")) {
@@ -202,7 +202,7 @@ extensions.configure<ApplicationAndroidComponentsExtension>("androidComponents")
             .toTransform(SingleArtifact.MERGED_MANIFEST)
 
         // Expose the release APK directory as an outgoing artifact so the wear app can consume it
-        // with a real producer→consumer dependency (a hardcoded path would fail Gradle's
+        // with a real producerâ†’consumer dependency (a hardcoded path would fail Gradle's
         // input-file validation before the APK is built). One configuration per wear flavor and
         // face: watchfaceApkFullWfs, watchfaceApkFullCwf, ...
         if (variant.buildType == "release") {
@@ -214,3 +214,4 @@ extensions.configure<ApplicationAndroidComponentsExtension>("androidComponents")
         }
     }
 }
+

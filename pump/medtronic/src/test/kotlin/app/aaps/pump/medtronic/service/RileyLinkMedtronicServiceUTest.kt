@@ -1,24 +1,24 @@
-package app.aaps.pump.medtronic.service
+﻿package app.gmaaps.pump.medtronic.service
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.ble.RFSpy
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkTargetFrequency
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkStringKey
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkStringPreferenceKey
-import app.aaps.pump.common.hw.rileylink.keys.RileylinkBooleanPreferenceKey
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
-import app.aaps.pump.medtronic.MedtronicPumpPlugin
-import app.aaps.pump.medtronic.R
-import app.aaps.pump.medtronic.comm.MedtronicCommunicationManager
-import app.aaps.pump.medtronic.comm.ui.MedtronicUIComm
-import app.aaps.pump.medtronic.defs.BatteryType
-import app.aaps.pump.medtronic.defs.MedtronicDeviceType
-import app.aaps.pump.medtronic.driver.MedtronicPumpStatus
-import app.aaps.pump.medtronic.keys.MedtronicIntPreferenceKey
-import app.aaps.pump.medtronic.keys.MedtronicStringPreferenceKey
-import app.aaps.pump.medtronic.util.MedtronicUtil
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.RFSpy
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkTargetFrequency
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkStringKey
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkStringPreferenceKey
+import app.gmaaps.pump.common.hw.rileylink.keys.RileylinkBooleanPreferenceKey
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.medtronic.MedtronicPumpPlugin
+import app.gmaaps.pump.medtronic.R
+import app.gmaaps.pump.medtronic.comm.MedtronicCommunicationManager
+import app.gmaaps.pump.medtronic.comm.ui.MedtronicUIComm
+import app.gmaaps.pump.medtronic.defs.BatteryType
+import app.gmaaps.pump.medtronic.defs.MedtronicDeviceType
+import app.gmaaps.pump.medtronic.driver.MedtronicPumpStatus
+import app.gmaaps.pump.medtronic.keys.MedtronicIntPreferenceKey
+import app.gmaaps.pump.medtronic.keys.MedtronicStringPreferenceKey
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -357,3 +357,4 @@ class RileyLinkMedtronicServiceUTest : TestBaseWithProfile() {
         assertThat(medtronicPumpStatus.errorDescription).isEqualTo("-")
     }
 }
+

@@ -1,13 +1,13 @@
-package app.aaps.pump.eopatch.core.api
+﻿package app.gmaaps.pump.eopatch.core.api
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.eopatch.core.ble.BaseAPI
-import app.aaps.pump.eopatch.core.ble.PatchFunc
-import app.aaps.pump.eopatch.core.ble.PumpCounter
-import app.aaps.pump.eopatch.core.code.PatchBleResultCode
-import app.aaps.pump.eopatch.core.response.TempBasalScheduleSetResponse
-import app.aaps.pump.eopatch.core.scan.IBleDevice
-import app.aaps.pump.eopatch.core.util.FloatAdjusters
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.eopatch.core.ble.BaseAPI
+import app.gmaaps.pump.eopatch.core.ble.PatchFunc
+import app.gmaaps.pump.eopatch.core.ble.PumpCounter
+import app.gmaaps.pump.eopatch.core.code.PatchBleResultCode
+import app.gmaaps.pump.eopatch.core.response.TempBasalScheduleSetResponse
+import app.gmaaps.pump.eopatch.core.scan.IBleDevice
+import app.gmaaps.pump.eopatch.core.util.FloatAdjusters
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -34,3 +34,4 @@ class TempBasalScheduleStart(patch: IBleDevice, aapsLogger: AAPSLogger) : BaseAP
         return writeAndRead(allocate().putByte(timeUnit).putShort(pumpCount).putByte(percentU).build())
     }
 }
+

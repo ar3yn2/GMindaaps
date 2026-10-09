@@ -1,36 +1,36 @@
-package app.aaps.plugins.aps.loop
+﻿package app.gmaaps.plugins.aps.loop
 
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.DS
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.aps.APS
-import app.aaps.core.interfaces.aps.APSResult
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.plugin.EnforcedState
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpStatusProvider
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.utils.HardLimits
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.objects.constraints.ConstraintObject
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.plugins.aps.loop.runningMode.RunningModeReconciler
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.DS
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.aps.APS
+import app.gmaaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.plugin.EnforcedState
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpStatusProvider
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.utils.HardLimits
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.objects.constraints.ConstraintObject
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.plugins.aps.loop.runningMode.RunningModeReconciler
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
@@ -117,7 +117,7 @@ class LoopPluginTest : TestBaseWithProfile() {
 
     @Test
     fun testPluginInterface() {
-        whenever(rh.gs(TextRef.AndroidRes(app.aaps.core.ui.R.string.loop))).thenReturn("Loop")
+        whenever(rh.gs(TextRef.AndroidRes(app.gmaaps.core.ui.R.string.loop))).thenReturn("Loop")
 //        whenever(preferences.get(StringKey.LoopApsMode)).thenReturn(ApsMode.CLOSED.name)
         val pumpDescription = PumpDescription()
         whenever(virtualPumpPlugin.pumpDescription).thenReturn(pumpDescription)
@@ -155,8 +155,8 @@ class LoopPluginTest : TestBaseWithProfile() {
 
     @Test
     fun iobShouldBeLimited() = runTest {
-        whenever(rh.gs(app.aaps.core.ui.R.string.lowglucosesuspend)).thenReturn("Low Glucose Suspend")
-        whenever(rh.gs(app.aaps.core.ui.R.string.limiting_iob, HardLimits.MAX_IOB_LGS, rh.gs(app.aaps.core.ui.R.string.lowglucosesuspend))).thenReturn("Limiting IOB to %1\$.1f U because of %2\$s")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.lowglucosesuspend)).thenReturn("Low Glucose Suspend")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.limiting_iob, HardLimits.MAX_IOB_LGS, rh.gs(app.gmaaps.core.ui.R.string.lowglucosesuspend))).thenReturn("Limiting IOB to %1\$.1f U because of %2\$s")
         whenever(constraintChecker.isLoopInvocationAllowed()).thenReturn(ConstraintObject(true, aapsLogger))
         whenever(persistenceLayer.getRunningModeActiveAt(anyLong())).thenReturn(
             RM(
@@ -515,7 +515,7 @@ class LoopPluginTest : TestBaseWithProfile() {
         val suspendedByPumpMode = RM(mode = RM.Mode.SUSPENDED_BY_PUMP, timestamp = dateUtil.now() - T.mins(5).msecs(), duration = 0)
         val previousMode = RM(mode = RM.Mode.CLOSED_LOOP, timestamp = dateUtil.now() - T.mins(10).msecs(), duration = T.mins(5).msecs())
         whenever(activePlugin.activePump.isSuspended()).thenReturn(false)
-        whenever(rh.gs(app.aaps.core.ui.R.string.pump_running)).thenReturn("Pump running")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.pump_running)).thenReturn("Pump running")
 
         // 1. First time getRunningModeActiveAt is called, return the suspended mode.
         // 2. Any subsequent time it's called (on the re-run), return the previous, non-suspended mode.
@@ -604,7 +604,7 @@ class LoopPluginTest : TestBaseWithProfile() {
         mockCurrentMode(forcedOpenLoop)
         // But now, the constraint that caused it is no longer active
         whenever(constraintChecker.isClosedLoopAllowed()).thenReturn(ConstraintObject(true, aapsLogger))
-        whenever(rh.gs(app.aaps.core.ui.R.string.mode_reverted)).thenReturn("Mode reverted")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.mode_reverted)).thenReturn("Mode reverted")
 
         // Act
         loopPlugin.runningModePreCheck()
@@ -740,7 +740,7 @@ class LoopPluginTest : TestBaseWithProfile() {
      * The device-status payload uploaded to Nightscout had no coverage at all, which is thin for
      * something written every loop cycle. It is also the one place that takes the APS document and adds
      * to it, so it is where an immutable document can quietly lose fields: the old code wrote into the
-     * object returned by [app.aaps.core.interfaces.aps.APSResult.json] and relied on that write sticking.
+     * object returned by [app.gmaaps.core.interfaces.aps.APSResult.json] and relied on that write sticking.
      *
      * The APS result is stubbed rather than run, so these tests are about the envelope - which entries
      * get added, and that the original ones survive - not about what the algorithm produced.
@@ -1050,3 +1050,4 @@ class LoopPluginTest : TestBaseWithProfile() {
         assertThat(loopPlugin.smbFallbackJob!!.isActive).isTrue()
     }
 }
+

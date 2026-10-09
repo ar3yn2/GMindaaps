@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     id("android-module-dependencies")
     id("test-module-dependencies")
@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "app.aaps.pump.equil.protocol"
+    namespace = "app.gmaaps.pump.equil.protocol"
 }
 
 // The Equil wire protocol: packet framing, the 0.00625 U/step encoding, CRC, AES pairing crypto, and
@@ -17,3 +17,4 @@ dependencies {
 
     testImplementation(project(":shared:tests"))
 }
+

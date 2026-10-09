@@ -1,48 +1,48 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
-import app.aaps.database.daos.APSResultDao
-import app.aaps.database.daos.BolusCalculatorResultDao
-import app.aaps.database.daos.BolusDao
-import app.aaps.database.daos.CalibrationEntryDao
-import app.aaps.database.daos.CarbsDao
-import app.aaps.database.daos.DeviceStatusDao
-import app.aaps.database.daos.EffectiveProfileSwitchDao
-import app.aaps.database.daos.ExtendedBolusDao
-import app.aaps.database.daos.FoodDao
-import app.aaps.database.daos.GlucoseValueDao
-import app.aaps.database.daos.HeartRateDao
-import app.aaps.database.daos.PreferenceChangeDao
-import app.aaps.database.daos.ProfileSwitchDao
-import app.aaps.database.daos.RunningModeDao
-import app.aaps.database.daos.StepsCountDao
-import app.aaps.database.daos.TemporaryBasalDao
-import app.aaps.database.daos.TemporaryTargetDao
-import app.aaps.database.daos.TherapyEventDao
-import app.aaps.database.daos.TotalDailyDoseDao
-import app.aaps.database.daos.UserEntryDao
-import app.aaps.database.daos.VersionChangeDao
-import app.aaps.database.daos.delegated.DelegatedAPSResultDao
-import app.aaps.database.daos.delegated.DelegatedBolusCalculatorResultDao
-import app.aaps.database.daos.delegated.DelegatedBolusDao
-import app.aaps.database.daos.delegated.DelegatedCalibrationEntryDao
-import app.aaps.database.daos.delegated.DelegatedCarbsDao
-import app.aaps.database.daos.delegated.DelegatedDeviceStatusDao
-import app.aaps.database.daos.delegated.DelegatedEffectiveProfileSwitchDao
-import app.aaps.database.daos.delegated.DelegatedExtendedBolusDao
-import app.aaps.database.daos.delegated.DelegatedFoodDao
-import app.aaps.database.daos.delegated.DelegatedGlucoseValueDao
-import app.aaps.database.daos.delegated.DelegatedHeartRateDao
-import app.aaps.database.daos.delegated.DelegatedPreferenceChangeDao
-import app.aaps.database.daos.delegated.DelegatedProfileSwitchDao
-import app.aaps.database.daos.delegated.DelegatedRunningModeDao
-import app.aaps.database.daos.delegated.DelegatedStepsCountDao
-import app.aaps.database.daos.delegated.DelegatedTemporaryBasalDao
-import app.aaps.database.daos.delegated.DelegatedTemporaryTargetDao
-import app.aaps.database.daos.delegated.DelegatedTherapyEventDao
-import app.aaps.database.daos.delegated.DelegatedTotalDailyDoseDao
-import app.aaps.database.daos.delegated.DelegatedUserEntryDao
-import app.aaps.database.daos.delegated.DelegatedVersionChangeDao
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.APSResultDao
+import app.gmaaps.database.daos.BolusCalculatorResultDao
+import app.gmaaps.database.daos.BolusDao
+import app.gmaaps.database.daos.CalibrationEntryDao
+import app.gmaaps.database.daos.CarbsDao
+import app.gmaaps.database.daos.DeviceStatusDao
+import app.gmaaps.database.daos.EffectiveProfileSwitchDao
+import app.gmaaps.database.daos.ExtendedBolusDao
+import app.gmaaps.database.daos.FoodDao
+import app.gmaaps.database.daos.GlucoseValueDao
+import app.gmaaps.database.daos.HeartRateDao
+import app.gmaaps.database.daos.PreferenceChangeDao
+import app.gmaaps.database.daos.ProfileSwitchDao
+import app.gmaaps.database.daos.RunningModeDao
+import app.gmaaps.database.daos.StepsCountDao
+import app.gmaaps.database.daos.TemporaryBasalDao
+import app.gmaaps.database.daos.TemporaryTargetDao
+import app.gmaaps.database.daos.TherapyEventDao
+import app.gmaaps.database.daos.TotalDailyDoseDao
+import app.gmaaps.database.daos.UserEntryDao
+import app.gmaaps.database.daos.VersionChangeDao
+import app.gmaaps.database.daos.delegated.DelegatedAPSResultDao
+import app.gmaaps.database.daos.delegated.DelegatedBolusCalculatorResultDao
+import app.gmaaps.database.daos.delegated.DelegatedBolusDao
+import app.gmaaps.database.daos.delegated.DelegatedCalibrationEntryDao
+import app.gmaaps.database.daos.delegated.DelegatedCarbsDao
+import app.gmaaps.database.daos.delegated.DelegatedDeviceStatusDao
+import app.gmaaps.database.daos.delegated.DelegatedEffectiveProfileSwitchDao
+import app.gmaaps.database.daos.delegated.DelegatedExtendedBolusDao
+import app.gmaaps.database.daos.delegated.DelegatedFoodDao
+import app.gmaaps.database.daos.delegated.DelegatedGlucoseValueDao
+import app.gmaaps.database.daos.delegated.DelegatedHeartRateDao
+import app.gmaaps.database.daos.delegated.DelegatedPreferenceChangeDao
+import app.gmaaps.database.daos.delegated.DelegatedProfileSwitchDao
+import app.gmaaps.database.daos.delegated.DelegatedRunningModeDao
+import app.gmaaps.database.daos.delegated.DelegatedStepsCountDao
+import app.gmaaps.database.daos.delegated.DelegatedTemporaryBasalDao
+import app.gmaaps.database.daos.delegated.DelegatedTemporaryTargetDao
+import app.gmaaps.database.daos.delegated.DelegatedTherapyEventDao
+import app.gmaaps.database.daos.delegated.DelegatedTotalDailyDoseDao
+import app.gmaaps.database.daos.delegated.DelegatedUserEntryDao
+import app.gmaaps.database.daos.delegated.DelegatedVersionChangeDao
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedAppDatabase(val changes: MutableList<DBEntry>, private val database: AppDatabaseDaos) {
 
@@ -68,3 +68,4 @@ internal class DelegatedAppDatabase(val changes: MutableList<DBEntry>, private v
     val stepsCountDao: StepsCountDao = DelegatedStepsCountDao(changes, database.stepsCountDao)
     val calibrationEntryDao: CalibrationEntryDao = DelegatedCalibrationEntryDao(changes, database.calibrationEntryDao)
 }
+

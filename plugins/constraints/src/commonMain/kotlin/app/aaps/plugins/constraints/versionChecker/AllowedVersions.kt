@@ -1,4 +1,4 @@
-package app.aaps.plugins.constraints.versionChecker
+﻿package app.gmaaps.plugins.constraints.versionChecker
 
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.TimeZone
@@ -29,3 +29,4 @@ object AllowedVersions {
             null
         }
 }
+

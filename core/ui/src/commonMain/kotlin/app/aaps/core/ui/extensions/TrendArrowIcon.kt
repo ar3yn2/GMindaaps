@@ -1,17 +1,17 @@
-package app.aaps.core.ui.extensions
+﻿package app.gmaaps.core.ui.extensions
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.icons.IcArrowDoubleDown
-import app.aaps.core.ui.compose.icons.IcArrowDoubleUp
-import app.aaps.core.ui.compose.icons.IcArrowFlat
-import app.aaps.core.ui.compose.icons.IcArrowFortyfiveDown
-import app.aaps.core.ui.compose.icons.IcArrowFortyfiveUp
-import app.aaps.core.ui.compose.icons.IcArrowInvalid
-import app.aaps.core.ui.compose.icons.IcArrowSimpleDown
-import app.aaps.core.ui.compose.icons.IcArrowSimpleUp
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.icons.IcArrowDoubleDown
+import app.gmaaps.core.ui.compose.icons.IcArrowDoubleUp
+import app.gmaaps.core.ui.compose.icons.IcArrowFlat
+import app.gmaaps.core.ui.compose.icons.IcArrowFortyfiveDown
+import app.gmaaps.core.ui.compose.icons.IcArrowFortyfiveUp
+import app.gmaaps.core.ui.compose.icons.IcArrowInvalid
+import app.gmaaps.core.ui.compose.icons.IcArrowSimpleDown
+import app.gmaaps.core.ui.compose.icons.IcArrowSimpleUp
 
 /**
  * The icon that draws a [TrendArrow].
@@ -60,3 +60,4 @@ fun TrendArrow?.directionToDescription(): TextRef =
         TrendArrow.NONE            -> CoreUiStrings.a11y_arrow_none
         null                       -> CoreUiStrings.a11y_arrow_unknown
     }
+

@@ -1,10 +1,10 @@
-package app.aaps.core.interfaces.resources
+﻿package app.gmaaps.core.interfaces.resources
 
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * Turns a [TextRef] into a String outside Compose. Inside Compose use
- * `app.aaps.core.ui.compose.stringResource` instead.
+ * `app.gmaaps.core.ui.compose.stringResource` instead.
  *
  * This is the part of string resolution that every platform can implement, so it is what shared code
  * depends on. On Android `ResourceHelper` extends it and adds the resource id overloads, which only
@@ -29,3 +29,4 @@ interface TextResolver {
     /** True on a small screen, where the UI uses shorter texts. */
     fun shortTextMode(): Boolean
 }
+

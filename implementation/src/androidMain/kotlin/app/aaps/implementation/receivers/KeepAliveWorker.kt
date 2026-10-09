@@ -1,4 +1,4 @@
-package app.aaps.implementation.receivers
+﻿package app.gmaaps.implementation.receivers
 
 import android.content.Context
 import androidx.annotation.VisibleForTesting
@@ -12,32 +12,32 @@ import androidx.work.WorkManager
 import androidx.work.WorkQuery
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.alerts.LocalAlertUtils
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.awaitInitialized
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.dst.DstHelper
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.queue.Command
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventProfileChangeRequested
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.core.objects.workflow.LoggingWorker
-import app.aaps.core.objects.workflow.MetroWorkerCreator
-import app.aaps.implementation.maintenance.PeriodicMaintenance
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.alerts.LocalAlertUtils
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.awaitInitialized
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.dst.DstHelper
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.queue.Command
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventProfileChangeRequested
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.core.objects.workflow.LoggingWorker
+import app.gmaaps.core.objects.workflow.MetroWorkerCreator
+import app.gmaaps.implementation.maintenance.PeriodicMaintenance
 import com.google.common.util.concurrent.ListenableFuture
 import dev.zacsweers.metro.Assisted
 import dev.zacsweers.metro.AssistedFactory
@@ -280,10 +280,11 @@ class KeepAliveWorker(
             rxBus.send(EventProfileChangeRequested())
         } else if (isStatusOutdated && !pump.isBusy()) {
             lastReadStatus = now
-            commandQueue.readStatus(rh.gs(app.aaps.core.ui.R.string.keepalive_status_outdated))
+            commandQueue.readStatus(rh.gs(app.gmaaps.core.ui.R.string.keepalive_status_outdated))
         } else if (isBasalOutdated && !pump.isBusy()) {
             lastReadStatus = now
-            commandQueue.readStatus(rh.gs(app.aaps.core.ui.R.string.keepalive_basal_outdated))
+            commandQueue.readStatus(rh.gs(app.gmaaps.core.ui.R.string.keepalive_basal_outdated))
         }
     }
 }
+

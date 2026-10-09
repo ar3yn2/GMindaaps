@@ -1,16 +1,16 @@
-package app.aaps.plugins.aps.loop.compose
+﻿package app.gmaaps.plugins.aps.loop.compose
 
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventLoopUpdateGui
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.R
-import app.aaps.plugins.aps.loop.events.EventLoopSetLastRunGui
-import app.aaps.shared.tests.stubTextRefResolution
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventLoopUpdateGui
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.R
+import app.gmaaps.plugins.aps.loop.events.EventLoopSetLastRunGui
+import app.gmaaps.shared.tests.stubTextRefResolution
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -74,3 +74,4 @@ internal class LoopViewModelTest {
         assertThat(sut.uiState.value.isRefreshing).isTrue()
     }
 }
+

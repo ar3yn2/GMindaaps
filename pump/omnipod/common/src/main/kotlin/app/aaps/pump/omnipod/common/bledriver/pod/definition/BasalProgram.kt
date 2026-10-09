@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.definition
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.definition
 
 import java.util.Calendar
 import java.util.Collections
@@ -93,3 +93,4 @@ class BasalProgram(
         return segments.hashCode()
     }
 }
+

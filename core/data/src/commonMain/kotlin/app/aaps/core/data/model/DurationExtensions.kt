@@ -1,6 +1,6 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
-import app.aaps.core.data.time.T
+import app.gmaaps.core.data.time.T
 import kotlin.math.min
 import kotlin.math.roundToInt
 
@@ -24,3 +24,4 @@ fun EB.getPassedDurationToTimeInMinutes(time: Long): Int =
 /** The full planned length, in minutes. */
 val TB.durationInMinutes: Long
     get() = T.msecs(duration).mins()
+

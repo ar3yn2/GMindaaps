@@ -1,12 +1,12 @@
-package app.aaps.core.objects.profile
+﻿package app.gmaaps.core.objects.profile
 
 import android.content.Context
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.objects.extensions.blockFromJson
-import app.aaps.core.objects.extensions.targetBlockFromJson
-import app.aaps.shared.impl.utils.DateUtilImpl
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.objects.extensions.blockFromJson
+import app.gmaaps.core.objects.extensions.targetBlockFromJson
+import app.gmaaps.shared.impl.utils.DateUtilImpl
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.builtins.MapSerializer
 import kotlinx.serialization.builtins.serializer
@@ -367,3 +367,4 @@ class ProfileJsonCharacterizationTest : TestBase() {
             .isEqualTo(Json.parseToJsonElement(kotlinx).let { (it as kotlinx.serialization.json.JsonObject) }["units"]!!.let { (it as JsonPrimitive).content })
     }
 }
+

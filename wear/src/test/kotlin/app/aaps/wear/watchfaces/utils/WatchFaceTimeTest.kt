@@ -1,4 +1,4 @@
-package app.aaps.wear.watchfaces.utils
+﻿package app.gmaaps.wear.watchfaces.utils
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -94,3 +94,4 @@ class WatchFaceTimeTest {
         assertThat(t.millis).isEqualTo(0)
     }
 }
+

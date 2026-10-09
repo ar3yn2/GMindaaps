@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.util
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.util
 
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertType
 import java.util.EnumSet
 
 object AlertUtil {
@@ -25,3 +25,4 @@ object AlertUtil {
             out or (slot.value.toInt() and 0xff)
         }.toByte()
 }
+

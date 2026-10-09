@@ -1,13 +1,13 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.bolus.BatchAction
-import app.aaps.core.nssdk.localmodel.clientcontrol.BatchActionDto
-import app.aaps.core.objects.extensions.fromJsonObject
-import app.aaps.core.objects.extensions.toJsonObject
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.bolus.BatchAction
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.BatchActionDto
+import app.gmaaps.core.objects.extensions.fromJsonObject
+import app.gmaaps.core.objects.extensions.toJsonObject
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 
@@ -117,3 +117,4 @@ internal fun BatchActionDto.toDomain(): BatchAction? = when (type) {
 
     else                                      -> null
 }
+

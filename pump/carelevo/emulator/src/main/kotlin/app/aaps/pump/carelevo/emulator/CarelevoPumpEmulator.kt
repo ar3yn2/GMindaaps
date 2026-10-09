@@ -1,10 +1,10 @@
-package app.aaps.pump.carelevo.emulator
+﻿package app.gmaaps.pump.carelevo.emulator
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotFlags
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotTier
-import app.aaps.pump.carelevo.ble.commands.SnapshotAlarmFlag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotFlags
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotTier
+import app.gmaaps.pump.carelevo.ble.commands.SnapshotAlarmFlag
 import kotlin.experimental.xor
 import kotlin.math.roundToInt
 
@@ -245,7 +245,7 @@ class CarelevoPumpEmulator(
      * A real patch that accepts a clear stops reporting that condition — the emulator must too, or
      * the very next 0x43 snapshot poll would report the same flag still active and the app would
      * immediately re-raise the alarm the user just cleared. `alarmType` here is the wire byte
-     * [AlarmClearRequestUseCase][app.aaps.pump.carelevo.domain.usecase.alarm.AlarmClearRequestUseCase.commandAlarmType]
+     * [AlarmClearRequestUseCase][app.gmaaps.pump.carelevo.domain.usecase.alarm.AlarmClearRequestUseCase.commandAlarmType]
      * builds the request with (161/162/163 = the WARNING/ALERT/NOTICE push-report opcodes), which maps
      * 1:1 to the snapshot tier (CRITICAL/ADVISORY/NOTIFICATION) carrying that same condition.
      */
@@ -290,7 +290,7 @@ class CarelevoPumpEmulator(
      * `[0x43][tier response opcode]` -> the matching 15-byte `[0xA4/A5/A6]` snapshot, built from
      * [CarelevoPumpState.activeAlarmFlags] for the tier the request named. An unrecognized tier byte
      * (or a request too short to carry one) answers with silence, the same as a real patch on an
-     * unsupported request — see [ActiveAlarmSnapshotCommand][app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotCommand].
+     * unsupported request — see [ActiveAlarmSnapshotCommand][app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotCommand].
      *
      * Every slot is written from that tier's flags regardless of whether the tier actually carries
      * it — the command's own `decode()` masks a tier's unsupported slots back to `false`, so there
@@ -631,3 +631,4 @@ class CarelevoPumpEmulator(
         const val MAX_REPORTABLE_MINUTES = 255
     }
 }
+

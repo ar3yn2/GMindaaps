@@ -1,4 +1,4 @@
-package app.aaps.core.data.format
+﻿package app.gmaaps.core.data.format
 
 /**
  * Renders a [NumberFormat] as text.
@@ -25,3 +25,4 @@ expect object NumberFormatPlatform {
 
     fun format(format: NumberFormat, value: Double, separator: Char): String
 }
+

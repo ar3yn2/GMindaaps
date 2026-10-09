@@ -1,13 +1,13 @@
-package app.aaps.implementation.di
+﻿package app.gmaaps.implementation.di
 
-import app.aaps.core.interfaces.di.ApplicationScope
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.notifications.SystemNotificationPlatform
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.implementation.notifications.CommonNotificationManager
+import app.gmaaps.core.interfaces.di.ApplicationScope
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.notifications.SystemNotificationPlatform
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.implementation.notifications.CommonNotificationManager
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -53,3 +53,4 @@ object ImplementationBindings {
         @ApplicationScope appScope: CoroutineScope
     ): NotificationManager = CommonNotificationManager(aapsLogger, rh, platform, appScope)
 }
+

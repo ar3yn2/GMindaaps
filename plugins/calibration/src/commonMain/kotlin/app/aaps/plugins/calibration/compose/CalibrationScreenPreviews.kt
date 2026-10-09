@@ -1,12 +1,12 @@
-package app.aaps.plugins.calibration.compose
+﻿package app.gmaaps.plugins.calibration.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.plugins.calibration.CalibrationFit
-import app.aaps.plugins.calibration.FitMode
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.plugins.calibration.CalibrationFit
+import app.gmaaps.plugins.calibration.FitMode
 
 @Preview(showBackground = true, name = "Calibration applied")
 @Composable
@@ -55,3 +55,4 @@ internal fun CalibrationScreenContentNoSessionPreview() {
         )
     }
 }
+

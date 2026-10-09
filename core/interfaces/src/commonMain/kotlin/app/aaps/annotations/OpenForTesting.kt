@@ -1,4 +1,4 @@
-package app.aaps.annotations
+﻿package app.gmaaps.annotations
 
 /**
  * Annotate a class with [OpenForTesting] if it should be extendable for testing.
@@ -11,3 +11,4 @@ package app.aaps.annotations
  */
 @Target(AnnotationTarget.CLASS)
 annotation class OpenForTesting
+

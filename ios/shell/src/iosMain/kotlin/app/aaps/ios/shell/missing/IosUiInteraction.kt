@@ -1,9 +1,9 @@
-package app.aaps.ios.shell.missing
+﻿package app.gmaaps.ios.shell.missing
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.ui.UiInteraction
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -51,3 +51,4 @@ class IosUiInteraction(
         notificationManager().muteAllAlarms()
     }
 }
+

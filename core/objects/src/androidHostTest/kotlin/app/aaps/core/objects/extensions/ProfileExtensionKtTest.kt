@@ -1,18 +1,18 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
 import android.content.Context
-import app.aaps.core.interfaces.aps.APSResult
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.shared.impl.utils.DateUtilImpl
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.TestPumpPlugin
+import app.gmaaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.shared.impl.utils.DateUtilImpl
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestPumpPlugin
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
 import org.junit.jupiter.api.BeforeEach
@@ -124,3 +124,4 @@ class ProfileExtensionKtTest : TestBase() {
         assertThat(profile.apsAdjustedTargetMgdl(loop, config, processedDeviceStatusData)).isNull()
     }
 }
+

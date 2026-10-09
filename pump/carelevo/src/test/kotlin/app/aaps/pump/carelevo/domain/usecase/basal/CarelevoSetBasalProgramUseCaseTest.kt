@@ -1,11 +1,11 @@
-package app.aaps.pump.carelevo.domain.usecase.basal
+﻿package app.gmaaps.pump.carelevo.domain.usecase.basal
 
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.pump.carelevo.domain.model.basal.CarelevoBasalSegmentDomainModel
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoBasalInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.pump.carelevo.domain.model.basal.CarelevoBasalSegmentDomainModel
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoBasalInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -154,3 +154,4 @@ internal class CarelevoSetBasalProgramUseCaseTest {
         assertThat(sut.persistBasalProgram(emptyList())).isFalse()
     }
 }
+

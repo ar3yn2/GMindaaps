@@ -1,9 +1,9 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.navigation.icon
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.navigation.icon
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject

@@ -1,16 +1,16 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.legacy.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.session
 
 import android.bluetooth.BluetoothGatt
 import android.bluetooth.BluetoothGattCharacteristic
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.ConnectException
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.CharacteristicType
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.session.BleConnection
-import app.aaps.pump.omnipod.common.bledriver.comm.legacy.callbacks.BleCommCallbacks
-import app.aaps.pump.omnipod.common.bledriver.comm.session.Connected
-import app.aaps.pump.omnipod.common.bledriver.comm.session.ConnectionWaitCondition
-import app.aaps.pump.omnipod.common.bledriver.comm.session.STOP_CONNECTING_CHECK_INTERVAL_MS
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.ConnectException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.CharacteristicType
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.session.BleConnection
+import app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.callbacks.BleCommCallbacks
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.Connected
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.ConnectionWaitCondition
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.STOP_CONNECTING_CHECK_INTERVAL_MS
 import java.math.BigInteger
 import java.util.UUID
 
@@ -72,3 +72,4 @@ class ServiceDiscoverer(
         private const val SERVICE_UUID = "1a7e-4024-e3ed-4464-8b7e-751e03d0dc5f"
     }
 }
+

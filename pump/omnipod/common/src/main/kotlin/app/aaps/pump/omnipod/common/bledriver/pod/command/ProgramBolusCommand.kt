@@ -1,11 +1,11 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.HeaderEnabledCommand
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.BolusShortInsulinProgramElement
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
-import app.aaps.pump.omnipod.common.bledriver.pod.util.MessageUtil
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.HeaderEnabledCommand
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.BolusShortInsulinProgramElement
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.MessageUtil
 import java.nio.ByteBuffer
 
 // NOT SUPPORTED: extended bolus
@@ -130,3 +130,4 @@ class ProgramBolusCommand private constructor(
         }
     }
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.pump.common.sync
+﻿package app.gmaaps.pump.common.sync
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpSync
 
 interface PumpDbEntry {
 
@@ -94,3 +94,4 @@ data class PumpDbEntryTBR(
     )
 
 }
+

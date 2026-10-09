@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.data
+﻿package app.gmaaps.pump.equil.data
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
@@ -80,3 +80,4 @@ class AlarmModeTest : TestBase() {
         assertEquals(3, AlarmMode.TONE_AND_SHAKE.ordinal)
     }
 }
+

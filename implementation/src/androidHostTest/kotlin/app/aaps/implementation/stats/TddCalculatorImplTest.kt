@@ -1,23 +1,23 @@
-package app.aaps.implementation.stats
+﻿package app.gmaaps.implementation.stats
 
 import androidx.collection.LongSparseArray
-import app.aaps.core.data.aps.AverageTDD
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.model.TDD
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.db.ProcessedTbrEbData
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.MidnightTime
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.aps.AverageTDD
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.model.TDD
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.db.ProcessedTbrEbData
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.MidnightTime
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import kotlinx.datetime.TimeZone
@@ -735,3 +735,4 @@ class TddCalculatorImplTest : TestBase() {
         }
     }
 }
+

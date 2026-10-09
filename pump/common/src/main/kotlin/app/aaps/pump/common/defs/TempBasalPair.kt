@@ -1,6 +1,6 @@
-package app.aaps.pump.common.defs
+﻿package app.gmaaps.pump.common.defs
 
-import app.aaps.pump.common.driver.connector.commands.data.AdditionalResponseDataInterface
+import app.gmaaps.pump.common.driver.connector.commands.data.AdditionalResponseDataInterface
 import com.google.gson.annotations.Expose
 
 open class TempBasalPair constructor(

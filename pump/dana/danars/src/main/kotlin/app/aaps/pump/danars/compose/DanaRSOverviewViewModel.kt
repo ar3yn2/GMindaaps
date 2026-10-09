@@ -1,4 +1,4 @@
-package app.aaps.pump.danars.compose
+﻿package app.gmaaps.pump.danars.compose
 
 import android.content.Context
 import androidx.compose.material.icons.Icons
@@ -6,30 +6,30 @@ import androidx.compose.material.icons.filled.Bluetooth
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.ble.BleTransport
-import app.aaps.core.interfaces.pump.ble.PairingState
-import app.aaps.core.interfaces.pump.ble.PairingStep
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.ActionCategory
-import app.aaps.core.ui.compose.pump.PumpAction
-import app.aaps.core.ui.compose.pump.StatusBanner
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.R
-import app.aaps.pump.dana.compose.DanaOverviewViewModel
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danars.DanaRSPlugin
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.ble.BleTransport
+import app.gmaaps.core.interfaces.pump.ble.PairingState
+import app.gmaaps.core.interfaces.pump.ble.PairingStep
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.ActionCategory
+import app.gmaaps.core.ui.compose.pump.PumpAction
+import app.gmaaps.core.ui.compose.pump.StatusBanner
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.R
+import app.gmaaps.pump.dana.compose.DanaOverviewViewModel
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danars.DanaRSPlugin
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -89,7 +89,7 @@ class DanaRSOverviewViewModel(
         if (!isConfigured) return null
         val address = preferences.get(DanaStringNonKey.MacAddress)
         if (address.isBlank() || bleTransport.adapter.isDeviceBonded(address)) return null
-        return StatusBanner(rh.gs(app.aaps.core.ui.R.string.ble_not_supported_or_not_paired), StatusLevel.CRITICAL)
+        return StatusBanner(rh.gs(app.gmaaps.core.ui.R.string.ble_not_supported_or_not_paired), StatusLevel.CRITICAL)
     }
 
     override fun buildManagementActions(pump: DanaPump, isInitialized: Boolean, isConfigured: Boolean): List<PumpAction> = buildList {
@@ -110,7 +110,7 @@ class DanaRSOverviewViewModel(
         if (isConfigured) {
             add(
                 PumpAction(
-                    label = rh.gs(app.aaps.core.ui.R.string.pump_unpair),
+                    label = rh.gs(app.gmaaps.core.ui.R.string.pump_unpair),
                     icon = Icons.Filled.Bluetooth,
                     category = ActionCategory.MANAGEMENT,
                     onClick = { onUnpairClick() }
@@ -119,7 +119,7 @@ class DanaRSOverviewViewModel(
         } else {
             add(
                 PumpAction(
-                    label = rh.gs(app.aaps.core.ui.R.string.pairing),
+                    label = rh.gs(app.gmaaps.core.ui.R.string.pairing),
                     icon = Icons.Filled.Bluetooth,
                     category = ActionCategory.MANAGEMENT,
                     onClick = { onPairClick() }
@@ -128,3 +128,4 @@ class DanaRSOverviewViewModel(
         }
     }
 }
+

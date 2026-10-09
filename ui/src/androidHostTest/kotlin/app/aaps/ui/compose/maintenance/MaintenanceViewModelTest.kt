@@ -1,23 +1,23 @@
-package app.aaps.ui.compose.maintenance
+﻿package app.gmaaps.ui.compose.maintenance
 
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.L
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.maintenance.CloudDirectoryManager
-import app.aaps.core.interfaces.maintenance.FileListProvider
-import app.aaps.core.interfaces.maintenance.ImportExportPrefs
-import app.aaps.core.interfaces.maintenance.Maintenance
-import app.aaps.core.interfaces.overview.OverviewData
-import app.aaps.core.interfaces.overview.graph.OverviewDataCache
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.sync.DataSyncSelectorXdrip
-import app.aaps.core.interfaces.sync.NsClient
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.L
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.maintenance.CloudDirectoryManager
+import app.gmaaps.core.interfaces.maintenance.FileListProvider
+import app.gmaaps.core.interfaces.maintenance.ImportExportPrefs
+import app.gmaaps.core.interfaces.maintenance.Maintenance
+import app.gmaaps.core.interfaces.overview.OverviewData
+import app.gmaaps.core.interfaces.overview.graph.OverviewDataCache
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.sync.DataSyncSelectorXdrip
+import app.gmaaps.core.interfaces.sync.NsClient
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
@@ -215,3 +215,4 @@ internal class MaintenanceViewModelTest {
         return event
     }
 }
+

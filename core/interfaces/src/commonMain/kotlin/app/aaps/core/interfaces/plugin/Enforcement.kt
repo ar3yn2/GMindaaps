@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.plugin
+﻿package app.gmaaps.core.interfaces.plugin
 
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * A state this build forces a plugin into, whatever the user stored.
@@ -46,3 +46,4 @@ class Enforcement(
     val reason: TextRef? = null,
     val applies: () -> Boolean = { true }
 )
+

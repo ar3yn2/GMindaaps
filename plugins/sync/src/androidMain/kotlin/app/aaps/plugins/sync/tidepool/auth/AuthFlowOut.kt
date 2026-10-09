@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.tidepool.auth
+﻿package app.gmaaps.plugins.sync.tidepool.auth
 
 import android.app.PendingIntent
 import android.content.ActivityNotFoundException
@@ -6,15 +6,15 @@ import android.content.Context
 import android.content.Intent
 import android.util.Base64
 import androidx.core.net.toUri
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.crypto.CryptoUtil
-import app.aaps.plugins.sync.tidepool.events.EventTidepoolStatus
-import app.aaps.plugins.sync.tidepool.events.EventTidepoolUpdateGUI
-import app.aaps.plugins.sync.tidepool.keys.TidepoolBooleanKey
-import app.aaps.plugins.sync.tidepool.keys.TidepoolStringNonKey
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.crypto.CryptoUtil
+import app.gmaaps.plugins.sync.tidepool.events.EventTidepoolStatus
+import app.gmaaps.plugins.sync.tidepool.events.EventTidepoolUpdateGUI
+import app.gmaaps.plugins.sync.tidepool.keys.TidepoolBooleanKey
+import app.gmaaps.plugins.sync.tidepool.keys.TidepoolStringNonKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -201,3 +201,4 @@ class AuthFlowOut(
             })
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.virtual.keys
+﻿package app.gmaaps.pump.virtual.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 
 /** Values the virtual pump keeps for itself, outside the preference screen. */
 enum class VirtualStringNonPreferenceKey(
@@ -16,3 +16,4 @@ enum class VirtualStringNonPreferenceKey(
      */
     SerialNumber("virtual_pump_serial_number", ""),
 }
+

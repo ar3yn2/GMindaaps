@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.automation
+﻿package app.gmaaps.core.interfaces.automation
 
 import kotlinx.coroutines.flow.StateFlow
 
@@ -21,7 +21,7 @@ interface Automation {
     suspend fun processEvent(someEvent: AutomationEvent)
 
     /**
-     * Generate reminder via [app.aaps.plugins.automation.TimerUtil]
+     * Generate reminder via [app.gmaaps.plugins.automation.TimerUtil]
      *
      */
     fun scheduleAutomationEventBolusReminder()
@@ -33,7 +33,7 @@ interface Automation {
     fun removeAutomationEventBolusReminder()
 
     /**
-     * Generate reminder via [app.aaps.plugins.automation.TimerUtil]
+     * Generate reminder via [app.gmaaps.plugins.automation.TimerUtil]
      *
      * @param seconds seconds to the future
      */

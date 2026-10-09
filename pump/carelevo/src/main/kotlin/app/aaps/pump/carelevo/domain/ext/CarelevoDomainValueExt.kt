@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.domain.ext
+﻿package app.gmaaps.pump.carelevo.domain.ext
 
-import app.aaps.pump.carelevo.domain.model.basal.CarelevoBasalSegmentDomainModel
+import app.gmaaps.pump.carelevo.domain.model.basal.CarelevoBasalSegmentDomainModel
 import java.util.UUID
 
 internal fun List<CarelevoBasalSegmentDomainModel>.splitSegment(): List<CarelevoBasalSegmentDomainModel> {

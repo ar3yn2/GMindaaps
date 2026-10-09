@@ -1,14 +1,14 @@
-package app.aaps.ui.di
+﻿package app.gmaaps.ui.di
 
-import app.aaps.core.interfaces.di.FeatureMemberInjectors
-import app.aaps.ui.activities.ErrorActivity
-import app.aaps.ui.widget.BgGraphWidget
-import app.aaps.ui.widget.CompactBgWidget
-import app.aaps.ui.widget.GlucoseCircleWidget
-import app.aaps.ui.widget.SmallWidget
-import app.aaps.ui.widget.Widget
-import app.aaps.ui.widget.WidgetConfigureActivity
-import app.aaps.ui.widget.glance.WidgetDependencies
+import app.gmaaps.core.interfaces.di.FeatureMemberInjectors
+import app.gmaaps.ui.activities.ErrorActivity
+import app.gmaaps.ui.widget.BgGraphWidget
+import app.gmaaps.ui.widget.CompactBgWidget
+import app.gmaaps.ui.widget.GlucoseCircleWidget
+import app.gmaaps.ui.widget.SmallWidget
+import app.gmaaps.ui.widget.Widget
+import app.gmaaps.ui.widget.WidgetConfigureActivity
+import app.gmaaps.ui.widget.glance.WidgetDependencies
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ClassKey
@@ -78,3 +78,4 @@ object UiMemberInjectors {
     @ClassKey(WidgetDependencies::class)
     fun bindWidgetDependencies(injector: MembersInjector<WidgetDependencies>): MembersInjector<*> = injector
 }
+

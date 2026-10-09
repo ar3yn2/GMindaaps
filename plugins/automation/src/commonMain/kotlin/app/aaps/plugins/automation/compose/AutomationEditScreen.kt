@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose
+﻿package app.gmaaps.plugins.automation.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -35,13 +35,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import app.aaps.core.data.model.Scene
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.navigation.color
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.actions.Action
-import app.aaps.plugins.automation.compose.actions.ActionEditor
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.navigation.color
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.actions.Action
+import app.gmaaps.plugins.automation.compose.actions.ActionEditor
 
 /**
  * @see PreviewAutomationEditScreenNew
@@ -342,3 +342,4 @@ private fun InlineActionCard(
 }
 
 // ---------- Previews ----------
+

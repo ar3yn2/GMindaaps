@@ -1,6 +1,6 @@
-package app.aaps.pump.dana.keys
+﻿package app.gmaaps.pump.dana.keys
 
-import app.aaps.core.keys.interfaces.StringComposedNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringComposedNonPreferenceKey
 
 enum class DanaStringComposedKey(
     override val key: String,
@@ -14,3 +14,4 @@ enum class DanaStringComposedKey(
     V3RandomSyncKey(key = "danars_v3_randomsync_key_", defaultValue = ""),
     Ble5PairingKey(key = "dana_ble5_pairingkey", defaultValue = ""),
 }
+

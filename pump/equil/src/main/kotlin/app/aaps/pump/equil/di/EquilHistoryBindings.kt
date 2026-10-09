@@ -1,9 +1,9 @@
-package app.aaps.pump.equil.di
+﻿package app.gmaaps.pump.equil.di
 
 import android.content.Context
-import app.aaps.pump.equil.database.EquilHistoryDatabase
-import app.aaps.pump.equil.database.EquilHistoryPumpDao
-import app.aaps.pump.equil.database.EquilHistoryRecordDao
+import app.gmaaps.pump.equil.database.EquilHistoryDatabase
+import app.gmaaps.pump.equil.database.EquilHistoryPumpDao
+import app.gmaaps.pump.equil.database.EquilHistoryRecordDao
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -29,3 +29,4 @@ object EquilHistoryBindings {
     fun provideHistoryPumpDao(equilHistoryDatabase: EquilHistoryDatabase): EquilHistoryPumpDao =
         equilHistoryDatabase.historyPumpDao()
 }
+

@@ -1,10 +1,10 @@
-package app.aaps.plugins.calibration.compose
+﻿package app.gmaaps.plugins.calibration.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.plugins.calibration.CalibrationFit
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.plugins.calibration.CalibrationFit
 
 /**
  * Fingerstick against sensor, with the identity line and the fitted regression.
@@ -29,3 +29,4 @@ internal expect fun CalibrationScatterChart(
     glucoseUnit: GlucoseUnit,
     modifier: Modifier = Modifier
 )
+

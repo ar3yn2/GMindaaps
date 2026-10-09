@@ -1,4 +1,4 @@
-package app.aaps.appshell.navigation
+﻿package app.gmaaps.appshell.navigation
 
 import android.content.Context
 import androidx.navigation.NavHostController
@@ -6,7 +6,7 @@ import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.compose.DialogNavigator
 import androidx.navigation.createGraph
 import androidx.test.core.app.ApplicationProvider
-import app.aaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -148,3 +148,4 @@ class AppNavGraphTest {
         assertThat(routes).contains(AppRoute.Treatments.route)
     }
 }
+

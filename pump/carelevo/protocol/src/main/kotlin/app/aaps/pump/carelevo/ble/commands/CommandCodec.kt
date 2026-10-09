@@ -1,12 +1,12 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.BleResponse
 import java.math.BigDecimal
 import java.math.RoundingMode
 import kotlin.math.roundToInt
 
 /**
- * Shared wire encode/decode helpers for the CareLevo [app.aaps.pump.carelevo.ble.BleCommand]s.
+ * Shared wire encode/decode helpers for the CareLevo [app.gmaaps.pump.carelevo.ble.BleCommand]s.
  */
 
 /** Unsigned byte at [index] as Int. */
@@ -40,3 +40,4 @@ internal fun requireResponseFrame(payload: ByteArray, opcode: Byte, minLength: I
  * consumers map it.
  */
 data class SimpleResultResponse(val resultCode: Int) : BleResponse
+

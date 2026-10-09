@@ -1,8 +1,8 @@
-package app.aaps.plugins.sync.smsCommunicator
+﻿package app.gmaaps.plugins.sync.smsCommunicator
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.smsCommunicator.Sms
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.smsCommunicator.Sms
 import kotlin.test.Test
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
@@ -16,7 +16,7 @@ import kotlin.test.assertTrue
  * rather than the send methods quietly failing one at a time.
  *
  * The plugin itself is always disabled on iOS, so in practice nothing reaches this at all - the
- * binding exists only because other code injects [app.aaps.core.interfaces.smsCommunicator.SmsCommunicator]
+ * binding exists only because other code injects [app.gmaaps.core.interfaces.smsCommunicator.SmsCommunicator]
  * regardless of whether the plugin is on. These tests pin the answers it gives if something does
  * ask, so the class is not later "finished" into something that looks like it works.
  */
@@ -84,3 +84,4 @@ class IosSmsCommunicatorTest {
         assertFalse(communicator.isEnabled())
     }
 }
+

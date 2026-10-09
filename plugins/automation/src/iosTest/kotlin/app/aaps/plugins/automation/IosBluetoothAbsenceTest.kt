@@ -1,7 +1,7 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
@@ -69,3 +69,4 @@ class IosBluetoothAbsenceTest {
         assertTrue(devices.names()?.isEmpty() == true)
     }
 }
+

@@ -1,34 +1,34 @@
-package app.aaps.plugins.calibration
+﻿package app.gmaaps.plugins.calibration
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.calibration.AddEntryResult
-import app.aaps.core.interfaces.calibration.Calibration
-import app.aaps.core.interfaces.calibration.CalibrationContext
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.db.observeChanges
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationAction
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventCalibrationChanged
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.compose.icons.IcCalibration
-import app.aaps.plugins.calibration.compose.CalibrationComposeContent
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.calibration.AddEntryResult
+import app.gmaaps.core.interfaces.calibration.Calibration
+import app.gmaaps.core.interfaces.calibration.CalibrationContext
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.db.observeChanges
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationAction
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventCalibrationChanged
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.compose.icons.IcCalibration
+import app.gmaaps.plugins.calibration.compose.CalibrationComposeContent
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -258,3 +258,4 @@ class LinearCalibrationPlugin(
         const val PAIR_LOOKBACK_MS = 10L * 60L * 1000L
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.TDD
-import app.aaps.database.entities.TotalDailyDose
+import app.gmaaps.core.data.model.TDD
+import app.gmaaps.database.entities.TotalDailyDose
 
 fun TotalDailyDose.fromDb(): TDD =
     TDD(
@@ -36,3 +36,4 @@ fun TDD.toDb(): TotalDailyDose =
         carbInsulin = this.carbInsulin,
         interfaceIDs_backing = this.ids.toDb()
     )
+

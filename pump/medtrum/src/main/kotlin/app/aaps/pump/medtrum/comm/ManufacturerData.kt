@@ -1,6 +1,6 @@
-package app.aaps.pump.medtrum.comm
+﻿package app.gmaaps.pump.medtrum.comm
 
-import app.aaps.pump.medtrum.extension.toLong
+import app.gmaaps.pump.medtrum.extension.toLong
 import kotlin.experimental.and
 
 class ManufacturerData(manufacturerDataBytes: ByteArray) {
@@ -35,3 +35,4 @@ class ManufacturerData(manufacturerDataBytes: ByteArray) {
         return version
     }
 }
+

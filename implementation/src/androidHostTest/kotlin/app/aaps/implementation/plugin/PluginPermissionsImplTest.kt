@@ -1,16 +1,16 @@
-package app.aaps.implementation.plugin
+﻿package app.gmaaps.implementation.plugin
 
 import android.Manifest
 import android.app.AlarmManager
 import android.content.Context
 import android.os.PowerManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.PermissionGroup
-import app.aaps.core.interfaces.plugin.PermissionProvider
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.PermissionGroup
+import app.gmaaps.core.interfaces.plugin.PermissionProvider
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.Mock
@@ -89,3 +89,4 @@ class PluginPermissionsImplTest : TestBase() {
         assertThat(missingWithExactAlarms(allowed = true)).doesNotContain(Manifest.permission.SCHEDULE_EXACT_ALARM)
     }
 }
+

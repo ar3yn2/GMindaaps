@@ -1,12 +1,12 @@
-package app.aaps.implementation.extensions
+﻿package app.gmaaps.implementation.extensions
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.implementation.pump.isOlderThan
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.implementation.pump.isOlderThan
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.whenever
@@ -38,3 +38,4 @@ class TherapyEventExtensionKtTest : TestBaseWithProfile() {
         assertThat(therapyEvent.isOlderThan(1, dateUtil)).isTrue()
     }
 }
+

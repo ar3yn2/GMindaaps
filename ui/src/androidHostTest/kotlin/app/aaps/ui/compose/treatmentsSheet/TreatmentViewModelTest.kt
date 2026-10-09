@@ -1,20 +1,20 @@
-package app.aaps.ui.compose.treatmentsSheet
+﻿package app.gmaaps.ui.compose.treatmentsSheet
 
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
-import app.aaps.core.interfaces.source.DexcomBoyda
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.wizard.QuickWizard
-import app.aaps.ui.compose.navigation.ElementAvailability
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.core.interfaces.source.DexcomBoyda
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.wizard.QuickWizard
+import app.gmaaps.ui.compose.navigation.ElementAvailability
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -89,3 +89,4 @@ internal class TreatmentViewModelTest {
         assertThat(state.quickWizardItems).isEmpty()
     }
 }
+

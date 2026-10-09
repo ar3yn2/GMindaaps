@@ -1,4 +1,4 @@
-package app.aaps.core.data.format
+﻿package app.gmaaps.core.data.format
 
 /**
  * What to do with a value that sits exactly halfway between two renderable ones.
@@ -26,3 +26,4 @@ enum class NumberRounding {
      */
     HALF_UP
 }
+

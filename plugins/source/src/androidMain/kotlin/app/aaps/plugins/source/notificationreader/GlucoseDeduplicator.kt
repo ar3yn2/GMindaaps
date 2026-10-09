@@ -1,7 +1,7 @@
-package app.aaps.plugins.source.notificationreader
+﻿package app.gmaaps.plugins.source.notificationreader
 
-import app.aaps.plugins.source.notificationreader.GlucoseDeduplicator.Companion.SNAP_UP_CONSECUTIVE
-import app.aaps.plugins.source.notificationreader.GlucoseDeduplicator.Companion.snapGapToKnownIntervalMs
+import app.gmaaps.plugins.source.notificationreader.GlucoseDeduplicator.Companion.SNAP_UP_CONSECUTIVE
+import app.gmaaps.plugins.source.notificationreader.GlucoseDeduplicator.Companion.snapGapToKnownIntervalMs
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -152,3 +152,4 @@ class GlucoseDeduplicator(
         }
     }
 }
+

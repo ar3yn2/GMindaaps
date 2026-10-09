@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.HeaderEnabledCommand
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.builder.HeaderEnabledCommandBuilder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.HeaderEnabledCommand
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.builder.HeaderEnabledCommandBuilder
 import java.nio.ByteBuffer
 import java.util.Calendar
 import java.util.Date
@@ -97,3 +97,4 @@ class SetUniqueIdCommand private constructor(
         }
     }
 }
+

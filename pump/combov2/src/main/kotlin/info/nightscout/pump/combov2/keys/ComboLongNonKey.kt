@@ -1,6 +1,6 @@
-package info.nightscout.pump.combov2.keys
+﻿package info.nightscout.pump.combov2.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 @Suppress("unused")
 enum class ComboLongNonKey(

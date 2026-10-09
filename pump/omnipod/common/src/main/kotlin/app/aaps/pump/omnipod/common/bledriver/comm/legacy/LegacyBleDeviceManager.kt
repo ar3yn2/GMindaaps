@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.legacy
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.legacy
 
 import android.Manifest
 import android.bluetooth.BluetoothAdapter
@@ -7,15 +7,15 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.ActivityCompat
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.ConnectException
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.device.BleDeviceManager
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.scan.PodScanner
-import app.aaps.pump.omnipod.common.keys.DashBooleanPreferenceKey
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.ConnectException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.device.BleDeviceManager
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.scan.PodScanner
+import app.gmaaps.pump.omnipod.common.keys.DashBooleanPreferenceKey
 import dev.zacsweers.metro.Inject
-import app.aaps.pump.omnipod.common.bledriver.comm.legacy.scan.PodScanner as LegacyPodScanner
+import app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.scan.PodScanner as LegacyPodScanner
 
 @Inject
 class LegacyBleDeviceManager(
@@ -71,3 +71,4 @@ class LegacyBleDeviceManager(
         return LegacyPodScanner(aapsLogger, adapter)
     }
 }
+

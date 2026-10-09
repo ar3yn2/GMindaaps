@@ -1,4 +1,4 @@
-import kotlin.math.min
+﻿import kotlin.math.min
 
 plugins {
     id("kmp-test-defaults")
@@ -12,12 +12,12 @@ plugins {
 
 // Restated from all-open-dependencies, which applies com.android.library and cannot be used here.
 allOpen {
-    annotation("app.aaps.annotations.OpenForTesting")
+    annotation("app.gmaaps.annotations.OpenForTesting")
 }
 
 kotlin {
     android {
-        namespace = "app.aaps.core.objects"
+        namespace = "app.gmaaps.core.objects"
         compileSdk = Versions.compileSdk
         minSdk = min(Versions.minSdk, Versions.wearMinSdk)
         // This module owns no resources, but its tests read R classes from :core:interfaces and
@@ -98,3 +98,4 @@ kotlin {
         }
     }
 }
+

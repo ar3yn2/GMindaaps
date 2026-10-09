@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.descriptors
+﻿package app.gmaaps.pump.insight.descriptors
 
 enum class AlertType(val id: Int, val incId: Int) {
     REMINDER_01(31, 1),

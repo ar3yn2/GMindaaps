@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.defs
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.defs
 
 /**
  * Created by andy on 5/6/18.

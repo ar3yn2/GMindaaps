@@ -1,12 +1,12 @@
-package app.aaps.implementation.resources
+﻿package app.gmaaps.implementation.resources
 
 import androidx.test.core.app.ApplicationProvider
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.implementation.ImplementationStrings
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.implementation.ImplementationStrings
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import org.junit.Before
@@ -59,7 +59,7 @@ internal class ResourceHelperImplNamedRefTest {
     fun `format arguments reach the ui owned string`() {
         // read_status carries one %s. Going through the name must format exactly as the id does.
         assertThat(sut.gs(CoreUiStrings.read_status, "because"))
-            .isEqualTo(sut.gs(app.aaps.core.ui.R.string.read_status, "because"))
+            .isEqualTo(sut.gs(app.gmaaps.core.ui.R.string.read_status, "because"))
     }
 
     @Test
@@ -78,3 +78,4 @@ internal class ResourceHelperImplNamedRefTest {
         assertThat(sut.gs(TextRef.Named("nobody-owns-this", "some_name"))).isEqualTo("some_name")
     }
 }
+

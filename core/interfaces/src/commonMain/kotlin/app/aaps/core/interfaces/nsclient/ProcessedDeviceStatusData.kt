@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.nsclient
+﻿package app.gmaaps.core.interfaces.nsclient
 
-import app.aaps.core.interfaces.aps.APSResult
-import app.aaps.core.interfaces.aps.RT
+import app.gmaaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.aps.RT
 
 interface ProcessedDeviceStatusData {
 

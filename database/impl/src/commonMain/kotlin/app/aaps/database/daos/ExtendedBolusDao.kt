@@ -1,10 +1,10 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.ExtendedBolus
-import app.aaps.database.entities.TABLE_EXTENDED_BOLUSES
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.entities.ExtendedBolus
+import app.gmaaps.database.entities.TABLE_EXTENDED_BOLUSES
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 
 @Dao
 internal interface ExtendedBolusDao : TraceableDao<ExtendedBolus> {
@@ -68,3 +68,4 @@ internal interface ExtendedBolusDao : TraceableDao<ExtendedBolus> {
     @Query("SELECT * FROM $TABLE_EXTENDED_BOLUSES WHERE dateCreated > :since AND dateCreated <= :until LIMIT :limit OFFSET :offset")
     suspend fun getNewEntriesSince(since: Long, until: Long, limit: Int, offset: Int): List<ExtendedBolus>
 }
+

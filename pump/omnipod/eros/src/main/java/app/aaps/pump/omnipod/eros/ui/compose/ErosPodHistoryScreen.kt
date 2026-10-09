@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.ui.compose
+﻿package app.gmaaps.pump.omnipod.eros.ui.compose
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -34,20 +34,20 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.profile.Profile.ProfileValue
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.compose.AapsCard
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.LocalDateUtil
-import app.aaps.pump.common.defs.PumpHistoryEntryGroup
-import app.aaps.pump.common.defs.TempBasalPair
-import app.aaps.pump.omnipod.eros.R
-import app.aaps.pump.omnipod.eros.definition.PodHistoryEntryType
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryRecordEntity
-import app.aaps.pump.omnipod.eros.util.AapsOmnipodUtil
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.profile.Profile.ProfileValue
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.compose.AapsCard
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.LocalDateUtil
+import app.gmaaps.pump.common.defs.PumpHistoryEntryGroup
+import app.gmaaps.pump.common.defs.TempBasalPair
+import app.gmaaps.pump.omnipod.eros.R
+import app.gmaaps.pump.omnipod.eros.definition.PodHistoryEntryType
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryRecordEntity
+import app.gmaaps.pump.omnipod.eros.util.AapsOmnipodUtil
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalLayoutApi::class)
 @Composable
@@ -253,3 +253,4 @@ private fun formatErosValue(
         else                                      -> ""
     }
 }
+

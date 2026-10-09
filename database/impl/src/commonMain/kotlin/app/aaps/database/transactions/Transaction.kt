@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.DelegatedAppDatabase
+import app.gmaaps.database.DelegatedAppDatabase
 
 /**
  * Base class for database transactions

@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.xdrip.extensions
+﻿package app.gmaaps.plugins.sync.xdrip.extensions
 
-import app.aaps.core.data.model.FD
+import app.gmaaps.core.data.model.FD
 import org.json.JSONObject
 
 fun FD.toJson(isAdd: Boolean): JSONObject =
@@ -18,4 +18,5 @@ fun FD.toJson(isAdd: Boolean): JSONObject =
         .put("fat", fat)
         .put("isValid", isValid)
         .also { if (isAdd && ids.nightscoutId != null) it.put("_id", ids.nightscoutId) }
+
 

@@ -1,14 +1,14 @@
-package app.aaps.ui.compose.treatments.viewmodels
+﻿package app.gmaaps.ui.compose.treatments.viewmodels
 
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.PS
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -107,3 +107,4 @@ internal class ProfileSwitchViewModelTest {
         assertThat(sut.getDeleteConfirmationMessage()).isEqualTo("Are you sure you want to remove 2 items")
     }
 }
+

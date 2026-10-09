@@ -1,6 +1,6 @@
-package app.aaps.plugins.aps.loop.runningMode
+﻿package app.gmaaps.plugins.aps.loop.runningMode
 
-import app.aaps.core.data.model.RM
+import app.gmaaps.core.data.model.RM
 
 /**
  * Pure transition logic for the running-mode reconciler.
@@ -79,3 +79,4 @@ object ReconcilerDecision {
         RM.Mode.SUSPENDED_BY_PUMP -> Bucket.PumpReported
     }
 }
+

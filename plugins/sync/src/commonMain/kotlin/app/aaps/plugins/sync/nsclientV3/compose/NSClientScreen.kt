@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3.compose
+﻿package app.gmaaps.plugins.sync.nsclientV3.compose
 
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
@@ -46,12 +46,12 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withLink
 import androidx.compose.ui.text.withStyle
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.sync.SyncStrings
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.sync.SyncStrings
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
 import kotlinx.serialization.json.Json
@@ -424,3 +424,4 @@ private fun NSClientMenu(
         }
     }
 }
+

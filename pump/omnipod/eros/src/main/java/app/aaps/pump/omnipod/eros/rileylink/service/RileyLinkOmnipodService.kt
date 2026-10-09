@@ -1,22 +1,22 @@
-package app.aaps.pump.omnipod.eros.rileylink.service
+﻿package app.gmaaps.pump.omnipod.eros.rileylink.service
 
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Binder
 import android.os.IBinder
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.defs.PumpDeviceState
-import app.aaps.pump.common.hw.rileylink.RileyLinkCommunicationManager
-import app.aaps.pump.common.hw.rileylink.RileyLinkConst
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkTargetFrequency
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkTargetDevice
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkStringKey
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkService
-import app.aaps.pump.omnipod.eros.OmnipodErosPumpPlugin
-import app.aaps.pump.omnipod.eros.R
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager
-import app.aaps.pump.omnipod.eros.util.AapsOmnipodUtil
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.defs.PumpDeviceState
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkCommunicationManager
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkConst
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkTargetFrequency
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkTargetDevice
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkStringKey
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkService
+import app.gmaaps.pump.omnipod.eros.OmnipodErosPumpPlugin
+import app.gmaaps.pump.omnipod.eros.R
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager
+import app.gmaaps.pump.omnipod.eros.util.AapsOmnipodUtil
 import dev.zacsweers.metro.Inject
 
 /**
@@ -141,3 +141,4 @@ class RileyLinkOmnipodService : RileyLinkService() {
         private const val REGEX_MAC = "([\\da-fA-F]{1,2}(?::|\$)){6}"
     }
 }
+

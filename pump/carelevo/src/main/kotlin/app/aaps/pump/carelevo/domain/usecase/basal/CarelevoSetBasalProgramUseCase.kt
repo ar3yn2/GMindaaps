@@ -1,13 +1,13 @@
-package app.aaps.pump.carelevo.domain.usecase.basal
+﻿package app.gmaaps.pump.carelevo.domain.usecase.basal
 
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.pump.carelevo.domain.ext.generateUUID
-import app.aaps.pump.carelevo.domain.ext.splitSegment
-import app.aaps.pump.carelevo.domain.model.basal.CarelevoBasalSegmentDomainModel
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoBasalInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoBasalSegmentInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.pump.carelevo.domain.ext.generateUUID
+import app.gmaaps.pump.carelevo.domain.ext.splitSegment
+import app.gmaaps.pump.carelevo.domain.model.basal.CarelevoBasalSegmentDomainModel
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoBasalInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoBasalSegmentInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
 import dev.zacsweers.metro.Inject
 import java.util.concurrent.TimeUnit
 import kotlin.time.Clock
@@ -74,3 +74,4 @@ class CarelevoSetBasalProgramUseCase @Inject constructor(
         private const val SEGMENTS_PER_PROGRAM = 8
     }
 }
+

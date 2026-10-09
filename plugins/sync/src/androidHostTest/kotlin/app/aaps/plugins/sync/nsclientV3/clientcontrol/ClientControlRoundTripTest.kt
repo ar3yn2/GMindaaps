@@ -1,33 +1,33 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
-import app.aaps.core.interfaces.clientcontrol.ActionProgress
-import app.aaps.core.interfaces.clientcontrol.ClientControlActionDispatcher
-import app.aaps.core.interfaces.clientcontrol.FailureReason
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.AapsNotification
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationAction
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.scenes.ClientControlSendResult
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.nssdk.interfaces.NSAndroidClient
-import app.aaps.core.nssdk.localmodel.clientcontrol.AckEnvelope
-import app.aaps.core.nssdk.localmodel.clientcontrol.AckPhase
-import app.aaps.core.nssdk.localmodel.clientcontrol.AckStatus
-import app.aaps.core.nssdk.localmodel.clientcontrol.ClientControlMessage
-import app.aaps.core.nssdk.localmodel.clientcontrol.MasterPairing
-import app.aaps.core.nssdk.localmodel.clientcontrol.ProgressEnvelope
-import app.aaps.core.nssdk.localmodel.clientcontrol.ProgressPhase
-import app.aaps.core.nssdk.utils.ClientControlCrypto
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.core.interfaces.clientcontrol.ActionProgress
+import app.gmaaps.core.interfaces.clientcontrol.ClientControlActionDispatcher
+import app.gmaaps.core.interfaces.clientcontrol.FailureReason
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.AapsNotification
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationAction
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.scenes.ClientControlSendResult
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.nssdk.interfaces.NSAndroidClient
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.AckEnvelope
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.AckPhase
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.AckStatus
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.ClientControlMessage
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.MasterPairing
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.ProgressEnvelope
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.ProgressPhase
+import app.gmaaps.core.nssdk.utils.ClientControlCrypto
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -385,3 +385,4 @@ internal class ClientControlRoundTripTest {
         job1.cancel() // releases inFlight via finally
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.implementation.receivers
+﻿package app.gmaaps.implementation.receivers
 
 import androidx.work.ListenableWorker
 import androidx.work.OneTimeWorkRequest
@@ -6,27 +6,27 @@ import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.alerts.LocalAlertUtils
-import app.aaps.core.interfaces.aps.APS
-import app.aaps.core.interfaces.aps.AutosensDataStore
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.configuration.InitProgress
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.dst.DstHelper
-import app.aaps.core.interfaces.maintenance.Maintenance
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.queue.Command
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventProfileChangeRequested
-import app.aaps.core.keys.LongNonKey
-import app.aaps.implementation.maintenance.PeriodicMaintenance
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.alerts.LocalAlertUtils
+import app.gmaaps.core.interfaces.aps.APS
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.configuration.InitProgress
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.dst.DstHelper
+import app.gmaaps.core.interfaces.maintenance.Maintenance
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.queue.Command
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventProfileChangeRequested
+import app.gmaaps.core.keys.LongNonKey
+import app.gmaaps.implementation.maintenance.PeriodicMaintenance
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import com.google.common.util.concurrent.ListenableFuture
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -208,7 +208,7 @@ class KeepAliveWorkerTest : TestBaseWithProfile() {
         whenever(profileFunction.getRequestedProfile()).thenReturn(profileSwitch)
         whenever(profileFunction.getProfile()).thenReturn(effectiveProfile)
         whenever(commandQueue.isRunning(Command.CommandType.BASAL_PROFILE)).thenReturn(true)
-        whenever(rh.gs(app.aaps.core.ui.R.string.keepalive_basal_outdated)).thenReturn("basal outdated")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.keepalive_basal_outdated)).thenReturn("basal outdated")
         testPumpPlugin.lastData = now // fresh -> status not outdated; requested basal 1.0 vs pump 0.0 -> basal outdated
 
         // Act
@@ -436,3 +436,4 @@ class KeepAliveWorkerTest : TestBaseWithProfile() {
         field.setLong(target, value)
     }
 }
+

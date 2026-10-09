@@ -1,9 +1,9 @@
-package app.aaps.plugins.aps.loop
+﻿package app.gmaaps.plugins.aps.loop
 
 /**
  * The loop's own system notifications - the ones with action buttons, not AAPS in-app notifications.
  *
- * Separate from [app.aaps.core.interfaces.notifications.NotificationManager] on purpose: these carry
+ * Separate from [app.gmaaps.core.interfaces.notifications.NotificationManager] on purpose: these carry
  * tap actions that reach back into the app ("ignore for 15 minutes", "open the app here"), which that
  * interface has no way to express.
  *
@@ -34,3 +34,4 @@ interface LoopNotifier {
     /** Take down whichever of the two is showing. */
     fun dismiss()
 }
+

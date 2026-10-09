@@ -1,7 +1,7 @@
-package app.aaps.core.objects.runningMode
+﻿package app.gmaaps.core.objects.runningMode
 
-import app.aaps.core.data.model.RM
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -179,3 +179,4 @@ class PumpCommandGateTest : TestBase() {
         }
     }
 }
+

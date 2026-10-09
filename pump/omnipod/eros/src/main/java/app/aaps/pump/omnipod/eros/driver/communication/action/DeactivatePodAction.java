@@ -1,15 +1,15 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action;
 
 import androidx.annotation.NonNull;
 
 import java.util.EnumSet;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.DeactivatePodCommand;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
-import app.aaps.pump.omnipod.eros.driver.definition.DeliveryType;
-import app.aaps.pump.omnipod.eros.driver.exception.PodFaultException;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.DeactivatePodCommand;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
+import app.gmaaps.pump.omnipod.eros.driver.definition.DeliveryType;
+import app.gmaaps.pump.omnipod.eros.driver.exception.PodFaultException;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
 
 public class DeactivatePodAction implements OmnipodAction<StatusResponse> {
     @NonNull private final ErosPodStateManager podStateManager;
@@ -37,3 +37,4 @@ public class DeactivatePodAction implements OmnipodAction<StatusResponse> {
         return communicationService.sendCommand(StatusResponse.class, podStateManager, new DeactivatePodCommand(podStateManager.getCurrentNonce()));
     }
 }
+

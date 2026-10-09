@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.clientcontrol
+﻿package app.gmaaps.core.nssdk.localmodel.clientcontrol
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -46,3 +46,4 @@ enum class ClientState {
     @SerialName("Pending") Pending,
     @SerialName("Active") Active
 }
+

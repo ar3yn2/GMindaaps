@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     // NOT com.android.library. AGP 9 refuses that plugin together with the multiplatform plugin.
@@ -16,7 +16,7 @@ plugins {
 // a TextRef-named view of them that common code can reach.
 val generateSmoothingStrings = tasks.register<GenerateKeyStringsTask>("generateSmoothingStrings") {
     resDir.set(layout.projectDirectory.dir("src/androidMain/res"))
-    packageName.set("app.aaps.plugins.smoothing")
+    packageName.set("app.gmaaps.plugins.smoothing")
     owner.set("smoothing")
     objectName.set("SmoothingStrings")
     idsObjectName.set("SmoothingStringIds")
@@ -29,7 +29,7 @@ val generateSmoothingStrings = tasks.register<GenerateKeyStringsTask>("generateS
 
 kotlin {
     android {
-        namespace = "app.aaps.plugins.smoothing"
+        namespace = "app.gmaaps.plugins.smoothing"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         androidResources { enable = true }
@@ -93,4 +93,5 @@ kotlin {
         }
     }
 }
+
 

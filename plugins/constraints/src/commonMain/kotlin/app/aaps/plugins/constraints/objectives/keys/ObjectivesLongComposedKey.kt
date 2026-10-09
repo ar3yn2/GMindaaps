@@ -1,6 +1,6 @@
-package app.aaps.plugins.constraints.objectives.keys
+﻿package app.gmaaps.plugins.constraints.objectives.keys
 
-import app.aaps.core.keys.interfaces.LongComposedNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongComposedNonPreferenceKey
 
 enum class ObjectivesLongComposedKey(
     override val key: String,

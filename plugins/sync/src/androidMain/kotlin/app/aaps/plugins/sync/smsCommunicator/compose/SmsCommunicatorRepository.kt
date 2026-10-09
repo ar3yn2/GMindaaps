@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.smsCommunicator.compose
+﻿package app.gmaaps.plugins.sync.smsCommunicator.compose
 
-import app.aaps.core.interfaces.smsCommunicator.Sms
+import app.gmaaps.core.interfaces.smsCommunicator.Sms
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -23,3 +23,4 @@ class SmsCommunicatorRepository() {
         _messages.update { sorted.subList(start, sorted.size).map { Sms(it) } }
     }
 }
+

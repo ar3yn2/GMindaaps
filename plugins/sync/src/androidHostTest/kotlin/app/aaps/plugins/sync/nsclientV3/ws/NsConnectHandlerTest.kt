@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
-import app.aaps.core.keys.StringKey
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.compose.NSClientRepositoryImpl
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.compose.NSClientRepositoryImpl
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -175,3 +175,4 @@ class NsConnectHandlerTest : TestBaseWithProfile() {
         verify(nsClientV3Plugin, never()).executeLoop(any())
     }
 }
+

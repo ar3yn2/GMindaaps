@@ -1,16 +1,16 @@
-package app.aaps.implementation.queue.commands
+﻿package app.gmaaps.implementation.queue.commands
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.queue.Command
-import app.aaps.core.interfaces.queue.cancel
-import app.aaps.core.keys.IntKey
-import app.aaps.implementation.pump.PumpEnactResultObject
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.queue.Command
+import app.gmaaps.core.interfaces.queue.cancel
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.implementation.pump.PumpEnactResultObject
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Test
@@ -113,10 +113,10 @@ class CommandSMBBolusTest : TestBaseWithProfile() {
 
     @Test
     fun `cancel clears progress data and completes with success by default`() = runTest {
-        whenever(rh.gs(app.aaps.core.ui.R.string.command_replaced)).thenReturn("replaced")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.command_replaced)).thenReturn("replaced")
         val command = newCommand(smbInfo())
 
-        command.cancel(app.aaps.core.ui.R.string.command_replaced)
+        command.cancel(app.gmaaps.core.ui.R.string.command_replaced)
 
         val received = command.completion.await()
         assertThat(received.success).isTrue()
@@ -125,10 +125,10 @@ class CommandSMBBolusTest : TestBaseWithProfile() {
 
     @Test
     fun `cancel clears progress data and completes with failure when success=false`() = runTest {
-        whenever(rh.gs(app.aaps.core.ui.R.string.command_replaced)).thenReturn("replaced")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.command_replaced)).thenReturn("replaced")
         val command = newCommand(smbInfo())
 
-        command.cancel(app.aaps.core.ui.R.string.command_replaced, success = false)
+        command.cancel(app.gmaaps.core.ui.R.string.command_replaced, success = false)
 
         val received = command.completion.await()
         assertThat(received.success).isFalse()
@@ -145,3 +145,4 @@ class CommandSMBBolusTest : TestBaseWithProfile() {
         const val BOLUS_GENERATION = 7L
     }
 }
+

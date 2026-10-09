@@ -1,7 +1,7 @@
-package app.aaps.implementation.scenes
+﻿package app.gmaaps.implementation.scenes
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -64,3 +64,4 @@ class IosSceneExpiryScheduler(
         // Nothing was ever scheduled, so there is nothing to cancel. Not an error.
     }
 }
+

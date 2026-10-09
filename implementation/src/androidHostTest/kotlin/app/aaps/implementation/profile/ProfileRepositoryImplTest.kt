@@ -1,17 +1,17 @@
-package app.aaps.implementation.profile
+﻿package app.gmaaps.implementation.profile
 
-import app.aaps.core.data.model.data.Block
-import app.aaps.core.interfaces.profile.ProfileStore
-import app.aaps.core.interfaces.profile.SingleProfile
-import app.aaps.core.keys.LongNonKey
-import app.aaps.core.keys.ProfileComposedBooleanKey
-import app.aaps.core.keys.ProfileComposedStringKey
-import app.aaps.core.keys.ProfileIntKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.objects.extensions.singleBlock
-import app.aaps.core.objects.extensions.singleTargetBlock
-import app.aaps.core.objects.extensions.toJsonArray
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.data.Block
+import app.gmaaps.core.interfaces.profile.ProfileStore
+import app.gmaaps.core.interfaces.profile.SingleProfile
+import app.gmaaps.core.keys.LongNonKey
+import app.gmaaps.core.keys.ProfileComposedBooleanKey
+import app.gmaaps.core.keys.ProfileComposedStringKey
+import app.gmaaps.core.keys.ProfileIntKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.objects.extensions.singleBlock
+import app.gmaaps.core.objects.extensions.singleTargetBlock
+import app.gmaaps.core.objects.extensions.toJsonArray
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -636,3 +636,4 @@ class ProfileRepositoryImplTest : TestBaseWithProfile() {
         assertThat(sut.revision.value).isGreaterThan(revisionBefore)
     }
 }
+

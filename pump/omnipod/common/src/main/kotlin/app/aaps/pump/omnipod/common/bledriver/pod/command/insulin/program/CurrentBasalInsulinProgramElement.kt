@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program
 
 import java.io.Serializable
 
@@ -14,3 +14,4 @@ class CurrentBasalInsulinProgramElement(
         ", remainingTenthPulses=" + remainingTenthPulses +
         '}'
 }
+

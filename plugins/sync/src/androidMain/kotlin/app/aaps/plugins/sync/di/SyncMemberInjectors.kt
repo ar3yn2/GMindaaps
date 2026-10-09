@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.di
+﻿package app.gmaaps.plugins.sync.di
 
-import app.aaps.core.interfaces.di.FeatureMemberInjectors
-import app.aaps.plugins.sync.nsclientV3.services.NSClientV3Service
-import app.aaps.plugins.sync.tidepool.auth.AuthFlowIn
-import app.aaps.plugins.sync.wear.receivers.WearDataReceiver
-import app.aaps.plugins.sync.wear.wearintegration.DataLayerListenerServiceMobile
+import app.gmaaps.core.interfaces.di.FeatureMemberInjectors
+import app.gmaaps.plugins.sync.nsclientV3.services.NSClientV3Service
+import app.gmaaps.plugins.sync.tidepool.auth.AuthFlowIn
+import app.gmaaps.plugins.sync.wear.receivers.WearDataReceiver
+import app.gmaaps.plugins.sync.wear.wearintegration.DataLayerListenerServiceMobile
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ClassKey
@@ -49,3 +49,4 @@ object SyncMemberInjectors {
     @ClassKey(NSClientV3Service::class)
     fun bindNSClientV3Service(injector: MembersInjector<NSClientV3Service>): MembersInjector<*> = injector
 }
+

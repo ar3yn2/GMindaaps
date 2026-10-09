@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.garmin
+﻿package app.gmaaps.plugins.sync.garmin
 
 import io.reactivex.rxjava3.disposables.Disposable
 

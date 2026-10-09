@@ -1,8 +1,8 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.TDD
-import app.aaps.database.entities.TotalDailyDose
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.TDD
+import app.gmaaps.database.entities.TotalDailyDose
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -110,3 +110,4 @@ internal class TotalDailyDosesExtensionTest {
         assertEquals(21L, back.interfaceIDs_backing?.pumpId)
     }
 }
+

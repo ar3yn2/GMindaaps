@@ -1,6 +1,6 @@
-package app.aaps.core.ui.compose.navigation
+﻿package app.gmaaps.core.ui.compose.navigation
 
-import app.aaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.navigation.ElementType
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -70,3 +70,4 @@ class ElementTypeStyleTest {
         assertThat(blank).isEmpty()
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.common.keys
+﻿package app.gmaaps.pump.carelevo.common.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.carelevo.R
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.carelevo.R
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -63,3 +63,4 @@ internal class CarelevoBooleanPreferenceKeyTest {
         }
     }
 }
+

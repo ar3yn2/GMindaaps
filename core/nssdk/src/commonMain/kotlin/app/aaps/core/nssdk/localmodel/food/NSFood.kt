@@ -1,6 +1,6 @@
-package app.aaps.core.nssdk.localmodel.food
+﻿package app.gmaaps.core.nssdk.localmodel.food
 
-import app.aaps.core.nssdk.localmodel.entry.NsUnits
+import app.gmaaps.core.nssdk.localmodel.entry.NsUnits
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -30,3 +30,4 @@ data class NSFood(
     var unit: String = "g",
     var gi: Int? = null // not used yet
 )
+

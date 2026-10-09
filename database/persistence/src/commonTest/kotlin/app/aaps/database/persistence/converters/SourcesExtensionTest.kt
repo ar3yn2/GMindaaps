@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.ue.Sources
-import app.aaps.database.entities.UserEntry
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.database.entities.UserEntry
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -42,3 +42,4 @@ internal class SourcesExtensionTest {
         assertEquals(UserEntry.Sources.entries.size, Sources.entries.size)
     }
 }
+

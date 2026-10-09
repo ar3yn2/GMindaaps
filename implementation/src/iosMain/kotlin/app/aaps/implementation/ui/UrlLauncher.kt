@@ -1,4 +1,4 @@
-package app.aaps.implementation.ui
+﻿package app.gmaaps.implementation.ui
 
 import platform.Foundation.NSURL
 import platform.UIKit.UIApplication
@@ -14,7 +14,7 @@ import platform.darwin.dispatch_get_main_queue
  */
 fun interface UrlLauncher {
 
-    /** Hands [url] to the platform. Nothing is reported back: see [app.aaps.core.interfaces.ui.UrlOpener.open]. */
+    /** Hands [url] to the platform. Nothing is reported back: see [app.gmaaps.core.interfaces.ui.UrlOpener.open]. */
     fun launch(url: NSURL)
 }
 
@@ -32,3 +32,4 @@ class SystemUrlLauncher : UrlLauncher {
         }
     }
 }
+

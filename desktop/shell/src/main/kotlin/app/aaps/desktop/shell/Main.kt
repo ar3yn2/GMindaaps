@@ -1,4 +1,4 @@
-package app.aaps.desktop.shell
+﻿package app.gmaaps.desktop.shell
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -25,54 +25,54 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.navigation.compose.NavHost
-import app.aaps.appshell.AapsAppRoot
-import app.aaps.appshell.navigation.AppRoute
-import app.aaps.appshell.navigation.ElementNavigator
-import app.aaps.appshell.navigation.appNavGraph
-import app.aaps.appshell.navigation.handleNotificationAction
-import app.aaps.appshell.navigation.handleQuickLaunchAction
-import app.aaps.appshell.navigation.handleSearchResultClick
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.resources.LanguageTag
-import app.aaps.core.interfaces.resources.TextRefValueRegistry
-import app.aaps.core.keys.StringKey
-import app.aaps.core.objects.di.CoreObjectsGraph
-import app.aaps.core.ui.compose.LocalMetroViewModelFactory
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.desktop.shell.config.GeneratedBuildInfo
-import app.aaps.desktop.shell.di.DesktopAppGraph
-import app.aaps.desktop.shell.di.GeneratedStringOwners
-import app.aaps.implementation.logging.AAPSLoggerDesktop
-import app.aaps.implementation.maintenance.DesktopFolders
-import app.aaps.shared.clientbindings.ClientGraphBindings
-import app.aaps.shared.clientbindings.ClientViewModelFactory
-import app.aaps.ui.compose.configuration.ConfigurationViewModel
-import app.aaps.ui.compose.insulinManagement.InsulinManagementViewModel
-import app.aaps.ui.compose.loopSheet.LoopActionViewModel
-import app.aaps.ui.compose.main.MainViewModel
-import app.aaps.ui.compose.main.OverviewScreen
-import app.aaps.ui.compose.maintenance.ImportViewModel
-import app.aaps.ui.compose.maintenance.MaintenanceViewModel
-import app.aaps.ui.compose.manageSheet.ManageViewModel
-import app.aaps.ui.compose.overview.chips.ChipsViewModel
-import app.aaps.ui.compose.overview.graphs.GraphViewModel
-import app.aaps.ui.compose.overview.statusLights.StatusViewModel
-import app.aaps.ui.compose.permissionsSheet.PermissionsViewModel
-import app.aaps.ui.compose.profileManagement.viewmodels.ProfileEditorViewModel
-import app.aaps.ui.compose.profileManagement.viewmodels.ProfileHelperViewModel
-import app.aaps.ui.compose.profileManagement.viewmodels.ProfileManagementViewModel
-import app.aaps.ui.compose.quickWizard.viewmodels.QuickWizardManagementViewModel
-import app.aaps.ui.compose.runningMode.RunningModeManagementViewModel
-import app.aaps.ui.compose.scenesSheet.ScenesViewModel
-import app.aaps.ui.compose.siteRotationDialog.viewModels.SiteRotationManagementViewModel
-import app.aaps.ui.compose.stats.viewmodels.StatsViewModel
-import app.aaps.ui.compose.tempTarget.TempTargetManagementViewModel
-import app.aaps.ui.compose.treatments.viewmodels.TreatmentsViewModel
-import app.aaps.ui.compose.treatmentsSheet.TreatmentViewModel
-import app.aaps.ui.search.SearchViewModel
+import app.gmaaps.appshell.AapsAppRoot
+import app.gmaaps.appshell.navigation.AppRoute
+import app.gmaaps.appshell.navigation.ElementNavigator
+import app.gmaaps.appshell.navigation.appNavGraph
+import app.gmaaps.appshell.navigation.handleNotificationAction
+import app.gmaaps.appshell.navigation.handleQuickLaunchAction
+import app.gmaaps.appshell.navigation.handleSearchResultClick
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.resources.LanguageTag
+import app.gmaaps.core.interfaces.resources.TextRefValueRegistry
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.objects.di.CoreObjectsGraph
+import app.gmaaps.core.ui.compose.LocalMetroViewModelFactory
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.desktop.shell.config.GeneratedBuildInfo
+import app.gmaaps.desktop.shell.di.DesktopAppGraph
+import app.gmaaps.desktop.shell.di.GeneratedStringOwners
+import app.gmaaps.implementation.logging.AAPSLoggerDesktop
+import app.gmaaps.implementation.maintenance.DesktopFolders
+import app.gmaaps.shared.clientbindings.ClientGraphBindings
+import app.gmaaps.shared.clientbindings.ClientViewModelFactory
+import app.gmaaps.ui.compose.configuration.ConfigurationViewModel
+import app.gmaaps.ui.compose.insulinManagement.InsulinManagementViewModel
+import app.gmaaps.ui.compose.loopSheet.LoopActionViewModel
+import app.gmaaps.ui.compose.main.MainViewModel
+import app.gmaaps.ui.compose.main.OverviewScreen
+import app.gmaaps.ui.compose.maintenance.ImportViewModel
+import app.gmaaps.ui.compose.maintenance.MaintenanceViewModel
+import app.gmaaps.ui.compose.manageSheet.ManageViewModel
+import app.gmaaps.ui.compose.overview.chips.ChipsViewModel
+import app.gmaaps.ui.compose.overview.graphs.GraphViewModel
+import app.gmaaps.ui.compose.overview.statusLights.StatusViewModel
+import app.gmaaps.ui.compose.permissionsSheet.PermissionsViewModel
+import app.gmaaps.ui.compose.profileManagement.viewmodels.ProfileEditorViewModel
+import app.gmaaps.ui.compose.profileManagement.viewmodels.ProfileHelperViewModel
+import app.gmaaps.ui.compose.profileManagement.viewmodels.ProfileManagementViewModel
+import app.gmaaps.ui.compose.quickWizard.viewmodels.QuickWizardManagementViewModel
+import app.gmaaps.ui.compose.runningMode.RunningModeManagementViewModel
+import app.gmaaps.ui.compose.scenesSheet.ScenesViewModel
+import app.gmaaps.ui.compose.siteRotationDialog.viewModels.SiteRotationManagementViewModel
+import app.gmaaps.ui.compose.stats.viewmodels.StatsViewModel
+import app.gmaaps.ui.compose.tempTarget.TempTargetManagementViewModel
+import app.gmaaps.ui.compose.treatments.viewmodels.TreatmentsViewModel
+import app.gmaaps.ui.compose.treatmentsSheet.TreatmentViewModel
+import app.gmaaps.ui.search.SearchViewModel
 import dev.zacsweers.metro.createGraphFactory
 import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.flow.filter
@@ -393,7 +393,7 @@ private fun AapsDesktopApp(graph: DesktopAppGraph, appIcon: Painter, appName: St
                     // platform now, so a protected screen really does prompt here.
                     withProtection = { protection, action ->
                         graph.protectionCheck.requestProtection(protection) { result ->
-                            if (result == app.aaps.core.interfaces.protection.ProtectionResult.GRANTED) action()
+                            if (result == app.gmaaps.core.interfaces.protection.ProtectionResult.GRANTED) action()
                         }
                     },
                     // The same check `ComposeMainActivity` makes - see the note in `AapsAppHost`. It
@@ -470,3 +470,4 @@ private fun Failed(error: Throwable) {
 
 /** One line, one shape, so a run makes it obvious which platform callbacks are still placeholders. */
 private fun AAPSLogger.notWiredYet(what: String) = error(LTag.CORE, "Not wired up on desktop yet: $what")
+

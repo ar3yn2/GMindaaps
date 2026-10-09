@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
@@ -73,3 +73,4 @@ class QuickAddButtonsTest {
         assertThat(added).isEqualTo(10)
     }
 }
+

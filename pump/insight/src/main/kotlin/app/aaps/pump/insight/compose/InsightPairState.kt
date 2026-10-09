@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.compose
+﻿package app.gmaaps.pump.insight.compose
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothAdapter
@@ -11,13 +11,13 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.content.ServiceConnection
 import android.os.IBinder
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.utils.extensions.safeDisable
-import app.aaps.core.utils.extensions.safeGetParcelableExtra
-import app.aaps.pump.insight.connection_service.InsightConnectionService
-import app.aaps.pump.insight.descriptors.InsightState
-import app.aaps.pump.insight.utils.ExceptionTranslator
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.utils.extensions.safeDisable
+import app.gmaaps.core.utils.extensions.safeGetParcelableExtra
+import app.gmaaps.pump.insight.connection_service.InsightConnectionService
+import app.gmaaps.pump.insight.descriptors.InsightState
+import app.gmaaps.pump.insight.utils.ExceptionTranslator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -28,7 +28,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 /**
- * Replaces the deleted [app.aaps.pump.insight.app_layer.activities.InsightPairingActivity]. Holds
+ * Replaces the deleted [app.gmaaps.pump.insight.app_layer.activities.InsightPairingActivity]. Holds
  * the state and service/receiver lifecycle for the Insight pair wizard sub-screen, so the wizard
  * can live as a Composable inside [InsightComposeContent] instead of a separate activity.
  *
@@ -210,3 +210,4 @@ internal class InsightPairState(
 internal sealed class InsightPairStateEvent {
     data object Finish : InsightPairStateEvent()
 }
+

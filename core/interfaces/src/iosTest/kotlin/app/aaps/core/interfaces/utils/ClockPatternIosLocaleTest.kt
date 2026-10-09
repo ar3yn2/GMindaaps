@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.utils
+﻿package app.gmaaps.core.interfaces.utils
 
 import platform.Foundation.NSDateFormatter
 import platform.Foundation.NSDateFormatterNoStyle
@@ -66,3 +66,4 @@ class ClockPatternIosLocaleTest {
         assertEquals(true, usesTwelveHourClock(template.orEmpty()))
     }
 }
+

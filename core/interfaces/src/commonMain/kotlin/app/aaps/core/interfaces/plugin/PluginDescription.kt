@@ -1,8 +1,8 @@
-package app.aaps.core.interfaces.plugin
+﻿package app.gmaaps.core.interfaces.plugin
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.keys.interfaces.TextRef
 
 open class PluginDescription {
 
@@ -52,3 +52,4 @@ open class PluginDescription {
     fun preferencesVisibleInSimpleMode(value: Boolean): PluginDescription = this.also { it.preferencesVisibleInSimpleMode = value }
     fun composeContent(provider: (PluginBase) -> Any): PluginDescription = this.also { it.composeContentProvider = provider }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
 import kotlinx.coroutines.flow.Flow
 
@@ -23,7 +23,7 @@ enum class NsLoadStep {
 /**
  * Runs the Nightscout load and upload rounds, under one name that only one round may hold.
  *
- * Same split as [app.aaps.plugins.sync.nsclientV3.ws.NsConnection]: the plugin decides *what* should
+ * Same split as [app.gmaaps.plugins.sync.nsclientV3.ws.NsConnection]: the plugin decides *what* should
  * run and *whether* it may, this decides *how* it runs. Android uses WorkManager, because a round
  * started from the UI should finish even if the screen goes away.
  *
@@ -61,3 +61,4 @@ interface NsLoadExecutor {
     /** Cancels the round, if one is going. */
     fun cancel()
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.db
+﻿package app.gmaaps.core.interfaces.db
 
-import app.aaps.core.data.model.TB
+import app.gmaaps.core.data.model.TB
 
 interface ProcessedTbrEbData {
 

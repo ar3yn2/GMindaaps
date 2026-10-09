@@ -1,7 +1,7 @@
-package app.aaps.plugins.main.iob.iobCobCalculator
+﻿package app.gmaaps.plugins.main.iob.iobCobCalculator
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -166,3 +166,4 @@ internal class HistoryChangeScheduler(
         val MAX_WAIT_FOR_CALCULATION = 10.minutes
     }
 }
+

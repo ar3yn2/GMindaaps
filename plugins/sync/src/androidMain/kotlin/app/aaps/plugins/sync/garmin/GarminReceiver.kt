@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.garmin
+﻿package app.gmaaps.plugins.sync.garmin
 
 /**
  * Callback interface for a @see ConnectIqClient.

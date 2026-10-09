@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.utils
+﻿package app.gmaaps.core.interfaces.utils
 
 /**
  * Reads the hour field out of a Unicode date format pattern - the kind `NSDateFormatter.dateFormat`
@@ -47,3 +47,4 @@ fun usesTwelveHourClock(pattern: String): Boolean? {
     }
     return null
 }
+

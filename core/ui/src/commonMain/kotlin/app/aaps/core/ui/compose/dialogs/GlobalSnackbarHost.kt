@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -29,13 +29,13 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.repeatOnLifecycle
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.ui.SnackbarHostPresence
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsTheme
-import app.aaps.core.ui.compose.SnackbarColors
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.ui.SnackbarHostPresence
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsTheme
+import app.gmaaps.core.ui.compose.SnackbarColors
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Root-level snackbar host that subscribes to [EventShowSnackbar] on [rxBus]
@@ -181,3 +181,4 @@ private fun resolveBusStyle(
             Icons.Default.Info
         )
     }
+

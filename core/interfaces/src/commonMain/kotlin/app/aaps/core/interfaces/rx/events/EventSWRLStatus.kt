@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.rx.events
+﻿package app.gmaaps.core.interfaces.rx.events
 
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * Fired to update the setup wizard with the RileyLink status.

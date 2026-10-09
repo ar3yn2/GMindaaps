@@ -1,11 +1,11 @@
-package app.aaps.database.daos.workaround
+﻿package app.gmaaps.database.daos.workaround
 
 import androidx.room.Transaction
-import app.aaps.database.daos.ProfileSwitchDao
-import app.aaps.database.daos.TraceableDao
-import app.aaps.database.daos.insertNewEntryImpl
-import app.aaps.database.daos.updateExistingEntryImpl
-import app.aaps.database.entities.ProfileSwitch
+import app.gmaaps.database.daos.ProfileSwitchDao
+import app.gmaaps.database.daos.TraceableDao
+import app.gmaaps.database.daos.insertNewEntryImpl
+import app.gmaaps.database.daos.updateExistingEntryImpl
+import app.gmaaps.database.entities.ProfileSwitch
 
 internal interface ProfileSwitchDaoWorkaround : TraceableDao<ProfileSwitch> {
 
@@ -17,3 +17,4 @@ internal interface ProfileSwitchDaoWorkaround : TraceableDao<ProfileSwitch> {
     override suspend fun updateExistingEntry(entry: ProfileSwitch): Long =
         (this as ProfileSwitchDao).updateExistingEntryImpl(entry)
 }
+

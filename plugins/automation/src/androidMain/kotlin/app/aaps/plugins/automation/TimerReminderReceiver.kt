@@ -1,19 +1,19 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import android.content.Context
 import android.content.Intent
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.objects.workflow.MetroBroadcastReceiver
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.objects.workflow.MetroBroadcastReceiver
 import dev.zacsweers.metro.Inject
 
 /**
  * Rings the AAPS full-screen alarm for a reminder previously scheduled by
- * [app.aaps.core.interfaces.alerts.ReminderScheduler] via AlarmManager.
+ * [app.gmaaps.core.interfaces.alerts.ReminderScheduler] via AlarmManager.
  *
  * Why this exists: handing a reminder to the system Clock app with `startActivity(ACTION_SET_TIMER)`
  * does not work, because Android blocks that from the background. A reminder scheduled while AAPS is
@@ -39,6 +39,7 @@ class TimerReminderReceiver : MetroBroadcastReceiver() {
 
     companion object {
 
-        const val EXTRA_TEXT = "app.aaps.plugins.automation.timerReminder.text"
+        const val EXTRA_TEXT = "app.gmaaps.plugins.automation.timerReminder.text"
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.medtronic.defs
+﻿package app.gmaaps.pump.medtronic.defs
 
-import app.aaps.core.interfaces.pump.actions.CustomActionType
+import app.gmaaps.core.interfaces.pump.actions.CustomActionType
 
 /**
  * Created by andy on 11/3/18.

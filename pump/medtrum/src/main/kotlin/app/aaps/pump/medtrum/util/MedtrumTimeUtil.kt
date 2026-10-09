@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.util
+﻿package app.gmaaps.pump.medtrum.util
 
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
@@ -23,3 +23,4 @@ class MedtrumTimeUtil() {
         return Duration.between(epochInstant, pumpInstant).seconds * 1000
     }
 }
+

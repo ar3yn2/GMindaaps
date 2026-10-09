@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.tidepool.compose
+﻿package app.gmaaps.plugins.sync.tidepool.compose
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.plugins.sync.tidepool.auth.AuthFlowOut
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.plugins.sync.tidepool.auth.AuthFlowOut
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -59,3 +59,4 @@ class TidepoolRepositoryTest {
         assertThat(sut.logList.value).isEmpty()
     }
 }
+

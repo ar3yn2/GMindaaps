@@ -1,9 +1,9 @@
-package app.aaps.plugins.source.instara
+﻿package app.gmaaps.plugins.source.instara
 
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.interfaces.db.PersistenceLayer
 
 /**
  * Instara trend arrow resolver.

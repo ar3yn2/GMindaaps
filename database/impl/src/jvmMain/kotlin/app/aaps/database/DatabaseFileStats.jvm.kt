@@ -1,4 +1,4 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
 import java.io.File
 
@@ -15,3 +15,4 @@ internal actual fun databaseFileStats(path: String): DatabaseFileStats {
         freeBytes = dbFile.parentFile?.let { runCatching { it.usableSpace }.getOrDefault(-1L) } ?: -1L
     )
 }
+

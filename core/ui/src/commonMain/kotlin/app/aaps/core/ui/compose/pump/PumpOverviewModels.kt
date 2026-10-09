@@ -1,10 +1,10 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.AnnotatedString
-import app.aaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.StatusLevel
 
 /**
  * UI state for the shared pump overview screen.
@@ -81,3 +81,4 @@ data class PumpAction(
     val visible: Boolean = true,
     val onClick: () -> Unit
 )
+

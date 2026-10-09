@@ -1,24 +1,24 @@
-package app.aaps.implementation.wizard
+﻿package app.gmaaps.implementation.wizard
 
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.interfaces.aps.AutosensDataStore
-import app.aaps.core.interfaces.aps.IobTotal
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.automation.Automation
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.objects.constraints.ConstraintObject
-import app.aaps.core.objects.runningMode.RunningModeGuard
-import app.aaps.core.objects.wizard.BolusWizard
-import app.aaps.plugins.aps.openAPSSMB.OpenAPSSMBPlugin
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.core.interfaces.aps.IobTotal
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.automation.Automation
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.objects.constraints.ConstraintObject
+import app.gmaaps.core.objects.runningMode.RunningModeGuard
+import app.gmaaps.core.objects.wizard.BolusWizard
+import app.gmaaps.plugins.aps.openAPSSMB.OpenAPSSMBPlugin
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -353,3 +353,4 @@ class BolusWizardTest : TestBaseWithProfile() {
         assertThat(bw.totalBeforePercentageAdjustment).isWithin(0.001).of(5.0)
     }
 }
+

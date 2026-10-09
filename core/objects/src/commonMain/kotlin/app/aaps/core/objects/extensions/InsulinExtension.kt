@@ -1,9 +1,9 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.utils.lenientDouble
-import app.aaps.core.utils.lenientLong
-import app.aaps.core.utils.lenientString
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.utils.lenientDouble
+import app.gmaaps.core.utils.lenientLong
+import app.gmaaps.core.utils.lenientString
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.buildJsonObject
@@ -38,3 +38,4 @@ fun ICfg.Companion.fromJsonObject(json: JsonObject): ICfg {
 
     return icfg
 }
+

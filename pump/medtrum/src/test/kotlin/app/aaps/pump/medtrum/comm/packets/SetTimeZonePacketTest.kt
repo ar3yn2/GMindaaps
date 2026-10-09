@@ -1,9 +1,9 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.pump.medtrum.MedtrumTestBase
-import app.aaps.pump.medtrum.extension.toByteArray
-import app.aaps.pump.medtrum.util.MedtrumTimeUtil
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.pump.medtrum.MedtrumTestBase
+import app.gmaaps.pump.medtrum.extension.toByteArray
+import app.gmaaps.pump.medtrum.util.MedtrumTimeUtil
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -62,3 +62,4 @@ class SetTimeZonePacketTest : MedtrumTestBase() {
         assertThat(medtrumPump.pumpTimeZoneOffset).isEqualTo(offsetMinutes)
     }
 }
+

@@ -1,15 +1,15 @@
-package app.aaps.pump.common.hw.rileylink.ble.data
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
-import app.aaps.pump.common.hw.rileylink.ble.command.RileyLinkCommand
-import app.aaps.pump.common.hw.rileylink.ble.data.encoding.Encoding4b6b
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersionBase
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
-import app.aaps.pump.common.utils.CRC
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
+import app.gmaaps.pump.common.hw.rileylink.ble.command.RileyLinkCommand
+import app.gmaaps.pump.common.hw.rileylink.ble.data.encoding.Encoding4b6b
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersionBase
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.common.utils.CRC
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
@@ -251,3 +251,4 @@ class RadioResponseTest {
         assertArrayEquals(byteArrayOf(), radioResponse.getPayload())
     }
 }
+

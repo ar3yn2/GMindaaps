@@ -1,6 +1,6 @@
-package app.aaps.pump.dana.keys
+﻿package app.gmaaps.pump.dana.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 
 enum class DanaStringNonKey(
     override val key: String,
@@ -14,3 +14,4 @@ enum class DanaStringNonKey(
     Password("danars_password", ""),
     EmulatorDeviceName("danars_emulator_device_name", "", exportable = false),
 }
+

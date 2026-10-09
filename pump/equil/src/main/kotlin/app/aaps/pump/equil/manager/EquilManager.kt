@@ -1,58 +1,58 @@
-package app.aaps.pump.equil.manager
+﻿package app.gmaaps.pump.equil.manager
 
 import android.os.SystemClock
 import android.text.TextUtils
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.utils.waitMillis
-import app.aaps.pump.equil.EquilConst
-import app.aaps.pump.equil.R
-import app.aaps.pump.equil.ble.EquilBLE
-import app.aaps.pump.equil.data.BolusProfile
-import app.aaps.pump.equil.data.RunMode
-import app.aaps.pump.equil.database.BolusType
-import app.aaps.pump.equil.database.EquilBasalValuesRecord
-import app.aaps.pump.equil.database.EquilBolusRecord
-import app.aaps.pump.equil.database.EquilHistoryPump
-import app.aaps.pump.equil.database.EquilHistoryPumpDao
-import app.aaps.pump.equil.database.EquilHistoryRecord
-import app.aaps.pump.equil.database.EquilHistoryRecordDao
-import app.aaps.pump.equil.database.EquilTempBasalRecord
-import app.aaps.pump.equil.database.ResolvedResult
-import app.aaps.pump.equil.driver.definition.ActivationProgress
-import app.aaps.pump.equil.driver.definition.BasalSchedule
-import app.aaps.pump.equil.driver.definition.BluetoothConnectionState
-import app.aaps.pump.equil.events.EventEquilAlarm
-import app.aaps.pump.equil.events.EventEquilDataChanged
-import app.aaps.pump.equil.events.EventEquilInsulinChanged
-import app.aaps.pump.equil.events.EventEquilModeChanged
-import app.aaps.pump.equil.keys.EquilStringKey
-import app.aaps.pump.equil.manager.Utils.bytesToInt
-import app.aaps.pump.equil.manager.Utils.internalDecodeSpeedToUH
-import app.aaps.pump.equil.manager.command.BaseCmd
-import app.aaps.pump.equil.manager.command.CmdBasalSet
-import app.aaps.pump.equil.manager.command.CmdExtendedBolusSet
-import app.aaps.pump.equil.manager.command.CmdHistoryGet
-import app.aaps.pump.equil.manager.command.CmdLargeBasalSet
-import app.aaps.pump.equil.manager.command.CmdRunningModeGet
-import app.aaps.pump.equil.manager.command.CmdTempBasalGet
-import app.aaps.pump.equil.manager.command.CmdTempBasalSet
-import app.aaps.pump.equil.manager.command.PumpEvent
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.utils.waitMillis
+import app.gmaaps.pump.equil.EquilConst
+import app.gmaaps.pump.equil.R
+import app.gmaaps.pump.equil.ble.EquilBLE
+import app.gmaaps.pump.equil.data.BolusProfile
+import app.gmaaps.pump.equil.data.RunMode
+import app.gmaaps.pump.equil.database.BolusType
+import app.gmaaps.pump.equil.database.EquilBasalValuesRecord
+import app.gmaaps.pump.equil.database.EquilBolusRecord
+import app.gmaaps.pump.equil.database.EquilHistoryPump
+import app.gmaaps.pump.equil.database.EquilHistoryPumpDao
+import app.gmaaps.pump.equil.database.EquilHistoryRecord
+import app.gmaaps.pump.equil.database.EquilHistoryRecordDao
+import app.gmaaps.pump.equil.database.EquilTempBasalRecord
+import app.gmaaps.pump.equil.database.ResolvedResult
+import app.gmaaps.pump.equil.driver.definition.ActivationProgress
+import app.gmaaps.pump.equil.driver.definition.BasalSchedule
+import app.gmaaps.pump.equil.driver.definition.BluetoothConnectionState
+import app.gmaaps.pump.equil.events.EventEquilAlarm
+import app.gmaaps.pump.equil.events.EventEquilDataChanged
+import app.gmaaps.pump.equil.events.EventEquilInsulinChanged
+import app.gmaaps.pump.equil.events.EventEquilModeChanged
+import app.gmaaps.pump.equil.keys.EquilStringKey
+import app.gmaaps.pump.equil.manager.Utils.bytesToInt
+import app.gmaaps.pump.equil.manager.Utils.internalDecodeSpeedToUH
+import app.gmaaps.pump.equil.manager.command.BaseCmd
+import app.gmaaps.pump.equil.manager.command.CmdBasalSet
+import app.gmaaps.pump.equil.manager.command.CmdExtendedBolusSet
+import app.gmaaps.pump.equil.manager.command.CmdHistoryGet
+import app.gmaaps.pump.equil.manager.command.CmdLargeBasalSet
+import app.gmaaps.pump.equil.manager.command.CmdRunningModeGet
+import app.gmaaps.pump.equil.manager.command.CmdTempBasalGet
+import app.gmaaps.pump.equil.manager.command.CmdTempBasalSet
+import app.gmaaps.pump.equil.manager.command.PumpEvent
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonDeserializer
@@ -274,7 +274,7 @@ class EquilManager(
                 // constraint percent.
                 percent = min(percent, 100.0f)
                 bolusProgressData.updateProgress(percent = 100)
-                result.comment = rh.gs(app.aaps.core.ui.R.string.virtualpump_resultok)
+                result.comment = rh.gs(app.gmaaps.core.ui.R.string.virtualpump_resultok)
             } else {
                 result.success = false
                 result.enacted(false)
@@ -814,3 +814,4 @@ class EquilManager(
         }
     }
 }
+

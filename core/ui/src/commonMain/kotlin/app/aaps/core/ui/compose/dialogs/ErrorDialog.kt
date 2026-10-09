@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.icons.Icons
@@ -13,9 +13,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.window.DialogProperties
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.htmlToAnnotatedString
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.htmlToAnnotatedString
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * An error/warning dialog with a warning icon, dismiss button, and optional positive button.
@@ -124,3 +124,4 @@ fun ErrorDialog(
         properties = DialogProperties(dismissOnBackPress = true, dismissOnClickOutside = true)
     )
 }
+

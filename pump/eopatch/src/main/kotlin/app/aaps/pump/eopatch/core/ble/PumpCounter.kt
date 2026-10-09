@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.ble
+﻿package app.gmaaps.pump.eopatch.core.ble
 
 import kotlin.math.roundToInt
 
@@ -14,3 +14,4 @@ object PumpCounter {
     private fun getPumpCountBase(dose: Float): Int =
         if (dose <= 0f) 0 else (dose / AppConstant.INSULIN_UNIT_P).roundToInt()
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.IntentPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.IntentPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * Legacy `IntentKey` enum. It is EMPTY and must stay empty.
@@ -29,3 +29,4 @@ enum class IntentKey(
     ;
 
 }
+

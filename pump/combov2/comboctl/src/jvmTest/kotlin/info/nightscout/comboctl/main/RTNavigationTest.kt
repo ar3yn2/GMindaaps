@@ -1,6 +1,6 @@
-package info.nightscout.comboctl.main
+﻿package info.nightscout.comboctl.main
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import info.nightscout.comboctl.base.LogLevel
 import info.nightscout.comboctl.base.Logger
 import info.nightscout.comboctl.base.NullDisplayFrame
@@ -1000,3 +1000,4 @@ class RTNavigationTest : TestBase() {
         }
     }
 }
+

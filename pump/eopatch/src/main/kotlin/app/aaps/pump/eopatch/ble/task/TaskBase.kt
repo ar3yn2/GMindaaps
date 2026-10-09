@@ -1,14 +1,14 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.eopatch.ble.PreferenceManager
-import app.aaps.pump.eopatch.core.exception.NoActivatedPatchException
-import app.aaps.pump.eopatch.core.exception.PatchDisconnectedException
-import app.aaps.pump.eopatch.core.response.BaseResponse
-import app.aaps.pump.eopatch.core.scan.BleConnectionState
-import app.aaps.pump.eopatch.core.scan.IBleDevice
-import app.aaps.pump.eopatch.vo.NormalBasalManager
-import app.aaps.pump.eopatch.vo.PatchConfig
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.eopatch.ble.PreferenceManager
+import app.gmaaps.pump.eopatch.core.exception.NoActivatedPatchException
+import app.gmaaps.pump.eopatch.core.exception.PatchDisconnectedException
+import app.gmaaps.pump.eopatch.core.response.BaseResponse
+import app.gmaaps.pump.eopatch.core.scan.BleConnectionState
+import app.gmaaps.pump.eopatch.core.scan.IBleDevice
+import app.gmaaps.pump.eopatch.vo.NormalBasalManager
+import app.gmaaps.pump.eopatch.vo.PatchConfig
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.HasMemberInjections
 import dev.zacsweers.metro.Inject
@@ -90,3 +90,4 @@ open class TaskBase(val func: TaskFunc) {
         }
     }
 }
+

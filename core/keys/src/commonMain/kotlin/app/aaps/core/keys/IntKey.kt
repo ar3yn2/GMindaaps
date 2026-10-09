@@ -1,13 +1,13 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.ElementVisibility
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.PreferenceEnabledCondition
-import app.aaps.core.keys.interfaces.SyncChannel
-import app.aaps.core.keys.interfaces.SyncDirection
-import app.aaps.core.keys.interfaces.SyncSpec
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.ElementVisibility
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.PreferenceEnabledCondition
+import app.gmaaps.core.keys.interfaces.SyncChannel
+import app.gmaaps.core.keys.interfaces.SyncDirection
+import app.gmaaps.core.keys.interfaces.SyncSpec
+import app.gmaaps.core.keys.interfaces.TextRef
 
 enum class IntKey(
     override val key: String,
@@ -450,3 +450,4 @@ enum class IntKey(
 
     override val entries: Map<Int, TextRef> = entriesRefs
 }
+

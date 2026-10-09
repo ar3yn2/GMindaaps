@@ -1,13 +1,13 @@
-package app.aaps.pump.common.hw.rileylink.ble
+﻿package app.gmaaps.pump.common.hw.rileylink.ble
 
 import android.os.SystemClock
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.core.utils.pump.ThreadUtil
-import app.aaps.pump.common.hw.rileylink.ble.data.GattAttributes
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
-import app.aaps.pump.common.hw.rileylink.ble.operations.BLECommOperationResult
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.core.utils.pump.ThreadUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.data.GattAttributes
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
+import app.gmaaps.pump.common.hw.rileylink.ble.operations.BLECommOperationResult
 import java.util.UUID
 import java.util.concurrent.Executors
 import java.util.concurrent.LinkedBlockingQueue

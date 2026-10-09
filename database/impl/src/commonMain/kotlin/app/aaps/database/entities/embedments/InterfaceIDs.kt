@@ -1,4 +1,4 @@
-package app.aaps.database.entities.embedments
+﻿package app.gmaaps.database.entities.embedments
 
 import androidx.room.Ignore
 

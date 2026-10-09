@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.openhumans.compose
+﻿package app.gmaaps.plugins.sync.openhumans.compose
 
 import androidx.compose.ui.graphics.Color
 
@@ -9,3 +9,4 @@ internal object OHColors {
     val Blue = Color(0xFF009fa8)
     val BlueVariant = Color(0xFF036866)
 }
+

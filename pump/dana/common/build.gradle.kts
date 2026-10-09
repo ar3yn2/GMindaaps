@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.ksp)
     alias(libs.plugins.compose.compiler)
@@ -10,7 +10,7 @@ plugins {
 
 android {
 
-    namespace = "app.aaps.pump.dana"
+    namespace = "app.gmaaps.pump.dana"
 }
 
 ksp {

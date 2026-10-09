@@ -1,8 +1,8 @@
-package app.aaps.plugins.configuration.configBuilder
+﻿package app.gmaaps.plugins.configuration.configBuilder
 
-import app.aaps.core.interfaces.configuration.AppExit
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.configuration.AppExit
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -34,3 +34,4 @@ class IosAppExit(
         aapsLogger.error(LTag.CORE, "iOS apps may not terminate themselves, so AAPS stays running (restart asked: $launchAgain)")
     }
 }
+

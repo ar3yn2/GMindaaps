@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.APSResult
+import app.gmaaps.database.entities.APSResult
 
 /**
  * Creates or updates the ApsResult

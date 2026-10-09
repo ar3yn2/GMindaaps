@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import org.joda.time.Duration;
 import org.junit.jupiter.api.Assertions;
@@ -7,14 +7,14 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.Collections;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSlot;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertType;
-import app.aaps.pump.omnipod.eros.driver.definition.BeepRepeat;
-import app.aaps.pump.omnipod.eros.driver.definition.BeepType;
-import app.aaps.pump.omnipod.eros.driver.definition.TimerAlertTrigger;
-import app.aaps.pump.omnipod.eros.driver.definition.UnitsRemainingAlertTrigger;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSlot;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.BeepRepeat;
+import app.gmaaps.pump.omnipod.eros.driver.definition.BeepType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.TimerAlertTrigger;
+import app.gmaaps.pump.omnipod.eros.driver.definition.UnitsRemainingAlertTrigger;
 
 class ConfigureAlertsCommandTest {
     @Test
@@ -93,3 +93,4 @@ class ConfigureAlertsCommandTest {
                 configureAlertsCommand.getRawData());
     }
 }
+

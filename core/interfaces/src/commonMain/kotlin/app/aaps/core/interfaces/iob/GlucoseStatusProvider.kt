@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.iob
+﻿package app.gmaaps.core.interfaces.iob
 
-import app.aaps.core.interfaces.aps.GlucoseStatus
+import app.gmaaps.core.interfaces.aps.GlucoseStatus
 
 interface GlucoseStatusProvider {
 

@@ -1,13 +1,13 @@
-package app.aaps.pump.carelevo.common
+﻿package app.gmaaps.pump.carelevo.common
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.pump.carelevo.coordinator.CarelevoAlarmClearCoordinator
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
-import app.aaps.pump.carelevo.presentation.model.AlarmEvent
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.pump.carelevo.coordinator.CarelevoAlarmClearCoordinator
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
+import app.gmaaps.pump.carelevo.presentation.model.AlarmEvent
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Single
@@ -183,3 +183,4 @@ internal class CarelevoAlarmActionHandlerTest {
         verify(alarmClearCoordinator).forceQuitTeardown(any())
     }
 }
+

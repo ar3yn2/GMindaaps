@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.ble
+﻿package app.gmaaps.pump.equil.ble
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Test
@@ -64,3 +64,4 @@ class GattAttributesTest : TestBase() {
         assertEquals(GattAttributes.NRF_UART_WRITE.lowercase(), GattAttributes.NRF_UART_WRITE)
     }
 }
+

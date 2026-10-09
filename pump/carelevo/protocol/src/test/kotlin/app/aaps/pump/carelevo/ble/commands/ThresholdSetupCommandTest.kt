@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -51,3 +51,4 @@ internal class ThresholdSetupCommandTest {
         assertFailsWith<IllegalArgumentException> { ThresholdSetupCommand(100, 116, 2.5, 15.0, true).decode(byteArrayOf(0x7C, 0x00)) }
     }
 }
+

@@ -1,20 +1,20 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationAction
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.keys.LongNonKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.nssdk.localmodel.clientcontrol.MasterPairing
-import app.aaps.core.nssdk.localmodel.configuration.NSAuthorizedClients
-import app.aaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
-import app.aaps.plugins.sync.SyncStringsValues
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationAction
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.keys.LongNonKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.MasterPairing
+import app.gmaaps.core.nssdk.localmodel.configuration.NSAuthorizedClients
+import app.gmaaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
+import app.gmaaps.plugins.sync.SyncStringsValues
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -210,3 +210,4 @@ internal class OrphanDetectorTest {
         assertThat(sut.authorized.value).isTrue()         // optimistically authorized again
     }
 }
+

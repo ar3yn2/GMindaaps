@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     id("android-module-dependencies")
     id("test-module-dependencies")
@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "app.aaps.pump.danars.emulator"
+    namespace = "app.gmaaps.pump.danars.emulator"
 }
 
 dependencies {
@@ -20,3 +20,4 @@ dependencies {
     testImplementation(project(":shared:tests"))
 
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.core.nssdk.networking
+﻿package app.gmaaps.core.nssdk.networking
 
-import app.aaps.core.nssdk.NSAndroidClientImpl
-import app.aaps.core.nssdk.exceptions.DateHeaderOutOfToleranceException
-import app.aaps.core.nssdk.exceptions.InvalidAccessTokenException
+import app.gmaaps.core.nssdk.NSAndroidClientImpl
+import app.gmaaps.core.nssdk.exceptions.DateHeaderOutOfToleranceException
+import app.gmaaps.core.nssdk.exceptions.InvalidAccessTokenException
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.runTest
@@ -240,3 +240,4 @@ class NsSdkAuthContractTest {
         assertThat(refreshCalls.get()).isEqualTo(0)
     }
 }
+

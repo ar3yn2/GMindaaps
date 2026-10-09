@@ -1,19 +1,19 @@
-package app.aaps.plugins.sensitivity
+﻿package app.gmaaps.plugins.sensitivity
 
 import androidx.collection.LongSparseArray
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.model.TE
-import app.aaps.core.interfaces.aps.AutosensData
-import app.aaps.core.interfaces.aps.AutosensDataStore
-import app.aaps.core.interfaces.aps.AutosensResult
-import app.aaps.core.interfaces.aps.Sensitivity
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.interfaces.aps.AutosensData
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.core.interfaces.aps.AutosensResult
+import app.gmaaps.core.interfaces.aps.Sensitivity
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.Mock
@@ -103,3 +103,4 @@ class AbstractSensitivityPluginTest : TestBase() {
         assertThat(sut.firstIndexAtOrAfterForTest(LongSparseArray<AutosensData>(), 100L)).isEqualTo(0)
     }
 }
+

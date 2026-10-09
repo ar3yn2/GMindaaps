@@ -1,28 +1,28 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.interfaces.alerts.ReminderScheduler
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.location.LocationServiceController
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.rx.events.EventAutosensCalculationFinished
-import app.aaps.core.interfaces.rx.events.EventBTChange
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.core.keys.StringNonKey
-import app.aaps.plugins.automation.actions.Action
-import app.aaps.plugins.automation.actions.ActionFactory
-import app.aaps.plugins.automation.elements.ComparatorConnect
-import app.aaps.plugins.automation.triggers.TriggerBTDevice
-import app.aaps.plugins.automation.triggers.TriggerConnector
-import app.aaps.plugins.automation.triggers.TriggerDeps
-import app.aaps.plugins.automation.triggers.TriggerFactory
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.interfaces.alerts.ReminderScheduler
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.location.LocationServiceController
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.rx.events.EventAutosensCalculationFinished
+import app.gmaaps.core.interfaces.rx.events.EventBTChange
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.plugins.automation.actions.Action
+import app.gmaaps.plugins.automation.actions.ActionFactory
+import app.gmaaps.plugins.automation.elements.ComparatorConnect
+import app.gmaaps.plugins.automation.triggers.TriggerBTDevice
+import app.gmaaps.plugins.automation.triggers.TriggerConnector
+import app.gmaaps.plugins.automation.triggers.TriggerDeps
+import app.gmaaps.plugins.automation.triggers.TriggerFactory
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
@@ -228,3 +228,4 @@ class AutomationRuntimeProcessingTest : TestBaseWithProfile() {
         }
     }
 }
+

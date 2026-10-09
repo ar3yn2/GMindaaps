@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.ble
+﻿package app.gmaaps.pump.eopatch.core.ble
 
 object MacVerifier {
 
@@ -19,3 +19,4 @@ object MacVerifier {
     private fun Char.isHexDigit(): Boolean =
         this in '0'..'9' || this in 'A'..'F' || this in 'a'..'f'
 }
+

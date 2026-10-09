@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.defs
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.defs
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test

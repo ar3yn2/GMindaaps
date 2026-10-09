@@ -1,9 +1,9 @@
-package app.aaps.implementation.maintenance.cloud
+﻿package app.gmaaps.implementation.maintenance.cloud
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.maintenance.CloudStorageProvider
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.sharedPreferences.KeyValueStore
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.maintenance.CloudStorageProvider
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.sharedPreferences.KeyValueStore
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoSet
 import dev.zacsweers.metro.Inject
@@ -45,3 +45,4 @@ class DesktopGoogleDriveProvider(
     http = HttpClient(OkHttp),
     now = { Clock.System.now().toEpochMilliseconds() }
 )
+

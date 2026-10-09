@@ -1,10 +1,10 @@
-package app.aaps.di
+﻿package app.gmaaps.di
 
 import androidx.test.core.app.ApplicationProvider
-import app.aaps.di.metro.MetroGraphs
-import app.aaps.helpers.IntegrationWaits
-import app.aaps.helpers.RxHelper
-import app.aaps.plugins.aps.utils.StaticInjector
+import app.gmaaps.di.metro.MetroGraphs
+import app.gmaaps.helpers.IntegrationWaits
+import app.gmaaps.helpers.RxHelper
+import app.gmaaps.plugins.aps.utils.StaticInjector
 
 /**
  * The Metro root for the test process.
@@ -30,3 +30,4 @@ fun newStaticInjector(): StaticInjector = with(testGraphs) {
         resourceHelper, decimalFormatter, concentrationHelper, dateUtil, profileUtil
     )
 }
+

@@ -1,10 +1,10 @@
-package app.aaps.pump.medtronic.comm
+﻿package app.gmaaps.pump.medtronic.comm
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.pump.medtronic.MedtronicTestBase
-import app.aaps.pump.medtronic.data.dto.BatteryStatusDTO
-import app.aaps.pump.medtronic.defs.MedtronicDeviceType
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.pump.medtronic.MedtronicTestBase
+import app.gmaaps.pump.medtronic.data.dto.BatteryStatusDTO
+import app.gmaaps.pump.medtronic.defs.MedtronicDeviceType
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -285,3 +285,4 @@ class MedtronicConverterUTest : MedtronicTestBase() {
         assertThat(settings["PCFG_BASAL_PROFILES_ENABLED"]?.value).isEqualTo("Yes")
     }
 }
+

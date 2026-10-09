@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import android.app.Application
 import androidx.compose.material3.MaterialTheme
@@ -11,8 +11,8 @@ import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
-import app.aaps.core.data.model.ICfg
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import org.junit.Before
 import org.junit.Rule
@@ -26,14 +26,14 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.interfaces.R as CoreInterfacesR
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.interfaces.R as CoreInterfacesR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Render + interaction tests for [CarelevoSelectInsulinStep].
  *
  * The step is thin glue: it collects three VM StateFlows, feeds the shared
- * `app.aaps.core.ui.compose.insulin.SelectInsulin` picker (always `initialExpanded = true`), gates
+ * `app.gmaaps.core.ui.compose.insulin.SelectInsulin` picker (always `initialExpanded = true`), gates
  * the primary button on `selectedInsulin != null`, and routes the three interactions back to the VM
  * (`selectInsulin` / `advanceFromInsulin` / `exitWizard`).
  *
@@ -226,3 +226,4 @@ class CarelevoSelectInsulinStepTest {
         compose.onNodeWithText(novoRapid.insulinLabel).performScrollTo().assertIsDisplayed()
     }
 }
+

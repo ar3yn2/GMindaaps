@@ -1,17 +1,17 @@
-package app.aaps.pump.carelevo.coordinator
+﻿package app.gmaaps.pump.carelevo.coordinator
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoBasalInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoExtendBolusInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoTempBasalInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.usecase.basal.CarelevoSetBasalProgramUseCase
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoBasalInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoExtendBolusInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoTempBasalInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.usecase.basal.CarelevoSetBasalProgramUseCase
 import com.google.common.truth.Truth.assertThat
 import dev.zacsweers.metro.Provider
 import io.reactivex.rxjava3.subjects.BehaviorSubject
@@ -352,3 +352,4 @@ internal class CarelevoBasalProfileUpdateCoordinatorTest {
         override fun cancelled(cancelled: Boolean): PumpEnactResult = apply { this.cancelled = cancelled }
     }
 }
+

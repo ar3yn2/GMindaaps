@@ -1,28 +1,28 @@
-package app.aaps.plugins.constraints.objectives.compose
+﻿package app.gmaaps.plugins.constraints.objectives.compose
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventSWUpdate
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.plugins.constraints.ConstraintsStrings
-import app.aaps.plugins.constraints.objectives.ObjectivesPlugin
-import app.aaps.plugins.constraints.objectives.SntpClient
-import app.aaps.plugins.constraints.objectives.events.EventObjectivesUpdateGui
-import app.aaps.plugins.constraints.objectives.objectives.Objective
-import app.aaps.plugins.constraints.objectives.objectives.Objective.ExamTask
-import app.aaps.plugins.constraints.objectives.objectives.Objective.UITask
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventSWUpdate
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.plugins.constraints.ConstraintsStrings
+import app.gmaaps.plugins.constraints.objectives.ObjectivesPlugin
+import app.gmaaps.plugins.constraints.objectives.SntpClient
+import app.gmaaps.plugins.constraints.objectives.events.EventObjectivesUpdateGui
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective.ExamTask
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective.UITask
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -458,3 +458,4 @@ class ObjectivesViewModel(
         _scrollToIndex.value = -1
     }
 }
+

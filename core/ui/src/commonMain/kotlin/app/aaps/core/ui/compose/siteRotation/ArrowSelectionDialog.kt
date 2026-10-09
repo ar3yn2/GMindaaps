@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.siteRotation
+﻿package app.gmaaps.core.ui.compose.siteRotation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,10 +12,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import app.aaps.core.data.model.TE
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * @see ArrowSelectionDialogPreview
@@ -83,3 +83,4 @@ private fun TE.Arrow.directionToLabel(): TextRef =
         TE.Arrow.CENTER     -> CoreUiStrings.arrow_center
         TE.Arrow.NONE       -> CoreUiStrings.unknown
     }
+

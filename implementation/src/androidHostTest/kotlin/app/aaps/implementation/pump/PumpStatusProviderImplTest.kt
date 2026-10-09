@@ -1,10 +1,10 @@
-package app.aaps.implementation.pump
+﻿package app.gmaaps.implementation.pump
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.utils.Translator
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.utils.Translator
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.json.buildJsonObject
@@ -117,7 +117,7 @@ class PumpStatusProviderImplTest : TestBaseWithProfile() {
 
     /**
      * The driver extension seam: whatever the active pump contributes has to reach `extended`. This is
-     * the only thing [app.aaps.core.interfaces.pump.Pump.extendedStatus] exists for, and Combo V2 uses
+     * the only thing [app.gmaaps.core.interfaces.pump.Pump.extendedStatus] exists for, and Combo V2 uses
      * it to report alert codes.
      */
     @Test
@@ -138,3 +138,4 @@ class PumpStatusProviderImplTest : TestBaseWithProfile() {
         assertThat(status().getJSONObject("extended").get("WarningCode")).isEqualTo(73)
     }
 }
+

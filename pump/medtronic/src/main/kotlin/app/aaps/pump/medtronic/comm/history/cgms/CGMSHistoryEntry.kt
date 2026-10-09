@@ -1,8 +1,8 @@
-package app.aaps.pump.medtronic.comm.history.cgms
+﻿package app.gmaaps.pump.medtronic.comm.history.cgms
 
-import app.aaps.core.utils.DateTimeUtil
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.pump.medtronic.comm.history.MedtronicHistoryEntry
+import app.gmaaps.core.utils.DateTimeUtil
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.pump.medtronic.comm.history.MedtronicHistoryEntry
 import org.apache.commons.lang3.StringUtils
 import org.joda.time.LocalDateTime
 

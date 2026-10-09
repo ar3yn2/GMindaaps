@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.interfaces.scan
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.scan
 
 /**
  * BLE scan for pod discovery.
@@ -17,3 +17,4 @@ interface PodScanner {
         const val POD_ID_NOT_ACTIVATED = 0xFFFFFFFEL
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.data.mapper
+﻿package app.gmaaps.pump.carelevo.data.mapper
 
-import app.aaps.pump.carelevo.data.model.entities.CarelevoUserSettingInfoEntity
-import app.aaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
-import app.aaps.pump.carelevo.ext.parseIsoInstant
+import app.gmaaps.pump.carelevo.data.model.entities.CarelevoUserSettingInfoEntity
+import app.gmaaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
+import app.gmaaps.pump.carelevo.ext.parseIsoInstant
 
 internal fun CarelevoUserSettingInfoEntity.transformToCarelevoUserSettingInfoDomainModel() = CarelevoUserSettingInfoDomainModel(
     createdAt = parseIsoInstant(createdAt),

@@ -1,18 +1,18 @@
-package app.aaps.wear.comm
+﻿package app.gmaaps.wear.comm
 
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventWearToMobile
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.PushedWatchfaceId
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.impl.rx.bus.RxBusImpl
-import app.aaps.wear.AAPSLoggerTest
-import app.aaps.wear.R
-import app.aaps.wear.WearTestBase
-import app.aaps.wear.data.ComplicationDataRepository
-import app.aaps.wear.watchfaces.WatchFacePushHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventWearToMobile
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.PushedWatchfaceId
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.impl.rx.bus.RxBusImpl
+import app.gmaaps.wear.AAPSLoggerTest
+import app.gmaaps.wear.R
+import app.gmaaps.wear.WearTestBase
+import app.gmaaps.wear.data.ComplicationDataRepository
+import app.gmaaps.wear.watchfaces.WatchFacePushHelper
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
@@ -98,3 +98,4 @@ internal class DataHandlerWearTest : WearTestBase() {
         private const val HANDLER_TIMEOUT_MS = 2_000L
     }
 }
+

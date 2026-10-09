@@ -1,6 +1,6 @@
-package info.nightscout.comboctl.base
+﻿package info.nightscout.comboctl.base
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import info.nightscout.comboctl.base.testUtils.TestBluetoothDevice
 import info.nightscout.comboctl.base.testUtils.TestPumpStateStore
 import info.nightscout.comboctl.base.testUtils.newConditionVariable
@@ -475,3 +475,4 @@ class PairingSessionTest : TestBase() {
             fail("Failure in background coroutine")
     }
 }
+

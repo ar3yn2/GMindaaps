@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.domain.usecase.patch
+﻿package app.gmaaps.pump.carelevo.domain.usecase.patch
 
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
-import app.aaps.pump.carelevo.domain.usecase.patch.model.CarelevoConnectNewPatchRequestModel
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.pump.carelevo.domain.usecase.patch.model.CarelevoConnectNewPatchRequestModel
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.any
@@ -75,3 +75,4 @@ internal class CarelevoConnectNewPatchUseCaseTest {
         assertThat(persisted).isFalse()
     }
 }
+

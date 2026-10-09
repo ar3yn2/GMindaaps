@@ -1,18 +1,18 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.legacy.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.session
 
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothGatt
 import android.content.Context
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.utils.extensions.connectGattCompat
-import app.aaps.pump.omnipod.common.bledriver.comm.Ids
-import app.aaps.pump.omnipod.common.bledriver.comm.endecrypt.EnDecrypt
-import app.aaps.pump.omnipod.common.bledriver.comm.legacy.io.CmdBleIO
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageIO
-import app.aaps.pump.omnipod.common.bledriver.comm.session.Session
-import app.aaps.pump.omnipod.common.bledriver.comm.session.SessionKeys
-import app.aaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.utils.extensions.connectGattCompat
+import app.gmaaps.pump.omnipod.common.bledriver.comm.Ids
+import app.gmaaps.pump.omnipod.common.bledriver.comm.endecrypt.EnDecrypt
+import app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.io.CmdBleIO
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageIO
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.Session
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.SessionKeys
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
 
 class Connection(
     podDevice: BluetoothDevice,
@@ -46,3 +46,4 @@ class Connection(
     override fun createSession(messageIO: MessageIO, ids: Ids, keys: SessionKeys, enDecrypt: EnDecrypt): Session =
         Session(aapsLogger, messageIO, ids, sessionKeys = keys, enDecrypt = enDecrypt)
 }
+

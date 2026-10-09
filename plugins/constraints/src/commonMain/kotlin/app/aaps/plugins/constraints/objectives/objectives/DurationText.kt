@@ -1,4 +1,4 @@
-package app.aaps.plugins.constraints.objectives.objectives
+﻿package app.gmaaps.plugins.constraints.objectives.objectives
 
 /**
  * Renders a duration as "3 d", "5 h" or "20 min".
@@ -18,3 +18,4 @@ interface DurationText {
     /** [durationMs] as a short, human duration. Coarse on purpose - the largest unit that fits. */
     fun format(durationMs: Long): String
 }
+

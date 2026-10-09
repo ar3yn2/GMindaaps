@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.keys
+﻿package app.gmaaps.pump.omnipod.common.keys
 
-import app.aaps.core.keys.PreferenceType
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.omnipod.common.R
+import app.gmaaps.core.keys.PreferenceType
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.omnipod.common.R
 
 enum class OmnipodBooleanPreferenceKey(
     override val key: String,
@@ -36,3 +36,4 @@ enum class OmnipodBooleanPreferenceKey(
     override val title: TextRef = TextRef.AndroidRes(titleResId)
     override val summary: TextRef? = summaryResId?.let { TextRef.AndroidRes(it) }
 }
+

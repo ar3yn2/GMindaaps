@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose
+﻿package app.gmaaps.pump.carelevo.compose
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.MaterialTheme
@@ -15,21 +15,21 @@ import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.text.AnnotatedString
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.ActionCategory
-import app.aaps.core.ui.compose.pump.PumpAction
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.core.ui.compose.pump.PumpOverviewUiState
-import app.aaps.core.ui.compose.pump.StatusBanner
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.common.MutableEventFlow
-import app.aaps.pump.carelevo.common.asEventFlow
-import app.aaps.pump.carelevo.common.model.Event
-import app.aaps.pump.carelevo.common.model.State
-import app.aaps.pump.carelevo.common.model.UiState
-import app.aaps.pump.carelevo.presentation.model.CarelevoOverviewEvent
-import app.aaps.pump.carelevo.presentation.type.CarelevoScreenType
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoOverviewViewModel
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.ActionCategory
+import app.gmaaps.core.ui.compose.pump.PumpAction
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.core.ui.compose.pump.PumpOverviewUiState
+import app.gmaaps.core.ui.compose.pump.StatusBanner
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.common.MutableEventFlow
+import app.gmaaps.pump.carelevo.common.asEventFlow
+import app.gmaaps.pump.carelevo.common.model.Event
+import app.gmaaps.pump.carelevo.common.model.State
+import app.gmaaps.pump.carelevo.common.model.UiState
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoOverviewEvent
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoScreenType
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoOverviewViewModel
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.runBlocking
@@ -46,11 +46,11 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * UI tests for [CarelevoOverviewScreen] — the Carelevo-specific glue around the shared
- * [app.aaps.core.ui.compose.pump.PumpOverviewScreen]: the one-shot event router (snackbars, the three
+ * [app.gmaaps.core.ui.compose.pump.PumpOverviewScreen]: the one-shot event router (snackbars, the three
  * dialogs, the connection-flow hand-off) and the blocking progress overlay.
  *
  * The screen takes its [CarelevoOverviewViewModel] as an explicit parameter (no `metroViewModel()`
@@ -560,3 +560,4 @@ class CarelevoOverviewScreenTest {
         compose.onAllNodes(isSelectable())[7].assertIsNotSelected()
     }
 }
+

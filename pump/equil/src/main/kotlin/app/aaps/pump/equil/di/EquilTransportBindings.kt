@@ -1,15 +1,15 @@
-package app.aaps.pump.equil.di
+﻿package app.gmaaps.pump.equil.di
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.equil.ble.EquilBleTransport
-import app.aaps.pump.equil.ble.EquilBleTransportImpl
-import app.aaps.pump.equil.emulator.EquilEmulatorBleTransport
-import app.aaps.pump.equil.emulator.EquilPumpEmulator
-import app.aaps.pump.equil.keys.EquilStringKey
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.equil.ble.EquilBleTransport
+import app.gmaaps.pump.equil.ble.EquilBleTransportImpl
+import app.gmaaps.pump.equil.emulator.EquilEmulatorBleTransport
+import app.gmaaps.pump.equil.emulator.EquilPumpEmulator
+import app.gmaaps.pump.equil.keys.EquilStringKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -59,3 +59,4 @@ object EquilTransportBindings {
         }
     }
 }
+

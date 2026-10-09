@@ -1,9 +1,9 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.pump.eopatch.AppConstant
-import app.aaps.pump.eopatch.code.BolusExDuration
-import app.aaps.pump.eopatch.core.code.BolusType
-import app.aaps.pump.eopatch.core.util.FloatAdjusters
+import app.gmaaps.pump.eopatch.AppConstant
+import app.gmaaps.pump.eopatch.code.BolusExDuration
+import app.gmaaps.pump.eopatch.core.code.BolusType
+import app.gmaaps.pump.eopatch.core.util.FloatAdjusters
 import dev.zacsweers.metro.HasMemberInjections
 
 @HasMemberInjections
@@ -92,3 +92,4 @@ abstract class BolusTask(func: TaskFunc) : TaskBase(func) {
         return 0L
     }
 }
+

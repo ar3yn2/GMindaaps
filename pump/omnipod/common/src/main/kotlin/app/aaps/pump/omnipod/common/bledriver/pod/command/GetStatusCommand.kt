@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.HeaderEnabledCommand
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.builder.HeaderEnabledCommandBuilder
-import app.aaps.pump.omnipod.common.bledriver.pod.response.ResponseType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.HeaderEnabledCommand
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.builder.HeaderEnabledCommandBuilder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.ResponseType
 import java.nio.ByteBuffer
 
 class GetStatusCommand private constructor(
@@ -45,3 +45,4 @@ class GetStatusCommand private constructor(
         private const val BODY_LENGTH: Byte = 1
     }
 }
+

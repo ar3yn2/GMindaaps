@@ -1,4 +1,4 @@
-package app.aaps.implementation.resources
+﻿package app.gmaaps.implementation.resources
 
 import platform.UIKit.UIDevice
 import platform.UIKit.UIUserInterfaceIdiomPhone
@@ -12,3 +12,4 @@ import platform.UIKit.UIUserInterfaceIdiomPhone
  */
 actual fun isCompactScreen(): Boolean =
     UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPhone
+

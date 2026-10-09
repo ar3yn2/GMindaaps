@@ -1,20 +1,20 @@
-package app.aaps.pump.omnipod.common.ui.wizard.compose
+﻿package app.gmaaps.pump.omnipod.common.ui.wizard.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.pump.KeepScreenOnEffect
-import app.aaps.core.ui.compose.pump.ProfileGateWizardStep
-import app.aaps.core.ui.compose.pump.WizardScreen
-import app.aaps.pump.omnipod.common.R
-import app.aaps.pump.omnipod.common.ui.wizard.compose.steps.ActionStep
-import app.aaps.pump.omnipod.common.ui.wizard.compose.steps.AttachPodStep
-import app.aaps.pump.omnipod.common.ui.wizard.compose.steps.DeactivatePodStep
-import app.aaps.pump.omnipod.common.ui.wizard.compose.steps.InfoStep
-import app.aaps.pump.omnipod.common.ui.wizard.compose.steps.SelectInsulinStep
-import app.aaps.pump.omnipod.common.ui.wizard.compose.steps.SiteLocationStep
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.pump.KeepScreenOnEffect
+import app.gmaaps.core.ui.compose.pump.ProfileGateWizardStep
+import app.gmaaps.core.ui.compose.pump.WizardScreen
+import app.gmaaps.pump.omnipod.common.R
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.steps.ActionStep
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.steps.AttachPodStep
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.steps.DeactivatePodStep
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.steps.InfoStep
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.steps.SelectInsulinStep
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.steps.SiteLocationStep
 
 /**
  * Top-level Compose screen for Omnipod activation/deactivation wizard.
@@ -147,3 +147,4 @@ fun OmnipodWizardScreen(
         }
     }
 }
+

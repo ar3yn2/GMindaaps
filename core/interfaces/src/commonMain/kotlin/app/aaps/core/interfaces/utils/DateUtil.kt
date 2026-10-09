@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.utils
+﻿package app.gmaaps.core.interfaces.utils
 
-import app.aaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.resources.TextResolver
 
 /**
  * The Class DateUtil. A modern utility class for handling dates, times, and durations using the `java.time` API.
@@ -509,3 +509,4 @@ interface DateUtil {
      */
     fun mergeHourMinuteToTimestamp(timestamp: Long, hour: Int, minute: Int, randomSecond: Boolean = false): Long
 }
+

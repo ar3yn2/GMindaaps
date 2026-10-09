@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
 import java.util.Locale;
 
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
 
 public class IllegalPodProgressException extends OmnipodException {
     private final PodProgressStatus expected;
@@ -22,3 +22,4 @@ public class IllegalPodProgressException extends OmnipodException {
         return actual;
     }
 }
+

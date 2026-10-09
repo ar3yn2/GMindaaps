@@ -1,6 +1,6 @@
-package app.aaps.implementation.notifications
+﻿package app.gmaaps.implementation.notifications
 
-import app.aaps.implementation.notifications.AlarmVolumeRamp.Companion.STEPS
+import app.gmaaps.implementation.notifications.AlarmVolumeRamp.Companion.STEPS
 import kotlin.math.ln
 import kotlin.math.pow
 
@@ -58,3 +58,4 @@ internal class AlarmVolumeRamp {
         private const val DELAY_DECREMENT_EXPONENT = 2.0
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.protection
+﻿package app.gmaaps.core.interfaces.protection
 
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * A password prompt waiting to be shown.
@@ -61,3 +61,4 @@ sealed interface PasswordRequest {
         override val onCancel: () -> Unit
     ) : PasswordRequest
 }
+

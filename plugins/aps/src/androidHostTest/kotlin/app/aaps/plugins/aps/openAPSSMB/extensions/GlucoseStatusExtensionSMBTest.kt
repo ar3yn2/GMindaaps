@@ -1,8 +1,8 @@
-package app.aaps.plugins.aps.openAPSSMB.extensions
+﻿package app.gmaaps.plugins.aps.openAPSSMB.extensions
 
-import app.aaps.core.interfaces.aps.GlucoseStatusSMB
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.aps.GlucoseStatusSMB
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -288,3 +288,4 @@ class GlucoseStatusExtensionSMBTest : TestBase() {
         assertThat(log).contains("Long avg. delta: -0.80 mg/dl")    // 2 decimals
     }
 }
+

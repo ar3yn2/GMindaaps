@@ -1,9 +1,9 @@
-package app.aaps.implementation.scenes
+﻿package app.gmaaps.implementation.scenes
 
-import app.aaps.core.data.model.Scene
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import org.junit.jupiter.api.BeforeEach
@@ -94,3 +94,4 @@ internal class SceneRepositoryTest {
         assertThat(sut.getScene("a")).isNull()
     }
 }
+

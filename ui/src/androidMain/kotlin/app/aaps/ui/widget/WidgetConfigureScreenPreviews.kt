@@ -1,4 +1,4 @@
-package app.aaps.ui.widget
+﻿package app.gmaaps.ui.widget
 
 import android.content.res.Configuration
 import androidx.compose.material3.MaterialTheme
@@ -19,3 +19,4 @@ internal fun WidgetConfigureScreenPreview() {
         )
     }
 }
+

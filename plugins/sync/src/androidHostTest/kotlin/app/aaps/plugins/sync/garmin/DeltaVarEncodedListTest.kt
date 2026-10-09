@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.garmin
+﻿package app.gmaaps.plugins.sync.garmin
 
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -189,3 +189,4 @@ internal class DeltaVarEncodedListTest {
         assertArrayEquals(values, l2.toArray())
     }
 }
+

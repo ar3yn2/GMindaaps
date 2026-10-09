@@ -1,8 +1,8 @@
-package app.aaps.implementation.storage
+﻿package app.gmaaps.implementation.storage
 
 import android.content.ContentResolver
 import androidx.documentfile.provider.DocumentFile
-import app.aaps.core.interfaces.storage.Storage
+import app.gmaaps.core.interfaces.storage.Storage
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -47,3 +47,4 @@ class FileStorage() : Storage {
     }
 
 }
+

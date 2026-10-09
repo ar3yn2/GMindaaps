@@ -1,13 +1,13 @@
-package app.aaps.implementation.bolus
+﻿package app.gmaaps.implementation.bolus
 
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
-import app.aaps.core.interfaces.clientcontrol.ActionProgress
-import app.aaps.core.interfaces.clientcontrol.ClientControlActionDispatcher
-import app.aaps.core.interfaces.clientcontrol.FailureReason
-import app.aaps.core.interfaces.clientcontrol.isNotDeliveryError
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.sync.NsClient
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.clientcontrol.ActionProgress
+import app.gmaaps.core.interfaces.clientcontrol.ClientControlActionDispatcher
+import app.gmaaps.core.interfaces.clientcontrol.FailureReason
+import app.gmaaps.core.interfaces.clientcontrol.isNotDeliveryError
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.sync.NsClient
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.test.runTest
@@ -118,3 +118,4 @@ class RoleBranchTest : TestBase() {
         assertThat(result).isEqualTo(ActionProgress.Applied)
     }
 }
+

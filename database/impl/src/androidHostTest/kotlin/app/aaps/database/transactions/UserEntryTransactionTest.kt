@@ -1,8 +1,8 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.DelegatedAppDatabase
-import app.aaps.database.daos.UserEntryDao
-import app.aaps.database.entities.UserEntry
+import app.gmaaps.database.DelegatedAppDatabase
+import app.gmaaps.database.daos.UserEntryDao
+import app.gmaaps.database.entities.UserEntry
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -60,3 +60,4 @@ class UserEntryTransactionTest {
         values = emptyList()
     )
 }
+

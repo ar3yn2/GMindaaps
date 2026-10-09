@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io
 
 /**
  * Abstraction for BLE characteristic I/O: blocking read, write-with-confirmation,
@@ -34,3 +34,4 @@ interface BleCharacteristicIO {
         const val DEFAULT_IO_TIMEOUT_MS = 1000L
     }
 }
+

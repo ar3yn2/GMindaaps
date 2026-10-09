@@ -1,31 +1,31 @@
-package app.aaps.implementation.maintenance
+﻿package app.gmaaps.implementation.maintenance
 
 import android.content.Context
 import android.net.Uri
 import android.os.Environment
 import androidx.core.net.toUri
 import androidx.documentfile.provider.DocumentFile
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.maintenance.FileListProvider
-import app.aaps.core.interfaces.maintenance.PrefMetadata
-import app.aaps.core.interfaces.maintenance.PrefMetadataMap
-import app.aaps.core.interfaces.maintenance.PrefsFile
-import app.aaps.core.interfaces.maintenance.PrefsFileInfo
-import app.aaps.core.interfaces.maintenance.PrefsMetadataKey
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.rx.weardata.CwfFile
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.interfaces.storage.Storage
-import app.aaps.core.interfaces.versionChecker.VersionCheckerUtils
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.implementation.R
-import app.aaps.implementation.maintenance.data.PrefsStatusImpl
-import app.aaps.implementation.maintenance.formats.EncryptedPrefsFormat
-import app.aaps.shared.impl.weardata.ZipWatchfaceFormat
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.maintenance.FileListProvider
+import app.gmaaps.core.interfaces.maintenance.PrefMetadata
+import app.gmaaps.core.interfaces.maintenance.PrefMetadataMap
+import app.gmaaps.core.interfaces.maintenance.PrefsFile
+import app.gmaaps.core.interfaces.maintenance.PrefsFileInfo
+import app.gmaaps.core.interfaces.maintenance.PrefsMetadataKey
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.rx.weardata.CwfFile
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.storage.Storage
+import app.gmaaps.core.interfaces.versionChecker.VersionCheckerUtils
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.implementation.R
+import app.gmaaps.implementation.maintenance.data.PrefsStatusImpl
+import app.gmaaps.implementation.maintenance.formats.EncryptedPrefsFormat
+import app.gmaaps.shared.impl.weardata.ZipWatchfaceFormat
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -264,9 +264,9 @@ class FileListProviderImpl(
         return if (hours == 0) {
             rh.gs(R.string.exported_less_than_hour_ago)
         } else if ((hours < 24) && (hours > 0)) {
-            rh.gs(R.string.exported_ago, rh.gq(app.aaps.core.ui.R.plurals.hours, hours, hours))
+            rh.gs(R.string.exported_ago, rh.gq(app.gmaaps.core.ui.R.plurals.hours, hours, hours))
         } else if ((days < IMPORT_AGE_NOT_YET_OLD_DAYS) && (days > 0)) {
-            rh.gs(R.string.exported_ago, rh.gq(app.aaps.core.ui.R.plurals.days, days, days))
+            rh.gs(R.string.exported_ago, rh.gq(app.gmaaps.core.ui.R.plurals.days, days, days))
         } else {
             rh.gs(R.string.exported_at, utcTime.substring(0, 10))
         }
@@ -281,3 +281,4 @@ class FileListProviderImpl(
         }
     }
 }
+

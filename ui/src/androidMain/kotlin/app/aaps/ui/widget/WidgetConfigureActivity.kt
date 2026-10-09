@@ -1,4 +1,4 @@
-package app.aaps.ui.widget
+﻿package app.gmaaps.ui.widget
 
 import android.appwidget.AppWidgetManager
 import android.content.Intent
@@ -11,17 +11,17 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.ui.SnackbarHostPresence
-import app.aaps.core.interfaces.widget.WidgetUpdater
-import app.aaps.core.keys.BooleanComposedKey
-import app.aaps.core.keys.IntComposedKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.AapsTheme
-import app.aaps.core.ui.compose.LocalPreferences
-import app.aaps.core.ui.compose.LocalSnackbarHostState
-import app.aaps.core.ui.compose.MetroAppCompatActivity
-import app.aaps.core.ui.compose.dialogs.GlobalSnackbarHost
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.ui.SnackbarHostPresence
+import app.gmaaps.core.interfaces.widget.WidgetUpdater
+import app.gmaaps.core.keys.BooleanComposedKey
+import app.gmaaps.core.keys.IntComposedKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.AapsTheme
+import app.gmaaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.ui.compose.LocalSnackbarHostState
+import app.gmaaps.core.ui.compose.MetroAppCompatActivity
+import app.gmaaps.core.ui.compose.dialogs.GlobalSnackbarHost
 import dev.zacsweers.metro.Inject
 
 class WidgetConfigureActivity : MetroAppCompatActivity() {
@@ -91,3 +91,4 @@ class WidgetConfigureActivity : MetroAppCompatActivity() {
         }
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.plugins.aps.openAPSAutoISF.extensions
+﻿package app.gmaaps.plugins.aps.openAPSAutoISF.extensions
 
-import app.aaps.core.interfaces.aps.GlucoseStatusAutoIsf
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.aps.GlucoseStatusAutoIsf
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -429,3 +429,4 @@ class GlucoseStatusExtensionTest : TestBase() {
         assertThat(rounded.corrSqu).isEqualTo(0.0)
     }
 }
+

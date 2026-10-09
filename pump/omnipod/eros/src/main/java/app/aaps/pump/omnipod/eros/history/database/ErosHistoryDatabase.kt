@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.history.database
+﻿package app.gmaaps.pump.omnipod.eros.history.database
 
 import android.content.Context
 import androidx.room.Database
@@ -28,3 +28,4 @@ abstract class ErosHistoryDatabase : RoomDatabase() {
                 .build()
     }
 }
+

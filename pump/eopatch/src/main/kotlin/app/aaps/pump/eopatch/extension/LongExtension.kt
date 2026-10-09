@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.extension
+﻿package app.gmaaps.pump.eopatch.extension
 
 import kotlin.time.Duration.Companion.milliseconds
 
@@ -9,3 +9,4 @@ fun Long.getDiffDays(isRelative: Boolean = false): Long {
 
     return diffTimeMillis.milliseconds.inWholeDays
 }
+

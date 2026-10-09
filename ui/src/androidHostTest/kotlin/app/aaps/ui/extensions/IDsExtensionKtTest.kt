@@ -1,7 +1,7 @@
-package app.aaps.ui.extensions
+﻿package app.gmaaps.ui.extensions
 
-import app.aaps.core.data.model.IDs
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 

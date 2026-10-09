@@ -1,8 +1,8 @@
-package app.aaps.plugins.source.instara
+﻿package app.gmaaps.plugins.source.instara
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.plugins.source.R
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.plugins.source.R
 
 // Instara plugin-local user-editable preference keys
 enum class InstaraBooleanKey(
@@ -32,3 +32,4 @@ enum class InstaraBooleanKey(
     override val title: TextRef = TextRef.AndroidRes(titleResId)
     override val summary: TextRef? = summaryResId?.let { TextRef.AndroidRes(it) }
 }
+

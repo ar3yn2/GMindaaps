@@ -1,16 +1,16 @@
-package app.aaps.plugins.calibration.compose
+﻿package app.gmaaps.plugins.calibration.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.resources.TextRefIdRegistry
-import app.aaps.plugins.calibration.CalibrationFit
-import app.aaps.plugins.calibration.CalibrationStringIds
-import app.aaps.plugins.calibration.FitMode
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.resources.TextRefIdRegistry
+import app.gmaaps.plugins.calibration.CalibrationFit
+import app.gmaaps.plugins.calibration.CalibrationStringIds
+import app.gmaaps.plugins.calibration.FitMode
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
@@ -123,3 +123,4 @@ class CalibrationScreenComposeTest {
         compose.onNodeWithText("Fingerstick entries (2)").assertExists()
     }
 }
+

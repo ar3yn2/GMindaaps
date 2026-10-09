@@ -1,4 +1,4 @@
-package app.aaps.implementation.protection
+﻿package app.gmaaps.implementation.protection
 
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.alloc
@@ -44,7 +44,7 @@ class AppleKeychainQueryTest {
         val query = AppleKeychain.SecQuery()
         try {
             query.put(kSecClass, kSecClassGenericPassword)
-            query.putBridged(kSecAttrService, "app.aaps.secureencrypt.test")
+            query.putBridged(kSecAttrService, "app.gmaaps.secureencrypt.test")
             query.putBridged(kSecAttrAccount, "queryShape")
             query.put(kSecReturnData, kCFBooleanTrue)
 
@@ -66,7 +66,7 @@ class AppleKeychainQueryTest {
     fun `load and delete answer instead of throwing`() {
         // load reports "nothing stored" for every failure by design, and delete reports false.
         // Neither may blow up, whatever the Keychain makes of the query.
-        val keychain = AppleKeychain(service = "app.aaps.secureencrypt.test")
+        val keychain = AppleKeychain(service = "app.gmaaps.secureencrypt.test")
         assertTrue(runCatching { keychain.load("absent") }.isSuccess, "load threw")
         assertTrue(runCatching { keychain.delete("absent") }.isSuccess, "delete threw")
     }
@@ -77,3 +77,4 @@ class AppleKeychainQueryTest {
         const val ERR_SEC_PARAM = -50
     }
 }
+

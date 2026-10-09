@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
 import androidx.annotation.NonNull;
 
 import org.joda.time.Duration;
 
-import app.aaps.core.utils.pump.ByteUtil;
+import app.gmaaps.core.utils.pump.ByteUtil;
 
 public class AlertConfiguration {
     private final AlertType alertType;
@@ -91,3 +91,4 @@ public class AlertConfiguration {
                 '}';
     }
 }
+

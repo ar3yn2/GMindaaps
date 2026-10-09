@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.extension
+﻿package app.gmaaps.pump.medtrum.extension
 
 fun Boolean.toByte(): Byte {
     return if (this == true)
@@ -6,3 +6,4 @@ fun Boolean.toByte(): Byte {
     else
         0x0
 }
+

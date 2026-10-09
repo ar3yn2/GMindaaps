@@ -1,10 +1,10 @@
-package app.aaps.shared.impl.logging
+﻿package app.gmaaps.shared.impl.logging
 
-import app.aaps.core.interfaces.logging.L
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.logging.LogElement
-import app.aaps.core.keys.BooleanComposedKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.interfaces.logging.L
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.LogElement
+import app.gmaaps.core.keys.BooleanComposedKey
+import app.gmaaps.core.keys.interfaces.Preferences
 
 class LImpl(
     private val preferences: () -> Preferences
@@ -59,3 +59,4 @@ class LImpl(
         }
     }
 }
+

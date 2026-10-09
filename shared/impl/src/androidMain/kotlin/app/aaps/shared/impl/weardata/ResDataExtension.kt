@@ -1,4 +1,4 @@
-package app.aaps.shared.impl.weardata
+﻿package app.gmaaps.shared.impl.weardata
 
 import android.content.res.Resources
 import android.graphics.BitmapFactory
@@ -6,8 +6,8 @@ import android.graphics.Typeface
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.PictureDrawable
-import app.aaps.core.interfaces.rx.weardata.ResData
-import app.aaps.core.interfaces.rx.weardata.ResFormat
+import app.gmaaps.core.interfaces.rx.weardata.ResData
+import app.gmaaps.core.interfaces.rx.weardata.ResFormat
 import com.caverock.androidsvg.SVG
 import java.io.File
 import java.io.FileOutputStream
@@ -66,3 +66,4 @@ fun ResData.toTypeface(): Typeface? {
         return null
     }
 }
+

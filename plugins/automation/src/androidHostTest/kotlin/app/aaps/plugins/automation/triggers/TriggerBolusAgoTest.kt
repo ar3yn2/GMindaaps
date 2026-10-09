@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.data.model.BS
-import app.aaps.plugins.automation.asJsonObject
-import app.aaps.plugins.automation.elements.Comparator
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.plugins.automation.asJsonObject
+import app.gmaaps.plugins.automation.elements.Comparator
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.json.JSONException
@@ -78,3 +78,4 @@ class TriggerBolusAgoTest : TriggerTestBase() {
         assertThat(t2.minutesAgo.value).isEqualTo(410)
     }
 }
+

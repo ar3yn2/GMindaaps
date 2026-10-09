@@ -1,19 +1,19 @@
-package app.aaps.plugins.aps.utils
+﻿package app.gmaaps.plugins.aps.utils
 
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.db.ProcessedTbrEbData
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.di.metro.AlgTestGraph
-import app.aaps.di.metro.AlgTestLeaves
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.db.ProcessedTbrEbData
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.di.metro.AlgTestGraph
+import app.gmaaps.di.metro.AlgTestLeaves
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.MembersInjector
 import dev.zacsweers.metro.createGraphFactory
@@ -48,7 +48,7 @@ class StaticInjector(
         private var instance: StaticInjector? = null
 
         /**
-         * For [app.aaps.plugins.aps.logger.LoggerCallback] only, which the JS engine instantiates - there
+         * For [app.gmaaps.plugins.aps.logger.LoggerCallback] only, which the JS engine instantiates - there
          * is no way to hand it anything.
          */
         @Deprecated("Use only for classes instantiated by 3rd party")
@@ -65,7 +65,7 @@ class StaticInjector(
      * The callers here fill their fields from their own `init` and ignore the result, so returning false
      * would leave a `lateinit` unset and surface later as an unrelated failure - inside tests that check
      * algorithm output against recorded results, where a quietly wrong value is the worst outcome. A
-     * missing entry is a mistake in [app.aaps.di.metro.AlgMemberInjectors], so say which class it was.
+     * missing entry is a mistake in [app.gmaaps.di.metro.AlgMemberInjectors], so say which class it was.
      */
     override fun injectMembers(target: Any): Boolean {
         val injector = graph.memberInjectors[target::class]
@@ -75,3 +75,4 @@ class StaticInjector(
         return true
     }
 }
+

@@ -1,18 +1,18 @@
-package app.aaps.pump.omnipod.common.bledriver.comm
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.ConnectException
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.device.BleDeviceManager
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.scan.PodScanner
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.session.BleConnection
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.session.BleConnectionFactory
-import app.aaps.pump.omnipod.common.bledriver.comm.pair.LTKExchanger
-import app.aaps.pump.omnipod.common.bledriver.comm.session.ConnectionWaitCondition
-import app.aaps.pump.omnipod.common.bledriver.event.PodEvent
-import app.aaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.ConnectException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.device.BleDeviceManager
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.scan.PodScanner
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.session.BleConnection
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.session.BleConnectionFactory
+import app.gmaaps.pump.omnipod.common.bledriver.comm.pair.LTKExchanger
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.ConnectionWaitCondition
+import app.gmaaps.pump.omnipod.common.bledriver.event.PodEvent
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
 import dev.zacsweers.metro.Inject
 import io.reactivex.rxjava3.core.Observable
 
@@ -92,3 +92,4 @@ class OmnipodDashBleManagerImpl(
         const val CONTROLLER_ID = 4242 // TODO read from preferences or somewhere else.
     }
 }
+

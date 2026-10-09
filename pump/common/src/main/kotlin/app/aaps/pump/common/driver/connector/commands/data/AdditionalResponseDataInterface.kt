@@ -1,4 +1,4 @@
-package app.aaps.pump.common.driver.connector.commands.data
+﻿package app.gmaaps.pump.common.driver.connector.commands.data
 
 interface AdditionalResponseDataInterface {
 }

@@ -1,15 +1,15 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.interfaces.aps.APSResult
-import app.aaps.core.interfaces.aps.AutosensResult
-import app.aaps.core.interfaces.aps.CurrentTemp
-import app.aaps.core.interfaces.aps.GlucoseStatusAutoIsf
-import app.aaps.core.interfaces.aps.GlucoseStatusSMB
-import app.aaps.core.interfaces.aps.IobTotal
-import app.aaps.core.interfaces.aps.MealData
-import app.aaps.core.interfaces.aps.OapsProfile
-import app.aaps.core.interfaces.aps.OapsProfileAutoIsf
-import app.aaps.core.interfaces.aps.RT
+import app.gmaaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.aps.AutosensResult
+import app.gmaaps.core.interfaces.aps.CurrentTemp
+import app.gmaaps.core.interfaces.aps.GlucoseStatusAutoIsf
+import app.gmaaps.core.interfaces.aps.GlucoseStatusSMB
+import app.gmaaps.core.interfaces.aps.IobTotal
+import app.gmaaps.core.interfaces.aps.MealData
+import app.gmaaps.core.interfaces.aps.OapsProfile
+import app.gmaaps.core.interfaces.aps.OapsProfileAutoIsf
+import app.gmaaps.core.interfaces.aps.RT
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.builtins.ArraySerializer
 import kotlinx.serialization.json.Json
@@ -20,10 +20,10 @@ private val rtJson = Json {
     ignoreUnknownKeys = true
 }
 
-fun app.aaps.database.entities.APSResult.fromDb(apsResultProvider: () -> APSResult): APSResult =
+fun app.gmaaps.database.entities.APSResult.fromDb(apsResultProvider: () -> APSResult): APSResult =
     when (algorithm) {
-        app.aaps.database.entities.APSResult.Algorithm.AMA,
-        app.aaps.database.entities.APSResult.Algorithm.SMB      ->
+        app.gmaaps.database.entities.APSResult.Algorithm.AMA,
+        app.gmaaps.database.entities.APSResult.Algorithm.SMB      ->
             apsResultProvider().with(rtJson.decodeFromString(this.resultJson)).also { result ->
                 result.date = this.timestamp
                 result.glucoseStatus = try {
@@ -38,7 +38,7 @@ fun app.aaps.database.entities.APSResult.fromDb(apsResultProvider: () -> APSResu
                 result.autosensResult = this.autosensDataJson?.let { Json.decodeFromString(it) }
             }
 
-        app.aaps.database.entities.APSResult.Algorithm.AUTO_ISF ->
+        app.gmaaps.database.entities.APSResult.Algorithm.AUTO_ISF ->
             apsResultProvider().with(rtJson.decodeFromString(this.resultJson)).also { result ->
                 result.date = this.timestamp
                 result.glucoseStatus = try {
@@ -57,11 +57,11 @@ fun app.aaps.database.entities.APSResult.fromDb(apsResultProvider: () -> APSResu
     }
 
 @OptIn(ExperimentalSerializationApi::class)
-fun APSResult.toDb(): app.aaps.database.entities.APSResult =
+fun APSResult.toDb(): app.gmaaps.database.entities.APSResult =
     when (algorithm) {
         APSResult.Algorithm.AMA,
         APSResult.Algorithm.SMB      ->
-            app.aaps.database.entities.APSResult(
+            app.gmaaps.database.entities.APSResult(
                 timestamp = this.date,
                 algorithm = this.algorithm.toDb(),
                 glucoseStatusJson = this.glucoseStatus?.let { Json.encodeToString(GlucoseStatusSMB.serializer(), it as GlucoseStatusSMB) },
@@ -74,7 +74,7 @@ fun APSResult.toDb(): app.aaps.database.entities.APSResult =
             )
 
         APSResult.Algorithm.AUTO_ISF ->
-            app.aaps.database.entities.APSResult(
+            app.gmaaps.database.entities.APSResult(
                 timestamp = this.date,
                 algorithm = this.algorithm.toDb(),
                 glucoseStatusJson = this.glucoseStatus?.let { Json.encodeToString(GlucoseStatusAutoIsf.serializer(), it as GlucoseStatusAutoIsf) },
@@ -89,18 +89,18 @@ fun APSResult.toDb(): app.aaps.database.entities.APSResult =
         else                         -> error("Unsupported")
     }
 
-fun app.aaps.database.entities.APSResult.Algorithm.fromDb(): APSResult.Algorithm =
+fun app.gmaaps.database.entities.APSResult.Algorithm.fromDb(): APSResult.Algorithm =
     when (this) {
-        app.aaps.database.entities.APSResult.Algorithm.AMA      -> APSResult.Algorithm.AMA
-        app.aaps.database.entities.APSResult.Algorithm.SMB      -> APSResult.Algorithm.SMB
-        app.aaps.database.entities.APSResult.Algorithm.AUTO_ISF -> APSResult.Algorithm.AUTO_ISF
+        app.gmaaps.database.entities.APSResult.Algorithm.AMA      -> APSResult.Algorithm.AMA
+        app.gmaaps.database.entities.APSResult.Algorithm.SMB      -> APSResult.Algorithm.SMB
+        app.gmaaps.database.entities.APSResult.Algorithm.AUTO_ISF -> APSResult.Algorithm.AUTO_ISF
         else                                                    -> error("Unsupported")
     }
 
-fun APSResult.Algorithm.toDb(): app.aaps.database.entities.APSResult.Algorithm =
+fun APSResult.Algorithm.toDb(): app.gmaaps.database.entities.APSResult.Algorithm =
     when (this) {
-        APSResult.Algorithm.AMA      -> app.aaps.database.entities.APSResult.Algorithm.AMA
-        APSResult.Algorithm.SMB      -> app.aaps.database.entities.APSResult.Algorithm.SMB
-        APSResult.Algorithm.AUTO_ISF -> app.aaps.database.entities.APSResult.Algorithm.AUTO_ISF
+        APSResult.Algorithm.AMA      -> app.gmaaps.database.entities.APSResult.Algorithm.AMA
+        APSResult.Algorithm.SMB      -> app.gmaaps.database.entities.APSResult.Algorithm.SMB
+        APSResult.Algorithm.AUTO_ISF -> app.gmaaps.database.entities.APSResult.Algorithm.AUTO_ISF
         else                         -> error("Unsupported")
     }

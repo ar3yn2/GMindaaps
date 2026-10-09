@@ -1,17 +1,17 @@
-package app.aaps.pump.medtronic.comm
+﻿package app.gmaaps.pump.medtronic.comm
 
 import android.util.Log
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.pump.medtronic.MedtronicTestBase
-import app.aaps.pump.medtronic.comm.history.RawHistoryPage
-import app.aaps.pump.medtronic.comm.history.pump.MedtronicPumpHistoryDecoder
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntryType
-import app.aaps.pump.medtronic.data.MedtronicHistoryData
-import app.aaps.pump.medtronic.data.dto.TempBasalProcessDTO
-import app.aaps.pump.medtronic.defs.MedtronicDeviceType
-import app.aaps.pump.medtronic.driver.MedtronicPumpStatus
-import app.aaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.pump.medtronic.MedtronicTestBase
+import app.gmaaps.pump.medtronic.comm.history.RawHistoryPage
+import app.gmaaps.pump.medtronic.comm.history.pump.MedtronicPumpHistoryDecoder
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntryType
+import app.gmaaps.pump.medtronic.data.MedtronicHistoryData
+import app.gmaaps.pump.medtronic.data.dto.TempBasalProcessDTO
+import app.gmaaps.pump.medtronic.defs.MedtronicDeviceType
+import app.gmaaps.pump.medtronic.driver.MedtronicPumpStatus
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 

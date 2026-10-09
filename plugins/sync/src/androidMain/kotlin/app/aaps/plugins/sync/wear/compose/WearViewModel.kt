@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.wear.compose
+﻿package app.gmaaps.plugins.sync.wear.compose
 
 import android.graphics.BitmapFactory
 import androidx.compose.runtime.Immutable
@@ -7,34 +7,34 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.maintenance.FileListProvider
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventMobileToWear
-import app.aaps.core.interfaces.rx.events.EventMobileToWearWatchface
-import app.aaps.core.interfaces.rx.events.EventWearUpdateGui
-import app.aaps.core.interfaces.rx.weardata.CUSTOM_VERSION
-import app.aaps.core.interfaces.rx.weardata.CwfData
-import app.aaps.core.interfaces.rx.weardata.CwfFile
-import app.aaps.core.interfaces.rx.weardata.CwfMetadataKey
-import app.aaps.core.interfaces.rx.weardata.CwfMetadataMap
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.versionChecker.VersionCheckerUtils
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.PushedWatchfaceId
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.plugins.sync.wear.WearPlugin
-import app.aaps.shared.impl.weardata.JsonKeyValues
-import app.aaps.shared.impl.weardata.JsonKeys
-import app.aaps.shared.impl.weardata.ResFileMap
-import app.aaps.shared.impl.weardata.ViewKeys
-import app.aaps.shared.impl.weardata.ZipWatchfaceFormat
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.maintenance.FileListProvider
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventMobileToWear
+import app.gmaaps.core.interfaces.rx.events.EventMobileToWearWatchface
+import app.gmaaps.core.interfaces.rx.events.EventWearUpdateGui
+import app.gmaaps.core.interfaces.rx.weardata.CUSTOM_VERSION
+import app.gmaaps.core.interfaces.rx.weardata.CwfData
+import app.gmaaps.core.interfaces.rx.weardata.CwfFile
+import app.gmaaps.core.interfaces.rx.weardata.CwfMetadataKey
+import app.gmaaps.core.interfaces.rx.weardata.CwfMetadataMap
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.versionChecker.VersionCheckerUtils
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.PushedWatchfaceId
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.plugins.sync.wear.WearPlugin
+import app.gmaaps.shared.impl.weardata.JsonKeyValues
+import app.gmaaps.shared.impl.weardata.JsonKeys
+import app.gmaaps.shared.impl.weardata.ResFileMap
+import app.gmaaps.shared.impl.weardata.ViewKeys
+import app.gmaaps.shared.impl.weardata.ZipWatchfaceFormat
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -343,3 +343,4 @@ class WearViewModel(
         _uiState.update { it.copy(showImportList = false, importItems = emptyList()) }
     }
 }
+

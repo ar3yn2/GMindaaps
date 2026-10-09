@@ -1,4 +1,4 @@
-package app.aaps.core.objects.workflow
+﻿package app.gmaaps.core.objects.workflow
 
 import android.content.Context
 import androidx.work.ListenableWorker
@@ -48,3 +48,4 @@ abstract class WorkerInstanceFactory<T : ListenableWorker> : MetroWorkerCreator 
 @Target(AnnotationTarget.CLASS, AnnotationTarget.PROPERTY, AnnotationTarget.FUNCTION)
 @Retention(AnnotationRetention.RUNTIME)
 annotation class WorkerKey(val value: KClass<out ListenableWorker>)
+

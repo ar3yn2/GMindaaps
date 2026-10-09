@@ -1,7 +1,7 @@
-package app.aaps.pump.dana.di
+﻿package app.gmaaps.pump.dana.di
 
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.database.DanaHistoryRecordDao
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.database.DanaHistoryRecordDao
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesTo
 
@@ -40,3 +40,4 @@ interface DanaAccessors {
     val danaPump: DanaPump
     val danaHistoryRecordDao: DanaHistoryRecordDao
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo
+﻿package app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo
 
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.pump.omnipod.eros.driver.definition.PodInfoType
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodInfoType
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import kotlin.test.assertIsNot
@@ -35,3 +35,4 @@ internal class PodInfoResponseTest {
         assertIsNot<PodInfoActiveAlerts>(podInfoResponse.podInfo)
     }
 }
+

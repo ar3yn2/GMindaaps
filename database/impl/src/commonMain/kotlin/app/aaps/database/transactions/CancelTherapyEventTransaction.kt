@@ -1,7 +1,7 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.TherapyEvent
-import app.aaps.database.entities.interfaces.end
+import app.gmaaps.database.entities.TherapyEvent
+import app.gmaaps.database.entities.interfaces.end
 
 class CancelTherapyEventTransaction(
     val id: Long,
@@ -28,3 +28,4 @@ class CancelTherapyEventTransaction(
         val updated = mutableListOf<TherapyEvent>()
     }
 }
+

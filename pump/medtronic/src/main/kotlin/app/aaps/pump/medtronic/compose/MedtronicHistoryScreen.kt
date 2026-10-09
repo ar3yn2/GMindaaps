@@ -1,4 +1,4 @@
-package app.aaps.pump.medtronic.compose
+﻿package app.gmaaps.pump.medtronic.compose
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -24,13 +24,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.compose.AapsCard
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.LocalDateUtil
-import app.aaps.pump.common.defs.PumpHistoryEntryGroup
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.compose.AapsCard
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.LocalDateUtil
+import app.gmaaps.pump.common.defs.PumpHistoryEntryGroup
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalLayoutApi::class)
 @Composable
@@ -137,3 +137,4 @@ private fun MedtronicHistoryCard(
         }
     }
 }
+

@@ -1,11 +1,11 @@
-package app.aaps.plugins.aps.compose
+﻿package app.gmaaps.plugins.aps.compose
 
-import app.aaps.core.interfaces.aps.APS
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.plugins.aps.events.EventOpenAPSUpdateGui
-import app.aaps.plugins.aps.events.EventResetOpenAPSGui
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.aps.APS
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.plugins.aps.events.EventOpenAPSUpdateGui
+import app.gmaaps.plugins.aps.events.EventResetOpenAPSGui
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -65,3 +65,4 @@ internal class OpenAPSViewModelTest {
         assertThat(sut.uiState.value.isRefreshing).isTrue()
     }
 }
+

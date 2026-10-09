@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.message
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.message
 
 enum class MessageType(val value: Byte) {
     CLEAR(0),
@@ -13,3 +13,4 @@ enum class MessageType(val value: Byte) {
                 ?: throw IllegalArgumentException("Unknown MessageType: $value")
     }
 }
+

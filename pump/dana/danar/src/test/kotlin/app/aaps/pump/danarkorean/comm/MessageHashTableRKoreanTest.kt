@@ -1,6 +1,6 @@
-package app.aaps.pump.danarkorean.comm
+﻿package app.gmaaps.pump.danarkorean.comm
 
-import app.aaps.pump.danar.comm.DanaRTestBase
+import app.gmaaps.pump.danar.comm.DanaRTestBase
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.legacy.callbacks
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.callbacks
 
 sealed class WriteConfirmation
 
@@ -8,3 +8,4 @@ data class WriteConfirmationError(
     val msg: String,
     val status: Int = 0
 ) : WriteConfirmation()
+

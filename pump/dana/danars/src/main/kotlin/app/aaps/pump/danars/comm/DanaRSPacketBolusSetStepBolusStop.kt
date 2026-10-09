@@ -1,12 +1,12 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.danars.encryption.BleEncryption
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.danars.encryption.BleEncryption
 import dev.zacsweers.metro.Inject
 
 @Inject
@@ -38,7 +38,7 @@ open class DanaRSPacketBolusSetStepBolusStop(
             bolusProgressData.updateProgress(100)
         } else {
             val currentPercent = bolusProgressData.state.value?.percent ?: 0
-            bolusProgressData.updateProgress(currentPercent, TextRef.AndroidRes(app.aaps.pump.dana.R.string.overview_bolusprogress_stoped))
+            bolusProgressData.updateProgress(currentPercent, TextRef.AndroidRes(app.gmaaps.pump.dana.R.string.overview_bolusprogress_stoped))
         }
     }
 

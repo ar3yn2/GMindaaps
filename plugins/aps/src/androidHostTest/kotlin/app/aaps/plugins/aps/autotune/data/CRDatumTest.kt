@@ -1,6 +1,6 @@
-package app.aaps.plugins.aps.autotune.data
+﻿package app.gmaaps.plugins.aps.autotune.data
 
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
 import org.junit.jupiter.api.Test
@@ -336,3 +336,4 @@ class CRDatumTest : TestBaseWithProfile() {
         assertThat(json.getDouble("CRInsulin")).isEqualTo(3.789)
     }
 }
+

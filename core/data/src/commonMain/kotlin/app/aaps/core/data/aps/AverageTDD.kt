@@ -1,6 +1,6 @@
-package app.aaps.core.data.aps
+﻿package app.gmaaps.core.data.aps
 
-import app.aaps.core.data.model.TDD
+import app.gmaaps.core.data.model.TDD
 
 data class AverageTDD(
     var data: TDD,

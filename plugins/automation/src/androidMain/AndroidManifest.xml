@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -19,13 +19,13 @@
 
         <!-- The location trigger's service. Declared here, in the module that owns it. -->
         <service
-            android:name="app.aaps.plugins.automation.services.LocationService"
+            android:name="app.gmaaps.plugins.automation.services.LocationService"
             android:exported="false"
             android:foregroundServiceType="location" />
 
         <!-- Rings reminders scheduled through ReminderScheduler. Same story as above. -->
         <receiver
-            android:name="app.aaps.plugins.automation.TimerReminderReceiver"
+            android:name="app.gmaaps.plugins.automation.TimerReminderReceiver"
             android:exported="false" />
 
     </application>

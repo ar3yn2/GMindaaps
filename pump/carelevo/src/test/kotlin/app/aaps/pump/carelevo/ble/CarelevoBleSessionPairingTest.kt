@@ -1,14 +1,14 @@
-package app.aaps.pump.carelevo.ble
+﻿package app.gmaaps.pump.carelevo.ble
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.pump.ble.BleAdapter
-import app.aaps.core.interfaces.pump.ble.BleGatt
-import app.aaps.core.interfaces.pump.ble.BleScanner
-import app.aaps.core.interfaces.pump.ble.BleTransportListener
-import app.aaps.core.interfaces.pump.ble.PairingState
-import app.aaps.core.interfaces.pump.ble.ScannedDevice
-import app.aaps.pump.carelevo.ble.commands.AlertAlarmSetCommand
-import app.aaps.pump.carelevo.ble.commands.SafetyCheckResponse
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.pump.ble.BleAdapter
+import app.gmaaps.core.interfaces.pump.ble.BleGatt
+import app.gmaaps.core.interfaces.pump.ble.BleScanner
+import app.gmaaps.core.interfaces.pump.ble.BleTransportListener
+import app.gmaaps.core.interfaces.pump.ble.PairingState
+import app.gmaaps.core.interfaces.pump.ble.ScannedDevice
+import app.gmaaps.pump.carelevo.ble.commands.AlertAlarmSetCommand
+import app.gmaaps.pump.carelevo.ble.commands.SafetyCheckResponse
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.TimeoutCancellationException
@@ -667,3 +667,4 @@ internal class CarelevoBleSessionPairingTest {
         )
     }
 }
+

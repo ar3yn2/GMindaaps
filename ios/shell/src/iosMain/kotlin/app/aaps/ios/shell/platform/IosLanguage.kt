@@ -1,9 +1,9 @@
-package app.aaps.ios.shell.platform
+﻿package app.gmaaps.ios.shell.platform
 
-import app.aaps.core.interfaces.resources.LanguageTag
-import app.aaps.core.interfaces.resources.TextRefValueRegistry
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.interfaces.resources.LanguageTag
+import app.gmaaps.core.interfaces.resources.TextRefValueRegistry
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import platform.Foundation.NSLocale
 import platform.Foundation.preferredLanguages
 
@@ -46,3 +46,4 @@ object IosLanguage {
      */
     fun deviceLanguage(): String? = NSLocale.preferredLanguages.firstOrNull() as? String
 }
+

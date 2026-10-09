@@ -1,9 +1,9 @@
-package app.aaps.core.objects.interfaces.pump.defs
+﻿package app.gmaaps.core.objects.interfaces.pump.defs
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.plugin.EnforcedState
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.plugin.EnforcedState
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.keys.interfaces.TextRef
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -49,3 +49,4 @@ class PluginDescriptionTest {
         assertThat(PluginDescription().pluginName(ref).pluginName).isEqualTo(ref)
     }
 }
+

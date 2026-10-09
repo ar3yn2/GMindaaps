@@ -1,4 +1,4 @@
-package app.aaps.core.graph.vico
+﻿package app.gmaaps.core.graph.vico
 
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Path
@@ -38,3 +38,4 @@ val Square: LineCartesianLayer.Interpolator = object : LineCartesianLayer.Interp
         }
     }
 }
+

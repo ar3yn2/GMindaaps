@@ -1,14 +1,14 @@
-package app.aaps.pump.carelevo.domain.usecase.infusion
+﻿package app.gmaaps.pump.carelevo.domain.usecase.infusion
 
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoPatchMode
-import app.aaps.pump.carelevo.domain.model.infusion.derivePatchMode
-import app.aaps.pump.carelevo.domain.model.result.ResultSuccess
-import app.aaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
-import app.aaps.pump.carelevo.domain.usecase.infusion.model.CarelevoDeleteInfusionRequestModel
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoPatchMode
+import app.gmaaps.pump.carelevo.domain.model.infusion.derivePatchMode
+import app.gmaaps.pump.carelevo.domain.model.result.ResultSuccess
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.model.CarelevoDeleteInfusionRequestModel
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -71,3 +71,4 @@ class CarelevoDeleteInfusionInfoUseCase @Inject constructor(
         }.subscribeOn(Schedulers.io())
     }
 }
+

@@ -1,15 +1,15 @@
-package app.aaps.pump.dana.compose
+﻿package app.gmaaps.pump.dana.compose
 
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.pump.dana.DanaPump
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.pump.dana.DanaPump
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -130,3 +130,4 @@ class DanaUserOptionsViewModel(
         }
     }
 }
+

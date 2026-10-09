@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
 /**
  * The part of notification handling that only the operating system can do.
@@ -60,3 +60,4 @@ interface SystemNotificationPlatform {
      */
     fun onDismissed(callback: (instanceKey: Int) -> Unit)
 }
+

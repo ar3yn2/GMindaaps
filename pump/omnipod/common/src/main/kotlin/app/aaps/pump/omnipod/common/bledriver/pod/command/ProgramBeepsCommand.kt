@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.HeaderEnabledCommand
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.builder.HeaderEnabledCommandBuilder
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BeepType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.HeaderEnabledCommand
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.builder.HeaderEnabledCommandBuilder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BeepType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
 import java.nio.ByteBuffer
 
 class ProgramBeepsCommand private constructor(
@@ -81,3 +81,4 @@ class ProgramBeepsCommand private constructor(
         private const val BODY_LENGTH: Byte = 4
     }
 }
+

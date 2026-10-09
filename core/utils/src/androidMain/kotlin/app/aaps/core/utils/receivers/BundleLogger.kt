@@ -1,4 +1,4 @@
-package app.aaps.core.utils.receivers
+﻿package app.gmaaps.core.utils.receivers
 
 import android.os.Bundle
 

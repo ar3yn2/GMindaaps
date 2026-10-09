@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.exceptions
+﻿package app.gmaaps.core.nssdk.exceptions
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -67,3 +67,4 @@ class NightscoutExceptionTest {
             assertThat(exception).isInstanceOf(NightscoutException::class.java)
     }
 }
+

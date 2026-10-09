@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.UE
-import app.aaps.database.entities.UserEntry
+import app.gmaaps.core.data.model.UE
+import app.gmaaps.database.entities.UserEntry
 
 fun UserEntry.fromDb(): UE =
     UE(

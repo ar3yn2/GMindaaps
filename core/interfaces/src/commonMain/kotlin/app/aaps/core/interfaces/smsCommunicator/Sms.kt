@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.smsCommunicator
+﻿package app.gmaaps.core.interfaces.smsCommunicator
 
 import kotlin.time.Clock
 

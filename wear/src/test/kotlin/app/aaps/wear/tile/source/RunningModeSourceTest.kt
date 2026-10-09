@@ -1,14 +1,14 @@
-package app.aaps.wear.tile.source
+﻿package app.gmaaps.wear.tile.source
 
 import android.content.Context
 import android.content.res.Resources
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.interfaces.rx.weardata.EventData.RunningModeList.AvailableRunningMode
-import app.aaps.core.interfaces.rx.weardata.EventData.RunningModeList.AvailableRunningMode.RunningMode
-import app.aaps.core.interfaces.sharedPreferences.SP
-import app.aaps.wear.R
-import app.aaps.wear.interaction.actions.BackgroundActionActivity
-import app.aaps.wear.interaction.actions.RunningModeTimedActivity
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.rx.weardata.EventData.RunningModeList.AvailableRunningMode
+import app.gmaaps.core.interfaces.rx.weardata.EventData.RunningModeList.AvailableRunningMode.RunningMode
+import app.gmaaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.wear.R
+import app.gmaaps.wear.interaction.actions.BackgroundActionActivity
+import app.gmaaps.wear.interaction.actions.RunningModeTimedActivity
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -253,3 +253,4 @@ internal class RunningModeSourceTest {
         assertThat((actions[4].action as EventData.RunningModeSelected).index).isEqualTo(4)
     }
 }
+

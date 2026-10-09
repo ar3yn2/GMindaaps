@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.interfaces.device
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.device
 
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.scan.PodScanner
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.scan.PodScanner
 
 /**
  * Abstraction for BLE device access and bonding.
@@ -29,3 +29,4 @@ interface BleDeviceManager {
      */
     fun createPodScanner(): PodScanner
 }
+

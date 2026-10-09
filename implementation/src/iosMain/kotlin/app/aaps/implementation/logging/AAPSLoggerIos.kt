@@ -1,8 +1,8 @@
-package app.aaps.implementation.logging
+﻿package app.gmaaps.implementation.logging
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.L
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.L
+import app.gmaaps.core.interfaces.logging.LTag
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.Foundation.NSDate
 import platform.Foundation.NSDocumentDirectory
@@ -180,3 +180,4 @@ class AAPSLoggerIos(
     /** Where the log file is, so the app can offer it for sharing once there is a way to. */
     fun logFileUrl(): NSURL? = logPath()?.let { NSURL.fileURLWithPath(it) }
 }
+

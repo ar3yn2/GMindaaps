@@ -1,6 +1,6 @@
-package app.aaps.pump.danar.comm
+﻿package app.gmaaps.pump.danar.comm
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

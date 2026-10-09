@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.definition
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.definition
 
 import java.time.Duration
 
@@ -20,3 +20,4 @@ class PodConstants {
         const val DEFAULT_MAX_RESERVOIR_ALERT_THRESHOLD: Short = 20
     }
 }
+

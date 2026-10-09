@@ -1,6 +1,6 @@
-package app.aaps.ui.compose.overview
+﻿package app.gmaaps.ui.compose.overview
 
-import app.aaps.core.data.model.RM
+import app.gmaaps.core.data.model.RM
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -111,3 +111,4 @@ class RunningModeSegmentsTest {
         const val HOUR = 3_600_000L
     }
 }
+

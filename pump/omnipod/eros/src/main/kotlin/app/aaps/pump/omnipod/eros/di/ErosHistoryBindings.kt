@@ -1,11 +1,11 @@
-package app.aaps.pump.omnipod.eros.di
+﻿package app.gmaaps.pump.omnipod.eros.di
 
 import android.content.Context
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
-import app.aaps.pump.omnipod.eros.history.ErosHistory
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryDatabase
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryRecordDao
-import app.aaps.pump.omnipod.eros.manager.AapsErosPodStateManager
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
+import app.gmaaps.pump.omnipod.eros.history.ErosHistory
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryDatabase
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryRecordDao
+import app.gmaaps.pump.omnipod.eros.manager.AapsErosPodStateManager
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -29,3 +29,4 @@ object ErosHistoryBindings {
     @Provides @SingleIn(AppScope::class)
     fun provideErosPodStateManager(impl: AapsErosPodStateManager): ErosPodStateManager = impl
 }
+

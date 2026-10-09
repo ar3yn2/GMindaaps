@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.tempTarget
+﻿package app.gmaaps.ui.compose.tempTarget
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -8,14 +8,14 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.TT
-import app.aaps.core.data.model.TTPreset
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.R
-import app.aaps.core.ui.compose.LocalDateUtil
-import app.aaps.core.ui.compose.LocalProfileUtil
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.data.model.TTPreset
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.R
+import app.gmaaps.core.ui.compose.LocalDateUtil
+import app.gmaaps.core.ui.compose.LocalProfileUtil
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
@@ -230,3 +230,4 @@ class TempTargetCarouselCardTest {
         assertThat(expired).isFalse()
     }
 }
+

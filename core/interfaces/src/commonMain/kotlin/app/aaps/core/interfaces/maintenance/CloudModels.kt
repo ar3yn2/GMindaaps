@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.maintenance
+﻿package app.gmaaps.core.interfaces.maintenance
 
 /**
  * Represents a file in cloud storage.
@@ -56,3 +56,4 @@ data class CloudFileListResult(
      */
     val totalCount: Int = -1
 )
+

@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose
+﻿package app.gmaaps.plugins.automation.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -22,36 +22,36 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.consumeOverscroll
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.triggers.Trigger
-import app.aaps.plugins.automation.triggers.TriggerAutosensValue
-import app.aaps.plugins.automation.triggers.TriggerBTDevice
-import app.aaps.plugins.automation.triggers.TriggerBg
-import app.aaps.plugins.automation.triggers.TriggerBolusAgo
-import app.aaps.plugins.automation.triggers.TriggerCOB
-import app.aaps.plugins.automation.triggers.TriggerCannulaAge
-import app.aaps.plugins.automation.triggers.TriggerDelta
-import app.aaps.plugins.automation.triggers.TriggerHeartRate
-import app.aaps.plugins.automation.triggers.TriggerInsulinAge
-import app.aaps.plugins.automation.triggers.TriggerIob
-import app.aaps.plugins.automation.triggers.TriggerLocation
-import app.aaps.plugins.automation.triggers.TriggerPodChange
-import app.aaps.plugins.automation.triggers.TriggerProfilePercent
-import app.aaps.plugins.automation.triggers.TriggerPumpBatteryAge
-import app.aaps.plugins.automation.triggers.TriggerPumpBatteryLevel
-import app.aaps.plugins.automation.triggers.TriggerPumpLastConnection
-import app.aaps.plugins.automation.triggers.TriggerRecurringTime
-import app.aaps.plugins.automation.triggers.TriggerReservoirLevel
-import app.aaps.plugins.automation.triggers.TriggerSensorAge
-import app.aaps.plugins.automation.triggers.TriggerStepsCount
-import app.aaps.plugins.automation.triggers.TriggerTempTarget
-import app.aaps.plugins.automation.triggers.TriggerTempTargetValue
-import app.aaps.plugins.automation.triggers.TriggerTime
-import app.aaps.plugins.automation.triggers.TriggerTimeRange
-import app.aaps.plugins.automation.triggers.TriggerWifiSsid
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.consumeOverscroll
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.triggers.Trigger
+import app.gmaaps.plugins.automation.triggers.TriggerAutosensValue
+import app.gmaaps.plugins.automation.triggers.TriggerBTDevice
+import app.gmaaps.plugins.automation.triggers.TriggerBg
+import app.gmaaps.plugins.automation.triggers.TriggerBolusAgo
+import app.gmaaps.plugins.automation.triggers.TriggerCOB
+import app.gmaaps.plugins.automation.triggers.TriggerCannulaAge
+import app.gmaaps.plugins.automation.triggers.TriggerDelta
+import app.gmaaps.plugins.automation.triggers.TriggerHeartRate
+import app.gmaaps.plugins.automation.triggers.TriggerInsulinAge
+import app.gmaaps.plugins.automation.triggers.TriggerIob
+import app.gmaaps.plugins.automation.triggers.TriggerLocation
+import app.gmaaps.plugins.automation.triggers.TriggerPodChange
+import app.gmaaps.plugins.automation.triggers.TriggerProfilePercent
+import app.gmaaps.plugins.automation.triggers.TriggerPumpBatteryAge
+import app.gmaaps.plugins.automation.triggers.TriggerPumpBatteryLevel
+import app.gmaaps.plugins.automation.triggers.TriggerPumpLastConnection
+import app.gmaaps.plugins.automation.triggers.TriggerRecurringTime
+import app.gmaaps.plugins.automation.triggers.TriggerReservoirLevel
+import app.gmaaps.plugins.automation.triggers.TriggerSensorAge
+import app.gmaaps.plugins.automation.triggers.TriggerStepsCount
+import app.gmaaps.plugins.automation.triggers.TriggerTempTarget
+import app.gmaaps.plugins.automation.triggers.TriggerTempTargetValue
+import app.gmaaps.plugins.automation.triggers.TriggerTime
+import app.gmaaps.plugins.automation.triggers.TriggerTimeRange
+import app.gmaaps.plugins.automation.triggers.TriggerWifiSsid
 import kotlin.reflect.KClass
 
 enum class TriggerCategory(val labelResId: TextRef) {
@@ -182,3 +182,4 @@ fun ChooseTriggerSheet(
         }
     }
 }
+

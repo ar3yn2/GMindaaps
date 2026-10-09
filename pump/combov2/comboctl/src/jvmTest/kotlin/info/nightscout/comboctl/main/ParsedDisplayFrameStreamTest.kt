@@ -1,6 +1,6 @@
-package info.nightscout.comboctl.main
+﻿package info.nightscout.comboctl.main
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import info.nightscout.comboctl.base.DisplayFrame
 import info.nightscout.comboctl.base.LogLevel
 import info.nightscout.comboctl.base.Logger
@@ -369,3 +369,4 @@ class ParsedDisplayFrameStreamTest : TestBase() {
         assertEquals(ParsedScreen.TemporaryBasalRateDurationScreen(durationInMinutes = 30), parsedFrameIter.next().parsedScreen)
     }
 }
+

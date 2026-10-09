@@ -1,12 +1,12 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
-import app.aaps.core.data.model.BCR
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.CA
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.model.BCR
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.CA
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.pump.defs.PumpType
 import kotlin.time.Clock
 
 class DetailedBolusInfo {

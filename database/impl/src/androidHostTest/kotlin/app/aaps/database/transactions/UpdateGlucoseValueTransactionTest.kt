@@ -1,9 +1,9 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.DelegatedAppDatabase
-import app.aaps.database.daos.GlucoseValueDao
-import app.aaps.database.entities.GlucoseValue
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.DelegatedAppDatabase
+import app.gmaaps.database.daos.GlucoseValueDao
+import app.gmaaps.database.entities.GlucoseValue
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -44,3 +44,4 @@ class UpdateGlucoseValueTransactionTest {
         interfaceIDs_backing = InterfaceIDs()
     )
 }
+

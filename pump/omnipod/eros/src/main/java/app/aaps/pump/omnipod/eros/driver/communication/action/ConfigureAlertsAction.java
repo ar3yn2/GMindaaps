@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action;
 
 import java.util.List;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.ConfigureAlertsCommand;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.ConfigureAlertsCommand;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
 
 public class ConfigureAlertsAction implements OmnipodAction<StatusResponse> {
     private final ErosPodStateManager podStateManager;
@@ -41,3 +41,4 @@ public class ConfigureAlertsAction implements OmnipodAction<StatusResponse> {
         }
     }
 }
+

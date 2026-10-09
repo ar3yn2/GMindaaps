@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.keys
+﻿package app.gmaaps.pump.equil.keys
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
@@ -89,3 +89,4 @@ class EquilBooleanKeyTest : TestBase() {
         }
     }
 }
+

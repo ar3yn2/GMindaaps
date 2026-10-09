@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.utils.lenientString
-import app.aaps.plugins.automation.AutomationStrings
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.plugins.automation.AutomationStrings
 import kotlinx.serialization.json.JsonObject
 
 /**
@@ -34,3 +34,4 @@ class TriggerUnknown(deps: TriggerDeps, private val stored: JsonObject) : Trigge
 
     override fun duplicate(): Trigger = TriggerUnknown(deps, stored)
 }
+

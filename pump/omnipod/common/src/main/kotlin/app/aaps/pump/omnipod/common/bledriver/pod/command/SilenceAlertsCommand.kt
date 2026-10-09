@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.NonceEnabledCommand
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertType
-import app.aaps.pump.omnipod.common.bledriver.pod.util.AlertUtil
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.NonceEnabledCommand
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.AlertUtil
 import java.nio.ByteBuffer
 import java.util.EnumSet
 
@@ -60,3 +60,4 @@ class SilenceAlertsCommand private constructor(
         private const val BODY_LENGTH = 5.toByte()
     }
 }
+

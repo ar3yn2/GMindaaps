@@ -1,9 +1,9 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.BolusCalculatorResult
-import app.aaps.database.entities.TABLE_BOLUS_CALCULATOR_RESULTS
+import app.gmaaps.database.entities.BolusCalculatorResult
+import app.gmaaps.database.entities.TABLE_BOLUS_CALCULATOR_RESULTS
 
 @Dao
 internal interface BolusCalculatorResultDao : TraceableDao<BolusCalculatorResult> {

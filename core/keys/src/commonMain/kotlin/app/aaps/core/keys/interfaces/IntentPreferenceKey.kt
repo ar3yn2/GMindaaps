@@ -1,4 +1,4 @@
-package app.aaps.core.keys.interfaces
+﻿package app.gmaaps.core.keys.interfaces
 
 interface IntentPreferenceKey : PreferenceKey {
 

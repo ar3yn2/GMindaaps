@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.ble.gatt
+﻿package app.gmaaps.pump.carelevo.ble.gatt
 
 import kotlinx.coroutines.flow.SharedFlow
 import java.util.UUID
@@ -110,3 +110,4 @@ enum class GattConnState {
 
 class GattWriteException(message: String, cause: Throwable? = null) : RuntimeException(message, cause)
 class GattDiscoveryException(message: String, cause: Throwable? = null) : RuntimeException(message, cause)
+

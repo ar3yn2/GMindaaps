@@ -1,15 +1,15 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import org.joda.time.Duration;
 import org.junit.jupiter.api.Test;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.definition.DeliveryStatus;
-import app.aaps.pump.omnipod.eros.driver.definition.ErrorEventInfo;
-import app.aaps.pump.omnipod.eros.driver.definition.FaultEventCode;
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.definition.DeliveryStatus;
+import app.gmaaps.pump.omnipod.eros.driver.definition.ErrorEventInfo;
+import app.gmaaps.pump.omnipod.eros.driver.definition.FaultEventCode;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
 
 /**
  * @noinspection SpellCheckingInspection
@@ -159,3 +159,4 @@ class PodInfoDetailedStatusTest {
         assertThat(podInfoDetailedStatus.getRadioRSSI()).isEqualTo(26);
     }
 }
+

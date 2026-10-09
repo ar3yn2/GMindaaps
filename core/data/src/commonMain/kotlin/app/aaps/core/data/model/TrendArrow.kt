@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 /**
  * A glucose trend.
@@ -34,3 +34,4 @@ enum class TrendArrow(val text: String, val symbol: String) {
             entries.firstOrNull { it.text == direction } ?: NONE
     }
 }
+

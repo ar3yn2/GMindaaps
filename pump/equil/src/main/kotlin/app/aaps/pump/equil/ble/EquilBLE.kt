@@ -1,28 +1,28 @@
-package app.aaps.pump.equil.ble
+﻿package app.gmaaps.pump.equil.ble
 
 import android.bluetooth.BluetoothGatt
 import android.os.Handler
 import android.os.HandlerThread
 import android.os.Message
 import android.os.SystemClock
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.ble.BleTransportListener
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.utils.notifyAll
-import app.aaps.pump.equil.EquilConst
-import app.aaps.pump.equil.database.ResolvedResult
-import app.aaps.pump.equil.driver.definition.BluetoothConnectionState
-import app.aaps.pump.equil.manager.EquilManager
-import app.aaps.pump.equil.manager.EquilResponse
-import app.aaps.pump.equil.manager.Utils
-import app.aaps.pump.equil.manager.command.BaseCmd
-import app.aaps.pump.equil.manager.command.CmdDevicesOldGet
-import app.aaps.pump.equil.manager.command.CmdHistoryGet
-import app.aaps.pump.equil.manager.command.CmdInsulinGet
-import app.aaps.pump.equil.manager.command.CmdPair
-import app.aaps.pump.equil.manager.command.CmdRunningModeGet
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.ble.BleTransportListener
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.utils.notifyAll
+import app.gmaaps.pump.equil.EquilConst
+import app.gmaaps.pump.equil.database.ResolvedResult
+import app.gmaaps.pump.equil.driver.definition.BluetoothConnectionState
+import app.gmaaps.pump.equil.manager.EquilManager
+import app.gmaaps.pump.equil.manager.EquilResponse
+import app.gmaaps.pump.equil.manager.Utils
+import app.gmaaps.pump.equil.manager.command.BaseCmd
+import app.gmaaps.pump.equil.manager.command.CmdDevicesOldGet
+import app.gmaaps.pump.equil.manager.command.CmdHistoryGet
+import app.gmaaps.pump.equil.manager.command.CmdInsulinGet
+import app.gmaaps.pump.equil.manager.command.CmdPair
+import app.gmaaps.pump.equil.manager.command.CmdRunningModeGet
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -427,3 +427,4 @@ class EquilBLE(
         const val TIME_OUT_CONNECT_WHAT = 0x13
     }
 }
+

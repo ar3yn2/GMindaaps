@@ -1,7 +1,7 @@
-package app.aaps.plugins.sensitivity.extensions
+﻿package app.gmaaps.plugins.sensitivity.extensions
 
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.time.T
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.time.T
 
 fun List<PS>.isPSEvent5minBack(time: Long): Boolean {
     for (event in this) {
@@ -14,3 +14,4 @@ fun List<PS>.isPSEvent5minBack(time: Long): Boolean {
     }
     return false
 }
+

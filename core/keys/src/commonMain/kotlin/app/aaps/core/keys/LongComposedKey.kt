@@ -1,6 +1,6 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.LongComposedNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongComposedNonPreferenceKey
 
 enum class LongComposedKey(
     override val key: String,

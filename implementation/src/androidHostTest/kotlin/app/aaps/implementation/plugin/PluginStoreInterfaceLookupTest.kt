@@ -1,14 +1,14 @@
-package app.aaps.implementation.plugin
+﻿package app.gmaaps.implementation.plugin
 
-import app.aaps.core.interfaces.aps.APS
-import app.aaps.core.interfaces.aps.Sensitivity
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.smoothing.Smoothing
-import app.aaps.core.interfaces.source.BgSource
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.aps.APS
+import app.gmaaps.core.interfaces.aps.Sensitivity
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.smoothing.Smoothing
+import app.gmaaps.core.interfaces.source.BgSource
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.Mock
@@ -80,3 +80,4 @@ class PluginStoreInterfaceLookupTest : TestBase() {
         assertThat(reversed.getSpecificPluginsListByInterface(Sensitivity::class)).containsExactly(sensitivityPlugin)
     }
 }
+

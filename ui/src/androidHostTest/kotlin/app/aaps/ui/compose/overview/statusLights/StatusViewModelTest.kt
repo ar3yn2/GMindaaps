@@ -1,26 +1,26 @@
-package app.aaps.ui.compose.overview.statusLights
+﻿package app.gmaaps.ui.compose.overview.statusLights
 
-import app.aaps.core.data.model.TDD
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventInitializationChanged
-import app.aaps.core.interfaces.rx.events.EventNsClientStatusUpdated
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.source.BgSource
-import app.aaps.core.interfaces.stats.TddCalculator
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.interfaces.utils.TimeDiff
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.data.model.TDD
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventInitializationChanged
+import app.gmaaps.core.interfaces.rx.events.EventNsClientStatusUpdated
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.source.BgSource
+import app.gmaaps.core.interfaces.stats.TddCalculator
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.interfaces.utils.TimeDiff
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
@@ -178,3 +178,4 @@ internal class StatusViewModelTest {
         const val USAGE_TEXT = "12 U"
     }
 }
+

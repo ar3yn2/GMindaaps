@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.operations
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.operations
 
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -224,3 +224,4 @@ class BLECommOperationResultTest {
         assertEquals(BLECommOperationResult.RESULT_NOT_CONFIGURED, result.resultCode)
     }
 }
+

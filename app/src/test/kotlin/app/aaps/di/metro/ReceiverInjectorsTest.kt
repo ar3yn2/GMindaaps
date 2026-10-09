@@ -1,13 +1,13 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
-import app.aaps.implementation.androidNotification.AlarmMuteReceiver
-import app.aaps.persistentNotification.DummyService
-import app.aaps.plugins.automation.TimerReminderReceiver
-import app.aaps.plugins.automation.services.LocationService
-import app.aaps.receivers.AutoStartReceiver
-import app.aaps.receivers.CarbSuggestionReceiver
-import app.aaps.receivers.DataReceiver
-import app.aaps.receivers.SmsReceiver
+import app.gmaaps.implementation.androidNotification.AlarmMuteReceiver
+import app.gmaaps.persistentNotification.DummyService
+import app.gmaaps.plugins.automation.TimerReminderReceiver
+import app.gmaaps.plugins.automation.services.LocationService
+import app.gmaaps.receivers.AutoStartReceiver
+import app.gmaaps.receivers.CarbSuggestionReceiver
+import app.gmaaps.receivers.DataReceiver
+import app.gmaaps.receivers.SmsReceiver
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -73,3 +73,4 @@ class ReceiverInjectorsTest {
         assertThat(injectors[SmsReceiver::class]).isNotSameInstanceAs(injectors[DataReceiver::class])
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.plugins.automation.events
+﻿package app.gmaaps.plugins.automation.events
 
-import app.aaps.core.interfaces.rx.events.Event
-import app.aaps.plugins.automation.GeoPosition
+import app.gmaaps.core.interfaces.rx.events.Event
+import app.gmaaps.plugins.automation.GeoPosition
 
 /**
  * The phone reported a new position, so any location rule is worth re-evaluating.
@@ -19,3 +19,4 @@ import app.aaps.plugins.automation.GeoPosition
  *   way to tell a precise fix from a coarse one when reading a log
  */
 data class EventLocationChange(val position: GeoPosition, val provider: String?) : Event()
+

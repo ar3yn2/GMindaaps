@@ -1,8 +1,8 @@
-package app.aaps.receivers
+﻿package app.gmaaps.receivers
 
 import android.content.Intent
-import app.aaps.persistentNotification.DummyServiceHelper
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.persistentNotification.DummyServiceHelper
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.Mock
@@ -70,3 +70,4 @@ class AutoStartReceiverTest : TestBaseWithProfile() {
         verify(dummyServiceHelper, never()).startService(context)
     }
 }
+

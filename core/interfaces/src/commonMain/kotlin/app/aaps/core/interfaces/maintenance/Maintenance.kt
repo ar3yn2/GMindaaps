@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.maintenance
+﻿package app.gmaaps.core.interfaces.maintenance
 
 /**
  * Interface for maintenance functionality.
@@ -9,3 +9,4 @@ interface Maintenance {
     suspend fun executeSendLogs(): ExportResult
     fun deleteLogs(keep: Int)
 }
+

@@ -1,20 +1,20 @@
-package app.aaps.desktop.shell.di
+﻿package app.gmaaps.desktop.shell.di
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.L
-import app.aaps.core.interfaces.notifications.SystemNotificationPlatform
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.sharedPreferences.KeyValueStore
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.desktop.shell.appIconResource
-import app.aaps.desktop.shell.config.DesktopClientConfig
-import app.aaps.desktop.shell.loadAwtAppIcon
-import app.aaps.desktop.shell.platform.DesktopSystemNotificationPlatform
-import app.aaps.desktop.shell.prefs.DesktopSp
-import app.aaps.implementation.logging.AAPSLoggerDesktop
-import app.aaps.shared.impl.utils.DateUtilImpl
-import app.aaps.shared.impl.utils.JvmDateFormatPlatform
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.L
+import app.gmaaps.core.interfaces.notifications.SystemNotificationPlatform
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.sharedPreferences.KeyValueStore
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.desktop.shell.appIconResource
+import app.gmaaps.desktop.shell.config.DesktopClientConfig
+import app.gmaaps.desktop.shell.loadAwtAppIcon
+import app.gmaaps.desktop.shell.platform.DesktopSystemNotificationPlatform
+import app.gmaaps.desktop.shell.prefs.DesktopSp
+import app.gmaaps.implementation.logging.AAPSLoggerDesktop
+import app.gmaaps.shared.impl.utils.DateUtilImpl
+import app.gmaaps.shared.impl.utils.JvmDateFormatPlatform
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -62,3 +62,4 @@ object DesktopPlatformBindings {
         DesktopSystemNotificationPlatform(logger, rh.gs(config.appName), loadAwtAppIcon(appIconResource(config)))
 
 }
+

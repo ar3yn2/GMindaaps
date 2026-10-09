@@ -1,16 +1,16 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.roundToInt
@@ -24,7 +24,7 @@ import kotlin.time.Clock
  *  - for pumps that have a reliable history that can be read and which therefore issue a bolus on the pump,
  *    read the history back and add new bolus entries on the pump, the method [syncBolusWithPumpId]
  *    are used to inform AAPS-core of a new bolus.
- *    [app.aaps.pump.danars.DanaRSPlugin] is a pump driver that
+ *    [app.gmaaps.pump.danars.DanaRSPlugin] is a pump driver that
  *    takes this approach.
  *  - for pumps that don't support history or take rather long to complete a bolus, the methods
  *    [addBolusWithTempId] and [syncBolusWithTempId] provide a mechanism to notify AAPS-core of a started
@@ -342,7 +342,7 @@ interface PumpSync {
      * if db record already has endPumpId assigned by [syncStopTemporaryBasalWithPumpId] other updates
      *      are ignored
      *
-     * see [app.aaps.database.impl.transactions.SyncPumpTemporaryBasalTransaction]
+     * see [app.gmaaps.database.impl.transactions.SyncPumpTemporaryBasalTransaction]
      *
      * @param timestamp     timestamp of event from pump history
      * @param rate          TBR rate in U/h or % (value of 100% is equal to no TBR)
@@ -372,7 +372,7 @@ interface PumpSync {
      *      endPumpId is stored to running record
      * If db record doesn't exist data is ignored and false returned
      *
-     * see [app.aaps.database.transactions.SyncPumpCancelTemporaryBasalIfAnyTransaction]
+     * see [app.gmaaps.database.transactions.SyncPumpCancelTemporaryBasalIfAnyTransaction]
      *
      * @param timestamp     timestamp of event from pump history
      * @param endPumpId     pump id of ending event from history
@@ -407,7 +407,7 @@ interface PumpSync {
      * @param pumpSerial    pump serial number
      * @return true if new record is created
      *
-     * see [app.aaps.database.impl.transactions.InsertTemporaryBasalWithTempIdTransaction]
+     * see [app.gmaaps.database.impl.transactions.InsertTemporaryBasalWithTempIdTransaction]
      **/
 
     suspend fun addTemporaryBasalWithTempId(timestamp: Long, rate: PumpRate, duration: Long, isAbsolute: Boolean, tempId: Long, type: TemporaryBasalType, pumpType: PumpType, pumpSerial: String): Boolean
@@ -501,7 +501,7 @@ interface PumpSync {
      * If db record doesn't exist, new record is created.
      * isValid field is preserved
      *
-     * see [app.aaps.database.impl.transactions.SyncPumpExtendedBolusTransaction]
+     * see [app.gmaaps.database.impl.transactions.SyncPumpExtendedBolusTransaction]
      *
      * @param timestamp     timestamp of event from pump history
      * @param rate        EB total amount in U
@@ -529,7 +529,7 @@ interface PumpSync {
      *      endPumpId is stored to running record
      * If db record doesn't exist data is ignored and false returned
      *
-     * see [app.aaps.database.impl.transactions.SyncPumpCancelExtendedBolusIfAnyTransaction]
+     * see [app.gmaaps.database.impl.transactions.SyncPumpCancelExtendedBolusIfAnyTransaction]
      *
      * @param timestamp     timestamp of event from pump history
      * @param endPumpId     pump id of ending event from history
@@ -554,7 +554,7 @@ interface PumpSync {
      *      isValid field is preserved
      * If db record doesn't exist, new record is created.
      *
-     * see [app.aaps.database.impl.transactions.SyncPumpTotalDailyDoseTransaction]
+     * see [app.gmaaps.database.impl.transactions.SyncPumpTotalDailyDoseTransaction]
      *
      * @param timestamp     timestamp of event from pump history
      * @param bolusAmount   bolus part
@@ -580,3 +580,4 @@ interface PumpSync {
 
     suspend fun isProfileRunning(time: Long): Boolean
 }
+

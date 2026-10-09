@@ -1,6 +1,6 @@
-package app.aaps.utils
+﻿package app.gmaaps.utils
 
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
 import leakcanary.EventListener
 import leakcanary.EventListener.Event.HeapAnalysisDone
 import shark.HeapAnalysisSuccess
@@ -81,3 +81,4 @@ private fun Leak.toThrowable(leakTrace: LeakTrace): Throwable {
  * This allows Firebase to properly group and display memory leak reports.
  */
 class MemoryLeakException(message: String) : Exception(message)
+

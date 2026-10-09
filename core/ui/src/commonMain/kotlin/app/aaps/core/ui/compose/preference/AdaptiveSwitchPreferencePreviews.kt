@@ -1,8 +1,8 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.BooleanKey
 
 @Preview(showBackground = true)
 @Composable
@@ -13,3 +13,4 @@ internal fun AdaptiveSwitchPreferencePreview() {
         )
     }
 }
+

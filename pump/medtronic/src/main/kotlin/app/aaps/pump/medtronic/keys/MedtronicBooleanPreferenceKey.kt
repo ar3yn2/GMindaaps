@@ -1,8 +1,8 @@
-package app.aaps.pump.medtronic.keys
+﻿package app.gmaaps.pump.medtronic.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.medtronic.R
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.medtronic.R
 
 enum class MedtronicBooleanPreferenceKey(
     override val key: String,
@@ -22,3 +22,4 @@ enum class MedtronicBooleanPreferenceKey(
     override val title: TextRef = TextRef.AndroidRes(titleResId)
     override val summary: TextRef? = summaryResId?.let { TextRef.AndroidRes(it) }
 }
+

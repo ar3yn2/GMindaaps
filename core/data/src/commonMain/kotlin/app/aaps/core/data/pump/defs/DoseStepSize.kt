@@ -1,7 +1,7 @@
-package app.aaps.core.data.pump.defs
+﻿package app.gmaaps.core.data.pump.defs
 
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.format.NumberFormatPlatform
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.format.NumberFormatPlatform
 
 enum class DoseStepSize(private val entries: Array<DoseStepSizeEntry>) {
 

@@ -1,4 +1,4 @@
-package app.aaps.pump.danars.encryption
+﻿package app.gmaaps.pump.danars.encryption
 
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
@@ -684,3 +684,4 @@ class BleEncryption() {
         const val DANAR_PACKET__OPCODE_ETC__KEEP_CONNECTION = 0xFF
     }
 }
+

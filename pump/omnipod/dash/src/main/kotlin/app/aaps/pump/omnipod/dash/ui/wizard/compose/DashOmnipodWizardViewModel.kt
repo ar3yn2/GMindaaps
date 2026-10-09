@@ -1,47 +1,47 @@
-package app.aaps.pump.omnipod.dash.ui.wizard.compose
+﻿package app.gmaaps.pump.omnipod.dash.ui.wizard.compose
 
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.InsulinManager
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.siteRotation.BodyType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertTrigger
-import app.aaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
-import app.aaps.pump.omnipod.common.definition.OmnipodCommandType
-import app.aaps.pump.omnipod.common.keys.OmnipodBooleanPreferenceKey
-import app.aaps.pump.omnipod.common.keys.OmnipodIntPreferenceKey
-import app.aaps.pump.omnipod.common.queue.command.CommandDeactivatePod
-import app.aaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardStep
-import app.aaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardViewModel
-import app.aaps.pump.omnipod.common.util.mapProfileToBasalProgram
-import app.aaps.pump.omnipod.dash.R
-import app.aaps.pump.omnipod.dash.driver.OmnipodDashManager
-import app.aaps.pump.omnipod.dash.history.DashHistory
-import app.aaps.pump.omnipod.dash.history.data.BasalValuesRecord
-import app.aaps.pump.omnipod.dash.history.data.InitialResult
-import app.aaps.pump.omnipod.dash.history.data.ResolvedResult
-import app.aaps.pump.omnipod.dash.util.Constants
-import app.aaps.pump.omnipod.dash.util.I8n
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.InsulinManager
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.siteRotation.BodyType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertTrigger
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
+import app.gmaaps.pump.omnipod.common.definition.OmnipodCommandType
+import app.gmaaps.pump.omnipod.common.keys.OmnipodBooleanPreferenceKey
+import app.gmaaps.pump.omnipod.common.keys.OmnipodIntPreferenceKey
+import app.gmaaps.pump.omnipod.common.queue.command.CommandDeactivatePod
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardStep
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardViewModel
+import app.gmaaps.pump.omnipod.common.util.mapProfileToBasalProgram
+import app.gmaaps.pump.omnipod.dash.R
+import app.gmaaps.pump.omnipod.dash.driver.OmnipodDashManager
+import app.gmaaps.pump.omnipod.dash.history.DashHistory
+import app.gmaaps.pump.omnipod.dash.history.data.BasalValuesRecord
+import app.gmaaps.pump.omnipod.dash.history.data.InitialResult
+import app.gmaaps.pump.omnipod.dash.history.data.ResolvedResult
+import app.gmaaps.pump.omnipod.dash.util.Constants
+import app.gmaaps.pump.omnipod.dash.util.I8n
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -54,7 +54,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.rx3.await
 import kotlinx.coroutines.rx3.rxSingle
-import app.aaps.pump.omnipod.common.R as CommonR
+import app.gmaaps.pump.omnipod.common.R as CommonR
 
 @Stable
 // Registers itself: @ViewModelKey infers the key from the class. No graph entry, and deliberately
@@ -233,11 +233,11 @@ class DashOmnipodWizardViewModel(
 
     @StringRes
     override fun getTitleForStep(step: OmnipodWizardStep): Int = when (step) {
-        OmnipodWizardStep.PROFILE_GATE           -> app.aaps.core.ui.R.string.pump_wizard_profile_gate_title
+        OmnipodWizardStep.PROFILE_GATE           -> app.gmaaps.core.ui.R.string.pump_wizard_profile_gate_title
         OmnipodWizardStep.START_POD_ACTIVATION   -> CommonR.string.omnipod_common_pod_activation_wizard_start_pod_activation_title
-        OmnipodWizardStep.SELECT_INSULIN         -> app.aaps.core.ui.R.string.select_insulin
+        OmnipodWizardStep.SELECT_INSULIN         -> app.gmaaps.core.ui.R.string.select_insulin
         OmnipodWizardStep.INITIALIZE_POD         -> CommonR.string.omnipod_common_pod_activation_wizard_initialize_pod_title
-        OmnipodWizardStep.SITE_LOCATION          -> app.aaps.core.ui.R.string.site_location
+        OmnipodWizardStep.SITE_LOCATION          -> app.gmaaps.core.ui.R.string.site_location
         OmnipodWizardStep.ATTACH_POD             -> CommonR.string.omnipod_common_pod_activation_wizard_attach_pod_title
         OmnipodWizardStep.INSERT_CANNULA         -> CommonR.string.omnipod_common_pod_activation_wizard_insert_cannula_title
         OmnipodWizardStep.POD_ACTIVATED          -> CommonR.string.omnipod_common_pod_activation_wizard_pod_activated_title
@@ -252,9 +252,9 @@ class DashOmnipodWizardViewModel(
         // PROFILE_GATE has its own composable that doesn't consume textResId — returned value is unused.
         OmnipodWizardStep.PROFILE_GATE           -> 0
         OmnipodWizardStep.START_POD_ACTIVATION   -> R.string.omnipod_dash_pod_activation_wizard_start_pod_activation_text
-        OmnipodWizardStep.SELECT_INSULIN         -> app.aaps.core.ui.R.string.select_insulin_description
+        OmnipodWizardStep.SELECT_INSULIN         -> app.gmaaps.core.ui.R.string.select_insulin_description
         OmnipodWizardStep.INITIALIZE_POD         -> R.string.omnipod_dash_pod_activation_wizard_initialize_pod_text
-        OmnipodWizardStep.SITE_LOCATION          -> app.aaps.core.ui.R.string.select_site_location
+        OmnipodWizardStep.SITE_LOCATION          -> app.gmaaps.core.ui.R.string.select_site_location
         OmnipodWizardStep.ATTACH_POD             -> CommonR.string.omnipod_common_pod_activation_wizard_attach_pod_text
         OmnipodWizardStep.INSERT_CANNULA         -> CommonR.string.omnipod_common_pod_activation_wizard_insert_cannula_text
         OmnipodWizardStep.POD_ACTIVATED          -> CommonR.string.omnipod_common_pod_activation_wizard_pod_activated_text
@@ -266,3 +266,4 @@ class DashOmnipodWizardViewModel(
 
     // endregion
 }
+

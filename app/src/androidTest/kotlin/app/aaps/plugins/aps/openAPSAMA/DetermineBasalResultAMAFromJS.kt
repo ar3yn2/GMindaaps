@@ -1,9 +1,9 @@
-package app.aaps.plugins.aps.openAPSAMA
+﻿package app.gmaaps.plugins.aps.openAPSAMA
 
-import app.aaps.core.interfaces.aps.Predictions
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.plugins.aps.openAPS.APSResultObject
+import app.gmaaps.core.interfaces.aps.Predictions
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.plugins.aps.openAPS.APSResultObject
 import dev.zacsweers.metro.Inject
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject

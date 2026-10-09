@@ -1,15 +1,15 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response;
 
 import static com.google.common.truth.Truth.assertThat;
 
 import org.joda.time.Duration;
 import org.junit.jupiter.api.Test;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSlot;
-import app.aaps.pump.omnipod.eros.driver.definition.DeliveryStatus;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSlot;
+import app.gmaaps.pump.omnipod.eros.driver.definition.DeliveryStatus;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
 
 class StatusResponseTest {
 
@@ -102,3 +102,4 @@ class StatusResponseTest {
         assertThat(statusResponse.getRawData()).isEqualTo(ByteUtil.INSTANCE.fromHexString("1d19050ec82c08376f98"));
     }
 }
+

@@ -1,23 +1,23 @@
-package app.aaps.pump.insight.compose
+﻿package app.gmaaps.pump.insight.compose
 
 import android.content.Context
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.pump.insight.InsightPlugin
-import app.aaps.pump.insight.R
-import app.aaps.pump.insight.app_layer.parameter_blocks.TBROverNotificationBlock
-import app.aaps.pump.insight.connection_service.InsightConnectionService
-import app.aaps.pump.insight.descriptors.ActiveBasalRate
-import app.aaps.pump.insight.descriptors.BatteryStatus
-import app.aaps.pump.insight.descriptors.CartridgeStatus
-import app.aaps.pump.insight.descriptors.InsightState
-import app.aaps.pump.insight.descriptors.OperatingMode
-import app.aaps.pump.insight.descriptors.TotalDailyDose
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.pump.insight.InsightPlugin
+import app.gmaaps.pump.insight.R
+import app.gmaaps.pump.insight.app_layer.parameter_blocks.TBROverNotificationBlock
+import app.gmaaps.pump.insight.connection_service.InsightConnectionService
+import app.gmaaps.pump.insight.descriptors.ActiveBasalRate
+import app.gmaaps.pump.insight.descriptors.BatteryStatus
+import app.gmaaps.pump.insight.descriptors.CartridgeStatus
+import app.gmaaps.pump.insight.descriptors.InsightState
+import app.gmaaps.pump.insight.descriptors.OperatingMode
+import app.gmaaps.pump.insight.descriptors.TotalDailyDose
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -36,7 +36,7 @@ import org.mockito.kotlin.mock
 import org.mockito.kotlin.never
 import org.mockito.kotlin.verify
 import org.mockito.kotlin.whenever
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Unit test for [InsightOverviewState], the Insight pump overview state holder. Unlike other pump
@@ -379,3 +379,4 @@ internal class InsightOverviewStateTest {
         assertThat(rows.map { it.label }).doesNotContain(label(R.string.last_connected))
     }
 }
+

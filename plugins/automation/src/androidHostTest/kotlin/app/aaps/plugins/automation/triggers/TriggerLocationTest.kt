@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.asJsonObject
-import app.aaps.plugins.automation.elements.InputLocationMode
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.asJsonObject
+import app.gmaaps.plugins.automation.elements.InputLocationMode
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.json.JSONException
@@ -105,3 +105,4 @@ class TriggerLocationTest : TriggerTestBase() {
         assertThat(TriggerLocation(triggerDeps).friendlyDescription()).isEqualTo("When you are inside the area  ")
     }
 }
+

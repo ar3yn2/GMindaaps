@@ -1,22 +1,22 @@
-package app.aaps.plugins.sync.wear.wearintegration
+﻿package app.gmaaps.plugins.sync.wear.wearintegration
 
 import android.os.Binder
 import android.os.Handler
 import android.os.HandlerThread
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.di.injectMetroMembers
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventMobileToWear
-import app.aaps.core.interfaces.rx.events.EventMobileToWearWatchface
-import app.aaps.core.interfaces.rx.events.EventWearUpdateGui
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.plugins.sync.wear.WearPlugin
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.di.injectMetroMembers
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventMobileToWear
+import app.gmaaps.core.interfaces.rx.events.EventMobileToWearWatchface
+import app.gmaaps.core.interfaces.rx.events.EventWearUpdateGui
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.plugins.sync.wear.WearPlugin
 import com.google.android.gms.tasks.Tasks
 import com.google.android.gms.wearable.CapabilityClient
 import com.google.android.gms.wearable.CapabilityInfo
@@ -62,8 +62,8 @@ class DataLayerListenerServiceMobile : WearableListenerService() {
     private var handler = Handler(HandlerThread(this::class.simpleName + "Handler").also { it.start() }.looper)
 
 
-    private val rxPath get() = getString(app.aaps.core.interfaces.R.string.path_rx_bridge)
-    private val rxWatchfacePath get() = getString(app.aaps.core.interfaces.R.string.path_rx_data_bridge)
+    private val rxPath get() = getString(app.gmaaps.core.interfaces.R.string.path_rx_bridge)
+    private val rxWatchfacePath get() = getString(app.gmaaps.core.interfaces.R.string.path_rx_data_bridge)
 
     override fun onCreate() {
         injectMetroMembers(this)
@@ -196,3 +196,4 @@ class DataLayerListenerServiceMobile : WearableListenerService() {
         const val WEAR_CAPABILITY = "androidaps_wear"
     }
 }
+

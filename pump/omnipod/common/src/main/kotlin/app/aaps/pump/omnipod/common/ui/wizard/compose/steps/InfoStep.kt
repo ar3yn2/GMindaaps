@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.common.ui.wizard.compose.steps
+﻿package app.gmaaps.pump.omnipod.common.ui.wizard.compose.steps
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Shared info step composable used by all info-only wizard steps
@@ -55,3 +55,4 @@ internal fun InfoStepContent(
         )
     }
 }
+

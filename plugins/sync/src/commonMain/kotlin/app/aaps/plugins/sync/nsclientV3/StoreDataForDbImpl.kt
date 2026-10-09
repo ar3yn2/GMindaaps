@@ -1,32 +1,32 @@
-package app.aaps.plugins.sync.nsclientV3
+﻿package app.gmaaps.plugins.sync.nsclientV3
 
-import app.aaps.core.data.model.BCR
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.CA
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.DS
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.FD
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.model.TT
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.concurrent.AapsLock
-import app.aaps.core.interfaces.concurrent.withLock
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.nsclient.StoreDataForDb
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.data.model.BCR
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.CA
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.DS
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.FD
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.concurrent.AapsLock
+import app.gmaaps.core.interfaces.concurrent.withLock
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.nsclient.StoreDataForDb
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -547,3 +547,4 @@ class StoreDataForDbImpl(
         ended.removeClass(clazz)
     }
 }
+

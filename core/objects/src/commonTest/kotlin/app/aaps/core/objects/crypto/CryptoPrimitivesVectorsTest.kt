@@ -1,4 +1,4 @@
-package app.aaps.core.objects.crypto
+﻿package app.gmaaps.core.objects.crypto
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -203,3 +203,4 @@ internal fun ByteArray.toHexString(): String =
 /** The inverse, so a pinned expectation can be written as the hex it is usually quoted in. */
 internal fun String.fromHexString(): ByteArray =
     chunked(2).map { it.toInt(16).toByte() }.toByteArray()
+

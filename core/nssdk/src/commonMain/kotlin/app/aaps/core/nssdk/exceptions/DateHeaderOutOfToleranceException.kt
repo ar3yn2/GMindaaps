@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.exceptions
+﻿package app.gmaaps.core.nssdk.exceptions
 
 /**
  * Will be thrown if the server responds with 401 UNAUTHORIZED due to the Date Header being off
@@ -7,3 +7,4 @@ package app.aaps.core.nssdk.exceptions
  *
  */
 class DateHeaderOutOfToleranceException(message: String) : NightscoutException(message)
+

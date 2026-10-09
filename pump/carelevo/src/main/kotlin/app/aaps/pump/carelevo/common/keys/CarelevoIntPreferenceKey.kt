@@ -1,15 +1,15 @@
-package app.aaps.pump.carelevo.common.keys
+﻿package app.gmaaps.pump.carelevo.common.keys
 
-import app.aaps.core.keys.PreferenceType
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.carelevo.R
+import app.gmaaps.core.keys.PreferenceType
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.carelevo.R
 
 /**
  * Only the parameters a key actually varies are declared. Everything else - `calculatedDefaultValue`,
  * `engineeringModeOnly`, `defaultedBySM`, the three `showIn*` flags, both dependencies,
  * `hideParentScreenIfHidden`, `exportable` and `entries` - already has the same default on
- * [IntPreferenceKey] / [app.aaps.core.keys.interfaces.PreferenceKey], so restating it here was only a
+ * [IntPreferenceKey] / [app.gmaaps.core.keys.interfaces.PreferenceKey], so restating it here was only a
  * second place to keep in step.
  *
  * [min] and [max] are the exception: they are abstract on [IntPreferenceKey], so they have to be stated
@@ -49,3 +49,4 @@ enum class CarelevoIntPreferenceKey(
 
     override val title: TextRef = TextRef.AndroidRes(titleResId)
 }
+

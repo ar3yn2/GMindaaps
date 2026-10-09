@@ -1,4 +1,4 @@
-package app.aaps.core.utils
+﻿package app.gmaaps.core.utils
 
 @Synchronized
 fun isRunningTest(): Boolean {
@@ -16,9 +16,10 @@ fun isRunningTest(): Boolean {
 @Synchronized
 fun isRunningRealPumpTest(): Boolean {
     return try {
-        Class.forName("app.aaps.RealPumpTest")
+        Class.forName("app.gmaaps.RealPumpTest")
         true
     } catch (_: ClassNotFoundException) {
         false
     }
 }
+

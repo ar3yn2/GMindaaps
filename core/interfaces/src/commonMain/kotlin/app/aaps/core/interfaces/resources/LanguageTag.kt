@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.resources
+﻿package app.gmaaps.core.interfaces.resources
 
 /**
  * Turns the stored language preference into a BCP 47 tag.
@@ -45,3 +45,4 @@ object LanguageTag {
     private const val DANISH_STORED = "dk"
     private const val DANISH_ISO = "da"
 }
+

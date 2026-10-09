@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch
+﻿package app.gmaaps.pump.eopatch
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -19,3 +19,4 @@ object GsonHelper {
         return defaultGson!!
     }
 }
+

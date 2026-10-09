@@ -1,32 +1,32 @@
-package app.aaps.plugins.constraints.objectives
+﻿package app.gmaaps.plugins.constraints.objectives
 
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.constraints.Objectives
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.protection.PasswordCheck
-import app.aaps.core.interfaces.utils.HardLimits
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.constraints.ConstraintObject
-import app.aaps.implementation.sharedPreferences.PreferencesImpl
-import app.aaps.plugins.constraints.ConstraintsStringsValues
-import app.aaps.plugins.constraints.objectives.objectives.Objective0
-import app.aaps.plugins.constraints.objectives.objectives.Objective1
-import app.aaps.plugins.constraints.objectives.objectives.Objective2
-import app.aaps.plugins.constraints.objectives.objectives.Objective3
-import app.aaps.plugins.constraints.objectives.objectives.Objective4
-import app.aaps.plugins.constraints.objectives.objectives.Objective5
-import app.aaps.plugins.constraints.objectives.objectives.Objective6
-import app.aaps.plugins.constraints.objectives.objectives.Objective7
-import app.aaps.plugins.constraints.objectives.objectives.Objective8
-import app.aaps.plugins.constraints.objectives.objectives.Objective9
-import app.aaps.plugins.constraints.objectives.objectives.PlainDurationText
-import app.aaps.pump.virtual.VirtualPumpPlugin
-import app.aaps.shared.impl.sharedPreferences.SPImpl
-import app.aaps.shared.tests.SharedPreferencesMock
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.constraints.Objectives
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.protection.PasswordCheck
+import app.gmaaps.core.interfaces.utils.HardLimits
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.constraints.ConstraintObject
+import app.gmaaps.implementation.sharedPreferences.PreferencesImpl
+import app.gmaaps.plugins.constraints.ConstraintsStringsValues
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective0
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective1
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective2
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective3
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective4
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective5
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective6
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective7
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective8
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective9
+import app.gmaaps.plugins.constraints.objectives.objectives.PlainDurationText
+import app.gmaaps.pump.virtual.VirtualPumpPlugin
+import app.gmaaps.shared.impl.sharedPreferences.SPImpl
+import app.gmaaps.shared.tests.SharedPreferencesMock
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
@@ -111,3 +111,4 @@ class ObjectivesPluginTest : TestBaseWithProfile() {
         assertThat(c.value()).isFalse()
     }
 }
+

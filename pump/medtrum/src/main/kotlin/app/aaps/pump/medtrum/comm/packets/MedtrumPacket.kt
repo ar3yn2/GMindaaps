@@ -1,9 +1,9 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.medtrum.extension.toInt
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.medtrum.extension.toInt
 import dev.zacsweers.metro.HasMemberInjections
 import dev.zacsweers.metro.Inject
 
@@ -82,3 +82,4 @@ open class MedtrumPacket(protected var injector: MetroMemberInjector) {
         }
     }
 }
+

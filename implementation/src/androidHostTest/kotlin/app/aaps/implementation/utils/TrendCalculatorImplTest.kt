@@ -1,10 +1,10 @@
-package app.aaps.implementation.utils
+﻿package app.gmaaps.implementation.utils
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.interfaces.aps.AutosensDataStore
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -323,3 +323,4 @@ class TrendCalculatorImplTest : TestBase() {
         smoothed = recalculated
     )
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.treatmentDialog
+﻿package app.gmaaps.ui.compose.treatmentDialog
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -6,10 +6,10 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.performClick
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.ui.compose.overview.chips.CobUiState
-import app.aaps.ui.compose.overview.chips.IobUiState
-import app.aaps.ui.compose.overview.graphs.BgInfoUiState
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.ui.compose.overview.chips.CobUiState
+import app.gmaaps.ui.compose.overview.chips.IobUiState
+import app.gmaaps.ui.compose.overview.graphs.BgInfoUiState
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
@@ -19,7 +19,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /** Robolectric composable test for [TreatmentDialogContent]: renders the insulin/carbs treatment
  *  dialog and fires navigate-back via the Close icon — headless JVM, no emulator. */
@@ -63,3 +63,4 @@ class TreatmentDialogContentTest {
         assertThat(back).isTrue()
     }
 }
+

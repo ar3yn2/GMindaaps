@@ -1,4 +1,4 @@
-package app.aaps.core.utils.receivers
+﻿package app.gmaaps.core.utils.receivers
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -16,3 +16,4 @@ class StringUtilsTest {
         assertEquals("\"" + compareString, StringUtils.removeSurroundingQuotes("\"" + compareString))
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.shared.impl.weardata
+﻿package app.gmaaps.shared.impl.weardata
 
 import androidx.annotation.StringRes
-import app.aaps.shared.impl.R
+import app.gmaaps.shared.impl.R
 
 enum class ViewKeys(val key: String, @StringRes val comment: Int) {
 
@@ -87,4 +87,5 @@ enum class ViewKeys(val key: String, @StringRes val comment: Int) {
     MINUTE_HAND("minute_hand", R.string.cwf_comment_minute_hand),
     SECOND_HAND("second_hand", R.string.cwf_comment_second_hand)
 }
+
 

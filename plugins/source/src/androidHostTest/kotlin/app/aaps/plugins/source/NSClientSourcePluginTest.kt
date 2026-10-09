@@ -1,8 +1,8 @@
-package app.aaps.plugins.source
+﻿package app.gmaaps.plugins.source
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -26,3 +26,4 @@ class NSClientSourcePluginTest : TestBase() {
         assertThat(nsClientSourcePlugin).isNotNull()
     }
 }
+

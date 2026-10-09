@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     // NOT com.android.library. AGP 9 refuses that plugin together with the multiplatform plugin.
@@ -9,7 +9,7 @@ plugins {
 
 kotlin {
     android {
-        namespace = "app.aaps.database.persistence"
+        namespace = "app.gmaaps.database.persistence"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         // Creates the androidHostTest compilation, which also pulls in commonTest.
@@ -70,3 +70,4 @@ kotlin {
         }
     }
 }
+

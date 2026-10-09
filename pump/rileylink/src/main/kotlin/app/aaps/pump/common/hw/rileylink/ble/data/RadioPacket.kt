@@ -1,9 +1,9 @@
-package app.aaps.pump.common.hw.rileylink.ble.data
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data
 
-import app.aaps.core.utils.pump.ByteUtil.concat
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
-import app.aaps.pump.common.utils.CRC
+import app.gmaaps.core.utils.pump.ByteUtil.concat
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
+import app.gmaaps.pump.common.utils.CRC
 import org.apache.commons.lang3.NotImplementedException
 
 /**
@@ -35,3 +35,4 @@ class RadioPacket(private val rileyLinkUtil: RileyLinkUtil, val pkt: ByteArray) 
         }
     }
 }
+

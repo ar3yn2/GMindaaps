@@ -1,10 +1,10 @@
-package app.aaps.core.ui.locale
+﻿package app.gmaaps.core.ui.locale
 
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.res.Configuration
 import android.os.LocaleList
-import app.aaps.core.interfaces.resources.LanguageTag
+import app.gmaaps.core.interfaces.resources.LanguageTag
 import java.util.Locale
 
 object LocaleHelper {
@@ -67,3 +67,4 @@ object LocaleHelper {
         return ContextWrapper(context)
     }
 }
+

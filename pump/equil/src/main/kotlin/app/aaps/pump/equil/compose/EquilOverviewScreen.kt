@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.compose
+﻿package app.gmaaps.pump.equil.compose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,8 +10,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.R
-import app.aaps.core.ui.compose.pump.PumpOverviewScreen
+import app.gmaaps.core.ui.R
+import app.gmaaps.core.ui.compose.pump.PumpOverviewScreen
 
 private val PUMP_IMAGE_HEIGHT = 128.dp
 
@@ -35,3 +35,4 @@ internal fun EquilOverviewScreen(
         }
     )
 }
+

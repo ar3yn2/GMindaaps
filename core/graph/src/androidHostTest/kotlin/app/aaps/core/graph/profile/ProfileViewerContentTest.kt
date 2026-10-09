@@ -1,4 +1,4 @@
-package app.aaps.core.graph.profile
+﻿package app.gmaaps.core.graph.profile
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
@@ -74,3 +74,4 @@ class ProfileViewerContentTest {
         compose.onNodeWithText("0.8 U/hr").assertIsDisplayed()
     }
 }
+

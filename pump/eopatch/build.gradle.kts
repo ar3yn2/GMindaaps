@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.metro)
     alias(libs.plugins.compose.compiler)
@@ -12,7 +12,7 @@ plugins {
 }
 
 android {
-    namespace = "app.aaps.pump.eopatch"
+    namespace = "app.gmaaps.pump.eopatch"
 }
 
 dependencies {
@@ -36,3 +36,4 @@ dependencies {
 
 
 }
+

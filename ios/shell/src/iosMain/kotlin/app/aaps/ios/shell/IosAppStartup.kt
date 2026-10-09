@@ -1,9 +1,9 @@
-package app.aaps.ios.shell
+﻿package app.gmaaps.ios.shell
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.ios.shell.di.GeneratedStringOwners
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.ios.shell.di.GeneratedStringOwners
 
 /**
  * What has to happen before the first screen is composed - the iOS counterpart of `MainApp`.
@@ -69,3 +69,4 @@ internal class IosAppStartup(
         aapsLogger.debug(LTag.CORE, "Plugins started and selection verified, starting the UI")
     }
 }
+

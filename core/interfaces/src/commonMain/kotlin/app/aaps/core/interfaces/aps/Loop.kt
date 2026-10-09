@@ -1,12 +1,12 @@
-package app.aaps.core.interfaces.aps
+﻿package app.gmaaps.core.interfaces.aps
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
 import kotlin.time.Clock
 
 interface Loop {

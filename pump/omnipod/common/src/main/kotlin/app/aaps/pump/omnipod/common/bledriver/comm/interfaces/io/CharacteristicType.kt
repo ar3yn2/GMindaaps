@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io
 
 import java.math.BigInteger
 import java.util.UUID
@@ -19,3 +19,4 @@ enum class CharacteristicType(val value: String) {
                 ?: throw IllegalArgumentException("Unknown Characteristic Type: $value")
     }
 }
+

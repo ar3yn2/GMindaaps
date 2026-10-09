@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.packet
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.packet
 
 import java.lang.Integer.min
 import java.util.zip.CRC32
@@ -94,3 +94,4 @@ internal fun ByteArray.crc32(): Long {
     crc.update(this)
     return crc.value
 }
+

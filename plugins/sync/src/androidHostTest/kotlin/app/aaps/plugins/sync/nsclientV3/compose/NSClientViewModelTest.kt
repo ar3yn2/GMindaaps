@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.nsclientV3.compose
+﻿package app.gmaaps.plugins.sync.nsclientV3.compose
 
-import app.aaps.core.interfaces.nsclient.NSClientLog
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.sync.nsclientV3.keys.NsclientBooleanKey
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.nsclient.NSClientLog
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.sync.nsclientV3.keys.NsclientBooleanKey
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -110,3 +110,4 @@ internal class NSClientViewModelTest {
         assertThat(sut.uiState.value.paused).isFalse()
     }
 }
+

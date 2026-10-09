@@ -1,8 +1,8 @@
-package app.aaps.core.interfaces.navigation
+﻿package app.gmaaps.core.interfaces.navigation
 
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.ElementVisibility
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.ElementVisibility
 
 /**
  * Unified visual identity for UI elements.
@@ -122,3 +122,4 @@ enum class ElementType(
         }
     }
 }
+

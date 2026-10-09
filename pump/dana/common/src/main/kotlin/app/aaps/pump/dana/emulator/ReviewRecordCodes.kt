@@ -1,7 +1,7 @@
-package app.aaps.pump.dana.emulator
+﻿package app.gmaaps.pump.dana.emulator
 
-import app.aaps.pump.dana.emulator.ReviewRecordCodes.ALARM
-import app.aaps.pump.dana.emulator.ReviewRecordCodes.BOLUS
+import app.gmaaps.pump.dana.emulator.ReviewRecordCodes.ALARM
+import app.gmaaps.pump.dana.emulator.ReviewRecordCodes.BOLUS
 
 /**
  * The pump's own record codes, as they appear in the first byte of a review-history record —
@@ -51,3 +51,4 @@ object ReviewRecordCodes {
         val SHUTDOWN = 'S'.code
     }
 }
+

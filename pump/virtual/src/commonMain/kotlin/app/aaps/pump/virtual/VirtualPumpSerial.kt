@@ -1,4 +1,4 @@
-package app.aaps.pump.virtual
+﻿package app.gmaaps.pump.virtual
 
 import kotlin.random.Random
 
@@ -36,3 +36,4 @@ private const val LENGTH = 10
  */
 internal fun generateVirtualPumpSerial(random: Random = Random.Default): String =
     buildString(LENGTH) { repeat(LENGTH) { append(ALPHABET[random.nextInt(ALPHABET.length)]) } }
+

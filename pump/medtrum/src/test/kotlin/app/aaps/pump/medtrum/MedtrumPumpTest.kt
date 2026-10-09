@@ -1,14 +1,14 @@
-package app.aaps.pump.medtrum
+﻿package app.gmaaps.pump.medtrum
 
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.objects.extensions.pureProfileFromJson
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.pump.medtrum.comm.enums.BasalType
-import app.aaps.pump.medtrum.comm.enums.ModelType
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.objects.extensions.pureProfileFromJson
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.pump.medtrum.comm.enums.BasalType
+import app.gmaaps.pump.medtrum.comm.enums.ModelType
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Test
@@ -751,3 +751,4 @@ class MedtrumPumpTest : MedtrumTestBase() {
         )
     }
 }
+

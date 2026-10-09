@@ -1,4 +1,4 @@
-# Project Preferences
+﻿# Project Preferences
 
 ## CRITICAL: Bash Command Rules (applies to ALL agents too)
 
@@ -151,13 +151,13 @@ reported `NO-SOURCE`. That was wrong by the time anyone read it, and it caused w
     - User WILL verify results - assume accountability
 - **Always use explicit imports (no exceptions):**
     - Never use fully qualified names inline (e.g., `kotlin.math.abs`,
-      `app.aaps.core.ui.compose.icons.IcFoo`, `androidx.compose.ui.graphics.vector.ImageVector`)
+      `app.gmaaps.core.ui.compose.icons.IcFoo`, `androidx.compose.ui.graphics.vector.ImageVector`)
     - Always add proper `import` statements at the top of the file and use short names in code
     - Applies to type parameters, parameter types, return types, constructor calls, property
       delegates, `remember { mutableStateOf<Type>() }`, etc.
     - Applies when adding new code to existing files — add the import even if only referenced once
-    - ❌ BAD: `fun composeIcon() = app.aaps.core.ui.compose.icons.IcProfile`
-    - ✅ GOOD: `import app.aaps.core.ui.compose.icons.IcProfile` at top, then
+    - ❌ BAD: `fun composeIcon() = app.gmaaps.core.ui.compose.icons.IcProfile`
+    - ✅ GOOD: `import app.gmaaps.core.ui.compose.icons.IcProfile` at top, then
       `fun composeIcon() = IcProfile`
     - ❌ BAD: `mutableListOf<androidx.compose.ui.graphics.vector.ImageVector>()`
     - ✅ GOOD: `import androidx.compose.ui.graphics.vector.ImageVector` then
@@ -172,7 +172,7 @@ reported `NO-SOURCE`. That was wrong by the time anyone read it, and it caused w
     - **Prefer a clickable link.** If a resolvable symbol exists, link it — use an **interface** in a
       `core:interfaces` (or similar already-depended-on) module rather than a concrete impl in another
       module. A fully-qualified link is fine when the short name isn't imported:
-      `[app.aaps.core.interfaces.aps.Loop.invoke]`.
+      `[app.gmaaps.core.interfaces.aps.Loop.invoke]`.
     - **NEVER add a module dependency just to make a doc link resolve.** If the only matching symbol
       is `private`, or lives in a module this one doesn't depend on (or only as `testImplementation`),
       it can't be linked.
@@ -183,7 +183,7 @@ reported `NO-SOURCE`. That was wrong by the time anyone read it, and it caused w
       declaration and hides real breakage of any *other* link in the same doc block. Backticks are the
       fix.
     - ❌ BAD: `* handled in [LoopPlugin.applySMBRequest].` (private, cross-module → unresolved)
-    - ✅ GOOD: `` * handled in [app.aaps.core.interfaces.aps.Loop.invoke] and `LoopPlugin.applySMBRequest`. ``
+    - ✅ GOOD: `` * handled in [app.gmaaps.core.interfaces.aps.Loop.invoke] and `LoopPlugin.applySMBRequest`. ``
 - **Use centralized theme/styling:**
     - For Compose UI: Always use theme values instead of hardcoded dp/padding/colors. If proper
       setting doesn't exist, discuss it before creating hardcoded values.
@@ -268,7 +268,7 @@ reported `NO-SOURCE`. That was wrong by the time anyone read it, and it caused w
       // Content with text fields
   }
   ```
-  The modifier is in `app.aaps.core.ui.compose.clearFocusOnTap`.
+  The modifier is in `app.gmaaps.core.ui.compose.clearFocusOnTap`.
 - **Snackbar pattern (Compose)** - `LocalSnackbarHostState` exists for legacy reasons but is an
   anti-pattern (hidden dependency, was silently failing before we fixed the default to `error()`).
   **Do not add new `LocalSnackbarHostState.current` consumers.** Prefer either:
@@ -389,3 +389,4 @@ its own permission (it wipes the app). When asked:
 - Android project (AndroidAPS - open source artificial pancreas system)
 - Main branch: `master`
 - Development branch: `dev`
+

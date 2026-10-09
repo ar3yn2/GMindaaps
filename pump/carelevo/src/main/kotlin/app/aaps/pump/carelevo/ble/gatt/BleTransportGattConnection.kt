@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.gatt
+﻿package app.gmaaps.pump.carelevo.ble.gatt
 
-import app.aaps.core.interfaces.pump.ble.BleTransport
-import app.aaps.core.interfaces.pump.ble.BleTransportListener
+import app.gmaaps.core.interfaces.pump.ble.BleTransport
+import app.gmaaps.core.interfaces.pump.ble.BleTransportListener
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -14,7 +14,7 @@ import java.util.UUID
 
 /**
  * Adapts the shared fleet [BleTransport] to carelevo's [GattConnection] contract, so the
- * [app.aaps.pump.carelevo.ble.BleClientImpl] correlation layer runs on the same BLE transport
+ * [app.gmaaps.pump.carelevo.ble.BleClientImpl] correlation layer runs on the same BLE transport
  * abstraction Dana/Equil/Medtrum use.
  *
  * It registers itself as the transport's single [BleTransportListener] and translates each callback
@@ -195,3 +195,4 @@ class BleTransportGattConnection(
         emitEvent(GattEvent.WriteAck(writeUuid, true))
     }
 }
+

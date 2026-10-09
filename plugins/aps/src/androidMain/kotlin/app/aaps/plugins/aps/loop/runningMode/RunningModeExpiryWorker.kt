@@ -1,11 +1,11 @@
-package app.aaps.plugins.aps.loop.runningMode
+﻿package app.gmaaps.plugins.aps.loop.runningMode
 
 import android.content.Context
 import androidx.work.WorkerParameters
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.objects.workflow.LoggingWorker
-import app.aaps.core.objects.workflow.MetroWorkerCreator
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.objects.workflow.LoggingWorker
+import app.gmaaps.core.objects.workflow.MetroWorkerCreator
 import dev.zacsweers.metro.Assisted
 import dev.zacsweers.metro.AssistedFactory
 import dev.zacsweers.metro.AssistedInject
@@ -43,3 +43,4 @@ class RunningModeExpiryWorker(
         const val WORK_NAME = "RunningModeExpiry"
     }
 }
+

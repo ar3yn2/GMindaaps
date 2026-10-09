@@ -1,18 +1,18 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.time.T
-import app.aaps.core.data.time.systemUtcOffsetAt
-import app.aaps.core.interfaces.profile.PureProfile
-import app.aaps.core.interfaces.profile.SingleProfile
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.core.utils.lenientString
-import app.aaps.core.utils.lenientStringOrNull
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.time.systemUtcOffsetAt
+import app.gmaaps.core.interfaces.profile.PureProfile
+import app.gmaaps.core.interfaces.profile.SingleProfile
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.core.utils.lenientStringOrNull
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.offsetAt
 import kotlinx.serialization.json.Json
@@ -115,3 +115,4 @@ fun pureProfileFromJson(jsonObject: JsonObject, dateUtil: DateUtil, defaultUnits
         return null
     }
 }
+

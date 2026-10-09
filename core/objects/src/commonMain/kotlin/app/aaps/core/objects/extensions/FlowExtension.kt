@@ -1,4 +1,4 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
@@ -56,3 +56,4 @@ fun StateFlow<Long>.freshness(
         if (ts == 0L) pristine
         else now() - ts < thresholdMs
     }.stateIn(scope, SharingStarted.WhileSubscribed(5000), pristine)
+

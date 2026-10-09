@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.code
+﻿package app.gmaaps.pump.eopatch.code
 
 enum class PatchStep {
     SAFE_DEACTIVATION,

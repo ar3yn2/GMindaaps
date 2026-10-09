@@ -1,13 +1,13 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.pump.medtrum.MedtrumPump
-import app.aaps.pump.medtrum.comm.enums.CommandType.SET_TIME_ZONE
-import app.aaps.pump.medtrum.extension.toByteArray
-import app.aaps.pump.medtrum.util.MedtrumTimeUtil
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.pump.medtrum.MedtrumPump
+import app.gmaaps.pump.medtrum.comm.enums.CommandType.SET_TIME_ZONE
+import app.gmaaps.pump.medtrum.extension.toByteArray
+import app.gmaaps.pump.medtrum.util.MedtrumTimeUtil
 import dev.zacsweers.metro.Inject
 
 class SetTimeZonePacket(injector: MetroMemberInjector) : MedtrumPacket(injector) {
@@ -45,3 +45,4 @@ class SetTimeZonePacket(injector: MetroMemberInjector) : MedtrumPacket(injector)
         return success
     }
 }
+

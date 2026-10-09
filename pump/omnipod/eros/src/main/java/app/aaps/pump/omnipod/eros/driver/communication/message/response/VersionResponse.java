@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response;
 
 import androidx.annotation.NonNull;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
-import app.aaps.pump.omnipod.eros.driver.definition.FirmwareVersion;
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
+import app.gmaaps.pump.omnipod.eros.driver.definition.FirmwareVersion;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
 
 public class VersionResponse extends MessageBlock {
     private static final int ASSIGN_ADDRESS_VERSION_RESPONSE_LENGTH = 0x15;
@@ -113,3 +113,4 @@ public class VersionResponse extends MessageBlock {
                 '}';
     }
 }
+

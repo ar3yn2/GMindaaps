@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.protection
+﻿package app.gmaaps.core.interfaces.protection
 
 interface ExportPasswordDataStore {
 
@@ -25,3 +25,4 @@ interface ExportPasswordDataStore {
     fun getPasswordFromDataStore(): Triple<String, Boolean, Boolean>
 
 }
+

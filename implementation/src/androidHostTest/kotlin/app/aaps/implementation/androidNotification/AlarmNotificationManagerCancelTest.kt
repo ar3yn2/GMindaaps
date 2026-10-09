@@ -1,13 +1,13 @@
-package app.aaps.implementation.androidNotification
+﻿package app.gmaaps.implementation.androidNotification
 
 import android.app.NotificationManager
 import android.content.Context
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.AlarmSoundPlayer
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.ui.IconsProvider
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.AlarmSoundPlayer
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.ui.IconsProvider
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.keys.interfaces.Preferences
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.verify
@@ -58,3 +58,4 @@ class AlarmNotificationManagerCancelTest {
         verify(notificationManager).cancel(AlarmNotificationManager.NOTIFICATION_ID_FULL_SCREEN)
     }
 }
+

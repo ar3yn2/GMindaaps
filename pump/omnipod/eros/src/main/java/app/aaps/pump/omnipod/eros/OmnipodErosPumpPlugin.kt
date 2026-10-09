@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros
+﻿package app.gmaaps.pump.omnipod.eros
 
 import android.content.ComponentName
 import android.content.Context
@@ -9,98 +9,98 @@ import android.os.HandlerThread
 import android.os.IBinder
 import android.os.SystemClock
 import android.text.TextUtils
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.core.data.time.T.Companion.msecs
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.di.PumpDriver
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.OwnDatabasePlugin
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.OmnipodEros
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpPluginBase
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.PumpSync.PumpState
-import app.aaps.core.interfaces.pump.PumpSync.TemporaryBasalType
-import app.aaps.core.interfaces.pump.actions.CustomActionType
-import app.aaps.core.interfaces.pump.defs.determineCorrectBasalSize
-import app.aaps.core.interfaces.pump.defs.fillFor
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventAppExit
-import app.aaps.core.interfaces.rx.events.EventAppInitialized
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
-import app.aaps.core.interfaces.rx.events.EventSWRLStatus
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.Round.isSame
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.icons.IcPluginOmnipod
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.core.utils.DateTimeUtil.getTimeInFutureFromMinutes
-import app.aaps.pump.common.defs.TempBasalPair
-import app.aaps.pump.common.events.EventRileyLinkDeviceStatusChange
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkPumpInfo
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkLongKey
-import app.aaps.pump.common.hw.rileylink.keys.RileylinkBooleanPreferenceKey
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
-import app.aaps.pump.omnipod.common.definition.OmnipodCommandType
-import app.aaps.pump.omnipod.common.keys.OmnipodBooleanPreferenceKey
-import app.aaps.pump.omnipod.common.keys.OmnipodIntPreferenceKey
-import app.aaps.pump.omnipod.common.queue.command.CommandDeactivatePod
-import app.aaps.pump.omnipod.common.queue.command.CommandHandleTimeChange
-import app.aaps.pump.omnipod.common.queue.command.CommandPlayTestBeep
-import app.aaps.pump.omnipod.common.queue.command.CommandResumeDelivery
-import app.aaps.pump.omnipod.common.queue.command.CommandSilenceAlerts
-import app.aaps.pump.omnipod.common.queue.command.CommandSuspendDelivery
-import app.aaps.pump.omnipod.common.queue.command.CommandUpdateAlertConfiguration
-import app.aaps.pump.omnipod.eros.data.RLHistoryItemOmnipod
-import app.aaps.pump.omnipod.eros.driver.communication.action.service.ExpirationReminderBuilder
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoRecentPulseLog
-import app.aaps.pump.omnipod.eros.driver.definition.ActivationProgress
-import app.aaps.pump.omnipod.eros.driver.definition.BeepConfigType
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
-import app.aaps.pump.omnipod.eros.driver.util.TimeUtil
-import app.aaps.pump.omnipod.eros.event.EventOmnipodErosActiveAlertsChanged
-import app.aaps.pump.omnipod.eros.event.EventOmnipodErosFaultEventChanged
-import app.aaps.pump.omnipod.eros.event.EventOmnipodErosPumpValuesChanged
-import app.aaps.pump.omnipod.eros.event.EventOmnipodErosTbrChanged
-import app.aaps.pump.omnipod.eros.event.EventOmnipodErosUncertainTbrRecovered
-import app.aaps.pump.omnipod.eros.extensions.fromJsonString
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryDatabase
-import app.aaps.pump.omnipod.eros.keys.ErosBooleanPreferenceKey
-import app.aaps.pump.omnipod.eros.keys.ErosLongNonPreferenceKey
-import app.aaps.pump.omnipod.eros.keys.ErosStringNonPreferenceKey
-import app.aaps.pump.omnipod.eros.manager.AapsOmnipodErosManager
-import app.aaps.pump.omnipod.eros.queue.command.CommandGetPodStatus
-import app.aaps.pump.omnipod.eros.queue.command.CommandReadPulseLog
-import app.aaps.pump.omnipod.eros.rileylink.service.RileyLinkOmnipodService
-import app.aaps.pump.omnipod.eros.ui.compose.OmnipodErosComposeContent
-import app.aaps.pump.omnipod.eros.util.AapsOmnipodUtil
-import app.aaps.pump.omnipod.eros.util.OmnipodAlertUtil
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.core.data.time.T.Companion.msecs
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.di.PumpDriver
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.OwnDatabasePlugin
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.OmnipodEros
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpPluginBase
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.PumpSync.PumpState
+import app.gmaaps.core.interfaces.pump.PumpSync.TemporaryBasalType
+import app.gmaaps.core.interfaces.pump.actions.CustomActionType
+import app.gmaaps.core.interfaces.pump.defs.determineCorrectBasalSize
+import app.gmaaps.core.interfaces.pump.defs.fillFor
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventAppExit
+import app.gmaaps.core.interfaces.rx.events.EventAppInitialized
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.core.interfaces.rx.events.EventSWRLStatus
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.Round.isSame
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.icons.IcPluginOmnipod
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.core.utils.DateTimeUtil.getTimeInFutureFromMinutes
+import app.gmaaps.pump.common.defs.TempBasalPair
+import app.gmaaps.pump.common.events.EventRileyLinkDeviceStatusChange
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkPumpInfo
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkLongKey
+import app.gmaaps.pump.common.hw.rileylink.keys.RileylinkBooleanPreferenceKey
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.omnipod.common.definition.OmnipodCommandType
+import app.gmaaps.pump.omnipod.common.keys.OmnipodBooleanPreferenceKey
+import app.gmaaps.pump.omnipod.common.keys.OmnipodIntPreferenceKey
+import app.gmaaps.pump.omnipod.common.queue.command.CommandDeactivatePod
+import app.gmaaps.pump.omnipod.common.queue.command.CommandHandleTimeChange
+import app.gmaaps.pump.omnipod.common.queue.command.CommandPlayTestBeep
+import app.gmaaps.pump.omnipod.common.queue.command.CommandResumeDelivery
+import app.gmaaps.pump.omnipod.common.queue.command.CommandSilenceAlerts
+import app.gmaaps.pump.omnipod.common.queue.command.CommandSuspendDelivery
+import app.gmaaps.pump.omnipod.common.queue.command.CommandUpdateAlertConfiguration
+import app.gmaaps.pump.omnipod.eros.data.RLHistoryItemOmnipod
+import app.gmaaps.pump.omnipod.eros.driver.communication.action.service.ExpirationReminderBuilder
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoRecentPulseLog
+import app.gmaaps.pump.omnipod.eros.driver.definition.ActivationProgress
+import app.gmaaps.pump.omnipod.eros.driver.definition.BeepConfigType
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
+import app.gmaaps.pump.omnipod.eros.driver.util.TimeUtil
+import app.gmaaps.pump.omnipod.eros.event.EventOmnipodErosActiveAlertsChanged
+import app.gmaaps.pump.omnipod.eros.event.EventOmnipodErosFaultEventChanged
+import app.gmaaps.pump.omnipod.eros.event.EventOmnipodErosPumpValuesChanged
+import app.gmaaps.pump.omnipod.eros.event.EventOmnipodErosTbrChanged
+import app.gmaaps.pump.omnipod.eros.event.EventOmnipodErosUncertainTbrRecovered
+import app.gmaaps.pump.omnipod.eros.extensions.fromJsonString
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryDatabase
+import app.gmaaps.pump.omnipod.eros.keys.ErosBooleanPreferenceKey
+import app.gmaaps.pump.omnipod.eros.keys.ErosLongNonPreferenceKey
+import app.gmaaps.pump.omnipod.eros.keys.ErosStringNonPreferenceKey
+import app.gmaaps.pump.omnipod.eros.manager.AapsOmnipodErosManager
+import app.gmaaps.pump.omnipod.eros.queue.command.CommandGetPodStatus
+import app.gmaaps.pump.omnipod.eros.queue.command.CommandReadPulseLog
+import app.gmaaps.pump.omnipod.eros.rileylink.service.RileyLinkOmnipodService
+import app.gmaaps.pump.omnipod.eros.ui.compose.OmnipodErosComposeContent
+import app.gmaaps.pump.omnipod.eros.util.AapsOmnipodUtil
+import app.gmaaps.pump.omnipod.eros.util.OmnipodAlertUtil
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -154,7 +154,7 @@ class OmnipodErosPumpPlugin(
     notificationManager: NotificationManager,
     private val erosHistoryDatabase: ErosHistoryDatabase,
     private val pumpEnactResultProvider: () -> PumpEnactResult,
-    private val protectionCheck: app.aaps.core.interfaces.protection.ProtectionCheck,
+    private val protectionCheck: app.gmaaps.core.interfaces.protection.ProtectionCheck,
     private val blePreCheck: BlePreCheck
 ) : PumpPluginBase(
     pluginDescription = PluginDescription()
@@ -377,7 +377,7 @@ class OmnipodErosPumpPlugin(
             val activeAlerts = podStateManager.activeAlerts
             if (activeAlerts.size() > 0) {
                 val alerts = TextUtils.join(", ", aapsOmnipodUtil.getTranslatedActiveAlerts(podStateManager))
-                val notificationText = rh.gq(app.aaps.pump.omnipod.common.R.plurals.omnipod_common_pod_alerts, activeAlerts.size(), alerts)
+                val notificationText = rh.gq(app.gmaaps.pump.omnipod.common.R.plurals.omnipod_common_pod_alerts, activeAlerts.size(), alerts)
                 notificationManager.post(NotificationId.OMNIPOD_POD_ALERTS, notificationText)
                 runBlocking { pumpSync.insertAnnouncement(notificationText, null, PumpType.OMNIPOD_EROS, serialNumber()) }
 
@@ -390,7 +390,7 @@ class OmnipodErosPumpPlugin(
 
     private fun handlePodFaultEvent() {
         if (podStateManager.isPodFaulted) {
-            val notificationText = rh.gs(app.aaps.pump.omnipod.common.R.string.omnipod_common_pod_status_pod_fault_description, podStateManager.faultEventCode.value, podStateManager.faultEventCode.name)
+            val notificationText = rh.gs(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_pod_status_pod_fault_description, podStateManager.faultEventCode.value, podStateManager.faultEventCode.name)
             runBlocking { pumpSync.insertAnnouncement(notificationText, null, PumpType.OMNIPOD_EROS, serialNumber()) }
         }
     }
@@ -422,17 +422,17 @@ class OmnipodErosPumpPlugin(
     private fun updatePodWarningNotifications() {
         if (System.currentTimeMillis() > this.nextPodWarningCheck) {
             if (!podStateManager.isPodRunning) {
-                notificationManager.post(NotificationId.OMNIPOD_POD_NOT_ATTACHED, TextRef.AndroidRes(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_pod_not_attached))
+                notificationManager.post(NotificationId.OMNIPOD_POD_NOT_ATTACHED, TextRef.AndroidRes(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_pod_not_attached))
             } else {
                 notificationManager.dismiss(NotificationId.OMNIPOD_POD_NOT_ATTACHED)
 
                 if (podStateManager.isSuspended) {
-                    notificationManager.post(NotificationId.OMNIPOD_POD_SUSPENDED, TextRef.AndroidRes(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_pod_suspended))
+                    notificationManager.post(NotificationId.OMNIPOD_POD_SUSPENDED, TextRef.AndroidRes(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_pod_suspended))
                 } else {
                     notificationManager.dismiss(NotificationId.OMNIPOD_POD_SUSPENDED)
 
                     if (podStateManager.timeDeviatesMoreThan(OmnipodConstants.TIME_DEVIATION_THRESHOLD)) {
-                        notificationManager.post(NotificationId.OMNIPOD_TIME_OUT_OF_SYNC, TextRef.AndroidRes(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_time_out_of_sync))
+                        notificationManager.post(NotificationId.OMNIPOD_TIME_OUT_OF_SYNC, TextRef.AndroidRes(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_time_out_of_sync))
                     } else {
                         notificationManager.dismiss(NotificationId.OMNIPOD_TIME_OUT_OF_SYNC)
                     }
@@ -649,7 +649,7 @@ class OmnipodErosPumpPlugin(
         }
 
         aapsLogger.warn(LTag.PUMP, "Unsupported custom command: " + customCommand.javaClass.getName())
-        return pumpEnactResultProvider().success(false).enacted(false).comment(rh.gs(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_unsupported_custom_command, customCommand.javaClass.getName()))
+        return pumpEnactResultProvider().success(false).enacted(false).comment(rh.gs(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_unsupported_custom_command, customCommand.javaClass.getName()))
     }
 
     private fun retrievePulseLog(): PumpEnactResult {
@@ -686,7 +686,7 @@ class OmnipodErosPumpPlugin(
 
             notificationManager.post(
                 NotificationId.OMNIPOD_POD_ALERTS_UPDATED,
-                TextRef.AndroidRes(app.aaps.pump.omnipod.common.R.string.omnipod_common_confirmation_expiration_alerts_updated),
+                TextRef.AndroidRes(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_confirmation_expiration_alerts_updated),
                 validMinutes = 60)
         } else {
             aapsLogger.warn(LTag.PUMP, "Failed to configure alerts in Pod")
@@ -713,7 +713,7 @@ class OmnipodErosPumpPlugin(
             if (!requestedByUser && aapsOmnipodErosManager.isTimeChangeEventEnabled) {
                 notificationManager.post(
                     NotificationId.TIME_OR_TIMEZONE_CHANGE,
-                    TextRef.AndroidRes(app.aaps.pump.omnipod.common.R.string.omnipod_common_confirmation_time_on_pod_updated),
+                    TextRef.AndroidRes(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_confirmation_time_on_pod_updated),
                     validMinutes = 60)
             }
         } else {
@@ -802,17 +802,17 @@ class OmnipodErosPumpPlugin(
 
     override suspend fun setExtendedBolus(insulin: Double, durationInMinutes: Int): PumpEnactResult {
         aapsLogger.debug(LTag.PUMP, "setExtendedBolus [OmnipodPumpPlugin] - Not implemented.")
-        return getOperationNotSupportedWithCustomText(app.aaps.pump.common.R.string.pump_operation_not_supported_by_pump_driver)
+        return getOperationNotSupportedWithCustomText(app.gmaaps.pump.common.R.string.pump_operation_not_supported_by_pump_driver)
     }
 
     override suspend fun cancelExtendedBolus(): PumpEnactResult {
         aapsLogger.debug(LTag.PUMP, "cancelExtendedBolus [OmnipodPumpPlugin] - Not implemented.")
-        return getOperationNotSupportedWithCustomText(app.aaps.pump.common.R.string.pump_operation_not_supported_by_pump_driver)
+        return getOperationNotSupportedWithCustomText(app.gmaaps.pump.common.R.string.pump_operation_not_supported_by_pump_driver)
     }
 
     override suspend fun loadTDDs(): PumpEnactResult {
         aapsLogger.debug(LTag.PUMP, "loadTDDs [OmnipodPumpPlugin] - Not implemented.")
-        return getOperationNotSupportedWithCustomText(app.aaps.pump.common.R.string.pump_operation_not_supported_by_pump_driver)
+        return getOperationNotSupportedWithCustomText(app.gmaaps.pump.common.R.string.pump_operation_not_supported_by_pump_driver)
     }
 
     override fun isUseRileyLinkBatteryLevel(): Boolean = aapsOmnipodErosManager.isShowRileyLinkBatteryLevel
@@ -834,7 +834,7 @@ class OmnipodErosPumpPlugin(
             }
             if (!success) {
                 aapsLogger.warn(LTag.PUMP, "Failed to retrieve Pod status on startup")
-                notificationManager.post(NotificationId.OMNIPOD_STARTUP_STATUS_REFRESH_FAILED, TextRef.AndroidRes(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_failed_to_refresh_status_on_startup))
+                notificationManager.post(NotificationId.OMNIPOD_STARTUP_STATUS_REFRESH_FAILED, TextRef.AndroidRes(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_failed_to_refresh_status_on_startup))
             }
         } else {
             aapsLogger.debug(LTag.PUMP, "Not retrieving Pod status on startup: no Pod running")
@@ -927,7 +927,7 @@ class OmnipodErosPumpPlugin(
             // Beeps subscreen
             PreferenceSubScreenDef(
                 key = "omnipod_eros_beeps",
-                titleResId = app.aaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_confirmation_beeps,
+                titleResId = app.gmaaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_confirmation_beeps,
                 items = listOf(
                     OmnipodBooleanPreferenceKey.BolusBeepsEnabled,
                     OmnipodBooleanPreferenceKey.BasalBeepsEnabled,
@@ -938,7 +938,7 @@ class OmnipodErosPumpPlugin(
             // Alerts subscreen
             PreferenceSubScreenDef(
                 key = "omnipod_eros_alerts",
-                titleResId = app.aaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_alerts,
+                titleResId = app.gmaaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_alerts,
                 items = listOf(
                     OmnipodBooleanPreferenceKey.ExpirationReminder,
                     OmnipodIntPreferenceKey.ExpirationAlarmHours,
@@ -950,7 +950,7 @@ class OmnipodErosPumpPlugin(
             // Notifications subscreen
             PreferenceSubScreenDef(
                 key = "omnipod_eros_notifications",
-                titleResId = app.aaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_notifications,
+                titleResId = app.gmaaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_notifications,
                 items = listOf(
                     OmnipodBooleanPreferenceKey.SoundUncertainTbrNotification,
                     OmnipodBooleanPreferenceKey.SoundUncertainSmbNotification,
@@ -960,7 +960,7 @@ class OmnipodErosPumpPlugin(
             // Other subscreen
             PreferenceSubScreenDef(
                 key = "omnipod_eros_other",
-                titleResId = app.aaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_other,
+                titleResId = app.gmaaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_other,
                 items = listOf(
                     ErosBooleanPreferenceKey.ShowSuspendDeliveryButton,
                     ErosBooleanPreferenceKey.ShowPulseLogButton,
@@ -980,3 +980,4 @@ class OmnipodErosPumpPlugin(
         private const val STATUS_CHECK_INTERVAL_MILLIS = 60 * 1000L // 1 minute
     }
 }
+

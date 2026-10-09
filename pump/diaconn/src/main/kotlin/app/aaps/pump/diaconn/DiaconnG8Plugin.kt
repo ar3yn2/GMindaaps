@@ -1,62 +1,62 @@
-package app.aaps.pump.diaconn
+﻿package app.gmaaps.pump.diaconn
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.os.IBinder
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.constraints.PumpPluginConstraints
-import app.aaps.core.interfaces.di.PumpDriver
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.OwnDatabasePlugin
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.DetailedBolusInfoStorage
-import app.aaps.core.interfaces.pump.Diaconn
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpPluginBase
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.TemporaryBasalStorage
-import app.aaps.core.interfaces.pump.actions.CustomAction
-import app.aaps.core.interfaces.pump.actions.CustomActionType
-import app.aaps.core.interfaces.pump.defs.fillFor
-import app.aaps.core.interfaces.pump.mapState
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventAppExit
-import app.aaps.core.interfaces.rx.events.EventConfigBuilderChange
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.Round
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.icons.IcPluginDiaconn
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.pump.diaconn.compose.DiaconnComposeContent
-import app.aaps.pump.diaconn.database.DiaconnHistoryDatabase
-import app.aaps.pump.diaconn.events.EventDiaconnG8DeviceChange
-import app.aaps.pump.diaconn.keys.DiaconnBooleanKey
-import app.aaps.pump.diaconn.keys.DiaconnIntKey
-import app.aaps.pump.diaconn.keys.DiaconnIntNonKey
-import app.aaps.pump.diaconn.keys.DiaconnIntentKey
-import app.aaps.pump.diaconn.keys.DiaconnStringNonKey
-import app.aaps.pump.diaconn.service.DiaconnG8Service
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.constraints.PumpPluginConstraints
+import app.gmaaps.core.interfaces.di.PumpDriver
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.OwnDatabasePlugin
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfoStorage
+import app.gmaaps.core.interfaces.pump.Diaconn
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpPluginBase
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.TemporaryBasalStorage
+import app.gmaaps.core.interfaces.pump.actions.CustomAction
+import app.gmaaps.core.interfaces.pump.actions.CustomActionType
+import app.gmaaps.core.interfaces.pump.defs.fillFor
+import app.gmaaps.core.interfaces.pump.mapState
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventAppExit
+import app.gmaaps.core.interfaces.rx.events.EventConfigBuilderChange
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.Round
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.icons.IcPluginDiaconn
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.pump.diaconn.compose.DiaconnComposeContent
+import app.gmaaps.pump.diaconn.database.DiaconnHistoryDatabase
+import app.gmaaps.pump.diaconn.events.EventDiaconnG8DeviceChange
+import app.gmaaps.pump.diaconn.keys.DiaconnBooleanKey
+import app.gmaaps.pump.diaconn.keys.DiaconnIntKey
+import app.gmaaps.pump.diaconn.keys.DiaconnIntNonKey
+import app.gmaaps.pump.diaconn.keys.DiaconnIntentKey
+import app.gmaaps.pump.diaconn.keys.DiaconnStringNonKey
+import app.gmaaps.pump.diaconn.service.DiaconnG8Service
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -181,7 +181,7 @@ class DiaconnG8Plugin(
 
         // Use different message for app start vs actual device change
         val reason = if (isDeviceChanged)
-            rh.gs(app.aaps.core.ui.R.string.device_changed)
+            rh.gs(app.gmaaps.core.ui.R.string.device_changed)
         else
             rh.gs(R.string.gettingpumpsettings)
         pluginScope.launch { commandQueue.readStatus(reason) }
@@ -191,7 +191,7 @@ class DiaconnG8Plugin(
         aapsLogger.debug(LTag.PUMP, "Diaconn G8 connect from: $reason")
         if (diaconnG8Service != null && mDeviceAddress != "" && mDeviceName != "") {
             val success = diaconnG8Service?.connect(reason, mDeviceAddress) == true
-            if (!success) rxBus.send(EventShowSnackbar(rh.gs(app.aaps.core.ui.R.string.ble_not_supported), EventShowSnackbar.Type.Error))
+            if (!success) rxBus.send(EventShowSnackbar(rh.gs(app.gmaaps.core.ui.R.string.ble_not_supported), EventShowSnackbar.Type.Error))
         }
     }
 
@@ -259,12 +259,12 @@ class DiaconnG8Plugin(
             // out of the central failure alarm; enacted stays false so nothing is shown. Profile-set notifications
             // (OK / clear-failed) are owned centrally by CommandQueueImplementation.onProfileChanged.
             result.success = true
-            result.comment = rh.gs(app.aaps.core.ui.R.string.pump_not_initialized_profile_not_set)
+            result.comment = rh.gs(app.gmaaps.core.ui.R.string.pump_not_initialized_profile_not_set)
             return result
         }
         return if (diaconnG8Service?.updateBasalsInPump(profile) != true) {
             // FAILED_UPDATE_PROFILE posted centrally (onProfileChanged) from success=false; comment carries the reason.
-            result.comment = rh.gs(app.aaps.core.ui.R.string.failed_update_basal_profile)
+            result.comment = rh.gs(app.gmaaps.core.ui.R.string.failed_update_basal_profile)
             result
         } else {
             result.success = true
@@ -314,7 +314,7 @@ class DiaconnG8Plugin(
         if (result.success) result.enacted = true
         if (!result.success) {
             setErrorMsg(diaconnG8Pump.resultErrorCode, result)
-        } else result.comment = rh.gs(app.aaps.core.ui.R.string.ok)
+        } else result.comment = rh.gs(app.gmaaps.core.ui.R.string.ok)
         aapsLogger.debug(LTag.PUMP, "deliverTreatment: OK. Asked: " + detailedBolusInfo.insulin + " Delivered: " + result.bolusDelivered)
         return result
     }
@@ -377,7 +377,7 @@ class DiaconnG8Plugin(
             if (connectionOK && diaconnG8Pump.isTempBasalInProgress && diaconnG8Pump.tempBasalAbsoluteRate == absoluteRate) {
                 result.enacted = true
                 result.success = true
-                result.comment = rh.gs(app.aaps.core.ui.R.string.ok)
+                result.comment = rh.gs(app.gmaaps.core.ui.R.string.ok)
                 result.isTempCancel = false
                 result.duration = diaconnG8Pump.tempBasalRemainingMin
                 result.absolute = diaconnG8Pump.tempBasalAbsoluteRate
@@ -389,7 +389,7 @@ class DiaconnG8Plugin(
 
         result.enacted = false
         result.success = false
-        result.comment = rh.gs(app.aaps.core.ui.R.string.temp_basal_delivery_error)
+        result.comment = rh.gs(app.gmaaps.core.ui.R.string.temp_basal_delivery_error)
         aapsLogger.error("setTempBasalAbsolute: Failed to set temp basal")
         return result
     }
@@ -406,7 +406,7 @@ class DiaconnG8Plugin(
         if (diaconnG8Pump.isExtendedInProgress && abs(diaconnG8Pump.extendedBolusAmount - insulinAfterConstraint) < pumpDescription.extendedBolusStep) {
             result.enacted = false
             result.success = true
-            result.comment = rh.gs(app.aaps.core.ui.R.string.ok)
+            result.comment = rh.gs(app.gmaaps.core.ui.R.string.ok)
             result.duration = diaconnG8Pump.extendedBolusRemainingMinutes
             result.absolute = diaconnG8Pump.extendedBolusAbsoluteRate
             result.isPercent = false
@@ -419,7 +419,7 @@ class DiaconnG8Plugin(
         if (connectionOK) {
             result.enacted = true
             result.success = true
-            result.comment = rh.gs(app.aaps.core.ui.R.string.ok)
+            result.comment = rh.gs(app.gmaaps.core.ui.R.string.ok)
             result.isTempCancel = false
             result.duration = diaconnG8Pump.extendedBolusRemainingMinutes
             result.absolute = diaconnG8Pump.extendedBolusAbsoluteRate
@@ -448,7 +448,7 @@ class DiaconnG8Plugin(
             result.success = true
             result.enacted = false
             result.isTempCancel = true
-            result.comment = rh.gs(app.aaps.core.ui.R.string.ok)
+            result.comment = rh.gs(app.gmaaps.core.ui.R.string.ok)
             aapsLogger.debug(LTag.PUMP, "cancelRealTempBasal: OK")
         }
         return result
@@ -468,7 +468,7 @@ class DiaconnG8Plugin(
         } else {
             result.success = true
             result.enacted = false
-            result.comment = rh.gs(app.aaps.core.ui.R.string.ok)
+            result.comment = rh.gs(app.gmaaps.core.ui.R.string.ok)
             aapsLogger.debug(LTag.PUMP, "cancelExtendedBolus: OK")
         }
         return result
@@ -534,3 +534,4 @@ class DiaconnG8Plugin(
     )
 
 }
+

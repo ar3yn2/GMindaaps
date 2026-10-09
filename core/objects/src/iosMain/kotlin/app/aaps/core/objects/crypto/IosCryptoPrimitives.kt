@@ -1,4 +1,4 @@
-package app.aaps.core.objects.crypto
+﻿package app.gmaaps.core.objects.crypto
 
 import dev.whyoleg.cryptography.BinarySize.Companion.bits
 import dev.whyoleg.cryptography.CryptographyProvider
@@ -73,3 +73,4 @@ class IosCryptoPrimitives : CryptoPrimitives {
         private const val HEX = "0123456789abcdef"
     }
 }
+

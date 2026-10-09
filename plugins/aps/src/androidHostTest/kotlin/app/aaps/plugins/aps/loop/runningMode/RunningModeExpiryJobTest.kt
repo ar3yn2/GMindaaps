@@ -1,9 +1,9 @@
-package app.aaps.plugins.aps.loop.runningMode
+﻿package app.gmaaps.plugins.aps.loop.runningMode
 
-import app.aaps.core.data.model.TB
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -85,3 +85,4 @@ class RunningModeExpiryJobTest : TestBaseWithProfile() {
         verify(commandQueue, never()).cancelTempBasal(any(), any())
     }
 }
+

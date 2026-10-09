@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -25,15 +25,15 @@ import androidx.compose.ui.Modifier
 import androidx.navigationevent.NavigationEventInfo
 import androidx.navigationevent.compose.NavigationBackHandler
 import androidx.navigationevent.compose.rememberNavigationEventState
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsTopAppBar
-import app.aaps.core.ui.compose.ComposeScreenContent
-import app.aaps.core.ui.compose.LocalSnackbarHostState
-import app.aaps.core.ui.compose.MasterOfflineBanner
-import app.aaps.core.ui.compose.masterEditingEnabled
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsTopAppBar
+import app.gmaaps.core.ui.compose.ComposeScreenContent
+import app.gmaaps.core.ui.compose.LocalSnackbarHostState
+import app.gmaaps.core.ui.compose.MasterOfflineBanner
+import app.gmaaps.core.ui.compose.masterEditingEnabled
+import app.gmaaps.core.ui.compose.stringResource
 import kotlinx.coroutines.launch
 
 /**
@@ -185,3 +185,4 @@ private fun SinglePluginPreferencesRenderer(
         }
     }
 }
+

@@ -1,11 +1,11 @@
-package app.aaps.pump.common.hw.rileylink.ble.command
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.command
 
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.ble.data.RadioPacket
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersionBase
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.data.RadioPacket
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersionBase
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
@@ -366,3 +366,4 @@ class SendAndListenTest {
         assertEquals(0x14.toByte(), raw[4]) // delay low byte
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.BolusCalculatorResultDao
-import app.aaps.database.entities.BolusCalculatorResult
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.BolusCalculatorResultDao
+import app.gmaaps.database.entities.BolusCalculatorResult
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedBolusCalculatorResultDao(changes: MutableList<DBEntry>, private val dao: BolusCalculatorResultDao) : DelegatedDao(changes), BolusCalculatorResultDao by dao {
 

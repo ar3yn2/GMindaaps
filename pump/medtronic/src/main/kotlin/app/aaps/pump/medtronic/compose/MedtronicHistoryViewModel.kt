@@ -1,11 +1,11 @@
-package app.aaps.pump.medtronic.compose
+﻿package app.gmaaps.pump.medtronic.compose
 
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.common.defs.PumpHistoryEntryGroup
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
-import app.aaps.pump.medtronic.data.MedtronicHistoryData
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.common.defs.PumpHistoryEntryGroup
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
+import app.gmaaps.pump.medtronic.data.MedtronicHistoryData
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -49,3 +49,4 @@ class MedtronicHistoryViewModel(
         _uiState.update { it.copy(selectedGroup = group, records = filtered) }
     }
 }
+

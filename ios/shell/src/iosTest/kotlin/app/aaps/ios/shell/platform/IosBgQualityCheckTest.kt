@@ -1,6 +1,6 @@
-package app.aaps.ios.shell.platform
+﻿package app.gmaaps.ios.shell.platform
 
-import app.aaps.core.interfaces.bgQualityCheck.BgQualityCheck
+import app.gmaaps.core.interfaces.bgQualityCheck.BgQualityCheck
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -46,3 +46,4 @@ class IosBgQualityCheckTest {
         assertEquals("", check.stateDescription())
     }
 }
+

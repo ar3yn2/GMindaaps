@@ -1,29 +1,29 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.interfaces.alerts.ReminderScheduler
-import app.aaps.core.interfaces.autotune.Autotune
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.maintenance.ImportExportPrefs
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.protection.ExportPasswordDataStore
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.core.interfaces.scenes.SceneIconResolver
-import app.aaps.core.interfaces.smsCommunicator.SmsCommunicator
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.utils.lenientString
-import app.aaps.plugins.automation.triggers.TriggerDeps
+import app.gmaaps.core.interfaces.alerts.ReminderScheduler
+import app.gmaaps.core.interfaces.autotune.Autotune
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.maintenance.ImportExportPrefs
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.protection.ExportPasswordDataStore
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.core.interfaces.scenes.SceneIconResolver
+import app.gmaaps.core.interfaces.smsCommunicator.SmsCommunicator
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.plugins.automation.triggers.TriggerDeps
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -137,3 +137,4 @@ class ActionFactory(
         return null
     }
 }
+

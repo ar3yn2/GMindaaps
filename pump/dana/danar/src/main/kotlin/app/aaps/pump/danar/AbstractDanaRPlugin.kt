@@ -1,49 +1,49 @@
-package app.aaps.pump.danar
+﻿package app.gmaaps.pump.danar
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.constraints.PumpPluginConstraints
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.OwnDatabasePlugin
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.pump.Dana
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpPluginBase
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.PumpSync.TemporaryBasalType
-import app.aaps.core.interfaces.pump.comment
-import app.aaps.core.interfaces.pump.mapState
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventConfigBuilderChange
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.interfaces.utils.Round.roundTo
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.icons.IcPluginDanaI
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.comm.RecordTypes
-import app.aaps.pump.dana.database.DanaHistoryDatabase
-import app.aaps.pump.dana.keys.DanaBooleanKey
-import app.aaps.pump.dana.keys.DanaIntKey
-import app.aaps.pump.dana.keys.DanaIntNonKey
-import app.aaps.pump.dana.keys.DanaIntentKey
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danar.compose.DanaRComposeContent
-import app.aaps.pump.danar.services.AbstractDanaRExecutionService
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.constraints.PumpPluginConstraints
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.OwnDatabasePlugin
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.pump.Dana
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpPluginBase
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.PumpSync.TemporaryBasalType
+import app.gmaaps.core.interfaces.pump.comment
+import app.gmaaps.core.interfaces.pump.mapState
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventConfigBuilderChange
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.interfaces.utils.Round.roundTo
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.icons.IcPluginDanaI
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.comm.RecordTypes
+import app.gmaaps.pump.dana.database.DanaHistoryDatabase
+import app.gmaaps.pump.dana.keys.DanaBooleanKey
+import app.gmaaps.pump.dana.keys.DanaIntKey
+import app.gmaaps.pump.dana.keys.DanaIntNonKey
+import app.gmaaps.pump.dana.keys.DanaIntentKey
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danar.compose.DanaRComposeContent
+import app.gmaaps.pump.danar.services.AbstractDanaRExecutionService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
@@ -84,8 +84,8 @@ abstract class AbstractDanaRPlugin protected constructor(
             )
         }
         .icon(IcPluginDanaI)
-        .pluginName(TextRef.AndroidRes(app.aaps.pump.dana.R.string.danarpump))
-        .description(TextRef.AndroidRes(app.aaps.pump.dana.R.string.description_pump_dana_r)),
+        .pluginName(TextRef.AndroidRes(app.gmaaps.pump.dana.R.string.danarpump))
+        .description(TextRef.AndroidRes(app.gmaaps.pump.dana.R.string.description_pump_dana_r)),
     ownPreferences = DanaStringNonKey.entries + DanaIntKey.entries + DanaIntNonKey.entries + DanaBooleanKey.entries + DanaIntentKey.entries,
     aapsLogger, rh, preferences, commandQueue, notificationManager
 ), Pump, Dana, PumpPluginConstraints, OwnDatabasePlugin {
@@ -108,7 +108,7 @@ abstract class AbstractDanaRPlugin protected constructor(
         preferences.observe(DanaStringNonKey.RName).drop(1).onEach {
             danaPump.reset()
             pumpSync.connectNewPump(true)
-            commandQueue.readStatus(rh.gs(app.aaps.core.ui.R.string.device_changed))
+            commandQueue.readStatus(rh.gs(app.gmaaps.core.ui.R.string.device_changed))
         }.launchIn(newScope)
         danaPump.serialNumber = preferences.get(DanaStringNonKey.RName) // fill at start to allow password reset
     }
@@ -140,14 +140,14 @@ abstract class AbstractDanaRPlugin protected constructor(
             // Not initialized yet — deferred, not a genuine error; re-pushed on reconnect. success=true keeps it
             // out of the central failure alarm; enacted stays false so nothing is shown. Profile-set notifications
             // (OK / clear-failed) are owned centrally by CommandQueueImplementation.onProfileChanged.
-            result.success(true).comment(app.aaps.core.ui.R.string.pump_not_initialized_profile_not_set)
+            result.success(true).comment(app.gmaaps.core.ui.R.string.pump_not_initialized_profile_not_set)
             return result
         }
         // updateBasalsInPump now returns false on a genuine pump rejection (see the DanaR*ExecutionService
         // return !msgSet.failed change), so success reflects the actual write outcome.
         if (executionService?.updateBasalsInPump(profile) != true) {
             // FAILED_UPDATE_PROFILE posted centrally (onProfileChanged) from success=false; comment carries the reason.
-            result.comment(app.aaps.core.ui.R.string.failed_update_basal_profile)
+            result.comment(app.gmaaps.core.ui.R.string.failed_update_basal_profile)
         } else {
             result.success(true).enacted(true).comment("OK")
         }
@@ -190,14 +190,14 @@ abstract class AbstractDanaRPlugin protected constructor(
         var percentReq = percent
         val result = pumpEnactResultProvider()
         if (percentReq < 0) {
-            result.isTempCancel(false).enacted(false).success(false).comment(app.aaps.core.ui.R.string.invalid_input)
+            result.isTempCancel(false).enacted(false).success(false).comment(app.gmaaps.core.ui.R.string.invalid_input)
             aapsLogger.error("setTempBasalPercent: Invalid input")
             return result
         }
         if (percentReq > pumpDescription.maxTempPercent) percentReq = pumpDescription.maxTempPercent
         if (danaPump.isTempBasalInProgress && danaPump.tempBasalPercent == percentReq && danaPump.tempBasalRemainingMin > 4 && !enforceNew) {
             result.enacted(false).success(true).isTempCancel(false)
-                .comment(app.aaps.core.ui.R.string.ok)
+                .comment(app.gmaaps.core.ui.R.string.ok)
                 .duration(danaPump.tempBasalRemainingMin)
                 .percent(danaPump.tempBasalPercent)
                 .isPercent(true)
@@ -209,7 +209,7 @@ abstract class AbstractDanaRPlugin protected constructor(
         if (connectionOK && danaPump.isTempBasalInProgress && danaPump.tempBasalPercent == percentReq) {
             result.enacted(true)
                 .success(true)
-                .comment(app.aaps.core.ui.R.string.ok)
+                .comment(app.gmaaps.core.ui.R.string.ok)
                 .isTempCancel(false)
                 .duration(danaPump.tempBasalDuration.toInt())
                 .percent(danaPump.tempBasalPercent)
@@ -227,7 +227,7 @@ abstract class AbstractDanaRPlugin protected constructor(
             )
             return result
         }
-        result.enacted(false).success(false).comment(app.aaps.core.ui.R.string.temp_basal_delivery_error)
+        result.enacted(false).success(false).comment(app.gmaaps.core.ui.R.string.temp_basal_delivery_error)
         aapsLogger.error("setTempBasalPercent: Failed to set temp basal")
         return result
     }
@@ -241,7 +241,7 @@ abstract class AbstractDanaRPlugin protected constructor(
         if (danaPump.isExtendedInProgress && abs(danaPump.extendedBolusAmount - insulinReq) < pumpDescription.extendedBolusStep) {
             result.enacted(false)
                 .success(true)
-                .comment(app.aaps.core.ui.R.string.ok)
+                .comment(app.gmaaps.core.ui.R.string.ok)
                 .duration(danaPump.extendedBolusRemainingMinutes)
                 .absolute(danaPump.extendedBolusAbsoluteRate)
                 .isPercent(false)
@@ -261,7 +261,7 @@ abstract class AbstractDanaRPlugin protected constructor(
         if (connectionOK && danaPump.isExtendedInProgress && abs(danaPump.extendedBolusAmount - insulinReq) < pumpDescription.extendedBolusStep) {
             result.enacted(true)
                 .success(true)
-                .comment(app.aaps.core.ui.R.string.ok)
+                .comment(app.gmaaps.core.ui.R.string.ok)
                 .isTempCancel(false)
                 .duration(danaPump.extendedBolusRemainingMinutes)
                 .absolute(danaPump.extendedBolusAbsoluteRate)
@@ -279,7 +279,7 @@ abstract class AbstractDanaRPlugin protected constructor(
             aapsLogger.debug(LTag.PUMP, "setExtendedBolus: OK")
             return result
         }
-        result.enacted(false).success(false).comment(app.aaps.pump.dana.R.string.danar_valuenotsetproperly)
+        result.enacted(false).success(false).comment(app.gmaaps.pump.dana.R.string.danar_valuenotsetproperly)
         aapsLogger.error("setExtendedBolus: Failed to extended bolus")
         aapsLogger.error("inProgress: " + danaPump.isExtendedInProgress + " start: " + danaPump.extendedBolusStart + " amount: " + danaPump.extendedBolusAmount + " duration: " + danaPump.extendedBolusDuration)
         return result
@@ -297,9 +297,9 @@ abstract class AbstractDanaRPlugin protected constructor(
                     pumpDescription.pumpType,
                     serialNumber()
                 )
-            } else result.success(false).enacted(false).isTempCancel(true).comment(app.aaps.core.ui.R.string.canceling_eb_failed)
+            } else result.success(false).enacted(false).isTempCancel(true).comment(app.gmaaps.core.ui.R.string.canceling_eb_failed)
         } else {
-            result.success(true).comment(app.aaps.core.ui.R.string.ok).isTempCancel(true)
+            result.success(true).comment(app.gmaaps.core.ui.R.string.ok).isTempCancel(true)
             aapsLogger.debug(LTag.PUMP, "cancelExtendedBolus: OK")
         }
         return result
@@ -368,3 +368,4 @@ abstract class AbstractDanaRPlugin protected constructor(
         danaHistoryDatabase.clearAllTables()
     }
 }
+

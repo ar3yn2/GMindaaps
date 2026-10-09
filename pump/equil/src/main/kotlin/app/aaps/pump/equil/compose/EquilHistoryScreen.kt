@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.compose
+﻿package app.gmaaps.pump.equil.compose
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -42,11 +42,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.ui.compose.AapsTopAppBar
-import app.aaps.pump.equil.R
-import app.aaps.pump.equil.database.EquilHistoryRecord
-import app.aaps.pump.equil.driver.definition.EquilHistoryEntryGroup
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.ui.compose.AapsTopAppBar
+import app.gmaaps.pump.equil.R
+import app.gmaaps.pump.equil.database.EquilHistoryRecord
+import app.gmaaps.pump.equil.driver.definition.EquilHistoryEntryGroup
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Locale
@@ -77,7 +77,7 @@ internal fun EquilHistoryScreen(
                 title = { Text(stringResource(R.string.equil_title_history_events)) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.aaps.core.ui.R.string.back))
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.gmaaps.core.ui.R.string.back))
                     }
                 }
             )
@@ -318,3 +318,4 @@ private fun PumpEventRow(item: PumpEventItem) {
 }
 
 // endregion
+

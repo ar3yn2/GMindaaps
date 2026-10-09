@@ -1,9 +1,9 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore.NetworkStatus
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.plugins.automation.asJsonObject
-import app.aaps.plugins.automation.elements.Comparator
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore.NetworkStatus
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.plugins.automation.asJsonObject
+import app.gmaaps.plugins.automation.elements.Comparator
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.test.runTest
@@ -61,3 +61,4 @@ class TriggerWifiSsidTest : TriggerTestBase() {
         assertThat(triggerFactory.triggerWifiSsid().friendlyDescription()).isEqualTo("WiFi SSID is equal to ")
     }
 }
+

@@ -1,16 +1,16 @@
-package app.aaps.ui.compose.quickWizard.viewmodels
+﻿package app.gmaaps.ui.compose.quickWizard.viewmodels
 
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.wizard.QuickWizard
-import app.aaps.core.objects.wizard.QuickWizardEntry
-import app.aaps.core.objects.wizard.QuickWizardMode
-import app.aaps.core.ui.compose.ScreenMode
-import app.aaps.shared.tests.generatedTextResolver
-import app.aaps.ui.events.EventQuickWizardChange
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.wizard.QuickWizard
+import app.gmaaps.core.objects.wizard.QuickWizardEntry
+import app.gmaaps.core.objects.wizard.QuickWizardMode
+import app.gmaaps.core.ui.compose.ScreenMode
+import app.gmaaps.shared.tests.generatedTextResolver
+import app.gmaaps.ui.events.EventQuickWizardChange
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -276,3 +276,4 @@ internal class QuickWizardManagementViewModelTest {
         verify(quickWizard, never()).reorder(any())
     }
 }
+

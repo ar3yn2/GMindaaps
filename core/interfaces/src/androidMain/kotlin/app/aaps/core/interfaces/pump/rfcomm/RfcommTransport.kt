@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.pump.rfcomm
+﻿package app.gmaaps.core.interfaces.pump.rfcomm
 
 import java.io.InputStream
 import java.io.OutputStream
@@ -45,3 +45,4 @@ interface RfcommSocket {
      */
     fun close()
 }
+

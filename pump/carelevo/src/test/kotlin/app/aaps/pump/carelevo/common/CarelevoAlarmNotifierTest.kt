@@ -1,20 +1,20 @@
-package app.aaps.pump.carelevo.common
+﻿package app.gmaaps.pump.carelevo.common
 
 import android.content.Context
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationAction
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.presentation.model.AlarmEvent
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationAction
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.presentation.model.AlarmEvent
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
@@ -448,3 +448,4 @@ class CarelevoAlarmNotifierTest {
         assertThat(systemNmShadow().allNotifications).isNotEmpty()
     }
 }
+

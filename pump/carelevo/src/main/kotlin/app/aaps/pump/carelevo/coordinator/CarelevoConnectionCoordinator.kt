@@ -1,9 +1,9 @@
-package app.aaps.pump.carelevo.coordinator
+﻿package app.gmaaps.pump.carelevo.coordinator
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -56,3 +56,4 @@ class CarelevoConnectionCoordinator @Inject constructor(
 
     fun stopConnecting() = bleSession.requestDisconnect("stopConnecting")
 }
+

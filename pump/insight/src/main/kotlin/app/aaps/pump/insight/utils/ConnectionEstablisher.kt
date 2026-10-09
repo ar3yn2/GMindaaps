@@ -1,11 +1,11 @@
-package app.aaps.pump.insight.utils
+﻿package app.gmaaps.pump.insight.utils
 
 import android.Manifest
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothSocket
 import androidx.annotation.RequiresPermission
-import app.aaps.core.utils.extensions.safeEnable
+import app.gmaaps.core.utils.extensions.safeEnable
 import java.io.IOException
 import java.util.UUID
 

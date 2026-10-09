@@ -1,4 +1,4 @@
-package app.aaps.wear.watchfaces.utils
+﻿package app.gmaaps.wear.watchfaces.utils
 
 import android.view.View
 import com.google.common.truth.Truth.assertThat
@@ -73,3 +73,4 @@ class SecondVisibilityTest {
         assertThat(showSeconds(enabledByUser = false, interactive = true, renderOverride = null)).isFalse()
     }
 }
+

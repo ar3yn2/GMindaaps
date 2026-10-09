@@ -1,4 +1,4 @@
-package app.aaps.database.entities.embedments
+﻿package app.gmaaps.database.entities.embedments
 
 data class InsulinConfiguration(
     var insulinLabel: String,

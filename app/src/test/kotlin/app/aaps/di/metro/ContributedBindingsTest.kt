@@ -1,9 +1,9 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
-import app.aaps.core.interfaces.plugin.PermissionGroup
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.implementation.utils.TrendCalculatorImpl
+import app.gmaaps.core.interfaces.plugin.PermissionGroup
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.implementation.utils.TrendCalculatorImpl
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.mock
@@ -134,7 +134,7 @@ class ContributedBindingsTest {
     }
 
     private val probeGroup = PermissionGroup(
-        permissions = listOf("app.aaps.permission.PROBE"),
+        permissions = listOf("app.gmaaps.permission.PROBE"),
         rationaleTitle = TextRef.Literal(""),
         rationaleDescription = TextRef.Literal("")
     )
@@ -153,3 +153,4 @@ class ContributedBindingsTest {
         assertThat(root.pumpEnactResult).isNotSameInstanceAs(root.pumpEnactResult)
     }
 }
+

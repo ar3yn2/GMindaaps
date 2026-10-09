@@ -1,8 +1,8 @@
-package app.aaps.implementation.logging
+﻿package app.gmaaps.implementation.logging
 
-import app.aaps.core.interfaces.logging.L
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.logging.LogElement
+import app.gmaaps.core.interfaces.logging.L
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.LogElement
 import kotlin.test.Test
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
@@ -80,3 +80,4 @@ class AAPSLoggerIosGateTest {
         assertTrue(throwing.enabled(LTag.entries.first { it.defaultValue }))
     }
 }
+

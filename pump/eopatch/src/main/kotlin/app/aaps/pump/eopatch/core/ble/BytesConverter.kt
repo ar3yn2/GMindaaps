@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.ble
+﻿package app.gmaaps.pump.eopatch.core.ble
 
 object BytesConverter {
 
@@ -38,3 +38,4 @@ object BytesConverter {
 
     fun toUInt(b: Byte): Int = b.toInt() and FF
 }
+

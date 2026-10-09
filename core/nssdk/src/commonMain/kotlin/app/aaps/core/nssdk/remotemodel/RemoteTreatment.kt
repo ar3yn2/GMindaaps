@@ -1,6 +1,6 @@
-package app.aaps.core.nssdk.remotemodel
+﻿package app.gmaaps.core.nssdk.remotemodel
 
-import app.aaps.core.nssdk.localmodel.treatment.EventType
+import app.gmaaps.core.nssdk.localmodel.treatment.EventType
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
@@ -195,3 +195,4 @@ private val OFFSET_AT_END = Regex("""[+-]\d{2}:?\d{2}$""")
 /** `+0200` -> `+02:00`; already-correct input is returned unchanged. */
 private fun withOffsetColon(offset: String): String =
     if (offset.contains(':')) offset else offset.substring(0, 3) + ":" + offset.substring(3)
+

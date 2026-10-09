@@ -1,7 +1,7 @@
-package app.aaps.core.data.xdrip
+﻿package app.gmaaps.core.data.xdrip
 
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.xdrip.XdripSourceResolver.COLLECTION_METHODS
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.xdrip.XdripSourceResolver.COLLECTION_METHODS
 
 /**
  * Everything AAPS knows about how xDrip names a glucose source.
@@ -72,3 +72,4 @@ object XdripSourceResolver {
         "xdrip-librewifi" to SourceSensor.LIBRE_1,
     )
 }
+

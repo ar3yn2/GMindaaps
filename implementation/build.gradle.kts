@@ -20,7 +20,7 @@ plugins {
 }
 
 allOpen {
-    annotation("app.aaps.annotations.OpenForTesting")
+    annotation("app.gmaaps.annotations.OpenForTesting")
 }
 
 // One task, not one per variant: a multiplatform module has no product flavours. Same generator as
@@ -29,7 +29,7 @@ allOpen {
 // themselves do not move, and AAPT keeps resolving them on Android exactly as before.
 val generateImplementationStrings = tasks.register<GenerateKeyStringsTask>("generateImplementationStrings") {
     resDir.set(layout.projectDirectory.dir("src/androidMain/res"))
-    packageName.set("app.aaps.implementation")
+    packageName.set("app.gmaaps.implementation")
     owner.set("implementation")
     objectName.set("ImplementationStrings")
     idsObjectName.set("ImplementationStringIds")
@@ -42,7 +42,7 @@ val generateImplementationStrings = tasks.register<GenerateKeyStringsTask>("gene
 
 kotlin {
     android {
-        namespace = "app.aaps.implementation"
+        namespace = "app.gmaaps.implementation"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         // Off by default for a multiplatform library, unlike a plain android library. This module
@@ -75,7 +75,7 @@ kotlin {
     jvm()
 
     // commonMain is small on purpose. Most of this module reaches Android directly, and most of the
-    // rest formats user text through ResourceHelper and app.aaps.core.ui.R - the twenty command queue
+    // rest formats user text through ResourceHelper and app.gmaaps.core.ui.R - the twenty command queue
     // classes are otherwise portable and fail only on that. They can follow once they take a
     // TextResolver and a TextRef instead, the same move :core:keys already made.
     // The default hierarchy is otherwise switched off by the manual dependsOn below, which would
@@ -85,7 +85,6 @@ kotlin {
     sourceSets {
         // Android and the desktop are both JVMs, so what is written on java.* is shared by them and
         // not copied into each. The OAuth redirect listener is the first thing to live here: it is a
-        // ServerSocket on both, and iOS has its own on POSIX sockets.
         val jvmSharedMain = create("jvmSharedMain") { dependsOn(commonMain.get()) }
         androidMain.get().dependsOn(jvmSharedMain)
         jvmMain.get().dependsOn(jvmSharedMain)
@@ -105,7 +104,11 @@ kotlin {
                 // The client only, with no content negotiation and no serialization plugin: Drive's
                 // answers are read field by field with kotlinx-json, and the upload builds its own
                 // multipart/related body, so nothing here asks Ktor to convert anything.
+                implementation(libs.io.ktor.client.content.negotiation)
+                implementation(libs.io.ktor.serialization.kotlinx.json)
+                implementation(libs.io.ktor.client.cio)
                 implementation(libs.io.ktor.client.core)
+                implementation(libs.io.ktor.client.okhttp)
             }
         }
 
@@ -223,4 +226,15 @@ tasks.withType<Test> {
         excludes = listOf("jdk.internal.*")
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 

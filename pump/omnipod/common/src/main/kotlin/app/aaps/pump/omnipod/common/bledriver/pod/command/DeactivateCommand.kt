@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.NonceEnabledCommand
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.NonceEnabledCommand
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
 import java.nio.ByteBuffer
 
 class DeactivateCommand private constructor(
@@ -47,3 +47,4 @@ class DeactivateCommand private constructor(
         private const val BODY_LENGTH: Byte = 4
     }
 }
+

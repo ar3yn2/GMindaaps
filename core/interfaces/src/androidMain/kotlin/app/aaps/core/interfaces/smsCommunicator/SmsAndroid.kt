@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.smsCommunicator
+﻿package app.gmaaps.core.interfaces.smsCommunicator
 
 import android.telephony.SmsMessage
 
@@ -19,3 +19,4 @@ fun smsFromMessage(message: SmsMessage): Sms =
         it.received = true
         it.sent = false
     }
+

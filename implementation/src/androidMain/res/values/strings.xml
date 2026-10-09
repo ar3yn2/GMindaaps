@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="executing_right_now">Command is executed right now</string>
     <string name="basal_value_below_minimum">Basal value below minimum. Profile not set!</string>
@@ -24,7 +24,7 @@
     <string name="permission_schedule_exact_alarm_description">Required so alarms can wake the screen while AAPS is in the background, and so reminders ring on time</string>
 
     <!--       ConcentrationHelper / DecimalFormatter-->
-    <string name="bolus_with_volume">%1$s\u00a0U (%2$.1f\u00a0µl)</string>
+    <string name="bolus_with_volume">%1$s\u00a0U (%2$.1f\u00a0Âµl)</string>
     <string name="insulin_concentration">U%1$d</string>
     <string name="concentration_format">%1$s (%2$s)</string>
     <string name="concentration_tbr_format">%1$s @%2$s %3$d/%4$d\'</string>
@@ -95,4 +95,6 @@
     <string name="google_drive_download_error">Error downloading file: %1$s</string>
     <string name="google_drive_authorized">Google Drive Authorized</string>
     <string name="google_drive_reauth_required">Please clear settings and re-authorize Google Drive</string>
-</resources>
+    <string name="ai_profile_recommendation">AI Profile Recommendation</string></resources>
+
+

@@ -1,10 +1,10 @@
-package app.aaps.pump.medtronic.compose
+﻿package app.gmaaps.pump.medtronic.compose
 
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.common.defs.PumpHistoryEntryGroup
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntryType
-import app.aaps.pump.medtronic.data.MedtronicHistoryData
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.common.defs.PumpHistoryEntryGroup
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntryType
+import app.gmaaps.pump.medtronic.data.MedtronicHistoryData
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -95,3 +95,4 @@ internal class MedtronicHistoryViewModelTest {
         assertThat(sut.groups).contains(PumpHistoryEntryGroup.All)
     }
 }
+

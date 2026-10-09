@@ -1,20 +1,20 @@
-package app.aaps.pump.medtronic.driver
+﻿package app.gmaaps.pump.medtronic.driver
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.pump.defs.PumpDeviceState
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.common.data.PumpStatus
-import app.aaps.pump.common.events.EventRileyLinkDeviceStatusChange
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.data.RLHistoryItem
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkTargetDevice
-import app.aaps.pump.common.sync.PumpDbEntryTBR
-import app.aaps.pump.medtronic.defs.BasalProfileStatus
-import app.aaps.pump.medtronic.defs.BatteryType
-import app.aaps.pump.medtronic.defs.MedtronicDeviceType
-import app.aaps.pump.medtronic.keys.MedtronicLongNonKey
-import app.aaps.pump.medtronic.keys.MedtronicStringPreferenceKey
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.pump.defs.PumpDeviceState
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.common.data.PumpStatus
+import app.gmaaps.pump.common.events.EventRileyLinkDeviceStatusChange
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.data.RLHistoryItem
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkTargetDevice
+import app.gmaaps.pump.common.sync.PumpDbEntryTBR
+import app.gmaaps.pump.medtronic.defs.BasalProfileStatus
+import app.gmaaps.pump.medtronic.defs.BatteryType
+import app.gmaaps.pump.medtronic.defs.MedtronicDeviceType
+import app.gmaaps.pump.medtronic.keys.MedtronicLongNonKey
+import app.gmaaps.pump.medtronic.keys.MedtronicStringPreferenceKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -138,3 +138,4 @@ class MedtronicPumpStatus(
         initSettings()
     }
 }
+

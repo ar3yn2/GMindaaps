@@ -1,11 +1,11 @@
-package app.aaps.plugins.aps.openAPSSMB
+﻿package app.gmaaps.plugins.aps.openAPSSMB
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.plugins.aps.openAPS.AutosensData
-import app.aaps.core.interfaces.aps.CurrentTemp
-import app.aaps.plugins.aps.openAPS.Profile
-import app.aaps.core.interfaces.aps.RT
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.plugins.aps.openAPS.AutosensData
+import app.gmaaps.core.interfaces.aps.CurrentTemp
+import app.gmaaps.plugins.aps.openAPS.Profile
+import app.gmaaps.core.interfaces.aps.RT
 import java.text.DecimalFormat
 import java.time.Instant
 import java.time.ZoneId
@@ -1067,3 +1067,4 @@ class DetermineBasalSMB @Inject constructor(
         }
     }
 }
+

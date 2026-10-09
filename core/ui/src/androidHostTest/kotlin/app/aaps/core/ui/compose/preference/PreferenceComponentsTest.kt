@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Settings
@@ -10,9 +10,9 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.LocalConfig
-import app.aaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.LocalConfig
+import app.gmaaps.core.ui.compose.LocalPreferences
 import com.google.common.truth.Truth.assertThat
 import org.junit.Rule
 import org.junit.Test
@@ -21,7 +21,7 @@ import org.mockito.kotlin.mock
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.interfaces.configuration.Config as AppConfig
+import app.gmaaps.core.interfaces.configuration.Config as AppConfig
 
 /** Robolectric render tests for the base preference composables, mirroring their previews. */
 @RunWith(RobolectricTestRunner::class)
@@ -104,3 +104,4 @@ class PreferenceComponentsTest {
         assertThat(clicked).isTrue()
     }
 }
+

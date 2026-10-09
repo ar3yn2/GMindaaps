@@ -1,10 +1,10 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import app.aaps.database.entities.TABLE_VERSION_CHANGES
-import app.aaps.database.entities.VersionChange
+import app.gmaaps.database.entities.TABLE_VERSION_CHANGES
+import app.gmaaps.database.entities.VersionChange
 
 @Dao
 interface VersionChangeDao {

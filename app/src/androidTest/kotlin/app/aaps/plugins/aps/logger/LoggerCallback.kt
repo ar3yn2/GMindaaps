@@ -1,8 +1,8 @@
-package app.aaps.plugins.aps.logger
+﻿package app.gmaaps.plugins.aps.logger
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.plugins.aps.utils.StaticInjector
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.plugins.aps.utils.StaticInjector
 import dev.zacsweers.metro.Inject
 import org.mozilla.javascript.ScriptableObject
 

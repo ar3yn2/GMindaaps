@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2023 Google LLC
  * Adapted for AAPS
  *
@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
@@ -29,7 +29,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * Composable for a collapsible card section.
@@ -81,3 +81,4 @@ fun CollapsibleCardSectionContent(
         }
     }
 }
+

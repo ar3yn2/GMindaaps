@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.common
+﻿package app.gmaaps.pump.carelevo.common
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -37,8 +37,8 @@ class CarelevoObserveReceiverTest {
 
     private val context: Context = RuntimeEnvironment.getApplication()
 
-    private val action = "app.aaps.pump.carelevo.test.ACTION_STATE_CHANGED"
-    private val otherAction = "app.aaps.pump.carelevo.test.SOMETHING_ELSE"
+    private val action = "app.gmaaps.pump.carelevo.test.ACTION_STATE_CHANGED"
+    private val otherAction = "app.gmaaps.pump.carelevo.test.SOMETHING_ELSE"
 
     private val openSubscriptions = mutableListOf<Disposable>()
 
@@ -167,3 +167,4 @@ class CarelevoObserveReceiverTest {
         assertThat(secondReceived).hasSize(1)
     }
 }
+

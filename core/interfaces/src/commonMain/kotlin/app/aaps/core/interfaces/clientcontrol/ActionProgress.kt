@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.clientcontrol
+﻿package app.gmaaps.core.interfaces.clientcontrol
 
-import app.aaps.core.data.ui.ConfirmationLine
-import app.aaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.data.ui.ConfirmationLine
+import app.gmaaps.core.interfaces.rx.weardata.EventData
 
 /**
  * Progress/outcome of an action dispatched through [ClientControlActionDispatcher]. A `dispatch`
@@ -89,3 +89,4 @@ enum class FailureReason {
  */
 fun FailureReason.isNotDeliveryError(): Boolean =
     this == FailureReason.NotReachable || this == FailureReason.ControlDisabled || this == FailureReason.Cancelled
+

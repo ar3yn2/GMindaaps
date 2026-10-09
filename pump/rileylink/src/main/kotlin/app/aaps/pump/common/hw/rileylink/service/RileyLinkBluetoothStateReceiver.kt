@@ -1,14 +1,14 @@
-package app.aaps.pump.common.hw.rileylink.service
+﻿package app.gmaaps.pump.common.hw.rileylink.service
 
 import android.bluetooth.BluetoothAdapter
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import app.aaps.core.interfaces.di.injectMetroMembers
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.common.hw.rileylink.RileyLinkConst
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.core.interfaces.di.injectMetroMembers
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkConst
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
 import dev.zacsweers.metro.Inject
 
 class RileyLinkBluetoothStateReceiver : BroadcastReceiver() {

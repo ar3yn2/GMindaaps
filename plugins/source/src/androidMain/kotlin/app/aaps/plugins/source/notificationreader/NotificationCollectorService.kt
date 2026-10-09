@@ -1,4 +1,4 @@
-package app.aaps.plugins.source.notificationreader
+﻿package app.gmaaps.plugins.source.notificationreader
 
 import android.app.Notification
 import android.service.notification.NotificationListenerService
@@ -6,18 +6,18 @@ import android.service.notification.StatusBarNotification
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.source.NotificationReaderPlugin
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.source.NotificationReaderPlugin
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -159,3 +159,4 @@ private fun ViewGroup.collectVisibleText(): List<String> = buildList {
         }
     }
 }
+

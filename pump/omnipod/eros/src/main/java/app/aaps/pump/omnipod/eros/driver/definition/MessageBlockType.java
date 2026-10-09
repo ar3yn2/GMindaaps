@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
 import org.apache.commons.lang3.NotImplementedException;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.ErrorResponse;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.VersionResponse;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoResponse;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.ErrorResponse;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.VersionResponse;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoResponse;
 
 public enum MessageBlockType {
     VERSION_RESPONSE(0x01),
@@ -61,3 +61,4 @@ public enum MessageBlockType {
         }
     }
 }
+

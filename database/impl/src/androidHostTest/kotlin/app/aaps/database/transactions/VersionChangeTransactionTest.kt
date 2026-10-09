@@ -1,8 +1,8 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.DelegatedAppDatabase
-import app.aaps.database.daos.VersionChangeDao
-import app.aaps.database.entities.VersionChange
+import app.gmaaps.database.DelegatedAppDatabase
+import app.gmaaps.database.daos.VersionChangeDao
+import app.gmaaps.database.entities.VersionChange
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -108,3 +108,4 @@ class VersionChangeTransactionTest {
         commitHash = commitHash
     )
 }
+

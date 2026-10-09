@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.data.model.entities
+﻿package app.gmaaps.pump.carelevo.data.model.entities
 
 
 data class CarelevoUserSettingInfoEntity(

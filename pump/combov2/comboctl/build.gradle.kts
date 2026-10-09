@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     id("android-module-dependencies")
     id("test-module-dependencies")
@@ -31,7 +31,7 @@ dependencies {
     testImplementation(project(":shared:tests"))
     // PumpIOTest extends TestBase and calls aapsLogger.debug(...); resolving that overload set
     // requires AAPSLogger on the test classpath. :shared:tests pulls it via `implementation` so
-    // it's not transitively exposed — we ask for it directly here.
+    // it's not transitively exposed â€” we ask for it directly here.
     testImplementation(project(":core:interfaces"))
 
     testImplementation(libs.io.kotlintest.runner.junit5)

@@ -1,20 +1,20 @@
-package app.aaps.implementation.alerts
+﻿package app.gmaaps.implementation.alerts
 
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.smsCommunicator.SmsCommunicator
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.implementation.alerts.keys.LocalAlertLongKey
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.smsCommunicator.SmsCommunicator
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.implementation.alerts.keys.LocalAlertLongKey
+import app.gmaaps.shared.tests.TestBase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -57,9 +57,9 @@ class LocalAlertUtilsImplTest : TestBase() {
             // This must happen at class load time, before test methods try to use IntKey
             try {
                 // Initialize in dependency order: BooleanKey and StringKey first, then IntKey
-                Class.forName("app.aaps.core.keys.BooleanKey")
-                Class.forName("app.aaps.core.keys.StringKey")
-                Class.forName("app.aaps.core.keys.IntKey")
+                Class.forName("app.gmaaps.core.keys.BooleanKey")
+                Class.forName("app.gmaaps.core.keys.StringKey")
+                Class.forName("app.gmaaps.core.keys.IntKey")
             } catch (e: Throwable) {
                 // Swallow initialization errors - they'll surface in actual test execution
                 System.err.println("Warning: Enum initialization failed in test setup: ${e.message}")
@@ -208,7 +208,7 @@ class LocalAlertUtilsImplTest : TestBase() {
     fun `reportPumpStatusRead updates alarm when profile is available`() = runTest {
         val lastDataTime = now - T.mins(5).msecs()
         val thresholdMinutes = 30
-        val profile = org.mockito.kotlin.mock<app.aaps.core.interfaces.profile.EffectiveProfile>()
+        val profile = org.mockito.kotlin.mock<app.gmaaps.core.interfaces.profile.EffectiveProfile>()
 
         whenever(profileFunction.getProfile()).thenReturn(profile)
         whenever(pump.lastDataTime).thenReturn(MutableStateFlow(lastDataTime))
@@ -235,7 +235,7 @@ class LocalAlertUtilsImplTest : TestBase() {
         val lastDataTime = now - T.mins(5).msecs()
         val thresholdMinutes = 30
         val futureAlarmTime = now + T.hours(2).msecs()
-        val profile = org.mockito.kotlin.mock<app.aaps.core.interfaces.profile.EffectiveProfile>()
+        val profile = org.mockito.kotlin.mock<app.gmaaps.core.interfaces.profile.EffectiveProfile>()
 
         whenever(profileFunction.getProfile()).thenReturn(profile)
         whenever(pump.lastDataTime).thenReturn(MutableStateFlow(lastDataTime))
@@ -302,7 +302,7 @@ class LocalAlertUtilsImplTest : TestBase() {
         val lastDataTime = now - T.mins(10).msecs()
         val thresholdMinutes = 40
         val currentAlarmTime = now + T.mins(5).msecs()
-        val profile = org.mockito.kotlin.mock<app.aaps.core.interfaces.profile.EffectiveProfile>()
+        val profile = org.mockito.kotlin.mock<app.gmaaps.core.interfaces.profile.EffectiveProfile>()
 
         whenever(profileFunction.getProfile()).thenReturn(profile)
         whenever(pump.lastDataTime).thenReturn(MutableStateFlow(lastDataTime))
@@ -315,3 +315,4 @@ class LocalAlertUtilsImplTest : TestBase() {
         verify(preferences).put(LocalAlertLongKey.NextPumpDisconnectedAlarm, expectedEarliestAlarm)
     }
 }
+

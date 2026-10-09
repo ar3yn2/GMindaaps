@@ -1,27 +1,27 @@
-package app.aaps.ui.compose.insulinDialog
+﻿package app.gmaaps.ui.compose.insulinDialog
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.automation.Automation
-import app.aaps.core.interfaces.bolus.BatchExecutor
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.insulin.InsulinManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.interfaces.utils.HardLimits
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.automation.Automation
+import app.gmaaps.core.interfaces.bolus.BatchExecutor
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.insulin.InsulinManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.interfaces.utils.HardLimits
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -121,3 +121,4 @@ internal class InsulinDialogViewModelTest {
         assertThat(sut.uiState.value.notes).isEqualTo("correction")
     }
 }
+

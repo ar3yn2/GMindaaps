@@ -1,7 +1,7 @@
-package app.aaps.pump.insight.app_layer.parameter_blocks
+﻿package app.gmaaps.pump.insight.app_layer.parameter_blocks
 
-import app.aaps.pump.insight.descriptors.BasalProfileBlock
-import app.aaps.pump.insight.utils.ByteBuf
+import app.gmaaps.pump.insight.descriptors.BasalProfileBlock
+import app.gmaaps.pump.insight.utils.ByteBuf
 
 abstract class BRProfileBlock : ParameterBlock() {
 

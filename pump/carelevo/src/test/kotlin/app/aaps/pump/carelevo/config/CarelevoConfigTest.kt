@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.config
+﻿package app.gmaaps.pump.carelevo.config
 
-import app.aaps.pump.carelevo.common.keys.CarelevoStringNonKey
+import app.gmaaps.pump.carelevo.common.keys.CarelevoStringNonKey
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import java.util.UUID
@@ -108,3 +108,4 @@ internal class CarelevoConfigTest {
         CarelevoStringNonKey.entries.forEach { assertThat(it.exportable).isFalse() }
     }
 }
+

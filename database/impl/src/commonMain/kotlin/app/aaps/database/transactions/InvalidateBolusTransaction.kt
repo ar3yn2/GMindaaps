@@ -1,4 +1,4 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
 class InvalidateBolusTransaction(val id: Long) : Transaction<InvalidateBolusTransaction.TransactionResult>() {
 
@@ -16,6 +16,6 @@ class InvalidateBolusTransaction(val id: Long) : Transaction<InvalidateBolusTran
 
     class TransactionResult {
 
-        val invalidated = mutableListOf<app.aaps.database.entities.Bolus>()
+        val invalidated = mutableListOf<app.gmaaps.database.entities.Bolus>()
     }
 }

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -6,8 +6,8 @@ import org.joda.time.DateTime;
 import org.joda.time.Duration;
 import org.junit.jupiter.api.Test;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.definition.FaultEventCode;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.definition.FaultEventCode;
 
 class PodInfoFaultAndInitializationTimeTest {
     @Test
@@ -25,3 +25,4 @@ class PodInfoFaultAndInitializationTimeTest {
         assertThat(dateTime.getMinuteOfHour()).isEqualTo(14);
     }
 }
+

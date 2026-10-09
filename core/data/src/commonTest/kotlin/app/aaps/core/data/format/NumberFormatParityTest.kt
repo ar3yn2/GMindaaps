@@ -1,6 +1,6 @@
-package app.aaps.core.data.format
+﻿package app.gmaaps.core.data.format
 
-import app.aaps.core.data.format.NumberFormatPlatform.SEPARATOR_DOT
+import app.gmaaps.core.data.format.NumberFormatPlatform.SEPARATOR_DOT
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -124,3 +124,4 @@ class NumberFormatParityTest {
         assertEquals('.', SEPARATOR_DOT)
     }
 }
+

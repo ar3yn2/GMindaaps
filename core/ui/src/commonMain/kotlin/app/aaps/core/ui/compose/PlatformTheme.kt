@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.Composable
 
@@ -52,3 +52,4 @@ expect fun is24HourClock(): Boolean
  */
 @Composable
 expect fun LockPortraitOrientation()
+

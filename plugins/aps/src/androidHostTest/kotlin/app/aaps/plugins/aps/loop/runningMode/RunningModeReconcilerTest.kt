@@ -1,18 +1,18 @@
-package app.aaps.plugins.aps.loop.runningMode
+﻿package app.gmaaps.plugins.aps.loop.runningMode
 
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.R
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.R
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -477,3 +477,4 @@ class RunningModeReconcilerTest : TestBaseWithProfile() {
         duration = durationMs
     )
 }
+

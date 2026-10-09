@@ -1,10 +1,10 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
-import app.aaps.plugins.automation.triggers.Trigger
-import app.aaps.plugins.automation.triggers.TriggerConnector
-import app.aaps.plugins.automation.triggers.TriggerDeps
-import app.aaps.plugins.automation.triggers.TriggerDummy
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.plugins.automation.triggers.Trigger
+import app.gmaaps.plugins.automation.triggers.TriggerConnector
+import app.gmaaps.plugins.automation.triggers.TriggerDeps
+import app.gmaaps.plugins.automation.triggers.TriggerDummy
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.mock
@@ -43,3 +43,4 @@ class ComposeTriggerTest : TestBase() {
         assertThat(root.size()).isEqualTo(4)
     }
 }
+

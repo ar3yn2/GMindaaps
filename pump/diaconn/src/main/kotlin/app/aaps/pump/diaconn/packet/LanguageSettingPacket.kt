@@ -1,8 +1,8 @@
-package app.aaps.pump.diaconn.packet
+﻿package app.gmaaps.pump.diaconn.packet
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.diaconn.DiaconnG8Pump
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.diaconn.DiaconnG8Pump
 import dev.zacsweers.metro.Inject
 
 /**

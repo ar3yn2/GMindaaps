@@ -1,4 +1,4 @@
-package app.aaps.implementation.maintenance
+﻿package app.gmaaps.implementation.maintenance
 
 import android.content.Context
 import android.provider.Settings
@@ -8,61 +8,61 @@ import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.model.UE
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.di.ApplicationScope
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.maintenance.ExportConfig
-import app.aaps.core.interfaces.maintenance.ExportDestination
-import app.aaps.core.interfaces.maintenance.ExportPreparation
-import app.aaps.core.interfaces.maintenance.ExportResult
-import app.aaps.core.interfaces.maintenance.FileListProvider
-import app.aaps.core.interfaces.maintenance.ImportDecryptResult
-import app.aaps.core.interfaces.maintenance.ImportExportPrefs
-import app.aaps.core.interfaces.maintenance.PrefMetadata
-import app.aaps.core.interfaces.maintenance.Prefs
-import app.aaps.core.interfaces.maintenance.PrefsFile
-import app.aaps.core.interfaces.maintenance.PrefsMetadataKey
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.protection.ExportPasswordDataStore
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventDiaconnG8PumpLogReset
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.rx.weardata.CwfData
-import app.aaps.core.interfaces.rx.weardata.CwfMetadataKey
-import app.aaps.core.interfaces.sharedPreferences.SP
-import app.aaps.core.interfaces.storage.Storage
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.userEntry.UserEntryPresentationHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.MidnightTime
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.crypto.CryptoUtil
-import app.aaps.core.objects.extensions.asSettingsExport
-import app.aaps.core.objects.workflow.LoggingWorker
-import app.aaps.core.objects.workflow.MetroWorkerCreator
-import app.aaps.core.utils.receivers.DataInbox
-import app.aaps.core.utils.receivers.Inbox
-import app.aaps.implementation.R
-import app.aaps.implementation.maintenance.cloud.CloudConstants
-import app.aaps.implementation.maintenance.cloud.CloudStorageManager
-import app.aaps.implementation.maintenance.data.PrefFileNotFoundError
-import app.aaps.implementation.maintenance.data.PrefIOError
-import app.aaps.implementation.maintenance.data.PrefsFormat
-import app.aaps.implementation.maintenance.data.PrefsStatusImpl
-import app.aaps.implementation.maintenance.formats.EncryptedPrefsFormat
-import app.aaps.implementation.maintenance.formats.ExportMetadata
-import app.aaps.shared.impl.weardata.ZipWatchfaceFormat
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.model.UE
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.di.ApplicationScope
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.maintenance.ExportConfig
+import app.gmaaps.core.interfaces.maintenance.ExportDestination
+import app.gmaaps.core.interfaces.maintenance.ExportPreparation
+import app.gmaaps.core.interfaces.maintenance.ExportResult
+import app.gmaaps.core.interfaces.maintenance.FileListProvider
+import app.gmaaps.core.interfaces.maintenance.ImportDecryptResult
+import app.gmaaps.core.interfaces.maintenance.ImportExportPrefs
+import app.gmaaps.core.interfaces.maintenance.PrefMetadata
+import app.gmaaps.core.interfaces.maintenance.Prefs
+import app.gmaaps.core.interfaces.maintenance.PrefsFile
+import app.gmaaps.core.interfaces.maintenance.PrefsMetadataKey
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.protection.ExportPasswordDataStore
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventDiaconnG8PumpLogReset
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.rx.weardata.CwfData
+import app.gmaaps.core.interfaces.rx.weardata.CwfMetadataKey
+import app.gmaaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.core.interfaces.storage.Storage
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.userEntry.UserEntryPresentationHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.MidnightTime
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.crypto.CryptoUtil
+import app.gmaaps.core.objects.extensions.asSettingsExport
+import app.gmaaps.core.objects.workflow.LoggingWorker
+import app.gmaaps.core.objects.workflow.MetroWorkerCreator
+import app.gmaaps.core.utils.receivers.DataInbox
+import app.gmaaps.core.utils.receivers.Inbox
+import app.gmaaps.implementation.R
+import app.gmaaps.implementation.maintenance.cloud.CloudConstants
+import app.gmaaps.implementation.maintenance.cloud.CloudStorageManager
+import app.gmaaps.implementation.maintenance.data.PrefFileNotFoundError
+import app.gmaaps.implementation.maintenance.data.PrefIOError
+import app.gmaaps.implementation.maintenance.data.PrefsFormat
+import app.gmaaps.implementation.maintenance.data.PrefsStatusImpl
+import app.gmaaps.implementation.maintenance.formats.EncryptedPrefsFormat
+import app.gmaaps.implementation.maintenance.formats.ExportMetadata
+import app.gmaaps.shared.impl.weardata.ZipWatchfaceFormat
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Assisted
 import dev.zacsweers.metro.AssistedFactory
@@ -372,7 +372,7 @@ class ImportExportPrefsImpl(
 
         // name provided (hopefully) by user
         val patientName = preferences.get(StringKey.GeneralPatientName)
-        val defaultPatientName = rh.gs(app.aaps.core.ui.R.string.patient_name_default)
+        val defaultPatientName = rh.gs(app.gmaaps.core.ui.R.string.patient_name_default)
 
         // name we detect from OS
         val systemName = n1 ?: n4 ?: n5 ?: n6 ?: defaultPatientName
@@ -927,3 +927,4 @@ object ApsExportInbox : Inbox<ImportExportPrefsImpl.ApsResultExportWorker.ApsRes
     "aps-export",
     ImportExportPrefsImpl.ApsResultExportWorker::class.java
 )
+

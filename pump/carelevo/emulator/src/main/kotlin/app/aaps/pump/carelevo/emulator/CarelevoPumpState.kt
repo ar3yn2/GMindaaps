@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.emulator
+﻿package app.gmaaps.pump.carelevo.emulator
 
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotFlags
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotTier
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotFlags
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotTier
 
 /**
  * Mutable state of the emulated CareLevo patch.
@@ -114,7 +114,7 @@ class CarelevoPumpState {
      * What the 0x43 active-alarm snapshot poll reports as currently active, **one independent set
      * per tier** (0xA4 critical / 0xA5 advisory / 0xA6 notification) — set the tier a test actually
      * wants to drive without also asserting flags for the other two. This matters because the same
-     * underlying condition (low battery, say) resolves to a *different* [app.aaps.pump.carelevo.domain.type.AlarmCause]
+     * underlying condition (low battery, say) resolves to a *different* [app.gmaaps.pump.carelevo.domain.type.AlarmCause]
      * severity depending which tier reports it — critical resolves to a WARNING cause (the driver
      * auto-discards the patch on it), advisory to the ALERT cause of the same condition (a plain
      * user-clearable alarm) — so tests distinguishing "patch got abandoned" from "just an alarm to
@@ -164,3 +164,4 @@ private fun noActiveAlarms(): ActiveAlarmSnapshotFlags = ActiveAlarmSnapshotFlag
     occlusionDetected = false,
     userForcedTermination = false
 )
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.insight.keys
+﻿package app.gmaaps.pump.insight.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 enum class InsightLongNonKey(
     override val key: String,
@@ -10,4 +10,5 @@ enum class InsightLongNonKey(
     LastBolusTimestamp("insight_last_bolus_timestamp", 0L),
     LastTempBasalTimestamp("insight_last_tempbasal_timestamp", 0L),
 }
+
 

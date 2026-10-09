@@ -1,7 +1,7 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import android.Manifest
-import app.aaps.core.interfaces.plugin.PermissionGroup
+import app.gmaaps.core.interfaces.plugin.PermissionGroup
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -29,3 +29,4 @@ class AndroidLocationPermissions() : LocationPermissions {
         ),
     )
 }
+

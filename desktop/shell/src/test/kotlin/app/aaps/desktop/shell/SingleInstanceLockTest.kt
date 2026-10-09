@@ -1,4 +1,4 @@
-package app.aaps.desktop.shell
+﻿package app.gmaaps.desktop.shell
 
 import java.io.File
 import java.io.RandomAccessFile
@@ -66,3 +66,4 @@ class SingleInstanceLockTest {
         assertNotNull(RandomAccessFile(lockFile, "rw").channel.also { opened += it }.tryLock())
     }
 }
+

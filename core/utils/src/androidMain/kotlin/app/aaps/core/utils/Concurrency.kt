@@ -1,4 +1,4 @@
-package app.aaps.core.utils
+﻿package app.gmaaps.core.utils
 
 @Suppress("PLATFORM_CLASS_MAPPED_TO_KOTLIN", "NOTHING_TO_INLINE")
 inline fun Any.wait() = (this as Object).wait()
@@ -19,3 +19,4 @@ inline fun Any.notify() = (this as Object).notify()
 
 @Suppress("PLATFORM_CLASS_MAPPED_TO_KOTLIN", "NOTHING_TO_INLINE")
 inline fun Any.notifyAll() = (this as Object).notifyAll()
+

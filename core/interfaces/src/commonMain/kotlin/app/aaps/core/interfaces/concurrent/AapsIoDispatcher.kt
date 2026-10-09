@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.concurrent
+﻿package app.gmaaps.core.interfaces.concurrent
 
 import kotlinx.coroutines.CoroutineDispatcher
 
@@ -13,3 +13,4 @@ import kotlinx.coroutines.CoroutineDispatcher
  * in `commonMain` does not fail with a helpful message - it reports the property as `internal`.
  */
 expect val aapsIoDispatcher: CoroutineDispatcher
+

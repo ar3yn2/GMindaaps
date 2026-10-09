@@ -1,10 +1,10 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.presentation.type.CarelevoPatchStep
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoPatchStep
+import app.gmaaps.core.ui.R as CoreUiR
 
 @Composable
 internal fun patchStepTitle(step: CarelevoPatchStep): String =
@@ -19,3 +19,4 @@ internal fun patchStepTitle(step: CarelevoPatchStep): String =
         CarelevoPatchStep.PATCH_ATTACH     -> stringResource(R.string.carelevo_connect_patch_attach_title)
         CarelevoPatchStep.NEEDLE_INSERTION -> stringResource(R.string.carelevo_connect_needle_check_title)
     }
+

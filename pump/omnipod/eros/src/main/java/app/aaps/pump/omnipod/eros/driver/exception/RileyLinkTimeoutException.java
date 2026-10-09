@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
 // Response indicating that there was a timeout in communication between the RileyLink and the Pod
 public class RileyLinkTimeoutException extends OmnipodException {
@@ -6,3 +6,4 @@ public class RileyLinkTimeoutException extends OmnipodException {
         super("Timeout in communication between RileyLink and Pod", false);
     }
 }
+

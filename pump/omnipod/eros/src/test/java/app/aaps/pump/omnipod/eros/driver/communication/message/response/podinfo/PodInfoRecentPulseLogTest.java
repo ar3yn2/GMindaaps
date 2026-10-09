@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import app.aaps.core.utils.pump.ByteUtil;
+import app.gmaaps.core.utils.pump.ByteUtil;
 
 class PodInfoRecentPulseLogTest {
     @Test
@@ -13,3 +13,4 @@ class PodInfoRecentPulseLogTest {
         Assertions.assertEquals(39, podInfoRecentPulseLog.getDwords().size());
     }
 }
+

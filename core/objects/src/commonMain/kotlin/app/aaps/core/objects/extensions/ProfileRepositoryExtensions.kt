@@ -1,6 +1,6 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.profile.ProfileRepository
 
 /**
  * Snapshot the current profile-name list. Equivalent to
@@ -13,3 +13,4 @@ import app.aaps.core.interfaces.profile.ProfileRepository
  */
 fun ProfileRepository.profileNames(): List<String> =
     profiles.value.map { it.name }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
 enum class NotificationCategory {
     PUMP,
@@ -10,3 +10,4 @@ enum class NotificationCategory {
     AUTOMATION,
     GENERAL
 }
+

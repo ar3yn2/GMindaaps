@@ -1,11 +1,11 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.interfaces.protection.PasswordCheck
-import app.aaps.core.interfaces.protection.PasswordRequest
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.interfaces.protection.PasswordCheck
+import app.gmaaps.core.interfaces.protection.PasswordRequest
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Draws whatever [passwordCheck] is currently asking for.
@@ -51,3 +51,4 @@ fun PasswordCheckHost(passwordCheck: PasswordCheck) {
             )
     }
 }
+

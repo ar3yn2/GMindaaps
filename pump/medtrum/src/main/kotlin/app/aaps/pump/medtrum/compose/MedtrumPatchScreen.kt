@@ -1,30 +1,30 @@
-package app.aaps.pump.medtrum.compose
+﻿package app.gmaaps.pump.medtrum.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.pump.ProfileGateWizardStep
-import app.aaps.core.ui.compose.pump.WizardScreen
-import app.aaps.pump.medtrum.R
-import app.aaps.pump.medtrum.code.PatchStep
-import app.aaps.pump.medtrum.compose.steps.ActivateStep
-import app.aaps.pump.medtrum.compose.steps.AttachStep
-import app.aaps.pump.medtrum.compose.steps.BleScanStepWrapper
-import app.aaps.pump.medtrum.compose.steps.CompleteStep
-import app.aaps.pump.medtrum.compose.steps.ConfirmDeactivateStep
-import app.aaps.pump.medtrum.compose.steps.DeactivateCompleteStep
-import app.aaps.pump.medtrum.compose.steps.DeactivatingStep
-import app.aaps.pump.medtrum.compose.steps.PrepareStep
-import app.aaps.pump.medtrum.compose.steps.PrimeStep
-import app.aaps.pump.medtrum.compose.steps.RetryActivationStep
-import app.aaps.pump.medtrum.compose.steps.SelectInsulinStep
-import app.aaps.pump.medtrum.compose.steps.SiteLocationStep
+import app.gmaaps.core.ui.compose.pump.ProfileGateWizardStep
+import app.gmaaps.core.ui.compose.pump.WizardScreen
+import app.gmaaps.pump.medtrum.R
+import app.gmaaps.pump.medtrum.code.PatchStep
+import app.gmaaps.pump.medtrum.compose.steps.ActivateStep
+import app.gmaaps.pump.medtrum.compose.steps.AttachStep
+import app.gmaaps.pump.medtrum.compose.steps.BleScanStepWrapper
+import app.gmaaps.pump.medtrum.compose.steps.CompleteStep
+import app.gmaaps.pump.medtrum.compose.steps.ConfirmDeactivateStep
+import app.gmaaps.pump.medtrum.compose.steps.DeactivateCompleteStep
+import app.gmaaps.pump.medtrum.compose.steps.DeactivatingStep
+import app.gmaaps.pump.medtrum.compose.steps.PrepareStep
+import app.gmaaps.pump.medtrum.compose.steps.PrimeStep
+import app.gmaaps.pump.medtrum.compose.steps.RetryActivationStep
+import app.gmaaps.pump.medtrum.compose.steps.SelectInsulinStep
+import app.gmaaps.pump.medtrum.compose.steps.SiteLocationStep
 
 @Composable
 fun MedtrumPatchScreen(
     viewModel: MedtrumPatchViewModel,
-    setToolbarConfig: ((app.aaps.core.ui.compose.ToolbarConfig) -> Unit)? = null
+    setToolbarConfig: ((app.gmaaps.core.ui.compose.ToolbarConfig) -> Unit)? = null
 ) {
     val patchStep by viewModel.patchStep.collectAsStateWithLifecycle()
     val totalSteps by viewModel.totalSteps.collectAsStateWithLifecycle()
@@ -81,3 +81,4 @@ fun MedtrumPatchScreen(
         }
     )
 }
+

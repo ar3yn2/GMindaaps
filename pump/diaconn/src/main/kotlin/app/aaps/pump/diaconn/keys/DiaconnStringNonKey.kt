@@ -1,6 +1,6 @@
-package app.aaps.pump.diaconn.keys
+﻿package app.gmaaps.pump.diaconn.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 
 enum class DiaconnStringNonKey(
     override val key: String,
@@ -12,3 +12,4 @@ enum class DiaconnStringNonKey(
     Address("diagonn_g8_address", ""),
     Name("Diaconn G8", ""),
 }
+

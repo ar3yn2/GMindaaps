@@ -1,6 +1,6 @@
-package app.aaps.core.nssdk.interfaces
+﻿package app.gmaaps.core.nssdk.interfaces
 
-import app.aaps.core.nssdk.localmodel.Status
+import app.gmaaps.core.nssdk.localmodel.Status
 import kotlinx.coroutines.Job
 
 interface NSAndroidCallbackClient {
@@ -23,4 +23,5 @@ interface NSAndroidCallbackClient {
 
     fun getStatus(callback: NSCallback<Status>): NSCancellable
 }
+
 

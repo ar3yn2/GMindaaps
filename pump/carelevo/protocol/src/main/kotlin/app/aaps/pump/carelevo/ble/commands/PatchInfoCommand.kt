@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleMultiCommand
-import app.aaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.BleMultiCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
 
 /**
  * `CMD_PATCH_INFO_REQ` (0x33) → the patch answers with TWO report frames: RPT1 (0x93, serial) +
@@ -96,3 +96,4 @@ data class PatchInfoResponse(
     val firmwareVersion: String,
     val modelName: String
 ) : BleResponse
+

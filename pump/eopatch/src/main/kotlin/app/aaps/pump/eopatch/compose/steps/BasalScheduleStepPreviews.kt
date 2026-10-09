@@ -1,11 +1,11 @@
-package app.aaps.pump.eopatch.compose.steps
+﻿package app.gmaaps.pump.eopatch.compose.steps
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
 
 @Preview(showBackground = true, name = "Basal Schedule Complete")
 @Composable
@@ -20,3 +20,4 @@ internal fun BasalScheduleStepPreview() {
         }
     }
 }
+

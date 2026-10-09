@@ -1,9 +1,9 @@
-package app.aaps.plugins.aps.keys
+﻿package app.gmaaps.plugins.aps.keys
 
-import app.aaps.core.keys.PreferenceType
-import app.aaps.core.keys.interfaces.IntentPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.plugins.aps.ApsStrings
+import app.gmaaps.core.keys.PreferenceType
+import app.gmaaps.core.keys.interfaces.IntentPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.plugins.aps.ApsStrings
 
 enum class ApsIntentKey(
     override val key: String,
@@ -22,3 +22,4 @@ enum class ApsIntentKey(
         urlRef = ApsStrings.openapsama_link_to_preference_json_doc
     )
 }
+

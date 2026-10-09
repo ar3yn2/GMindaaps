@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.nsclient
+﻿package app.gmaaps.core.interfaces.nsclient
 
 import kotlinx.serialization.json.JsonElement
 import kotlin.concurrent.atomics.AtomicLong
@@ -23,3 +23,4 @@ class NSClientLog(
         private val idCounter = AtomicLong(0)
     }
 }
+

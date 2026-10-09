@@ -1,15 +1,15 @@
-package app.aaps.plugins.sync.smsCommunicator.actions
+﻿package app.gmaaps.plugins.sync.smsCommunicator.actions
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.interfaces.bolus.BatchAction
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.smsCommunicator.Sms
-import app.aaps.core.interfaces.smsCommunicator.SmsCommunicator
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.plugins.sync.smsCommunicator.SmsAction
-import app.aaps.plugins.sync.smsCommunicator.SmsBatchResult
-import app.aaps.plugins.sync.smsCommunicator.runSmsBatch
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.interfaces.bolus.BatchAction
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.smsCommunicator.Sms
+import app.gmaaps.core.interfaces.smsCommunicator.SmsCommunicator
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.plugins.sync.smsCommunicator.SmsAction
+import app.gmaaps.plugins.sync.smsCommunicator.SmsBatchResult
+import app.gmaaps.plugins.sync.smsCommunicator.runSmsBatch
 
 /**
  * Changes the running mode: LOOP DISABLE/CLOSED/LGS/RESUME/SUSPEND and PUMP CONNECT/DISCONNECT.
@@ -46,3 +46,4 @@ class RunningModeAction(
         }
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.pump.dana.keys
+﻿package app.gmaaps.pump.dana.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.dana.R
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.dana.R
 
 enum class DanaBooleanKey(
     override val key: String,
@@ -20,3 +20,4 @@ enum class DanaBooleanKey(
     override val title: TextRef = TextRef.AndroidRes(titleResId)
     override val summary: TextRef? = summaryResId?.let { TextRef.AndroidRes(it) }
 }
+

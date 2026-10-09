@@ -1,10 +1,10 @@
-package app.aaps.core.keys.interfaces
+﻿package app.gmaaps.core.keys.interfaces
 
-import app.aaps.core.keys.BooleanComposedKey
-import app.aaps.core.keys.IntComposedKey
-import app.aaps.core.keys.LongComposedKey
-import app.aaps.core.keys.ProfileComposedBooleanKey
-import app.aaps.core.keys.ProfileComposedStringKey
+import app.gmaaps.core.keys.BooleanComposedKey
+import app.gmaaps.core.keys.IntComposedKey
+import app.gmaaps.core.keys.LongComposedKey
+import app.gmaaps.core.keys.ProfileComposedBooleanKey
+import app.gmaaps.core.keys.ProfileComposedStringKey
 import com.google.common.truth.Truth.assertThat
 import com.google.common.truth.Truth.assertWithMessage
 import org.junit.jupiter.api.AfterEach
@@ -115,3 +115,4 @@ class ComposedKeyTest {
         assertThrows<IllegalArgumentException> { key("a_", "").composeKey(1) }
     }
 }
+

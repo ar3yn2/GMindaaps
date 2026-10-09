@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     // NOT com.android.library. AGP 9 refuses that plugin together with the multiplatform plugin.
@@ -13,7 +13,7 @@ plugins {
 // resolving them on Android exactly as before.
 val generateSyncStrings = tasks.register<GenerateKeyStringsTask>("generateSyncStrings") {
     resDir.set(layout.projectDirectory.dir("src/androidMain/res"))
-    packageName.set("app.aaps.plugins.sync")
+    packageName.set("app.gmaaps.plugins.sync")
     owner.set("sync")
     objectName.set("SyncStrings")
     idsObjectName.set("SyncStringIds")
@@ -26,7 +26,7 @@ val generateSyncStrings = tasks.register<GenerateKeyStringsTask>("generateSyncSt
 
 kotlin {
     android {
-        namespace = "app.aaps.plugins.sync"
+        namespace = "app.gmaaps.plugins.sync"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         androidResources { enable = true }
@@ -223,3 +223,4 @@ configurations.named("androidDeviceTestImplementation") {
     exclude(group = "org.junit.jupiter")
     exclude(group = "org.junit.platform")
 }
+

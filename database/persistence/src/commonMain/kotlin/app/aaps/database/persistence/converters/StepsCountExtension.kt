@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.SC
-import app.aaps.database.entities.StepsCount
+import app.gmaaps.core.data.model.SC
+import app.gmaaps.database.entities.StepsCount
 
 fun StepsCount.fromDb(): SC =
     SC(
@@ -42,3 +42,4 @@ fun SC.toDb(): StepsCount =
         device = this.device,
         interfaceIDs_backing = this.ids.toDb()
     )
+

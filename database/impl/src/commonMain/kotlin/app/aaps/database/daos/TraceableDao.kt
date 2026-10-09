@@ -1,9 +1,9 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Insert
 import androidx.room.Update
-import app.aaps.database.daos.workaround.TraceableDaoWorkaround
-import app.aaps.database.entities.interfaces.TraceableDBEntry
+import app.gmaaps.database.daos.workaround.TraceableDaoWorkaround
+import app.gmaaps.database.entities.interfaces.TraceableDBEntry
 import kotlin.time.Clock
 
 /**

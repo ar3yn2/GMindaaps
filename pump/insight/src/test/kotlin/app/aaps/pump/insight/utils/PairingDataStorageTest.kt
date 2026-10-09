@@ -1,9 +1,9 @@
-package app.aaps.pump.insight.utils
+﻿package app.gmaaps.pump.insight.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import app.aaps.pump.insight.descriptors.FirmwareVersions
-import app.aaps.pump.insight.descriptors.SystemIdentification
+import app.gmaaps.pump.insight.descriptors.FirmwareVersions
+import app.gmaaps.pump.insight.descriptors.SystemIdentification
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.any
@@ -68,7 +68,7 @@ class PairingDataStorageTest {
     /** A new storage over the same preferences - what the driver gets after the app restarts. */
     private fun reload(): PairingDataStorage {
         val context = mock<Context>()
-        whenever(context.packageName).thenReturn("app.aaps.pump.insight")
+        whenever(context.packageName).thenReturn("app.gmaaps.pump.insight")
         whenever(context.getSharedPreferences(any<String>(), any<Int>())).thenReturn(store)
         return PairingDataStorage(context)
     }
@@ -201,3 +201,4 @@ class PairingDataStorageTest {
         assertThat(restarted.systemIdentification).isNull()
     }
 }
+

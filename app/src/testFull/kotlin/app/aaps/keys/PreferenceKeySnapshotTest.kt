@@ -1,9 +1,9 @@
-package app.aaps.keys
+﻿package app.gmaaps.keys
 
-import app.aaps.core.keys.interfaces.ComposedKey
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.di.metro.AppRootGraph
-import app.aaps.shared.tests.aapsClassesOnClasspath
+import app.gmaaps.core.keys.interfaces.ComposedKey
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.di.metro.AppRootGraph
+import app.gmaaps.shared.tests.aapsClassesOnClasspath
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import java.io.File
@@ -107,3 +107,4 @@ class PreferenceKeySnapshotTest {
         return checkNotNull(dir) { "Could not find the repository root above ${System.getProperty("user.dir")}" }
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.definition
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.definition
 
-import app.aaps.pump.omnipod.common.bledriver.pod.util.HasValue
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.HasValue
 
 enum class AlertType(val index: Byte) : HasValue {
 
@@ -21,3 +21,4 @@ enum class AlertType(val index: Byte) : HasValue {
             (1 shl index.toInt()).toByte()
         }
 }
+

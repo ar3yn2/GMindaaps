@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol.compose
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol.compose
 
 import android.view.WindowManager
 import androidx.activity.compose.LocalActivity
@@ -26,3 +26,4 @@ actual fun blockScreenshotsWhileVisible(): Boolean {
     // "protected" would be a lie.
     return activity != null
 }
+

@@ -1,24 +1,24 @@
-package app.aaps.plugins.sync.nsclientV3.services
+﻿package app.gmaaps.plugins.sync.nsclientV3.services
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.RunningConfigurationKeys
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventConfigBuilderChange
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.nssdk.interfaces.RunningConfiguration
-import app.aaps.core.nssdk.localmodel.clientcontrol.ClientState
-import app.aaps.core.objects.extensions.observeChange
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.SettingsIdentifiers
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.AuthorizedClientsRepository
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.clientControlOperational
-import app.aaps.plugins.sync.nsclientV3.services.RunningConfigurationPublisher.Companion.COLD_DEBOUNCE_MS
-import app.aaps.plugins.sync.nsclientV3.services.RunningConfigurationPublisher.Companion.HOT_DEBOUNCE_MS
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.RunningConfigurationKeys
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventConfigBuilderChange
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.nssdk.interfaces.RunningConfiguration
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.ClientState
+import app.gmaaps.core.objects.extensions.observeChange
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.SettingsIdentifiers
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.AuthorizedClientsRepository
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.clientControlOperational
+import app.gmaaps.plugins.sync.nsclientV3.services.RunningConfigurationPublisher.Companion.COLD_DEBOUNCE_MS
+import app.gmaaps.plugins.sync.nsclientV3.services.RunningConfigurationPublisher.Companion.HOT_DEBOUNCE_MS
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -247,3 +247,4 @@ class RunningConfigurationPublisher(
         private const val SYNCED_PREFS = "syncedPrefs"
     }
 }
+

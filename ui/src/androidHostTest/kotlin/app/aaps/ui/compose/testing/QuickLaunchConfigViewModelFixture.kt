@@ -1,19 +1,19 @@
-package app.aaps.ui.compose.testing
+﻿package app.gmaaps.ui.compose.testing
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import app.aaps.core.interfaces.automation.Automation
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.scenes.SceneStore
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.objects.wizard.QuickWizard
-import app.aaps.ui.compose.quickLaunch.QuickLaunchAction
-import app.aaps.ui.compose.quickLaunch.QuickLaunchConfigViewModel
-import app.aaps.ui.compose.quickLaunch.QuickLaunchResolver
-import app.aaps.ui.compose.quickLaunch.QuickLaunchSerializer
-import app.aaps.ui.compose.quickLaunch.ResolvedQuickLaunchItem
+import app.gmaaps.core.interfaces.automation.Automation
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.scenes.SceneStore
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.objects.wizard.QuickWizard
+import app.gmaaps.ui.compose.quickLaunch.QuickLaunchAction
+import app.gmaaps.ui.compose.quickLaunch.QuickLaunchConfigViewModel
+import app.gmaaps.ui.compose.quickLaunch.QuickLaunchResolver
+import app.gmaaps.ui.compose.quickLaunch.QuickLaunchSerializer
+import app.gmaaps.ui.compose.quickLaunch.ResolvedQuickLaunchItem
 import kotlinx.coroutines.flow.MutableStateFlow
 import org.mockito.kotlin.any
 import org.mockito.kotlin.doAnswer
@@ -98,3 +98,4 @@ class QuickLaunchConfigViewModelFixture(private val screen: AapsScreenFixture) {
         sceneStore, resolver, visibilityContext
     )
 }
+

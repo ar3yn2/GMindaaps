@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.scan
+﻿package app.gmaaps.pump.eopatch.core.scan
 
 import com.polidea.rxandroidble3.scan.ScanResult
 import kotlin.math.abs
@@ -52,3 +52,4 @@ class ScanList : HashMap<String, Int>() {
         private const val PATCH_FINAL_RSSI = -70
     }
 }
+

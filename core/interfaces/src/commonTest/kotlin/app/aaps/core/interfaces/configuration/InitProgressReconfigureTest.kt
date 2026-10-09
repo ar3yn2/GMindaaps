@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.configuration
+﻿package app.gmaaps.core.interfaces.configuration
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -76,3 +76,4 @@ class InitProgressReconfigureTest {
         assertEquals(original, round)
     }
 }
+

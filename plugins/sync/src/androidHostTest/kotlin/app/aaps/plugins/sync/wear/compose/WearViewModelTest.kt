@@ -1,24 +1,24 @@
-package app.aaps.plugins.sync.wear.compose
+﻿package app.gmaaps.plugins.sync.wear.compose
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.maintenance.FileListProvider
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.Event
-import app.aaps.core.interfaces.rx.events.EventMobileToWear
-import app.aaps.core.interfaces.rx.events.EventWearUpdateGui
-import app.aaps.core.interfaces.rx.weardata.CwfData
-import app.aaps.core.interfaces.rx.weardata.CwfFile
-import app.aaps.core.interfaces.rx.weardata.CwfMetadataKey
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.versionChecker.VersionCheckerUtils
-import app.aaps.core.keys.PushedWatchfaceId
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.plugins.sync.wear.WearPlugin
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.maintenance.FileListProvider
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.events.EventMobileToWear
+import app.gmaaps.core.interfaces.rx.events.EventWearUpdateGui
+import app.gmaaps.core.interfaces.rx.weardata.CwfData
+import app.gmaaps.core.interfaces.rx.weardata.CwfFile
+import app.gmaaps.core.interfaces.rx.weardata.CwfMetadataKey
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.versionChecker.VersionCheckerUtils
+import app.gmaaps.core.keys.PushedWatchfaceId
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.plugins.sync.wear.WearPlugin
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -299,3 +299,4 @@ internal class WearViewModelTest {
         assertThat(sut.uiState.value.showInfos).isFalse()
     }
 }
+

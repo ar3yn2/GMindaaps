@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.entry
+﻿package app.gmaaps.core.nssdk.localmodel.entry
 
 import kotlinx.serialization.Serializable
 
@@ -24,3 +24,4 @@ data class NSMbgV3(
     val units: NsUnits,
     val isCalibration: Boolean = true
 )
+

@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.HeartRateDao
-import app.aaps.database.entities.HeartRate
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.HeartRateDao
+import app.gmaaps.database.entities.HeartRate
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedHeartRateDao(
     changes: MutableList<DBEntry>,
@@ -19,3 +19,4 @@ internal class DelegatedHeartRateDao(
         return dao.updateExistingEntry(entry)
     }
 }
+

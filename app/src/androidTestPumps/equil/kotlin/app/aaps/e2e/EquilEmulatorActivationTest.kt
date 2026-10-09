@@ -1,4 +1,4 @@
-package app.aaps.e2e
+﻿package app.gmaaps.e2e
 
 import android.Manifest
 import android.content.Context
@@ -6,37 +6,37 @@ import android.os.SystemClock
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.work.WorkManager
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.Command
-import app.aaps.core.keys.BooleanComposedKey
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.objects.extensions.singleBlock
-import app.aaps.core.objects.extensions.singleTargetBlock
-import app.aaps.di.EmulatedOptions
-import app.aaps.di.ResetGraphRule
-import app.aaps.di.testGraphs
-import app.aaps.pump.equil.compose.EquilHistoryViewModel
-import app.aaps.pump.equil.compose.EquilOverviewViewModel
-import app.aaps.pump.equil.compose.EquilWizardStep
-import app.aaps.pump.equil.compose.EquilWizardViewModel
-import app.aaps.pump.equil.compose.EquilWorkflow
-import app.aaps.pump.equil.data.RunMode
-import app.aaps.pump.equil.di.EquilAccessors
-import app.aaps.pump.equil.driver.definition.ActivationProgress
-import app.aaps.pump.equil.driver.definition.EquilHistoryEntryGroup
-import app.aaps.pump.equil.emulator.EquilEmulatorBleTransport
-import app.aaps.pump.equil.keys.EquilStringKey
-import app.aaps.pump.equil.manager.command.CmdModelSet
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.Command
+import app.gmaaps.core.keys.BooleanComposedKey
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.objects.extensions.singleBlock
+import app.gmaaps.core.objects.extensions.singleTargetBlock
+import app.gmaaps.di.EmulatedOptions
+import app.gmaaps.di.ResetGraphRule
+import app.gmaaps.di.testGraphs
+import app.gmaaps.pump.equil.compose.EquilHistoryViewModel
+import app.gmaaps.pump.equil.compose.EquilOverviewViewModel
+import app.gmaaps.pump.equil.compose.EquilWizardStep
+import app.gmaaps.pump.equil.compose.EquilWizardViewModel
+import app.gmaaps.pump.equil.compose.EquilWorkflow
+import app.gmaaps.pump.equil.data.RunMode
+import app.gmaaps.pump.equil.di.EquilAccessors
+import app.gmaaps.pump.equil.driver.definition.ActivationProgress
+import app.gmaaps.pump.equil.driver.definition.EquilHistoryEntryGroup
+import app.gmaaps.pump.equil.emulator.EquilEmulatorBleTransport
+import app.gmaaps.pump.equil.keys.EquilStringKey
+import app.gmaaps.pump.equil.manager.command.CmdModelSet
 import com.google.common.truth.Truth.assertThat
 import com.google.common.truth.Truth.assertWithMessage
 import kotlinx.coroutines.CoroutineScope
@@ -527,3 +527,4 @@ class EquilEmulatorActivationTest {
         private const val EXTENDED_DURATION_MIN = 30
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -30,17 +30,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.config.FillConfig
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.config.FillConfig
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import kotlin.math.abs
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Wizard step for choosing the insulin fill amount. Replaces the former bottom sheet so the choice
@@ -207,3 +207,4 @@ private fun WheelSelectionOverlay() {
         HorizontalDivider(modifier = Modifier.align(Alignment.BottomCenter))
     }
 }
+

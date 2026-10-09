@@ -1,7 +1,7 @@
-package app.aaps.implementation.maintenance.cloud
+﻿package app.gmaaps.implementation.maintenance.cloud
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.addressOf
 import kotlinx.cinterop.alloc
@@ -229,3 +229,4 @@ class IosLoopbackAuthServerTest {
         private const val STATE = "xyz"
     }
 }
+

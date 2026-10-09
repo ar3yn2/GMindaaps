@@ -1,6 +1,6 @@
-package app.aaps.ios.shell.platform
+﻿package app.gmaaps.ios.shell.platform
 
-import app.aaps.core.interfaces.bgQualityCheck.BgQualityCheck
+import app.gmaaps.core.interfaces.bgQualityCheck.BgQualityCheck
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -53,3 +53,4 @@ class IosBgQualityCheck() : BgQualityCheck {
     /** Empty rather than a sentence: the badge this describes is never shown on a client. */
     override fun stateDescription(): String = ""
 }
+

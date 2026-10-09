@@ -1,4 +1,4 @@
-package app.aaps.core.keys.interfaces
+﻿package app.gmaaps.core.keys.interfaces
 
 /**
  * Which running-config document a synced preference rides in:
@@ -34,3 +34,4 @@ data class SyncSpec(
     val channel: SyncChannel,
     val direction: SyncDirection
 )
+

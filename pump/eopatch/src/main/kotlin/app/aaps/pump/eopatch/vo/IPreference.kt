@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.Preferences
 import io.reactivex.rxjava3.core.Observable
 
 interface IPreference<T : Any> {

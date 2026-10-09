@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.eros.event
+﻿package app.gmaaps.pump.omnipod.eros.event
 
-import app.aaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.events.Event
 
 /**
  * Created by andy on 04.06.2018.

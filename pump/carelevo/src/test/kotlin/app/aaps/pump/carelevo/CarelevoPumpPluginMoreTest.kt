@@ -1,16 +1,16 @@
-package app.aaps.pump.carelevo
+﻿package app.gmaaps.pump.carelevo
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.carelevo.command.CmdPumpResume
-import app.aaps.pump.carelevo.command.CmdTimeZoneUpdate
-import app.aaps.pump.carelevo.common.keys.CarelevoBooleanPreferenceKey
-import app.aaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
-import app.aaps.pump.carelevo.common.model.PatchState
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.carelevo.command.CmdPumpResume
+import app.gmaaps.pump.carelevo.command.CmdTimeZoneUpdate
+import app.gmaaps.pump.carelevo.common.keys.CarelevoBooleanPreferenceKey
+import app.gmaaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
+import app.gmaaps.pump.carelevo.common.model.PatchState
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Test
@@ -30,7 +30,7 @@ import java.util.Optional
  *
  * Covers the plugin surface those suites leave untouched: the `isConfigured` activation gate, the
  * `setNewBasalProfile` state branch, the CustomCommand routing to
- * [app.aaps.pump.carelevo.command.CarelevoActivationExecutor], the `_lastDataTime` bookkeeping, the
+ * [app.gmaaps.pump.carelevo.command.CarelevoActivationExecutor], the `_lastDataTime` bookkeeping, the
  * remaining `timezoneOrDSTChanged` branches and the preference-screen definition.
  *
  * The lifecycle half of the plugin (onStart/onStop, the preference observers, the deferred
@@ -312,3 +312,4 @@ class CarelevoPumpPluginMoreTest : CarelevoPumpPluginTestBase() {
         assertThat(plugin.isSuspended()).isFalse()
     }
 }
+

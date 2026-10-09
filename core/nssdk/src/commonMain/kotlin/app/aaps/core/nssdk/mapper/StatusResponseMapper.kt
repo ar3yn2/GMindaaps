@@ -1,7 +1,7 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.localmodel.Status
-import app.aaps.core.nssdk.remotemodel.RemoteStatusResponse
+import app.gmaaps.core.nssdk.localmodel.Status
+import app.gmaaps.core.nssdk.remotemodel.RemoteStatusResponse
 
 internal fun RemoteStatusResponse.toLocal() = Status(
     version = version,
@@ -10,3 +10,4 @@ internal fun RemoteStatusResponse.toLocal() = Status(
     storage = storage.toLocal(),
     apiPermissions = apiPermissions.toLocal()
 )
+

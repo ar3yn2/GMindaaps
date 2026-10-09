@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.response
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.response
 
-import app.aaps.pump.omnipod.common.bledriver.pod.util.HasValue
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.HasValue
 
 enum class ResponseType(override val value: Byte) : HasValue {
 
@@ -31,3 +31,4 @@ enum class ResponseType(override val value: Byte) : HasValue {
         UNKNOWN(0xff.toByte());
     }
 }
+

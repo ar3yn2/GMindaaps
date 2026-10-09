@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.pump.eopatch.code.PatchLifecycle
+import app.gmaaps.pump.eopatch.code.PatchLifecycle
 import com.google.common.base.Preconditions
 
 class PatchLifecycleEvent {
@@ -107,3 +107,4 @@ class PatchLifecycleEvent {
         }
     }
 }
+

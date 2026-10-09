@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.compose
+﻿package app.gmaaps.pump.insight.compose
 
 import android.content.Context
 import androidx.compose.foundation.layout.RowScope
@@ -21,34 +21,34 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.pump.ActionCategory
-import app.aaps.core.ui.compose.pump.BlePreCheckHost
-import app.aaps.core.ui.compose.pump.PumpAction
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.core.ui.compose.pump.PumpOverviewScreen
-import app.aaps.core.ui.compose.pump.PumpOverviewUiState
-import app.aaps.pump.insight.InsightPlugin
-import app.aaps.pump.insight.R
-import app.aaps.pump.insight.connection_service.InsightConnectionService
-import app.aaps.pump.insight.descriptors.BolusType
-import app.aaps.pump.insight.descriptors.InsightState
-import app.aaps.pump.insight.descriptors.OperatingMode
-import app.aaps.pump.insight.events.EventLocalInsightUpdateGUI
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.pump.ActionCategory
+import app.gmaaps.core.ui.compose.pump.BlePreCheckHost
+import app.gmaaps.core.ui.compose.pump.PumpAction
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.core.ui.compose.pump.PumpOverviewScreen
+import app.gmaaps.core.ui.compose.pump.PumpOverviewUiState
+import app.gmaaps.pump.insight.InsightPlugin
+import app.gmaaps.pump.insight.R
+import app.gmaaps.pump.insight.connection_service.InsightConnectionService
+import app.gmaaps.pump.insight.descriptors.BolusType
+import app.gmaaps.pump.insight.descriptors.InsightState
+import app.gmaaps.pump.insight.descriptors.OperatingMode
+import app.gmaaps.pump.insight.events.EventLocalInsightUpdateGUI
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
@@ -59,7 +59,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 private enum class InsightScreen { OVERVIEW, PAIR_WIZARD }
 
@@ -311,7 +311,7 @@ internal class InsightOverviewState(
         val statusRes = when (service.state) {
             InsightState.NOT_PAIRED   -> R.string.not_paired
             InsightState.DISCONNECTED -> CoreUiR.string.disconnected
-            InsightState.CONNECTED    -> app.aaps.core.interfaces.R.string.connected
+            InsightState.CONNECTED    -> app.gmaaps.core.interfaces.R.string.connected
             InsightState.RECOVERING   -> R.string.recovering
             else                      -> CoreUiR.string.connecting
         }
@@ -522,3 +522,4 @@ internal class InsightOverviewState(
         }
     }
 }
+

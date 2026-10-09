@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.BasalInsulinProgramElement
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.BasalShortInsulinProgramElement
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.CurrentBasalInsulinProgramElement
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.CurrentSlot
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.ShortInsulinProgramElement
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
-import app.aaps.pump.omnipod.common.bledriver.pod.util.MessageUtil
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.BasalInsulinProgramElement
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.BasalShortInsulinProgramElement
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.CurrentBasalInsulinProgramElement
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.CurrentSlot
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.ShortInsulinProgramElement
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.MessageUtil
 import java.nio.ByteBuffer
 import java.util.Calendar
 import java.util.Date
@@ -259,3 +259,4 @@ object ProgramBasalUtil {
         return MessageUtil.calculateChecksum(buffer.array())
     }
 }
+

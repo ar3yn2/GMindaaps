@@ -1,12 +1,12 @@
-package app.aaps.core.ui.extensions
+﻿package app.gmaaps.core.ui.extensions
 
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.TT
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.ui.CoreUiStrings
 import kotlin.time.Duration.Companion.milliseconds
 
 /**
@@ -27,3 +27,4 @@ fun TT.friendlyDescription(units: GlucoseUnit, rh: TextResolver, profileUtil: Pr
     profileUtil.toTargetRangeString(lowTarget, highTarget, GlucoseUnit.MGDL, units) +
         profileUtil.unitLabel +
         "@" + rh.gs(CoreUiStrings.format_mins, duration.milliseconds.inWholeMinutes) + "(" + reason.text + ")"
+

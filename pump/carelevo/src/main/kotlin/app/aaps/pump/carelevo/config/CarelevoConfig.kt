@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.config
+﻿package app.gmaaps.pump.carelevo.config
 
 class BleEnvConfig {
     companion object {
@@ -25,7 +25,7 @@ class FillConfig {
 }
 
 // PrefEnvConfig was here. Its seven preference keys are now
-// app.aaps.pump.carelevo.common.keys.CarelevoStringNonKey, registered through the plugin's
+// app.gmaaps.pump.carelevo.common.keys.CarelevoStringNonKey, registered through the plugin's
 // ownPreferences, so the preference registry can see them - an unregistered key looks like rubbish to
 // a settings import, and these hold the state of a running patch. The stored key strings are
 // unchanged; CarelevoStringNonKeyTest pins them, as this file's own test used to.

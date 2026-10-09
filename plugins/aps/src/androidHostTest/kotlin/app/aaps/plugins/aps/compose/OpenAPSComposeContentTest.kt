@@ -1,16 +1,16 @@
-package app.aaps.plugins.aps.compose
+﻿package app.gmaaps.plugins.aps.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.interfaces.aps.APS
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.plugins.aps.events.EventOpenAPSUpdateGui
-import app.aaps.plugins.aps.events.EventResetOpenAPSGui
+import app.gmaaps.core.interfaces.aps.APS
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.plugins.aps.events.EventOpenAPSUpdateGui
+import app.gmaaps.plugins.aps.events.EventResetOpenAPSGui
 import kotlinx.coroutines.flow.emptyFlow
 import org.junit.Rule
 import org.junit.Test
@@ -53,3 +53,4 @@ class OpenAPSComposeContentTest {
         compose.onNodeWithText("N/A").assertIsDisplayed()
     }
 }
+

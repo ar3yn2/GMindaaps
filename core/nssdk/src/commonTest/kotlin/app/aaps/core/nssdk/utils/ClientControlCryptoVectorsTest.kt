@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.utils
+﻿package app.gmaaps.core.nssdk.utils
 
 import kotlin.test.Test
 import kotlin.test.assertContentEquals
@@ -170,3 +170,4 @@ class ClientControlCryptoVectorsTest {
         assertNull(ClientControlPairingCrypto.unwrap(wrapped, pin = "11111111", salt = salt, iv = iv3))
     }
 }
+

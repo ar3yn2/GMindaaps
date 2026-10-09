@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
 
-import app.aaps.pump.omnipod.eros.driver.definition.PodInfoType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodInfoType;
 
 public abstract class PodInfo {
     private final byte[] encodedData;
@@ -15,3 +15,4 @@ public abstract class PodInfo {
         return encodedData;
     }
 }
+

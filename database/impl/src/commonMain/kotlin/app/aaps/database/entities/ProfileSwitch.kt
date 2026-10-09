@@ -1,17 +1,17 @@
-package app.aaps.database.entities
+﻿package app.gmaaps.database.entities
 
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import app.aaps.database.entities.data.Block
-import app.aaps.database.entities.data.GlucoseUnit
-import app.aaps.database.entities.data.TargetBlock
-import app.aaps.database.entities.embedments.InsulinConfiguration
-import app.aaps.database.entities.embedments.InterfaceIDs
-import app.aaps.database.entities.interfaces.DBEntryWithTimeAndDuration
-import app.aaps.database.entities.interfaces.TraceableDBEntry
+import app.gmaaps.database.entities.data.Block
+import app.gmaaps.database.entities.data.GlucoseUnit
+import app.gmaaps.database.entities.data.TargetBlock
+import app.gmaaps.database.entities.embedments.InsulinConfiguration
+import app.gmaaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.entities.interfaces.DBEntryWithTimeAndDuration
+import app.gmaaps.database.entities.interfaces.TraceableDBEntry
 
 @Entity(
     tableName = TABLE_PROFILE_SWITCHES,

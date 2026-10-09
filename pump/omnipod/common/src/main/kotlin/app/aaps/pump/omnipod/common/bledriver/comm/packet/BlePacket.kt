@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.packet
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.packet
 
-import app.aaps.pump.omnipod.common.bledriver.comm.message.IncorrectPacketException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.IncorrectPacketException
 import java.nio.ByteBuffer
 
 sealed class BlePacket {
@@ -200,3 +200,4 @@ private fun ByteArray.assertSizeAtLeast(size: Int, index: Byte? = null) {
         throw IncorrectPacketException(this, index)
     }
 }
+

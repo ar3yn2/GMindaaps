@@ -1,29 +1,29 @@
-package app.aaps.pump.diaconn.compose
+﻿package app.gmaaps.pump.diaconn.compose
 
 import android.content.Context
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.TB
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventInitializationChanged
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventQueueChanged
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.pump.diaconn.DiaconnG8Pump
-import app.aaps.pump.diaconn.R
-import app.aaps.pump.diaconn.events.EventDiaconnG8NewStatus
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventInitializationChanged
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventQueueChanged
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.pump.diaconn.DiaconnG8Pump
+import app.gmaaps.pump.diaconn.R
+import app.gmaaps.pump.diaconn.events.EventDiaconnG8NewStatus
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.schedulers.Schedulers
 import kotlinx.coroutines.Dispatchers
@@ -41,11 +41,11 @@ import org.mockito.MockitoAnnotations
 import org.mockito.kotlin.any
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.whenever
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Unit test for [DiaconnOverviewViewModel] state assembly. Constructs the VM directly with mocked
- * ctor deps and asserts the initial [app.aaps.core.ui.compose.pump.PumpOverviewUiState] produced by
+ * ctor deps and asserts the initial [app.gmaaps.core.ui.compose.pump.PumpOverviewUiState] produced by
  * buildInitialState(). The rendering itself is covered by core:ui's PumpOverviewScreenTest
  * (DiaconnOverviewScreen just delegates to PumpOverviewScreen).
  */
@@ -160,3 +160,4 @@ internal class DiaconnOverviewViewModelTest {
         assertThat(state.managementActions.map { it.label }).contains("Unpair")
     }
 }
+

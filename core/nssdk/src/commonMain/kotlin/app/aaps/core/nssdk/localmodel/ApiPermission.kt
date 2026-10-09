@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel
+﻿package app.gmaaps.core.nssdk.localmodel
 
 data class ApiPermission(
     val create: Boolean,
@@ -10,3 +10,4 @@ data class ApiPermission(
     val full: Boolean
         get() = this.create && this.read && this.update && this.delete
 }
+

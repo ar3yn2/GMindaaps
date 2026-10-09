@@ -1,12 +1,12 @@
-package app.aaps.implementation.scenes
+﻿package app.gmaaps.implementation.scenes
 
-import app.aaps.core.data.model.ActiveSceneState
-import app.aaps.core.data.model.Scene
-import app.aaps.core.data.model.SceneEndAction
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.configuration.InitProgress
-import app.aaps.core.objects.workflow.WorkOutcome
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.ActiveSceneState
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.data.model.SceneEndAction
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.configuration.InitProgress
+import app.gmaaps.core.objects.workflow.WorkOutcome
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.test.runTest
@@ -118,3 +118,4 @@ class SceneExpiryRunnerTest : TestBaseWithProfile() {
         verify(sceneRepository).getScene("target")
     }
 }
+

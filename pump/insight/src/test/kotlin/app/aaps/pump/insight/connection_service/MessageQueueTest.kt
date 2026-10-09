@@ -1,7 +1,7 @@
-package app.aaps.pump.insight.connection_service
+﻿package app.gmaaps.pump.insight.connection_service
 
-import app.aaps.pump.insight.app_layer.AppLayerMessage
-import app.aaps.pump.insight.descriptors.MessagePriority
+import app.gmaaps.pump.insight.app_layer.AppLayerMessage
+import app.gmaaps.pump.insight.descriptors.MessagePriority
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -193,3 +193,4 @@ class MessageQueueTest {
         assertThat(sut.hasPendingMessages()).isFalse()
     }
 }
+

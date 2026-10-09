@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import android.content.Context
 import androidx.compose.material3.SnackbarHostState
@@ -13,49 +13,49 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
 import androidx.lifecycle.viewmodel.compose.LocalViewModelStoreOwner
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.PS
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.InsulinManager
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.profile.ProfileStore
-import app.aaps.core.interfaces.profile.SingleProfile
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.ble.BleScanner
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.AapsTheme
-import app.aaps.core.ui.compose.LocalMetroViewModelFactory
-import app.aaps.core.ui.compose.LocalPreferences
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.siteRotation.BodyType
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.ble.CarelevoBleTransport
-import app.aaps.pump.carelevo.command.CarelevoActivationExecutor
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.common.model.PatchState
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
-import app.aaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoConnectNewPatchUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchForceDiscardUseCase
-import app.aaps.pump.carelevo.presentation.model.CarelevoConnectEvent
-import app.aaps.pump.carelevo.presentation.type.CarelevoPatchStep
-import app.aaps.pump.carelevo.presentation.type.CarelevoScreenType
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectViewModel
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchNeedleInsertionViewModel
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchSafetyCheckViewModel
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.InsulinManager
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.profile.ProfileStore
+import app.gmaaps.core.interfaces.profile.SingleProfile
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.ble.BleScanner
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.AapsTheme
+import app.gmaaps.core.ui.compose.LocalMetroViewModelFactory
+import app.gmaaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.siteRotation.BodyType
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.ble.CarelevoBleTransport
+import app.gmaaps.pump.carelevo.command.CarelevoActivationExecutor
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.common.model.PatchState
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
+import app.gmaaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoConnectNewPatchUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchForceDiscardUseCase
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoConnectEvent
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoPatchStep
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoScreenType
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectViewModel
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchNeedleInsertionViewModel
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchSafetyCheckViewModel
 import com.google.common.truth.Truth.assertThat
 import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactory
 import dev.zacsweers.metrox.viewmodel.MetroViewModelFactory
@@ -92,7 +92,7 @@ import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
 import java.util.Optional
 import kotlin.reflect.KClass
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Compose render tests for the activation wizard host [CarelevoPatchFlowScreen]: step routing, the
@@ -113,7 +113,7 @@ import app.aaps.core.ui.R as CoreUiR
  * **Rx.** [AapsSchedulers.io] / `main` are the trampoline so the force-discard chain runs inline. The
  * Loading tests exploit that chain: `startPatchDiscardProcess` on a connected patch sets Loading, the
  * queued `CmdDiscard` is stubbed to fail, and the force-discard fallback returns `Single.never()` — so
- * the ViewModel parks in [app.aaps.pump.carelevo.common.model.UiState.Loading] and the scrim stays up.
+ * the ViewModel parks in [app.gmaaps.pump.carelevo.common.model.UiState.Loading] and the scrim stays up.
  */
 @OptIn(ExperimentalCoroutinesApi::class)
 @RunWith(RobolectricTestRunner::class)
@@ -657,3 +657,4 @@ private class TestMetroViewModelFactory(
     override val manualAssistedFactoryProviders:
         Map<KClass<out ManualViewModelAssistedFactory>, () -> ManualViewModelAssistedFactory> = emptyMap()
 }
+

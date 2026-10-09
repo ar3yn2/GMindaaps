@@ -1,7 +1,7 @@
-package app.aaps.plugins.constraints.objectives.objectives
+﻿package app.gmaaps.plugins.constraints.objectives.objectives
 
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.resources.ResourceHelper
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -28,9 +28,10 @@ class AndroidDurationText(
         val hours = floor(durationMs.toDouble() / T.hours(1).msecs()).toInt()
         val minutes = floor(durationMs.toDouble() / T.mins(1).msecs()).toInt()
         return when {
-            days > 0  -> rh.gq(app.aaps.core.ui.R.plurals.days, days, days)
-            hours > 0 -> rh.gq(app.aaps.core.ui.R.plurals.hours, hours, hours)
-            else      -> rh.gq(app.aaps.core.ui.R.plurals.minutes, minutes, minutes)
+            days > 0  -> rh.gq(app.gmaaps.core.ui.R.plurals.days, days, days)
+            hours > 0 -> rh.gq(app.gmaaps.core.ui.R.plurals.hours, hours, hours)
+            else      -> rh.gq(app.gmaaps.core.ui.R.plurals.minutes, minutes, minutes)
         }
     }
 }
+

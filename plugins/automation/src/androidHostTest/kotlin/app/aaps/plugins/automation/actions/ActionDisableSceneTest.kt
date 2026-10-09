@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.data.model.Scene
-import app.aaps.core.interfaces.scenes.SceneAutomationResult
-import app.aaps.plugins.automation.AutomationStrings
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.interfaces.scenes.SceneAutomationResult
+import app.gmaaps.plugins.automation.AutomationStrings
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -83,3 +83,4 @@ class ActionDisableSceneTest : ActionsTestBase() {
         assertThat(sut.isValid()).isFalse()
     }
 }
+

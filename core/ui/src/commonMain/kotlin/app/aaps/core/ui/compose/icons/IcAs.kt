@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.icons
+﻿package app.gmaaps.core.ui.compose.icons
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
@@ -56,3 +56,4 @@ val IcAs: ImageVector by lazy {
         }
     }.build()
 }
+

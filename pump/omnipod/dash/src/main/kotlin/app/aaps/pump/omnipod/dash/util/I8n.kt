@@ -1,11 +1,11 @@
-package app.aaps.pump.omnipod.dash.util
+﻿package app.gmaaps.pump.omnipod.dash.util
 
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.FailedToConnectException
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.NotConnectedException
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.ScanException
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.ScanFailFoundTooManyException
-import app.aaps.pump.omnipod.dash.R
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.FailedToConnectException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.NotConnectedException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.ScanException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.ScanFailFoundTooManyException
+import app.gmaaps.pump.omnipod.dash.R
 
 class I8n {
     companion object {
@@ -22,3 +22,4 @@ class I8n {
         }
     }
 }
+

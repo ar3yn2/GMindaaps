@@ -1,6 +1,6 @@
-package app.aaps.core.nssdk.localmodel.treatment
+﻿package app.gmaaps.core.nssdk.localmodel.treatment
 
-import app.aaps.core.nssdk.localmodel.entry.NsUnits
+import app.gmaaps.core.nssdk.localmodel.entry.NsUnits
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -30,3 +30,4 @@ data class NSExtendedBolus(
     val isEmulatingTempBasal: Boolean?,
     val rate: Double?
 ) : NSTreatment
+

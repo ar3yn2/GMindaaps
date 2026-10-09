@@ -1,16 +1,16 @@
-package app.aaps.appshell.navigation
+﻿package app.gmaaps.appshell.navigation
 
 import androidx.navigation.NavController
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.protection.AuthorizationResult
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.protection.ProtectionResult
-import app.aaps.core.interfaces.source.DexcomBoyda
-import app.aaps.core.ui.compose.ScreenMode
-import app.aaps.core.ui.compose.navigation.NavigationRequest
-import app.aaps.ui.compose.main.MainViewModel
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.protection.AuthorizationResult
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.protection.ProtectionResult
+import app.gmaaps.core.interfaces.source.DexcomBoyda
+import app.gmaaps.core.ui.compose.ScreenMode
+import app.gmaaps.core.ui.compose.navigation.NavigationRequest
+import app.gmaaps.ui.compose.main.MainViewModel
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -287,3 +287,4 @@ class ElementNavigatorTest {
 
     // endregion
 }
+

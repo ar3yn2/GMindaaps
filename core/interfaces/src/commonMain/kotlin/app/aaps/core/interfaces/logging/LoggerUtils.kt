@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.logging
+﻿package app.gmaaps.core.interfaces.logging
 
 interface LoggerUtils {
 

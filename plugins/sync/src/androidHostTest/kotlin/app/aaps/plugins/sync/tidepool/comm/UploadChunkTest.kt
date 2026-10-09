@@ -1,17 +1,17 @@
-package app.aaps.plugins.sync.tidepool.comm
+﻿package app.gmaaps.plugins.sync.tidepool.comm
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.sync.tidepool.elements.BolusElement
-import app.aaps.plugins.sync.tidepool.utils.GsonInstance
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.sync.tidepool.elements.BolusElement
+import app.gmaaps.plugins.sync.tidepool.utils.GsonInstance
 import com.google.common.truth.Truth.assertThat
 import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.test.runTest
@@ -76,3 +76,4 @@ class UploadChunkTest {
         return GsonInstance.defaultGsonInstance().fromJson(json, itemType)
     }
 }
+

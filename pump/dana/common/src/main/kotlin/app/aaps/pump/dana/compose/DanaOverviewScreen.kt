@@ -1,4 +1,4 @@
-package app.aaps.pump.dana.compose
+﻿package app.gmaaps.pump.dana.compose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,10 +10,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.ui.compose.pump.PumpOverviewScreen
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.R
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.ui.compose.pump.PumpOverviewScreen
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.R
 
 @Composable
 fun DanaOverviewScreen(
@@ -41,3 +41,4 @@ fun DanaOverviewScreen(
         }
     )
 }
+

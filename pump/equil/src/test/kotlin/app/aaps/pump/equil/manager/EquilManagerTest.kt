@@ -1,12 +1,12 @@
-package app.aaps.pump.equil.manager
+﻿package app.gmaaps.pump.equil.manager
 
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.pump.equil.R
-import app.aaps.pump.equil.ble.EquilBLE
-import app.aaps.pump.equil.database.EquilHistoryPumpDao
-import app.aaps.pump.equil.database.EquilHistoryRecordDao
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.pump.equil.R
+import app.gmaaps.pump.equil.ble.EquilBLE
+import app.gmaaps.pump.equil.database.EquilHistoryPumpDao
+import app.gmaaps.pump.equil.database.EquilHistoryRecordDao
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -87,3 +87,4 @@ class EquilManagerTest : TestBaseWithProfile() {
     }
 
 }
+

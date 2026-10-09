@@ -1,9 +1,9 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalWindowInfo
-import app.aaps.core.interfaces.utils.usesTwelveHourClock
+import app.gmaaps.core.interfaces.utils.usesTwelveHourClock
 import platform.Foundation.NSDateFormatter
 import platform.Foundation.NSDateFormatterNoStyle
 import platform.Foundation.NSDateFormatterShortStyle
@@ -50,3 +50,4 @@ actual fun is24HourClock(): Boolean {
 /** See the expect declaration: iOS cannot pin orientation from inside a view, so this does nothing. */
 @Composable
 actual fun LockPortraitOrientation() = Unit
+

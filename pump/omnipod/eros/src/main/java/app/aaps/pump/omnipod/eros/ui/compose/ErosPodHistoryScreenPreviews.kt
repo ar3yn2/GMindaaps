@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.ui.compose
+﻿package app.gmaaps.pump.omnipod.eros.ui.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -54,3 +54,4 @@ internal fun PreviewSimple() {
         )
     }
 }
+

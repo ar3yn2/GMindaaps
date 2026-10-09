@@ -1,13 +1,13 @@
-package app.aaps.implementation.receivers
+﻿package app.gmaaps.implementation.receivers
 
 import android.Manifest
 import android.bluetooth.BluetoothDevice
 import android.content.Intent
 import android.content.pm.PackageManager
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventBTChange
-import app.aaps.core.utils.extensions.safeGetParcelableExtra
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventBTChange
+import app.gmaaps.core.utils.extensions.safeGetParcelableExtra
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -129,3 +129,4 @@ class BTReceiverTest : TestBaseWithProfile() {
         verify(mockedRxBus, never()).send(any())
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.pump.medtrum.comm.enums
+﻿package app.gmaaps.pump.medtrum.comm.enums
 
 import androidx.annotation.StringRes
-import app.aaps.pump.medtrum.R
+import app.gmaaps.pump.medtrum.R
 
 enum class MedtrumPumpState(val state: Byte, @StringRes val label: Int) {
     NONE(0, R.string.alarm_none),
@@ -40,3 +40,4 @@ enum class MedtrumPumpState(val state: Byte, @StringRes val label: Int) {
             ?: throw IllegalAccessException("")
     }
 }
+

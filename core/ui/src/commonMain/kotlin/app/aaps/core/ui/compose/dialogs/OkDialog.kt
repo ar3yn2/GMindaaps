@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.AlertDialog
@@ -11,9 +11,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.window.DialogProperties
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.htmlToAnnotatedString
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.htmlToAnnotatedString
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * A simple alert dialog with a title, message, and OK button.
@@ -85,3 +85,4 @@ fun OkDialog(
         properties = DialogProperties(dismissOnBackPress = true, dismissOnClickOutside = true)
     )
 }
+

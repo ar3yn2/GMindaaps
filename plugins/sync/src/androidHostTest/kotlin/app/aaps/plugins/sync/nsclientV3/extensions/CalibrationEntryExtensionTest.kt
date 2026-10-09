@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.IDs
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.IDs
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -42,3 +42,4 @@ class CalibrationEntryExtensionTest {
         assertThat(current.onlyNsIdAdded(previous)).isFalse()
     }
 }
+

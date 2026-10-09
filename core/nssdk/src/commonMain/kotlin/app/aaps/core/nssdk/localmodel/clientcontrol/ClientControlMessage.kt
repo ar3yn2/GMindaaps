@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.clientcontrol
+﻿package app.gmaaps.core.nssdk.localmodel.clientcontrol
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -265,3 +265,4 @@ data class BatchActionDto(
         const val TYPE_THERAPY_EVENT_EDIT = "therapy_event_edit"
     }
 }
+

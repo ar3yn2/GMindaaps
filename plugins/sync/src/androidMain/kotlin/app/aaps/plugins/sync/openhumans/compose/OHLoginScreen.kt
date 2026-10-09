@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.openhumans.compose
+﻿package app.gmaaps.plugins.sync.openhumans.compose
 
 import android.net.Uri
 import androidx.activity.compose.BackHandler
@@ -43,13 +43,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.AapsTopAppBar
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.plugins.sync.openhumans.ui.OHLoginViewModel
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.AapsTopAppBar
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.plugins.sync.openhumans.ui.OHLoginViewModel
 
 @Composable
 internal fun OHLoginScreen(
@@ -415,3 +415,4 @@ internal fun DoneStep(onClose: () -> Unit) {
         }
     }
 }
+

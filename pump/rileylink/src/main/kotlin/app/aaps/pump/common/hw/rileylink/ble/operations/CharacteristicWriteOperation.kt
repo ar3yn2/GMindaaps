@@ -1,12 +1,12 @@
-package app.aaps.pump.common.hw.rileylink.ble.operations
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.operations
 
 import android.bluetooth.BluetoothGatt
 import android.bluetooth.BluetoothGattCharacteristic
 import android.os.SystemClock
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.common.hw.rileylink.ble.RileyLinkBLE
-import app.aaps.pump.common.hw.rileylink.ble.data.GattAttributes.lookup
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.common.hw.rileylink.ble.RileyLinkBLE
+import app.gmaaps.pump.common.hw.rileylink.ble.data.GattAttributes.lookup
 import java.util.UUID
 import java.util.concurrent.TimeUnit
 
@@ -53,3 +53,4 @@ class CharacteristicWriteOperation(private val aapsLogger: AAPSLogger, val gatt:
         operationComplete.release()
     }
 }
+

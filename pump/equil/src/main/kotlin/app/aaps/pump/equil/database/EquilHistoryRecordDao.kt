@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.database
+﻿package app.gmaaps.pump.equil.database
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -29,3 +29,4 @@ abstract class EquilHistoryRecordDao {
     @Query("SELECT * from $TABLE_EQUIL_HISTORY_RECORD WHERE timestamp >= :startTime and timestamp<=:endTime ORDER BY timestamp DESC")
     abstract suspend fun allSince(startTime: Long, endTime: Long): List<EquilHistoryRecord>
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.util
+﻿package app.gmaaps.pump.omnipod.common.util
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.profile.Profile.ProfileValue
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.Profile.ProfileValue
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.mock
@@ -107,3 +107,4 @@ class ProfileToBasalProgramTest {
         assertThat(basalProgramElement.basalRateInHundredthUnitsPerHour).isEqualTo(5)
     }
 }
+

@@ -1,17 +1,17 @@
-package app.aaps.plugins.sync.smsCommunicator
+﻿package app.gmaaps.plugins.sync.smsCommunicator
 
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.smsCommunicator.Sms
-import app.aaps.core.interfaces.smsCommunicator.SmsCommunicator
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.plugins.sync.smsCommunicator.otp.OneTimePassword
-import app.aaps.plugins.sync.smsCommunicator.otp.OneTimePasswordValidationResult
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.smsCommunicator.Sms
+import app.gmaaps.core.interfaces.smsCommunicator.SmsCommunicator
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.plugins.sync.smsCommunicator.otp.OneTimePassword
+import app.gmaaps.plugins.sync.smsCommunicator.otp.OneTimePasswordValidationResult
 import kotlinx.coroutines.delay
 
 /**
@@ -76,3 +76,4 @@ class AuthRequest(
         aapsLogger.debug(LTag.SMS, "Timed out SMS: " + requester.text)
     }
 }
+

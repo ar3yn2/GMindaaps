@@ -1,9 +1,9 @@
-package app.aaps.shared.tests
+﻿package app.gmaaps.shared.tests
 
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.shared.impl.rx.bus.RxBusImpl
-import app.aaps.shared.tests.rx.TestAapsSchedulers
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.shared.impl.rx.bus.RxBusImpl
+import app.gmaaps.shared.tests.rx.TestAapsSchedulers
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.extension.ExtendWith

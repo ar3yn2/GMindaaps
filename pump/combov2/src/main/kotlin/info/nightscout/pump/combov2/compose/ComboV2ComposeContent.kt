@@ -1,4 +1,4 @@
-package info.nightscout.pump.combov2.compose
+﻿package info.nightscout.pump.combov2.compose
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material.icons.Icons
@@ -14,10 +14,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.metroViewModel
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.metroViewModel
 import info.nightscout.pump.combov2.ComboV2Plugin
 import info.nightscout.pump.combov2.R
 
@@ -60,7 +60,7 @@ class ComboV2ComposeContent(
             IconButton(onClick = onNavigateBack) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = stringResource(app.aaps.core.ui.R.string.back)
+                    contentDescription = stringResource(app.gmaaps.core.ui.R.string.back)
                 )
             }
         }
@@ -72,7 +72,7 @@ class ComboV2ComposeContent(
             IconButton(onClick = leaveWizard) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = stringResource(app.aaps.core.ui.R.string.back)
+                    contentDescription = stringResource(app.gmaaps.core.ui.R.string.back)
                 )
             }
         }
@@ -81,7 +81,7 @@ class ComboV2ComposeContent(
                 IconButton(onClick = action) {
                     Icon(
                         imageVector = Icons.Filled.Settings,
-                        contentDescription = stringResource(app.aaps.core.ui.R.string.settings)
+                        contentDescription = stringResource(app.gmaaps.core.ui.R.string.settings)
                     )
                 }
             }
@@ -129,3 +129,4 @@ class ComboV2ComposeContent(
         }
     }
 }
+

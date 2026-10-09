@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.ui.compose
+﻿package app.gmaaps.pump.omnipod.common.ui.compose
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material.icons.Icons
@@ -15,21 +15,21 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.dialogs.OkDialog
-import app.aaps.core.ui.compose.pump.BlePreCheckHost
-import app.aaps.core.ui.compose.pump.KeepScreenOnEffect
-import app.aaps.core.ui.compose.pump.PumpOverviewScreen
-import app.aaps.core.ui.compose.pump.PumpOverviewUiState
-import app.aaps.pump.omnipod.common.ui.wizard.compose.ActivationType
-import app.aaps.pump.omnipod.common.ui.wizard.compose.OmnipodOverviewEvent
-import app.aaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardScreen
-import app.aaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardViewModel
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.dialogs.OkDialog
+import app.gmaaps.core.ui.compose.pump.BlePreCheckHost
+import app.gmaaps.core.ui.compose.pump.KeepScreenOnEffect
+import app.gmaaps.core.ui.compose.pump.PumpOverviewScreen
+import app.gmaaps.core.ui.compose.pump.PumpOverviewUiState
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.ActivationType
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.OmnipodOverviewEvent
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardScreen
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardViewModel
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /** Shared overview and wizard host for BLE pods only. */
 @Composable
@@ -172,3 +172,4 @@ fun OmnipodComposeHost(
         }
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.domain.model.userSetting
+﻿package app.gmaaps.pump.carelevo.domain.model.userSetting
 
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
 import kotlin.time.Clock
 import kotlin.time.Instant
 

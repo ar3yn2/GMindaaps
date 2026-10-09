@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.tidepool.compose
+﻿package app.gmaaps.plugins.sync.tidepool.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -21,3 +21,4 @@ internal fun TidepoolScreenPreview() {
         )
     }
 }
+

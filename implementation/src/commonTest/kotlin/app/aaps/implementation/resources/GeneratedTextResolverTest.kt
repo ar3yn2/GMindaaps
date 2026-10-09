@@ -1,7 +1,7 @@
-package app.aaps.implementation.resources
+﻿package app.gmaaps.implementation.resources
 
-import app.aaps.core.interfaces.resources.TextRefValueRegistry
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.resources.TextRefValueRegistry
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test
@@ -121,3 +121,4 @@ class GeneratedTextResolverTest {
         assertEquals(true, GeneratedTextResolver(compactScreen = true).shortTextMode())
     }
 }
+

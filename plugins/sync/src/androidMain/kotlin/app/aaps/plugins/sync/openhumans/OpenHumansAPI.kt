@@ -1,11 +1,11 @@
-package app.aaps.plugins.sync.openhumans
+﻿package app.gmaaps.plugins.sync.openhumans
 
 import android.annotation.SuppressLint
 import android.util.Base64
-import app.aaps.plugins.sync.di.BaseUrl
-import app.aaps.plugins.sync.di.ClientId
-import app.aaps.plugins.sync.di.ClientSecret
-import app.aaps.plugins.sync.di.RedirectUrl
+import app.gmaaps.plugins.sync.di.BaseUrl
+import app.gmaaps.plugins.sync.di.ClientId
+import app.gmaaps.plugins.sync.di.ClientSecret
+import app.gmaaps.plugins.sync.di.RedirectUrl
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.suspendCancellableCoroutine

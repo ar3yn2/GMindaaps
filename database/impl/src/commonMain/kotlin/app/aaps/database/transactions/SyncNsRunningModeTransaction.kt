@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.RunningMode
+import app.gmaaps.database.entities.RunningMode
 
 /**
  * Sync the RunningMode from NS
@@ -75,3 +75,4 @@ class SyncNsRunningModeTransaction(private val runningModes: List<RunningMode>, 
         val updatedDuration = mutableListOf<RunningMode>()
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.common.driver.refresh
+﻿package app.gmaaps.pump.common.driver.refresh
 
-import app.aaps.pump.common.driver.connector.defs.PumpCommandType
+import app.gmaaps.pump.common.driver.connector.defs.PumpCommandType
 
 /**
  * Created by andy on 04.07.2022.
@@ -18,3 +18,4 @@ enum class PumpDataRefreshType(val commandType: PumpCommandType?) {
     Custom_3(null),
     Custom_4(null),
 }
+

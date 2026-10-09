@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -19,9 +19,9 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import app.aaps.core.interfaces.pump.ble.ScannedDevice
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.interfaces.pump.ble.ScannedDevice
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Shared BLE device scan step for pump pairing wizards.
@@ -118,3 +118,4 @@ private fun DeviceItem(
         }
     }
 }
+

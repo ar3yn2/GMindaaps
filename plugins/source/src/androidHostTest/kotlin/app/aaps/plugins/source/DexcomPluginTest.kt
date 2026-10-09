@@ -1,8 +1,8 @@
-package app.aaps.plugins.source
+﻿package app.gmaaps.plugins.source
 
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -39,3 +39,4 @@ class DexcomPluginTest : TestBaseWithProfile() {
         assertThat(allPermissions).doesNotContain(DexcomPlugin.PERMISSION)
     }
 }
+

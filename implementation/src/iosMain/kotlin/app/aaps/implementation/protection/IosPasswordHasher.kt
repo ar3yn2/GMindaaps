@@ -1,8 +1,8 @@
-package app.aaps.implementation.protection
+﻿package app.gmaaps.implementation.protection
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.protection.PasswordHasher
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.protection.PasswordHasher
 import dev.whyoleg.cryptography.CryptographyProvider
 import dev.whyoleg.cryptography.algorithms.HMAC
 import dev.whyoleg.cryptography.algorithms.SHA256
@@ -74,3 +74,4 @@ class IosPasswordHasher(
         private const val HEX = "0123456789abcdef"
     }
 }
+

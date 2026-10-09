@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.domain.model.bt
+﻿package app.gmaaps.pump.carelevo.domain.model.bt
 
-import app.aaps.pump.carelevo.domain.model.RepositoryRequest
-import app.aaps.pump.carelevo.domain.model.basal.CarelevoBasalSegment
+import app.gmaaps.pump.carelevo.domain.model.RepositoryRequest
+import app.gmaaps.pump.carelevo.domain.model.basal.CarelevoBasalSegment
 
 internal interface TempBasalRequest
 

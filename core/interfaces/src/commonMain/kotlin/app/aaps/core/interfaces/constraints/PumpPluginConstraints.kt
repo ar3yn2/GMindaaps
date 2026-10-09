@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.constraints
+﻿package app.gmaaps.core.interfaces.constraints
 
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
 
 /**
  * A pump driver's own delivery-amount limits (max bolus / max temp basal), expressed in pump units
@@ -32,3 +32,4 @@ interface PumpPluginConstraints {
     /** Cap an absolute temp basal to the pump's delivery limit, in pump units (cU/h). */
     fun applyBasalConstraints(absoluteRate: PumpRate): PumpRate = absoluteRate
 }
+

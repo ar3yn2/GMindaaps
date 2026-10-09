@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition.schedule;
+package app.gmaaps.pump.omnipod.eros.driver.definition.schedule;
 
 public enum InsulinScheduleType {
     BASAL_SCHEDULE(0),
@@ -24,3 +24,4 @@ public enum InsulinScheduleType {
         return value;
     }
 }
+

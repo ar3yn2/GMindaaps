@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -57,3 +57,4 @@ class PumpInsulinTest {
         assertThat(PumpInsulin(3.5).toString()).isEqualTo("PumpInsulin(3.5)")
     }
 }
+

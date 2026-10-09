@@ -1,9 +1,9 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.data.model.data.Block
-import app.aaps.core.data.model.data.TargetBlock
-import app.aaps.core.data.model.data.checkSanity
-import app.aaps.core.data.time.T
+import app.gmaaps.core.data.model.data.Block
+import app.gmaaps.core.data.model.data.TargetBlock
+import app.gmaaps.core.data.model.data.checkSanity
+import app.gmaaps.core.data.time.T
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -125,3 +125,4 @@ class BlockExtensionKtTest {
         assertThat(b.highTargetBlockValueBySeconds(T.hours(13).secs().toInt(), 0)).isWithin(0.01).of(5.0)
     }
 }
+

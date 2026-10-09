@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.ble
+﻿package app.gmaaps.pump.equil.ble
 
-import app.aaps.core.interfaces.pump.ble.BleTransport
+import app.gmaaps.core.interfaces.pump.ble.BleTransport
 
 /**
  * Equil-specific extension of [BleTransport].
@@ -20,3 +20,4 @@ interface EquilBleTransport : BleTransport {
     /** Called when GATT error 133 occurs, before onConnectionStateChanged(false). */
     var onGattError133: (() -> Unit)?
 }
+

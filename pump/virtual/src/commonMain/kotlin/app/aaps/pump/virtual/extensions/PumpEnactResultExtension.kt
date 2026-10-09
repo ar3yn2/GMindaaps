@@ -1,8 +1,8 @@
-package app.aaps.pump.virtual.extensions
+﻿package app.gmaaps.pump.virtual.extensions
 
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.ui.CoreUiStrings
 
 fun PumpEnactResult.toText(rh: TextResolver): String {
     var ret = rh.gs(CoreUiStrings.success) + ": " + success
@@ -39,3 +39,4 @@ fun PumpEnactResult.toText(rh: TextResolver): String {
     }
     return ret
 }
+

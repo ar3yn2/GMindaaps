@@ -1,17 +1,17 @@
-package app.aaps.pump.carelevo.coordinator
+﻿package app.gmaaps.pump.carelevo.coordinator
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.pump.carelevo.ble.CarelevoBleTransport
-import app.aaps.pump.carelevo.command.CmdAlarmClear
-import app.aaps.pump.carelevo.command.CmdAlarmClearPatchDiscard
-import app.aaps.pump.carelevo.command.CmdPumpResume
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.pump.carelevo.ble.CarelevoBleTransport
+import app.gmaaps.pump.carelevo.command.CmdAlarmClear
+import app.gmaaps.pump.carelevo.command.CmdAlarmClearPatchDiscard
+import app.gmaaps.pump.carelevo.command.CmdPumpResume
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -21,8 +21,8 @@ import kotlin.jvm.optionals.getOrNull
 
 /**
  * The alarm-clear BLE operations, shared by both clear-alarm surfaces (the Android notification action in
- * [app.aaps.pump.carelevo.common.CarelevoAlarmActionHandler] and the in-app alarm screen in
- * [app.aaps.pump.carelevo.presentation.viewmodel.CarelevoAlarmViewModel]). The patch-facing ops go through
+ * [app.gmaaps.pump.carelevo.common.CarelevoAlarmActionHandler] and the in-app alarm screen in
+ * [app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoAlarmViewModel]). The patch-facing ops go through
  * the AAPS CommandQueue so a resting (idle-disconnected) pump is reconnected before the op runs — a direct
  * write would silently no-op, and the callers' old `isPatchConnected()` gate would otherwise fall to the
  * destructive force-quit path. Each caller keeps its own alarm-cause branching, alarm-queue state and UI.
@@ -67,7 +67,7 @@ class CarelevoAlarmClearCoordinator @Inject constructor(
     /**
      * Resume infusion; syncs the TBR-cancel to NS on success. Used both after an auto-suspend alarm and by
      * the Resume button on the overview screen
-     * ([app.aaps.pump.carelevo.presentation.viewmodel.CarelevoOverviewViewModel.startPumpResume]), so that
+     * ([app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoOverviewViewModel.startPumpResume]), so that
      * the two cannot queue a `CmdPumpResume` at the same time and make one of them misread a class-level
      * dedup as a resume failure.
      */
@@ -105,3 +105,4 @@ class CarelevoAlarmClearCoordinator @Inject constructor(
         onComplete()
     }
 }
+

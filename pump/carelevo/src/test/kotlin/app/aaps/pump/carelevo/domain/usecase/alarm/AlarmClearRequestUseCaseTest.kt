@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.domain.usecase.alarm
+﻿package app.gmaaps.pump.carelevo.domain.usecase.alarm
 
-import app.aaps.pump.carelevo.domain.repository.CarelevoAlarmInfoRepository
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoAlarmInfoRepository
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Completable
 import org.junit.jupiter.api.Assertions.assertThrows
@@ -152,3 +152,4 @@ internal class AlarmClearRequestUseCaseTest {
         verifyNoMoreInteractions(alarmRepository)
     }
 }
+

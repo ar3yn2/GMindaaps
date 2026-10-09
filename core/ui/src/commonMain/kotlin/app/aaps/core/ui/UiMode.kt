@@ -1,4 +1,4 @@
-package app.aaps.core.ui
+﻿package app.gmaaps.core.ui
 
 enum class UiMode(val stringValue: String) {
     LIGHT("light"),

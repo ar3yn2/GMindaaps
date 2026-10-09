@@ -1,4 +1,4 @@
-package app.aaps.pump.dana.database
+﻿package app.gmaaps.pump.dana.database
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -14,3 +14,4 @@ abstract class DanaHistoryRecordDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     abstract fun createOrUpdate(danaHistoryRecord: DanaHistoryRecord)
 }
+

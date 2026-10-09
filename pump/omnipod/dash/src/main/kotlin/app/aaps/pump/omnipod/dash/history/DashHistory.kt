@@ -1,26 +1,26 @@
-package app.aaps.pump.omnipod.dash.history
+﻿package app.gmaaps.pump.omnipod.dash.history
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PodConstants.Companion.POD_PULSE_BOLUS_UNITS
-import app.aaps.pump.omnipod.common.bledriver.pod.state.CommandConfirmationDenied
-import app.aaps.pump.omnipod.common.bledriver.pod.state.CommandConfirmationSuccess
-import app.aaps.pump.omnipod.common.bledriver.pod.state.CommandSendingFailure
-import app.aaps.pump.omnipod.common.bledriver.pod.state.CommandSendingNotConfirmed
-import app.aaps.pump.omnipod.common.bledriver.pod.state.NoActiveCommand
-import app.aaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
-import app.aaps.pump.omnipod.common.definition.OmnipodCommandType
-import app.aaps.pump.omnipod.common.definition.OmnipodCommandType.SET_BOLUS
-import app.aaps.pump.omnipod.common.definition.OmnipodCommandType.SET_TEMPORARY_BASAL
-import app.aaps.pump.omnipod.dash.history.data.BasalValuesRecord
-import app.aaps.pump.omnipod.dash.history.data.BolusRecord
-import app.aaps.pump.omnipod.dash.history.data.HistoryRecord
-import app.aaps.pump.omnipod.dash.history.data.InitialResult
-import app.aaps.pump.omnipod.dash.history.data.ResolvedResult
-import app.aaps.pump.omnipod.dash.history.data.TempBasalRecord
-import app.aaps.pump.omnipod.dash.history.database.HistoryRecordDao
-import app.aaps.pump.omnipod.dash.history.database.HistoryRecordEntity
-import app.aaps.pump.omnipod.dash.history.mapper.HistoryMapper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PodConstants.Companion.POD_PULSE_BOLUS_UNITS
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.CommandConfirmationDenied
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.CommandConfirmationSuccess
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.CommandSendingFailure
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.CommandSendingNotConfirmed
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.NoActiveCommand
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
+import app.gmaaps.pump.omnipod.common.definition.OmnipodCommandType
+import app.gmaaps.pump.omnipod.common.definition.OmnipodCommandType.SET_BOLUS
+import app.gmaaps.pump.omnipod.common.definition.OmnipodCommandType.SET_TEMPORARY_BASAL
+import app.gmaaps.pump.omnipod.dash.history.data.BasalValuesRecord
+import app.gmaaps.pump.omnipod.dash.history.data.BolusRecord
+import app.gmaaps.pump.omnipod.dash.history.data.HistoryRecord
+import app.gmaaps.pump.omnipod.dash.history.data.InitialResult
+import app.gmaaps.pump.omnipod.dash.history.data.ResolvedResult
+import app.gmaaps.pump.omnipod.dash.history.data.TempBasalRecord
+import app.gmaaps.pump.omnipod.dash.history.database.HistoryRecordDao
+import app.gmaaps.pump.omnipod.dash.history.database.HistoryRecordEntity
+import app.gmaaps.pump.omnipod.dash.history.mapper.HistoryMapper
 import dev.zacsweers.metro.Inject
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Single
@@ -129,3 +129,4 @@ class DashHistory(
         Completable.concat(listOf(setTotalAmountDelivered, commandConfirmation))
     }
 }
+

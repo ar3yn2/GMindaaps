@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -14,16 +14,16 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.banner.ErrorBanner
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.compose.dialog.CarelevoActionDialog
-import app.aaps.pump.carelevo.presentation.model.CarelevoConnectPrepareEvent
-import app.aaps.pump.carelevo.presentation.type.CarelevoPatchStep
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectViewModel
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.banner.ErrorBanner
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.compose.dialog.CarelevoActionDialog
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoConnectPrepareEvent
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoPatchStep
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectViewModel
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
 
 @Composable
 internal fun CarelevoPatchFlowStep02Connect(
@@ -179,3 +179,4 @@ private fun CarelevoPatchFlowStep02ConnectPreview() {
         )
     }
 }
+

@@ -1,15 +1,15 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.protection.SecureEncrypt
-import app.aaps.core.keys.LongNonKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.nssdk.localmodel.clientcontrol.MasterPairing
-import app.aaps.core.nssdk.localmodel.clientcontrol.PairingPayload
-import app.aaps.core.nssdk.localmodel.clientcontrol.SignedEnvelope
-import app.aaps.core.nssdk.utils.ClientControlCrypto
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.protection.SecureEncrypt
+import app.gmaaps.core.keys.LongNonKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.MasterPairing
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.PairingPayload
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.SignedEnvelope
+import app.gmaaps.core.nssdk.utils.ClientControlCrypto
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -79,7 +79,7 @@ class ClientPairingRepository(
      * caller is expected to confirm with the user before calling. Resets the counter so
      * the first signed message after pairing is counter=1.
      *
-     * [now] is persisted so [OrphanDetector][app.aaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector]
+     * [now] is persisted so [OrphanDetector][app.gmaaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector]
      * can ignore settings/aaps docs whose `srvModified` predates the pairing — master may not
      * have republished the roster yet.
      *
@@ -179,3 +179,4 @@ class ClientPairingRepository(
         runCatching { ClientControlCrypto.hexToBytes(secretHex) }.getOrNull()
     }
 }
+

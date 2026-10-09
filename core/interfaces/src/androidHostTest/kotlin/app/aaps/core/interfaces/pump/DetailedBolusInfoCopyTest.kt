@@ -1,8 +1,8 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.pump.defs.PumpType
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -86,7 +86,8 @@ class DetailedBolusInfoCopyTest {
         // The reason the missing field matters: this is what reads it.
         val copy = populated().copy()
 
-        assertThat(copy.createBolus(iCfg = app.aaps.core.data.model.ICfg("", 0, 0)).timestamp)
+        assertThat(copy.createBolus(iCfg = app.gmaaps.core.data.model.ICfg("", 0, 0)).timestamp)
             .isEqualTo(1_700_000_005_000L)
     }
 }
+

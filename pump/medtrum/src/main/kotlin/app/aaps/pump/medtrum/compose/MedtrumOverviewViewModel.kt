@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.compose
+﻿package app.gmaaps.pump.medtrum.compose
 
 import android.content.Context
 import androidx.compose.material.icons.Icons
@@ -9,40 +9,40 @@ import androidx.compose.material.icons.filled.SwapHoriz
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.timeAgoFullString
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.ActionCategory
-import app.aaps.core.ui.compose.pump.PumpAction
-import app.aaps.core.ui.compose.pump.PumpCommunicationStatus
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.core.ui.compose.pump.PumpOverviewStateBuilder
-import app.aaps.core.ui.compose.pump.PumpOverviewUiState
-import app.aaps.core.ui.compose.pump.StatusBanner
-import app.aaps.core.ui.compose.pump.tickerFlow
-import app.aaps.pump.medtrum.MedtrumPlugin
-import app.aaps.pump.medtrum.MedtrumPump
-import app.aaps.pump.medtrum.R
-import app.aaps.pump.medtrum.code.ConnectionState
-import app.aaps.pump.medtrum.code.PatchStep
-import app.aaps.pump.medtrum.comm.enums.BasalType
-import app.aaps.pump.medtrum.comm.enums.MedtrumPumpState
-import app.aaps.pump.medtrum.comm.enums.ModelType
-import app.aaps.pump.medtrum.keys.MedtrumStringNonKey
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.timeAgoFullString
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.ActionCategory
+import app.gmaaps.core.ui.compose.pump.PumpAction
+import app.gmaaps.core.ui.compose.pump.PumpCommunicationStatus
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.core.ui.compose.pump.PumpOverviewStateBuilder
+import app.gmaaps.core.ui.compose.pump.PumpOverviewUiState
+import app.gmaaps.core.ui.compose.pump.StatusBanner
+import app.gmaaps.core.ui.compose.pump.tickerFlow
+import app.gmaaps.pump.medtrum.MedtrumPlugin
+import app.gmaaps.pump.medtrum.MedtrumPump
+import app.gmaaps.pump.medtrum.R
+import app.gmaaps.pump.medtrum.code.ConnectionState
+import app.gmaaps.pump.medtrum.code.PatchStep
+import app.gmaaps.pump.medtrum.comm.enums.BasalType
+import app.gmaaps.pump.medtrum.comm.enums.MedtrumPumpState
+import app.gmaaps.pump.medtrum.comm.enums.ModelType
+import app.gmaaps.pump.medtrum.keys.MedtrumStringNonKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -60,7 +60,7 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import java.util.Locale
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 sealed class MedtrumOverviewEvent {
     data class StartPatchWorkflow(val startStep: PatchStep) : MedtrumOverviewEvent()
@@ -218,7 +218,7 @@ class MedtrumOverviewViewModel(
         // Last connection
         val lastConnection = if (lastConnectionTime != 0L) {
             val agoMinutes = (System.currentTimeMillis() - lastConnectionTime) / 1000 / 60
-            rh.gs(app.aaps.core.interfaces.R.string.minago, agoMinutes)
+            rh.gs(app.gmaaps.core.interfaces.R.string.minago, agoMinutes)
         } else ""
 
         // Last bolus
@@ -381,8 +381,8 @@ class MedtrumOverviewViewModel(
                 val daysLeft = T.msecs(timeLeft).days()
                 val hoursLeft = T.msecs(timeLeft).hours() % 24
 
-                val daysString = if (daysLeft > 0) "$daysLeft ${rh.gs(app.aaps.core.interfaces.R.string.days)} " else ""
-                val hoursString = "$hoursLeft ${rh.gs(app.aaps.core.interfaces.R.string.hours)}"
+                val daysString = if (daysLeft > 0) "$daysLeft ${rh.gs(app.gmaaps.core.interfaces.R.string.days)} " else ""
+                val hoursString = "$hoursLeft ${rh.gs(app.gmaaps.core.interfaces.R.string.hours)}"
 
                 dateUtil.dateAndTimeString(expiry) + "\n(" + daysString + hoursString + ")"
             }
@@ -391,3 +391,4 @@ class MedtrumOverviewViewModel(
         }
     }
 }
+

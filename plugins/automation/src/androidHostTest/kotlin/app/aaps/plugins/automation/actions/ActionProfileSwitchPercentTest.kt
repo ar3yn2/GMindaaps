@@ -1,9 +1,9 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.data.model.PS
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.InputDuration
-import app.aaps.plugins.automation.elements.InputPercent
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.InputDuration
+import app.gmaaps.plugins.automation.elements.InputPercent
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -62,3 +62,4 @@ class ActionProfileSwitchPercentTest : ActionsTestBase() {
         assertThat(sut.duration.getMinutes().toDouble()).isWithin(0.001).of(30.0)
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
 import java.util.Locale;
 
@@ -148,3 +148,4 @@ public enum FaultEventCode {
         return String.format(Locale.getDefault(), "Pod fault (%d): %s", value, name());
     }
 }
+

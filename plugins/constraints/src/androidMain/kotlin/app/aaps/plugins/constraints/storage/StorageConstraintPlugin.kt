@@ -1,23 +1,23 @@
-package app.aaps.plugins.constraints.storage
+﻿package app.gmaaps.plugins.constraints.storage
 
 import android.os.Environment
 import android.os.StatFs
-import app.aaps.annotations.OpenForTesting
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.constraints.PluginConstraints
-import app.aaps.core.interfaces.di.APS
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.EnforcedState
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef.Companion.withArgs
-import app.aaps.plugins.constraints.ConstraintsStrings
+import app.gmaaps.annotations.OpenForTesting
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.constraints.PluginConstraints
+import app.gmaaps.core.interfaces.di.APS
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.EnforcedState
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef.Companion.withArgs
+import app.gmaaps.plugins.constraints.ConstraintsStrings
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -63,3 +63,4 @@ class StorageConstraintPlugin(
         return blocksAvailable * blockSize / size
     }
 }
+

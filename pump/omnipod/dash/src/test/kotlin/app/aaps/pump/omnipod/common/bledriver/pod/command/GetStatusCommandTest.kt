@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.response.ResponseType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.ResponseType
 import com.google.common.truth.Truth.assertThat
 import org.apache.commons.codec.binary.Hex
 import org.junit.jupiter.api.Test
@@ -18,3 +18,4 @@ class GetStatusCommandTest {
         assertThat(encoded).asList().containsExactlyElementsIn(Hex.decodeHex("024200023C030E0100024C").asList()).inOrder()
     }
 }
+

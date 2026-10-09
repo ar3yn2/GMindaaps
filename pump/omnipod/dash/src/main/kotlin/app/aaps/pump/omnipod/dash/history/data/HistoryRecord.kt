@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.dash.history.data
+﻿package app.gmaaps.pump.omnipod.dash.history.data
 
-import app.aaps.pump.omnipod.common.definition.OmnipodCommandType
+import app.gmaaps.pump.omnipod.common.definition.OmnipodCommandType
 
 data class HistoryRecord(
     val id: Long,
@@ -26,3 +26,4 @@ data class HistoryRecord(
         return initialResult == InitialResult.SENT && resolvedResult == ResolvedResult.SUCCESS
     }
 }
+

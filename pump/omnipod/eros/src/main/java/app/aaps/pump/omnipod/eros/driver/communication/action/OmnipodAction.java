@@ -1,7 +1,8 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action;
 
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
 
 public interface OmnipodAction<T> {
     T execute(OmnipodRileyLinkCommunicationManager communicationService);
 }
+

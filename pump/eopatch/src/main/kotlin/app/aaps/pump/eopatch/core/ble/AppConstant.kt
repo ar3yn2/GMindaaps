@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.ble
+﻿package app.gmaaps.pump.eopatch.core.ble
 
 import kotlin.time.Duration.Companion.seconds
 
@@ -20,3 +20,4 @@ object AppConstant {
     const val ON = 1
     const val INSULIN_DURATION_MIN = 2.0f
 }
+

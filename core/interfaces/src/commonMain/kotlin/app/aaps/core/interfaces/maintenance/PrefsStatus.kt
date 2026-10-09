@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.maintenance
+﻿package app.gmaaps.core.interfaces.maintenance
 
 import androidx.compose.ui.graphics.vector.ImageVector
 
@@ -9,3 +9,4 @@ interface PrefsStatus {
     val isWarning: Boolean get() = false
     val isError: Boolean get() = false
 }
+

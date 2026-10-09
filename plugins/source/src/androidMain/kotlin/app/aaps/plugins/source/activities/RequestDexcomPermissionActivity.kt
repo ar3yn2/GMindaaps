@@ -1,8 +1,8 @@
-package app.aaps.plugins.source.activities
+﻿package app.gmaaps.plugins.source.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import app.aaps.plugins.source.DexcomPlugin
+import app.gmaaps.plugins.source.DexcomPlugin
 
 class RequestDexcomPermissionActivity : AppCompatActivity() {
 
@@ -19,3 +19,4 @@ class RequestDexcomPermissionActivity : AppCompatActivity() {
     }
 
 }
+

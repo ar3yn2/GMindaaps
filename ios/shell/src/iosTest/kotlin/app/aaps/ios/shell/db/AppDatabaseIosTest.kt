@@ -1,10 +1,10 @@
-package app.aaps.ios.shell.db
+﻿package app.gmaaps.ios.shell.db
 
-import app.aaps.database.di.IosAppDatabaseBuilder
-import app.aaps.database.entities.GlucoseValue
-import app.aaps.database.entities.UserEntry
-import app.aaps.database.entities.ValueWithUnit
-import app.aaps.database.transactions.CgmSourceTransaction
+import app.gmaaps.database.di.IosAppDatabaseBuilder
+import app.gmaaps.database.entities.GlucoseValue
+import app.gmaaps.database.entities.UserEntry
+import app.gmaaps.database.entities.ValueWithUnit
+import app.gmaaps.database.transactions.CgmSourceTransaction
 import kotlinx.coroutines.test.runTest
 import kotlin.test.AfterTest
 import kotlin.test.Test
@@ -120,3 +120,4 @@ class AppDatabaseIosTest {
         }
     }
 }
+

@@ -1,18 +1,18 @@
-package app.aaps.pump.common.hw.rileylink.service.tasks
+﻿package app.gmaaps.pump.common.hw.rileylink.service.tasks
 
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.utils.Round
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.common.hw.rileylink.RileyLinkConst
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkTargetFrequency
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkError
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkDoubleKey
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.utils.Round
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkConst
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkTargetFrequency
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkError
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkDoubleKey
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
 import dev.zacsweers.metro.Inject
 import kotlin.math.roundToLong
 

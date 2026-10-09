@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.eros.driver.definition.schedule;
+package app.gmaaps.pump.omnipod.eros.driver.definition.schedule;
 
 import androidx.annotation.NonNull;
 
 import org.joda.time.Duration;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.communication.message.IRawRepresentable;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.IRawRepresentable;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
 
 public class BolusDeliverySchedule extends DeliverySchedule implements IRawRepresentable {
 
@@ -60,3 +60,4 @@ public class BolusDeliverySchedule extends DeliverySchedule implements IRawRepre
                 '}';
     }
 }
+

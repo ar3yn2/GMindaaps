@@ -1,10 +1,10 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.Composable
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
 import kotlin.math.abs
 import kotlin.math.roundToInt
 
@@ -90,3 +90,4 @@ fun formatSliderDisplayValue(
         else                           -> valueFormat.format(value)
     }
 }
+

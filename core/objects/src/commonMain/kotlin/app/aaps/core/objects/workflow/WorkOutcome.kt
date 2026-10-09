@@ -1,4 +1,4 @@
-package app.aaps.core.objects.workflow
+﻿package app.gmaaps.core.objects.workflow
 
 /**
  * What a piece of background work reports back.
@@ -46,3 +46,4 @@ sealed interface WorkOutcome {
         val StaleInput = Failure("missing or stale input data")
     }
 }
+

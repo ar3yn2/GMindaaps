@@ -1,8 +1,8 @@
-package app.aaps.plugins.aps.openAPSSMB.extensions
+﻿package app.gmaaps.plugins.aps.openAPSSMB.extensions
 
-import app.aaps.core.interfaces.aps.GlucoseStatusSMB
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.interfaces.utils.Round
+import app.gmaaps.core.interfaces.aps.GlucoseStatusSMB
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.interfaces.utils.Round
 
 fun GlucoseStatusSMB.log(decimalFormatter: DecimalFormatter): String = "Glucose: " + decimalFormatter.to0Decimal(glucose) + " mg/dl " +
     "Noise: " + decimalFormatter.to0Decimal(noise) + " " +

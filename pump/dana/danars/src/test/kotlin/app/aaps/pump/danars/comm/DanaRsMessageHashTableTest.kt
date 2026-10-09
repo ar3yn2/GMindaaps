@@ -1,8 +1,8 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.pump.danars.DanaRSTestBase
-import app.aaps.pump.danars.services.DanaRSAlarmReporter
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.pump.danars.DanaRSTestBase
+import app.gmaaps.pump.danars.services.DanaRSAlarmReporter
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach

@@ -1,6 +1,6 @@
-package app.aaps.pump.common.hw.rileylink.keys
+﻿package app.gmaaps.pump.common.hw.rileylink.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 enum class RileyLinkLongKey(
     override val key: String,

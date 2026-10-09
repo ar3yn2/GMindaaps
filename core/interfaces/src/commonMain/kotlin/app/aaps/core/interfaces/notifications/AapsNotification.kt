@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
 import kotlin.time.Clock
 
@@ -13,3 +13,4 @@ data class AapsNotification(
     val actions: List<NotificationAction> = emptyList(),
     val validityCheck: (() -> Boolean)? = null
 )
+

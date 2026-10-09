@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
 import java.util.Locale;
 
-import app.aaps.pump.omnipod.eros.driver.definition.ActivationProgress;
+import app.gmaaps.pump.omnipod.eros.driver.definition.ActivationProgress;
 
 public class IllegalActivationProgressException extends OmnipodException {
     private final ActivationProgress expected;
@@ -22,3 +22,4 @@ public class IllegalActivationProgressException extends OmnipodException {
         return actual;
     }
 }
+

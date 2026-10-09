@@ -1,14 +1,14 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
-import app.aaps.plugins.calibration.LinearCalibrationPlugin
-import app.aaps.plugins.calibration.NoCalibrationPlugin
-import app.aaps.plugins.sensitivity.SensitivityAAPSPlugin
-import app.aaps.plugins.sensitivity.SensitivityOref1Plugin
-import app.aaps.plugins.sensitivity.SensitivityWeightedAveragePlugin
-import app.aaps.plugins.smoothing.AvgSmoothingPlugin
-import app.aaps.plugins.smoothing.ExponentialSmoothingPlugin
-import app.aaps.plugins.smoothing.NoSmoothingPlugin
-import app.aaps.plugins.smoothing.UnscentedKalmanFilterPlugin
+import app.gmaaps.plugins.calibration.LinearCalibrationPlugin
+import app.gmaaps.plugins.calibration.NoCalibrationPlugin
+import app.gmaaps.plugins.sensitivity.SensitivityAAPSPlugin
+import app.gmaaps.plugins.sensitivity.SensitivityOref1Plugin
+import app.gmaaps.plugins.sensitivity.SensitivityWeightedAveragePlugin
+import app.gmaaps.plugins.smoothing.AvgSmoothingPlugin
+import app.gmaaps.plugins.smoothing.ExponentialSmoothingPlugin
+import app.gmaaps.plugins.smoothing.NoSmoothingPlugin
+import app.gmaaps.plugins.smoothing.UnscentedKalmanFilterPlugin
 import com.google.common.truth.Truth.assertThat
 import com.google.common.truth.Truth.assertWithMessage
 import org.junit.jupiter.api.Test
@@ -188,3 +188,4 @@ class ContributedPluginsTest {
         assertThat(root.contributedPlugins[600]).isSameInstanceAs(root.contributedPlugins[600])
     }
 }
+

@@ -1,13 +1,13 @@
-package app.aaps.pump.eopatch.compose.steps
+﻿package app.gmaaps.pump.eopatch.compose.steps
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.eopatch.R
-import app.aaps.pump.eopatch.compose.EopatchPatchViewModel
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.eopatch.R
+import app.gmaaps.pump.eopatch.compose.EopatchPatchViewModel
 
 /**
  * @see TurningOffAlarmStepPreview
@@ -16,7 +16,7 @@ import app.aaps.pump.eopatch.compose.EopatchPatchViewModel
 fun TurningOffAlarmStep(viewModel: EopatchPatchViewModel) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.next),
+            text = stringResource(app.gmaaps.core.ui.R.string.next),
             onClick = { viewModel.onConfirm() }
         )
     ) {
@@ -42,3 +42,4 @@ fun TurningOffAlarmStep(viewModel: EopatchPatchViewModel) {
         )
     }
 }
+

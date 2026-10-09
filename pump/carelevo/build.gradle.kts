@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.ksp)
@@ -10,7 +10,7 @@ plugins {
 }
 
 android {
-    namespace = "app.aaps.pump.carelevo"
+    namespace = "app.gmaaps.pump.carelevo"
 
     buildFeatures {
         compose = true
@@ -30,3 +30,4 @@ dependencies {
 
     implementation(libs.androidx.lifecycle.process)
 }
+

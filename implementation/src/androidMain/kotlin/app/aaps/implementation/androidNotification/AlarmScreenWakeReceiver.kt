@@ -1,4 +1,4 @@
-package app.aaps.implementation.androidNotification
+﻿package app.gmaaps.implementation.androidNotification
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -15,7 +15,7 @@ import android.util.Log
  * the background — something `Activity.setTurnScreenOn()` cannot do for a background-launched
  * activity (verified on Pixel / Android 15+: the activity is held non-visible until the screen is
  * already on, so it can't self-wake). A sibling `setAlarmClock` → `getActivity` alarm launches
- * [app.aaps.core.interfaces.ui.UiInteraction.errorHelperActivity] once this wake has lit the screen.
+ * [app.gmaaps.core.interfaces.ui.UiInteraction.errorHelperActivity] once this wake has lit the screen.
  *
  * The receiver itself needs only the normal `WAKE_LOCK` permission. Scheduling the alarm that fires it
  * needs `SCHEDULE_EXACT_ALARM` - see `AlarmNotificationManager.scheduleScreenWakeAndLaunch`.
@@ -40,3 +40,4 @@ class AlarmScreenWakeReceiver : BroadcastReceiver() {
         const val WAKE_HOLD_MS = 10_000L
     }
 }
+

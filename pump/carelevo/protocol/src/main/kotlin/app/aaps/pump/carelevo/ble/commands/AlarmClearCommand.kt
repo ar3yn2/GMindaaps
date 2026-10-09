@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
 
 /**
  * `CMD_ALARM_CLEAR_REQ` (0x47) → `CMD_ALARM_CLEAR_RES` (0xA7). Clears a raised patch alarm.
@@ -53,3 +53,4 @@ data class AlarmClearResponse(
     val cause: Int,
     val resultCode: Int
 ) : BleResponse
+

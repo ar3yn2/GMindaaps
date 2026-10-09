@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.CalibrationEntry
+import app.gmaaps.database.entities.CalibrationEntry
 
 /**
  * Inserts or updates the CalibrationEntry.
@@ -27,3 +27,4 @@ class InsertOrUpdateCalibrationEntryTransaction(private val calibrationEntry: Ca
         val updated = mutableListOf<CalibrationEntry>()
     }
 }
+

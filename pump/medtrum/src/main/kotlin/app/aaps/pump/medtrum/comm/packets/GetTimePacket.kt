@@ -1,10 +1,10 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.pump.medtrum.MedtrumPump
-import app.aaps.pump.medtrum.comm.enums.CommandType.GET_TIME
-import app.aaps.pump.medtrum.extension.toLong
-import app.aaps.pump.medtrum.util.MedtrumTimeUtil
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.pump.medtrum.MedtrumPump
+import app.gmaaps.pump.medtrum.comm.enums.CommandType.GET_TIME
+import app.gmaaps.pump.medtrum.extension.toLong
+import app.gmaaps.pump.medtrum.util.MedtrumTimeUtil
 import dev.zacsweers.metro.Inject
 
 class GetTimePacket(injector: MetroMemberInjector) : MedtrumPacket(injector) {
@@ -33,3 +33,4 @@ class GetTimePacket(injector: MetroMemberInjector) : MedtrumPacket(injector) {
         return success
     }
 }
+

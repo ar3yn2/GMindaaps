@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.nsclientV3.data
+﻿package app.gmaaps.plugins.sync.nsclientV3.data
 
-import app.aaps.core.interfaces.aps.APSResult
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -37,3 +37,4 @@ class ProcessedDeviceStatusDataImpl(
             return "$minBattery%"
         }
 }
+

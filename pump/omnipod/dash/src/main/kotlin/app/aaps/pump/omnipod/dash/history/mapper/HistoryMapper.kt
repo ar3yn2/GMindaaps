@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.dash.history.mapper
+﻿package app.gmaaps.pump.omnipod.dash.history.mapper
 
-import app.aaps.pump.omnipod.dash.history.data.HistoryRecord
-import app.aaps.pump.omnipod.dash.history.database.HistoryRecordEntity
+import app.gmaaps.pump.omnipod.dash.history.data.HistoryRecord
+import app.gmaaps.pump.omnipod.dash.history.database.HistoryRecordEntity
 
 class HistoryMapper {
 
@@ -18,3 +18,4 @@ class HistoryMapper {
             resolvedAt = entity.resolvedAt
         )
 }
+

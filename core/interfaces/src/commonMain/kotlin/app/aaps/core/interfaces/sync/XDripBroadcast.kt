@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.sync
+﻿package app.gmaaps.core.interfaces.sync
 
 /**
  * Send data to xDrip+ via Inter-app settings

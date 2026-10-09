@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.overview
+﻿package app.gmaaps.core.interfaces.overview
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
 
 /**
  * Provides data about last glucose value for displaying on screen
@@ -10,7 +10,7 @@ interface LastBgData {
     /**
      * Get newest glucose value from bucketed data.
      * If there are less than 3 glucose values, bucketed data is not created.
-     * In this case take newest [app.aaps.core.data.model.GV] from db and convert it to [InMemoryGlucoseValue]
+     * In this case take newest [app.gmaaps.core.data.model.GV] from db and convert it to [InMemoryGlucoseValue]
      *
      * Intended for display on screen only
      *

@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.alarm
+﻿package app.gmaaps.pump.eopatch.alarm
 
 import io.reactivex.rxjava3.core.Single
 
@@ -13,3 +13,4 @@ interface IAlarmProcess {
         const val ALARM_HANDLED_BUT_NEED_STOP_BEEP = 3
     }
 }
+

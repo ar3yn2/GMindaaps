@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.interfaces.scan
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.scan
 
 /**
  * Result of a successful pod scan.
@@ -8,3 +8,4 @@ interface BleDiscoveredDevice {
 
     val address: String
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.alerts
+﻿package app.gmaaps.core.interfaces.alerts
 
 /**
  * Schedules a one-shot reminder that rings at a wall-clock time in the future.
@@ -22,3 +22,4 @@ interface ReminderScheduler {
      */
     fun scheduleReminder(seconds: Int, text: String)
 }
+

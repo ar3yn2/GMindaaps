@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.service
+﻿package app.gmaaps.pump.common.hw.rileylink.service
 
 import android.bluetooth.BluetoothManager
 import android.content.BroadcastReceiver
@@ -6,21 +6,21 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import app.aaps.core.interfaces.di.injectMetroMembers
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.common.hw.rileylink.RileyLinkConst
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkError
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkStringKey
-import app.aaps.pump.common.hw.rileylink.service.tasks.DiscoverGattServicesTask
-import app.aaps.pump.common.hw.rileylink.service.tasks.InitializePumpManagerTask
-import app.aaps.pump.common.hw.rileylink.service.tasks.ServiceTask
-import app.aaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
-import app.aaps.pump.common.hw.rileylink.service.tasks.WakeAndTuneTask
+import app.gmaaps.core.interfaces.di.injectMetroMembers
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkConst
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkError
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkStringKey
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.DiscoverGattServicesTask
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.InitializePumpManagerTask
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.ServiceTask
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.WakeAndTuneTask
 import dev.zacsweers.metro.Inject
 
 class RileyLinkBroadcastReceiver : BroadcastReceiver() {

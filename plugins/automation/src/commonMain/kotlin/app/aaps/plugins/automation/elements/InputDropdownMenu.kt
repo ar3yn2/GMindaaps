@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
 /**
  * The value picked in a dropdown.
@@ -13,3 +13,4 @@ class InputDropdownMenu(var value: String = "") {
         return this
     }
 }
+

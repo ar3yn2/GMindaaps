@@ -1,6 +1,6 @@
-package info.nightscout.pump.combov2.keys
+﻿package info.nightscout.pump.combov2.keys
 
-import app.aaps.core.keys.interfaces.IntNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntNonPreferenceKey
 
 enum class ComboIntNonKey(
     override val key: String,

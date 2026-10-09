@@ -1,7 +1,7 @@
-package app.aaps.desktop.shell.platform
+﻿package app.gmaaps.desktop.shell.platform
 
-import app.aaps.implementation.queue.CommandExecutionPlatform
-import app.aaps.implementation.queue.WakeLockHandle
+import app.gmaaps.implementation.queue.CommandExecutionPlatform
+import app.gmaaps.implementation.queue.WakeLockHandle
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -33,3 +33,4 @@ class DesktopCommandExecutionPlatform() : CommandExecutionPlatform {
 
     override suspend fun restartBluetooth() = Unit
 }
+

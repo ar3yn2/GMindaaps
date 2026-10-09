@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.metro)
@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "app.aaps.pump.medtrum"
+    namespace = "app.gmaaps.pump.medtrum"
 }
 
 dependencies {
@@ -27,3 +27,4 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
 
 }
+

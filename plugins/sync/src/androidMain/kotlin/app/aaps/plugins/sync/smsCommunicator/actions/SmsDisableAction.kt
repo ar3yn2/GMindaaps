@@ -1,15 +1,15 @@
-package app.aaps.plugins.sync.smsCommunicator.actions
+﻿package app.gmaaps.plugins.sync.smsCommunicator.actions
 
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.smsCommunicator.Sms
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.plugins.sync.smsCommunicator.SmsAction
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.smsCommunicator.Sms
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.plugins.sync.smsCommunicator.SmsAction
 
 /** Disables remote SMS commands: SMS STOP/DISABLE. */
 class SmsDisableAction(
@@ -30,3 +30,4 @@ class SmsDisableAction(
         )
     }
 }
+

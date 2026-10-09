@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.getValue
@@ -12,7 +12,7 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
-import app.aaps.core.ui.R
+import app.gmaaps.core.ui.R
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
@@ -91,3 +91,4 @@ class AapsSearchFieldTest {
     @get:Rule
     val compose = createComposeRule()
 }
+

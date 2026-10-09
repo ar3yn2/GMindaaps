@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
@@ -11,3 +11,4 @@ import dev.zacsweers.metrox.viewmodel.MetroViewModelFactory
 @Composable
 actual fun platformMetroViewModelFactory(): MetroViewModelFactory =
     (LocalContext.current.applicationContext as MetroViewModelFactoryOwner).metroViewModelFactory
+

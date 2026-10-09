@@ -1,4 +1,4 @@
-import kotlin.math.min
+﻿import kotlin.math.min
 
 plugins {
     id("kmp-test-defaults")
@@ -13,7 +13,7 @@ plugins {
 // source set takes a task provider directly, so the Android variant API is not needed here.
 val generateKeyStrings = tasks.register<GenerateKeyStringsTask>("generateKeyStrings") {
     resDir.set(layout.projectDirectory.dir("src/androidMain/res"))
-    packageName.set("app.aaps.core.keys")
+    packageName.set("app.gmaaps.core.keys")
     owner.set("keys")
     objectName.set("KeysStrings")
     idsObjectName.set("KeysStringIds")
@@ -27,7 +27,7 @@ kotlin {
     // which is the whole point: Android goes on resolving locales the way it always has, including
     // the always English lookup the search index needs.
     android {
-        namespace = "app.aaps.core.keys"
+        namespace = "app.gmaaps.core.keys"
         compileSdk = Versions.compileSdk
         minSdk = min(Versions.minSdk, Versions.wearMinSdk)  // Compatible with wear module
         // Off by default for a multiplatform library, unlike a plain android library.
@@ -86,3 +86,4 @@ kotlin {
         }
     }
 }
+

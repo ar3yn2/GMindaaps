@@ -1,47 +1,47 @@
-package app.aaps.pump.carelevo.presentation.viewmodel
+﻿package app.gmaaps.pump.carelevo.presentation.viewmodel
 
 import android.content.Context
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventQueueChanged
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.ActionCategory
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.command.CmdDiscard
-import app.aaps.pump.carelevo.command.CmdPumpStop
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.common.model.Event
-import app.aaps.pump.carelevo.common.model.PatchState
-import app.aaps.pump.carelevo.common.model.UiState
-import app.aaps.pump.carelevo.coordinator.CarelevoAlarmClearCoordinator
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoExtendBolusInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoImmeBolusInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoTempBasalInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.result.ResultSuccess
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
-import app.aaps.pump.carelevo.domain.usecase.infusion.CarelevoDeleteInfusionInfoUseCase
-import app.aaps.pump.carelevo.domain.usecase.infusion.model.CarelevoDeleteInfusionRequestModel
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchForceDiscardUseCase
-import app.aaps.pump.carelevo.presentation.model.CarelevoConnectEvent
-import app.aaps.pump.carelevo.presentation.model.CarelevoOverviewEvent
-import app.aaps.pump.carelevo.presentation.type.CarelevoScreenType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventQueueChanged
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.ActionCategory
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.command.CmdDiscard
+import app.gmaaps.pump.carelevo.command.CmdPumpStop
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.common.model.Event
+import app.gmaaps.pump.carelevo.common.model.PatchState
+import app.gmaaps.pump.carelevo.common.model.UiState
+import app.gmaaps.pump.carelevo.coordinator.CarelevoAlarmClearCoordinator
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoExtendBolusInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoImmeBolusInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoTempBasalInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.result.ResultSuccess
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.CarelevoDeleteInfusionInfoUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.model.CarelevoDeleteInfusionRequestModel
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchForceDiscardUseCase
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoConnectEvent
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoOverviewEvent
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoScreenType
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.plugins.RxJavaPlugins
@@ -88,8 +88,8 @@ import java.util.concurrent.CopyOnWriteArrayList
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.hours
 import kotlin.time.Instant
-import app.aaps.core.interfaces.R as InterfacesR
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.interfaces.R as InterfacesR
+import app.gmaaps.core.ui.R as CoreUiR
 import java.time.Instant as JavaInstant
 
 /**
@@ -1562,3 +1562,4 @@ class CarelevoOverviewViewModelTest {
         assertThat(events).containsExactly(CarelevoOverviewEvent.ShowPumpResumeDialog)
     }
 }
+

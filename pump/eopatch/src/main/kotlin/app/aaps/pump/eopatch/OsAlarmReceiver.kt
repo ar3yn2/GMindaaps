@@ -1,11 +1,11 @@
-package app.aaps.pump.eopatch
+﻿package app.gmaaps.pump.eopatch
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import app.aaps.pump.eopatch.alarm.AlarmCode
-import app.aaps.pump.eopatch.alarm.AlarmCode.Companion.fromIntent
-import app.aaps.pump.eopatch.event.EventEoPatchAlarm
+import app.gmaaps.pump.eopatch.alarm.AlarmCode
+import app.gmaaps.pump.eopatch.alarm.AlarmCode.Companion.fromIntent
+import app.gmaaps.pump.eopatch.event.EventEoPatchAlarm
 
 /**
  * A plain [BroadcastReceiver]: it has no injected fields, so it needs no injector.
@@ -18,3 +18,4 @@ class OsAlarmReceiver : BroadcastReceiver() {
         }
     }
 }
+

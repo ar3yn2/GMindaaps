@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.di
+﻿package app.gmaaps.plugins.sync.di
 
 import android.content.Context
 import androidx.work.WorkManager
@@ -23,3 +23,4 @@ object SyncModule {
     @SingleIn(AppScope::class)
     fun providesWorkManager(context: Context): WorkManager = WorkManager.getInstance(context)
 }
+

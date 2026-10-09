@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.configuration
+﻿package app.gmaaps.core.interfaces.configuration
 
-import app.aaps.core.keys.interfaces.AppPlatform
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.AppPlatform
+import app.gmaaps.core.keys.interfaces.TextRef
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -165,3 +165,4 @@ class ConfigReconfiguringTest {
         assertThat(config.appInitialized).isTrue()
     }
 }
+

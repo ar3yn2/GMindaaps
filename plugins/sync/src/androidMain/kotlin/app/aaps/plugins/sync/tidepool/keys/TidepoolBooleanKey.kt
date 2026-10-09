@@ -1,8 +1,8 @@
-package app.aaps.plugins.sync.tidepool.keys
+﻿package app.gmaaps.plugins.sync.tidepool.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.plugins.sync.SyncStrings
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.plugins.sync.SyncStrings
 
 enum class TidepoolBooleanKey(
     override val key: String,
@@ -15,3 +15,4 @@ enum class TidepoolBooleanKey(
     ;
 
 }
+

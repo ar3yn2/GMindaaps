@@ -1,7 +1,7 @@
-package app.aaps.ios.shell.missing
+﻿package app.gmaaps.ios.shell.missing
 
-import app.aaps.core.interfaces.autotune.Autotune
-import app.aaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.autotune.Autotune
+import app.gmaaps.core.interfaces.logging.AAPSLogger
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -35,3 +35,4 @@ class IosAutotune(
         aapsLogger.notOnIosYet("Autotune.atLog")
     }
 }
+

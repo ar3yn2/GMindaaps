@@ -1,15 +1,15 @@
-package app.aaps.implementation.notifications
+﻿package app.gmaaps.implementation.notifications
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AapsNotification
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.AlarmSoundPlayer
-import app.aaps.core.interfaces.notifications.NotificationAction
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.implementation.alerts.IosReminderScheduler
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AapsNotification
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.AlarmSoundPlayer
+import app.gmaaps.core.interfaces.notifications.NotificationAction
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.implementation.alerts.IosReminderScheduler
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -270,3 +270,4 @@ class IosSystemNotificationPlatformTest {
         assertEquals(listOf("play:ERROR", "stop"), alarmPlayer.calls)
     }
 }
+

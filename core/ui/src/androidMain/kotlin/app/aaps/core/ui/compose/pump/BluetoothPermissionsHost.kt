@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -68,3 +68,4 @@ fun BluetoothPermissionsHost(
     }
     // else: request in flight, render nothing
 }
+

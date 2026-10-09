@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.GV
-import app.aaps.database.entities.GlucoseValue
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.database.entities.GlucoseValue
 
 fun GlucoseValue.fromDb(): GV =
     GV(

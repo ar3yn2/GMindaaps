@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action;
 
 import androidx.annotation.NonNull;
 
@@ -8,16 +8,16 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
-import app.aaps.pump.omnipod.eros.driver.communication.message.OmnipodMessage;
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.BeepConfigCommand;
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.CancelDeliveryCommand;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
-import app.aaps.pump.omnipod.eros.driver.definition.BeepConfigType;
-import app.aaps.pump.omnipod.eros.driver.definition.BeepType;
-import app.aaps.pump.omnipod.eros.driver.definition.DeliveryType;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.OmnipodMessage;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.BeepConfigCommand;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.CancelDeliveryCommand;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
+import app.gmaaps.pump.omnipod.eros.driver.definition.BeepConfigType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.BeepType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.DeliveryType;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
 
 public class CancelDeliveryAction implements OmnipodAction<StatusResponse> {
     private final ErosPodStateManager podStateManager;
@@ -52,3 +52,4 @@ public class CancelDeliveryAction implements OmnipodAction<StatusResponse> {
                 new OmnipodMessage(podStateManager.getAddress(), messageBlocks, podStateManager.getMessageNumber()));
     }
 }
+

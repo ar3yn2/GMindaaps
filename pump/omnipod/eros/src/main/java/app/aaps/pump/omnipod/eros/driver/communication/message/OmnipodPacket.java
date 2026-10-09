@@ -1,14 +1,14 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.common.hw.rileylink.ble.data.RLMessage;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodCrc;
-import app.aaps.pump.omnipod.eros.driver.definition.PacketType;
-import app.aaps.pump.omnipod.eros.driver.exception.CrcMismatchException;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalPacketTypeException;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.common.hw.rileylink.ble.data.RLMessage;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodCrc;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PacketType;
+import app.gmaaps.pump.omnipod.eros.driver.exception.CrcMismatchException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalPacketTypeException;
 
 /**
  * Created by andy on 6/1/18.
@@ -93,3 +93,4 @@ public class OmnipodPacket implements RLMessage {
                 '}';
     }
 }
+

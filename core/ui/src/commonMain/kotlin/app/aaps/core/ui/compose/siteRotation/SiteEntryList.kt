@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.siteRotation
+﻿package app.gmaaps.core.ui.compose.siteRotation
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
@@ -26,15 +26,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
-import app.aaps.core.data.model.TE
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.Translator
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.AapsTheme
-import app.aaps.core.ui.compose.icons.IcCannulaChange
-import app.aaps.core.ui.compose.icons.IcCgmInsert
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.Translator
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.AapsTheme
+import app.gmaaps.core.ui.compose.icons.IcCannulaChange
+import app.gmaaps.core.ui.compose.icons.IcCgmInsert
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Pre-formatted display data for a site entry row.
@@ -191,3 +191,4 @@ fun TE.toDisplayData(
     timestamp = timestamp,
     location = location ?: TE.Location.NONE
 )
+

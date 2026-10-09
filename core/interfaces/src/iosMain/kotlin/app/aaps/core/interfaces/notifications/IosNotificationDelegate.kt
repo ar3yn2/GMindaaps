@@ -1,8 +1,8 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
-import app.aaps.core.interfaces.notifications.IosNotificationDelegate.PRESENTATION_OPTIONS
-import app.aaps.core.interfaces.notifications.IosNotificationDelegate.install
-import app.aaps.core.interfaces.notifications.IosNotificationDelegate.register
+import app.gmaaps.core.interfaces.notifications.IosNotificationDelegate.PRESENTATION_OPTIONS
+import app.gmaaps.core.interfaces.notifications.IosNotificationDelegate.install
+import app.gmaaps.core.interfaces.notifications.IosNotificationDelegate.register
 import platform.UserNotifications.UNNotification
 import platform.UserNotifications.UNNotificationCategory
 import platform.UserNotifications.UNNotificationPresentationOptionBanner
@@ -152,3 +152,4 @@ object IosNotificationDelegate {
         }
     }
 }
+

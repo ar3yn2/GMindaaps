@@ -1,7 +1,7 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.plugins.automation.triggers.TriggerTestBase
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.plugins.automation.triggers.TriggerTestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -18,3 +18,4 @@ class InputTempTargetTest : TriggerTestBase() {
         assertThat(i.units).isEqualTo(GlucoseUnit.MGDL)
     }
 }
+

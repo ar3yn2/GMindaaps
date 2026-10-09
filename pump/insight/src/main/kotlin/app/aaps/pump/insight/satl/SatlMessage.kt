@@ -1,16 +1,16 @@
-package app.aaps.pump.insight.satl
+﻿package app.gmaaps.pump.insight.satl
 
-import app.aaps.pump.insight.descriptors.SatlCommands
-import app.aaps.pump.insight.exceptions.IncompatibleSatlVersionException
-import app.aaps.pump.insight.exceptions.InvalidMacTrailerException
-import app.aaps.pump.insight.exceptions.InvalidNonceException
-import app.aaps.pump.insight.exceptions.InvalidPacketLengthsException
-import app.aaps.pump.insight.exceptions.InvalidPreambleException
-import app.aaps.pump.insight.exceptions.InvalidSatlCRCException
-import app.aaps.pump.insight.exceptions.InvalidSatlCommandException
-import app.aaps.pump.insight.utils.ByteBuf
-import app.aaps.pump.insight.utils.Nonce
-import app.aaps.pump.insight.utils.crypto.Cryptograph
+import app.gmaaps.pump.insight.descriptors.SatlCommands
+import app.gmaaps.pump.insight.exceptions.IncompatibleSatlVersionException
+import app.gmaaps.pump.insight.exceptions.InvalidMacTrailerException
+import app.gmaaps.pump.insight.exceptions.InvalidNonceException
+import app.gmaaps.pump.insight.exceptions.InvalidPacketLengthsException
+import app.gmaaps.pump.insight.exceptions.InvalidPreambleException
+import app.gmaaps.pump.insight.exceptions.InvalidSatlCRCException
+import app.gmaaps.pump.insight.exceptions.InvalidSatlCommandException
+import app.gmaaps.pump.insight.utils.ByteBuf
+import app.gmaaps.pump.insight.utils.Nonce
+import app.gmaaps.pump.insight.utils.crypto.Cryptograph
 
 abstract class SatlMessage {
 

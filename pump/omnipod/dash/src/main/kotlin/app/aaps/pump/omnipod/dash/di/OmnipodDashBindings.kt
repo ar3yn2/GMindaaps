@@ -1,18 +1,18 @@
-package app.aaps.pump.omnipod.dash.di
+﻿package app.gmaaps.pump.omnipod.dash.di
 
 import android.content.Context
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.omnipod.common.bledriver.comm.OmnipodBleManager
-import app.aaps.pump.omnipod.common.bledriver.comm.OmnipodDashBleManagerImpl
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.device.BleDeviceManager
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.session.BleConnectionFactory
-import app.aaps.pump.omnipod.common.bledriver.comm.legacy.LegacyBleConnectionFactory
-import app.aaps.pump.omnipod.common.bledriver.comm.legacy.LegacyBleDeviceManager
-import app.aaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
-import app.aaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManagerImpl
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.omnipod.common.bledriver.comm.OmnipodBleManager
+import app.gmaaps.pump.omnipod.common.bledriver.comm.OmnipodDashBleManagerImpl
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.device.BleDeviceManager
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.session.BleConnectionFactory
+import app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.LegacyBleConnectionFactory
+import app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.LegacyBleDeviceManager
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManagerImpl
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -62,3 +62,4 @@ object OmnipodDashBindings {
         bleDeviceManager: BleDeviceManager
     ): OmnipodBleManager = OmnipodDashBleManagerImpl(aapsLogger, podState, config, bleConnectionFactory, bleDeviceManager)
 }
+

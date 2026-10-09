@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.database.entities.GlucoseValue
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.database.entities.GlucoseValue
 
 fun GlucoseValue.TrendArrow.fromDb(): TrendArrow =
     when (this) {
@@ -30,4 +30,5 @@ fun TrendArrow.toDb(): GlucoseValue.TrendArrow =
         TrendArrow.TRIPLE_UP       -> GlucoseValue.TrendArrow.TRIPLE_UP
         TrendArrow.NONE            -> GlucoseValue.TrendArrow.NONE
     }
+
 

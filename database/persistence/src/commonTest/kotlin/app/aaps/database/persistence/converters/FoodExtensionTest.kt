@@ -1,9 +1,9 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.FD
-import app.aaps.core.data.model.IDs
-import app.aaps.database.entities.Food
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.core.data.model.FD
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.database.entities.Food
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -156,3 +156,4 @@ internal class FoodExtensionTest {
         assertEquals("g", back.unit)
     }
 }
+

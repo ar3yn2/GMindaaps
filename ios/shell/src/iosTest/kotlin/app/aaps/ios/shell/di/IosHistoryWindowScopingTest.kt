@@ -1,9 +1,9 @@
-package app.aaps.ios.shell.di
+﻿package app.gmaaps.ios.shell.di
 
-import app.aaps.core.objects.di.CoreObjectsGraph
-import app.aaps.plugins.sync.nsclientV3.ws.NsSocket
-import app.aaps.plugins.sync.nsclientV3.ws.NsSocketFactory
-import app.aaps.shared.clientbindings.ClientGraphBindings
+import app.gmaaps.core.objects.di.CoreObjectsGraph
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsSocket
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsSocketFactory
+import app.gmaaps.shared.clientbindings.ClientGraphBindings
 import dev.zacsweers.metro.createGraphFactory
 import kotlin.test.Test
 import kotlin.test.assertNotSame
@@ -73,3 +73,4 @@ class IosHistoryWindowScopingTest {
         assertSame(graph.overviewDataCache, graph.overviewDataCache)
     }
 }
+

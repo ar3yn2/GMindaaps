@@ -1,8 +1,8 @@
-package app.aaps.pump.medtronic.data.dto
+﻿package app.gmaaps.pump.medtronic.data.dto
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
 import org.joda.time.LocalTime
 import java.util.Locale
 
@@ -68,3 +68,4 @@ class BasalProfileEntry {
     }
 
 }
+

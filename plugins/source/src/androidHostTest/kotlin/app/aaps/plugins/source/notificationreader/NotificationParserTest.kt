@@ -1,6 +1,6 @@
-package app.aaps.plugins.source.notificationreader
+﻿package app.gmaaps.plugins.source.notificationreader
 
-import app.aaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.SourceSensor
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Nested
@@ -278,3 +278,4 @@ class NotificationParserTest {
         }
     }
 }
+

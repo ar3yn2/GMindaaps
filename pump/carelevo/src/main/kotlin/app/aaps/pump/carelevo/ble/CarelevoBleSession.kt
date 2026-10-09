@@ -1,30 +1,30 @@
-package app.aaps.pump.carelevo.ble
+﻿package app.gmaaps.pump.carelevo.ble
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotCommand
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotResponse
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotTier
-import app.aaps.pump.carelevo.ble.commands.AdditionalPrimingCommand
-import app.aaps.pump.carelevo.ble.commands.AlertAlarmSetCommand
-import app.aaps.pump.carelevo.ble.commands.AppAuthCommand
-import app.aaps.pump.carelevo.ble.commands.BasalProgramCommand
-import app.aaps.pump.carelevo.ble.commands.InfusionInfoCommand
-import app.aaps.pump.carelevo.ble.commands.InfusionInfoResponse
-import app.aaps.pump.carelevo.ble.commands.MacAddressCommand
-import app.aaps.pump.carelevo.ble.commands.PatchInfoResponse
-import app.aaps.pump.carelevo.ble.commands.SafetyCheckCommand
-import app.aaps.pump.carelevo.ble.commands.SafetyCheckResponse
-import app.aaps.pump.carelevo.ble.commands.SetTimeForPatchInfoCommand
-import app.aaps.pump.carelevo.ble.commands.SimpleResultResponse
-import app.aaps.pump.carelevo.ble.commands.ThresholdSetupCommand
-import app.aaps.pump.carelevo.ble.gatt.BleTransportGattConnection
-import app.aaps.pump.carelevo.ble.gatt.GattConnState
-import app.aaps.pump.carelevo.ble.gatt.GattEvent
-import app.aaps.pump.carelevo.di.CarelevoRxCharacteristic
-import app.aaps.pump.carelevo.di.CarelevoTxCharacteristic
-import app.aaps.pump.carelevo.ext.checkSumV2
-import app.aaps.pump.carelevo.ext.convertHexToByteArray
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotCommand
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotResponse
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotTier
+import app.gmaaps.pump.carelevo.ble.commands.AdditionalPrimingCommand
+import app.gmaaps.pump.carelevo.ble.commands.AlertAlarmSetCommand
+import app.gmaaps.pump.carelevo.ble.commands.AppAuthCommand
+import app.gmaaps.pump.carelevo.ble.commands.BasalProgramCommand
+import app.gmaaps.pump.carelevo.ble.commands.InfusionInfoCommand
+import app.gmaaps.pump.carelevo.ble.commands.InfusionInfoResponse
+import app.gmaaps.pump.carelevo.ble.commands.MacAddressCommand
+import app.gmaaps.pump.carelevo.ble.commands.PatchInfoResponse
+import app.gmaaps.pump.carelevo.ble.commands.SafetyCheckCommand
+import app.gmaaps.pump.carelevo.ble.commands.SafetyCheckResponse
+import app.gmaaps.pump.carelevo.ble.commands.SetTimeForPatchInfoCommand
+import app.gmaaps.pump.carelevo.ble.commands.SimpleResultResponse
+import app.gmaaps.pump.carelevo.ble.commands.ThresholdSetupCommand
+import app.gmaaps.pump.carelevo.ble.gatt.BleTransportGattConnection
+import app.gmaaps.pump.carelevo.ble.gatt.GattConnState
+import app.gmaaps.pump.carelevo.ble.gatt.GattEvent
+import app.gmaaps.pump.carelevo.di.CarelevoRxCharacteristic
+import app.gmaaps.pump.carelevo.di.CarelevoTxCharacteristic
+import app.gmaaps.pump.carelevo.ext.checkSumV2
+import app.gmaaps.pump.carelevo.ext.convertHexToByteArray
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -549,3 +549,4 @@ class CarelevoBleSession @Inject constructor(
         private const val INTER_SESSION_SETTLE_MS = 1000L
     }
 }
+

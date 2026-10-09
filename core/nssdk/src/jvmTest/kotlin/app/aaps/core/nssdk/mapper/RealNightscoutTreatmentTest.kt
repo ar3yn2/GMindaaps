@@ -1,9 +1,9 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.localmodel.treatment.NSBolus
-import app.aaps.core.nssdk.localmodel.treatment.NSCarbs
-import app.aaps.core.nssdk.localmodel.treatment.NSTemporaryBasal
-import app.aaps.core.nssdk.localmodel.treatment.NSTemporaryTarget
+import app.gmaaps.core.nssdk.localmodel.treatment.NSBolus
+import app.gmaaps.core.nssdk.localmodel.treatment.NSCarbs
+import app.gmaaps.core.nssdk.localmodel.treatment.NSTemporaryBasal
+import app.gmaaps.core.nssdk.localmodel.treatment.NSTemporaryTarget
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.SerializationException
 import org.junit.jupiter.api.Test
@@ -186,3 +186,4 @@ class RealNightscoutTreatmentTest {
         assertThrows<SerializationException> { "".toNSTreatment() }
     }
 }
+

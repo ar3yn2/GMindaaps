@@ -1,8 +1,8 @@
-package app.aaps.wear.interaction.utils
+﻿package app.gmaaps.wear.interaction.utils
 
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.wear.R
-import app.aaps.wear.WearTestBase
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.wear.R
+import app.gmaaps.wear.WearTestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -100,3 +100,4 @@ class DisplayFormatTest : WearTestBase() {
         assertThat(displayFormat.detailedCob(status(cob = "100(1)g"), 0)).isEqualTo(Pair.create("100g", "1g"))
     }
 }
+

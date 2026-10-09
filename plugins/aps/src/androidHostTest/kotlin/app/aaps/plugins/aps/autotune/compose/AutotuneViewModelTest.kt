@@ -1,22 +1,22 @@
-package app.aaps.plugins.aps.autotune.compose
+﻿package app.gmaaps.plugins.aps.autotune.compose
 
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.profile.ProfileStore
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowDialog
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.elements.WeekDay
-import app.aaps.plugins.aps.autotune.AutotuneFS
-import app.aaps.plugins.aps.autotune.AutotunePlugin
-import app.aaps.plugins.aps.autotune.data.ATProfile
-import app.aaps.plugins.aps.autotune.events.EventAutotuneUpdateGui
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.profile.ProfileStore
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowDialog
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.elements.WeekDay
+import app.gmaaps.plugins.aps.autotune.AutotuneFS
+import app.gmaaps.plugins.aps.autotune.AutotunePlugin
+import app.gmaaps.plugins.aps.autotune.data.ATProfile
+import app.gmaaps.plugins.aps.autotune.events.EventAutotuneUpdateGui
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -142,8 +142,8 @@ internal class AutotuneViewModelTest {
         whenever(autotunePlugin.selectedProfile).thenReturn("")
         whenever(autotunePlugin.days).thenReturn(WeekDay())
         whenever(autotunePlugin.calcDays(any())).thenReturn(1)
-        whenever(rh.gs(app.aaps.core.ui.R.string.active)).thenReturn("Active")
-        whenever(rh.gs(app.aaps.core.ui.R.string.profileswitch_ismissing)).thenReturn("No profile")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.active)).thenReturn("Active")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.profileswitch_ismissing)).thenReturn("No profile")
         whenever(dateUtil.dateAndTimeString(any())).thenReturn("now")
         return AutotuneViewModel(
             autotunePlugin, autotuneFS, profileFunction, profileUtil, profileRepository, preferences,
@@ -162,8 +162,8 @@ internal class AutotuneViewModelTest {
         whenever(autotunePlugin.tunedProfile).thenReturn(tunedProfile)
         whenever(preferences.get(BooleanKey.AutotuneCircadianIcIsf)).thenReturn(false)
         whenever(profileFunction.getRunningOrRequestedICfg()).thenReturn(null)
-        whenever(rh.gs(app.aaps.core.ui.R.string.autotune)).thenReturn("Autotune")
-        whenever(rh.gs(app.aaps.core.ui.R.string.profile_switch_no_insulin)).thenReturn("No insulin in use")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.autotune)).thenReturn("Autotune")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.profile_switch_no_insulin)).thenReturn("No insulin in use")
 
         advanceableSut(testScheduler).onProfileSwitchConfirm()
         advanceUntilIdle()
@@ -176,3 +176,4 @@ internal class AutotuneViewModelTest {
         }
     }
 }
+

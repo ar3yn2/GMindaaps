@@ -1,12 +1,12 @@
-package app.aaps.plugins.sync.nsclientV3.workers
+﻿package app.gmaaps.plugins.sync.nsclientV3.workers
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
 
-import app.aaps.core.objects.workflow.WorkOutcome
+import app.gmaaps.core.objects.workflow.WorkOutcome
 
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
 import dev.zacsweers.metro.Inject
 
 /**
@@ -40,3 +40,4 @@ class LoadStatusRunner(
         return WorkOutcome.Success
     }
 }
+

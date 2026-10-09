@@ -1,4 +1,4 @@
-package app.aaps.ui.search
+﻿package app.gmaaps.ui.search
 
 import platform.Foundation.NSDiacriticInsensitiveSearch
 import platform.Foundation.NSString
@@ -14,3 +14,4 @@ import platform.Foundation.stringByFoldingWithOptions
  */
 internal actual fun String.removeDiacritics(): String =
     (this as NSString).stringByFoldingWithOptions(NSDiacriticInsensitiveSearch, null)
+

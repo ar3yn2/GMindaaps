@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
 /**
  * This class represents insulin amount delivered by pump.

@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.response
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.response
 
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlarmType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.NakErrorType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
-import app.aaps.pump.omnipod.common.bledriver.pod.util.byValue
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlarmType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.NakErrorType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.byValue
 
 class NakResponse(
     encoded: ByteArray
@@ -47,3 +47,4 @@ class NakResponse(
             '}'
     }
 }
+

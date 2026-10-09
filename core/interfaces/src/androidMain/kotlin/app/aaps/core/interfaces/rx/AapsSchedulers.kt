@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.rx
+﻿package app.gmaaps.core.interfaces.rx
 
 import io.reactivex.rxjava3.core.Scheduler
 

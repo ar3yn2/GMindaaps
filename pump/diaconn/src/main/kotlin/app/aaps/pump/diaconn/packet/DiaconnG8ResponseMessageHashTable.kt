@@ -1,6 +1,6 @@
-package app.aaps.pump.diaconn.packet
+﻿package app.gmaaps.pump.diaconn.packet
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -55,3 +55,4 @@ class DiaconnG8ResponseMessageHashTable(
         put(InjectionProgressReportPacket(injector))
     }
 }
+

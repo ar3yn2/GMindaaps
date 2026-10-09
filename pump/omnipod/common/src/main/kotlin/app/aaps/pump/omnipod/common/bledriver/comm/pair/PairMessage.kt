@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.pair
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.pair
 
-import app.aaps.pump.omnipod.common.bledriver.comm.Id
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessagePacket
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageType
-import app.aaps.pump.omnipod.common.bledriver.comm.message.StringLengthPrefixEncoding
+import app.gmaaps.pump.omnipod.common.bledriver.comm.Id
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessagePacket
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageType
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.StringLengthPrefixEncoding
 
 class PairMessage(
     val sequenceNumber: Byte,
@@ -23,3 +23,4 @@ class PairMessage(
         sas = true // TODO: understand why this is true for PairMessages
     )
 )
+

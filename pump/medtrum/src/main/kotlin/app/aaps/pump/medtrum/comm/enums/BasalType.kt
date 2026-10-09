@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.comm.enums
+﻿package app.gmaaps.pump.medtrum.comm.enums
 
 enum class BasalType {
     NONE,
@@ -80,3 +80,4 @@ enum class BasalType {
         }
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.pump.danars.DanaRSTestBase
+import app.gmaaps.pump.danars.DanaRSTestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -21,3 +21,4 @@ class DanaRsPacketBasalGetBasalRateTest : DanaRSTestBase() {
         assertThat(packet.friendlyName).isEqualTo("BASAL__GET_BASAL_RATE")
     }
 }
+

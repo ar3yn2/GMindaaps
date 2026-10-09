@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.compose
+﻿package app.gmaaps.pump.medtrum.compose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,7 +10,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.pump.PumpOverviewScreen
+import app.gmaaps.core.ui.compose.pump.PumpOverviewScreen
 
 @Composable
 fun MedtrumOverviewScreen(
@@ -22,7 +22,7 @@ fun MedtrumOverviewScreen(
         state = uiState,
         customContent = {
             Image(
-                painter = painterResource(id = app.aaps.core.ui.R.drawable.ic_medtrum_128),
+                painter = painterResource(id = app.gmaaps.core.ui.R.drawable.ic_medtrum_128),
                 contentDescription = null,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -32,3 +32,4 @@ fun MedtrumOverviewScreen(
         }
     )
 }
+

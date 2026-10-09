@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.presentation.model
+﻿package app.gmaaps.pump.carelevo.presentation.model
 
-import app.aaps.pump.carelevo.common.model.Event
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.common.model.Event
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -201,3 +201,4 @@ internal class CarelevoUiEventModelTest {
         assertThat(event.copy(messageRes = 7).messageRes).isEqualTo(7)
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.compose.steps
+﻿package app.gmaaps.pump.medtrum.compose.steps
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -18,13 +18,13 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.banner.ErrorBanner
-import app.aaps.core.ui.compose.dialogs.OkDialog
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.medtrum.R
-import app.aaps.pump.medtrum.code.PatchStep
-import app.aaps.pump.medtrum.compose.MedtrumPatchViewModel
+import app.gmaaps.core.ui.compose.banner.ErrorBanner
+import app.gmaaps.core.ui.compose.dialogs.OkDialog
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.medtrum.R
+import app.gmaaps.pump.medtrum.code.PatchStep
+import app.gmaaps.pump.medtrum.compose.MedtrumPatchViewModel
 
 @Composable
 fun PrepareStep(
@@ -91,7 +91,7 @@ fun PrepareStep(
 
     unexpectedStateMessage?.let { msg ->
         OkDialog(
-            title = stringResource(app.aaps.core.ui.R.string.error),
+            title = stringResource(app.gmaaps.core.ui.R.string.error),
             message = stringResource(R.string.unexpected_state, msg),
             onDismiss = {
                 unexpectedStateMessage = null
@@ -120,13 +120,13 @@ internal fun PrepareStepContent(
 ) {
     WizardStepLayout(
         primaryButton = when (state) {
-            PrepareState.INITIAL -> WizardButton(text = stringResource(app.aaps.core.ui.R.string.next), onClick = onNext)
+            PrepareState.INITIAL -> WizardButton(text = stringResource(app.gmaaps.core.ui.R.string.next), onClick = onNext)
             PrepareState.CONNECTING -> null
-            PrepareState.FILLED -> WizardButton(text = stringResource(app.aaps.core.ui.R.string.next), onClick = onFilled)
-            PrepareState.ERROR -> WizardButton(text = stringResource(app.aaps.core.ui.R.string.retry), onClick = onRetry)
+            PrepareState.FILLED -> WizardButton(text = stringResource(app.gmaaps.core.ui.R.string.next), onClick = onFilled)
+            PrepareState.ERROR -> WizardButton(text = stringResource(app.gmaaps.core.ui.R.string.retry), onClick = onRetry)
         },
         secondaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.cancel),
+            text = stringResource(app.gmaaps.core.ui.R.string.cancel),
             onClick = onCancel
         )
     ) {
@@ -181,3 +181,4 @@ internal fun PrepareStepContent(
         }
     }
 }
+

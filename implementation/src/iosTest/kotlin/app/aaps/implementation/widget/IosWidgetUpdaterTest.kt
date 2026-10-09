@@ -1,7 +1,7 @@
-package app.aaps.implementation.widget
+﻿package app.gmaaps.implementation.widget
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -69,3 +69,4 @@ class IosWidgetUpdaterTest {
         assertEquals(5, logger.debugs.size)
     }
 }
+

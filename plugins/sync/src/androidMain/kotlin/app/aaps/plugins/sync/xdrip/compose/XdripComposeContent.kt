@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.xdrip.compose
+﻿package app.gmaaps.plugins.sync.xdrip.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -7,14 +7,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
-import app.aaps.core.interfaces.sync.DataSyncSelectorXdrip
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.sync.SyncStrings
+import app.gmaaps.core.interfaces.sync.DataSyncSelectorXdrip
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.sync.SyncStrings
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -63,3 +63,4 @@ internal class XdripComposeContent(
         )
     }
 }
+

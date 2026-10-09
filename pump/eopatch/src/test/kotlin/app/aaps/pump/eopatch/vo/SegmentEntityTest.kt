@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -295,3 +295,4 @@ class SegmentEntityTest {
         assertThat(segment.endIndex).isEqualTo(5) // 150 / 30 = 5
     }
 }
+

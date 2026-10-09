@@ -1,4 +1,4 @@
-package app.aaps.database.entities
+﻿package app.gmaaps.database.entities
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -42,3 +42,4 @@ class HeartRateTest {
             )
     }
 }
+

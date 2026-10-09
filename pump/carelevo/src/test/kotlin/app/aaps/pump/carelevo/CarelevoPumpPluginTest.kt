@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo
+﻿package app.gmaaps.pump.carelevo
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpType
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.runBlocking
@@ -149,3 +149,4 @@ class CarelevoPumpPluginTest : CarelevoPumpPluginTestBase() {
         assertThat(plugin.getType()).isEqualTo(PluginType.PUMP)
     }
 }
+

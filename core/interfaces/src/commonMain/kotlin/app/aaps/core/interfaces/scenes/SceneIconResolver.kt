@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.scenes
+﻿package app.gmaaps.core.interfaces.scenes
 
 import androidx.compose.ui.graphics.vector.ImageVector
 
@@ -12,3 +12,4 @@ interface SceneIconResolver {
     /** Resolved icon for the scene's stored icon key, or null if the scene is missing. */
     fun iconForScene(sceneId: String): ImageVector?
 }
+

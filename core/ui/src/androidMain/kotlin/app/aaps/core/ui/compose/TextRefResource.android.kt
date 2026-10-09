@@ -1,12 +1,12 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import app.aaps.core.interfaces.InterfacesStringIds
-import app.aaps.core.interfaces.resources.TextRefIdRegistry
-import app.aaps.core.keys.KeysStringIds
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStringIds
+import app.gmaaps.core.interfaces.InterfacesStringIds
+import app.gmaaps.core.interfaces.resources.TextRefIdRegistry
+import app.gmaaps.core.keys.KeysStringIds
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStringIds
 
 /**
  * Both resource forms end up in the platform `stringResource`. [TextRef.AndroidRes] carries the id
@@ -59,3 +59,4 @@ private fun androidIdOf(ref: TextRef.Named): Int? = when (ref.owner) {
  * before.
  */
 private fun List<Any?>.forFormat(): Array<Any> = Array(size) { this[it] ?: "null" }
+

@@ -1,10 +1,10 @@
-package app.aaps.core.objects.interfaces.pump.defs
+﻿package app.gmaaps.core.objects.interfaces.pump.defs
 
-import app.aaps.core.data.pump.defs.Capability
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.pump.defs.PumpTempBasalType
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.pump.defs.fillFor
+import app.gmaaps.core.data.pump.defs.Capability
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpTempBasalType
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.pump.defs.fillFor
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -32,3 +32,4 @@ class PumpDescriptionTest {
         assertThat(pumpDescription.tempDurationStep30mAllowed).isEqualTo(PumpType.ACCU_CHEK_COMBO.specialBasalDurations().contains(Capability.BasalRate_Duration30minAllowed))
     }
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.nsclientV3.json
+﻿package app.gmaaps.plugins.sync.nsclientV3.json
 
-import app.aaps.core.data.json.OrgJsonCompat.optBooleanCompat
-import app.aaps.core.data.json.OrgJsonCompat.optJsonObjectCompat
-import app.aaps.core.data.json.OrgJsonCompat.optLongCompat
-import app.aaps.core.data.json.OrgJsonCompat.optStringCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optBooleanCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optJsonObjectCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optLongCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optStringCompat
 import com.google.common.truth.Truth.assertThat
 import com.google.common.truth.Truth.assertWithMessage
 import kotlinx.serialization.json.Json
@@ -103,3 +103,4 @@ class OrgJsonCompatTest {
         assertThat(identifier.startsWith("ctrl_")).isFalse()
     }
 }
+

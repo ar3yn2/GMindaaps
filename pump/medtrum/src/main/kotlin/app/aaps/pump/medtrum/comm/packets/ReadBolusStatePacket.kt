@@ -1,7 +1,7 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.pump.medtrum.comm.enums.CommandType.READ_BOLUS_STATE
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.pump.medtrum.comm.enums.CommandType.READ_BOLUS_STATE
 
 class ReadBolusStatePacket(injector: MetroMemberInjector) : MedtrumPacket(injector) {
     // UNUSED
@@ -29,3 +29,4 @@ class ReadBolusStatePacket(injector: MetroMemberInjector) : MedtrumPacket(inject
         return success
     }
 }
+

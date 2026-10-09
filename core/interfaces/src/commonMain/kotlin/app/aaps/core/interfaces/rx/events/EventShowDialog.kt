@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.rx.events
+﻿package app.gmaaps.core.interfaces.rx.events
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.data.ui.ConfirmationLine
+import app.gmaaps.core.data.ui.ConfirmationLine
 
 /**
  * Request a modal dialog from anywhere in the app. Consumed by the root
@@ -61,3 +61,4 @@ sealed class EventShowDialog : Event() {
         val onDismiss: (() -> Unit)? = null
     ) : EventShowDialog()
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.utils
+﻿package app.gmaaps.core.interfaces.utils
 
 import kotlin.math.abs
 import kotlin.math.ceil
@@ -77,3 +77,4 @@ object Round {
     fun isSame(d1: Double, d2: Double): Boolean =
         abs(d1 - d2) <= 0.000001
 }
+

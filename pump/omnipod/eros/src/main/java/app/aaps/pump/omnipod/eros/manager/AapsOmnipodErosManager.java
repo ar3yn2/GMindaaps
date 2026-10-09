@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.manager;
+package app.gmaaps.pump.omnipod.eros.manager;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,84 +11,84 @@ import java.util.Date;
 import java.util.List;
 import java.util.function.Supplier;
 
-import app.aaps.core.data.model.BS;
-import app.aaps.core.data.model.TE;
-import app.aaps.core.data.pump.defs.PumpType;
-import app.aaps.core.data.time.T;
-import app.aaps.core.interfaces.insulin.ConcentrationHelper;
-import app.aaps.core.interfaces.logging.AAPSLogger;
-import app.aaps.core.interfaces.logging.LTag;
-import app.aaps.core.interfaces.notifications.AlarmSound;
-import app.aaps.core.interfaces.notifications.NotificationId;
-import app.aaps.core.interfaces.notifications.NotificationLevel;
-import app.aaps.core.interfaces.notifications.NotificationManager;
-import app.aaps.core.interfaces.profile.Profile;
-import app.aaps.core.interfaces.pump.BolusProgressData;
-import app.aaps.core.interfaces.pump.DetailedBolusInfo;
-import app.aaps.core.interfaces.pump.PumpEnactResult;
-import app.aaps.core.interfaces.pump.PumpInsulin;
-import app.aaps.core.interfaces.pump.PumpRate;
-import app.aaps.core.interfaces.pump.PumpSync;
-import app.aaps.core.interfaces.pump.defs.PumpTypeExtensionKt;
-import app.aaps.core.interfaces.resources.ResourceHelper;
-import app.aaps.core.interfaces.rx.bus.RxBus;
-import app.aaps.core.interfaces.rx.events.Event;
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview;
-import app.aaps.core.interfaces.ui.UiInteraction;
-import app.aaps.core.keys.interfaces.Preferences;
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.common.defs.TempBasalPair;
-import app.aaps.pump.common.hw.rileylink.keys.RileylinkBooleanPreferenceKey;
-import app.aaps.pump.omnipod.common.definition.OmnipodCommandType;
-import app.aaps.pump.omnipod.common.keys.OmnipodBooleanPreferenceKey;
-import app.aaps.pump.omnipod.eros.R;
-import app.aaps.pump.omnipod.eros.definition.PodHistoryEntryType;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoRecentPulseLog;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoResponse;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
-import app.aaps.pump.omnipod.eros.driver.definition.BeepConfigType;
-import app.aaps.pump.omnipod.eros.driver.definition.FaultEventCode;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
-import app.aaps.pump.omnipod.eros.driver.definition.PodInfoType;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BasalSchedule;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BasalScheduleEntry;
-import app.aaps.pump.omnipod.eros.driver.exception.ActivationTimeExceededException;
-import app.aaps.pump.omnipod.eros.driver.exception.CommandFailedAfterChangingDeliveryStatusException;
-import app.aaps.pump.omnipod.eros.driver.exception.CrcMismatchException;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalActivationProgressException;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalDeliveryStatusException;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalMessageAddressException;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalMessageSequenceNumberException;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalPacketTypeException;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalPodProgressException;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalResponseException;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalVersionResponseTypeException;
-import app.aaps.pump.omnipod.eros.driver.exception.MessageDecodingException;
-import app.aaps.pump.omnipod.eros.driver.exception.NonceOutOfSyncException;
-import app.aaps.pump.omnipod.eros.driver.exception.NonceResyncException;
-import app.aaps.pump.omnipod.eros.driver.exception.NotEnoughDataException;
-import app.aaps.pump.omnipod.eros.driver.exception.OmnipodException;
-import app.aaps.pump.omnipod.eros.driver.exception.PodFaultException;
-import app.aaps.pump.omnipod.eros.driver.exception.PodProgressStatusVerificationFailedException;
-import app.aaps.pump.omnipod.eros.driver.exception.PodReturnedErrorResponseException;
-import app.aaps.pump.omnipod.eros.driver.exception.PrecedingCommandFailedUncertainlyException;
-import app.aaps.pump.omnipod.eros.driver.exception.RileyLinkInterruptedException;
-import app.aaps.pump.omnipod.eros.driver.exception.RileyLinkTimeoutException;
-import app.aaps.pump.omnipod.eros.driver.exception.RileyLinkUnexpectedException;
-import app.aaps.pump.omnipod.eros.driver.exception.RileyLinkUnreachableException;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.driver.manager.OmnipodManager;
-import app.aaps.pump.omnipod.eros.event.EventOmnipodErosPumpValuesChanged;
-import app.aaps.pump.omnipod.eros.extensions.DetailedBolusInfoExtensionKt;
-import app.aaps.pump.omnipod.eros.extensions.PumpStateExtensionKt;
-import app.aaps.pump.omnipod.eros.history.ErosHistory;
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryRecordEntity;
-import app.aaps.pump.omnipod.eros.keys.ErosBooleanPreferenceKey;
-import app.aaps.pump.omnipod.eros.keys.ErosStringNonPreferenceKey;
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
-import app.aaps.pump.omnipod.eros.util.AapsOmnipodUtil;
-import app.aaps.pump.omnipod.eros.util.OmnipodAlertUtil;
+import app.gmaaps.core.data.model.BS;
+import app.gmaaps.core.data.model.TE;
+import app.gmaaps.core.data.pump.defs.PumpType;
+import app.gmaaps.core.data.time.T;
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper;
+import app.gmaaps.core.interfaces.logging.AAPSLogger;
+import app.gmaaps.core.interfaces.logging.LTag;
+import app.gmaaps.core.interfaces.notifications.AlarmSound;
+import app.gmaaps.core.interfaces.notifications.NotificationId;
+import app.gmaaps.core.interfaces.notifications.NotificationLevel;
+import app.gmaaps.core.interfaces.notifications.NotificationManager;
+import app.gmaaps.core.interfaces.profile.Profile;
+import app.gmaaps.core.interfaces.pump.BolusProgressData;
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo;
+import app.gmaaps.core.interfaces.pump.PumpEnactResult;
+import app.gmaaps.core.interfaces.pump.PumpInsulin;
+import app.gmaaps.core.interfaces.pump.PumpRate;
+import app.gmaaps.core.interfaces.pump.PumpSync;
+import app.gmaaps.core.interfaces.pump.defs.PumpTypeExtensionKt;
+import app.gmaaps.core.interfaces.resources.ResourceHelper;
+import app.gmaaps.core.interfaces.rx.bus.RxBus;
+import app.gmaaps.core.interfaces.rx.events.Event;
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview;
+import app.gmaaps.core.interfaces.ui.UiInteraction;
+import app.gmaaps.core.keys.interfaces.Preferences;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.common.defs.TempBasalPair;
+import app.gmaaps.pump.common.hw.rileylink.keys.RileylinkBooleanPreferenceKey;
+import app.gmaaps.pump.omnipod.common.definition.OmnipodCommandType;
+import app.gmaaps.pump.omnipod.common.keys.OmnipodBooleanPreferenceKey;
+import app.gmaaps.pump.omnipod.eros.R;
+import app.gmaaps.pump.omnipod.eros.definition.PodHistoryEntryType;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoRecentPulseLog;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoResponse;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
+import app.gmaaps.pump.omnipod.eros.driver.definition.BeepConfigType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.FaultEventCode;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodInfoType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BasalSchedule;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BasalScheduleEntry;
+import app.gmaaps.pump.omnipod.eros.driver.exception.ActivationTimeExceededException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.CommandFailedAfterChangingDeliveryStatusException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.CrcMismatchException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalActivationProgressException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalDeliveryStatusException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalMessageAddressException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalMessageSequenceNumberException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalPacketTypeException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalPodProgressException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalResponseException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalVersionResponseTypeException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.MessageDecodingException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.NonceOutOfSyncException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.NonceResyncException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.NotEnoughDataException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.OmnipodException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.PodFaultException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.PodProgressStatusVerificationFailedException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.PodReturnedErrorResponseException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.PrecedingCommandFailedUncertainlyException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.RileyLinkInterruptedException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.RileyLinkTimeoutException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.RileyLinkUnexpectedException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.RileyLinkUnreachableException;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.driver.manager.OmnipodManager;
+import app.gmaaps.pump.omnipod.eros.event.EventOmnipodErosPumpValuesChanged;
+import app.gmaaps.pump.omnipod.eros.extensions.DetailedBolusInfoExtensionKt;
+import app.gmaaps.pump.omnipod.eros.extensions.PumpStateExtensionKt;
+import app.gmaaps.pump.omnipod.eros.history.ErosHistory;
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryRecordEntity;
+import app.gmaaps.pump.omnipod.eros.keys.ErosBooleanPreferenceKey;
+import app.gmaaps.pump.omnipod.eros.keys.ErosStringNonPreferenceKey;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.pump.omnipod.eros.util.AapsOmnipodUtil;
+import app.gmaaps.pump.omnipod.eros.util.OmnipodAlertUtil;
 import io.reactivex.rxjava3.subjects.SingleSubject;
 import kotlin.coroutines.EmptyCoroutineContext;
 import kotlinx.coroutines.BuildersKt;
@@ -160,7 +160,7 @@ public class AapsOmnipodErosManager {
         this.bolusProgressData = bolusProgressData;
 
         // Injected rather than built here. `communicationService` and `aapsSchedulers` were constructor
-        // parameters used for nothing else, so both are gone; see `app.aaps.di.pump.OmnipodErosModule`.
+        // parameters used for nothing else, so both are gone; see `app.gmaaps.di.pump.OmnipodErosModule`.
         this.delegate = delegate;
 
         reloadSettings();
@@ -211,7 +211,7 @@ public class AapsOmnipodErosManager {
             result.success(res).enacted(res);
 
             if (!res) {
-                result.comment(rh.gs(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_failed_to_initialize_pod));
+                result.comment(rh.gs(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_failed_to_initialize_pod));
             }
         } catch (Exception ex) {
             result.success(false).enacted(false).comment(translateException(ex));
@@ -224,7 +224,7 @@ public class AapsOmnipodErosManager {
 
     public PumpEnactResult insertCannula(Profile profile) {
         if (profile == null) {
-            String comment = getStringResource(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_set_initial_basal_schedule_no_profile);
+            String comment = getStringResource(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_set_initial_basal_schedule_no_profile);
             return pumpEnactResultProvider.get().success(false).enacted(false).comment(comment);
         }
 
@@ -238,7 +238,7 @@ public class AapsOmnipodErosManager {
 
             result.success(res).enacted(res);
             if (!res) {
-                result.comment(rh.gs(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_failed_to_insert_cannula));
+                result.comment(rh.gs(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_failed_to_insert_cannula));
             }
         } catch (Exception ex) {
             result.success(false).enacted(false).comment(translateException(ex));
@@ -322,7 +322,7 @@ public class AapsOmnipodErosManager {
     @NonNull public PumpEnactResult setBasalProfile(@Nullable Profile profile) {
         if (profile == null) {
             // FAILED_UPDATE_PROFILE posted centrally (onProfileChanged) from success=false; comment carries the reason.
-            String note = getStringResource(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_failed_to_set_profile_empty_profile);
+            String note = getStringResource(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_failed_to_set_profile_empty_profile);
             return pumpEnactResultProvider.get().success(false).enacted(false).comment(note);
         }
 
@@ -471,7 +471,7 @@ public class AapsOmnipodErosManager {
                 aapsLogger.debug(LTag.PUMP, "Bolus command successfully executed. Proceeding bolus cancellation");
             } else {
                 aapsLogger.debug(LTag.PUMP, "Not cancelling bolus: bolus command failed");
-                String comment = getStringResource(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_bolus_did_not_succeed);
+                String comment = getStringResource(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_bolus_did_not_succeed);
                 addFailureToHistory(System.currentTimeMillis(), PodHistoryEntryType.CANCEL_BOLUS, comment);
                 return pumpEnactResultProvider.get().success(true).enacted(false).comment(comment);
             }
@@ -967,7 +967,7 @@ public class AapsOmnipodErosManager {
                 ex instanceof IllegalDeliveryStatusException) {
             comment = getStringResource(R.string.omnipod_eros_error_invalid_progress_state);
         } else if (ex instanceof PodProgressStatusVerificationFailedException) {
-            comment = getStringResource(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_failed_to_verify_activation_progress);
+            comment = getStringResource(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_failed_to_verify_activation_progress);
         } else if (ex instanceof IllegalVersionResponseTypeException) {
             comment = getStringResource(R.string.omnipod_eros_error_invalid_response);
         } else if (ex instanceof IllegalResponseException) {
@@ -988,7 +988,7 @@ public class AapsOmnipodErosManager {
             FaultEventCode faultEventCode = ((PodFaultException) ex).getDetailedStatus().getFaultEventCode();
             comment = createPodFaultErrorMessage(faultEventCode);
         } else if (ex instanceof ActivationTimeExceededException) {
-            comment = getStringResource(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_pod_fault_activation_time_exceeded);
+            comment = getStringResource(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_pod_fault_activation_time_exceeded);
         } else if (ex instanceof PodReturnedErrorResponseException) {
             comment = getStringResource(R.string.omnipod_eros_error_pod_returned_error_response);
         } else if (ex instanceof RileyLinkUnreachableException) {
@@ -999,10 +999,10 @@ public class AapsOmnipodErosManager {
             comment = getStringResource(R.string.omnipod_eros_error_communication_failed_no_response_from_pod);
         } else if (ex instanceof RileyLinkUnexpectedException) {
             Throwable cause = ex.getCause();
-            comment = getStringResource(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_unexpected_exception, cause.getClass().getName(), cause.getMessage());
+            comment = getStringResource(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_unexpected_exception, cause.getClass().getName(), cause.getMessage());
         } else {
             // Shouldn't be reachable
-            comment = getStringResource(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_unexpected_exception, ex.getClass().getName(), ex.getMessage());
+            comment = getStringResource(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_unexpected_exception, ex.getClass().getName(), ex.getMessage());
         }
 
         return comment;
@@ -1018,7 +1018,7 @@ public class AapsOmnipodErosManager {
     }
 
     private void showErrorDialog(@NonNull String message, AlarmSound sound) {
-        uiInteraction.runAlarm(message, rh.gs(app.aaps.core.ui.R.string.error), sound);
+        uiInteraction.runAlarm(message, rh.gs(app.gmaaps.core.ui.R.string.error), sound);
     }
 
     private void showPodFaultNotification(FaultEventCode faultEventCode) {
@@ -1054,3 +1054,4 @@ public class AapsOmnipodErosManager {
         return podStateManager.isPodInitialized() ? String.valueOf(podStateManager.getAddress()) : "-";
     }
 }
+

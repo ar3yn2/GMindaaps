@@ -1,24 +1,24 @@
-package app.aaps.pump.insight
+﻿package app.gmaaps.pump.insight
 
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.pump.insight.app_layer.AppLayerMessage
-import app.aaps.pump.insight.app_layer.configuration.CloseConfigurationWriteSessionMessage
-import app.aaps.pump.insight.app_layer.configuration.OpenConfigurationWriteSessionMessage
-import app.aaps.pump.insight.app_layer.configuration.WriteConfigurationBlockMessage
-import app.aaps.pump.insight.app_layer.parameter_blocks.ActiveBRProfileBlock
-import app.aaps.pump.insight.app_layer.parameter_blocks.BRProfile1Block
-import app.aaps.pump.insight.connection_service.ConfigurationWriteSessionRequest
-import app.aaps.pump.insight.connection_service.InsightConnectionService
-import app.aaps.pump.insight.connection_service.MessageRequest
-import app.aaps.pump.insight.database.InsightDatabase
-import app.aaps.pump.insight.database.InsightDbHelper
-import app.aaps.pump.insight.descriptors.BasalProfile
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.pump.insight.app_layer.AppLayerMessage
+import app.gmaaps.pump.insight.app_layer.configuration.CloseConfigurationWriteSessionMessage
+import app.gmaaps.pump.insight.app_layer.configuration.OpenConfigurationWriteSessionMessage
+import app.gmaaps.pump.insight.app_layer.configuration.WriteConfigurationBlockMessage
+import app.gmaaps.pump.insight.app_layer.parameter_blocks.ActiveBRProfileBlock
+import app.gmaaps.pump.insight.app_layer.parameter_blocks.BRProfile1Block
+import app.gmaaps.pump.insight.connection_service.ConfigurationWriteSessionRequest
+import app.gmaaps.pump.insight.connection_service.InsightConnectionService
+import app.gmaaps.pump.insight.connection_service.MessageRequest
+import app.gmaaps.pump.insight.database.InsightDatabase
+import app.gmaaps.pump.insight.database.InsightDbHelper
+import app.gmaaps.pump.insight.descriptors.BasalProfile
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -149,3 +149,4 @@ class InsightPluginBasalProfileTest : TestBaseWithProfile() {
         assertThat(result.enacted).isFalse()
     }
 }
+

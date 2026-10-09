@@ -1,6 +1,6 @@
-package app.aaps.plugins.aps.autotune.keys
+﻿package app.gmaaps.plugins.aps.autotune.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 
 enum class AutotuneStringKey(
     override val key: String,
@@ -9,3 +9,4 @@ enum class AutotuneStringKey(
 
     AutotuneLastRun("key_autotune_last_run", ""),
 }
+

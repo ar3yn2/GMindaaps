@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.sharedPreferences
+﻿package app.gmaaps.core.interfaces.sharedPreferences
 
 /**
  * Typed key/value storage, keyed by string.
@@ -11,7 +11,7 @@ package app.aaps.core.interfaces.sharedPreferences
  * odd call sites written that way keep compiling untouched. iOS implements this interface directly,
  * since a resource id means nothing there.
  *
- * Distinct from [app.aaps.core.keys.interfaces.Preferences], which is the layer above: `Preferences`
+ * Distinct from [app.gmaaps.core.keys.interfaces.Preferences], which is the layer above: `Preferences`
  * knows about typed keys, defaults and ranges, while this only stores values under names.
  */
 interface KeyValueStore {
@@ -53,3 +53,4 @@ interface KeyValueStore {
     fun incInt(key: String)
     fun incLong(key: String)
 }
+

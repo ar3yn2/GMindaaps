@@ -1,21 +1,21 @@
-@file:Suppress("SpellCheckingInspection")
+﻿@file:Suppress("SpellCheckingInspection")
 
-package app.aaps.pump.insight.descriptors
+package app.gmaaps.pump.insight.descriptors
 
-import app.aaps.pump.insight.satl.ConnectionRequest
-import app.aaps.pump.insight.satl.ConnectionResponse
-import app.aaps.pump.insight.satl.DataMessage
-import app.aaps.pump.insight.satl.DisconnectMessage
-import app.aaps.pump.insight.satl.ErrorMessage
-import app.aaps.pump.insight.satl.KeyRequest
-import app.aaps.pump.insight.satl.KeyResponse
-import app.aaps.pump.insight.satl.SatlMessage
-import app.aaps.pump.insight.satl.SynAckResponse
-import app.aaps.pump.insight.satl.SynRequest
-import app.aaps.pump.insight.satl.VerifyConfirmRequest
-import app.aaps.pump.insight.satl.VerifyConfirmResponse
-import app.aaps.pump.insight.satl.VerifyDisplayRequest
-import app.aaps.pump.insight.satl.VerifyDisplayResponse
+import app.gmaaps.pump.insight.satl.ConnectionRequest
+import app.gmaaps.pump.insight.satl.ConnectionResponse
+import app.gmaaps.pump.insight.satl.DataMessage
+import app.gmaaps.pump.insight.satl.DisconnectMessage
+import app.gmaaps.pump.insight.satl.ErrorMessage
+import app.gmaaps.pump.insight.satl.KeyRequest
+import app.gmaaps.pump.insight.satl.KeyResponse
+import app.gmaaps.pump.insight.satl.SatlMessage
+import app.gmaaps.pump.insight.satl.SynAckResponse
+import app.gmaaps.pump.insight.satl.SynRequest
+import app.gmaaps.pump.insight.satl.VerifyConfirmRequest
+import app.gmaaps.pump.insight.satl.VerifyConfirmResponse
+import app.gmaaps.pump.insight.satl.VerifyDisplayRequest
+import app.gmaaps.pump.insight.satl.VerifyDisplayResponse
 
 class SatlCommands(val id: Byte, val type: Class<out SatlMessage?>) {
 

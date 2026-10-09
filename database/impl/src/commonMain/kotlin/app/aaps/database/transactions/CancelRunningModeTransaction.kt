@@ -1,7 +1,7 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.RunningMode
-import app.aaps.database.entities.interfaces.end
+import app.gmaaps.database.entities.RunningMode
+import app.gmaaps.database.entities.interfaces.end
 
 class CancelRunningModeTransaction(
     val id: Long,
@@ -29,3 +29,4 @@ class CancelRunningModeTransaction(
         val updated = mutableListOf<RunningMode>()
     }
 }
+

@@ -1,25 +1,25 @@
-package app.aaps.pump.diaconn.compose
+﻿package app.gmaaps.pump.diaconn.compose
 
 import android.content.Context
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.ui.compose.pump.PumpHistoryType
-import app.aaps.core.ui.compose.pump.PumpHistoryUiState
-import app.aaps.pump.diaconn.R
-import app.aaps.pump.diaconn.common.RecordTypes
-import app.aaps.pump.diaconn.database.DiaconnHistoryRecord
-import app.aaps.pump.diaconn.database.DiaconnHistoryRecordDao
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.ui.compose.pump.PumpHistoryType
+import app.gmaaps.core.ui.compose.pump.PumpHistoryUiState
+import app.gmaaps.pump.diaconn.R
+import app.gmaaps.pump.diaconn.common.RecordTypes
+import app.gmaaps.pump.diaconn.database.DiaconnHistoryRecord
+import app.gmaaps.pump.diaconn.database.DiaconnHistoryRecordDao
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -102,13 +102,13 @@ class DiaconnHistoryViewModel(
     }
 
     fun formatDailyTotal(record: DiaconnHistoryRecord): String =
-        rh.gs(app.aaps.core.interfaces.R.string.format_insulin_units, record.dailyBolus + record.dailyBasal)
+        rh.gs(app.gmaaps.core.interfaces.R.string.format_insulin_units, record.dailyBolus + record.dailyBasal)
 
     fun formatDailyBolus(record: DiaconnHistoryRecord): String =
-        rh.gs(app.aaps.core.interfaces.R.string.format_insulin_units, record.dailyBolus)
+        rh.gs(app.gmaaps.core.interfaces.R.string.format_insulin_units, record.dailyBolus)
 
     fun formatDailyBasal(record: DiaconnHistoryRecord): String =
-        rh.gs(app.aaps.core.interfaces.R.string.format_insulin_units, record.dailyBasal)
+        rh.gs(app.gmaaps.core.interfaces.R.string.format_insulin_units, record.dailyBasal)
 
     // Room runs the suspend query on its own executor, so no dispatcher switch is needed here.
     private suspend fun loadRecords(type: Byte) {
@@ -120,3 +120,4 @@ class DiaconnHistoryViewModel(
         }
     }
 }
+

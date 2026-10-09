@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
-import app.aaps.pump.eopatch.core.scan.PatchSelfTestResult
+import app.gmaaps.pump.eopatch.core.scan.PatchSelfTestResult
 
 class BatteryVoltageLevelPairingResponse(
     private val voltage: Int,
@@ -11,3 +11,4 @@ class BatteryVoltageLevelPairingResponse(
     override val result: PatchSelfTestResult
         get() = if (error == 1) PatchSelfTestResult.VOLTAGE_MIN else PatchSelfTestResult.TEST_SUCCESS
 }
+

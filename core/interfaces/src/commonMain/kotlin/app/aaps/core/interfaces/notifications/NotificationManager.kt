@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlinx.coroutines.flow.StateFlow
 import kotlin.time.Clock
 
@@ -77,6 +77,7 @@ interface NotificationManager {
 
         /** The name shown in the system settings. Can change: Android renames the existing channel. */
         const val CHANNEL_NAME = "AAPS-Overview"
-        const val DISMISS_ACTION = "app.aaps.plugins.main.general.overview.notifications.receivers.DismissNotificationReceiver"
+        const val DISMISS_ACTION = "app.gmaaps.plugins.main.general.overview.notifications.receivers.DismissNotificationReceiver"
     }
 }
+

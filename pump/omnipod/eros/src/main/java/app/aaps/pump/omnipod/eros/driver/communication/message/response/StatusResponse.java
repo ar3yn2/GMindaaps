@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response;
 
 import androidx.annotation.NonNull;
 
@@ -7,13 +7,13 @@ import org.joda.time.Duration;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSet;
-import app.aaps.pump.omnipod.eros.driver.definition.DeliveryStatus;
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSet;
+import app.gmaaps.pump.omnipod.eros.driver.definition.DeliveryStatus;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
 
 public class StatusResponse extends MessageBlock implements StatusUpdatableResponse {
     private static final int MESSAGE_LENGTH = 10;
@@ -126,3 +126,4 @@ public class StatusResponse extends MessageBlock implements StatusUpdatableRespo
                 '}';
     }
 }
+

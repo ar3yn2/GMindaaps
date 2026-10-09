@@ -1,8 +1,8 @@
-package app.aaps.pump.medtronic.comm.history
+﻿package app.gmaaps.pump.medtronic.comm.history
 
-import app.aaps.core.utils.DateTimeUtil
-import app.aaps.core.utils.StringUtil
-import app.aaps.core.utils.pump.ByteUtil
+import app.gmaaps.core.utils.DateTimeUtil
+import app.gmaaps.core.utils.StringUtil
+import app.gmaaps.core.utils.pump.ByteUtil
 import com.google.gson.annotations.Expose
 
 /**

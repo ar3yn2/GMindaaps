@@ -1,10 +1,10 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 /**
  * The Bluetooth devices this phone is paired with.
  *
  * Only the reading of the list is platform specific, so it sits behind this interface. The trigger
- * that compares against a device name ([app.aaps.plugins.automation.triggers.Trigger]) stays plain
+ * that compares against a device name ([app.gmaaps.plugins.automation.triggers.Trigger]) stays plain
  * Kotlin.
  */
 interface PairedBtDevices {
@@ -25,3 +25,4 @@ interface PairedBtDevices {
      */
     fun names(): List<String>?
 }
+

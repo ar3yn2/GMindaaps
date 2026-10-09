@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.scenes.wizard
+﻿package app.gmaaps.ui.compose.scenes.wizard
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
@@ -61,3 +61,4 @@ class ActionToggleTest {
         assertThat(newValue).isEqualTo(true)
     }
 }
+

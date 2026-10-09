@@ -1,9 +1,9 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
-import app.aaps.core.data.model.TE
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
 
 class InputCarePortalMenu() {
 
@@ -52,3 +52,4 @@ class InputCarePortalMenu() {
         return this
     }
 }
+

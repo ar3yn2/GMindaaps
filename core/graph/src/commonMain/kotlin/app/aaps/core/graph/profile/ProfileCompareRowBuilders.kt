@@ -1,13 +1,13 @@
-package app.aaps.core.graph.profile
+﻿package app.gmaaps.core.graph.profile
 
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
 
 /**
  * Pre-computed data for profile comparison (base vs effective, or any two profiles).
@@ -129,3 +129,4 @@ fun buildTargetRows(profile1: Profile, profile2: Profile, dateUtil: DateUtil, pr
     }
     return rows
 }
+

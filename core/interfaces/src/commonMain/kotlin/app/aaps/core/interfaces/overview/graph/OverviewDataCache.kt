@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.overview.graph
+﻿package app.gmaaps.core.interfaces.overview.graph
 
 import kotlinx.coroutines.flow.StateFlow
 
@@ -127,3 +127,4 @@ interface OverviewDataCache {
 
     fun reset()
 }
+

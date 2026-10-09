@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.TE
-import app.aaps.database.entities.TherapyEvent
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.database.entities.TherapyEvent
 
 fun TherapyEvent.Type.fromDb(): TE.Type = when (this) {
     TherapyEvent.Type.CANNULA_CHANGE          -> TE.Type.CANNULA_CHANGE

@@ -1,11 +1,11 @@
-package app.aaps.core.interfaces.aps
+﻿package app.gmaaps.core.interfaces.aps
 
 import androidx.collection.LongSparseArray
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.model.GV
-import app.aaps.core.interfaces.concurrent.AapsLock
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.interfaces.concurrent.AapsLock
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.utils.DateUtil
 
 interface AutosensDataStore {
 

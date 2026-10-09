@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.nsclientV3.keys
+﻿package app.gmaaps.plugins.sync.nsclientV3.keys
 
-import app.aaps.core.keys.interfaces.BooleanNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey
 
 enum class NsclientBooleanKey(
     override val key: String,

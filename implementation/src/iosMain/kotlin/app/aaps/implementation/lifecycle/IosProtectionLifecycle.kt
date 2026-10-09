@@ -1,8 +1,8 @@
-package app.aaps.implementation.lifecycle
+﻿package app.gmaaps.implementation.lifecycle
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
 import platform.Foundation.NSNotificationCenter
 import platform.Foundation.NSOperationQueue
 import platform.UIKit.UIApplicationDidEnterBackgroundNotification
@@ -49,3 +49,4 @@ class IosProtectionLifecycle(
         ) as NSObject
     }
 }
+

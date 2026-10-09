@@ -1,7 +1,7 @@
-package app.aaps.implementation.maintenance.cloud
+﻿package app.gmaaps.implementation.maintenance.cloud
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import kotlinx.cinterop.ByteVar
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.addressOf
@@ -253,3 +253,4 @@ class IosLoopbackAuthServer(private val aapsLogger: AAPSLogger) {
         private const val FAILED = "AAPS could not complete the sign in."
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.core.objects.interfaces.utils
+﻿package app.gmaaps.core.objects.interfaces.utils
 
-import app.aaps.core.data.time.T
+import app.gmaaps.core.data.time.T
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -34,3 +34,4 @@ class TTest {
         assertThat(nowMsecs - 5 * 24 * 60 * 60 * 1000).isEqualTo(now.minus(T.days(5)).msecs())
     }
 }
+

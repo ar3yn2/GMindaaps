@@ -1,13 +1,13 @@
-package app.aaps.pump.common.hw.rileylink
+﻿package app.gmaaps.pump.common.hw.rileylink
 
 import android.content.Context
 import android.content.Intent
 import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.common.hw.rileylink.ble.data.encoding.Encoding4b6b
-import app.aaps.pump.common.hw.rileylink.ble.data.encoding.Encoding4b6bGeoff
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
-import app.aaps.pump.common.hw.rileylink.data.RLHistoryItem
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.common.hw.rileylink.ble.data.encoding.Encoding4b6b
+import app.gmaaps.pump.common.hw.rileylink.ble.data.encoding.Encoding4b6bGeoff
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
+import app.gmaaps.pump.common.hw.rileylink.data.RLHistoryItem
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -38,3 +38,4 @@ class RileyLinkUtil(
         LocalBroadcastManager.getInstance(context).sendBroadcast(intent)
     }
 }
+

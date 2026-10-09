@@ -1,8 +1,8 @@
-package app.aaps.core.ui.elements
+﻿package app.gmaaps.core.ui.elements
 
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.elements.WeekDay.DayOfWeek.Companion.calendarInts
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.elements.WeekDay.DayOfWeek.Companion.calendarInts
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.isoDayNumber
 import kotlinx.datetime.toLocalDateTime
@@ -98,3 +98,4 @@ open class WeekDay {
         return selectedDays
     }
 }
+

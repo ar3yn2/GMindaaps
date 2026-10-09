@@ -1,12 +1,12 @@
-package app.aaps.pump.common.hw.rileylink.ble.data.encoding
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data.encoding
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.core.utils.pump.ByteUtil.concat
-import app.aaps.core.utils.pump.ByteUtil.getListFromByteArray
-import app.aaps.core.utils.pump.ByteUtil.shortHexString
-import app.aaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkBLEError
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.core.utils.pump.ByteUtil.concat
+import app.gmaaps.core.utils.pump.ByteUtil.getListFromByteArray
+import app.gmaaps.core.utils.pump.ByteUtil.shortHexString
+import app.gmaaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkBLEError
 import java.util.Locale
 
 /**
@@ -155,3 +155,4 @@ class Encoding4b6bGeoff(private val aapsLogger: AAPSLogger) : Encoding4b6bAbstra
         return rval
     }
 }
+

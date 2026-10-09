@@ -1,6 +1,6 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
-import app.aaps.core.interfaces.plugin.PermissionGroup
+import app.gmaaps.core.interfaces.plugin.PermissionGroup
 
 /**
  * The permission groups a location trigger needs, named the way the platform names them.
@@ -19,3 +19,4 @@ fun interface LocationPermissions {
     /** Foreground and background location, as two groups so each can be requested on its own. */
     fun groups(): List<PermissionGroup>
 }
+

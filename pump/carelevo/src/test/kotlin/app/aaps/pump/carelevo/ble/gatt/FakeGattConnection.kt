@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.ble.gatt
+﻿package app.gmaaps.pump.carelevo.ble.gatt
 
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -144,3 +144,4 @@ class FakeGattConnection : GattConnection {
         data class Failure(val reason: String) : WriteOutcome
     }
 }
+

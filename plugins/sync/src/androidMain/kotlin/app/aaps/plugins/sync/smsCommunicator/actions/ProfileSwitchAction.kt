@@ -1,22 +1,22 @@
-package app.aaps.plugins.sync.smsCommunicator.actions
+﻿package app.gmaaps.plugins.sync.smsCommunicator.actions
 
-import app.aaps.core.interfaces.bolus.BatchAction
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.smsCommunicator.Sms
-import app.aaps.core.interfaces.smsCommunicator.SmsCommunicator
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.plugins.sync.smsCommunicator.SmsAction
-import app.aaps.plugins.sync.smsCommunicator.SmsBatchResult
-import app.aaps.plugins.sync.smsCommunicator.runSmsBatch
+import app.gmaaps.core.interfaces.bolus.BatchAction
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.smsCommunicator.Sms
+import app.gmaaps.core.interfaces.smsCommunicator.SmsCommunicator
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.plugins.sync.smsCommunicator.SmsAction
+import app.gmaaps.plugins.sync.smsCommunicator.SmsBatchResult
+import app.gmaaps.plugins.sync.smsCommunicator.runSmsBatch
 
 /**
  * Switches to the named profile at a given percentage: PROFILE <index> [<percentage>].
  *
  * The switch is applied through [WizardBolusExecutor], the same path the phone, the watch and a paired client
  * already use, so the master validates a switch once and in one place. This used to call
- * [app.aaps.core.interfaces.profile.ProfileFunction.createProfileSwitch] directly, which reproduced the
+ * [app.gmaaps.core.interfaces.profile.ProfileFunction.createProfileSwitch] directly, which reproduced the
  * executor's insulin check by hand and left out its range checks.
  */
 class ProfileSwitchAction(
@@ -39,3 +39,4 @@ class ProfileSwitchAction(
         smsCommunicator.sendSMS(Sms(receivedSms.phoneNumber, replyText))
     }
 }
+

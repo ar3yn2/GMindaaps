@@ -1,13 +1,13 @@
-package app.aaps.pump.danar.comm
+﻿package app.gmaaps.pump.danar.comm
 
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
 class MsgBolusStopTest : DanaRTestBase() {
 
     @Test fun runTest() {
-//        whenever(rh.gs(app.aaps.pump.dana.R.string.overview_bolusprogress_delivered)).thenReturn("Delivered")
+//        whenever(rh.gs(app.gmaaps.pump.dana.R.string.overview_bolusprogress_delivered)).thenReturn("Delivered")
         danaPump.bolusingDetailedBolusInfo = DetailedBolusInfo()
         val packet = MsgBolusStop(injector)
 

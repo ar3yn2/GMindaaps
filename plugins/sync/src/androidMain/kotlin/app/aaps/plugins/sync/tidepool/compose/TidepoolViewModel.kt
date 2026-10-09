@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.tidepool.compose
+﻿package app.gmaaps.plugins.sync.tidepool.compose
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.plugins.sync.tidepool.auth.AuthFlowOut
+import app.gmaaps.plugins.sync.tidepool.auth.AuthFlowOut
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -51,3 +51,4 @@ class TidepoolViewModel(
         tidepoolRepository.updateConnectionStatus(authFlowOut.connectionStatus)
     }
 }
+

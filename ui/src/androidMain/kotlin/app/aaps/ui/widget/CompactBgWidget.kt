@@ -1,13 +1,13 @@
-package app.aaps.ui.widget
+﻿package app.gmaaps.ui.widget
 
 import android.content.Context
 import android.content.Intent
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
-import app.aaps.core.interfaces.di.injectMetroMembers
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.ui.widget.glance.CompactBgGlanceWidget
+import app.gmaaps.core.interfaces.di.injectMetroMembers
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.ui.widget.glance.CompactBgGlanceWidget
 import dev.zacsweers.metro.Inject
 
 /**
@@ -27,3 +27,4 @@ class CompactBgWidget : GlanceAppWidgetReceiver() {
         super.onReceive(context, intent)
     }
 }
+

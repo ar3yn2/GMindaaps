@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.response
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.response
 
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.DeliveryStatus
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
-import app.aaps.pump.omnipod.common.bledriver.pod.util.AlertUtil
-import app.aaps.pump.omnipod.common.bledriver.pod.util.byValue
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.DeliveryStatus
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.AlertUtil
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.byValue
 import java.nio.ByteBuffer
 import java.util.EnumSet
 import kotlin.experimental.and
@@ -46,3 +46,4 @@ class DefaultStatusResponse(
 
 infix fun Byte.ushr(i: Int) = toInt() ushr i
 infix fun Byte.shl(i: Int): Int = toInt() shl i
+

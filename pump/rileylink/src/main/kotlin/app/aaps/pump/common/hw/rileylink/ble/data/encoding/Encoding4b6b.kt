@@ -1,6 +1,6 @@
-package app.aaps.pump.common.hw.rileylink.ble.data.encoding
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data.encoding
 
-import app.aaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
+import app.gmaaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
 
 /**
  * Created by andy on 11/24/18.
@@ -12,3 +12,4 @@ interface Encoding4b6b {
     @Throws(RileyLinkCommunicationException::class)
     fun decode4b6b(raw: ByteArray): ByteArray
 }
+

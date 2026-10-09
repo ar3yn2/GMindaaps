@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.util
+﻿package app.gmaaps.pump.omnipod.common.bledriver.util
 
 class Flag(var value: Int = 0) {
 
@@ -16,3 +16,4 @@ class Flag(var value: Int = 0) {
         return 1
     }
 }
+

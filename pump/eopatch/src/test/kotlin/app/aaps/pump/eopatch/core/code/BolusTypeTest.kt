@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.code
+﻿package app.gmaaps.pump.eopatch.core.code
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -24,3 +24,4 @@ class BolusTypeTest {
         assertThat(BolusType.valueOf("COMBO")).isEqualTo(BolusType.COMBO)
     }
 }
+

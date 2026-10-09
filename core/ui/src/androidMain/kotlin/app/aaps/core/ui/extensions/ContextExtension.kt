@@ -1,4 +1,4 @@
-package app.aaps.core.ui.extensions
+﻿package app.gmaaps.core.ui.extensions
 
 import android.content.Context
 import android.content.ContextWrapper
@@ -11,3 +11,4 @@ fun Context?.scanForActivity(): AppCompatActivity? =
         is ContextWrapper    -> this.baseContext.scanForActivity()
         else                 -> null
     }
+

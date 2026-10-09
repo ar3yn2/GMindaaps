@@ -1,10 +1,10 @@
-package app.aaps.pump.medtronic.keys
+﻿package app.gmaaps.pump.medtronic.keys
 
-import app.aaps.core.keys.PreferenceType
-import app.aaps.core.keys.interfaces.StringPreferenceKey
-import app.aaps.core.keys.interfaces.StringValidator
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.medtronic.R
+import app.gmaaps.core.keys.PreferenceType
+import app.gmaaps.core.keys.interfaces.StringPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringValidator
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.medtronic.R
 
 enum class MedtronicStringPreferenceKey(
     override val key: String,
@@ -51,21 +51,21 @@ enum class MedtronicStringPreferenceKey(
         titleResId = R.string.medtronic_pump_frequency,
         preferenceType = PreferenceType.LIST,
         entriesResIds = mapOf(
-            "medtronic_pump_frequency_us_ca" to app.aaps.pump.common.hw.rileylink.R.string.medtronic_pump_frequency_us_ca,
-            "medtronic_pump_frequency_worldwide" to app.aaps.pump.common.hw.rileylink.R.string.medtronic_pump_frequency_worldwide
+            "medtronic_pump_frequency_us_ca" to app.gmaaps.pump.common.hw.rileylink.R.string.medtronic_pump_frequency_us_ca,
+            "medtronic_pump_frequency_worldwide" to app.gmaaps.pump.common.hw.rileylink.R.string.medtronic_pump_frequency_worldwide
         )
     ),
     BatteryType(
         key = "pref_medtronic_battery_type",
-        defaultValue = app.aaps.pump.medtronic.defs.BatteryType.None.key,
+        defaultValue = app.gmaaps.pump.medtronic.defs.BatteryType.None.key,
         titleResId = R.string.medtronic_pump_battery_select,
         preferenceType = PreferenceType.LIST,
         entriesResIds = mapOf(
-            app.aaps.pump.medtronic.defs.BatteryType.None.key to R.string.medtronic_pump_battery_no,
-            app.aaps.pump.medtronic.defs.BatteryType.Alkaline.key to R.string.medtronic_pump_battery_alkaline,
-            app.aaps.pump.medtronic.defs.BatteryType.Lithium.key to R.string.medtronic_pump_battery_lithium,
-            app.aaps.pump.medtronic.defs.BatteryType.NiZn.key to R.string.medtronic_pump_battery_nizn,
-            app.aaps.pump.medtronic.defs.BatteryType.NiMH.key to R.string.medtronic_pump_battery_nimh
+            app.gmaaps.pump.medtronic.defs.BatteryType.None.key to R.string.medtronic_pump_battery_no,
+            app.gmaaps.pump.medtronic.defs.BatteryType.Alkaline.key to R.string.medtronic_pump_battery_alkaline,
+            app.gmaaps.pump.medtronic.defs.BatteryType.Lithium.key to R.string.medtronic_pump_battery_lithium,
+            app.gmaaps.pump.medtronic.defs.BatteryType.NiZn.key to R.string.medtronic_pump_battery_nizn,
+            app.gmaaps.pump.medtronic.defs.BatteryType.NiMH.key to R.string.medtronic_pump_battery_nimh
         )
     ),
     ;
@@ -74,3 +74,4 @@ enum class MedtronicStringPreferenceKey(
     override val entries: Map<String, TextRef> = entriesResIds.mapValues { TextRef.AndroidRes(it.value) }
     override val summary: TextRef? = summaryResId?.let { TextRef.AndroidRes(it) }
 }
+

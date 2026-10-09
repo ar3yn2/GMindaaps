@@ -1,11 +1,11 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.plugins.automation.elements.InputCarePortalMenu
-import app.aaps.plugins.automation.elements.InputDuration
-import app.aaps.plugins.automation.elements.InputString
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.plugins.automation.elements.InputCarePortalMenu
+import app.gmaaps.plugins.automation.elements.InputDuration
+import app.gmaaps.plugins.automation.elements.InputString
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -67,3 +67,4 @@ class ActionCarePortalEventTest : ActionsTestBase() {
         assertThat(sut.cpEvent.value).isEqualTo(InputCarePortalMenu.EventType.NOTE)
     }
 }
+

@@ -1,4 +1,4 @@
-package info.nightscout.pump.combov2.compose
+﻿package info.nightscout.pump.combov2.compose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -19,8 +19,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.AapsCard
-import app.aaps.core.ui.compose.pump.PumpOverviewScreen
+import app.gmaaps.core.ui.compose.AapsCard
+import app.gmaaps.core.ui.compose.pump.PumpOverviewScreen
 import info.nightscout.pump.combov2.ComboV2RTDisplayFrameView
 import info.nightscout.pump.combov2.R
 
@@ -83,3 +83,4 @@ fun ComboV2OverviewScreen(
         }
     )
 }
+

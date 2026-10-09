@@ -1,54 +1,54 @@
-package app.aaps.pump.danar.services
+﻿package app.gmaaps.pump.danar.services
 
 import android.os.Binder
 import android.os.SystemClock
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.queue.Command
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.rx.events.EventInitializationChanged
-import app.aaps.core.interfaces.rx.events.EventProfileChangeRequested
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.dana.R
-import app.aaps.pump.dana.events.EventDanaRNewStatus
-import app.aaps.pump.dana.keys.DanaIntKey
-import app.aaps.pump.danar.DanaRPlugin
-import app.aaps.pump.danar.comm.MessageBase
-import app.aaps.pump.danar.comm.MessageHashTableR
-import app.aaps.pump.danar.comm.MsgBolusStart
-import app.aaps.pump.danar.comm.MsgBolusStartWithSpeed
-import app.aaps.pump.danar.comm.MsgCheckValue
-import app.aaps.pump.danar.comm.MsgSetActivateBasalProfile
-import app.aaps.pump.danar.comm.MsgSetBasalProfile
-import app.aaps.pump.danar.comm.MsgSetExtendedBolusStart
-import app.aaps.pump.danar.comm.MsgSetExtendedBolusStop
-import app.aaps.pump.danar.comm.MsgSetTempBasalStart
-import app.aaps.pump.danar.comm.MsgSetTempBasalStop
-import app.aaps.pump.danar.comm.MsgSetTime
-import app.aaps.pump.danar.comm.MsgSetUserOptions
-import app.aaps.pump.danar.comm.MsgSettingActiveProfile
-import app.aaps.pump.danar.comm.MsgSettingBasal
-import app.aaps.pump.danar.comm.MsgSettingGlucose
-import app.aaps.pump.danar.comm.MsgSettingMaxValues
-import app.aaps.pump.danar.comm.MsgSettingMeal
-import app.aaps.pump.danar.comm.MsgSettingProfileRatios
-import app.aaps.pump.danar.comm.MsgSettingProfileRatiosAll
-import app.aaps.pump.danar.comm.MsgSettingPumpTime
-import app.aaps.pump.danar.comm.MsgSettingShippingInfo
-import app.aaps.pump.danar.comm.MsgSettingUserOptions
-import app.aaps.pump.danar.comm.MsgStatus
-import app.aaps.pump.danar.comm.MsgStatusBasic
-import app.aaps.pump.danar.comm.MsgStatusBolusExtended
-import app.aaps.pump.danar.comm.MsgStatusTempBasal
-import app.aaps.pump.danarkorean.DanaRKoreanPlugin
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.queue.Command
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.rx.events.EventInitializationChanged
+import app.gmaaps.core.interfaces.rx.events.EventProfileChangeRequested
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.dana.R
+import app.gmaaps.pump.dana.events.EventDanaRNewStatus
+import app.gmaaps.pump.dana.keys.DanaIntKey
+import app.gmaaps.pump.danar.DanaRPlugin
+import app.gmaaps.pump.danar.comm.MessageBase
+import app.gmaaps.pump.danar.comm.MessageHashTableR
+import app.gmaaps.pump.danar.comm.MsgBolusStart
+import app.gmaaps.pump.danar.comm.MsgBolusStartWithSpeed
+import app.gmaaps.pump.danar.comm.MsgCheckValue
+import app.gmaaps.pump.danar.comm.MsgSetActivateBasalProfile
+import app.gmaaps.pump.danar.comm.MsgSetBasalProfile
+import app.gmaaps.pump.danar.comm.MsgSetExtendedBolusStart
+import app.gmaaps.pump.danar.comm.MsgSetExtendedBolusStop
+import app.gmaaps.pump.danar.comm.MsgSetTempBasalStart
+import app.gmaaps.pump.danar.comm.MsgSetTempBasalStop
+import app.gmaaps.pump.danar.comm.MsgSetTime
+import app.gmaaps.pump.danar.comm.MsgSetUserOptions
+import app.gmaaps.pump.danar.comm.MsgSettingActiveProfile
+import app.gmaaps.pump.danar.comm.MsgSettingBasal
+import app.gmaaps.pump.danar.comm.MsgSettingGlucose
+import app.gmaaps.pump.danar.comm.MsgSettingMaxValues
+import app.gmaaps.pump.danar.comm.MsgSettingMeal
+import app.gmaaps.pump.danar.comm.MsgSettingProfileRatios
+import app.gmaaps.pump.danar.comm.MsgSettingProfileRatiosAll
+import app.gmaaps.pump.danar.comm.MsgSettingPumpTime
+import app.gmaaps.pump.danar.comm.MsgSettingShippingInfo
+import app.gmaaps.pump.danar.comm.MsgSettingUserOptions
+import app.gmaaps.pump.danar.comm.MsgStatus
+import app.gmaaps.pump.danar.comm.MsgStatusBasic
+import app.gmaaps.pump.danar.comm.MsgStatusBolusExtended
+import app.gmaaps.pump.danar.comm.MsgStatusTempBasal
+import app.gmaaps.pump.danarkorean.DanaRKoreanPlugin
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.launch
 import kotlin.math.abs
@@ -238,7 +238,7 @@ class DanaRExecutionService : AbstractDanaRExecutionService() {
             if ((bolusProgressData.state.value?.delivered?.cU ?: 0.0) != detailedBolusInfo.insulin) {
                 disconnect("bolusingInterrupted")
                 for (i in 0..59) {
-                    rxBus.send(EventPumpStatusChanged(rh.gs(app.aaps.pump.danar.R.string.waiting_1_minute, i, 60)))
+                    rxBus.send(EventPumpStatusChanged(rh.gs(app.gmaaps.pump.danar.R.string.waiting_1_minute, i, 60)))
                     SystemClock.sleep(1000)
                 }
                 val bolusDurationInMSec = (detailedBolusInfo.insulin * speed * 1000).toLong()
@@ -256,7 +256,7 @@ class DanaRExecutionService : AbstractDanaRExecutionService() {
                     SystemClock.sleep(1000)
                 }
                 if (!isConnected) {
-                    rxBus.send(EventShowSnackbar(rh.gs(app.aaps.core.ui.R.string.treatmentdeliveryerror), EventShowSnackbar.Type.Error))
+                    rxBus.send(EventShowSnackbar(rh.gs(app.gmaaps.core.ui.R.string.treatmentdeliveryerror), EventShowSnackbar.Type.Error))
                     bolusProgressData.updateProgress(bolusProgressData.state.value?.percent ?: 0, bolusProgressData.state.value?.status ?: TextRef.Literal(""), PumpInsulin(0.0))
                     return false
                 }
@@ -273,7 +273,7 @@ class DanaRExecutionService : AbstractDanaRExecutionService() {
                 }
             } else {
                 // Queue-worker deadlock guard — don't unwrap the .launch. See CommandQueue kdoc.
-                appScope.launch { commandQueue.readStatus(rh.gs(app.aaps.core.ui.R.string.bolus_ok)) }
+                appScope.launch { commandQueue.readStatus(rh.gs(app.gmaaps.core.ui.R.string.bolus_ok)) }
             }
         }
         return !start.failed
@@ -316,3 +316,4 @@ class DanaRExecutionService : AbstractDanaRExecutionService() {
             get() = this@DanaRExecutionService
     }
 }
+

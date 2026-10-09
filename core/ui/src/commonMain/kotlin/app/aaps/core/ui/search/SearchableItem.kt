@@ -1,14 +1,14 @@
-package app.aaps.core.ui.search
+﻿package app.gmaaps.core.ui.search
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.keys.interfaces.PreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.navigation.description
-import app.aaps.core.ui.compose.navigation.icon
-import app.aaps.core.ui.compose.navigation.label
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.keys.interfaces.PreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.navigation.description
+import app.gmaaps.core.ui.compose.navigation.icon
+import app.gmaaps.core.ui.compose.navigation.label
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
 
 /**
  * Represents an item that can be found via the global search feature.
@@ -143,3 +143,4 @@ sealed class SearchableItem {
         override val summary: TextRef? = snippet?.let { TextRef.Literal(it) }
     }
 }
+

@@ -1,14 +1,14 @@
-package app.aaps.plugins.aps.loop.runningMode
+﻿package app.gmaaps.plugins.aps.loop.runningMode
 
 import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.shared.tests.TestBase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -184,3 +184,4 @@ class RunningModeExpirySchedulerTest : TestBase() {
     private fun temporary(mode: RM.Mode, timestamp: Long, durationMs: Long) =
         RM(id = mode.ordinal.toLong() + 100, timestamp = timestamp, mode = mode, duration = durationMs)
 }
+

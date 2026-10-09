@@ -1,4 +1,4 @@
-package app.aaps.core.data.time
+﻿package app.gmaaps.core.data.time
 
 /**
  * Time zone offset in milliseconds for a given moment, DST aware.
@@ -11,3 +11,4 @@ package app.aaps.core.data.time
  * touching the models or the ~154 places that already pass `utcOffset` themselves.
  */
 expect fun systemUtcOffsetAt(timestamp: Long): Long
+

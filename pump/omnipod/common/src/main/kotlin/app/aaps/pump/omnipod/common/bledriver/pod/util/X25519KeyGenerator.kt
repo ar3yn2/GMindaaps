@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.util
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.util
 
 import com.google.crypto.tink.subtle.X25519
 
@@ -9,3 +9,4 @@ class X25519KeyGenerator {
     fun computeSharedSecret(privateKey: ByteArray, publicKey: ByteArray): ByteArray =
         X25519.computeSharedSecret(privateKey, publicKey)
 }
+

@@ -1,13 +1,13 @@
-package app.aaps.pump.medtronic
+﻿package app.gmaaps.pump.medtronic
 
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.sync.PumpSyncStorage
-import app.aaps.pump.medtronic.comm.history.pump.MedtronicPumpHistoryDecoder
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntryType
-import app.aaps.pump.medtronic.util.MedtronicUtil
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.sync.PumpSyncStorage
+import app.gmaaps.pump.medtronic.comm.history.pump.MedtronicPumpHistoryDecoder
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntryType
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.BeforeEach
 import org.mockito.Mock
@@ -107,3 +107,4 @@ open class MedtronicTestBase : TestBaseWithProfile() {
         list.sortWith(PumpHistoryEntry.Comparator())
     }
 }
+

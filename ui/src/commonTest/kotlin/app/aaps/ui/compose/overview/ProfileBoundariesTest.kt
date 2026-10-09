@@ -1,8 +1,8 @@
-package app.aaps.ui.compose.overview
+﻿package app.gmaaps.ui.compose.overview
 
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.ICfg
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -99,3 +99,4 @@ class ProfileBoundariesTest {
         assertEquals(listOf(inside), boundaries)
     }
 }
+

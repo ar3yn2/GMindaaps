@@ -1,13 +1,13 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.response
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.response
 
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlarmType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.DeliveryStatus
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PodConstants
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
-import app.aaps.pump.omnipod.common.bledriver.pod.response.ResponseType.StatusResponseType
-import app.aaps.pump.omnipod.common.bledriver.pod.util.AlertUtil
-import app.aaps.pump.omnipod.common.bledriver.pod.util.byValue
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlarmType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.DeliveryStatus
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PodConstants
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.ResponseType.StatusResponseType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.AlertUtil
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.byValue
 import java.nio.ByteBuffer
 import java.util.EnumSet
 import java.util.Locale
@@ -106,3 +106,4 @@ class AlarmStatusResponse(
 
     infix fun Byte.shr(i: Int): Int = toInt() shr i
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.keys.interfaces
+﻿package app.gmaaps.core.keys.interfaces
 
 /**
  * Context provided to [ElementVisibility] lambdas for evaluating
@@ -109,3 +109,4 @@ fun VisibilityContext.intEquals(key: IntPreferenceKey, value: Int): Boolean =
  */
 fun VisibilityContext.intIn(key: IntPreferenceKey, values: Set<Int>): Boolean =
     preferences.get(key) in values
+

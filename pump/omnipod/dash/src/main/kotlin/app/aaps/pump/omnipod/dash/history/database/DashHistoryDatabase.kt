@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.dash.history.database
+﻿package app.gmaaps.pump.omnipod.dash.history.database
 
 import android.content.Context
 import androidx.room.Database
@@ -30,3 +30,4 @@ abstract class DashHistoryDatabase : RoomDatabase() {
                 .build()
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.descriptors
+﻿package app.gmaaps.pump.insight.descriptors
 
 enum class BolusType(val id: Int, val activeId: Int) {
     STANDARD(31, 227),

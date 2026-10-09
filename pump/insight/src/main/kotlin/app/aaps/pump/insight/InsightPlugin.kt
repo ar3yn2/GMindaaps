@@ -1,4 +1,4 @@
-package app.aaps.pump.insight
+﻿package app.gmaaps.pump.insight
 
 import android.app.NotificationChannel
 import android.content.ComponentName
@@ -7,123 +7,123 @@ import android.content.Intent
 import android.content.ServiceConnection
 import android.os.IBinder
 import android.os.SystemClock
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.constraints.PumpPluginConstraints
-import app.aaps.core.interfaces.di.ApplicationScope
-import app.aaps.core.interfaces.di.PumpDriver
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.OwnDatabasePlugin
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.Insight
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpPluginBase
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.PumpSync.PumpState.TemporaryBasal
-import app.aaps.core.interfaces.pump.PumpSync.TemporaryBasalType
-import app.aaps.core.interfaces.pump.comment
-import app.aaps.core.interfaces.pump.defs.fillFor
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventInitializationChanged
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.icons.IcPluginInsight
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.pump.insight.app_layer.Service
-import app.aaps.pump.insight.app_layer.history.StartReadingHistoryMessage
-import app.aaps.pump.insight.app_layer.history.StopReadingHistoryMessage
-import app.aaps.pump.insight.app_layer.history.history_events.BolusDeliveredEvent
-import app.aaps.pump.insight.app_layer.history.history_events.BolusProgrammedEvent
-import app.aaps.pump.insight.app_layer.history.history_events.CannulaFilledEvent
-import app.aaps.pump.insight.app_layer.history.history_events.DateTimeChangedEvent
-import app.aaps.pump.insight.app_layer.history.history_events.DefaultDateTimeSetEvent
-import app.aaps.pump.insight.app_layer.history.history_events.EndOfTBREvent
-import app.aaps.pump.insight.app_layer.history.history_events.HistoryEvent
-import app.aaps.pump.insight.app_layer.history.history_events.OccurrenceOfAlertEvent
-import app.aaps.pump.insight.app_layer.history.history_events.OperatingModeChangedEvent
-import app.aaps.pump.insight.app_layer.history.history_events.PowerUpEvent
-import app.aaps.pump.insight.app_layer.history.history_events.SniffingDoneEvent
-import app.aaps.pump.insight.app_layer.history.history_events.StartOfTBREvent
-import app.aaps.pump.insight.app_layer.history.history_events.TotalDailyDoseEvent
-import app.aaps.pump.insight.app_layer.history.history_events.TubeFilledEvent
-import app.aaps.pump.insight.app_layer.parameter_blocks.ActiveBRProfileBlock
-import app.aaps.pump.insight.app_layer.parameter_blocks.BRProfile1Block
-import app.aaps.pump.insight.app_layer.parameter_blocks.BRProfileBlock
-import app.aaps.pump.insight.app_layer.parameter_blocks.FactoryMinBolusAmountBlock
-import app.aaps.pump.insight.app_layer.parameter_blocks.MaxBolusAmountBlock
-import app.aaps.pump.insight.app_layer.parameter_blocks.TBROverNotificationBlock
-import app.aaps.pump.insight.app_layer.remote_control.CancelBolusMessage
-import app.aaps.pump.insight.app_layer.remote_control.CancelTBRMessage
-import app.aaps.pump.insight.app_layer.remote_control.ChangeTBRMessage
-import app.aaps.pump.insight.app_layer.remote_control.ConfirmAlertMessage
-import app.aaps.pump.insight.app_layer.remote_control.DeliverBolusMessage
-import app.aaps.pump.insight.app_layer.remote_control.SetDateTimeMessage
-import app.aaps.pump.insight.app_layer.remote_control.SetOperatingModeMessage
-import app.aaps.pump.insight.app_layer.remote_control.SetTBRMessage
-import app.aaps.pump.insight.app_layer.status.GetActiveAlertMessage
-import app.aaps.pump.insight.app_layer.status.GetActiveBasalRateMessage
-import app.aaps.pump.insight.app_layer.status.GetActiveBolusesMessage
-import app.aaps.pump.insight.app_layer.status.GetActiveTBRMessage
-import app.aaps.pump.insight.app_layer.status.GetBatteryStatusMessage
-import app.aaps.pump.insight.app_layer.status.GetCartridgeStatusMessage
-import app.aaps.pump.insight.app_layer.status.GetDateTimeMessage
-import app.aaps.pump.insight.app_layer.status.GetOperatingModeMessage
-import app.aaps.pump.insight.app_layer.status.GetPumpStatusRegisterMessage
-import app.aaps.pump.insight.app_layer.status.GetTotalDailyDoseMessage
-import app.aaps.pump.insight.app_layer.status.ResetPumpStatusRegisterMessage
-import app.aaps.pump.insight.compose.InsightComposeContent
-import app.aaps.pump.insight.connection_service.InsightConnectionService
-import app.aaps.pump.insight.database.InsightBolusID
-import app.aaps.pump.insight.database.InsightDatabase
-import app.aaps.pump.insight.database.InsightDbHelper
-import app.aaps.pump.insight.database.InsightHistoryOffset
-import app.aaps.pump.insight.database.InsightPumpID
-import app.aaps.pump.insight.descriptors.ActiveBasalRate
-import app.aaps.pump.insight.descriptors.ActiveBolus
-import app.aaps.pump.insight.descriptors.ActiveTBR
-import app.aaps.pump.insight.descriptors.AlertType
-import app.aaps.pump.insight.descriptors.BasalProfile
-import app.aaps.pump.insight.descriptors.BasalProfileBlock
-import app.aaps.pump.insight.descriptors.BatteryStatus
-import app.aaps.pump.insight.descriptors.BolusType
-import app.aaps.pump.insight.descriptors.CartridgeStatus
-import app.aaps.pump.insight.descriptors.InsightState
-import app.aaps.pump.insight.descriptors.OperatingMode
-import app.aaps.pump.insight.descriptors.TotalDailyDose
-import app.aaps.pump.insight.events.EventLocalInsightUpdateGUI
-import app.aaps.pump.insight.exceptions.InsightException
-import app.aaps.pump.insight.exceptions.app_layer_errors.AppLayerErrorException
-import app.aaps.pump.insight.exceptions.app_layer_errors.NoActiveTBRToCancelException
-import app.aaps.pump.insight.keys.InsightBooleanKey
-import app.aaps.pump.insight.keys.InsightDoubleNonKey
-import app.aaps.pump.insight.keys.InsightIntKey
-import app.aaps.pump.insight.keys.InsightLongNonKey
-import app.aaps.pump.insight.utils.ExceptionTranslator
-import app.aaps.pump.insight.utils.ParameterBlockUtil
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.constraints.PumpPluginConstraints
+import app.gmaaps.core.interfaces.di.ApplicationScope
+import app.gmaaps.core.interfaces.di.PumpDriver
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.OwnDatabasePlugin
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.Insight
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpPluginBase
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.PumpSync.PumpState.TemporaryBasal
+import app.gmaaps.core.interfaces.pump.PumpSync.TemporaryBasalType
+import app.gmaaps.core.interfaces.pump.comment
+import app.gmaaps.core.interfaces.pump.defs.fillFor
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventInitializationChanged
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.icons.IcPluginInsight
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.pump.insight.app_layer.Service
+import app.gmaaps.pump.insight.app_layer.history.StartReadingHistoryMessage
+import app.gmaaps.pump.insight.app_layer.history.StopReadingHistoryMessage
+import app.gmaaps.pump.insight.app_layer.history.history_events.BolusDeliveredEvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.BolusProgrammedEvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.CannulaFilledEvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.DateTimeChangedEvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.DefaultDateTimeSetEvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.EndOfTBREvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.HistoryEvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.OccurrenceOfAlertEvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.OperatingModeChangedEvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.PowerUpEvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.SniffingDoneEvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.StartOfTBREvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.TotalDailyDoseEvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.TubeFilledEvent
+import app.gmaaps.pump.insight.app_layer.parameter_blocks.ActiveBRProfileBlock
+import app.gmaaps.pump.insight.app_layer.parameter_blocks.BRProfile1Block
+import app.gmaaps.pump.insight.app_layer.parameter_blocks.BRProfileBlock
+import app.gmaaps.pump.insight.app_layer.parameter_blocks.FactoryMinBolusAmountBlock
+import app.gmaaps.pump.insight.app_layer.parameter_blocks.MaxBolusAmountBlock
+import app.gmaaps.pump.insight.app_layer.parameter_blocks.TBROverNotificationBlock
+import app.gmaaps.pump.insight.app_layer.remote_control.CancelBolusMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.CancelTBRMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.ChangeTBRMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.ConfirmAlertMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.DeliverBolusMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.SetDateTimeMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.SetOperatingModeMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.SetTBRMessage
+import app.gmaaps.pump.insight.app_layer.status.GetActiveAlertMessage
+import app.gmaaps.pump.insight.app_layer.status.GetActiveBasalRateMessage
+import app.gmaaps.pump.insight.app_layer.status.GetActiveBolusesMessage
+import app.gmaaps.pump.insight.app_layer.status.GetActiveTBRMessage
+import app.gmaaps.pump.insight.app_layer.status.GetBatteryStatusMessage
+import app.gmaaps.pump.insight.app_layer.status.GetCartridgeStatusMessage
+import app.gmaaps.pump.insight.app_layer.status.GetDateTimeMessage
+import app.gmaaps.pump.insight.app_layer.status.GetOperatingModeMessage
+import app.gmaaps.pump.insight.app_layer.status.GetPumpStatusRegisterMessage
+import app.gmaaps.pump.insight.app_layer.status.GetTotalDailyDoseMessage
+import app.gmaaps.pump.insight.app_layer.status.ResetPumpStatusRegisterMessage
+import app.gmaaps.pump.insight.compose.InsightComposeContent
+import app.gmaaps.pump.insight.connection_service.InsightConnectionService
+import app.gmaaps.pump.insight.database.InsightBolusID
+import app.gmaaps.pump.insight.database.InsightDatabase
+import app.gmaaps.pump.insight.database.InsightDbHelper
+import app.gmaaps.pump.insight.database.InsightHistoryOffset
+import app.gmaaps.pump.insight.database.InsightPumpID
+import app.gmaaps.pump.insight.descriptors.ActiveBasalRate
+import app.gmaaps.pump.insight.descriptors.ActiveBolus
+import app.gmaaps.pump.insight.descriptors.ActiveTBR
+import app.gmaaps.pump.insight.descriptors.AlertType
+import app.gmaaps.pump.insight.descriptors.BasalProfile
+import app.gmaaps.pump.insight.descriptors.BasalProfileBlock
+import app.gmaaps.pump.insight.descriptors.BatteryStatus
+import app.gmaaps.pump.insight.descriptors.BolusType
+import app.gmaaps.pump.insight.descriptors.CartridgeStatus
+import app.gmaaps.pump.insight.descriptors.InsightState
+import app.gmaaps.pump.insight.descriptors.OperatingMode
+import app.gmaaps.pump.insight.descriptors.TotalDailyDose
+import app.gmaaps.pump.insight.events.EventLocalInsightUpdateGUI
+import app.gmaaps.pump.insight.exceptions.InsightException
+import app.gmaaps.pump.insight.exceptions.app_layer_errors.AppLayerErrorException
+import app.gmaaps.pump.insight.exceptions.app_layer_errors.NoActiveTBRToCancelException
+import app.gmaaps.pump.insight.keys.InsightBooleanKey
+import app.gmaaps.pump.insight.keys.InsightDoubleNonKey
+import app.gmaaps.pump.insight.keys.InsightIntKey
+import app.gmaaps.pump.insight.keys.InsightLongNonKey
+import app.gmaaps.pump.insight.utils.ExceptionTranslator
+import app.gmaaps.pump.insight.utils.ParameterBlockUtil
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -385,7 +385,7 @@ class InsightPlugin(
                 val setDateTimeMessage = SetDateTimeMessage()
                 setDateTimeMessage.pumpTime = pumpTime
                 connectionService?.requestMessage(setDateTimeMessage)?.await()
-                notificationManager.post(NotificationId.INSIGHT_DATE_TIME_UPDATED, TextRef.AndroidRes(app.aaps.core.ui.R.string.pump_time_updated), validMinutes = 60)
+                notificationManager.post(NotificationId.INSIGHT_DATE_TIME_UPDATED, TextRef.AndroidRes(app.gmaaps.core.ui.R.string.pump_time_updated), validMinutes = 60)
             }
         }
     }
@@ -509,7 +509,7 @@ class InsightPlugin(
                 // PROFILE_SET_OK posted (and FAILED cleared) centrally on the return value.
                 result.success(true)
                     .enacted(true)
-                    .comment(app.aaps.core.ui.R.string.virtualpump_resultok)
+                    .comment(app.gmaaps.core.ui.R.string.virtualpump_resultok)
                 this.profileBlocks = profileBlocks
                 try {
                     fetchStatus()
@@ -716,7 +716,7 @@ class InsightPlugin(
                                     .isPercent(false)
                                     .absolute(absoluteRate)
                                     .duration(durationInMinutes)
-                                    .comment(app.aaps.core.ui.R.string.virtualpump_resultok)
+                                    .comment(app.gmaaps.core.ui.R.string.virtualpump_resultok)
                             } else {
                                 result.comment(ebResult.comment)
                             }
@@ -767,7 +767,7 @@ class InsightPlugin(
                 .duration(durationInMinutes)
                 .success(true)
                 .enacted(true)
-                .comment(app.aaps.core.ui.R.string.virtualpump_resultok)
+                .comment(app.gmaaps.core.ui.R.string.virtualpump_resultok)
             readHistory()
             fetchStatus()
         } catch (e: AppLayerErrorException) {
@@ -817,7 +817,7 @@ class InsightPlugin(
                         bolusID = bolusID
                     )
                 )
-                result.success(true).enacted(true).comment(app.aaps.core.ui.R.string.virtualpump_resultok)
+                result.success(true).enacted(true).comment(app.gmaaps.core.ui.R.string.virtualpump_resultok)
             } catch (e: AppLayerErrorException) {
                 aapsLogger.info(LTag.PUMP, "Exception while delivering extended bolus: " + e.javaClass.canonicalName + " (" + e.errorCode + ")")
                 result.comment(ExceptionTranslator.getString(context, e))
@@ -864,10 +864,10 @@ class InsightPlugin(
                     .isTempCancel(true)
                 confirmAlert(AlertType.WARNING_36)
                 alertService?.ignore(null)
-                result.comment(app.aaps.core.ui.R.string.virtualpump_resultok)
+                result.comment(app.gmaaps.core.ui.R.string.virtualpump_resultok)
             } catch (_: NoActiveTBRToCancelException) {
                 result.success(true)
-                result.comment(app.aaps.core.ui.R.string.virtualpump_resultok)
+                result.comment(app.gmaaps.core.ui.R.string.virtualpump_resultok)
             } catch (e: AppLayerErrorException) {
                 aapsLogger.info(LTag.PUMP, "Exception while canceling TBR: " + e.javaClass.canonicalName + " (" + e.errorCode + ")")
                 result.comment(ExceptionTranslator.getString(context, e))
@@ -915,7 +915,7 @@ class InsightPlugin(
                         }
                     }
                 }
-                result.success(true).comment(app.aaps.core.ui.R.string.virtualpump_resultok)
+                result.success(true).comment(app.gmaaps.core.ui.R.string.virtualpump_resultok)
             } catch (e: AppLayerErrorException) {
                 aapsLogger.info(LTag.PUMP, "Exception while canceling extended bolus: " + e.javaClass.canonicalName + " (" + e.errorCode + ")")
                 result.comment(ExceptionTranslator.getString(context, e))
@@ -1062,17 +1062,17 @@ class InsightPlugin(
                     var historyEvents: MutableList<HistoryEvent> = ArrayList()
                     if (historyOffset == null) {
                         val startMessage = StartReadingHistoryMessage()
-                        startMessage.direction = app.aaps.pump.insight.app_layer.history.HistoryReadingDirection.BACKWARD
+                        startMessage.direction = app.gmaaps.pump.insight.app_layer.history.HistoryReadingDirection.BACKWARD
                         startMessage.offset = -0x1
                         service.requestMessage(startMessage).await()
-                        historyEvents = service.requestMessage(app.aaps.pump.insight.app_layer.history.ReadHistoryEventsMessage()).await().historyEvents
+                        historyEvents = service.requestMessage(app.gmaaps.pump.insight.app_layer.history.ReadHistoryEventsMessage()).await().historyEvents
                     } else {
                         val startMessage = StartReadingHistoryMessage()
-                        startMessage.direction = app.aaps.pump.insight.app_layer.history.HistoryReadingDirection.FORWARD
+                        startMessage.direction = app.gmaaps.pump.insight.app_layer.history.HistoryReadingDirection.FORWARD
                         startMessage.offset = historyOffset.offset + 1
                         service.requestMessage(startMessage).await()
                         while (true) {
-                            val newEvents = service.requestMessage(app.aaps.pump.insight.app_layer.history.ReadHistoryEventsMessage()).await().historyEvents
+                            val newEvents = service.requestMessage(app.gmaaps.pump.insight.app_layer.history.ReadHistoryEventsMessage()).await().historyEvents
                             if (newEvents.isEmpty()) break
                             historyEvents.addAll(newEvents)
                         }
@@ -1273,7 +1273,7 @@ class InsightPlugin(
 
             OperatingMode.PAUSED  -> {
                 pumpID.eventType = InsightPumpID.EventType.PumpPaused
-                if (preferences.get(InsightBooleanKey.LogOperatingModeChanges)) logNote(timestamp, rh.gs(app.aaps.core.ui.R.string.pump_paused))
+                if (preferences.get(InsightBooleanKey.LogOperatingModeChanges)) logNote(timestamp, rh.gs(app.gmaaps.core.ui.R.string.pump_paused))
             }
 
             else                  -> Unit

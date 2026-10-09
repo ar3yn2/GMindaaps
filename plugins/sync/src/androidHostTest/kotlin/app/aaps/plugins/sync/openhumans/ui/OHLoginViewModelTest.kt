@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.openhumans.ui
+﻿package app.gmaaps.plugins.sync.openhumans.ui
 
-import app.aaps.plugins.sync.openhumans.OpenHumansUploaderPlugin
+import app.gmaaps.plugins.sync.openhumans.OpenHumansUploaderPlugin
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -150,3 +150,4 @@ internal class OHLoginViewModelTest {
         assertThat(sut.state.value).isEqualTo(OHLoginViewModel.State.DONE)
     }
 }
+

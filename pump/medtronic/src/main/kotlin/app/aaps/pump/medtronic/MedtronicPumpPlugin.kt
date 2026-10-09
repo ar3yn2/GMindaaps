@@ -1,100 +1,100 @@
-package app.aaps.pump.medtronic
+﻿package app.gmaaps.pump.medtronic
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.ServiceConnection
 import android.os.IBinder
 import android.os.SystemClock
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.core.interfaces.di.PumpDriver
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.PumpSync.TemporaryBasalType
-import app.aaps.core.interfaces.pump.comment
-import app.aaps.core.interfaces.pump.defs.determineCorrectBasalSize
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventRefreshButtonState
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
-import app.aaps.core.interfaces.rx.events.EventSWRLStatus
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.icons.IcPluginMedtronic
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.core.utils.DateTimeUtil
-import app.aaps.pump.common.PumpPluginAbstract
-import app.aaps.pump.common.data.PumpStatus
-import app.aaps.pump.common.defs.PumpDriverState
-import app.aaps.pump.common.driver.refresh.PumpDataRefreshAction
-import app.aaps.pump.common.driver.refresh.PumpDataRefreshType
-import app.aaps.pump.common.events.EventRileyLinkDeviceStatusChange
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkTargetFrequency
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkPumpInfo
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkDoubleKey
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkLongKey
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkStringKey
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkStringPreferenceKey
-import app.aaps.pump.common.hw.rileylink.keys.RileylinkBooleanPreferenceKey
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
-import app.aaps.pump.common.hw.rileylink.service.tasks.ResetRileyLinkConfigurationTask
-import app.aaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
-import app.aaps.pump.common.hw.rileylink.service.tasks.WakeAndTuneTask
-import app.aaps.pump.common.sync.PumpDbEntryTBR
-import app.aaps.pump.common.sync.PumpSyncEntriesCreator
-import app.aaps.pump.common.sync.PumpSyncStorage
-import app.aaps.pump.common.utils.ProfileUtil
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryResult
-import app.aaps.pump.medtronic.compose.MedtronicComposeContent
-import app.aaps.pump.medtronic.data.MedtronicHistoryData
-import app.aaps.pump.medtronic.data.dto.BasalProfile
-import app.aaps.pump.medtronic.data.dto.BasalProfile.Companion.getProfilesByHourToString
-import app.aaps.pump.medtronic.data.dto.BasalProfileEntry
-import app.aaps.pump.medtronic.data.dto.TempBasalPair
-import app.aaps.pump.medtronic.defs.BasalProfileStatus
-import app.aaps.pump.medtronic.defs.BatteryType
-import app.aaps.pump.medtronic.defs.MedtronicCommandType
-import app.aaps.pump.medtronic.defs.MedtronicCommandType.Companion.getSettings
-import app.aaps.pump.medtronic.defs.MedtronicDeviceType
-import app.aaps.pump.medtronic.defs.MedtronicNotificationType
-import app.aaps.pump.medtronic.defs.MedtronicUIResponseType
-import app.aaps.pump.medtronic.driver.MedtronicPumpDriverConfiguration
-import app.aaps.pump.medtronic.driver.MedtronicPumpStatus
-import app.aaps.pump.medtronic.events.EventMedtronicPumpConfigurationChanged
-import app.aaps.pump.medtronic.events.EventMedtronicPumpValuesChanged
-import app.aaps.pump.medtronic.keys.MedtronicBooleanPreferenceKey
-import app.aaps.pump.medtronic.keys.MedtronicIntPreferenceKey
-import app.aaps.pump.medtronic.keys.MedtronicLongNonKey
-import app.aaps.pump.medtronic.keys.MedtronicStringPreferenceKey
-import app.aaps.pump.medtronic.service.RileyLinkMedtronicService
-import app.aaps.pump.medtronic.util.MedtronicUtil
-import app.aaps.pump.medtronic.util.MedtronicUtil.Companion.isSame
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.core.interfaces.di.PumpDriver
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.PumpSync.TemporaryBasalType
+import app.gmaaps.core.interfaces.pump.comment
+import app.gmaaps.core.interfaces.pump.defs.determineCorrectBasalSize
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventRefreshButtonState
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.core.interfaces.rx.events.EventSWRLStatus
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.icons.IcPluginMedtronic
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.core.utils.DateTimeUtil
+import app.gmaaps.pump.common.PumpPluginAbstract
+import app.gmaaps.pump.common.data.PumpStatus
+import app.gmaaps.pump.common.defs.PumpDriverState
+import app.gmaaps.pump.common.driver.refresh.PumpDataRefreshAction
+import app.gmaaps.pump.common.driver.refresh.PumpDataRefreshType
+import app.gmaaps.pump.common.events.EventRileyLinkDeviceStatusChange
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkTargetFrequency
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkPumpInfo
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkDoubleKey
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkLongKey
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkStringKey
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkStringPreferenceKey
+import app.gmaaps.pump.common.hw.rileylink.keys.RileylinkBooleanPreferenceKey
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.ResetRileyLinkConfigurationTask
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.WakeAndTuneTask
+import app.gmaaps.pump.common.sync.PumpDbEntryTBR
+import app.gmaaps.pump.common.sync.PumpSyncEntriesCreator
+import app.gmaaps.pump.common.sync.PumpSyncStorage
+import app.gmaaps.pump.common.utils.ProfileUtil
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryResult
+import app.gmaaps.pump.medtronic.compose.MedtronicComposeContent
+import app.gmaaps.pump.medtronic.data.MedtronicHistoryData
+import app.gmaaps.pump.medtronic.data.dto.BasalProfile
+import app.gmaaps.pump.medtronic.data.dto.BasalProfile.Companion.getProfilesByHourToString
+import app.gmaaps.pump.medtronic.data.dto.BasalProfileEntry
+import app.gmaaps.pump.medtronic.data.dto.TempBasalPair
+import app.gmaaps.pump.medtronic.defs.BasalProfileStatus
+import app.gmaaps.pump.medtronic.defs.BatteryType
+import app.gmaaps.pump.medtronic.defs.MedtronicCommandType
+import app.gmaaps.pump.medtronic.defs.MedtronicCommandType.Companion.getSettings
+import app.gmaaps.pump.medtronic.defs.MedtronicDeviceType
+import app.gmaaps.pump.medtronic.defs.MedtronicNotificationType
+import app.gmaaps.pump.medtronic.defs.MedtronicUIResponseType
+import app.gmaaps.pump.medtronic.driver.MedtronicPumpDriverConfiguration
+import app.gmaaps.pump.medtronic.driver.MedtronicPumpStatus
+import app.gmaaps.pump.medtronic.events.EventMedtronicPumpConfigurationChanged
+import app.gmaaps.pump.medtronic.events.EventMedtronicPumpValuesChanged
+import app.gmaaps.pump.medtronic.keys.MedtronicBooleanPreferenceKey
+import app.gmaaps.pump.medtronic.keys.MedtronicIntPreferenceKey
+import app.gmaaps.pump.medtronic.keys.MedtronicLongNonKey
+import app.gmaaps.pump.medtronic.keys.MedtronicStringPreferenceKey
+import app.gmaaps.pump.medtronic.service.RileyLinkMedtronicService
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.pump.medtronic.util.MedtronicUtil.Companion.isSame
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -231,7 +231,7 @@ class MedtronicPumpPlugin(
             aapsLogger.debug(LTag.PUMP, "Medtronic serial number changed, reporting new pump")
             medtronicPumpStatus.serialNumber = preferences.getIfExists(MedtronicStringPreferenceKey.Serial) ?: ""
             pumpSync.connectNewPump()
-            commandQueue.readStatus(rh.gs(app.aaps.core.ui.R.string.device_changed))
+            commandQueue.readStatus(rh.gs(app.gmaaps.core.ui.R.string.device_changed))
         }.launchIn(newScope)
         super.onStart()
     }
@@ -618,7 +618,7 @@ class MedtronicPumpPlugin(
                 aapsLogger.info(LTag.PUMP, String.format(Locale.ENGLISH, "MedtronicPumpPlugin::checkTimeAndOptionallySetTime - Time difference is %d s. Set time on pump.", timeDiff))
                 rileyLinkMedtronicService?.medtronicUIComm?.executeCommand(MedtronicCommandType.SetRealTimeClock)
                 if (clock.timeDifference == 0) {
-                    notificationManager.post(NotificationId.INSIGHT_DATE_TIME_UPDATED, TextRef.AndroidRes(app.aaps.core.ui.R.string.pump_time_updated), validMinutes = 60)
+                    notificationManager.post(NotificationId.INSIGHT_DATE_TIME_UPDATED, TextRef.AndroidRes(app.gmaaps.core.ui.R.string.pump_time_updated), validMinutes = 60)
                 }
             } else {
                 if (clock.localDeviceTime.year > 2015) {
@@ -687,7 +687,7 @@ class MedtronicPumpPlugin(
                     // LOG.debug("MedtronicPumpPlugin::deliverBolus - Delivery Canceled after Bolus started.");
                     Thread {
                         SystemClock.sleep(2000)
-                        uiInteraction.runAlarm(rh.gs(R.string.medtronic_cmd_cancel_bolus_not_supported), rh.gs(app.aaps.core.ui.R.string.warning), AlarmSound.BOLUS_ERROR)
+                        uiInteraction.runAlarm(rh.gs(R.string.medtronic_cmd_cancel_bolus_not_supported), rh.gs(app.gmaaps.core.ui.R.string.warning), AlarmSound.BOLUS_ERROR)
                     }.start()
                 }
                 val now = System.currentTimeMillis()
@@ -719,7 +719,7 @@ class MedtronicPumpPlugin(
         setRefreshButtonEnabled(true)
         if (isBolus) bolusDeliveryType = BolusDeliveryType.Idle
         return if (success) pumpEnactResultProvider().success(true).enacted(false)
-        else pumpEnactResultProvider().success(false).enacted(false).comment(app.aaps.core.ui.R.string.pump_unreachable)
+        else pumpEnactResultProvider().success(false).enacted(false).comment(app.gmaaps.core.ui.R.string.pump_unreachable)
     }
 
     override fun stopBolusDelivering() {
@@ -738,7 +738,7 @@ class MedtronicPumpPlugin(
             return pumpEnactResultProvider() //
                 .success(false) //
                 .enacted(false) //
-                .comment(app.aaps.core.ui.R.string.pump_unreachable)
+                .comment(app.gmaaps.core.ui.R.string.pump_unreachable)
         }
         medtronicUtil.dismissNotification(MedtronicNotificationType.PumpUnreachable)
         aapsLogger.info(LTag.PUMP, "setTempBasalAbsolute: rate: ${absoluteRate}, duration= $durationInMinutes")
@@ -1048,7 +1048,7 @@ class MedtronicPumpPlugin(
             return pumpEnactResultProvider() //
                 .success(false) //
                 .enacted(false) //
-                .comment(app.aaps.core.ui.R.string.pump_unreachable)
+                .comment(app.gmaaps.core.ui.R.string.pump_unreachable)
         }
         medtronicUtil.dismissNotification(MedtronicNotificationType.PumpUnreachable)
         setRefreshButtonEnabled(false)
@@ -1139,7 +1139,7 @@ class MedtronicPumpPlugin(
             return pumpEnactResultProvider() //
                 .success(false) //
                 .enacted(false) //
-                .comment(app.aaps.core.ui.R.string.pump_unreachable)
+                .comment(app.gmaaps.core.ui.R.string.pump_unreachable)
         }
         medtronicUtil.dismissNotification(MedtronicNotificationType.PumpUnreachable)
         val basalProfile = convertProfileToMedtronicProfile(profile)
@@ -1260,3 +1260,4 @@ class MedtronicPumpPlugin(
             })
     }
 }
+

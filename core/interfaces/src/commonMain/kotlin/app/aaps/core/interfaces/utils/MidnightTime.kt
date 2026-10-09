@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.utils
+﻿package app.gmaaps.core.interfaces.utils
 
 import kotlinx.datetime.DateTimeUnit
 import kotlinx.datetime.LocalDateTime
@@ -71,3 +71,4 @@ object MidnightTime {
         return date.atStartOfDayIn(tz).toEpochMilliseconds()
     }
 }
+

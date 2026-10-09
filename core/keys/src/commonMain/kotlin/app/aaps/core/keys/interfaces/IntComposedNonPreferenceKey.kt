@@ -1,4 +1,4 @@
-package app.aaps.core.keys.interfaces
+﻿package app.gmaaps.core.keys.interfaces
 
 /**
  * Preference key where key is a format string see [String::format]

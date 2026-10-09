@@ -1,4 +1,4 @@
-package app.aaps.pump.diaconn.compose
+﻿package app.gmaaps.pump.diaconn.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -26,7 +26,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.pump.diaconn.R
+import app.gmaaps.pump.diaconn.R
 import kotlin.math.roundToInt
 
 @Composable
@@ -71,7 +71,7 @@ fun DiaconnUserOptionsScreen(
             onClick = viewModel::saveAlarm,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text(stringResource(app.aaps.core.ui.R.string.save))
+            Text(stringResource(app.gmaaps.core.ui.R.string.save))
         }
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
@@ -92,7 +92,7 @@ fun DiaconnUserOptionsScreen(
             onClick = viewModel::saveLcdOnTime,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text(stringResource(app.aaps.core.ui.R.string.save))
+            Text(stringResource(app.gmaaps.core.ui.R.string.save))
         }
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
@@ -113,7 +113,7 @@ fun DiaconnUserOptionsScreen(
             onClick = viewModel::saveLanguage,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text(stringResource(app.aaps.core.ui.R.string.save))
+            Text(stringResource(app.gmaaps.core.ui.R.string.save))
         }
 
         HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
@@ -142,7 +142,7 @@ fun DiaconnUserOptionsScreen(
             onClick = viewModel::saveBolusSpeed,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text(stringResource(app.aaps.core.ui.R.string.save))
+            Text(stringResource(app.gmaaps.core.ui.R.string.save))
         }
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -190,3 +190,4 @@ private fun RadioGroup(
         }
     }
 }
+

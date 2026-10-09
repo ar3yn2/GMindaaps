@@ -1,34 +1,34 @@
-package app.aaps.pump.common.hw.rileylink.ble
+﻿package app.gmaaps.pump.common.hw.rileylink.ble
 
 import android.os.SystemClock
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.utils.StringUtil.fromBytes
-import app.aaps.core.utils.pump.ByteUtil.concat
-import app.aaps.core.utils.pump.ByteUtil.shortHexString
-import app.aaps.core.utils.pump.ThreadUtil.sig
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.ble.command.RileyLinkCommand
-import app.aaps.pump.common.hw.rileylink.ble.command.SendAndListen
-import app.aaps.pump.common.hw.rileylink.ble.command.SetHardwareEncoding
-import app.aaps.pump.common.hw.rileylink.ble.command.SetPreamble
-import app.aaps.pump.common.hw.rileylink.ble.command.UpdateRegister
-import app.aaps.pump.common.hw.rileylink.ble.data.GattAttributes
-import app.aaps.pump.common.hw.rileylink.ble.data.RFSpyResponse
-import app.aaps.pump.common.hw.rileylink.ble.data.RadioPacket
-import app.aaps.pump.common.hw.rileylink.ble.defs.CC111XRegister
-import app.aaps.pump.common.hw.rileylink.ble.defs.RXFilterMode
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersion
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersionBase
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkTargetFrequency
-import app.aaps.pump.common.hw.rileylink.ble.operations.BLECommOperationResult
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkStringPreferenceKey
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.utils.StringUtil.fromBytes
+import app.gmaaps.core.utils.pump.ByteUtil.concat
+import app.gmaaps.core.utils.pump.ByteUtil.shortHexString
+import app.gmaaps.core.utils.pump.ThreadUtil.sig
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.command.RileyLinkCommand
+import app.gmaaps.pump.common.hw.rileylink.ble.command.SendAndListen
+import app.gmaaps.pump.common.hw.rileylink.ble.command.SetHardwareEncoding
+import app.gmaaps.pump.common.hw.rileylink.ble.command.SetPreamble
+import app.gmaaps.pump.common.hw.rileylink.ble.command.UpdateRegister
+import app.gmaaps.pump.common.hw.rileylink.ble.data.GattAttributes
+import app.gmaaps.pump.common.hw.rileylink.ble.data.RFSpyResponse
+import app.gmaaps.pump.common.hw.rileylink.ble.data.RadioPacket
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.CC111XRegister
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RXFilterMode
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersion
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersionBase
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkTargetFrequency
+import app.gmaaps.pump.common.hw.rileylink.ble.operations.BLECommOperationResult
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkStringPreferenceKey
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -401,3 +401,4 @@ class RFSpy(
         }
     }
 }
+

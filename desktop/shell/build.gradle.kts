@@ -1,4 +1,4 @@
-import java.text.SimpleDateFormat
+﻿import java.text.SimpleDateFormat
 import java.util.Date
 
 plugins {
@@ -14,7 +14,7 @@ plugins {
  *
  * The counterpart of `:app` on Android and `:ios:shell` on Apple. It ships no features of its own -
  * it builds the object graph from the shared modules, supplies the seams only a desktop can fill,
- * and shows `app.aaps.appshell.AapsAppRoot`.
+ * and shows `app.gmaaps.appshell.AapsAppRoot`.
  *
  * A plain `kotlin("jvm")` module rather than a multiplatform one: it has exactly one target, and
  * Gradle resolves the `jvm` variant of every multiplatform module it depends on.
@@ -144,14 +144,14 @@ val generateBuildInfo = tasks.register<GenerateBuildInfoTask>("generateDesktopBu
     version.set(Versions.appVersion)
     buildStamp.set(buildStamp())
     platform.set("Desktop")
-    packageName.set("app.aaps.desktop.shell.config")
+    packageName.set("app.gmaaps.desktop.shell.config")
     client.set(desktopClient)
     outputDir.set(layout.buildDirectory.dir("generated/buildInfo"))
 }
 
 val generateStringOwners = tasks.register<GenerateStringOwnerRegistryTask>("generateDesktopStringOwners") {
     owners.set(StringOwnerModules.ALL)
-    packageName.set("app.aaps.desktop.shell.di")
+    packageName.set("app.gmaaps.desktop.shell.di")
     objectName.set("GeneratedStringOwners")
     // Text, not resource ids: a desktop JVM has no AAPT table to resolve an id against.
     useResourceIds.set(false)
@@ -237,7 +237,7 @@ tasks.withType<Test> { useJUnitPlatform() }
 
 compose.desktop {
     application {
-        mainClass = "app.aaps.desktop.shell.MainKt"
+        mainClass = "app.gmaaps.desktop.shell.MainKt"
 
         nativeDistributions {
             // The client name, matching `DesktopClientConfig.appName` and the `aapsclient` flavour
@@ -269,3 +269,4 @@ compose.desktop {
 configurations.configureEach {
     exclude(group = "org.json", module = "json")
 }
+

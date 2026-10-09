@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.local
+﻿package app.gmaaps.core.interfaces.local
 
 interface LocaleDependentSetting {
 

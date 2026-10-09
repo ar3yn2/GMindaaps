@@ -1,4 +1,4 @@
-package app.aaps.shared.tests
+﻿package app.gmaaps.shared.tests
 
 import java.io.File
 import java.lang.reflect.ParameterizedType
@@ -73,3 +73,4 @@ private fun classNamesInJar(jar: File): List<String> =
             .map { it.name.removeSuffix(".class").replace('/', '.') }
             .toList()
     }
+

@@ -1,86 +1,86 @@
-package app.aaps.pump.omnipod.dash
+﻿package app.gmaaps.pump.omnipod.dash
 
 import android.os.Handler
 import android.os.HandlerThread
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.di.PumpDriver
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.OwnDatabasePlugin
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.OmnipodDash
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpPluginBase
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.defs.fillFor
-import app.aaps.core.interfaces.queue.Command
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventProfileChangeRequested
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.icons.IcPluginOmnipod
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.core.utils.DateTimeUtil
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ActivationProgress
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertConfiguration
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertTrigger
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BeepRepetitionType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BeepType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BolusType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.DeliveryStatus
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PodConstants
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PodConstants.Companion.POD_EXPIRATION_IMMINENT_ALERT_HOURS_REMAINING
-import app.aaps.pump.omnipod.common.bledriver.pod.response.ResponseType
-import app.aaps.pump.omnipod.common.bledriver.pod.state.CommandConfirmed
-import app.aaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
-import app.aaps.pump.omnipod.common.definition.OmnipodCommandType
-import app.aaps.pump.omnipod.common.keys.DashBooleanPreferenceKey
-import app.aaps.pump.omnipod.common.keys.DashStringNonPreferenceKey
-import app.aaps.pump.omnipod.common.keys.OmnipodBooleanPreferenceKey
-import app.aaps.pump.omnipod.common.keys.OmnipodIntPreferenceKey
-import app.aaps.pump.omnipod.common.queue.command.CommandDeactivatePod
-import app.aaps.pump.omnipod.common.queue.command.CommandDeliverBasalCorrection
-import app.aaps.pump.omnipod.common.queue.command.CommandDisableSuspendAlerts
-import app.aaps.pump.omnipod.common.queue.command.CommandHandleTimeChange
-import app.aaps.pump.omnipod.common.queue.command.CommandPlayTestBeep
-import app.aaps.pump.omnipod.common.queue.command.CommandResumeDelivery
-import app.aaps.pump.omnipod.common.queue.command.CommandSilenceAlerts
-import app.aaps.pump.omnipod.common.queue.command.CommandUpdateAlertConfiguration
-import app.aaps.pump.omnipod.common.util.mapProfileToBasalProgram
-import app.aaps.pump.omnipod.dash.driver.OmnipodDashManager
-import app.aaps.pump.omnipod.dash.history.DashHistory
-import app.aaps.pump.omnipod.dash.history.data.BasalValuesRecord
-import app.aaps.pump.omnipod.dash.history.data.BolusRecord
-import app.aaps.pump.omnipod.dash.history.data.TempBasalRecord
-import app.aaps.pump.omnipod.dash.history.database.DashHistoryDatabase
-import app.aaps.pump.omnipod.dash.ui.compose.OmnipodDashComposeContent
-import app.aaps.pump.omnipod.dash.util.Constants
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.di.PumpDriver
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.OwnDatabasePlugin
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.OmnipodDash
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpPluginBase
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.defs.fillFor
+import app.gmaaps.core.interfaces.queue.Command
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventProfileChangeRequested
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.icons.IcPluginOmnipod
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.core.utils.DateTimeUtil
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ActivationProgress
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertConfiguration
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertTrigger
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BeepRepetitionType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BeepType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BolusType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.DeliveryStatus
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PodConstants
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PodConstants.Companion.POD_EXPIRATION_IMMINENT_ALERT_HOURS_REMAINING
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.ResponseType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.CommandConfirmed
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
+import app.gmaaps.pump.omnipod.common.definition.OmnipodCommandType
+import app.gmaaps.pump.omnipod.common.keys.DashBooleanPreferenceKey
+import app.gmaaps.pump.omnipod.common.keys.DashStringNonPreferenceKey
+import app.gmaaps.pump.omnipod.common.keys.OmnipodBooleanPreferenceKey
+import app.gmaaps.pump.omnipod.common.keys.OmnipodIntPreferenceKey
+import app.gmaaps.pump.omnipod.common.queue.command.CommandDeactivatePod
+import app.gmaaps.pump.omnipod.common.queue.command.CommandDeliverBasalCorrection
+import app.gmaaps.pump.omnipod.common.queue.command.CommandDisableSuspendAlerts
+import app.gmaaps.pump.omnipod.common.queue.command.CommandHandleTimeChange
+import app.gmaaps.pump.omnipod.common.queue.command.CommandPlayTestBeep
+import app.gmaaps.pump.omnipod.common.queue.command.CommandResumeDelivery
+import app.gmaaps.pump.omnipod.common.queue.command.CommandSilenceAlerts
+import app.gmaaps.pump.omnipod.common.queue.command.CommandUpdateAlertConfiguration
+import app.gmaaps.pump.omnipod.common.util.mapProfileToBasalProgram
+import app.gmaaps.pump.omnipod.dash.driver.OmnipodDashManager
+import app.gmaaps.pump.omnipod.dash.history.DashHistory
+import app.gmaaps.pump.omnipod.dash.history.data.BasalValuesRecord
+import app.gmaaps.pump.omnipod.dash.history.data.BolusRecord
+import app.gmaaps.pump.omnipod.dash.history.data.TempBasalRecord
+import app.gmaaps.pump.omnipod.dash.history.database.DashHistoryDatabase
+import app.gmaaps.pump.omnipod.dash.ui.compose.OmnipodDashComposeContent
+import app.gmaaps.pump.omnipod.dash.util.Constants
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -108,7 +108,7 @@ import java.util.concurrent.CountDownLatch
 import kotlin.concurrent.thread
 import kotlin.math.ceil
 import kotlin.time.Duration.Companion.hours
-import app.aaps.pump.omnipod.common.R as CommonR
+import app.gmaaps.pump.omnipod.common.R as CommonR
 
 @ContributesIntoMap(AppScope::class, binding = binding<PluginBase>())
 @PumpDriver
@@ -131,8 +131,8 @@ class OmnipodDashPumpPlugin(
     private val pumpEnactResultProvider: () -> PumpEnactResult,
     private val bolusProgressData: BolusProgressData,
     private val dashHistoryDatabase: DashHistoryDatabase,
-    private val protectionCheck: app.aaps.core.interfaces.protection.ProtectionCheck,
-    private val blePreCheck: app.aaps.core.interfaces.pump.BlePreCheck
+    private val protectionCheck: app.gmaaps.core.interfaces.protection.ProtectionCheck,
+    private val blePreCheck: app.gmaaps.core.interfaces.pump.BlePreCheck
 ) : PumpPluginBase(
     pluginDescription = PluginDescription()
         .mainType(PluginType.PUMP)
@@ -215,7 +215,7 @@ class OmnipodDashPumpPlugin(
             if (!podStateManager.isPodRunning) {
                 notificationManager.post(
                     NotificationId.OMNIPOD_POD_NOT_ATTACHED,
-                    TextRef.AndroidRes(app.aaps.pump.omnipod.common.R.string.omnipod_common_pod_status_no_active_pod))
+                    TextRef.AndroidRes(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_pod_status_no_active_pod))
             } else {
                 notificationManager.dismiss(NotificationId.OMNIPOD_POD_NOT_ATTACHED)
                 if (podStateManager.isSuspended) {
@@ -1101,7 +1101,7 @@ class OmnipodDashPumpPlugin(
                 aapsLogger.warn(LTag.PUMP, "Unsupported custom command: " + customCommand.javaClass.name)
                 pumpEnactResultProvider().success(false).enacted(false).comment(
                     rh.gs(
-                        TextRef.AndroidRes(app.aaps.pump.omnipod.common.R.string.omnipod_common_error_unsupported_custom_command),
+                        TextRef.AndroidRes(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_error_unsupported_custom_command),
                         customCommand.javaClass.name
                     )
                 )
@@ -1564,7 +1564,7 @@ class OmnipodDashPumpPlugin(
     }
 
     private fun showErrorDialog(message: String, sound: AlarmSound?) {
-        uiInteraction.runAlarm(message, rh.gs(app.aaps.core.ui.R.string.error), sound)
+        uiInteraction.runAlarm(message, rh.gs(app.gmaaps.core.ui.R.string.error), sound)
     }
 
     private fun showNotification(id: NotificationId, message: String, sound: AlarmSound?, level: NotificationLevel = id.defaultLevel) {
@@ -1593,7 +1593,7 @@ class OmnipodDashPumpPlugin(
             // Beeps subscreen
             PreferenceSubScreenDef(
                 key = "omnipod_dash_beeps",
-                titleResId = app.aaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_confirmation_beeps,
+                titleResId = app.gmaaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_confirmation_beeps,
                 items = listOf(
                     OmnipodBooleanPreferenceKey.BolusBeepsEnabled,
                     OmnipodBooleanPreferenceKey.BasalBeepsEnabled,
@@ -1604,7 +1604,7 @@ class OmnipodDashPumpPlugin(
             // Alerts subscreen
             PreferenceSubScreenDef(
                 key = "omnipod_dash_alerts",
-                titleResId = app.aaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_alerts,
+                titleResId = app.gmaaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_alerts,
                 items = listOf(
                     OmnipodBooleanPreferenceKey.ExpirationReminder,
                     OmnipodIntPreferenceKey.ExpirationReminderHours,
@@ -1617,7 +1617,7 @@ class OmnipodDashPumpPlugin(
             // Notifications subscreen
             PreferenceSubScreenDef(
                 key = "omnipod_dash_notifications",
-                titleResId = app.aaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_notifications,
+                titleResId = app.gmaaps.pump.omnipod.common.R.string.omnipod_common_preferences_category_notifications,
                 items = listOf(
                     OmnipodBooleanPreferenceKey.SoundUncertainTbrNotification,
                     OmnipodBooleanPreferenceKey.SoundUncertainSmbNotification,
@@ -1628,7 +1628,7 @@ class OmnipodDashPumpPlugin(
             // Advanced subscreen
             PreferenceSubScreenDef(
                 key = "omnipod_dash_advanced",
-                titleResId = app.aaps.core.ui.R.string.advanced_settings_title,
+                titleResId = app.gmaaps.core.ui.R.string.advanced_settings_title,
                 items = listOf(
                     DashBooleanPreferenceKey.UseBonding
                 )
@@ -1638,3 +1638,4 @@ class OmnipodDashPumpPlugin(
     )
 
 }
+

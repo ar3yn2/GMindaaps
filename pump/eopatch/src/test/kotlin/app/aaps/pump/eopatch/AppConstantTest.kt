@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch
+﻿package app.gmaaps.pump.eopatch
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -104,3 +104,4 @@ class AppConstantTest {
         assertThat(AppConstant.DAY_END_MINUTE - AppConstant.DAY_START_MINUTE).isEqualTo(1440) // 24 hours
     }
 }
+

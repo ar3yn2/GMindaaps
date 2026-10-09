@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
 public abstract class OmnipodException extends RuntimeException {
     private boolean certainFailure;
@@ -21,3 +21,4 @@ public abstract class OmnipodException extends RuntimeException {
         this.certainFailure = certainFailure;
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.stats
+﻿package app.gmaaps.core.interfaces.stats
 
 interface TIR {
 
@@ -15,3 +15,4 @@ interface TIR {
     fun inRange()
     fun above()
 }
+

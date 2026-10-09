@@ -1,10 +1,10 @@
-package app.aaps.desktop.shell.platform
+﻿package app.gmaaps.desktop.shell.platform
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AapsNotification
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.SystemNotificationPlatform
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AapsNotification
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.SystemNotificationPlatform
 import java.awt.Image
 import java.awt.SystemTray
 import java.awt.Toolkit
@@ -80,3 +80,4 @@ class DesktopSystemNotificationPlatform(
         aapsLogger.debug(LTag.CORE, "Desktop cannot report notification dismissals")
     }
 }
+

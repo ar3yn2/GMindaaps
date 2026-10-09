@@ -1,12 +1,12 @@
-package app.aaps.pump.eopatch.core.api
+﻿package app.gmaaps.pump.eopatch.core.api
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.eopatch.core.ble.BaseAPI
-import app.aaps.pump.eopatch.core.ble.PatchFunc
-import app.aaps.pump.eopatch.core.ble.PumpCounter
-import app.aaps.pump.eopatch.core.code.PatchBleResultCode
-import app.aaps.pump.eopatch.core.response.BasalScheduleSetResponse
-import app.aaps.pump.eopatch.core.scan.IBleDevice
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.eopatch.core.ble.BaseAPI
+import app.gmaaps.pump.eopatch.core.ble.PatchFunc
+import app.gmaaps.pump.eopatch.core.ble.PumpCounter
+import app.gmaaps.pump.eopatch.core.code.PatchBleResultCode
+import app.gmaaps.pump.eopatch.core.response.BasalScheduleSetResponse
+import app.gmaaps.pump.eopatch.core.scan.IBleDevice
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -33,3 +33,4 @@ class BasalScheduleSetBig(patch: IBleDevice, aapsLogger: AAPSLogger) : BaseAPI<B
         return writeAndRead(builder.build())
     }
 }
+

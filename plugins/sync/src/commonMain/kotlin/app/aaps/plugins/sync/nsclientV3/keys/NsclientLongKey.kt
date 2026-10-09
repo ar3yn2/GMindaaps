@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.nsclientV3.keys
+﻿package app.gmaaps.plugins.sync.nsclientV3.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 /**
  * How far THIS install has synced with Nightscout. Every entry is a cursor, so the whole enum is

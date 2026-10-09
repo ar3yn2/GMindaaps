@@ -1,13 +1,13 @@
-package app.aaps.pump.equil.compose.steps
+﻿package app.gmaaps.pump.equil.compose.steps
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.insulin.SelectInsulin
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.equil.compose.EquilWizardViewModel
+import app.gmaaps.core.ui.compose.insulin.SelectInsulin
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.equil.compose.EquilWizardViewModel
 
 @Composable
 internal fun SelectInsulinStep(
@@ -20,12 +20,12 @@ internal fun SelectInsulinStep(
 
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.next),
-            onClick = { viewModel.moveToNextStep(app.aaps.pump.equil.compose.EquilWizardStep.SELECT_INSULIN) },
+            text = stringResource(app.gmaaps.core.ui.R.string.next),
+            onClick = { viewModel.moveToNextStep(app.gmaaps.pump.equil.compose.EquilWizardStep.SELECT_INSULIN) },
             enabled = selectedInsulin != null
         ),
         secondaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.cancel),
+            text = stringResource(app.gmaaps.core.ui.R.string.cancel),
             onClick = onCancel
         )
     ) {
@@ -39,3 +39,4 @@ internal fun SelectInsulinStep(
         )
     }
 }
+

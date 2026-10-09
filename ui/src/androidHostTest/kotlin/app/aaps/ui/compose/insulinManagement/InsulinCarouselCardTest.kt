@@ -1,10 +1,10 @@
-package app.aaps.ui.compose.insulinManagement
+﻿package app.gmaaps.ui.compose.insulinManagement
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.ICfg
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -44,3 +44,4 @@ class InsulinCarouselCardTest {
         compose.onNodeWithText("Rapid Test Insulin").assertIsDisplayed()
     }
 }
+

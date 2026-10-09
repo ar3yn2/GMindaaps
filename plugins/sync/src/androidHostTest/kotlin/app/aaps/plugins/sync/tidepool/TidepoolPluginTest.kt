@@ -1,16 +1,16 @@
-package app.aaps.plugins.sync.tidepool
+﻿package app.gmaaps.plugins.sync.tidepool
 
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.L
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.plugins.sync.nsclientV3.ReceiverDelegate
-import app.aaps.plugins.sync.nsclientV3.ReceiverDelegate.ConnectivityStatus
-import app.aaps.plugins.sync.tidepool.auth.AuthFlowOut
-import app.aaps.plugins.sync.tidepool.comm.TidepoolUploader
-import app.aaps.plugins.sync.tidepool.comm.UploadChunk
-import app.aaps.plugins.sync.tidepool.compose.TidepoolRepository
-import app.aaps.plugins.sync.tidepool.utils.RateLimit
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.L
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.plugins.sync.nsclientV3.ReceiverDelegate
+import app.gmaaps.plugins.sync.nsclientV3.ReceiverDelegate.ConnectivityStatus
+import app.gmaaps.plugins.sync.tidepool.auth.AuthFlowOut
+import app.gmaaps.plugins.sync.tidepool.comm.TidepoolUploader
+import app.gmaaps.plugins.sync.tidepool.comm.UploadChunk
+import app.gmaaps.plugins.sync.tidepool.compose.TidepoolRepository
+import app.gmaaps.plugins.sync.tidepool.utils.RateLimit
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.emptyFlow
@@ -131,3 +131,4 @@ class TidepoolPluginTest : TestBaseWithProfile() {
         runBlocking { plugin.onStop() }
     }
 }
+

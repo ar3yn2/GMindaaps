@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program
 
 import java.nio.ByteBuffer
 import kotlin.experimental.and
@@ -30,3 +30,4 @@ class BasalShortInsulinProgramElement(
             '}'
     }
 }
+

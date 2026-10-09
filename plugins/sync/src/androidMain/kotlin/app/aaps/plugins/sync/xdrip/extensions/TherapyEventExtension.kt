@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.xdrip.extensions
+﻿package app.gmaaps.plugins.sync.xdrip.extensions
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.utils.DateUtil
 import org.json.JSONObject
 
 fun TE.toJson(isAdd: Boolean, dateUtil: DateUtil): JSONObject =

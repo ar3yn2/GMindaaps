@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
 class InputInsulin() {
 
@@ -8,3 +8,4 @@ class InputInsulin() {
         value = another.value
     }
 }
+

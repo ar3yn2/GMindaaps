@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.response
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.response
 
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlarmType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.DeliveryStatus
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlarmType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.DeliveryStatus
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
 import com.google.common.truth.Truth.assertThat
 import org.apache.commons.codec.binary.Hex
 import org.junit.jupiter.api.Test
@@ -112,3 +112,4 @@ class AlarmStatusResponseTest {
         return AlarmStatusResponse(encoded)
     }
 }
+

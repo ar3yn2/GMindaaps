@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.smsCommunicator.compose
+﻿package app.gmaaps.plugins.sync.smsCommunicator.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,7 +18,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.AapsSpacing
 
 @Composable
 internal fun SmsCommunicatorScreen(
@@ -88,3 +88,4 @@ private fun SmsLogItem(
         modifier = modifier.fillMaxWidth()
     )
 }
+

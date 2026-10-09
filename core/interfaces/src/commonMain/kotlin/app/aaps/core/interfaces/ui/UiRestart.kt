@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.ui
+﻿package app.gmaaps.core.interfaces.ui
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -55,3 +55,4 @@ class UiRestartImpl : UiRestart {
         _signal.value += 1
     }
 }
+

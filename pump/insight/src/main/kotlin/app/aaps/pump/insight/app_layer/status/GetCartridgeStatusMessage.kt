@@ -1,12 +1,12 @@
-package app.aaps.pump.insight.app_layer.status
+﻿package app.gmaaps.pump.insight.app_layer.status
 
-import app.aaps.pump.insight.app_layer.AppLayerMessage
-import app.aaps.pump.insight.app_layer.Service
-import app.aaps.pump.insight.descriptors.CartridgeStatus
-import app.aaps.pump.insight.descriptors.CartridgeType
-import app.aaps.pump.insight.descriptors.MessagePriority
-import app.aaps.pump.insight.descriptors.SymbolStatus
-import app.aaps.pump.insight.utils.ByteBuf
+import app.gmaaps.pump.insight.app_layer.AppLayerMessage
+import app.gmaaps.pump.insight.app_layer.Service
+import app.gmaaps.pump.insight.descriptors.CartridgeStatus
+import app.gmaaps.pump.insight.descriptors.CartridgeType
+import app.gmaaps.pump.insight.descriptors.MessagePriority
+import app.gmaaps.pump.insight.descriptors.SymbolStatus
+import app.gmaaps.pump.insight.utils.ByteBuf
 
 class GetCartridgeStatusMessage : AppLayerMessage(MessagePriority.NORMAL, false, false, Service.STATUS) {
 

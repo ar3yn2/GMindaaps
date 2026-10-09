@@ -1,4 +1,4 @@
-package app.aaps.shared.tests
+﻿package app.gmaaps.shared.tests
 
 import java.io.File
 import java.util.jar.JarFile
@@ -92,7 +92,7 @@ private fun classesOnClasspath(anchors: List<Class<*>>): List<Class<*>> {
         // The Android plugin hands unit tests a jar of a library's classes and a directory for others.
         .flatMap { root -> runCatching { if (root.isDirectory) classNamesInDirectory(root) else classNamesInJar(root) }.getOrDefault(emptyList()) }
         .distinct()
-        .filter { it.startsWith("app.aaps.") || it.startsWith("info.nightscout.") }
+        .filter { it.startsWith("app.gmaaps.") || it.startsWith("info.nightscout.") }
         .filterNot { it.contains('$') } // synthetic, anonymous and Kotlin lambda classes
         // initialize = false: loading must not run static initialisers, several of which touch Android.
         .mapNotNull { name -> runCatching { Class.forName(name, false, loader) }.getOrNull() }
@@ -111,3 +111,4 @@ private fun classNamesInJar(jar: File): List<String> =
             .map { it.name.removeSuffix(".class").replace('/', '.') }
             .toList()
     }
+

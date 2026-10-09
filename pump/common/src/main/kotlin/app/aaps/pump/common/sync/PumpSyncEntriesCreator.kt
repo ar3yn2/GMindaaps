@@ -1,6 +1,6 @@
-package app.aaps.pump.common.sync
+﻿package app.gmaaps.pump.common.sync
 
-import app.aaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.PumpType
 
 interface PumpSyncEntriesCreator {
 

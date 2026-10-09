@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -7,13 +7,13 @@ import androidx.compose.ui.test.assertIsEnabled
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.common.MutableEventFlow
-import app.aaps.pump.carelevo.common.model.Event
-import app.aaps.pump.carelevo.presentation.model.CarelevoConnectPrepareEvent
-import app.aaps.pump.carelevo.presentation.type.CarelevoPatchStep
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectViewModel
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.common.MutableEventFlow
+import app.gmaaps.pump.carelevo.common.model.Event
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoConnectPrepareEvent
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoPatchStep
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectViewModel
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
@@ -380,3 +380,4 @@ class CarelevoPatchFlowStep02ConnectTest {
         private const val DEVICE_NAME = "CareLevo"
     }
 }
+

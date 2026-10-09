@@ -1,8 +1,8 @@
-package app.aaps.implementation.protection
+﻿package app.gmaaps.implementation.protection
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.protection.ExportPasswordPlatform
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.protection.ExportPasswordPlatform
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -40,7 +40,7 @@ import dev.zacsweers.metro.SingleIn
 @Inject
 class IosExportPasswordPlatform(
     private val aapsLogger: AAPSLogger,
-    private val keychain: Keychain = AppleKeychain(service = "app.aaps.exportpassword")
+    private val keychain: Keychain = AppleKeychain(service = "app.gmaaps.exportpassword")
 ) : ExportPasswordPlatform {
 
     override fun read(): ExportPasswordPlatform.Stored? {
@@ -84,3 +84,4 @@ class IosExportPasswordPlatform(
         private const val SEPARATOR = ':'
     }
 }
+

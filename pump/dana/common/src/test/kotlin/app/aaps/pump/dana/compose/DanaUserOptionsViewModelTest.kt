@@ -1,11 +1,11 @@
-package app.aaps.pump.dana.compose
+﻿package app.gmaaps.pump.dana.compose
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.pump.dana.DanaPump
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.pump.dana.DanaPump
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -127,3 +127,4 @@ internal class DanaUserOptionsViewModelTest {
         assertThat(state.lowReservoir).isEqualTo(30)
     }
 }
+

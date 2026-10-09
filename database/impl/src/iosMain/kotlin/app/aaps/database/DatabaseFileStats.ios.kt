@@ -1,4 +1,4 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
@@ -30,3 +30,4 @@ internal actual val databaseDispatcher: CoroutineDispatcher = Dispatchers.IO
 // Room only generates clearAllTables for Android, so the reset button on iOS clears the tables with
 // SQL instead. The work is shared with desktop - see clearAllTablesBySql.
 internal actual suspend fun AppDatabase.clearAllTablesCompat() = clearAllTablesBySql()
+

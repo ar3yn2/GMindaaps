@@ -1,14 +1,14 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.navigation.icon
-import app.aaps.core.utils.lenientString
-import app.aaps.plugins.automation.triggers.Trigger
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.navigation.icon
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.plugins.automation.triggers.Trigger
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject
@@ -68,3 +68,4 @@ abstract class Action(
     }
 
 }
+

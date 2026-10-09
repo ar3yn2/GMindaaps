@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.di
+﻿package app.gmaaps.core.interfaces.di
 
 /**
  * A dependency that is looked up only when first used.
@@ -13,3 +13,4 @@ class DeferredRef<T : Any>(private val supplier: () -> T) {
 
     fun get(): T = supplier()
 }
+

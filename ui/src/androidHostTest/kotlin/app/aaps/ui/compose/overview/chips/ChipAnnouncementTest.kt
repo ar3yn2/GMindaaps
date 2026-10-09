@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.overview.chips
+﻿package app.gmaaps.ui.compose.overview.chips
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertContentDescriptionEquals
@@ -72,3 +72,4 @@ class ChipAnnouncementTest {
         assert(node.children.isEmpty()) { "COB chip should merge its children, found ${node.children.size}" }
     }
 }
+

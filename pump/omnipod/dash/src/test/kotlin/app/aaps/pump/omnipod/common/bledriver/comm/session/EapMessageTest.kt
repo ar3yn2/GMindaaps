@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.session
 
-import app.aaps.core.utils.toHex
-import app.aaps.shared.tests.AAPSLoggerTest
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.shared.tests.AAPSLoggerTest
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.spongycastle.util.encoders.Hex
@@ -17,3 +17,4 @@ class EapMessageTest {
         assertThat(payload.toHex()).isEqualTo(back.toHex())
     }
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.tidepool.messages
+﻿package app.gmaaps.plugins.sync.tidepool.messages
 
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.plugins.sync.tidepool.comm.TidepoolUploader
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.plugins.sync.tidepool.comm.TidepoolUploader
 import com.google.gson.annotations.Expose
 import java.util.TimeZone
 
@@ -64,3 +64,4 @@ class OpenDatasetRequestMessage(config: Config, dateUtil: DateUtil) : BaseMessag
     }
 
 }
+

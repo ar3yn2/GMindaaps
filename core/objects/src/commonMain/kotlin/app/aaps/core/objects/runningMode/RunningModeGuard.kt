@@ -1,11 +1,11 @@
-package app.aaps.core.objects.runningMode
+﻿package app.gmaaps.core.objects.runningMode
 
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * Pre-check helper for UI / sync / automation entry points that call CommandQueue.
@@ -59,3 +59,4 @@ class RunningModeGuard(
         PumpCommandGate.Reason.PUMP_REPORTED_SUSPENDED -> InterfacesStrings.pumpsuspended
     }
 }
+

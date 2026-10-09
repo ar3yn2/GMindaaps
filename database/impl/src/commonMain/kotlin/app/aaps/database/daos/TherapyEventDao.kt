@@ -1,9 +1,9 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.TABLE_THERAPY_EVENTS
-import app.aaps.database.entities.TherapyEvent
+import app.gmaaps.database.entities.TABLE_THERAPY_EVENTS
+import app.gmaaps.database.entities.TherapyEvent
 
 @Dao
 internal interface TherapyEventDao : TraceableDao<TherapyEvent> {
@@ -57,3 +57,4 @@ internal interface TherapyEventDao : TraceableDao<TherapyEvent> {
     @Query("SELECT * FROM $TABLE_THERAPY_EVENTS WHERE dateCreated > :since AND dateCreated <= :until LIMIT :limit OFFSET :offset")
     suspend fun getNewEntriesSince(since: Long, until: Long, limit: Int, offset: Int): List<TherapyEvent>
 }
+

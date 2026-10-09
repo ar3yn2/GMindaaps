@@ -1,11 +1,11 @@
-package app.aaps.plugins.aps.compose
+﻿package app.gmaaps.plugins.aps.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.R
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.R
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -96,3 +96,4 @@ class OpenAPSScreenTest {
         compose.onNodeWithText(resultLabel).assertIsDisplayed()
     }
 }
+

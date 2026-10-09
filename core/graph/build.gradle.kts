@@ -1,4 +1,4 @@
-import kotlin.math.min
+﻿import kotlin.math.min
 
 plugins {
     id("kmp-test-defaults")
@@ -12,7 +12,7 @@ plugins {
 
 kotlin {
     android {
-        namespace = "app.aaps.core.graph"
+        namespace = "app.gmaaps.core.graph"
         compileSdk = Versions.compileSdk
         minSdk = min(Versions.minSdk, Versions.wearMinSdk)
         androidResources { enable = true }
@@ -86,3 +86,4 @@ kotlin {
         }
     }
 }
+

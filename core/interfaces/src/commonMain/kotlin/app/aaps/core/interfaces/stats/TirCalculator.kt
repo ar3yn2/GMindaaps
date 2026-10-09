@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.stats
+﻿package app.gmaaps.core.interfaces.stats
 
 import androidx.collection.LongSparseArray
 
@@ -28,7 +28,7 @@ import androidx.collection.LongSparseArray
  * Error handling: Glucose values < 39 mg/dL are counted as errors and excluded.
  *
  * @see TIR
- * @see app.aaps.implementation.stats.TirCalculatorImpl
+ * @see app.gmaaps.implementation.stats.TirCalculatorImpl
  * @see DexcomTirCalculator
  */
 interface TirCalculator {

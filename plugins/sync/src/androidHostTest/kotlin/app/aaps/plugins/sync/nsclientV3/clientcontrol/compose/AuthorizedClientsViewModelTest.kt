@@ -1,13 +1,13 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol.compose
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol.compose
 
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.nssdk.localmodel.clientcontrol.AuthorizedClient
-import app.aaps.core.nssdk.localmodel.clientcontrol.ClientState
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.AuthorizedClientsRepository
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.PairingOfferPublisher
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.AuthorizedClient
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.ClientState
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.AuthorizedClientsRepository
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.PairingOfferPublisher
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -104,3 +104,4 @@ internal class AuthorizedClientsViewModelTest {
         assertThat(sut.pairingOffer.value).isNull()
     }
 }
+

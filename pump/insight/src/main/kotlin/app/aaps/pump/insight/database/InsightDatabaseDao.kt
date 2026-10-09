@@ -1,10 +1,10 @@
-package app.aaps.pump.insight.database
+﻿package app.gmaaps.pump.insight.database
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import app.aaps.pump.insight.database.InsightPumpID.EventType
+import app.gmaaps.pump.insight.database.InsightPumpID.EventType
 
 @Dao
 abstract class InsightDatabaseDao {
@@ -27,3 +27,4 @@ abstract class InsightDatabaseDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     abstract fun createOrUpdate(insightPumpID: InsightPumpID)
 }
+

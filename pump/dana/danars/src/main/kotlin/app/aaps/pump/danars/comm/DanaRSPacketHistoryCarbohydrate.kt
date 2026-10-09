@@ -1,13 +1,13 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.database.DanaHistoryRecordDao
-import app.aaps.pump.danars.encryption.BleEncryption
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.database.DanaHistoryRecordDao
+import app.gmaaps.pump.danars.encryption.BleEncryption
 import dev.zacsweers.metro.Inject
 
 @Inject

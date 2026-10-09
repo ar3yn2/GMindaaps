@@ -1,10 +1,10 @@
-package app.aaps.pump.medtronic.defs
+﻿package app.gmaaps.pump.medtronic.defs
 
-import app.aaps.pump.medtronic.R
-import app.aaps.pump.medtronic.comm.message.MessageBody
-import app.aaps.pump.medtronic.comm.message.PumpAckMessageBody
-import app.aaps.pump.medtronic.comm.message.UnknownMessageBody
-import app.aaps.pump.medtronic.defs.MedtronicDeviceType.Companion.isSameDevice
+import app.gmaaps.pump.medtronic.R
+import app.gmaaps.pump.medtronic.comm.message.MessageBody
+import app.gmaaps.pump.medtronic.comm.message.PumpAckMessageBody
+import app.gmaaps.pump.medtronic.comm.message.UnknownMessageBody
+import app.gmaaps.pump.medtronic.defs.MedtronicDeviceType.Companion.isSameDevice
 
 /**
  * Taken from GNU Gluco Control diabetes management software (ggc.sourceforge.net)

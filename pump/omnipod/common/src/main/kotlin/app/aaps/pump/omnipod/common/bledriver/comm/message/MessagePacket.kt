@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.message
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.message
 
-import app.aaps.pump.omnipod.common.bledriver.comm.Id
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.CouldNotParseMessageException
-import app.aaps.pump.omnipod.common.bledriver.util.Flag
+import app.gmaaps.pump.omnipod.common.bledriver.comm.Id
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.CouldNotParseMessageException
+import app.gmaaps.pump.omnipod.common.bledriver.util.Flag
 import java.nio.ByteBuffer
 
 /***
@@ -133,3 +133,4 @@ private fun ByteArray.assertSizeAtLeast(size: Int) {
         throw CouldNotParseMessageException(this)
     }
 }
+

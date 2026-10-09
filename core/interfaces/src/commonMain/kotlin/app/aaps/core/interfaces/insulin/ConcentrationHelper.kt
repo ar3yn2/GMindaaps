@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.insulin
+﻿package app.gmaaps.core.interfaces.insulin
 
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
 
 interface ConcentrationHelper {
 

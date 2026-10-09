@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
@@ -52,3 +52,4 @@ actual fun LockPortraitOrientation() {
         }
     }
 }
+

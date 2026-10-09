@@ -1,17 +1,17 @@
-package app.aaps.plugins.constraints.objectives.compose
+﻿package app.gmaaps.plugins.constraints.objectives.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.LocalSnackbarHostState
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.constraints.ConstraintsStrings
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.LocalSnackbarHostState
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.constraints.ConstraintsStrings
 
 class ObjectivesComposeContent : ComposablePluginContent {
 
@@ -88,3 +88,4 @@ class ObjectivesComposeContent : ComposablePluginContent {
         }
     }
 }
+

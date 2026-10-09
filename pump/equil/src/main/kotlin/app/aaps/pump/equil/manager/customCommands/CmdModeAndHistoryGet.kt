@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.manager.customCommands
+﻿package app.gmaaps.pump.equil.manager.customCommands
 
-import app.aaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.interfaces.queue.CustomCommand
 
 class CmdModeAndHistoryGet : CustomCommand {
 

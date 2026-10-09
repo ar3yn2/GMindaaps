@@ -1,4 +1,4 @@
-package app.aaps
+﻿package app.gmaaps
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNull
@@ -80,3 +80,4 @@ class LegacyPreferenceValueTest {
         assertNull(LegacyPreferenceValue.asString(null))
     }
 }
+

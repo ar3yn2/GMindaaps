@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo
+﻿package app.gmaaps.pump.carelevo
 
 // Aliased: the simple name collides with Robolectric's @Config annotation used below.
 import android.bluetooth.BluetoothAdapter
@@ -9,68 +9,68 @@ import android.os.Looper
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleRegistry
 import androidx.lifecycle.ProcessLifecycleOwner
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.ui.IconsProvider
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.ble.data.BleState
-import app.aaps.pump.carelevo.ble.data.BondingState
-import app.aaps.pump.carelevo.ble.data.DeviceModuleState
-import app.aaps.pump.carelevo.ble.data.NotificationState
-import app.aaps.pump.carelevo.ble.data.PeripheralConnectionState
-import app.aaps.pump.carelevo.ble.data.ServiceDiscoverState
-import app.aaps.pump.carelevo.command.CarelevoActivationExecutor
-import app.aaps.pump.carelevo.command.CmdUpdateBuzzer
-import app.aaps.pump.carelevo.command.CmdUpdateExpiredThreshold
-import app.aaps.pump.carelevo.command.CmdUpdateLowInsulinNotice
-import app.aaps.pump.carelevo.command.CmdUpdateMaxBolus
-import app.aaps.pump.carelevo.common.CarelevoAlarmNotifier
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.common.keys.CarelevoBooleanPreferenceKey
-import app.aaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
-import app.aaps.pump.carelevo.common.model.PatchState
-import app.aaps.pump.carelevo.coordinator.CarelevoBasalProfileUpdateCoordinator
-import app.aaps.pump.carelevo.coordinator.CarelevoBolusCoordinator
-import app.aaps.pump.carelevo.coordinator.CarelevoConnectionCoordinator
-import app.aaps.pump.carelevo.coordinator.CarelevoSettingsCoordinator
-import app.aaps.pump.carelevo.coordinator.CarelevoTempBasalCoordinator
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoExtendBolusInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoImmeBolusInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.result.ResultSuccess
-import app.aaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.usecase.basal.CarelevoCancelTempBasalInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.basal.CarelevoSetBasalProgramUseCase
-import app.aaps.pump.carelevo.domain.usecase.basal.CarelevoStartTempBasalInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoCancelExtendBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoCancelImmeBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoFinishImmeBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoStartExtendBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoStartImmeBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.userSetting.CarelevoDeleteUserSettingInfoUseCase
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.ui.IconsProvider
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.ble.data.BleState
+import app.gmaaps.pump.carelevo.ble.data.BondingState
+import app.gmaaps.pump.carelevo.ble.data.DeviceModuleState
+import app.gmaaps.pump.carelevo.ble.data.NotificationState
+import app.gmaaps.pump.carelevo.ble.data.PeripheralConnectionState
+import app.gmaaps.pump.carelevo.ble.data.ServiceDiscoverState
+import app.gmaaps.pump.carelevo.command.CarelevoActivationExecutor
+import app.gmaaps.pump.carelevo.command.CmdUpdateBuzzer
+import app.gmaaps.pump.carelevo.command.CmdUpdateExpiredThreshold
+import app.gmaaps.pump.carelevo.command.CmdUpdateLowInsulinNotice
+import app.gmaaps.pump.carelevo.command.CmdUpdateMaxBolus
+import app.gmaaps.pump.carelevo.common.CarelevoAlarmNotifier
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.common.keys.CarelevoBooleanPreferenceKey
+import app.gmaaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
+import app.gmaaps.pump.carelevo.common.model.PatchState
+import app.gmaaps.pump.carelevo.coordinator.CarelevoBasalProfileUpdateCoordinator
+import app.gmaaps.pump.carelevo.coordinator.CarelevoBolusCoordinator
+import app.gmaaps.pump.carelevo.coordinator.CarelevoConnectionCoordinator
+import app.gmaaps.pump.carelevo.coordinator.CarelevoSettingsCoordinator
+import app.gmaaps.pump.carelevo.coordinator.CarelevoTempBasalCoordinator
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoExtendBolusInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoImmeBolusInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.result.ResultSuccess
+import app.gmaaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.usecase.basal.CarelevoCancelTempBasalInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.basal.CarelevoSetBasalProgramUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.basal.CarelevoStartTempBasalInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoCancelExtendBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoCancelImmeBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoFinishImmeBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoStartExtendBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoStartImmeBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.userSetting.CarelevoDeleteUserSettingInfoUseCase
 import com.google.common.truth.Truth.assertThat
 import dev.zacsweers.metro.Provider
 import io.reactivex.rxjava3.core.Completable
@@ -107,7 +107,7 @@ import org.robolectric.annotation.Config
 import java.util.Optional
 import kotlin.time.Clock
 import kotlin.time.Duration.Companion.hours
-import app.aaps.core.interfaces.configuration.Config as AapsConfig
+import app.gmaaps.core.interfaces.configuration.Config as AapsConfig
 
 /**
  * Robolectric unit tests for the LIFECYCLE half of [CarelevoPumpPlugin] — everything `onStart()`
@@ -126,7 +126,7 @@ import app.aaps.core.interfaces.configuration.Config as AapsConfig
  * Robolectric is required because `startAlarmObserving`/`onStop` touch [ProcessLifecycleOwner]
  * (a real `Looper` + `ArchTaskExecutor` main-thread check) and `PumpPluginBase.onStart` builds a
  * real `HandlerThread`. Same rationale and style as
- * [app.aaps.pump.carelevo.common.CarelevoAlarmNotifierTest].
+ * [app.gmaaps.pump.carelevo.common.CarelevoAlarmNotifierTest].
  *
  * `Dispatchers.setMain(UnconfinedTestDispatcher())` backs the `withContext(Dispatchers.Main)` hops
  * in `startAlarmObserving`/`onStop`: without it the real Android main dispatcher would post to the
@@ -1004,3 +1004,4 @@ class CarelevoPumpPluginLifecycleTest {
         verify(carelevoAlarmNotifier, times(2)).stopObserving()
     }
 }
+

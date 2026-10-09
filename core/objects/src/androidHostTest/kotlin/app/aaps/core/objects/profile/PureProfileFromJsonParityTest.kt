@@ -1,12 +1,12 @@
-package app.aaps.core.objects.profile
+﻿package app.gmaaps.core.objects.profile
 
 import android.content.Context
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.objects.extensions.pureProfileFromJson
-import app.aaps.shared.impl.utils.DateUtilImpl
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.objects.extensions.pureProfileFromJson
+import app.gmaaps.shared.impl.utils.DateUtilImpl
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
 import org.junit.jupiter.api.BeforeEach
@@ -106,3 +106,4 @@ class PureProfileFromJsonParityTest : TestBase() {
         assertThat(fromText(oddZone)?.utcOffset).isEqualTo(0L)
     }
 }
+

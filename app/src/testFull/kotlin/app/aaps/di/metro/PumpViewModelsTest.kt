@@ -1,7 +1,7 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
 import androidx.lifecycle.ViewModel
-import app.aaps.shared.tests.aapsClassesOnClasspath
+import app.gmaaps.shared.tests.aapsClassesOnClasspath
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import java.lang.reflect.Modifier
@@ -33,7 +33,7 @@ class PumpViewModelsTest {
     /** Concrete `ViewModel`s belonging to a pump module, in whatever build this is. */
     private fun pumpViewModels(): List<Class<*>> =
         aapsClassesOnClasspath(listOf(AppRootGraph::class.java))
-            .filter { it.name.startsWith("app.aaps.pump.") || it.name.startsWith("info.nightscout.pump.") }
+            .filter { it.name.startsWith("app.gmaaps.pump.") || it.name.startsWith("info.nightscout.pump.") }
             .filter { ViewModel::class.java.isAssignableFrom(it) }
             // A base class is never contributed on its own; only the screens are.
             .filterNot { it.isInterface || Modifier.isAbstract(it.modifiers) }
@@ -48,3 +48,4 @@ class PumpViewModelsTest {
         assertThat(contributed).containsAtLeastElementsIn(expected)
     }
 }
+

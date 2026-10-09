@@ -1,7 +1,7 @@
-package app.aaps.pump.medtrum.keys
+﻿package app.gmaaps.pump.medtrum.keys
 
-import app.aaps.core.keys.interfaces.IntNonPreferenceKey
-import app.aaps.pump.medtrum.comm.enums.MedtrumPumpState
+import app.gmaaps.core.keys.interfaces.IntNonPreferenceKey
+import app.gmaaps.pump.medtrum.comm.enums.MedtrumPumpState
 
 enum class MedtrumIntNonKey(
     override val key: String,
@@ -14,3 +14,4 @@ enum class MedtrumIntNonKey(
     DeviceType("device_type", defaultValue = 0),
     PumpTimezoneOffset("pump_time_zone_offset", defaultValue = 0),
 }
+

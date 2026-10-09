@@ -1,4 +1,4 @@
-package app.aaps.plugins.aps.autotune.compose
+﻿package app.gmaaps.plugins.aps.autotune.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -48,3 +48,4 @@ internal fun InfoRowPreview() {
         }
     }
 }
+

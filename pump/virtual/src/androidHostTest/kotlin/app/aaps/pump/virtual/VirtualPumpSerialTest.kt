@@ -1,4 +1,4 @@
-package app.aaps.pump.virtual
+﻿package app.gmaaps.pump.virtual
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -50,3 +50,4 @@ internal class VirtualPumpSerialTest {
         assertThat(generateVirtualPumpSerial(Random(42))).isEqualTo(generateVirtualPumpSerial(Random(42)))
     }
 }
+

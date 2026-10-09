@@ -1,7 +1,7 @@
-package app.aaps.ios.shell.di
+﻿package app.gmaaps.ios.shell.di
 
-import app.aaps.core.interfaces.resources.TextRefValueRegistry
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.resources.TextRefValueRegistry
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test
@@ -76,3 +76,4 @@ class IosStringOwnersTest {
         assertNull(textOf("no_such_owner", "settings"))
     }
 }
+

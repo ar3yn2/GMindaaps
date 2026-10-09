@@ -1,8 +1,8 @@
-package app.aaps.pump.equil.compose.steps
+﻿package app.gmaaps.pump.equil.compose.steps
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.pump.equil.R
+import app.gmaaps.pump.equil.R
 
 @Preview(showBackground = true)
 @Composable
@@ -13,3 +13,4 @@ internal fun AttachStepPreview() {
         onCancel = {}
     )
 }
+

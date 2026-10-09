@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleCommand
 
 /**
  * Basal-program write (v2 encoding). One command class for both:
@@ -48,3 +48,4 @@ class BasalProgramCommand(
         private const val MIN_RESPONSE_LENGTH = 2
     }
 }
+

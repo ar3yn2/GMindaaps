@@ -1,33 +1,33 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FileDownload
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.maintenance.ImportExportPrefs
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.protection.ExportPasswordDataStore
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.objects.extensions.asAnnouncement
-import app.aaps.core.objects.extensions.asSettingsExport
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.utils.lenientString
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.InputString
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.maintenance.ImportExportPrefs
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.protection.ExportPasswordDataStore
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.objects.extensions.asAnnouncement
+import app.gmaaps.core.objects.extensions.asSettingsExport
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.InputString
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 
@@ -120,7 +120,7 @@ class ActionSettingsExport(
         persistenceLayer.insertPumpTherapyEventIfNewByTimestamp(
             therapyEvent = TE.asSettingsExport(error = error),
             timestamp = dateUtil.now(),
-            action = app.aaps.core.data.ue.Action.EXPORT_SETTINGS, // Signal export was done to automation!
+            action = app.gmaaps.core.data.ue.Action.EXPORT_SETTINGS, // Signal export was done to automation!
             source = Sources.Automation,
             note = exportResultMessage,
             listValues = listOf()
@@ -133,7 +133,7 @@ class ActionSettingsExport(
             persistenceLayer.insertPumpTherapyEventIfNewByTimestamp(
                 therapyEvent = TE.asAnnouncement(error = alert),
                 timestamp = dateUtil.now(),
-                action = app.aaps.core.data.ue.Action.EXPORT_SETTINGS,
+                action = app.gmaaps.core.data.ue.Action.EXPORT_SETTINGS,
                 source = Sources.Automation,
                 note = exportResultMessage,
                 listValues = listOf()

@@ -1,19 +1,19 @@
-package app.aaps.plugins.sync.di
+﻿package app.gmaaps.plugins.sync.di
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.work.ListenableWorker
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.di.DeferredRef
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.ui.SnackbarHostPresence
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.workflow.MetroWorkerCreator
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.di.DeferredRef
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.ui.SnackbarHostPresence
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.workflow.MetroWorkerCreator
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.MembersInjector
@@ -75,3 +75,4 @@ class OpenHumansMetroBridge(
         get() = graph.manualAssistedFactoryProviders
     val workerCreators: Map<KClass<out ListenableWorker>, MetroWorkerCreator> get() = graph.workerCreators
 }
+

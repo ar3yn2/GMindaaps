@@ -1,4 +1,4 @@
-package app.aaps.database.entities.data
+﻿package app.gmaaps.database.entities.data
 
 import kotlinx.serialization.Serializable
 import kotlin.time.Duration.Companion.days

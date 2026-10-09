@@ -1,12 +1,12 @@
-package app.aaps.plugins.sync.xdrip
+﻿package app.gmaaps.plugins.sync.xdrip
 
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.sync.DataSyncSelectorXdrip
-import app.aaps.plugins.sync.tidepool.utils.RateLimit
-import app.aaps.plugins.sync.xdrip.compose.XdripMvvmRepository
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.sync.DataSyncSelectorXdrip
+import app.gmaaps.plugins.sync.tidepool.utils.RateLimit
+import app.gmaaps.plugins.sync.xdrip.compose.XdripMvvmRepository
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import org.junit.jupiter.api.BeforeEach
 import org.mockito.Mock
 import org.mockito.kotlin.mock
@@ -46,3 +46,4 @@ class XdripPluginTest : TestBaseWithProfile() {
         )
     }
 }
+

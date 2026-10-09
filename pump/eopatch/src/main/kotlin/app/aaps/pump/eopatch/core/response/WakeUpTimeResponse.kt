@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
-import app.aaps.pump.eopatch.core.code.PatchBleResultCode
+import app.gmaaps.pump.eopatch.core.code.PatchBleResultCode
 import kotlin.time.Duration.Companion.seconds
 
 class WakeUpTimeResponse(success: Boolean, private val wakeUpSecond: Int) : BaseResponse() {
@@ -11,3 +11,4 @@ class WakeUpTimeResponse(success: Boolean, private val wakeUpSecond: Int) : Base
 
     val timeInMillis: Long get() = wakeUpSecond.toLong().seconds.inWholeMilliseconds
 }
+

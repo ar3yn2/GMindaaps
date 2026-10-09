@@ -1,7 +1,7 @@
-package app.aaps.core.objects.wizard
+﻿package app.gmaaps.core.objects.wizard
 
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -162,3 +162,4 @@ class QuickWizard(
     }
 
 }
+

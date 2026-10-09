@@ -1,10 +1,10 @@
-package app.aaps.pump.eopatch.core.api
+﻿package app.gmaaps.pump.eopatch.core.api
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.eopatch.core.ble.BaseAPI
-import app.aaps.pump.eopatch.core.ble.PatchFunc
-import app.aaps.pump.eopatch.core.response.LotNumberResponse
-import app.aaps.pump.eopatch.core.scan.IBleDevice
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.eopatch.core.ble.BaseAPI
+import app.gmaaps.pump.eopatch.core.ble.PatchFunc
+import app.gmaaps.pump.eopatch.core.response.LotNumberResponse
+import app.gmaaps.pump.eopatch.core.scan.IBleDevice
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -23,3 +23,4 @@ class GetLOT(patch: IBleDevice, aapsLogger: AAPSLogger) : BaseAPI<LotNumberRespo
 
     fun get(): Single<LotNumberResponse> = writeAndRead(allocate().putByte(0).build())
 }
+

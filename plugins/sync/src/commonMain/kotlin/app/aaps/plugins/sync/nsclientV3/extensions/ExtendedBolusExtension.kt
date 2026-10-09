@@ -1,14 +1,14 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.nssdk.localmodel.treatment.EventType
-import app.aaps.core.nssdk.localmodel.treatment.NSExtendedBolus
-import app.aaps.core.nssdk.localmodel.treatment.NSTreatment
-import app.aaps.core.objects.extensions.toTemporaryBasal
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.nssdk.localmodel.treatment.EventType
+import app.gmaaps.core.nssdk.localmodel.treatment.NSExtendedBolus
+import app.gmaaps.core.nssdk.localmodel.treatment.NSTreatment
+import app.gmaaps.core.objects.extensions.toTemporaryBasal
 
 fun NSExtendedBolus.toExtendedBolus(): EB =
     EB(
@@ -42,3 +42,4 @@ fun EB.toNSExtendedBolus(profile: Profile, convertToTemporaryBasal: Boolean = tr
             pumpSerial = ids.pumpSerial,
             endId = ids.endId
         )
+

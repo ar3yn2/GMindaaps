@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.domain.usecase.alarm
+﻿package app.gmaaps.pump.carelevo.domain.usecase.alarm
 
-import app.aaps.pump.carelevo.domain.repository.CarelevoAlarmInfoRepository
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoAlarmInfoRepository
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
 import dev.zacsweers.metro.Inject
 
 class AlarmClearRequestUseCase @Inject constructor(
@@ -33,3 +33,4 @@ class AlarmClearRequestUseCase @Inject constructor(
         private const val ALARM_TYPE_NOTICE = 163
     }
 }
+

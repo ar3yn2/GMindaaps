@@ -1,10 +1,10 @@
-package app.aaps.pump.common.hw.rileylink.ble.command
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.command
 
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.pump.common.hw.rileylink.ble.data.RadioPacket
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersion
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.data.RadioPacket
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersion
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
 import java.nio.ByteBuffer
 
 class SendAndListen(
@@ -62,3 +62,4 @@ class SendAndListen(
         return ByteUtil.concat(ByteUtil.getByteArrayFromList(bytes), packetToSend.getEncoded())
     }
 }
+

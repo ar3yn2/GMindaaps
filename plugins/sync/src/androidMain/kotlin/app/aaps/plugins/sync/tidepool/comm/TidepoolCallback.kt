@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.tidepool.comm
+﻿package app.gmaaps.plugins.sync.tidepool.comm
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.plugins.sync.tidepool.events.EventTidepoolStatus
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.plugins.sync.tidepool.events.EventTidepoolStatus
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -50,3 +50,4 @@ internal class TidepoolCallback<T>(
     }
 
 }
+

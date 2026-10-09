@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.driver.definition
+﻿package app.gmaaps.pump.equil.driver.definition
 
 enum class ActivationProgress {
     NONE,

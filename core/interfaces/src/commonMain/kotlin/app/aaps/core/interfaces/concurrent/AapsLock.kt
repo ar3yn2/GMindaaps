@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.concurrent
+﻿package app.gmaaps.core.interfaces.concurrent
 
 /**
  * A mutual exclusion lock that works on every target.
@@ -51,3 +51,4 @@ inline fun <T> AapsLock.withLock(action: () -> T): T {
         unlock()
     }
 }
+

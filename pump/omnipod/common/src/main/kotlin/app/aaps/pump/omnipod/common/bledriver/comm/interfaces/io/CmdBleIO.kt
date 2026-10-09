@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io
 
-import app.aaps.pump.omnipod.common.bledriver.comm.command.BleCommand
+import app.gmaaps.pump.omnipod.common.bledriver.comm.command.BleCommand
 
 /**
  * CMD characteristic I/O with protocol helpers for RTS/CTS flow control.
@@ -20,3 +20,4 @@ interface CmdBleIO : BleCharacteristicIO {
      */
     fun expectCommandType(expected: BleCommand, timeoutMs: Long = BleCharacteristicIO.DEFAULT_IO_TIMEOUT_MS): BleConfirmResult
 }
+

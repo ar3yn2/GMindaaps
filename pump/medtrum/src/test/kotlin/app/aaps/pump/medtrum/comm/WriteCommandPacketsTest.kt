@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.comm
+﻿package app.gmaaps.pump.medtrum.comm
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -38,3 +38,4 @@ class WriteCommandPacketsTest {
         assertThat(cmdPackets.allPacketsConsumed()).isTrue()
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.data
+﻿package app.gmaaps.pump.equil.data
 
 enum class RunMode(val command: Int) {
     RUN(1),

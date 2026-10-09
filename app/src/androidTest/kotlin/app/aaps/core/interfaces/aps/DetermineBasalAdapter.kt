@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.aps
+﻿package app.gmaaps.core.interfaces.aps
 
-import app.aaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.Profile
 import org.json.JSONObject
 
 interface DetermineBasalAdapter {

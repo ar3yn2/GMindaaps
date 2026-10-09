@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.ProfileSwitchDao
-import app.aaps.database.entities.ProfileSwitch
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.ProfileSwitchDao
+import app.gmaaps.database.entities.ProfileSwitch
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedProfileSwitchDao(changes: MutableList<DBEntry>, private val dao: ProfileSwitchDao) : DelegatedDao(changes), ProfileSwitchDao by dao {
 

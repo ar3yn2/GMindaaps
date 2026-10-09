@@ -1,7 +1,7 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
-import app.aaps.pump.eopatch.core.code.PatchBleResultCode
-import app.aaps.pump.eopatch.core.scan.PatchSelfTestResult
+import app.gmaaps.pump.eopatch.core.code.PatchBleResultCode
+import app.gmaaps.pump.eopatch.core.scan.PatchSelfTestResult
 import kotlin.math.abs
 
 class GlobalTimeResponse(
@@ -22,3 +22,4 @@ class GlobalTimeResponse(
         private const val TEST_FAIL_DIFF_MILLI = 60_000L
     }
 }
+

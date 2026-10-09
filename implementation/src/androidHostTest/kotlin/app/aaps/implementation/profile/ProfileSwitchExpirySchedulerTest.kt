@@ -1,14 +1,14 @@
-package app.aaps.implementation.profile
+﻿package app.gmaaps.implementation.profile
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.rx.events.EventProfileChangeRequested
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.rx.events.EventProfileChangeRequested
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.shared.tests.TestBase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
@@ -174,3 +174,4 @@ class ProfileSwitchExpirySchedulerTest : TestBase() {
             iCfg = mock<ICfg>()
         )
 }
+

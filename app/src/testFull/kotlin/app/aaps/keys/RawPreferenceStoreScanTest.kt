@@ -1,4 +1,4 @@
-package app.aaps.keys
+﻿package app.gmaaps.keys
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -188,3 +188,4 @@ class RawPreferenceStoreScanTest {
         return checkNotNull(dir) { "Could not find the repository root above ${System.getProperty("user.dir")}" }
     }
 }
+

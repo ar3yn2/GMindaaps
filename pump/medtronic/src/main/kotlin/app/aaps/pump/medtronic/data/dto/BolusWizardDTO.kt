@@ -1,6 +1,6 @@
-package app.aaps.pump.medtronic.data.dto
+﻿package app.gmaaps.pump.medtronic.data.dto
 
-import app.aaps.core.utils.DateTimeUtil
+import app.gmaaps.core.utils.DateTimeUtil
 import java.util.Locale
 
 /**
@@ -41,3 +41,4 @@ class BolusWizardDTO : PumpTimeStampedRecord() {
         return "BolusWizardDTO [dateTime=" + DateTimeUtil.toString(atechDateTime) + ", " + value + "]"
     }
 }
+

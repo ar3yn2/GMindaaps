@@ -1,9 +1,9 @@
-package app.aaps.plugins.constraints.objectives
+﻿package app.gmaaps.plugins.constraints.objectives
 
-import app.aaps.core.interfaces.local.LocaleDependentSetting
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.local.LocaleDependentSetting
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Test
@@ -62,3 +62,4 @@ class SntpClientTest : TestBase() {
         assertThat(failResult.success).isFalse()
     }
 }
+

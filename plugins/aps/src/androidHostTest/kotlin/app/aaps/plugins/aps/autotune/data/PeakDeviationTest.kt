@@ -1,6 +1,6 @@
-package app.aaps.plugins.aps.autotune.data
+﻿package app.gmaaps.plugins.aps.autotune.data
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
 import org.junit.jupiter.api.Test
@@ -220,3 +220,4 @@ class PeakDeviationTest : TestBase() {
         assertThat(json.getInt("peak")).isEqualTo(75)
     }
 }
+

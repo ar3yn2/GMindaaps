@@ -1,14 +1,14 @@
-package app.aaps.plugins.aps.autotune
+﻿package app.gmaaps.plugins.aps.autotune
 
 import android.view.View
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.plugins.aps.R
-import app.aaps.plugins.aps.autotune.data.ATProfile
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.plugins.aps.R
+import app.gmaaps.plugins.aps.autotune.data.ATProfile
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import org.json.JSONObject
@@ -70,7 +70,7 @@ class AutotunePluginTest : TestBaseWithProfile() {
         }
         whenever(rh.gs(R.string.autotune_tunedprofile_name)).thenReturn("Tuned")
         whenever(rh.gs(R.string.autotune_error_more_days)).thenReturn("Not enough days")
-        whenever(rh.gs(app.aaps.core.ui.R.string.profile_switch_no_insulin)).thenReturn("No insulin in use")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.profile_switch_no_insulin)).thenReturn("No insulin in use")
     }
 
     /** The peak autotune actually ran with, read back out of the oref0 settings it exported. */
@@ -158,3 +158,4 @@ class AutotunePluginTest : TestBaseWithProfile() {
         assertThat(captor.firstValue).isEqualTo(inForceICfg)
     }
 }
+

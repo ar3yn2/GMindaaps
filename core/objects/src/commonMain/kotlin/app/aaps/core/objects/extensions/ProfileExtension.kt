@@ -1,9 +1,9 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.profile.Profile
 import kotlin.math.abs
 
 /**
@@ -22,3 +22,4 @@ fun Profile.apsAdjustedTargetMgdl(loop: Loop, config: Config, deviceStatus: Proc
     }
     return if (targetUsed != 0.0 && abs(getRoundedTargetMgdl() - targetUsed) > 0.01) targetUsed else null
 }
+

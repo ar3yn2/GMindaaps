@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.BleMultiCommand
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleMultiCommand
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.number
 import kotlinx.datetime.toLocalDateTime
@@ -98,3 +98,4 @@ class SetTimeForPatchInfoCommand(
 
     override fun decode(responses: Map<Byte, ByteArray>): PatchInfoResponse = PatchInfoCommand().decode(responses)
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.ui.graphics.Color
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TT
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TT
 
 /**
  * Single source of truth for state→color mapping shared across overview and the widget.
@@ -36,3 +36,4 @@ fun TT.Reason?.ttReasonColor(c: GeneralColors): Color = when (this) {
     TT.Reason.HYPOGLYCEMIA -> c.ttHypoglycemia
     else                   -> c.ttCustom
 }
+

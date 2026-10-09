@@ -1,6 +1,6 @@
-@file:OptIn(ExperimentalNativeApi::class)
+﻿@file:OptIn(ExperimentalNativeApi::class)
 
-package app.aaps.core.data.model
+package app.gmaaps.core.data.model
 
 import kotlin.experimental.ExperimentalNativeApi
 
@@ -12,3 +12,4 @@ import kotlin.experimental.ExperimentalNativeApi
 actual fun devAssert(value: Boolean) {
     assert(value)
 }
+

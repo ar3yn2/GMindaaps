@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.eros.keys
+﻿package app.gmaaps.pump.omnipod.eros.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.common.hw.rileylink.keys.RileylinkBooleanPreferenceKey
-import app.aaps.pump.omnipod.eros.R
-import app.aaps.pump.omnipod.common.R as CommonR
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.common.hw.rileylink.keys.RileylinkBooleanPreferenceKey
+import app.gmaaps.pump.omnipod.eros.R
+import app.gmaaps.pump.omnipod.common.R as CommonR
 
 enum class ErosBooleanPreferenceKey(
     override val key: String,
@@ -22,3 +22,4 @@ enum class ErosBooleanPreferenceKey(
 
     override val title: TextRef = TextRef.AndroidRes(titleResId)
 }
+

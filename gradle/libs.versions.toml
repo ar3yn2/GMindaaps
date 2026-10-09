@@ -161,6 +161,8 @@ io-ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serializa
 io-ktor-client-darwin = { group = "io.ktor", name = "ktor-client-darwin", version.ref = "ktor" }
 io-ktor-client-mock = { group = "io.ktor", name = "ktor-client-mock", version.ref = "ktor" }
 
+io-ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
+
 org-apache-commons-lang3 = { group = "org.apache.commons", name = "commons-lang3", version = "3.21.0" }
 org-mozilla-rhino = { group = "org.mozilla", name = "rhino", version = "1.9.1" }
 

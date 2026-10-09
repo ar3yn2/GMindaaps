@@ -1,9 +1,9 @@
-package app.aaps.pump.medtronic.data.dto
+﻿package app.gmaaps.pump.medtronic.data.dto
 
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.pump.medtronic.MedtronicTestBase
-import app.aaps.pump.medtronic.defs.BatteryType
-import app.aaps.pump.medtronic.defs.PumpBolusType
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.pump.medtronic.MedtronicTestBase
+import app.gmaaps.pump.medtronic.defs.BatteryType
+import app.gmaaps.pump.medtronic.defs.PumpBolusType
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -404,3 +404,4 @@ class MedtronicDTOUTest : MedtronicTestBase() {
         assertThat(entry.startTime_raw).isEqualTo(24.toByte()) // 12 * 2 = 24
     }
 }
+

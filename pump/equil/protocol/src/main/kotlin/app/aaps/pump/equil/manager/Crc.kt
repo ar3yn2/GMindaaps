@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.manager
+﻿package app.gmaaps.pump.equil.manager
 
 import java.util.Locale
 
@@ -55,3 +55,4 @@ object Crc {
         return Utils.hexStringToBytes(result)
     }
 }
+

@@ -1,16 +1,16 @@
-package app.aaps.ui.compose.overview.chips
+﻿package app.gmaaps.ui.compose.overview.chips
 
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.overview.SensitivityOverview
-import app.aaps.core.interfaces.overview.graph.CobGraphData
-import app.aaps.core.interfaces.overview.graph.IobGraphData
-import app.aaps.core.interfaces.overview.graph.OverviewDataCache
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.overview.SensitivityOverview
+import app.gmaaps.core.interfaces.overview.graph.CobGraphData
+import app.gmaaps.core.interfaces.overview.graph.IobGraphData
+import app.gmaaps.core.interfaces.overview.graph.OverviewDataCache
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -66,3 +66,4 @@ internal class ChipsViewModelTest {
         assertThat(sut.sensitivityUiState.value.hasData).isFalse()
     }
 }
+

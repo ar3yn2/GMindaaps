@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
-import app.aaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.Profile
 
 /**
  * This class represents concentrated Profile synchronised within the pump.

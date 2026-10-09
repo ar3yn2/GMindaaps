@@ -1,25 +1,25 @@
-package app.aaps.implementation.scenes
+﻿package app.gmaaps.implementation.scenes
 
-import app.aaps.core.data.model.ActiveSceneState
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.Scene
-import app.aaps.core.data.model.SceneAction
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ui.ConfirmationLine
-import app.aaps.core.data.ui.ConfirmationRole
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.profile.SingleProfile
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.scenes.SceneChainResolver
-import app.aaps.core.interfaces.utils.Translator
-import app.aaps.implementation.profile.ProfileSwitchSilentGate
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.ActiveSceneState
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.data.model.SceneAction
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ui.ConfirmationLine
+import app.gmaaps.core.data.ui.ConfirmationRole
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.profile.SingleProfile
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.scenes.SceneChainResolver
+import app.gmaaps.core.interfaces.utils.Translator
+import app.gmaaps.implementation.profile.ProfileSwitchSilentGate
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.runBlocking
@@ -171,3 +171,4 @@ class SceneExecutorTest : TestBaseWithProfile() {
         assertThat(expiryScheduler.cancelCount).isEqualTo(1)
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.ble
+﻿package app.gmaaps.pump.eopatch.core.ble
 
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -42,3 +42,4 @@ class APIQueue : IAPIQueue {
 
     private data class APITask(val number: Int, val func: PatchFunc)
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.pump.eopatch.core.noti
+﻿package app.gmaaps.pump.eopatch.core.noti
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import java.nio.ByteBuffer
 
 abstract class BaseNotification(bytes: ByteArray, private val aapsLogger: AAPSLogger) {
@@ -30,3 +30,4 @@ abstract class BaseNotification(bytes: ByteArray, private val aapsLogger: AAPSLo
         private const val SB_CNT_POSITION = 26
     }
 }
+

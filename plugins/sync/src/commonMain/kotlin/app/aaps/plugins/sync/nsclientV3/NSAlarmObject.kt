@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.nsclientV3
+﻿package app.gmaaps.plugins.sync.nsclientV3
 
-import app.aaps.core.interfaces.nsclient.NSAlarm
+import app.gmaaps.core.interfaces.nsclient.NSAlarm
 import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
@@ -60,3 +60,4 @@ private fun JsonObject.intOr(key: String, default: Int): Int {
     if (element !is JsonPrimitive || element is JsonNull) return default
     return element.content.toIntOrNull() ?: element.content.toDoubleOrNull()?.toInt() ?: default
 }
+

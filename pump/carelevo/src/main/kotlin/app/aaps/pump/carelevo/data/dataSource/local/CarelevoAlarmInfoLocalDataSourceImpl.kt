@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.data.dataSource.local
+﻿package app.gmaaps.pump.carelevo.data.dataSource.local
 
-import app.aaps.pump.carelevo.data.dao.CarelevoAlarmInfoDao
-import app.aaps.pump.carelevo.data.model.entities.CarelevoAlarmInfoEntity
+import app.gmaaps.pump.carelevo.data.dao.CarelevoAlarmInfoDao
+import app.gmaaps.pump.carelevo.data.model.entities.CarelevoAlarmInfoEntity
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject

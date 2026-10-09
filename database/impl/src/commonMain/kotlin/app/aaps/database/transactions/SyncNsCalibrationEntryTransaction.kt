@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.CalibrationEntry
+import app.gmaaps.database.entities.CalibrationEntry
 
 /**
  * Sync the CalibrationEntries from NS (follower side). Dedup by nightscoutId.
@@ -51,3 +51,4 @@ class SyncNsCalibrationEntryTransaction(private val calibrationEntries: List<Cal
         val updatedNsId = mutableListOf<CalibrationEntry>()
     }
 }
+

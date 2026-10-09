@@ -1,9 +1,9 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
 import androidx.room.useReaderConnection
-import app.aaps.database.di.JvmAppDatabaseBuilder
-import app.aaps.database.entities.HeartRate
-import app.aaps.database.entities.StepsCount
+import app.gmaaps.database.di.JvmAppDatabaseBuilder
+import app.gmaaps.database.entities.HeartRate
+import app.gmaaps.database.entities.StepsCount
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import kotlin.io.path.createTempDirectory
@@ -98,3 +98,4 @@ class ClearAllTablesBySqlTest {
         device = "T"
     )
 }
+

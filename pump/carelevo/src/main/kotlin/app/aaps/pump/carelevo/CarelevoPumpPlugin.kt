@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo
+﻿package app.gmaaps.pump.carelevo
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
@@ -7,79 +7,79 @@ import android.content.IntentFilter
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.ProcessLifecycleOwner
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.di.PumpDriver
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpPluginBase
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.defs.fillFor
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.ui.IconsProvider
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.withEntries
-import app.aaps.core.ui.compose.icons.IcPluginCarelevo
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.ble.data.BleState
-import app.aaps.pump.carelevo.ble.data.BondingState
-import app.aaps.pump.carelevo.ble.data.DeviceModuleState
-import app.aaps.pump.carelevo.ble.data.DeviceModuleState.Companion.codeToDeviceResult
-import app.aaps.pump.carelevo.ble.data.NotificationState
-import app.aaps.pump.carelevo.ble.data.PeripheralConnectionState
-import app.aaps.pump.carelevo.ble.data.ServiceDiscoverState
-import app.aaps.pump.carelevo.command.CarelevoActivationExecutor
-import app.aaps.pump.carelevo.command.CmdTimeZoneUpdate
-import app.aaps.pump.carelevo.command.CmdUpdateBuzzer
-import app.aaps.pump.carelevo.command.CmdUpdateExpiredThreshold
-import app.aaps.pump.carelevo.command.CmdUpdateLowInsulinNotice
-import app.aaps.pump.carelevo.command.CmdUpdateMaxBolus
-import app.aaps.pump.carelevo.common.CarelevoAlarmNotifier
-import app.aaps.pump.carelevo.common.CarelevoObserveReceiver
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.common.keys.CarelevoBooleanPreferenceKey
-import app.aaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
-import app.aaps.pump.carelevo.common.keys.CarelevoStringNonKey
-import app.aaps.pump.carelevo.common.model.PatchState
-import app.aaps.pump.carelevo.compose.CarelevoComposeContent
-import app.aaps.pump.carelevo.coordinator.CarelevoBasalProfileUpdateCoordinator
-import app.aaps.pump.carelevo.coordinator.CarelevoBolusCoordinator
-import app.aaps.pump.carelevo.coordinator.CarelevoConnectionCoordinator
-import app.aaps.pump.carelevo.coordinator.CarelevoSettingsCoordinator
-import app.aaps.pump.carelevo.coordinator.CarelevoTempBasalCoordinator
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
-import app.aaps.pump.carelevo.domain.type.AlarmType.Companion.isCritical
-import app.aaps.pump.carelevo.ext.transformNotificationStringResources
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.di.PumpDriver
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpPluginBase
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.defs.fillFor
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.ui.IconsProvider
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.withEntries
+import app.gmaaps.core.ui.compose.icons.IcPluginCarelevo
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.ble.data.BleState
+import app.gmaaps.pump.carelevo.ble.data.BondingState
+import app.gmaaps.pump.carelevo.ble.data.DeviceModuleState
+import app.gmaaps.pump.carelevo.ble.data.DeviceModuleState.Companion.codeToDeviceResult
+import app.gmaaps.pump.carelevo.ble.data.NotificationState
+import app.gmaaps.pump.carelevo.ble.data.PeripheralConnectionState
+import app.gmaaps.pump.carelevo.ble.data.ServiceDiscoverState
+import app.gmaaps.pump.carelevo.command.CarelevoActivationExecutor
+import app.gmaaps.pump.carelevo.command.CmdTimeZoneUpdate
+import app.gmaaps.pump.carelevo.command.CmdUpdateBuzzer
+import app.gmaaps.pump.carelevo.command.CmdUpdateExpiredThreshold
+import app.gmaaps.pump.carelevo.command.CmdUpdateLowInsulinNotice
+import app.gmaaps.pump.carelevo.command.CmdUpdateMaxBolus
+import app.gmaaps.pump.carelevo.common.CarelevoAlarmNotifier
+import app.gmaaps.pump.carelevo.common.CarelevoObserveReceiver
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.common.keys.CarelevoBooleanPreferenceKey
+import app.gmaaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
+import app.gmaaps.pump.carelevo.common.keys.CarelevoStringNonKey
+import app.gmaaps.pump.carelevo.common.model.PatchState
+import app.gmaaps.pump.carelevo.compose.CarelevoComposeContent
+import app.gmaaps.pump.carelevo.coordinator.CarelevoBasalProfileUpdateCoordinator
+import app.gmaaps.pump.carelevo.coordinator.CarelevoBolusCoordinator
+import app.gmaaps.pump.carelevo.coordinator.CarelevoConnectionCoordinator
+import app.gmaaps.pump.carelevo.coordinator.CarelevoSettingsCoordinator
+import app.gmaaps.pump.carelevo.coordinator.CarelevoTempBasalCoordinator
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.type.AlarmType.Companion.isCritical
+import app.gmaaps.pump.carelevo.ext.transformNotificationStringResources
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -109,7 +109,7 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import java.util.concurrent.TimeUnit
 import kotlin.jvm.optionals.getOrNull
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 import dev.zacsweers.metro.IntKey as MetroIntKey
 
 // Pump plugin registration — @MetroIntKey range 1000–1200, see AppRootGraph for the overview
@@ -521,7 +521,7 @@ class CarelevoPumpPlugin @Inject constructor(
      *   button only silences the sound (it's shared UI with no notion of a CareLevo alarm to clear).
      * - [CarelevoAlarmNotifier.showTopNotification]: the persistent notification card, for every
      *   alarm regardless of severity. Its action button is the one that actually clears the alarm
-     *   (wired to [app.aaps.pump.carelevo.presentation.model.AlarmEvent.ClearAlarm] in
+     *   (wired to [app.gmaaps.pump.carelevo.presentation.model.AlarmEvent.ClearAlarm] in
      *   [CarelevoAlarmNotifier.showTopNotification] itself) — so silencing the full-screen alarm is
      *   not the same as acknowledging it; the card is what the user confirms on.
      */
@@ -609,7 +609,7 @@ class CarelevoPumpPlugin @Inject constructor(
     override suspend fun getPumpStatus(reason: String) = readInfusionInfo()
 
     /**
-     * Status read over the [app.aaps.pump.carelevo.ble.BleClient] stack: read Infusion Info (0x31 → 0x91)
+     * Status read over the [app.gmaaps.pump.carelevo.ble.BleClient] stack: read Infusion Info (0x31 → 0x91)
      * on the session's own connection and persist it through `carelevoPatch.applyInfusionInfoReport` —
      * reservoir/pump-state/totals all refresh. Runs on
      * the QueueWorker thread, blocked inside this status read.
@@ -823,3 +823,4 @@ class CarelevoPumpPlugin @Inject constructor(
         if (result.success) _lastDataTime.value = System.currentTimeMillis()
     }
 }
+

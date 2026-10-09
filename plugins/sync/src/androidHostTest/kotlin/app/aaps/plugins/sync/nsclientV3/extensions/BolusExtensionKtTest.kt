@@ -1,13 +1,13 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.nssdk.localmodel.treatment.NSBolus
-import app.aaps.core.nssdk.mapper.convertToRemoteAndBack
-import app.aaps.plugins.sync.extensions.contentEqualsTo
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.nssdk.localmodel.treatment.NSBolus
+import app.gmaaps.core.nssdk.mapper.convertToRemoteAndBack
+import app.gmaaps.plugins.sync.extensions.contentEqualsTo
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -59,3 +59,4 @@ internal class BolusExtensionKtTest : TestBase() {
         assertThat(bolus.ids.contentEqualsTo(bolus2.ids)).isTrue()
     }
 }
+

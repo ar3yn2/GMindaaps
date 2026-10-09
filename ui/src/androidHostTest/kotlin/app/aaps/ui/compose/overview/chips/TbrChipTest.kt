@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.overview.chips
+﻿package app.gmaaps.ui.compose.overview.chips
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.Modifier
@@ -7,7 +7,7 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
-import app.aaps.core.interfaces.overview.graph.TbrState
+import app.gmaaps.core.interfaces.overview.graph.TbrState
 import com.google.common.truth.Truth.assertThat
 import org.junit.Rule
 import org.junit.Test
@@ -60,3 +60,4 @@ class TbrChipTest {
         assertThat(clicks).isEqualTo(1)
     }
 }
+

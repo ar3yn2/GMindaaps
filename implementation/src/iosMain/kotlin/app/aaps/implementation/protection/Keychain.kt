@@ -1,4 +1,4 @@
-package app.aaps.implementation.protection
+﻿package app.gmaaps.implementation.protection
 
 import kotlinx.cinterop.COpaquePointer
 import kotlinx.cinterop.ExperimentalForeignApi
@@ -75,7 +75,7 @@ interface Keychain {
  * dictionary has retained them.
  */
 @OptIn(ExperimentalForeignApi::class, ExperimentalEncodingApi::class)
-class AppleKeychain(private val service: String = "app.aaps.secureencrypt") : Keychain {
+class AppleKeychain(private val service: String = "app.gmaaps.secureencrypt") : Keychain {
 
     override fun load(alias: String): ByteArray? = memScoped {
         val query = SecQuery()
@@ -169,3 +169,4 @@ class AppleKeychain(private val service: String = "app.aaps.secureencrypt") : Ke
 
     private fun NSData.toByteArray(): ByteArray = Base64.decode(base64EncodedStringWithOptions(0u))
 }
+

@@ -1,15 +1,15 @@
-package app.aaps.plugins.sync.nsclientV3.workers
+﻿package app.gmaaps.plugins.sync.nsclientV3.workers
 
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
 
-import app.aaps.core.objects.workflow.WorkOutcome
+import app.gmaaps.core.objects.workflow.WorkOutcome
 
-import app.aaps.plugins.sync.nsclientV3.DataSyncSelectorV3
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.DataSyncSelectorV3
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
 import dev.zacsweers.metro.Inject
 
 import kotlinx.coroutines.TimeoutCancellationException
@@ -62,3 +62,4 @@ class DataSyncRunner(
         private val UPLOAD_TIMEOUT_MS = T.mins(30).msecs()
     }
 }
+

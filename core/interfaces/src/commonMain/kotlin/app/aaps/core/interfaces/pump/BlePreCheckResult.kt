@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
 enum class BlePreCheckResult {
     READY,
@@ -6,3 +6,4 @@ enum class BlePreCheckResult {
     BLE_NOT_ENABLED,
     PERMISSIONS_MISSING
 }
+

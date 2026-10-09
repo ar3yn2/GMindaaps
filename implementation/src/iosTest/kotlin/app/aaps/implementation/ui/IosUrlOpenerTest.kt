@@ -1,7 +1,7 @@
-package app.aaps.implementation.ui
+﻿package app.gmaaps.implementation.ui
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import platform.Foundation.NSURL
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -106,3 +106,4 @@ class IosUrlOpenerTest {
         assertEquals("mailto:someone@example.com", launcher.launched?.absoluteString)
     }
 }
+

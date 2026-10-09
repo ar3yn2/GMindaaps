@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.tidepool.utils
+﻿package app.gmaaps.plugins.sync.tidepool.utils
 
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.utils.DateUtil
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -29,4 +29,5 @@ class RateLimit(
         return true
     }
 }
+
 

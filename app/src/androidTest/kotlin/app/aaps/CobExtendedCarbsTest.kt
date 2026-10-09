@@ -1,24 +1,24 @@
-package app.aaps
+﻿package app.gmaaps
 
 import android.annotation.SuppressLint
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import app.aaps.core.data.model.CA
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.aps.AutosensData
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.rx.events.EventAutosensCalculationFinished
-import app.aaps.di.newIntegrationWaits
-import app.aaps.di.newRxHelper
-import app.aaps.di.testGraphs
-import app.aaps.implementation.profile.ProfileFunctionImpl
-import app.aaps.testcategories.ShardB
+import app.gmaaps.core.data.model.CA
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.aps.AutosensData
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.rx.events.EventAutosensCalculationFinished
+import app.gmaaps.di.newIntegrationWaits
+import app.gmaaps.di.newRxHelper
+import app.gmaaps.di.testGraphs
+import app.gmaaps.implementation.profile.ProfileFunctionImpl
+import app.gmaaps.testcategories.ShardB
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
@@ -499,3 +499,4 @@ class CobExtendedCarbsTest : AapsInstrumentedTest() {
         assertCobReachedZero()
     }
 }
+

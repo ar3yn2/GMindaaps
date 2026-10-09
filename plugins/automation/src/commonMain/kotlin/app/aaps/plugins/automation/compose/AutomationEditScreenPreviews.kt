@@ -1,9 +1,9 @@
-package app.aaps.plugins.automation.compose
+﻿package app.gmaaps.plugins.automation.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.ui.compose.icons.IcAutomation
+import app.gmaaps.core.ui.compose.icons.IcAutomation
 
 private fun sampleEditState(
     readOnly: Boolean = false,
@@ -112,3 +112,4 @@ internal fun PreviewAutomationEditScreenUserAction() {
         )
     }
 }
+

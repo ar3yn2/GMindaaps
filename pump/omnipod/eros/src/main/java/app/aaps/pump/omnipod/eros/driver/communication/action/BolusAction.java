@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action;
 
 import androidx.annotation.NonNull;
 
@@ -6,13 +6,13 @@ import org.joda.time.Duration;
 
 import java.util.Arrays;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.OmnipodMessage;
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.BolusExtraCommand;
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.SetInsulinScheduleCommand;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BolusDeliverySchedule;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.OmnipodMessage;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.BolusExtraCommand;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.SetInsulinScheduleCommand;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BolusDeliverySchedule;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
 
 public class BolusAction implements OmnipodAction<StatusResponse> {
     private final ErosPodStateManager podStateManager;
@@ -52,3 +52,4 @@ public class BolusAction implements OmnipodAction<StatusResponse> {
         return communicationService.exchangeMessages(StatusResponse.class, podStateManager, bolusMessage);
     }
 }
+

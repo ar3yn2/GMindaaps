@@ -1,12 +1,12 @@
-package app.aaps.ios.shell.ui
+﻿package app.gmaaps.ios.shell.ui
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import platform.UIKit.UIApplication
 
 /**
@@ -38,3 +38,4 @@ fun KeepScreenOnEffect(preferences: Preferences) {
         onDispose { UIApplication.sharedApplication.idleTimerDisabled = false }
     }
 }
+

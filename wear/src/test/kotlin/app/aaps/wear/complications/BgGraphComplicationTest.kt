@@ -1,10 +1,10 @@
-package app.aaps.wear.complications
+﻿package app.gmaaps.wear.complications
 
 import androidx.wear.watchface.complications.data.ComplicationType
 import androidx.wear.watchface.complications.data.PhotoImageComplicationData
 import androidx.wear.watchface.complications.data.SmallImageComplicationData
-import app.aaps.wear.AAPSLoggerTest
-import app.aaps.wear.R
+import app.gmaaps.wear.AAPSLoggerTest
+import app.gmaaps.wear.R
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -72,3 +72,4 @@ internal class BgGraphComplicationTest {
         assertThat(sut().getProviderCanonicalName()).contains("BgGraphComplication")
     }
 }
+

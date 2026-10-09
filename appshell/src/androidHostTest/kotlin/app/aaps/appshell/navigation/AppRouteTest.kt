@@ -1,7 +1,7 @@
-package app.aaps.appshell.navigation
+﻿package app.gmaaps.appshell.navigation
 
-import app.aaps.core.data.model.TE
-import app.aaps.core.ui.compose.ScreenMode
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.ui.compose.ScreenMode
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -182,3 +182,4 @@ class AppRouteTest {
             .isEqualTo(prefixOf(AppRoute.SiteLocationPicker.route))
     }
 }
+

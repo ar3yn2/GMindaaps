@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.comm
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm
 
-import app.aaps.core.utils.toHex
+import app.gmaaps.core.utils.toHex
 import java.nio.ByteBuffer
 
 data class Id(val address: ByteArray) {
@@ -55,3 +55,4 @@ data class Id(val address: ByteArray) {
         }
     }
 }
+

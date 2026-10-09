@@ -1,11 +1,11 @@
-package app.aaps.ui.compose.scenes.wizard
+﻿package app.gmaaps.ui.compose.scenes.wizard
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.ui.R
-import app.aaps.ui.compose.scenes.SceneTemplate
+import app.gmaaps.core.ui.R
+import app.gmaaps.ui.compose.scenes.SceneTemplate
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -73,3 +73,4 @@ class InfoStepTest {
         compose.onNodeWithText(backLabel).assertDoesNotExist()
     }
 }
+

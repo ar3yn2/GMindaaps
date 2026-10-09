@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -38,3 +38,4 @@ fun TonalIcon(
         )
     }
 }
+

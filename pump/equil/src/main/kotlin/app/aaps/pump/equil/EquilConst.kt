@@ -1,4 +1,4 @@
-package app.aaps.pump.equil
+﻿package app.gmaaps.pump.equil
 
 object EquilConst {
 
@@ -12,3 +12,4 @@ object EquilConst {
     const val EQUIL_STEP_FILL = 160
     const val EQUIL_STEP_AIR = 120
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -15,10 +15,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
-import app.aaps.core.interfaces.pump.BolusProgressState
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsSmallFab
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.interfaces.pump.BolusProgressState
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsSmallFab
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * FAB indicating active pump communication.
@@ -68,3 +68,4 @@ fun PumpActivityFab(
         }
     }
 }
+

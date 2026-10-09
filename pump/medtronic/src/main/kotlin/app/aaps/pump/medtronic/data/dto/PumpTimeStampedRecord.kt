@@ -1,6 +1,6 @@
-package app.aaps.pump.medtronic.data.dto
+﻿package app.gmaaps.pump.medtronic.data.dto
 
-import app.aaps.core.utils.formatUS
+import app.gmaaps.core.utils.formatUS
 
 /**
  * Created by andy on 6/2/18.

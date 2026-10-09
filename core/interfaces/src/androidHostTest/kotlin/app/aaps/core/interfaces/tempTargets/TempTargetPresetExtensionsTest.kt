@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.tempTargets
+﻿package app.gmaaps.core.interfaces.tempTargets
 
-import app.aaps.core.data.model.TT
-import app.aaps.core.data.model.TTPreset
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.data.model.TTPreset
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -92,3 +92,4 @@ class TempTargetPresetExtensionsTest {
         assertThat(json).doesNotContain("name")
     }
 }
+

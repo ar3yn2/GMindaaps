@@ -1,4 +1,4 @@
-package app.aaps.ios.shell.prefs
+﻿package app.gmaaps.ios.shell.prefs
 
 import platform.Foundation.NSUserDefaults
 import kotlin.test.AfterTest
@@ -17,7 +17,7 @@ import kotlin.test.assertTrue
  */
 class IosSpTest {
 
-    private val domain = "app.aaps.ios.shell.test"
+    private val domain = "app.gmaaps.ios.shell.test"
     private val sp = IosSp(domain, NSUserDefaults(suiteName = domain))
 
     @BeforeTest fun clean() = sp.clear()
@@ -152,3 +152,4 @@ class IosSpTest {
         assertEquals(2, sp.getInt("second", defaultValue = 0))
     }
 }
+

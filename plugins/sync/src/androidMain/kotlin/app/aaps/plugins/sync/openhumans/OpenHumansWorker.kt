@@ -1,12 +1,12 @@
-package app.aaps.plugins.sync.openhumans
+﻿package app.gmaaps.plugins.sync.openhumans
 
 import android.content.Context
 import androidx.work.WorkerParameters
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.objects.workflow.LoggingWorker
-import app.aaps.core.objects.workflow.MetroWorkerCreator
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.objects.workflow.LoggingWorker
+import app.gmaaps.core.objects.workflow.MetroWorkerCreator
 import dev.zacsweers.metro.Assisted
 import dev.zacsweers.metro.AssistedFactory
 import dev.zacsweers.metro.AssistedInject
@@ -40,3 +40,4 @@ class OpenHumansWorker(
         override fun create(context: Context, params: WorkerParameters): OpenHumansWorker
     }
 }
+

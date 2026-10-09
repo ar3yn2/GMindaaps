@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.eros.driver.definition.schedule;
+package app.gmaaps.pump.omnipod.eros.driver.definition.schedule;
 
-import static app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants.BASAL_STEP_DURATION;
+import static app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants.BASAL_STEP_DURATION;
 
 import androidx.annotation.NonNull;
 
@@ -9,9 +9,9 @@ import org.joda.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.communication.message.IRawRepresentable;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.IRawRepresentable;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
 
 public class RateEntry implements IRawRepresentable {
 
@@ -86,3 +86,4 @@ public class RateEntry implements IRawRepresentable {
                 '}';
     }
 }
+

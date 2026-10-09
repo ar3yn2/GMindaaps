@@ -1,34 +1,34 @@
-package app.aaps.plugins.sync.garmin
+﻿package app.gmaaps.plugins.sync.garmin
 
-import app.aaps.core.data.iob.CobInfo
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.HR
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.aps.IobTotal
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.db.ProcessedTbrEbData
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.UnitDoubleKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.iob.CobInfo
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.HR
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.aps.IobTotal
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.db.ProcessedTbrEbData
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.UnitDoubleKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.TestBase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
@@ -317,3 +317,4 @@ class LoopHubTest : TestBase() {
         verify(persistenceLayer).insertOrUpdateHeartRates(listOf(hr))
     }
 }
+

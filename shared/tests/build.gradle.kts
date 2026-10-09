@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     // NOT com.android.library. AGP 9 refuses that plugin together with the multiplatform plugin.
@@ -13,7 +13,7 @@ plugins {
 // this module has no tests of its own - it is the fixtures other modules test with.
 kotlin {
     android {
-        namespace = "app.aaps.shared.tests"
+        namespace = "app.gmaaps.shared.tests"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         compilerOptions { jvmTarget.set(Versions.jvmTarget) }
@@ -62,3 +62,4 @@ kotlin {
         }
     }
 }
+

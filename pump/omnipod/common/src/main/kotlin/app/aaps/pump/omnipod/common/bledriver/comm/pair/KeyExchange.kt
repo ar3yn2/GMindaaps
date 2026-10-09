@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.pair
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.pair
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.MessageIOException
-import app.aaps.pump.omnipod.common.bledriver.pod.util.RandomByteGenerator
-import app.aaps.pump.omnipod.common.bledriver.pod.util.X25519KeyGenerator
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.MessageIOException
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.RandomByteGenerator
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.X25519KeyGenerator
 import org.spongycastle.crypto.engines.AESEngine
 import org.spongycastle.crypto.macs.CMac
 import org.spongycastle.crypto.params.KeyParameter
@@ -123,3 +123,4 @@ private fun aesCmac(key: ByteArray, data: ByteArray, result: ByteArray) {
     mac.update(data, 0, data.size)
     mac.doFinal(result, 0)
 }
+

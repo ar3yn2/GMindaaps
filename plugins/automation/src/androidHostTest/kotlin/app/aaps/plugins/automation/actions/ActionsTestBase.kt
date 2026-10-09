@@ -1,22 +1,22 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.alerts.ReminderScheduler
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.autotune.Autotune
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.maintenance.ImportExportPrefs
-import app.aaps.core.interfaces.protection.ExportPasswordDataStore
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.core.interfaces.scenes.SceneIconResolver
-import app.aaps.core.interfaces.smsCommunicator.SmsCommunicator
-import app.aaps.implementation.pump.PumpEnactResultObject
-import app.aaps.plugins.automation.AutomationStringsValues
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.alerts.ReminderScheduler
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.autotune.Autotune
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.maintenance.ImportExportPrefs
+import app.gmaaps.core.interfaces.protection.ExportPasswordDataStore
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.core.interfaces.scenes.SceneIconResolver
+import app.gmaaps.core.interfaces.smsCommunicator.SmsCommunicator
+import app.gmaaps.implementation.pump.PumpEnactResultObject
+import app.gmaaps.plugins.automation.AutomationStringsValues
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.generatedTextResolver
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.BeforeEach
 import org.mockito.ArgumentMatchers.anyInt
@@ -50,8 +50,8 @@ ActionsTestBase : TestBaseWithProfile() {
      * they exercise directly. This is here for the few that go through the factory, i.e. the ones
      * testing [ActionFactory.instantiate].
      */
-    val triggerDeps: app.aaps.plugins.automation.triggers.TriggerDeps by lazy {
-        app.aaps.plugins.automation.triggers.TriggerDeps(
+    val triggerDeps: app.gmaaps.plugins.automation.triggers.TriggerDeps by lazy {
+        app.gmaaps.plugins.automation.triggers.TriggerDeps(
             aapsLogger, rxBus, text, profileFunction, profileUtil, preferences, mock(), persistenceLayer,
             activePlugin, mock(), glucoseStatusProvider, dateUtil
         )
@@ -80,3 +80,4 @@ ActionsTestBase : TestBaseWithProfile() {
 
     }
 }
+

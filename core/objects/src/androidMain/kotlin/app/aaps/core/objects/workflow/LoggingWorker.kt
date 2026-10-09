@@ -1,11 +1,11 @@
-package app.aaps.core.objects.workflow
+﻿package app.gmaaps.core.objects.workflow
 
 import android.content.Context
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 
@@ -26,3 +26,4 @@ abstract class LoggingWorker(
 
     abstract suspend fun doWorkAndLog(): Result
 }
+

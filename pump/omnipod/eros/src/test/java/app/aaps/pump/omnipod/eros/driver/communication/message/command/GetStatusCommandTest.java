@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.definition.PodInfoType;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodInfoType;
 
 class GetStatusCommandTest {
     @Test
@@ -28,3 +28,4 @@ class GetStatusCommandTest {
         Assertions.assertArrayEquals(ByteUtil.INSTANCE.fromHexString("0e0102"), getStatusCommand.getRawData());
     }
 }
+

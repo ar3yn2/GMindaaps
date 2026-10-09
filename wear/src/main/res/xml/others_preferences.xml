@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -30,7 +30,8 @@
         app:wear_iconOff="@drawable/settings_off"
         app:wear_iconOn="@drawable/settings_on" />
 
-    <app.aaps.wear.preference.VersionPreference
+    <app.gmaaps.wear.preference.VersionPreference
         android:key="version_number"
         android:title="@string/pref_version" />
 </PreferenceScreen>
+

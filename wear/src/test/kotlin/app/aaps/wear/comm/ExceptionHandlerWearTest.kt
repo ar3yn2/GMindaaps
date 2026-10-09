@@ -1,9 +1,9 @@
-package app.aaps.wear.comm
+﻿package app.gmaaps.wear.comm
 
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.Event
-import app.aaps.core.interfaces.rx.events.EventWearToMobile
-import app.aaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.events.EventWearToMobile
+import app.gmaaps.core.interfaces.rx.weardata.EventData
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -48,3 +48,4 @@ internal class ExceptionHandlerWearTest {
         }
     }
 }
+

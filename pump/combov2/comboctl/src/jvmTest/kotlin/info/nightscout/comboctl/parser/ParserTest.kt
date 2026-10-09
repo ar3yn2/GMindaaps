@@ -1,6 +1,6 @@
-package info.nightscout.comboctl.parser
+﻿package info.nightscout.comboctl.parser
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import info.nightscout.comboctl.base.DisplayFrame
 import info.nightscout.comboctl.base.timeWithoutDate
 import kotlinx.datetime.LocalDate
@@ -1927,3 +1927,4 @@ class ParserTest : TestBase() {
         }
     }
 }
+

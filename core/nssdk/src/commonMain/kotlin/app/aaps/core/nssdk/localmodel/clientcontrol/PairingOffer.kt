@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.clientcontrol
+﻿package app.gmaaps.core.nssdk.localmodel.clientcontrol
 
 import kotlinx.serialization.Serializable
 
@@ -22,3 +22,4 @@ data class PairingOffer(
     val ivB64: String,
     val wrappedB64: String
 )
+

@@ -1,9 +1,9 @@
-package app.aaps.pump.insight.di
+﻿package app.gmaaps.pump.insight.di
 
-import app.aaps.core.interfaces.di.FeatureMemberInjectors
-import app.aaps.pump.insight.InsightAlertService
-import app.aaps.pump.insight.app_layer.activities.InsightAlertActivity
-import app.aaps.pump.insight.connection_service.InsightConnectionService
+import app.gmaaps.core.interfaces.di.FeatureMemberInjectors
+import app.gmaaps.pump.insight.InsightAlertService
+import app.gmaaps.pump.insight.app_layer.activities.InsightAlertActivity
+import app.gmaaps.pump.insight.connection_service.InsightConnectionService
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ClassKey
@@ -41,3 +41,4 @@ object InsightMemberInjectors {
     @ClassKey(InsightConnectionService::class)
     fun bindInsightConnectionService(injector: MembersInjector<InsightConnectionService>): MembersInjector<*> = injector
 }
+

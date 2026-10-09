@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.ble
+﻿package app.gmaaps.pump.carelevo.ble
 
-import app.aaps.pump.carelevo.ble.gatt.GattConnState
-import app.aaps.pump.carelevo.ble.gatt.GattConnection
-import app.aaps.pump.carelevo.ble.gatt.GattEvent
+import app.gmaaps.pump.carelevo.ble.gatt.GattConnState
+import app.gmaaps.pump.carelevo.ble.gatt.GattConnection
+import app.gmaaps.pump.carelevo.ble.gatt.GattEvent
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
@@ -320,3 +320,4 @@ class BleClientImpl(
         }
     }
 }
+

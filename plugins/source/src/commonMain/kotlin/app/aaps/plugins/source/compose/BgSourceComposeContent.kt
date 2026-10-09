@@ -1,9 +1,9 @@
-package app.aaps.plugins.source.compose
+﻿package app.gmaaps.plugins.source.compose
 
 import androidx.compose.runtime.Composable
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.metroViewModel
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.metroViewModel
 
 /**
  * Compose content provider for BG Source plugins.
@@ -31,3 +31,4 @@ internal class BgSourceComposeContent(
         )
     }
 }
+

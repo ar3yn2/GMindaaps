@@ -1,7 +1,7 @@
-package info.nightscout.pump.combov2.keys
+﻿package info.nightscout.pump.combov2.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
 import info.nightscout.pump.combov2.R
 
 enum class ComboBooleanKey(
@@ -17,3 +17,4 @@ enum class ComboBooleanKey(
 
     override val title: TextRef = TextRef.AndroidRes(titleResId)
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.tidepool.comm
+﻿package app.gmaaps.plugins.sync.tidepool.comm
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import com.google.common.truth.Truth.assertThat
 import okhttp3.Interceptor
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -86,3 +86,4 @@ class InfoInterceptorTest {
         verify(aapsLogger, never()).debug(any<LTag>(), any<() -> String>())
     }
 }
+

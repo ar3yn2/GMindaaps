@@ -1,11 +1,11 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol.compose
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol.compose
 
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.nssdk.localmodel.clientcontrol.MasterPairing
-import app.aaps.core.nssdk.localmodel.clientcontrol.PairingPayload
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.ClientControlPublisher
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.ClientPairingRepository
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.PairingOfferFetcher
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.MasterPairing
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.PairingPayload
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.ClientControlPublisher
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.ClientPairingRepository
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.PairingOfferFetcher
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -188,3 +188,4 @@ internal class PairWithMasterViewModelTest {
         assertThat(sut.state.value).isEqualTo(PairWithMasterViewModel.UiState.Error(PairWithMasterViewModel.ErrorReason.SecretStoreFailed))
     }
 }
+

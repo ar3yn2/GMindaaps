@@ -1,13 +1,13 @@
-package app.aaps.core.nssdk.interfaces
+﻿package app.gmaaps.core.nssdk.interfaces
 
-import app.aaps.core.nssdk.localmodel.Status
-import app.aaps.core.nssdk.localmodel.devicestatus.NSDeviceStatus
-import app.aaps.core.nssdk.localmodel.entry.NSMbgV3
-import app.aaps.core.nssdk.localmodel.entry.NSSgvV3
-import app.aaps.core.nssdk.localmodel.food.NSFood
-import app.aaps.core.nssdk.localmodel.treatment.CreateUpdateResponse
-import app.aaps.core.nssdk.localmodel.treatment.NSTreatment
-import app.aaps.core.nssdk.remotemodel.LastModified
+import app.gmaaps.core.nssdk.localmodel.Status
+import app.gmaaps.core.nssdk.localmodel.devicestatus.NSDeviceStatus
+import app.gmaaps.core.nssdk.localmodel.entry.NSMbgV3
+import app.gmaaps.core.nssdk.localmodel.entry.NSSgvV3
+import app.gmaaps.core.nssdk.localmodel.food.NSFood
+import app.gmaaps.core.nssdk.localmodel.treatment.CreateUpdateResponse
+import app.gmaaps.core.nssdk.localmodel.treatment.NSTreatment
+import app.gmaaps.core.nssdk.remotemodel.LastModified
 import kotlinx.serialization.json.JsonObject
 
 interface NSAndroidClient {
@@ -72,3 +72,4 @@ interface NSAndroidClient {
     /** Hard delete via NS `?permanent=true` — removes the doc instead of soft-deleting (tombstoning) it. */
     suspend fun deleteSettingsPermanent(identifier: String): CreateUpdateResponse
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.pump.diaconn.packet
+﻿package app.gmaaps.pump.diaconn.packet
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.pump.diaconn.DiaconnG8Pump
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.pump.diaconn.DiaconnG8Pump
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -172,3 +172,4 @@ class InjectionSnackResultReportPacketTest : TestBaseWithProfile() {
         return data
     }
 }
+

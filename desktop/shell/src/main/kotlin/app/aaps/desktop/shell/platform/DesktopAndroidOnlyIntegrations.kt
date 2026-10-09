@@ -1,14 +1,14 @@
-package app.aaps.desktop.shell.platform
+﻿package app.gmaaps.desktop.shell.platform
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.source.DexcomBoyda
-import app.aaps.core.interfaces.source.XDripSource
-import app.aaps.core.interfaces.sync.DataSyncSelector
-import app.aaps.core.interfaces.sync.DataSyncSelectorXdrip
-import app.aaps.core.interfaces.sync.XDripBroadcast
-import app.aaps.ui.activityMonitor.ActivityStats
-import app.aaps.ui.activityMonitor.ActivityStatsProvider
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.source.DexcomBoyda
+import app.gmaaps.core.interfaces.source.XDripSource
+import app.gmaaps.core.interfaces.sync.DataSyncSelector
+import app.gmaaps.core.interfaces.sync.DataSyncSelectorXdrip
+import app.gmaaps.core.interfaces.sync.XDripBroadcast
+import app.gmaaps.ui.activityMonitor.ActivityStats
+import app.gmaaps.ui.activityMonitor.ActivityStatsProvider
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -133,3 +133,4 @@ class DesktopActivityStatsProvider(
         aapsLogger.debug(LTag.CORE, "No activity stats are collected on desktop; nothing to reset")
     }
 }
+

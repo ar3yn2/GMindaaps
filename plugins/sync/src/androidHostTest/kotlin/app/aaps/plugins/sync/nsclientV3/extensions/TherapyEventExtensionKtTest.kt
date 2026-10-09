@@ -1,13 +1,13 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.nssdk.localmodel.treatment.NSTherapyEvent
-import app.aaps.core.nssdk.mapper.convertToRemoteAndBack
-import app.aaps.plugins.sync.extensions.contentEqualsTo
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.nssdk.localmodel.treatment.NSTherapyEvent
+import app.gmaaps.core.nssdk.mapper.convertToRemoteAndBack
+import app.gmaaps.plugins.sync.extensions.contentEqualsTo
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -84,3 +84,4 @@ internal class TherapyEventExtensionKtTest : TestBaseWithProfile() {
         assertThat(therapyEvent.ids.contentEqualsTo(therapyEvent2.ids)).isTrue()
     }
 }
+

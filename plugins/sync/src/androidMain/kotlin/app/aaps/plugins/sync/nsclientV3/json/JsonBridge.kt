@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3.json
+﻿package app.gmaaps.plugins.sync.nsclientV3.json
 
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
@@ -27,3 +27,4 @@ object JsonBridge {
     /** `org.json` tree -> kotlinx tree. Throws if the text is somehow not a JSON object. */
     fun JSONObject.toKotlinxJson(): JsonObject = Json.parseToJsonElement(toString()).jsonObject
 }
+

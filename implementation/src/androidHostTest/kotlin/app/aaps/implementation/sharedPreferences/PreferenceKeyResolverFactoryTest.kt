@@ -1,17 +1,17 @@
-package app.aaps.implementation.sharedPreferences
+﻿package app.gmaaps.implementation.sharedPreferences
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginBaseWithPreferences
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.keys.BooleanComposedKey
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.KeyCategory
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginBaseWithPreferences
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.keys.BooleanComposedKey
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.KeyCategory
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.mock
@@ -114,3 +114,4 @@ class PreferenceKeyResolverFactoryTest {
         assertThat(sut.resolve(pumpKey.key)?.category).isEqualTo(KeyCategory.General)
     }
 }
+

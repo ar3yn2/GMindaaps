@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -10,14 +10,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.compose.dialog.CarelevoInsulinRefillGuideDialog
-import app.aaps.pump.carelevo.config.FillConfig
-import app.aaps.pump.carelevo.presentation.type.CarelevoPatchStep
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.compose.dialog.CarelevoInsulinRefillGuideDialog
+import app.gmaaps.pump.carelevo.config.FillConfig
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoPatchStep
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
+import app.gmaaps.core.ui.R as CoreUiR
 
 @Composable
 internal fun CarelevoPatchFlowStep01Start(
@@ -74,3 +74,4 @@ private fun CarelevoPatchFlowStep01StartPreview() {
         )
     }
 }
+

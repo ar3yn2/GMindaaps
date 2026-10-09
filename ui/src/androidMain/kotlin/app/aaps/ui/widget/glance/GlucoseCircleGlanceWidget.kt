@@ -1,4 +1,4 @@
-package app.aaps.ui.widget.glance
+﻿package app.gmaaps.ui.widget.glance
 
 import android.content.Context
 import androidx.compose.runtime.Composable
@@ -22,7 +22,7 @@ import androidx.glance.layout.Box
 import androidx.glance.layout.ContentScale
 import androidx.glance.layout.fillMaxSize
 import androidx.glance.unit.ColorProvider
-import app.aaps.core.interfaces.configuration.awaitInitialized
+import app.gmaaps.core.interfaces.configuration.awaitInitialized
 
 /** Home screen widget with the overview BG circle, rendered for each widget size ([SizeMode.Exact]). */
 class GlucoseCircleGlanceWidget : GlanceAppWidget() {
@@ -81,3 +81,4 @@ private fun GlucoseCircleContent(state: WidgetRenderState) {
         )
     }
 }
+

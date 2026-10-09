@@ -1,20 +1,20 @@
-package app.aaps.plugins.sync.xdrip
+﻿package app.gmaaps.plugins.sync.xdrip
 
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.sync.DataSyncSelector
-import app.aaps.core.interfaces.sync.DataSyncSelectorXdrip
-import app.aaps.core.interfaces.sync.XDripBroadcast
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.LongNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.sync.xdrip.compose.XdripMvvmRepository
-import app.aaps.plugins.sync.xdrip.keys.XdripLongKey
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.sync.DataSyncSelector
+import app.gmaaps.core.interfaces.sync.DataSyncSelectorXdrip
+import app.gmaaps.core.interfaces.sync.XDripBroadcast
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.LongNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.sync.xdrip.compose.XdripMvvmRepository
+import app.gmaaps.plugins.sync.xdrip.keys.XdripLongKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -663,3 +663,4 @@ class DataSyncSelectorXdripImpl(
         }
     }
 }
+

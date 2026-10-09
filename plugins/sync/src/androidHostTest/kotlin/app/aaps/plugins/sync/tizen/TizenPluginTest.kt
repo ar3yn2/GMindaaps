@@ -1,25 +1,25 @@
-package app.aaps.plugins.sync.tizen
+﻿package app.gmaaps.plugins.sync.tizen
 
-import app.aaps.core.data.iob.CobInfo
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TB
-import app.aaps.core.interfaces.aps.AutosensDataStore
-import app.aaps.core.interfaces.aps.GlucoseStatusSMB
-import app.aaps.core.interfaces.aps.IobTotal
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.aps.RT
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpStatusProvider
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.rx.events.EventLoopUpdateGui
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.shared.tests.BundleMock
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.iob.CobInfo
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.core.interfaces.aps.GlucoseStatusSMB
+import app.gmaaps.core.interfaces.aps.IobTotal
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.aps.RT
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpStatusProvider
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.rx.events.EventLoopUpdateGui
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.shared.tests.BundleMock
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -179,3 +179,4 @@ internal class TizenPluginTest : TestBaseWithProfile() {
         assertThat(bundle.containsKey("pumpStatus")).isTrue()
     }
 }
+

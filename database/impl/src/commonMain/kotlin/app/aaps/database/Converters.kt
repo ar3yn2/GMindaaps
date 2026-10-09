@@ -1,21 +1,21 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
 import androidx.room.TypeConverter
-import app.aaps.database.entities.APSResult
-import app.aaps.database.entities.Bolus
-import app.aaps.database.entities.GlucoseValue
-import app.aaps.database.entities.RunningMode
-import app.aaps.database.entities.TemporaryBasal
-import app.aaps.database.entities.TemporaryTarget
-import app.aaps.database.entities.TherapyEvent
-import app.aaps.database.entities.UserEntry.Action
-import app.aaps.database.entities.UserEntry.Sources
-import app.aaps.database.entities.ValueWithUnit
-import app.aaps.database.entities.data.Block
-import app.aaps.database.entities.data.GlucoseUnit
-import app.aaps.database.entities.data.TargetBlock
-import app.aaps.database.entities.embedments.InterfaceIDs
-import app.aaps.database.serialisation.ValueWithUnitSerializer
+import app.gmaaps.database.entities.APSResult
+import app.gmaaps.database.entities.Bolus
+import app.gmaaps.database.entities.GlucoseValue
+import app.gmaaps.database.entities.RunningMode
+import app.gmaaps.database.entities.TemporaryBasal
+import app.gmaaps.database.entities.TemporaryTarget
+import app.gmaaps.database.entities.TherapyEvent
+import app.gmaaps.database.entities.UserEntry.Action
+import app.gmaaps.database.entities.UserEntry.Sources
+import app.gmaaps.database.entities.ValueWithUnit
+import app.gmaaps.database.entities.data.Block
+import app.gmaaps.database.entities.data.GlucoseUnit
+import app.gmaaps.database.entities.data.TargetBlock
+import app.gmaaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.serialisation.ValueWithUnitSerializer
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
@@ -150,3 +150,4 @@ class Converters {
     @TypeConverter
     fun toRunningModeMode(mode: String?) = mode?.let { RunningMode.Mode.valueOf(it) }
 }
+

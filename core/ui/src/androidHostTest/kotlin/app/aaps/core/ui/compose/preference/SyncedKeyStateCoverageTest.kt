@@ -1,14 +1,14 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.runtime.mutableStateMapOf
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.UnitDoubleKey
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.SyncDirection
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.UnitDoubleKey
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.SyncDirection
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.mock
@@ -63,3 +63,4 @@ class SyncedKeyStateCoverageTest {
         assertThat(updater).isNotNull()
     }
 }
+

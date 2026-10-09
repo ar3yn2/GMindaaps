@@ -1,10 +1,10 @@
-package app.aaps.ios.shell.di
+﻿package app.gmaaps.ios.shell.di
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.objects.di.CoreObjectsGraph
-import app.aaps.implementation.logging.AAPSLoggerIos
-import app.aaps.shared.clientbindings.ClientGraphBindings
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.objects.di.CoreObjectsGraph
+import app.gmaaps.implementation.logging.AAPSLoggerIos
+import app.gmaaps.shared.clientbindings.ClientGraphBindings
 import dev.zacsweers.metro.createGraphFactory
 import kotlinx.coroutines.test.runTest
 import kotlin.test.Test
@@ -127,3 +127,4 @@ class IosProbeGraphTest {
         }
     }
 }
+

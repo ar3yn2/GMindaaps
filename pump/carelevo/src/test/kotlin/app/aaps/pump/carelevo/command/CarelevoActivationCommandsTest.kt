@@ -1,14 +1,14 @@
-package app.aaps.pump.carelevo.command
+﻿package app.gmaaps.pump.carelevo.command
 
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
 /**
  * Unit tests for the Carelevo activation [CustomCommand] marker classes in
- * [app.aaps.pump.carelevo.command] (CarelevoActivationCommands.kt) and [CmdSafetyCheck].
+ * [app.gmaaps.pump.carelevo.command] (CarelevoActivationCommands.kt) and [CmdSafetyCheck].
  *
  * These are pure, dependency-free marker commands routed through the AAPS CommandQueue: no
  * executor delegation happens inside them, so the tests assert their public contract —
@@ -158,3 +158,4 @@ internal class CarelevoActivationCommandsTest {
     }
 
 }
+

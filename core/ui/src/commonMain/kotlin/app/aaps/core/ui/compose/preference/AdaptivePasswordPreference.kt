@@ -1,8 +1,8 @@
-/*
+﻿/*
  * Adaptive Password Preference for Jetpack Compose
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -10,14 +10,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.StringPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.LocalPreferences
-import app.aaps.core.ui.compose.dialogs.SetPasswordDialog
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.ui.compose.dialogs.SetPasswordDialog
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Composable password/PIN preference that opens a dialog to set the password.
@@ -124,3 +124,4 @@ fun AdaptivePasswordPreferenceItem(
         )
     }
 }
+

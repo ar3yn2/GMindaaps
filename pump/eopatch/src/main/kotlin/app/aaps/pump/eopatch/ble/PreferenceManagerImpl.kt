@@ -1,19 +1,19 @@
-package app.aaps.pump.eopatch.ble
+﻿package app.gmaaps.pump.eopatch.ble
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.eopatch.GsonHelper
-import app.aaps.pump.eopatch.code.PatchLifecycle
-import app.aaps.pump.eopatch.keys.EopatchStringNonKey
-import app.aaps.pump.eopatch.vo.Alarms
-import app.aaps.pump.eopatch.vo.BolusCurrent
-import app.aaps.pump.eopatch.vo.NormalBasalManager
-import app.aaps.pump.eopatch.vo.PatchConfig
-import app.aaps.pump.eopatch.vo.PatchLifecycleEvent
-import app.aaps.pump.eopatch.vo.PatchState
-import app.aaps.pump.eopatch.vo.TempBasalManager
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.eopatch.GsonHelper
+import app.gmaaps.pump.eopatch.code.PatchLifecycle
+import app.gmaaps.pump.eopatch.keys.EopatchStringNonKey
+import app.gmaaps.pump.eopatch.vo.Alarms
+import app.gmaaps.pump.eopatch.vo.BolusCurrent
+import app.gmaaps.pump.eopatch.vo.NormalBasalManager
+import app.gmaaps.pump.eopatch.vo.PatchConfig
+import app.gmaaps.pump.eopatch.vo.PatchLifecycleEvent
+import app.gmaaps.pump.eopatch.vo.PatchState
+import app.gmaaps.pump.eopatch.vo.TempBasalManager
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -185,3 +185,4 @@ class PreferenceManagerImpl() : PreferenceManager {
         return mAlarms.observe()
     }
 }
+

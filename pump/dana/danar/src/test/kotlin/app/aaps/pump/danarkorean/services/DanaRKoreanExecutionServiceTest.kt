@@ -1,15 +1,15 @@
-package app.aaps.pump.danarkorean.services
+﻿package app.gmaaps.pump.danarkorean.services
 
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.danar.DanaRPlugin
-import app.aaps.pump.danarkorean.DanaRKoreanPlugin
-import app.aaps.pump.danarkorean.comm.MessageHashTableRKorean
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.danar.DanaRPlugin
+import app.gmaaps.pump.danarkorean.DanaRKoreanPlugin
+import app.gmaaps.pump.danarkorean.comm.MessageHashTableRKorean
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.BeforeEach
@@ -137,3 +137,4 @@ class DanaRKoreanExecutionServiceTest : TestBaseWithProfile() {
         }
     }
 }
+

@@ -1,27 +1,27 @@
-package app.aaps.pump.carelevo.coordinator
+﻿package app.gmaaps.pump.carelevo.coordinator
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.BolusProgressState
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.ble.commands.BolusCancelCommand
-import app.aaps.pump.carelevo.ble.commands.BolusCancelResponse
-import app.aaps.pump.carelevo.ble.commands.ExtendBolusCancelCommand
-import app.aaps.pump.carelevo.ble.commands.ExtendBolusCancelResponse
-import app.aaps.pump.carelevo.ble.commands.ExtendBolusCommand
-import app.aaps.pump.carelevo.ble.commands.ExtendBolusResponse
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoCancelExtendBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoCancelImmeBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoFinishImmeBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoStartExtendBolusInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.bolus.CarelevoStartImmeBolusInfusionUseCase
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.BolusProgressState
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.ble.commands.BolusCancelCommand
+import app.gmaaps.pump.carelevo.ble.commands.BolusCancelResponse
+import app.gmaaps.pump.carelevo.ble.commands.ExtendBolusCancelCommand
+import app.gmaaps.pump.carelevo.ble.commands.ExtendBolusCancelResponse
+import app.gmaaps.pump.carelevo.ble.commands.ExtendBolusCommand
+import app.gmaaps.pump.carelevo.ble.commands.ExtendBolusResponse
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoCancelExtendBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoCancelImmeBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoFinishImmeBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoStartExtendBolusInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.bolus.CarelevoStartImmeBolusInfusionUseCase
 import com.google.common.truth.Truth.assertThat
 import dev.zacsweers.metro.Provider
 import kotlinx.coroutines.delay
@@ -394,3 +394,4 @@ internal class CarelevoBolusCoordinatorTest {
         verifyBlocking(pumpSync) { syncBolusWithPumpId(any(), any(), any(), any(), any(), any()) }
     }
 }
+

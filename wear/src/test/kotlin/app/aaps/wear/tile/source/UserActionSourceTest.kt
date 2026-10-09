@@ -1,13 +1,13 @@
-package app.aaps.wear.tile.source
+﻿package app.gmaaps.wear.tile.source
 
 import android.content.Context
 import android.content.res.Resources
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.interfaces.rx.weardata.EventData.UserAction.UserActionEntry
-import app.aaps.core.interfaces.sharedPreferences.SP
-import app.aaps.wear.AAPSLoggerTest
-import app.aaps.wear.R
-import app.aaps.wear.interaction.actions.BackgroundActionActivity
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.rx.weardata.EventData.UserAction.UserActionEntry
+import app.gmaaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.wear.AAPSLoggerTest
+import app.gmaaps.wear.R
+import app.gmaaps.wear.interaction.actions.BackgroundActionActivity
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -18,7 +18,7 @@ import org.mockito.kotlin.whenever
 
 /**
  * Tests for [UserActionSource] — the tile source that maps up to four user-action entries
- * (deserialized from an [EventData.UserAction] payload stored in [SP]) into tile [app.aaps.wear.tile.Action]s.
+ * (deserialized from an [EventData.UserAction] payload stored in [SP]) into tile [app.gmaaps.wear.tile.Action]s.
  *
  * Fresh mocks are built (rather than extending WearTestBase) because the class reads
  * [Context.getResources] which the shared base does not stub.
@@ -131,3 +131,4 @@ class UserActionSourceTest {
         assertThat(source.getResourceReferences(resources)).containsExactly(R.drawable.ic_user_options)
     }
 }
+

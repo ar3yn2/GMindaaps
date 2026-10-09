@@ -1,8 +1,8 @@
-package app.aaps.pump.common.di
+﻿package app.gmaaps.pump.common.di
 
-import app.aaps.core.interfaces.di.FeatureMemberInjectors
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkBluetoothStateReceiver
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkBroadcastReceiver
+import app.gmaaps.core.interfaces.di.FeatureMemberInjectors
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkBluetoothStateReceiver
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkBroadcastReceiver
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ClassKey
@@ -38,3 +38,4 @@ object RileyLinkMemberInjectors {
         injector: MembersInjector<RileyLinkBroadcastReceiver>
     ): MembersInjector<*> = injector
 }
+

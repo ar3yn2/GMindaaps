@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.location
+﻿package app.gmaaps.core.interfaces.location
 
 /**
  * Turns on and off whatever keeps the device location up to date for automation's location trigger.
@@ -26,3 +26,4 @@ interface LocationServiceController {
      */
     fun setLocationUpdatesEnabled(enabled: Boolean)
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command.base
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command.base
 
 abstract class NonceEnabledCommand protected constructor(
     commandType: CommandType,
@@ -7,3 +7,4 @@ abstract class NonceEnabledCommand protected constructor(
     multiCommandFlag: Boolean,
     protected val nonce: Int
 ) : HeaderEnabledCommand(commandType, uniqueId, sequenceNumber, multiCommandFlag)
+

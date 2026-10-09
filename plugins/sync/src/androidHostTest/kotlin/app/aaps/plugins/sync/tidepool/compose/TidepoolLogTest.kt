@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.tidepool.compose
+﻿package app.gmaaps.plugins.sync.tidepool.compose
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -26,3 +26,4 @@ class TidepoolLogTest {
         assertThat(log.date).isAtMost(after)
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.NonceEnabledCommand
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.ShortInsulinProgramElement
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.NonceEnabledCommand
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.ShortInsulinProgramElement
 import java.nio.ByteBuffer
 
 // Always followed by one of: 0x13, 0x16, 0x17
@@ -67,3 +67,4 @@ class ProgramInsulinCommand internal constructor(
             '}'
     }
 }
+

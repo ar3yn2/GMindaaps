@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleClientImpl
-import app.aaps.pump.carelevo.ble.gatt.FakeGattConnection
+import app.gmaaps.pump.carelevo.ble.BleClientImpl
+import app.gmaaps.pump.carelevo.ble.gatt.FakeGattConnection
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runCurrent
@@ -94,3 +94,4 @@ internal class MacAddressCommandTest {
         assertThat(gatt.recordedWrites.single().payload).isEqualTo(byteArrayOf(0x3B, 0x42))
     }
 }
+

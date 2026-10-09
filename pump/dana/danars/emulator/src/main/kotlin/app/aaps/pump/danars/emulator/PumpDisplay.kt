@@ -1,4 +1,4 @@
-package app.aaps.pump.danars.emulator
+﻿package app.gmaaps.pump.danars.emulator
 
 /**
  * Callback interface for displaying emulated pump screen content.
@@ -33,3 +33,4 @@ object NoOpPumpDisplay : PumpDisplay {
     override fun showPairingPinCodes(pin1: String, pin2: String) {}
     override fun dismiss() {}
 }
+

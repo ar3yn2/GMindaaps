@@ -1,14 +1,14 @@
-package app.aaps.plugins.constraints.signatureVerifier
+﻿package app.gmaaps.plugins.constraints.signatureVerifier
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.versionChecker.VersionDefinition
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.constraints.versionChecker.VersionCheckerUtilsImpl
-import app.aaps.plugins.constraints.versionChecker.numericVersionPart
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.versionChecker.VersionDefinition
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.constraints.versionChecker.VersionCheckerUtilsImpl
+import app.gmaaps.plugins.constraints.versionChecker.numericVersionPart
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonObject
@@ -250,3 +250,4 @@ class VersionCheckerUtilsKtTest : TestBase() {
     }
 
 }
+

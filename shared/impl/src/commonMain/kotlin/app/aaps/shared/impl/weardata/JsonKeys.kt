@@ -1,4 +1,4 @@
-package app.aaps.shared.impl.weardata
+﻿package app.gmaaps.shared.impl.weardata
 
 enum class JsonKeys(val key: String) {
     METADATA("metadata"),

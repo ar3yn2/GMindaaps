@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
 class BasalHistoryIndexResponse(
     val lastIndex: Int,
@@ -8,3 +8,4 @@ class BasalHistoryIndexResponse(
     val lastFinishedIndex: Int =
         if (curIndex > 0 && curIndex != 0xFFFF) curIndex - 1 else -1
 }
+

@@ -1,12 +1,12 @@
-package app.aaps.desktop.shell.platform
+﻿package app.gmaaps.desktop.shell.platform
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.protection.SecureEncrypt
-import app.aaps.core.objects.crypto.CryptoUtil
-import app.aaps.core.utils.hexStringToByteArray
-import app.aaps.core.utils.toHex
-import app.aaps.implementation.maintenance.DesktopFolders
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.protection.SecureEncrypt
+import app.gmaaps.core.objects.crypto.CryptoUtil
+import app.gmaaps.core.utils.hexStringToByteArray
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.implementation.maintenance.DesktopFolders
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -153,3 +153,4 @@ class DesktopSecureEncrypt(
         private const val AES_KEY_SIZE_BYTE = 32
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.database.entities.embedments.InsulinConfiguration
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.database.entities.embedments.InsulinConfiguration
 
 fun InsulinConfiguration.fromDb(): ICfg =
     ICfg(

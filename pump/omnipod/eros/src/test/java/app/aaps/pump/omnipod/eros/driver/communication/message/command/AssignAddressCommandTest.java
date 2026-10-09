@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -15,3 +15,4 @@ class AssignAddressCommandTest {
         Assertions.assertEquals(0x44, rawData[5]);
     }
 }
+

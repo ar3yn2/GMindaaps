@@ -1,12 +1,12 @@
-package app.aaps.wear.sharedPreferences
+﻿package app.gmaaps.wear.sharedPreferences
 
-import app.aaps.core.interfaces.sharedPreferences.SP
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.IntComposedKey
-import app.aaps.core.keys.IntNonKey
-import app.aaps.core.keys.LongNonKey
-import app.aaps.core.keys.UnitDoubleKey
-import app.aaps.core.keys.interfaces.PreferenceKey
+import app.gmaaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.IntComposedKey
+import app.gmaaps.core.keys.IntNonKey
+import app.gmaaps.core.keys.LongNonKey
+import app.gmaaps.core.keys.UnitDoubleKey
+import app.gmaaps.core.keys.interfaces.PreferenceKey
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -289,3 +289,4 @@ internal class PreferencesImplTest {
         assertThat(flow.value).isTrue()
     }
 }
+

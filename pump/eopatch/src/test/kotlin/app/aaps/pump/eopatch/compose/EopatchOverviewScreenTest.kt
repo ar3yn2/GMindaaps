@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.compose
+﻿package app.gmaaps.pump.eopatch.compose
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -8,9 +8,9 @@ import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.core.ui.compose.LocalSnackbarHostState
-import app.aaps.core.ui.compose.pump.PumpAction
-import app.aaps.core.ui.compose.pump.PumpOverviewUiState
+import app.gmaaps.core.ui.compose.LocalSnackbarHostState
+import app.gmaaps.core.ui.compose.pump.PumpAction
+import app.gmaaps.core.ui.compose.pump.PumpOverviewUiState
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -25,7 +25,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Covers [EopatchOverviewScreen], and in particular the guard it puts in front of suspending and
@@ -153,3 +153,4 @@ class EopatchOverviewScreenTest {
         assertThat(otherClicks).isEqualTo(1)
     }
 }
+

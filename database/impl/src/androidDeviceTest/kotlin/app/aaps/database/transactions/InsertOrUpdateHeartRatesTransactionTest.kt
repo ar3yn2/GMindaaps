@@ -1,14 +1,14 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
 import android.content.Context
 import androidx.room.Room
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import app.aaps.database.AppDatabase
-import app.aaps.database.AppRepository
-import app.aaps.database.dao.HeartRateDaoTest
-import app.aaps.database.entities.HeartRate
+import app.gmaaps.database.AppDatabase
+import app.gmaaps.database.AppRepository
+import app.gmaaps.database.dao.HeartRateDaoTest
+import app.gmaaps.database.entities.HeartRate
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Assert.assertEquals
@@ -78,3 +78,4 @@ class InsertOrUpdateHeartRatesTransactionTest {
                 isValid == other.isValid)
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.automation
+﻿package app.gmaaps.core.interfaces.automation
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.navigation.ElementType
 
 data class AutomationIconData(
     val icon: ImageVector,
@@ -29,3 +29,4 @@ interface AutomationEvent {
     /** @return set of action icons */
     fun actionIcons(): Set<AutomationIconData>
 }
+

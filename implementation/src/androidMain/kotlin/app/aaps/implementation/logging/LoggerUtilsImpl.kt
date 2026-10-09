@@ -1,6 +1,6 @@
-package app.aaps.implementation.logging
+﻿package app.gmaaps.implementation.logging
 
-import app.aaps.core.interfaces.logging.LoggerUtils
+import app.gmaaps.core.interfaces.logging.LoggerUtils
 import ch.qos.logback.classic.LoggerContext
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
@@ -27,3 +27,4 @@ class LoggerUtilsImpl() : LoggerUtils {
     override val logDirectory: String
         get() = (LoggerFactory.getILoggerFactory() as LoggerContext).getProperty("EXT_FILES_DIR")
 }
+

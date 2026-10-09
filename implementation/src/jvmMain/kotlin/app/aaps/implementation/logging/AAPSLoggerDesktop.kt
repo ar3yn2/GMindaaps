@@ -1,9 +1,9 @@
-package app.aaps.implementation.logging
+﻿package app.gmaaps.implementation.logging
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.L
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.implementation.maintenance.DesktopFolders
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.L
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.implementation.maintenance.DesktopFolders
 import java.io.File
 import java.time.Instant
 
@@ -135,3 +135,4 @@ class AAPSLoggerDesktop(
         const val ROTATED_SUFFIX = ".1"
     }
 }
+

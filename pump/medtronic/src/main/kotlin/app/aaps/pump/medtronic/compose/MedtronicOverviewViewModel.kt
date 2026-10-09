@@ -1,4 +1,4 @@
-package app.aaps.pump.medtronic.compose
+﻿package app.gmaaps.pump.medtronic.compose
 
 import android.content.Context
 import androidx.compose.material.icons.Icons
@@ -12,38 +12,38 @@ import androidx.compose.material.icons.filled.Timeline
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.ActionCategory
-import app.aaps.core.ui.compose.pump.PumpAction
-import app.aaps.core.ui.compose.pump.PumpCommunicationStatus
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.core.ui.compose.pump.PumpOverviewUiState
-import app.aaps.core.ui.compose.pump.tickerFlow
-import app.aaps.pump.common.events.EventRileyLinkDeviceStatusChange
-import app.aaps.pump.common.extensions.stringResource
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkTargetDevice
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
-import app.aaps.pump.common.hw.rileylink.service.tasks.ResetRileyLinkConfigurationTask
-import app.aaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
-import app.aaps.pump.common.hw.rileylink.service.tasks.WakeAndTuneTask
-import app.aaps.pump.medtronic.MedtronicPumpPlugin
-import app.aaps.pump.medtronic.R
-import app.aaps.pump.medtronic.defs.BatteryType
-import app.aaps.pump.medtronic.defs.MedtronicCommandType
-import app.aaps.pump.medtronic.driver.MedtronicPumpStatus
-import app.aaps.pump.medtronic.events.EventMedtronicPumpConfigurationChanged
-import app.aaps.pump.medtronic.events.EventMedtronicPumpValuesChanged
-import app.aaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.ActionCategory
+import app.gmaaps.core.ui.compose.pump.PumpAction
+import app.gmaaps.core.ui.compose.pump.PumpCommunicationStatus
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.core.ui.compose.pump.PumpOverviewUiState
+import app.gmaaps.core.ui.compose.pump.tickerFlow
+import app.gmaaps.pump.common.events.EventRileyLinkDeviceStatusChange
+import app.gmaaps.pump.common.extensions.stringResource
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkTargetDevice
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.ResetRileyLinkConfigurationTask
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.WakeAndTuneTask
+import app.gmaaps.pump.medtronic.MedtronicPumpPlugin
+import app.gmaaps.pump.medtronic.R
+import app.gmaaps.pump.medtronic.defs.BatteryType
+import app.gmaaps.pump.medtronic.defs.MedtronicCommandType
+import app.gmaaps.pump.medtronic.driver.MedtronicPumpStatus
+import app.gmaaps.pump.medtronic.events.EventMedtronicPumpConfigurationChanged
+import app.gmaaps.pump.medtronic.events.EventMedtronicPumpValuesChanged
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -58,8 +58,8 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import java.util.Locale
-import app.aaps.core.ui.R as CoreUiR
-import app.aaps.pump.common.hw.rileylink.R as RileyLinkR
+import app.gmaaps.core.ui.R as CoreUiR
+import app.gmaaps.pump.common.hw.rileylink.R as RileyLinkR
 
 sealed class MedtronicOverviewEvent {
     data object ShowHistory : MedtronicOverviewEvent()
@@ -196,18 +196,18 @@ class MedtronicOverviewViewModel(
 
     private fun buildPumpStatusText(): String {
         return when (medtronicPumpStatus.pumpDeviceState) {
-            app.aaps.core.interfaces.pump.defs.PumpDeviceState.Sleeping             ->
+            app.gmaaps.core.interfaces.pump.defs.PumpDeviceState.Sleeping             ->
                 rh.gs(medtronicPumpStatus.pumpDeviceState.stringResource())
 
-            app.aaps.core.interfaces.pump.defs.PumpDeviceState.NeverContacted,
-            app.aaps.core.interfaces.pump.defs.PumpDeviceState.WakingUp,
-            app.aaps.core.interfaces.pump.defs.PumpDeviceState.PumpUnreachable,
-            app.aaps.core.interfaces.pump.defs.PumpDeviceState.ErrorWhenCommunicating,
-            app.aaps.core.interfaces.pump.defs.PumpDeviceState.TimeoutWhenCommunicating,
-            app.aaps.core.interfaces.pump.defs.PumpDeviceState.InvalidConfiguration ->
+            app.gmaaps.core.interfaces.pump.defs.PumpDeviceState.NeverContacted,
+            app.gmaaps.core.interfaces.pump.defs.PumpDeviceState.WakingUp,
+            app.gmaaps.core.interfaces.pump.defs.PumpDeviceState.PumpUnreachable,
+            app.gmaaps.core.interfaces.pump.defs.PumpDeviceState.ErrorWhenCommunicating,
+            app.gmaaps.core.interfaces.pump.defs.PumpDeviceState.TimeoutWhenCommunicating,
+            app.gmaaps.core.interfaces.pump.defs.PumpDeviceState.InvalidConfiguration ->
                 rh.gs(medtronicPumpStatus.pumpDeviceState.stringResource())
 
-            app.aaps.core.interfaces.pump.defs.PumpDeviceState.Active               -> {
+            app.gmaaps.core.interfaces.pump.defs.PumpDeviceState.Active               -> {
                 val cmd = medtronicUtil.getCurrentCommand()
                 if (cmd == null) {
                     rh.gs(medtronicPumpStatus.pumpDeviceState.stringResource())
@@ -236,7 +236,7 @@ class MedtronicOverviewViewModel(
 
             lastConnection + 30 * 60 * 1000 < System.currentTimeMillis() -> {
                 val text = when {
-                    min < 60   -> rh.gs(app.aaps.core.interfaces.R.string.minago, min)
+                    min < 60   -> rh.gs(app.gmaaps.core.interfaces.R.string.minago, min)
 
                     min < 1440 -> {
                         val h = (min / 60).toInt()
@@ -401,3 +401,4 @@ class MedtronicOverviewViewModel(
     // endregion
 
 }
+

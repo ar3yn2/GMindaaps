@@ -1,14 +1,14 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.insulin.SelectInsulin
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.compose.insulin.SelectInsulin
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Wizard step letting the user pick which insulin the pump/loop should use. Shown only when more
@@ -44,3 +44,4 @@ internal fun CarelevoSelectInsulinStep(
         )
     }
 }
+

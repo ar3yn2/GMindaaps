@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.command
+﻿package app.gmaaps.pump.carelevo.command
 
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
 
 /**
  * Activation operations routed through the AAPS CommandQueue (managed connect-before-execute /
@@ -75,3 +75,4 @@ class CmdAlarmClearPatchDiscard(val alarmId: String, val alarmType: AlarmType, v
 
     override val statusDescription: String = "ALARM CLEAR PATCH DISCARD"
 }
+

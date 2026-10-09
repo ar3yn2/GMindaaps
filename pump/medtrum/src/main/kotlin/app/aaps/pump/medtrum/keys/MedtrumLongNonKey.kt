@@ -1,6 +1,6 @@
-package app.aaps.pump.medtrum.keys
+﻿package app.gmaaps.pump.medtrum.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 enum class MedtrumLongNonKey(
     override val key: String,
@@ -14,3 +14,4 @@ enum class MedtrumLongNonKey(
     BolusStartTime("bolus_start_time", defaultValue = 0L),
     LastBolusTime("last_bolus_time", defaultValue = 0L),
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.ui.widget.glance
+﻿package app.gmaaps.ui.widget.glance
 
 import android.content.Context
 import androidx.compose.runtime.Composable
@@ -29,8 +29,8 @@ import androidx.glance.text.Text
 import androidx.glance.text.TextDecoration
 import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
-import app.aaps.core.interfaces.configuration.awaitInitialized
-import app.aaps.core.ui.compose.navigation.DarkElementColors
+import app.gmaaps.core.interfaces.configuration.awaitInitialized
+import app.gmaaps.core.ui.compose.navigation.DarkElementColors
 
 /**
  * Compact single-row widget: BG + trend arrow | bolus-icon IOB | carbs-icon COB.
@@ -153,3 +153,4 @@ private val SECTION_GAP = 6.dp
 private val ICON_TEXT_GAP = 3.dp
 private val ICON_SIZE = 30.dp
 private val TEXT_SIZE = 22.sp
+

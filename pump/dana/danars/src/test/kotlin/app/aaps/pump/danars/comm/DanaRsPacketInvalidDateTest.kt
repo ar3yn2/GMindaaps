@@ -1,9 +1,9 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.core.interfaces.pump.DetailedBolusInfoStorage
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.TemporaryBasalStorage
-import app.aaps.pump.danars.DanaRSTestBase
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfoStorage
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.TemporaryBasalStorage
+import app.gmaaps.pump.danars.DanaRSTestBase
 import com.google.common.truth.Truth.assertThat
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
@@ -91,3 +91,4 @@ class DanaRsPacketInvalidDateTest : DanaRSTestBase() {
         assertThat(danaPump.bolusStep).isEqualTo(0.1)
     }
 }
+

@@ -1,18 +1,18 @@
-package app.aaps.implementation.profile
+﻿package app.gmaaps.implementation.profile
 
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.R
-import app.aaps.implementation.utils.DecimalFormatterImpl
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.stubTextRefResolution
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.R
+import app.gmaaps.implementation.utils.DecimalFormatterImpl
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.stubTextRefResolution
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -195,3 +195,4 @@ class ProfileUtilImplTest : TestBase() {
         assertThat(result).isEqualTo("00:00 1.000,\n01:00 0.500")
     }
 }
+

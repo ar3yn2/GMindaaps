@@ -1,12 +1,12 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.medtrum.MedtrumPump
-import app.aaps.pump.medtrum.comm.enums.CommandType.AUTH_REQ
-import app.aaps.pump.medtrum.encryption.Crypt
-import app.aaps.pump.medtrum.extension.toByteArray
-import app.aaps.pump.medtrum.extension.toInt
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.medtrum.MedtrumPump
+import app.gmaaps.pump.medtrum.comm.enums.CommandType.AUTH_REQ
+import app.gmaaps.pump.medtrum.encryption.Crypt
+import app.gmaaps.pump.medtrum.extension.toByteArray
+import app.gmaaps.pump.medtrum.extension.toInt
 import dev.zacsweers.metro.Inject
 
 class AuthorizePacket(injector: MetroMemberInjector) : MedtrumPacket(injector) {
@@ -56,3 +56,4 @@ class AuthorizePacket(injector: MetroMemberInjector) : MedtrumPacket(injector) {
         return success
     }
 }
+

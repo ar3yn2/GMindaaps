@@ -1,18 +1,18 @@
-package app.aaps.pump.common.hw.rileylink.ble.data
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.pump.ByteUtil.shortHexString
-import app.aaps.core.utils.pump.ByteUtil.substring
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
-import app.aaps.pump.common.hw.rileylink.ble.command.RileyLinkCommand
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkBLEError
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersion
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
-import app.aaps.pump.common.utils.CRC
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.pump.ByteUtil.shortHexString
+import app.gmaaps.core.utils.pump.ByteUtil.substring
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
+import app.gmaaps.pump.common.hw.rileylink.ble.command.RileyLinkCommand
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkBLEError
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersion
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.common.utils.CRC
 import dev.zacsweers.metro.Inject
 import org.apache.commons.lang3.NotImplementedException
 
@@ -122,3 +122,4 @@ class RadioResponse(
 
     fun getPayload(): ByteArray = decodedPayload
 }
+

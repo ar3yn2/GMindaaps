@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
-import app.aaps.core.objects.workflow.WorkOutcome
+import app.gmaaps.core.objects.workflow.WorkOutcome
 import kotlin.test.Test
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
@@ -43,3 +43,4 @@ class NsLoadChainTest {
         assertFalse(NsLoadChain.shouldContinue(WorkOutcome.StaleInput))
     }
 }
+

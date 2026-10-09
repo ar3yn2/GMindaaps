@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     id("android-module-dependencies")
     id("test-module-dependencies")
@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "app.aaps.pump.carelevo.protocol"
+    namespace = "app.gmaaps.pump.carelevo.protocol"
 }
 
 // The CareLevo wire protocol: the command/response definitions the patch speaks, and the transport
@@ -17,3 +17,4 @@ dependencies {
 
     testImplementation(project(":shared:tests"))
 }
+

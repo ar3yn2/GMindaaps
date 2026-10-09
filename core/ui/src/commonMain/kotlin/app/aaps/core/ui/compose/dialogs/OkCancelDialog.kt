@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -19,9 +19,9 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.htmlToAnnotatedString
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.htmlToAnnotatedString
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * A confirmation dialog with OK and Cancel buttons.
@@ -172,3 +172,4 @@ fun OkCancelDialog(
         properties = DialogProperties(dismissOnBackPress = true, dismissOnClickOutside = false)
     )
 }
+

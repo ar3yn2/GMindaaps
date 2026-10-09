@@ -1,8 +1,8 @@
-package app.aaps.implementation.maintenance.data
+﻿package app.gmaaps.implementation.maintenance.data
 
 import androidx.documentfile.provider.DocumentFile
-import app.aaps.core.interfaces.maintenance.PrefMetadataMap
-import app.aaps.core.interfaces.maintenance.Prefs
+import app.gmaaps.core.interfaces.maintenance.PrefMetadataMap
+import app.gmaaps.core.interfaces.maintenance.Prefs
 
 /**
  * Reading and writing an export through Android's storage access framework.
@@ -22,3 +22,4 @@ interface PrefsFormat {
     fun loadMetadata(contents: String? = null): PrefMetadataMap
     fun isPreferencesFile(file: DocumentFile, preloadedContents: String? = null): Boolean
 }
+

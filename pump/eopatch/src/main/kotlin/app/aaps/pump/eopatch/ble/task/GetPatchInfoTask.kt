@@ -1,20 +1,20 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.core.api.GetFirmwareVersion
-import app.aaps.pump.eopatch.core.api.GetLOT
-import app.aaps.pump.eopatch.core.api.GetModelName
-import app.aaps.pump.eopatch.core.api.GetPumpDuration
-import app.aaps.pump.eopatch.core.api.GetSerialNumber
-import app.aaps.pump.eopatch.core.api.GetWakeUpTime
-import app.aaps.pump.eopatch.core.api.SetGlobalTime
-import app.aaps.pump.eopatch.core.response.BaseResponse
-import app.aaps.pump.eopatch.core.response.FirmwareVersionResponse
-import app.aaps.pump.eopatch.core.response.LotNumberResponse
-import app.aaps.pump.eopatch.core.response.ModelNameResponse
-import app.aaps.pump.eopatch.core.response.PumpDurationResponse
-import app.aaps.pump.eopatch.core.response.SerialNumberResponse
-import app.aaps.pump.eopatch.core.response.WakeUpTimeResponse
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.core.api.GetFirmwareVersion
+import app.gmaaps.pump.eopatch.core.api.GetLOT
+import app.gmaaps.pump.eopatch.core.api.GetModelName
+import app.gmaaps.pump.eopatch.core.api.GetPumpDuration
+import app.gmaaps.pump.eopatch.core.api.GetSerialNumber
+import app.gmaaps.pump.eopatch.core.api.GetWakeUpTime
+import app.gmaaps.pump.eopatch.core.api.SetGlobalTime
+import app.gmaaps.pump.eopatch.core.response.BaseResponse
+import app.gmaaps.pump.eopatch.core.response.FirmwareVersionResponse
+import app.gmaaps.pump.eopatch.core.response.LotNumberResponse
+import app.gmaaps.pump.eopatch.core.response.ModelNameResponse
+import app.gmaaps.pump.eopatch.core.response.PumpDurationResponse
+import app.gmaaps.pump.eopatch.core.response.SerialNumberResponse
+import app.gmaaps.pump.eopatch.core.response.WakeUpTimeResponse
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -101,3 +101,4 @@ class GetPatchInfoTask(
         pm.flushPatchConfig()
     }
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.pump.insight.compose
+﻿package app.gmaaps.pump.insight.compose
 
 import android.content.Context
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.pump.insight.descriptors.InsightState
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.pump.insight.descriptors.InsightState
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -94,3 +94,4 @@ internal class InsightPairStateTest {
         assertThat(sut.uiState.value.devices).isEmpty()
     }
 }
+

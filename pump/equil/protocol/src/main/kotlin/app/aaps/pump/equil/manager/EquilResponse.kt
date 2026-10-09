@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.manager
+﻿package app.gmaaps.pump.equil.manager
 
 import java.nio.ByteBuffer
 import java.util.LinkedList
@@ -22,5 +22,6 @@ class EquilResponse(val cmdCreateTime: Long) {
 
     fun shouldDelay(): Boolean = delay > 0
 }
+
 
 

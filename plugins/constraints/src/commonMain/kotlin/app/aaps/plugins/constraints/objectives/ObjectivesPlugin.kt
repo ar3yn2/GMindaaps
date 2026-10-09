@@ -1,35 +1,35 @@
-package app.aaps.plugins.constraints.objectives
+﻿package app.gmaaps.plugins.constraints.objectives
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.constraints.Objectives
-import app.aaps.core.interfaces.constraints.Objectives.Companion.AUTOSENS_OBJECTIVE
-import app.aaps.core.interfaces.constraints.Objectives.Companion.AUTO_OBJECTIVE
-import app.aaps.core.interfaces.constraints.Objectives.Companion.CLOSED_LOOP_OBJECTIVE
-import app.aaps.core.interfaces.constraints.Objectives.Companion.EXAM_OBJECTIVE
-import app.aaps.core.interfaces.constraints.Objectives.Companion.FIRST_OBJECTIVE
-import app.aaps.core.interfaces.constraints.Objectives.Companion.LGS_OBJECTIVE
-import app.aaps.core.interfaces.constraints.Objectives.Companion.SMB_OBJECTIVE
-import app.aaps.core.interfaces.constraints.PluginConstraints
-import app.aaps.core.interfaces.di.APS
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.EnforcedState
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginBaseWithPreferences
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.IntNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.icons.IcPluginObjectives
-import app.aaps.plugins.constraints.ConstraintsStrings
-import app.aaps.plugins.constraints.objectives.compose.ObjectivesComposeContent
-import app.aaps.plugins.constraints.objectives.keys.ObjectivesBooleanComposedKey
-import app.aaps.plugins.constraints.objectives.keys.ObjectivesLongComposedKey
-import app.aaps.plugins.constraints.objectives.objectives.Objective
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.constraints.Objectives
+import app.gmaaps.core.interfaces.constraints.Objectives.Companion.AUTOSENS_OBJECTIVE
+import app.gmaaps.core.interfaces.constraints.Objectives.Companion.AUTO_OBJECTIVE
+import app.gmaaps.core.interfaces.constraints.Objectives.Companion.CLOSED_LOOP_OBJECTIVE
+import app.gmaaps.core.interfaces.constraints.Objectives.Companion.EXAM_OBJECTIVE
+import app.gmaaps.core.interfaces.constraints.Objectives.Companion.FIRST_OBJECTIVE
+import app.gmaaps.core.interfaces.constraints.Objectives.Companion.LGS_OBJECTIVE
+import app.gmaaps.core.interfaces.constraints.Objectives.Companion.SMB_OBJECTIVE
+import app.gmaaps.core.interfaces.constraints.PluginConstraints
+import app.gmaaps.core.interfaces.di.APS
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.EnforcedState
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginBaseWithPreferences
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.IntNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.icons.IcPluginObjectives
+import app.gmaaps.plugins.constraints.ConstraintsStrings
+import app.gmaaps.plugins.constraints.objectives.compose.ObjectivesComposeContent
+import app.gmaaps.plugins.constraints.objectives.keys.ObjectivesBooleanComposedKey
+import app.gmaaps.plugins.constraints.objectives.keys.ObjectivesLongComposedKey
+import app.gmaaps.plugins.constraints.objectives.objectives.Objective
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -155,3 +155,4 @@ class ObjectivesPlugin(
     override fun isAccomplished(index: Int) = objectives[index].isAccomplished
     override fun isStarted(index: Int): Boolean = objectives[index].isStarted
 }
+

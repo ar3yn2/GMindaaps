@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.compose.steps
+﻿package app.gmaaps.pump.eopatch.compose.steps
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -6,9 +6,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.pump.eopatch.R
-import app.aaps.pump.eopatch.code.PatchStep
-import app.aaps.pump.eopatch.compose.EopatchPatchViewModel
+import app.gmaaps.pump.eopatch.R
+import app.gmaaps.pump.eopatch.code.PatchStep
+import app.gmaaps.pump.eopatch.compose.EopatchPatchViewModel
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -21,7 +21,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Covers the buttons on the patch activation wizard steps.
@@ -127,3 +127,4 @@ class WizardStepNavigationTest {
         verify(viewModel).onConfirm()
     }
 }
+

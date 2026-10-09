@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.VersionChangeDao
-import app.aaps.database.entities.VersionChange
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.VersionChangeDao
+import app.gmaaps.database.entities.VersionChange
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedVersionChangeDao(changes: MutableList<DBEntry>, private val dao: VersionChangeDao) : DelegatedDao(changes), VersionChangeDao by dao {
 

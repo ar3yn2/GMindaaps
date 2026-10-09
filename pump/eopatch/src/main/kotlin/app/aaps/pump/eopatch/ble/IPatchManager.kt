@@ -1,8 +1,8 @@
-package app.aaps.pump.eopatch.ble
+﻿package app.gmaaps.pump.eopatch.ble
 
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.pump.eopatch.core.scan.ScanList
-import app.aaps.pump.eopatch.vo.PatchState
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.pump.eopatch.core.scan.ScanList
+import app.gmaaps.pump.eopatch.vo.PatchState
 import io.reactivex.rxjava3.core.Single
 
 interface IPatchManager {
@@ -17,3 +17,4 @@ interface IPatchManager {
     fun changeReminderSetting()
     fun checkActivationProcess()
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.DS
-import app.aaps.core.nssdk.localmodel.devicestatus.NSDeviceStatus
+import app.gmaaps.core.data.model.DS
+import app.gmaaps.core.nssdk.localmodel.devicestatus.NSDeviceStatus
 import kotlinx.serialization.json.Json
 
 fun DS.toNSDeviceStatus(): NSDeviceStatus {
@@ -22,3 +22,4 @@ fun DS.toNSDeviceStatus(): NSDeviceStatus {
         uploader = null
     )
 }
+

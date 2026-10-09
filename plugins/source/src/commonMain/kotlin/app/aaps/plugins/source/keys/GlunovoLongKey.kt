@@ -1,6 +1,6 @@
-package app.aaps.plugins.source.keys
+﻿package app.gmaaps.plugins.source.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 enum class GlunovoLongKey(
     override val key: String,

@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.profile.ProfileFunction
 
 class InputBg(profileFunction: ProfileFunction) {
 
@@ -51,3 +51,4 @@ class InputBg(profileFunction: ProfileFunction) {
         const val MGDL_MAX = 360.0
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.utils
+﻿package app.gmaaps.core.nssdk.utils
 
 import kotlinx.coroutines.delay
 import kotlin.reflect.KClass
@@ -20,3 +20,4 @@ internal suspend fun <T> retry(
     }
     return block()
 }
+

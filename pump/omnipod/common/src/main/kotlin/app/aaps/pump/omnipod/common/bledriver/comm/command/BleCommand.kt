@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.command
 
-import app.aaps.core.utils.toHex
+import app.gmaaps.core.utils.toHex
 import java.nio.ByteBuffer
 
 object BleCommandRTS : BleCommand(BleCommandType.RTS)
@@ -105,3 +105,4 @@ sealed class BleCommand(val data: ByteArray) {
         }
     }
 }
+

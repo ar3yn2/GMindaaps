@@ -1,8 +1,8 @@
-package app.aaps.ui.compose.foodManagement
+﻿package app.gmaaps.ui.compose.foodManagement
 
-import app.aaps.core.data.model.FD
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.data.model.FD
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -125,3 +125,4 @@ internal class FoodManagementViewModelTest {
         assertThat(sut.uiState.value.undoFood).isNull()
     }
 }
+

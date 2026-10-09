@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.common
+﻿package app.gmaaps.pump.carelevo.common
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -10,22 +10,22 @@ import androidx.annotation.StringRes
 import androidx.core.app.NotificationCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ProcessLifecycleOwner
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationAction
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType.Companion.isCritical
-import app.aaps.pump.carelevo.ext.transformNotificationStringResources
-import app.aaps.pump.carelevo.presentation.model.AlarmEvent
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationAction
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.common.keys.CarelevoIntPreferenceKey
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType.Companion.isCritical
+import app.gmaaps.pump.carelevo.ext.transformNotificationStringResources
+import app.gmaaps.pump.carelevo.presentation.model.AlarmEvent
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -42,7 +42,7 @@ import kotlinx.coroutines.flow.asStateFlow
  * `CarelevoPumpPlugin.handleAlarms` additionally routes a critical alarm through the shared AAPS
  * full-screen alarm (`UiInteraction.runAlarm`) — that escalation is independent of this class.
  *
- * [showTopNotification] deliberately never posts at [app.aaps.core.interfaces.notifications.NotificationLevel.URGENT]
+ * [showTopNotification] deliberately never posts at [app.gmaaps.core.interfaces.notifications.NotificationLevel.URGENT]
  * (see the comment there) — that level is `NotificationManagerImpl`'s own alarm tier, which the
  * shared full-screen alarm's OK button silences *app-wide* on confirm (`muteAllAlarms`), wiping any
  * URGENT+sound card off the screen without actually acknowledging it. Matching `eopatch`'s
@@ -56,7 +56,7 @@ class CarelevoAlarmNotifier @Inject constructor(
     private val aapsLogger: AAPSLogger,
     private val aapsSchedulers: AapsSchedulers,
     private val dateUtil: DateUtil,
-    private val notificationManager: app.aaps.core.interfaces.notifications.NotificationManager,
+    private val notificationManager: app.gmaaps.core.interfaces.notifications.NotificationManager,
     private val preferences: Preferences,
     private val alarmActionHandler: CarelevoAlarmActionHandler
 ) {
@@ -216,7 +216,7 @@ class CarelevoAlarmNotifier @Inject constructor(
         contentIntent: PendingIntent
     ): Notification {
         return NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(app.aaps.core.ui.R.drawable.notif_icon)
+            .setSmallIcon(app.gmaaps.core.ui.R.drawable.notif_icon)
             .setContentTitle(title)
             .setContentText(description)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
@@ -311,3 +311,4 @@ class CarelevoAlarmNotifier @Inject constructor(
     val isInForeground: Boolean
         get() = ProcessLifecycleOwner.get().lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)
 }
+

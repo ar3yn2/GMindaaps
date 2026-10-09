@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.alarm
+﻿package app.gmaaps.pump.eopatch.alarm
 
-import app.aaps.pump.eopatch.core.code.PatchAeCode
+import app.gmaaps.pump.eopatch.core.code.PatchAeCode
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Maybe
 import org.junit.jupiter.api.Test
@@ -62,3 +62,4 @@ class IAlarmRegistryTest {
         verify(registry).add(alarmCode, 0L)
     }
 }
+

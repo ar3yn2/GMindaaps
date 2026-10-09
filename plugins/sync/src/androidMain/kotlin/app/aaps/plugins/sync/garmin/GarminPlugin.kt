@@ -1,26 +1,26 @@
-package app.aaps.plugins.sync.garmin
+﻿package app.gmaaps.plugins.sync.garmin
 
 import android.content.Context
 import androidx.annotation.VisibleForTesting
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginBaseWithPreferences
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.icons.IcPluginGarmin
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.plugins.sync.garmin.keys.GarminBooleanKey
-import app.aaps.plugins.sync.garmin.keys.GarminIntKey
-import app.aaps.plugins.sync.garmin.keys.GarminStringKey
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginBaseWithPreferences
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.icons.IcPluginGarmin
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.plugins.sync.garmin.keys.GarminBooleanKey
+import app.gmaaps.plugins.sync.garmin.keys.GarminIntKey
+import app.gmaaps.plugins.sync.garmin.keys.GarminStringKey
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
 import dev.zacsweers.metro.AppScope
@@ -485,3 +485,4 @@ class GarminPlugin(
     )
 
 }
+

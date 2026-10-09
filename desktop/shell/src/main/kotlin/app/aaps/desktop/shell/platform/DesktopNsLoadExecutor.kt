@@ -1,21 +1,21 @@
-package app.aaps.desktop.shell.platform
+﻿package app.gmaaps.desktop.shell.platform
 
-import app.aaps.core.interfaces.di.ApplicationScope
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.objects.workflow.WorkOutcome
-import app.aaps.plugins.sync.nsclientV3.workers.DataSyncRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadBgRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadDeviceStatusRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadFoodsRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadLastModificationRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadProfileStoreRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadSettingsRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadStatusRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadTreatmentsRunner
-import app.aaps.plugins.sync.nsclientV3.ws.NsLoadChain
-import app.aaps.plugins.sync.nsclientV3.ws.NsLoadExecutor
-import app.aaps.plugins.sync.nsclientV3.ws.NsLoadStep
+import app.gmaaps.core.interfaces.di.ApplicationScope
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.objects.workflow.WorkOutcome
+import app.gmaaps.plugins.sync.nsclientV3.workers.DataSyncRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadBgRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadDeviceStatusRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadFoodsRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadLastModificationRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadProfileStoreRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadSettingsRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadStatusRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadTreatmentsRunner
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsLoadChain
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsLoadExecutor
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsLoadStep
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -162,3 +162,4 @@ class DesktopNsLoadExecutor(
         NsLoadStep.DATA_SYNC         -> ({ dataSync().run() })
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.pump.equil.database
+﻿package app.gmaaps.pump.equil.database
 
 import androidx.room.TypeConverter
-import app.aaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.Profile
 import com.google.gson.GsonBuilder
 
 class Converters {
@@ -25,3 +25,4 @@ class Converters {
         return gson.toJson(segments)
     }
 }
+

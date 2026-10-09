@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.utils
+﻿package app.gmaaps.core.nssdk.utils
 
 import kotlinx.coroutines.CoroutineDispatcher
 
@@ -10,3 +10,4 @@ import kotlinx.coroutines.CoroutineDispatcher
  * `Dispatchers.IO` this client has always used, so nothing about threading changes on Android.
  */
 internal expect val nsIoDispatcher: CoroutineDispatcher
+

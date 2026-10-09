@@ -1,18 +1,18 @@
-package app.aaps.implementation.scenes
+﻿package app.gmaaps.implementation.scenes
 
-import app.aaps.core.data.model.ActiveSceneState
-import app.aaps.core.data.model.ActiveSceneState.ScopedRecords
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.Scene
-import app.aaps.core.data.model.SceneLifecycle
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.model.TT
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.scenes.ActiveSceneSnapshot
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.ActiveSceneState
+import app.gmaaps.core.data.model.ActiveSceneState.ScopedRecords
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.data.model.SceneLifecycle
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.scenes.ActiveSceneSnapshot
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.emptyFlow
 import org.junit.jupiter.api.Test
@@ -224,3 +224,4 @@ class ActiveSceneManagerTest : TestBase() {
         assertThat(m.getActiveState()!!.scene.id).isEqualTo("s2")
     }
 }
+

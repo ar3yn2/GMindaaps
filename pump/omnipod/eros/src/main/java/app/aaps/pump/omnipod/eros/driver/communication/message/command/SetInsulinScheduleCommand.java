@@ -1,19 +1,19 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import androidx.annotation.NonNull;
 
 import org.joda.time.Duration;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.communication.message.NonceResyncableMessageBlock;
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BasalDeliverySchedule;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BasalDeliveryTable;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BasalSchedule;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BolusDeliverySchedule;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.DeliverySchedule;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.TempBasalDeliverySchedule;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.NonceResyncableMessageBlock;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BasalDeliverySchedule;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BasalDeliveryTable;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BasalSchedule;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BolusDeliverySchedule;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.DeliverySchedule;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.TempBasalDeliverySchedule;
 
 public class SetInsulinScheduleCommand extends NonceResyncableMessageBlock {
 
@@ -97,3 +97,4 @@ public class SetInsulinScheduleCommand extends NonceResyncableMessageBlock {
                 '}';
     }
 }
+

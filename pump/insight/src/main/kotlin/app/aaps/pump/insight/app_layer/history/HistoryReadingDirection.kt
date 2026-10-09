@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.app_layer.history
+﻿package app.gmaaps.pump.insight.app_layer.history
 
 enum class HistoryReadingDirection(val id: Int) {
     FORWARD(31),

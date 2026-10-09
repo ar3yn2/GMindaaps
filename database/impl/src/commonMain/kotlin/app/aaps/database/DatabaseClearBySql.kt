@@ -1,4 +1,4 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
 import androidx.room.Transactor.SQLiteTransactionType
 import androidx.room.useWriterConnection
@@ -39,3 +39,4 @@ internal suspend fun AppDatabase.clearAllTablesBySql() {
         connection.usePrepared("PRAGMA wal_checkpoint(TRUNCATE)") { it.step() }
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.common.hw.rileylink.ble
+﻿package app.gmaaps.pump.common.hw.rileylink.ble
 
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkBLEError
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkBLEError
 
 /**
  * Created by andy on 11/23/18.

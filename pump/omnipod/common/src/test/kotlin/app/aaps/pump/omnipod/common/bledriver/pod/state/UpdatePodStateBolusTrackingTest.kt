@@ -1,13 +1,13 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.state
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.state
 
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ActivationProgress
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BolusType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.DeliveryStatus
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ActivationProgress
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BolusType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.DeliveryStatus
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -179,3 +179,4 @@ class UpdatePodStateBolusTrackingTest : TestBase() {
         }
     }
 }
+

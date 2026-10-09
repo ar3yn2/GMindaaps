@@ -1,0 +1,195 @@
+﻿> Task :buildSrc:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :buildSrc:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :buildSrc:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :buildSrc:compilePluginsBlocks UP-TO-DATE
+> Task :buildSrc:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :buildSrc:generateScriptPluginAdapters UP-TO-DATE
+> Task :buildSrc:compileKotlin UP-TO-DATE
+> Task :buildSrc:compileJava NO-SOURCE
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:pluginDescriptors UP-TO-DATE
+> Task :buildSrc:processResources UP-TO-DATE
+> Task :buildSrc:classes UP-TO-DATE
+> Task :buildSrc:jar UP-TO-DATE
+
+> Configure project :app
+The Configuration.setVisible(boolean) method has been deprecated. This is scheduled to be removed in Gradle 11. Consult the upgrading guide for further information: https://docs.gradle.org/9.8.0/userguide/upgrading_version_9.html#deprecate-visible-property
+Starting an external process at configuration time has been deprecated. This will fail with an error in Gradle 11. Use ProviderFactory.exec/javaexec or a ValueSource to obtain the process output, or move the process execution into a task. Consult the upgrading guide for further information: https://docs.gradle.org/9.8.0/userguide/upgrading_version_9.html#config_time_external_processes
+	at Build_gradle.generateGitBuild(build.gradle.kts:34)
+	(Run with --stacktrace to get the full stack trace of this deprecation warning.)
+Starting an external process at configuration time has been deprecated. This will fail with an error in Gradle 11. Use ProviderFactory.exec/javaexec or a ValueSource to obtain the process output, or move the process execution into a task. Consult the upgrading guide for further information: https://docs.gradle.org/9.8.0/userguide/upgrading_version_9.html#config_time_external_processes
+	at Build_gradle.generateGitRemote(build.gradle.kts:47)
+	(Run with --stacktrace to get the full stack trace of this deprecation warning.)
+Starting an external process at configuration time has been deprecated. This will fail with an error in Gradle 11. Use ProviderFactory.exec/javaexec or a ValueSource to obtain the process output, or move the process execution into a task. Consult the upgrading guide for further information: https://docs.gradle.org/9.8.0/userguide/upgrading_version_9.html#config_time_external_processes
+	at Build_gradle.allCommitted(build.gradle.kts:82)
+	(Run with --stacktrace to get the full stack trace of this deprecation warning.)
+-------------------
+isMaster: false
+Starting an external process at configuration time has been deprecated. This will fail with an error in Gradle 11. Use ProviderFactory.exec/javaexec or a ValueSource to obtain the process output, or move the process execution into a task. Consult the upgrading guide for further information: https://docs.gradle.org/9.8.0/userguide/upgrading_version_9.html#config_time_external_processes
+	at Build_gradle.gitAvailable(build.gradle.kts:69)
+	(Run with --stacktrace to get the full stack trace of this deprecation warning.)
+gitAvailable: true
+allCommitted: false
+-------------------
+
+> Configure project :wear
+Starting an external process at configuration time has been deprecated. This will fail with an error in Gradle 11. Use ProviderFactory.exec/javaexec or a ValueSource to obtain the process output, or move the process execution into a task. Consult the upgrading guide for further information: https://docs.gradle.org/9.8.0/userguide/upgrading_version_9.html#config_time_external_processes
+	at Build_gradle.generateGitBuild(build.gradle.kts:28)
+	(Run with --stacktrace to get the full stack trace of this deprecation warning.)
+
+> Task :core:data:kmpPartiallyResolvedDependenciesChecker
+> Task :core:data:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:data:compileKotlinJvm UP-TO-DATE
+> Task :core:data:compileJvmMainJava NO-SOURCE
+> Task :core:data:jvmProcessResources NO-SOURCE
+> Task :core:data:processJvmMainResources SKIPPED
+> Task :core:data:jvmMainClasses UP-TO-DATE
+> Task :core:data:jvmJar UP-TO-DATE
+> Task :core:keys:kmpPartiallyResolvedDependenciesChecker
+> Task :core:keys:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:keys:androidPreBuild UP-TO-DATE
+> Task :core:keys:preAndroidMainBuild UP-TO-DATE
+> Task :core:keys:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :core:keys:packageAndroidMainResources UP-TO-DATE
+> Task :core:keys:parseAndroidMainLocalResources UP-TO-DATE
+> Task :core:keys:generateAndroidMainRFile UP-TO-DATE
+> Task :core:keys:generateKeyStrings UP-TO-DATE
+> Task :core:keys:compileAndroidMain UP-TO-DATE
+> Task :core:keys:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :core:utils:kmpPartiallyResolvedDependenciesChecker
+> Task :core:utils:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:utils:compileAndroidMain UP-TO-DATE
+> Task :core:utils:androidPreBuild UP-TO-DATE
+> Task :core:utils:preAndroidMainBuild UP-TO-DATE
+> Task :core:utils:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :core:interfaces:kmpPartiallyResolvedDependenciesChecker
+> Task :core:interfaces:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:interfaces:convertXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :core:interfaces:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :core:interfaces:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+> Task :core:interfaces:generateResourceAccessorsForAndroidMain SKIPPED
+> Task :core:interfaces:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core:interfaces:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core:interfaces:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :core:interfaces:generateResourceAccessorsForCommonMain SKIPPED
+> Task :core:interfaces:convertXmlValueResourcesForJvmSharedMain NO-SOURCE
+> Task :core:interfaces:copyNonXmlValueResourcesForJvmSharedMain NO-SOURCE
+> Task :core:interfaces:prepareComposeResourcesTaskForJvmSharedMain NO-SOURCE
+> Task :core:interfaces:generateResourceAccessorsForJvmSharedMain SKIPPED
+> Task :core:interfaces:generateActualResourceCollectorsForAndroidMain SKIPPED
+> Task :core:interfaces:androidPreBuild UP-TO-DATE
+> Task :core:interfaces:preAndroidMainBuild UP-TO-DATE
+> Task :core:interfaces:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :core:interfaces:copyAndroidMainComposeResourcesToAndroidAssets UP-TO-DATE
+> Task :core:interfaces:packageAndroidMainResources UP-TO-DATE
+> Task :core:interfaces:parseAndroidMainLocalResources UP-TO-DATE
+> Task :core:interfaces:generateAndroidMainRFile UP-TO-DATE
+> Task :core:interfaces:generateComposeResClass SKIPPED
+> Task :core:interfaces:generateExpectResourceCollectorsForCommonMain SKIPPED
+> Task :core:interfaces:generateInterfacesStrings UP-TO-DATE
+> Task :core:interfaces:compileAndroidMain UP-TO-DATE
+> Task :core:interfaces:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :shared:impl:kmpPartiallyResolvedDependenciesChecker
+> Task :shared:impl:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared:impl:androidPreBuild UP-TO-DATE
+> Task :shared:impl:preAndroidMainBuild UP-TO-DATE
+> Task :core:objects:kmpPartiallyResolvedDependenciesChecker
+> Task :core:objects:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:objects:androidPreBuild UP-TO-DATE
+> Task :core:objects:preAndroidMainBuild UP-TO-DATE
+> Task :core:objects:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :shared:impl:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :core:objects:packageAndroidMainResources UP-TO-DATE
+> Task :shared:impl:packageAndroidMainResources UP-TO-DATE
+> Task :core:objects:parseAndroidMainLocalResources UP-TO-DATE
+> Task :shared:impl:parseAndroidMainLocalResources UP-TO-DATE
+> Task :shared:impl:generateAndroidMainRFile UP-TO-DATE
+> Task :core:objects:generateAndroidMainRFile UP-TO-DATE
+> Task :shared:impl:compileAndroidMain UP-TO-DATE
+> Task :shared:impl:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :core:objects:compileAndroidMain UP-TO-DATE
+> Task :core:objects:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :core:ui:kmpPartiallyResolvedDependenciesChecker
+> Task :core:ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :core:ui:convertXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :core:ui:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :core:ui:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+> Task :core:ui:generateResourceAccessorsForAndroidMain SKIPPED
+> Task :core:ui:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core:ui:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :core:ui:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :core:ui:generateResourceAccessorsForCommonMain SKIPPED
+> Task :core:ui:generateActualResourceCollectorsForAndroidMain SKIPPED
+> Task :core:ui:androidPreBuild UP-TO-DATE
+> Task :core:ui:preAndroidMainBuild UP-TO-DATE
+> Task :core:ui:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :core:ui:copyAndroidMainComposeResourcesToAndroidAssets UP-TO-DATE
+> Task :core:ui:packageAndroidMainResources UP-TO-DATE
+> Task :core:ui:parseAndroidMainLocalResources UP-TO-DATE
+> Task :core:ui:generateAndroidMainRFile UP-TO-DATE
+> Task :core:ui:generateComposeResClass SKIPPED
+> Task :core:ui:generateCoreUiStrings UP-TO-DATE
+> Task :core:ui:generateExpectResourceCollectorsForCommonMain SKIPPED
+> Task :core:ui:compileAndroidMain UP-TO-DATE
+> Task :core:ui:bundleAndroidMainClassesToCompileJar UP-TO-DATE
+> Task :implementation:kmpPartiallyResolvedDependenciesChecker
+> Task :implementation:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :implementation:convertXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :implementation:copyNonXmlValueResourcesForAndroidMain NO-SOURCE
+> Task :implementation:prepareComposeResourcesTaskForAndroidMain NO-SOURCE
+> Task :implementation:generateResourceAccessorsForAndroidMain SKIPPED
+> Task :implementation:convertXmlValueResourcesForCommonMain NO-SOURCE
+> Task :implementation:copyNonXmlValueResourcesForCommonMain NO-SOURCE
+> Task :implementation:prepareComposeResourcesTaskForCommonMain NO-SOURCE
+> Task :implementation:generateResourceAccessorsForCommonMain SKIPPED
+> Task :implementation:convertXmlValueResourcesForJvmSharedMain NO-SOURCE
+> Task :implementation:copyNonXmlValueResourcesForJvmSharedMain NO-SOURCE
+> Task :implementation:prepareComposeResourcesTaskForJvmSharedMain NO-SOURCE
+> Task :implementation:generateResourceAccessorsForJvmSharedMain SKIPPED
+> Task :implementation:generateActualResourceCollectorsForAndroidMain SKIPPED
+> Task :implementation:androidPreBuild UP-TO-DATE
+> Task :implementation:preAndroidMainBuild UP-TO-DATE
+> Task :implementation:generateAndroidMainEmptyResourceFiles UP-TO-DATE
+> Task :implementation:copyAndroidMainComposeResourcesToAndroidAssets UP-TO-DATE
+> Task :implementation:packageAndroidMainResources UP-TO-DATE
+> Task :implementation:parseAndroidMainLocalResources UP-TO-DATE
+> Task :implementation:generateAndroidMainRFile UP-TO-DATE
+> Task :implementation:generateComposeResClass SKIPPED
+> Task :implementation:generateExpectResourceCollectorsForCommonMain SKIPPED
+> Task :implementation:generateImplementationStrings UP-TO-DATE
+
+> Task :implementation:compileAndroidMain FAILED
+Problem found: Kotlin compiler: SUSPEND_OVERRIDDEN_BY_NON_SUSPEND (id: kotlin:compiler:error:SUSPEND_OVERRIDDEN_BY_NON_SUSPEND)
+  Kotlin compiler error
+    Non-suspend function 'onStop' cannot override suspend function 'suspend fun onStop(): Unit' defined in 'app.gmaaps.core.interfaces.plugin.PluginBase'.
+    Location: E:/aaps/aaps4/implementation/src/commonMain/kotlin/app/aaps/profile/ai/AiProfilePlugin.kt:46
+
+[Incubating] Problems report is available at: file:///E:/aaps/aaps4/build/reports/problems/problems-report.html
+.\gradlew : 
+At line:2 char:80
++ ... droid\Sdk"; .\gradlew :implementation:compileAndroidMain --console=pl ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':implementation:compileAndroidMain' (registered by plugin 'com.android.internal.kotlin.multi
+platform.library').
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.btapi.BuildToolsApiCompilationWork
+   > Kotlin compiler: SUSPEND_OVERRIDDEN_BY_NON_SUSPEND
+       Kotlin compiler error
+         Non-suspend function 'onStop' cannot override suspend function 'suspend fun onStop(): Unit' defined in 'app.aa
+ps.core.interfaces.plugin.PluginBase'.
+         Location: E:/aaps/aaps4/implementation/src/commonMain/kotlin/app/aaps/profile/ai/AiProfilePlugin.kt:46
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 9s
+63 actionable tasks: 9 executed, 54 up-to-date
+

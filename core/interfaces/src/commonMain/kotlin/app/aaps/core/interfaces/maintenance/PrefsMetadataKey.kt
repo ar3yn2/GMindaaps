@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.maintenance
+﻿package app.gmaaps.core.interfaces.maintenance
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 
 interface PrefsMetadataKey {
 

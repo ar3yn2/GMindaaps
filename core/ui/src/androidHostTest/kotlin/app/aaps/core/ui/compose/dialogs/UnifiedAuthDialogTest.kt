@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -8,12 +8,12 @@ import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
-import app.aaps.core.interfaces.protection.AuthMethod
-import app.aaps.core.interfaces.protection.AuthorizationResult
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.protection.ProtectionResult
-import app.aaps.core.interfaces.protection.ProtectionType
-import app.aaps.core.ui.R
+import app.gmaaps.core.interfaces.protection.AuthMethod
+import app.gmaaps.core.interfaces.protection.AuthorizationResult
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.protection.ProtectionResult
+import app.gmaaps.core.interfaces.protection.ProtectionType
+import app.gmaaps.core.ui.R
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
@@ -102,3 +102,4 @@ class UnifiedAuthDialogTest {
         assertThat(result).isEqualTo(AuthorizationResult(null, ProtectionResult.CANCELLED))
     }
 }
+

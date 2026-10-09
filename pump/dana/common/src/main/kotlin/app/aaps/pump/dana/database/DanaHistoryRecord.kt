@@ -1,10 +1,10 @@
-package app.aaps.pump.dana.database
+﻿package app.gmaaps.pump.dana.database
 
 import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import app.aaps.core.ui.compose.pump.PumpHistoryRecord
+import app.gmaaps.core.ui.compose.pump.PumpHistoryRecord
 
 @Entity(
     tableName = TABLE_DANA_HISTORY,
@@ -25,3 +25,4 @@ data class DanaHistoryRecord(
     @get:Ignore
     override val durationMinutes: Int get() = duration.toInt()
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.resources
+﻿package app.gmaaps.core.interfaces.resources
 
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test
@@ -103,3 +103,4 @@ class TextRefValueRegistryTest {
         assertNull(TextRefValueRegistry.locale)
     }
 }
+

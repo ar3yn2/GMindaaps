@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.scan
+﻿package app.gmaaps.pump.eopatch.core.scan
 
 enum class BleConnectionState {
     CONNECTING,
@@ -10,3 +10,4 @@ enum class BleConnectionState {
     val isConnecting: Boolean get() = this == CONNECTING
     val isConnected: Boolean get() = this == CONNECTED
 }
+

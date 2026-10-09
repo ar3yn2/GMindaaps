@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.resources
+﻿package app.gmaaps.core.interfaces.resources
 
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * Where a module tells the platforms without an Android resource table how to read the names it owns.
@@ -46,3 +46,4 @@ object TextRefValueRegistry {
         locale = null
     }
 }
+

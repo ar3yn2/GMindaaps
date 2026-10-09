@@ -1,8 +1,8 @@
-package app.aaps.plugins.aps.autotune
+﻿package app.gmaaps.plugins.aps.autotune
 
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.plugins.aps.autotune.data.ATProfile
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.plugins.aps.autotune.data.ATProfile
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
 import org.junit.jupiter.api.Test
@@ -76,3 +76,4 @@ class AutotuneProfileJsonTest : TestBaseWithProfile() {
         assertThat(readBack.getJSONArray("sens").getJSONObject(0).has("value")).isTrue()
     }
 }
+

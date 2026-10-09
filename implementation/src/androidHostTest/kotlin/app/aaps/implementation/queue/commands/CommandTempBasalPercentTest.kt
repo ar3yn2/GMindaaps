@@ -1,11 +1,11 @@
-package app.aaps.implementation.queue.commands
+﻿package app.gmaaps.implementation.queue.commands
 
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.queue.Command
-import app.aaps.core.interfaces.queue.cancel
-import app.aaps.implementation.pump.PumpEnactResultObject
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.queue.Command
+import app.gmaaps.core.interfaces.queue.cancel
+import app.gmaaps.implementation.pump.PumpEnactResultObject
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Test
@@ -73,10 +73,10 @@ class CommandTempBasalPercentTest : TestBaseWithProfile() {
 
     @Test
     fun `cancel completes with success by default`() = runTest {
-        whenever(rh.gs(app.aaps.core.ui.R.string.command_replaced)).thenReturn("replaced")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.command_replaced)).thenReturn("replaced")
         val command = newCommand()
 
-        command.cancel(app.aaps.core.ui.R.string.command_replaced)
+        command.cancel(app.gmaaps.core.ui.R.string.command_replaced)
 
         val received = command.completion.await()
         assertThat(received.success).isTrue()
@@ -84,10 +84,10 @@ class CommandTempBasalPercentTest : TestBaseWithProfile() {
 
     @Test
     fun `cancel completes with failure when success=false`() = runTest {
-        whenever(rh.gs(app.aaps.core.ui.R.string.command_replaced)).thenReturn("replaced")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.command_replaced)).thenReturn("replaced")
         val command = newCommand()
 
-        command.cancel(app.aaps.core.ui.R.string.command_replaced, success = false)
+        command.cancel(app.gmaaps.core.ui.R.string.command_replaced, success = false)
 
         val received = command.completion.await()
         assertThat(received.success).isFalse()
@@ -103,3 +103,4 @@ class CommandTempBasalPercentTest : TestBaseWithProfile() {
         assertThat(newCommand(percent = 75, durationInMinutes = 45).log()).isEqualTo("TEMP BASAL 75% 45 min")
     }
 }
+

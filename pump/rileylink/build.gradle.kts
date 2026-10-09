@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.metro)
     alias(libs.plugins.compose.compiler)
@@ -9,7 +9,7 @@ plugins {
 
 
 android {
-    namespace = "app.aaps.pump.common.hw.rileylink"
+    namespace = "app.gmaaps.pump.common.hw.rileylink"
 }
 
 dependencies {
@@ -24,3 +24,4 @@ dependencies {
     runtimeOnly(libs.net.danlew.android.joda)
 
 }
+

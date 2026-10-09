@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.pump.defs
+﻿package app.gmaaps.core.interfaces.pump.defs
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.utils.Round
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.utils.Round
 import kotlin.math.min
 
 fun PumpType.baseBasalRange(): String =

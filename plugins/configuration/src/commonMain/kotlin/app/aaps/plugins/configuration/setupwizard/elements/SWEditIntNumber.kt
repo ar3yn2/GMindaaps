@@ -1,13 +1,13 @@
-package app.aaps.plugins.configuration.setupwizard.elements
+﻿package app.gmaaps.plugins.configuration.setupwizard.elements
 
 import androidx.compose.runtime.Composable
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.protection.PasswordCheck
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.preference.AdaptiveIntPreferenceItem
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.protection.PasswordCheck
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.preference.AdaptiveIntPreferenceItem
 import dev.zacsweers.metro.Inject
 
 @Inject
@@ -33,3 +33,4 @@ class SWEditIntNumber(aapsLogger: AAPSLogger, rh: TextResolver, rxBus: RxBus, pr
         )
     }
 }
+

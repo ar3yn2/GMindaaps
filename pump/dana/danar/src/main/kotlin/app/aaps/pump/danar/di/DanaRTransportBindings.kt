@@ -1,22 +1,22 @@
-package app.aaps.pump.danar.di
+﻿package app.gmaaps.pump.danar.di
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.rfcomm.RfcommTransport
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danar.DanaRPlugin
-import app.aaps.pump.danar.emulator.DanaRPumpEmulator
-import app.aaps.pump.danar.emulator.DanaRPumpState
-import app.aaps.pump.danar.emulator.DanaRVariant
-import app.aaps.pump.danar.emulator.EmulatorRfcommTransport
-import app.aaps.pump.danar.services.RealRfcommTransport
-import app.aaps.pump.danarkorean.DanaRKoreanPlugin
-import app.aaps.pump.danarv2.DanaRv2Plugin
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommTransport
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danar.DanaRPlugin
+import app.gmaaps.pump.danar.emulator.DanaRPumpEmulator
+import app.gmaaps.pump.danar.emulator.DanaRPumpState
+import app.gmaaps.pump.danar.emulator.DanaRVariant
+import app.gmaaps.pump.danar.emulator.EmulatorRfcommTransport
+import app.gmaaps.pump.danar.services.RealRfcommTransport
+import app.gmaaps.pump.danarkorean.DanaRKoreanPlugin
+import app.gmaaps.pump.danarv2.DanaRv2Plugin
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -88,3 +88,4 @@ object DanaRTransportBindings {
         }
     }
 }
+

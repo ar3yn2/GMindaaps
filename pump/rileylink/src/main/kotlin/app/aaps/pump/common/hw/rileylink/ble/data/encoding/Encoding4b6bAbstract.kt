@@ -1,8 +1,8 @@
-package app.aaps.pump.common.hw.rileylink.ble.data.encoding
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data.encoding
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.utils.pump.ByteUtil.getHex
-import app.aaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.utils.pump.ByteUtil.getHex
+import app.gmaaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
 
 /**
  * Created by andy on 11/24/18.
@@ -51,3 +51,4 @@ abstract class Encoding4b6bAbstract : Encoding4b6b {
         }
     }
 }
+

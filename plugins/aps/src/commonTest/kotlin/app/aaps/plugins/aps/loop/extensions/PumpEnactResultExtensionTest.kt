@@ -1,7 +1,7 @@
-package app.aaps.plugins.aps.loop.extensions
+﻿package app.gmaaps.plugins.aps.loop.extensions
 
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlinx.serialization.json.double
 import kotlinx.serialization.json.int
 import kotlinx.serialization.json.jsonPrimitive
@@ -306,3 +306,4 @@ class PumpEnactResultExtensionTest {
         assertEquals(1.0, json.getValue("rate").jsonPrimitive.double)
     }
 }
+

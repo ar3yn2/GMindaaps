@@ -1,10 +1,10 @@
-package app.aaps.plugins.configuration.setupwizard
+﻿package app.gmaaps.plugins.configuration.setupwizard
 
 import androidx.compose.runtime.Composable
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.configuration.setupwizard.elements.SWItem
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.configuration.setupwizard.elements.SWItem
 import dev.zacsweers.metro.Inject
 
 @Inject

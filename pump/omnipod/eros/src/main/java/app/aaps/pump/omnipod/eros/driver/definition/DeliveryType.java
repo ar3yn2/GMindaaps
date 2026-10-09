@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
 public enum DeliveryType {
     NONE((byte) 0x00),
@@ -25,3 +25,4 @@ public enum DeliveryType {
         return value;
     }
 }
+

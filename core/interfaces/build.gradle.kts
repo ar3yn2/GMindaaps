@@ -1,4 +1,4 @@
-import kotlin.math.min
+﻿import kotlin.math.min
 
 plugins {
     id("kmp-test-defaults")
@@ -17,7 +17,7 @@ plugins {
 // R.string Int. The strings themselves do not move, and AAPT keeps resolving them as before.
 val generateInterfacesStrings = tasks.register<GenerateKeyStringsTask>("generateInterfacesStrings") {
     resDir.set(layout.projectDirectory.dir("src/androidMain/res"))
-    packageName.set("app.aaps.core.interfaces")
+    packageName.set("app.gmaaps.core.interfaces")
     owner.set("interfaces")
     objectName.set("InterfacesStrings")
     idsObjectName.set("InterfacesStringIds")
@@ -31,7 +31,7 @@ val generateInterfacesStrings = tasks.register<GenerateKeyStringsTask>("generate
 
 kotlin {
     android {
-        namespace = "app.aaps.core.interfaces"
+        namespace = "app.gmaaps.core.interfaces"
         compileSdk = Versions.compileSdk
         minSdk = min(Versions.minSdk, Versions.wearMinSdk)  // Compatible with wear module
         // Off by default for a multiplatform library, unlike a plain android library.
@@ -159,3 +159,4 @@ kotlin {
         }
     }
 }
+

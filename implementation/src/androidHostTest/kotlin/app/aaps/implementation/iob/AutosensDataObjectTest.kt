@@ -1,10 +1,10 @@
-package app.aaps.implementation.iob
+﻿package app.gmaaps.implementation.iob
 
-import app.aaps.core.interfaces.aps.AutosensData
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.aps.AutosensData
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.ArgumentMatchers.anyLong
@@ -87,7 +87,7 @@ class AutosensDataObjectTest : TestBase() {
      *
      * One value below is deliberately a decimal tie. `4.005` is really `4.00499…` as a double, and the
      * two formatters disagree about it: `String.format` rounds from the shortest decimal text that
-     * round-trips ("4.005", so up to 4.01), while [app.aaps.core.data.format.NumberFormat] rounds the
+     * round-trips ("4.005", so up to 4.01), while [app.gmaaps.core.data.format.NumberFormat] rounds the
      * binary value it is given (below the tie, so down to 4.00). The 4.00 below is therefore a known,
      * accepted change from the JVM original - kept in the test on purpose so it stays visible rather
      * than being discovered again later. It only affects this debug line.
@@ -116,3 +116,4 @@ class AutosensDataObjectTest : TestBase() {
         )
     }
 }
+

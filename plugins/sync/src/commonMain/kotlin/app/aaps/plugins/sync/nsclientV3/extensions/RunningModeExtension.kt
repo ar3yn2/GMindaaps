@@ -1,11 +1,11 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.nssdk.localmodel.treatment.EventType
-import app.aaps.core.nssdk.localmodel.treatment.NSOfflineEvent
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.nssdk.localmodel.treatment.EventType
+import app.gmaaps.core.nssdk.localmodel.treatment.NSOfflineEvent
 
 fun NSOfflineEvent.toRunningMode(): RM =
     RM(
@@ -100,3 +100,4 @@ fun RM.toNSOfflineEvent(): NSOfflineEvent =
 
 fun RM.Mode?.toMode(): NSOfflineEvent.Mode =
     NSOfflineEvent.Mode.fromString(this?.name)
+

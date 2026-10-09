@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition.schedule;
+package app.gmaaps.pump.omnipod.eros.driver.definition.schedule;
 
 import androidx.annotation.NonNull;
 
@@ -159,3 +159,4 @@ public class BasalSchedule {
         }
     }
 }
+

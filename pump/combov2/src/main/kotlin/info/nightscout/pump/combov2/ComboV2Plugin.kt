@@ -1,52 +1,52 @@
-package info.nightscout.pump.combov2
+﻿package info.nightscout.pump.combov2
 
 import android.content.Context
 import android.content.Intent
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.constraints.PluginConstraints
-import app.aaps.core.interfaces.di.PumpDriver
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpPluginBase
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.comment
-import app.aaps.core.interfaces.pump.defs.fillFor
-import app.aaps.core.interfaces.pump.mapState
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventInitializationChanged
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.sharedPreferences.SP
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.TextRef.Companion.withArgs
-import app.aaps.core.ui.compose.icons.IcPluginCombo
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.constraints.PluginConstraints
+import app.gmaaps.core.interfaces.di.PumpDriver
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpPluginBase
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.comment
+import app.gmaaps.core.interfaces.pump.defs.fillFor
+import app.gmaaps.core.interfaces.pump.mapState
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventInitializationChanged
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef.Companion.withArgs
+import app.gmaaps.core.ui.compose.icons.IcPluginCombo
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -792,7 +792,7 @@ class ComboV2Plugin(
             return pumpEnactResultProvider().apply {
                 success = true
                 enacted = false
-                comment = rh.gs(app.aaps.core.ui.R.string.pump_not_initialized_profile_not_set)
+                comment = rh.gs(app.gmaaps.core.ui.R.string.pump_not_initialized_profile_not_set)
             }
         }
 
@@ -839,7 +839,7 @@ class ComboV2Plugin(
             pumpEnactResult.apply {
                 success = false
                 enacted = false
-                comment = rh.gs(app.aaps.core.ui.R.string.failed_update_basal_profile)
+                comment = rh.gs(app.gmaaps.core.ui.R.string.failed_update_basal_profile)
             }
         }
         return pumpEnactResult
@@ -991,7 +991,7 @@ class ComboV2Plugin(
                     acquiredPump.deliverBolus(requestedBolusAmount, bolusReason)
                 }
 
-                reportFinishedBolus(rh.gs(app.aaps.core.interfaces.R.string.bolus_delivered_successfully, detailedBolusInfo.insulin), detailedBolusInfo.id, pumpEnactResult, succeeded = true)
+                reportFinishedBolus(rh.gs(app.gmaaps.core.interfaces.R.string.bolus_delivered_successfully, detailedBolusInfo.insulin), detailedBolusInfo.id, pumpEnactResult, succeeded = true)
             } catch (e: CancellationException) {
                 // Cancellation is not an error, but it also means
                 // that the profile update was not enacted.
@@ -1105,7 +1105,7 @@ class ComboV2Plugin(
                 pumpEnactResult.apply {
                     success = false
                     enacted = false
-                    comment = rh.gs(app.aaps.core.ui.R.string.error)
+                    comment = rh.gs(app.gmaaps.core.ui.R.string.error)
                 }
                 return pumpEnactResult
             }
@@ -1137,7 +1137,7 @@ class ComboV2Plugin(
                 pumpEnactResult.apply {
                     success = false
                     enacted = false
-                    comment = rh.gs(app.aaps.core.ui.R.string.error)
+                    comment = rh.gs(app.gmaaps.core.ui.R.string.error)
                 }
                 return pumpEnactResult
             }
@@ -1440,7 +1440,7 @@ class ComboV2Plugin(
                         // Notifications on the AAPS overview fragment are not useful here
                         // because the pairing activity obscures that fragment. So, instead,
                         // alert the user by showing the notification via the toaster.
-                        rxBus.send(EventShowSnackbar(rh.gs(app.aaps.core.ui.R.string.ble_not_enabled), EventShowSnackbar.Type.Error))
+                        rxBus.send(EventShowSnackbar(rh.gs(app.gmaaps.core.ui.R.string.ble_not_enabled), EventShowSnackbar.Type.Error))
                         ComboCtlPumpManager.PairingResult.ExceptionDuringPairing(e)
                     }
                 }
@@ -1464,7 +1464,7 @@ class ComboV2Plugin(
                 // queue will contain a pump_driver_changed readstatus
                 // command already. The queue will see that and ignore
                 // this readStatus() call automatically.
-                commandQueue.readStatus(rh.gs(app.aaps.core.ui.R.string.pump_paired))
+                commandQueue.readStatus(rh.gs(app.gmaaps.core.ui.R.string.pump_paired))
             } finally {
                 pairingJob = null
                 pairingPINChannel?.close()
@@ -2213,3 +2213,4 @@ class ComboV2Plugin(
     )
 
 }
+

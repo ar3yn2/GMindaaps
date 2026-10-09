@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.command
+﻿package app.gmaaps.pump.carelevo.command
 
-import app.aaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.interfaces.queue.CustomCommand
 
 /**
  * Activation safety-check routed through the AAPS CommandQueue so it gets the queue's managed
@@ -11,3 +11,4 @@ class CmdSafetyCheck : CustomCommand {
 
     override val statusDescription: String = "SAFETY CHECK"
 }
+

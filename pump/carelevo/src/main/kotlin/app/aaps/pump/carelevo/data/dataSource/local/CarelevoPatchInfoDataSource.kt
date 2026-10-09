@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.data.dataSource.local
+﻿package app.gmaaps.pump.carelevo.data.dataSource.local
 
-import app.aaps.pump.carelevo.data.model.entities.CarelevoPatchInfoEntity
+import app.gmaaps.pump.carelevo.data.model.entities.CarelevoPatchInfoEntity
 import io.reactivex.rxjava3.core.Observable
 import java.util.Optional
 

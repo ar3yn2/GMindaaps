@@ -1,13 +1,13 @@
-package app.aaps.plugins.source
+﻿package app.gmaaps.plugins.source
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.pump.VirtualPump
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.pump.VirtualPump
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
@@ -99,3 +99,4 @@ class RandomBgPluginTest : TestBaseWithProfile() {
         assertThat(randomBgPlugin.getPreferenceScreenContent()).isInstanceOf(PreferenceSubScreenDef::class.java)
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.DelegatedAppDatabase
-import app.aaps.database.daos.StepsCountDao
-import app.aaps.database.entities.StepsCount
+import app.gmaaps.database.DelegatedAppDatabase
+import app.gmaaps.database.daos.StepsCountDao
+import app.gmaaps.database.entities.StepsCount
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -142,3 +142,4 @@ class InsertOrUpdateStepsCountsTransactionTest {
         duration = 60000L
     ).also { it.id = id }
 }
+

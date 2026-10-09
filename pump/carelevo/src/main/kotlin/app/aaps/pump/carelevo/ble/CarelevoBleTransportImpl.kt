@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.ble
+﻿package app.gmaaps.pump.carelevo.ble
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -21,16 +21,16 @@ import android.os.Build
 import android.os.ParcelUuid
 import android.os.SystemClock
 import androidx.core.app.ActivityCompat
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.ble.BleAdapter
-import app.aaps.core.interfaces.pump.ble.BleGatt
-import app.aaps.core.interfaces.pump.ble.BleScanner
-import app.aaps.core.interfaces.pump.ble.BleTransportListener
-import app.aaps.core.interfaces.pump.ble.PairingState
-import app.aaps.core.interfaces.pump.ble.ScannedDevice
-import app.aaps.pump.carelevo.config.BleEnvConfig
-import app.aaps.pump.carelevo.ext.convertBytesToHex
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.ble.BleAdapter
+import app.gmaaps.core.interfaces.pump.ble.BleGatt
+import app.gmaaps.core.interfaces.pump.ble.BleScanner
+import app.gmaaps.core.interfaces.pump.ble.BleTransportListener
+import app.gmaaps.core.interfaces.pump.ble.PairingState
+import app.gmaaps.core.interfaces.pump.ble.ScannedDevice
+import app.gmaaps.pump.carelevo.config.BleEnvConfig
+import app.gmaaps.pump.carelevo.ext.convertBytesToHex
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -47,7 +47,7 @@ import java.util.UUID
  * single-write-characteristic / single-notify-characteristic patch-pump shape, so the fleet
  * template maps 1:1. The three sub-interfaces are private inner classes sharing the impl's
  * mutable GATT state, and the single [BluetoothGattCallback] fans every event out to one
- * [BleTransportListener] (the [app.aaps.pump.carelevo.ble.gatt.BleTransportGattConnection]
+ * [BleTransportListener] (the [app.gmaaps.pump.carelevo.ble.gatt.BleTransportGattConnection]
  * adapter, which bridges into the [BleClient] correlation layer).
  *
  * UUIDs come from [BleEnvConfig]: service `e1b40001`, write char (rx) `e1b40002`,
@@ -348,3 +348,4 @@ class CarelevoBleTransportImpl @Inject constructor(
         private val CCCD_UUID: UUID = UUID.fromString(BleEnvConfig.BLE_CCC_DESCRIPTOR)
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.keys
+﻿package app.gmaaps.pump.omnipod.common.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 
 enum class DashStringNonPreferenceKey(
     override val key: String,
@@ -9,3 +9,4 @@ enum class DashStringNonPreferenceKey(
 
     PodState("AAPS.OmnipodDash.pod_state", ""),
 }
+

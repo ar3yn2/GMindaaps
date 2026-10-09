@@ -1,4 +1,4 @@
-package app.aaps.shared.impl.utils
+﻿package app.gmaaps.shared.impl.utils
 
 /**
  * The part of date handling that only the platform can answer.
@@ -46,3 +46,4 @@ interface DateFormatPlatform {
      */
     fun standardUtcOffsetMillis(): Long
 }
+

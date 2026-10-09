@@ -1,18 +1,18 @@
-package app.aaps.pump.carelevo.coordinator
+﻿package app.gmaaps.pump.carelevo.coordinator
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.ble.commands.SimpleResultResponse
-import app.aaps.pump.carelevo.ble.commands.TempBasalCancelCommand
-import app.aaps.pump.carelevo.ble.commands.TempBasalCommand
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.domain.usecase.basal.CarelevoCancelTempBasalInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.basal.CarelevoStartTempBasalInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.basal.model.StartTempBasalInfusionRequestModel
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.ble.commands.SimpleResultResponse
+import app.gmaaps.pump.carelevo.ble.commands.TempBasalCancelCommand
+import app.gmaaps.pump.carelevo.ble.commands.TempBasalCommand
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.domain.usecase.basal.CarelevoCancelTempBasalInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.basal.CarelevoStartTempBasalInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.basal.model.StartTempBasalInfusionRequestModel
 import com.google.common.truth.Truth.assertThat
 import dev.zacsweers.metro.Provider
 import org.junit.jupiter.api.Assertions.assertThrows
@@ -392,3 +392,4 @@ internal class CarelevoTempBasalCoordinatorTest {
         override fun cancelled(cancelled: Boolean): PumpEnactResult = apply { this.cancelled = cancelled }
     }
 }
+

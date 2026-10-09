@@ -1,8 +1,8 @@
-package app.aaps.plugins.sync.garmin
+﻿package app.gmaaps.plugins.sync.garmin
 
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.profile.Profile
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.profile.Profile
 import java.time.Instant
 
 /** Abstraction from all the functionality we need from the AAPS app. */
@@ -61,3 +61,4 @@ interface LoopHub {
         device: String?
     )
 }
+

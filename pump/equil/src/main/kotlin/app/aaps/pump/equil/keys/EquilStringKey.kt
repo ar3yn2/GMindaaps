@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.keys
+﻿package app.gmaaps.pump.equil.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 
 enum class EquilStringKey(
     override val key: String,
@@ -14,3 +14,4 @@ enum class EquilStringKey(
     State("key_equil_state1", ""),
     EmulatorDeviceName("key_equil_emulator_device_name", "", exportable = false),
 }
+

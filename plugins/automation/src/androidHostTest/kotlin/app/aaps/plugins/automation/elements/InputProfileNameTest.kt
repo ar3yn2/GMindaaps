@@ -1,6 +1,6 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
-import app.aaps.plugins.automation.triggers.TriggerTestBase
+import app.gmaaps.plugins.automation.triggers.TriggerTestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -13,3 +13,4 @@ class InputProfileNameTest : TriggerTestBase() {
         assertThat(inputProfileName.value).isEqualTo("Test2")
     }
 }
+

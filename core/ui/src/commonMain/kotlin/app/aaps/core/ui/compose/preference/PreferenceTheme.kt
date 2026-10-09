@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2023 Google LLC
  * Adapted for AAPS
  *
@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.material3.MaterialTheme
@@ -33,7 +33,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.aaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.ui.compose.LocalPreferences
 
 @Stable
 class PreferenceTheme(
@@ -173,3 +173,4 @@ fun ProvidePreferenceTheme(
 internal fun noLocalProvidedFor(name: String): Nothing {
     error("CompositionLocal $name not present")
 }
+

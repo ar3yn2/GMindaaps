@@ -1,4 +1,4 @@
-package app.aaps.pump.medtronic.defs
+﻿package app.gmaaps.pump.medtronic.defs
 
 /**
  * This file was taken from GGC - GNU Gluco Control (ggc.sourceforge.net), application for diabetes

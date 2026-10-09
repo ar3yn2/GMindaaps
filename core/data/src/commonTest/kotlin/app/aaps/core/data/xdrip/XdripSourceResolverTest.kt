@@ -1,6 +1,6 @@
-package app.aaps.core.data.xdrip
+﻿package app.gmaaps.core.data.xdrip
 
-import app.aaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.SourceSensor
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -76,3 +76,4 @@ class XdripSourceResolverTest {
         assertEquals(SourceSensor.UNKNOWN, XdripSourceResolver.fromNightscoutDevice(""))
     }
 }
+

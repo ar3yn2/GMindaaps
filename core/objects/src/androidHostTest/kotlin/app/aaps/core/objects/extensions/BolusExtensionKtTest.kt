@@ -1,9 +1,9 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.iobCalc
-import app.aaps.core.data.time.T
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.iobCalc
+import app.gmaaps.core.data.time.T
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -27,3 +27,4 @@ class BolusExtensionKtTest : TestBaseWithProfile() {
         assertThat(bolus.iobCalc(now + T.hours(1).msecs()).iobContrib).isEqualTo(0.0)
     }
 }
+

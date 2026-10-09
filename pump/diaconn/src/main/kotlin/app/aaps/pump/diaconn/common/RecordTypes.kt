@@ -1,4 +1,4 @@
-package app.aaps.pump.diaconn.common
+﻿package app.gmaaps.pump.diaconn.common
 
 object RecordTypes {
     const val RECORD_TYPE_BOLUS = 0x01.toByte()

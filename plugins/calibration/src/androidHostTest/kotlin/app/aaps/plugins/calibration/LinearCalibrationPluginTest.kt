@@ -1,26 +1,26 @@
-package app.aaps.plugins.calibration
+﻿package app.gmaaps.plugins.calibration
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.aps.GlucoseStatusSMB
-import app.aaps.core.interfaces.calibration.AddEntryResult
-import app.aaps.core.interfaces.calibration.CalibrationContext
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.notifications.NotificationAction
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.aps.GlucoseStatusSMB
+import app.gmaaps.core.interfaces.calibration.AddEntryResult
+import app.gmaaps.core.interfaces.calibration.CalibrationContext
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.notifications.NotificationAction
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -438,3 +438,4 @@ class LinearCalibrationPluginTest : TestBase() {
         sourceSensor = SourceSensor.UNKNOWN
     )
 }
+

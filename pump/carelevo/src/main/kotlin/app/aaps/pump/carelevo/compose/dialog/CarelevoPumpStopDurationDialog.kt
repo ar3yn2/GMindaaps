@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.dialog
+﻿package app.gmaaps.pump.carelevo.compose.dialog
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -15,7 +15,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import app.aaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.R
 
 @Composable
 internal fun CarelevoPumpStopDurationDialog(
@@ -58,3 +58,4 @@ internal fun CarelevoPumpStopDurationDialog(
         }
     )
 }
+

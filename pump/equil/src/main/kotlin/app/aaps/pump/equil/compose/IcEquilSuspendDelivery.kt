@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.compose
+﻿package app.gmaaps.pump.equil.compose
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
@@ -151,3 +151,4 @@ val IcEquilSuspendDelivery: ImageVector by lazy {
         }
     }.build()
 }
+

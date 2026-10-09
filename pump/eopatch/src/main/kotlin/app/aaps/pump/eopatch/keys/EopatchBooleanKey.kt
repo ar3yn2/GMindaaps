@@ -1,8 +1,8 @@
-package app.aaps.pump.eopatch.keys
+﻿package app.gmaaps.pump.eopatch.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.eopatch.R
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.eopatch.R
 
 enum class EopatchBooleanKey(
     override val key: String,
@@ -15,3 +15,4 @@ enum class EopatchBooleanKey(
 
     override val title: TextRef = TextRef.AndroidRes(titleResId)
 }
+

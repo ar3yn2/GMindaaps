@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.clientcontrol
+﻿package app.gmaaps.core.nssdk.localmodel.clientcontrol
 
 import kotlinx.serialization.Serializable
 
@@ -48,3 +48,4 @@ data class SignedEnvelope(
     fun canonicalString(): String =
         "$clientId|$counter|$timestamp|$validUntil|$wantsAck|$type|$payload"
 }
+

@@ -1,13 +1,13 @@
-package app.aaps.implementation.profile
+﻿package app.gmaaps.implementation.profile
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileStore
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.HardLimits
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileStore
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.HardLimits
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonObject
@@ -76,3 +76,4 @@ class ProfileStoreObjectTest : TestBase() {
         assertThat(store("""{"store":{}}""").getStartDate()).isEqualTo(0L)
     }
 }
+

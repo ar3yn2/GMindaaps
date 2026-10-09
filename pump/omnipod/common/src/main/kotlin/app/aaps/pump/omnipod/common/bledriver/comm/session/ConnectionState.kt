@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.session
 
 import java.util.concurrent.CountDownLatch
 
@@ -21,3 +21,4 @@ data class ConnectionWaitCondition(var timeoutMs: Long? = null, val stopConnecti
         }
     }
 }
+

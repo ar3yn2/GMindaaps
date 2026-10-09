@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.util
+﻿package app.gmaaps.pump.eopatch.core.util
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -36,3 +36,4 @@ class CoreCommonUtilsTest {
         assertThat(CommonUtils.nearlyEqual(Float.MIN_VALUE, Float.MIN_VALUE, 0.001f)).isTrue()
     }
 }
+

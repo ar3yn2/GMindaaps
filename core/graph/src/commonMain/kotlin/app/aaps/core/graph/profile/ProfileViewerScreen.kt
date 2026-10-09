@@ -1,4 +1,4 @@
-package app.aaps.core.graph.profile
+﻿package app.gmaaps.core.graph.profile
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -29,10 +29,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsTheme
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsTheme
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Data class containing all information needed to display a profile viewer screen.
@@ -240,3 +240,4 @@ fun ProfileViewerScreen(
         }
     }
 }
+

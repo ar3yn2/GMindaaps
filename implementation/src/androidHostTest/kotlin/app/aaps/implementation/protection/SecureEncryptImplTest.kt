@@ -1,7 +1,7 @@
-package app.aaps.implementation.protection
+﻿package app.gmaaps.implementation.protection
 
-import app.aaps.core.objects.crypto.CryptoUtil
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.objects.crypto.CryptoUtil
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 

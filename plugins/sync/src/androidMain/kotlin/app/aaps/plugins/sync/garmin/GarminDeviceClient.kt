@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.garmin
+﻿package app.gmaaps.plugins.sync.garmin
 
 import android.content.BroadcastReceiver
 import android.content.ComponentName
@@ -8,10 +8,10 @@ import android.content.IntentFilter
 import android.content.ServiceConnection
 import android.os.IBinder
 import androidx.core.content.ContextCompat
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.notifyAll
-import app.aaps.core.utils.waitMillis
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.notifyAll
+import app.gmaaps.core.utils.waitMillis
 import com.garmin.android.apps.connectmobile.connectiq.IConnectIQService
 import com.garmin.android.connectiq.ConnectIQ.IQMessageStatus
 import com.garmin.android.connectiq.IQApp

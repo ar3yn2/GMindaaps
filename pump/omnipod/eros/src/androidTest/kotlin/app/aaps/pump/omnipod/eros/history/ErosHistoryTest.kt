@@ -1,13 +1,13 @@
-package app.aaps.pump.omnipod.eros.history
+﻿package app.gmaaps.pump.omnipod.eros.history
 
 import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import app.aaps.pump.omnipod.eros.definition.PodHistoryEntryType
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryDatabase
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryRecordDao
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryRecordEntity
+import app.gmaaps.pump.omnipod.eros.definition.PodHistoryEntryType
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryDatabase
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryRecordDao
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryRecordEntity
 import com.google.common.truth.Truth.assertThat
 import org.junit.After
 import org.junit.Before
@@ -56,3 +56,4 @@ class ErosHistoryTest {
         database.close()
     }
 }
+

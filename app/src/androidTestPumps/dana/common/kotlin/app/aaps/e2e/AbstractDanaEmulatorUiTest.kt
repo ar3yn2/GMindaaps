@@ -1,4 +1,4 @@
-package app.aaps.e2e
+﻿package app.gmaaps.e2e
 
 import android.Manifest
 import android.content.Context
@@ -10,21 +10,21 @@ import androidx.test.uiautomator.StaleObjectException
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiObject2
 import androidx.work.WorkManager
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.objects.extensions.singleBlock
-import app.aaps.core.objects.extensions.singleTargetBlock
-import app.aaps.di.EmulatedOptions
-import app.aaps.di.testGraphs
-import app.aaps.e2e.AbstractDanaEmulatorUiTest.Companion.BOLUS_UNITS
-import app.aaps.e2e.AbstractDanaEmulatorUiTest.Companion.DECREMENT
-import app.aaps.e2e.AbstractDanaEmulatorUiTest.Companion.INCREMENT
-import app.aaps.pump.dana.DanaPump
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.objects.extensions.singleBlock
+import app.gmaaps.core.objects.extensions.singleTargetBlock
+import app.gmaaps.di.EmulatedOptions
+import app.gmaaps.di.testGraphs
+import app.gmaaps.e2e.AbstractDanaEmulatorUiTest.Companion.BOLUS_UNITS
+import app.gmaaps.e2e.AbstractDanaEmulatorUiTest.Companion.DECREMENT
+import app.gmaaps.e2e.AbstractDanaEmulatorUiTest.Companion.INCREMENT
+import app.gmaaps.pump.dana.DanaPump
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import org.junit.After
@@ -638,3 +638,4 @@ abstract class AbstractDanaEmulatorUiTest {
         private const val POLL_MS = 250L
     }
 }
+

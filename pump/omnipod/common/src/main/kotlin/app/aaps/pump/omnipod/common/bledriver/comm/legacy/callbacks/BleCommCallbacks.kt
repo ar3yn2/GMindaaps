@@ -1,16 +1,16 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.legacy.callbacks
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.callbacks
 
 import android.bluetooth.BluetoothGatt
 import android.bluetooth.BluetoothGattCallback
 import android.bluetooth.BluetoothGattCharacteristic
 import android.bluetooth.BluetoothGattDescriptor
 import android.bluetooth.BluetoothProfile
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.CharacteristicType.Companion.byValue
-import app.aaps.pump.omnipod.common.bledriver.comm.legacy.io.IncomingPackets
-import app.aaps.pump.omnipod.common.bledriver.comm.session.DisconnectHandler
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.CharacteristicType.Companion.byValue
+import app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.io.IncomingPackets
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.DisconnectHandler
 import java.util.UUID
 import java.util.concurrent.BlockingQueue
 import java.util.concurrent.CountDownLatch
@@ -220,3 +220,4 @@ class BleCommCallbacks(
         private const val WRITE_CONFIRM_TIMEOUT_MS = 10
     }
 }
+

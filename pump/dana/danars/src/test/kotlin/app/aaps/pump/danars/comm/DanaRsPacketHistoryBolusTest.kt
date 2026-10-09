@@ -1,8 +1,8 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.pump.dana.database.DanaHistoryRecordDao
-import app.aaps.pump.danars.DanaRSTestBase
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.pump.dana.database.DanaHistoryRecordDao
+import app.gmaaps.pump.danars.DanaRSTestBase
 import com.google.common.truth.Truth.assertThat
 import org.joda.time.DateTime
 import org.joda.time.DateTimeZone
@@ -77,3 +77,4 @@ class DanaRsPacketHistoryBolusTest : DanaRSTestBase() {
         assertThat(packet.totalCount).isEqualTo(20)
     }
 }
+

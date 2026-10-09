@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -23,14 +23,14 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.fromHtml
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.banner.ErrorBanner
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.compose.dialog.CarelevoActionDialog
-import app.aaps.pump.carelevo.presentation.model.CarelevoConnectNeedleEvent
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchNeedleInsertionViewModel
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.banner.ErrorBanner
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.compose.dialog.CarelevoActionDialog
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoConnectNeedleEvent
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchNeedleInsertionViewModel
 
 private const val MAX_NEEDLE_CHECK_COUNT = 3
 
@@ -271,3 +271,4 @@ private fun CarelevoPatchFlowStep05DetectedPreview() {
         )
     }
 }
+

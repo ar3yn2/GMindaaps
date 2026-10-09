@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.code
+﻿package app.gmaaps.pump.eopatch.code
 
 enum class UnitOrPercent {
     P,
@@ -6,3 +6,4 @@ enum class UnitOrPercent {
 
     fun isPercentage() = this == P
 }
+

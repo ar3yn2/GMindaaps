@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -16,11 +16,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.SliderWithButtons
-import app.aaps.core.ui.compose.dialogs.ValueInputDialog
-import app.aaps.core.ui.compose.formatSliderDisplayValue
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.SliderWithButtons
+import app.gmaaps.core.ui.compose.dialogs.ValueInputDialog
+import app.gmaaps.core.ui.compose.formatSliderDisplayValue
 
 private const val MAX_SLIDER_STEPS = 200.0
 
@@ -117,3 +117,4 @@ fun PreferenceSliderWithButtons(
         )
     }
 }
+

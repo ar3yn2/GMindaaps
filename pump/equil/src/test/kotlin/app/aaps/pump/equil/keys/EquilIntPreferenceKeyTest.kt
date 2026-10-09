@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.keys
+﻿package app.gmaaps.pump.equil.keys
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertNull
@@ -112,3 +112,4 @@ class EquilIntPreferenceKeyTest : TestBase() {
         assertEquals(3, tone.max, "Max should match AlarmMode.TONE_AND_SHAKE")
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.di
+﻿package app.gmaaps.di
 
-import app.aaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
 
 /**
  * Which [ExternalOptions] an instrumented test wants reported as enabled.
@@ -15,3 +15,4 @@ object EmulatedOptions {
 
     @Volatile var enabled: Set<ExternalOptions> = emptySet()
 }
+

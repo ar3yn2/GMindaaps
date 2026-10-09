@@ -1,9 +1,9 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.keys.interfaces.PreferenceItem
-import app.aaps.core.keys.interfaces.PreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.PreferenceItem
+import app.gmaaps.core.keys.interfaces.PreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * Lightweight preference subscreen definition.
@@ -59,3 +59,4 @@ data class PreferenceSubScreenDef(
             }
         }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.ui.widget.glance
+﻿package app.gmaaps.ui.widget.glance
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -100,3 +100,4 @@ object IconBitmapRenderer {
         else             -> Paint.Join.MITER
     }
 }
+

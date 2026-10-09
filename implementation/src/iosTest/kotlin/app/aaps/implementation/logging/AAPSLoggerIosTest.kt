@@ -1,4 +1,4 @@
-package app.aaps.implementation.logging
+﻿package app.gmaaps.implementation.logging
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -68,3 +68,4 @@ class AAPSLoggerIosTest {
         assertEquals("a {} b 2", fill("a {} b {}", "{}", 2))
     }
 }
+

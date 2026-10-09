@@ -1,7 +1,7 @@
-package app.aaps.implementation.maintenance.cloud
+﻿package app.gmaaps.implementation.maintenance.cloud
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -25,7 +25,7 @@ import java.util.Locale
  *
  * ## Why there are two ways to open it
  *
- * `Desktop.browse` is the portable one and is what [app.aaps.core.interfaces.ui.UrlOpener] uses for
+ * `Desktop.browse` is the portable one and is what [app.gmaaps.core.interfaces.ui.UrlOpener] uses for
  * ordinary links. It is missing more often than its name suggests - a Linux session with no
  * `java.awt.Desktop` support, which includes running the desktop client under WSLg - and a failed
  * link is a shrug while a failed sign in is a feature the user cannot reach at all. So a platform
@@ -102,3 +102,4 @@ class DesktopAuthBrowser(private val aapsLogger: AAPSLogger) : AuthBrowser {
         }
     }
 }
+

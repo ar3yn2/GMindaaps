@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
 /**
  * One Nightscout websocket namespace, with no socket.io types in sight.
@@ -58,3 +58,4 @@ interface NsSocketFactory {
     /** Returns null when [url] is not a usable address. */
     fun create(url: String): NsSocket?
 }
+

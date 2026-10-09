@@ -1,7 +1,7 @@
-package app.aaps.ui.widget.glance
+﻿package app.gmaaps.ui.widget.glance
 
 import android.graphics.Color
-import app.aaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.Config
 
 fun resolveWidgetBackground(config: Config, useBlack: Boolean, alpha: Int): Int =
     when {
@@ -24,3 +24,4 @@ fun resolveClientColor(config: Config): Int =
         config.AAPSCLIENT3 -> Color.rgb(0x4C, 0xAF, 0x50)
         else               -> Color.WHITE
     }
+

@@ -1,4 +1,4 @@
-package app.aaps.plugins.aps.loop.runningMode
+﻿package app.gmaaps.plugins.aps.loop.runningMode
 
 /**
  * Computes the pump TBR duration to issue when enforcing a zero-delivery running mode.
@@ -32,3 +32,4 @@ object DurationRounding {
         return Result.Issue(capped.toInt())
     }
 }
+

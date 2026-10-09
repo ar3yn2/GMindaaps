@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.domain.usecase.alarm.model
+﻿package app.gmaaps.pump.carelevo.domain.usecase.alarm.model
 
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
 
 data class AlarmClearUseCaseRequest(
     val alarmId: String,

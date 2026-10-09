@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
 import java.util.Locale;
 
-import app.aaps.pump.omnipod.eros.driver.definition.DeliveryStatus;
+import app.gmaaps.pump.omnipod.eros.driver.definition.DeliveryStatus;
 
 public class IllegalDeliveryStatusException extends OmnipodException {
     private final DeliveryStatus expected;
@@ -22,3 +22,4 @@ public class IllegalDeliveryStatusException extends OmnipodException {
         return actual;
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.data
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data
 
 import java.util.UUID
 
@@ -112,3 +112,4 @@ object GattAttributes {
         return SERVICE_RADIO_ORANGE == uuid.toString()
     }
 }
+

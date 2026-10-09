@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     // NOT com.android.library. AGP 9 refuses that plugin together with the multiplatform plugin.
@@ -14,7 +14,7 @@ plugins {
 // Same generator as :core:ui, :pump:virtual and :plugins:smoothing, pointed at this module's strings.
 val generateCalibrationStrings = tasks.register<GenerateKeyStringsTask>("generateCalibrationStrings") {
     resDir.set(layout.projectDirectory.dir("src/androidMain/res"))
-    packageName.set("app.aaps.plugins.calibration")
+    packageName.set("app.gmaaps.plugins.calibration")
     owner.set("calibration")
     objectName.set("CalibrationStrings")
     idsObjectName.set("CalibrationStringIds")
@@ -27,7 +27,7 @@ val generateCalibrationStrings = tasks.register<GenerateKeyStringsTask>("generat
 
 kotlin {
     android {
-        namespace = "app.aaps.plugins.calibration"
+        namespace = "app.gmaaps.plugins.calibration"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         androidResources { enable = true }
@@ -106,4 +106,5 @@ kotlin {
         }
     }
 }
+
 

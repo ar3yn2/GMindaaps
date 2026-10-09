@@ -1,11 +1,11 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.DelegatedAppDatabase
-import app.aaps.database.daos.ProfileSwitchDao
-import app.aaps.database.entities.ProfileSwitch
-import app.aaps.database.entities.data.GlucoseUnit
-import app.aaps.database.entities.embedments.InsulinConfiguration
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.DelegatedAppDatabase
+import app.gmaaps.database.daos.ProfileSwitchDao
+import app.gmaaps.database.entities.ProfileSwitch
+import app.gmaaps.database.entities.data.GlucoseUnit
+import app.gmaaps.database.entities.embedments.InsulinConfiguration
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -93,3 +93,4 @@ class InvalidateProfileSwitchTransactionTest {
         insulinConfiguration = InsulinConfiguration("some", 600000L, 60000L, 1.0)
     ).also { it.id = id }
 }
+

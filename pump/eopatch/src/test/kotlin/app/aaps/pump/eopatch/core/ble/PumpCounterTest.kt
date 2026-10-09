@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.ble
+﻿package app.gmaaps.pump.eopatch.core.ble
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -41,3 +41,4 @@ class PumpCounterTest {
         assertThat(PumpCounter.getPumpCountShort(1.0f)).isEqualTo(20.toShort())
     }
 }
+

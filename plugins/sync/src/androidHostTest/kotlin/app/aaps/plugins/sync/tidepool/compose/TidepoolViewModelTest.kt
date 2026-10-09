@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.tidepool.compose
+﻿package app.gmaaps.plugins.sync.tidepool.compose
 
-import app.aaps.plugins.sync.tidepool.auth.AuthFlowOut
+import app.gmaaps.plugins.sync.tidepool.auth.AuthFlowOut
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -89,3 +89,4 @@ internal class TidepoolViewModelTest {
         assertThat(sut.uiState.value.connectionStatus).isEqualTo("NO_SESSION")
     }
 }
+

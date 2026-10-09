@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.domain.model.infusion
+﻿package app.gmaaps.pump.carelevo.domain.model.infusion
 
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
 import kotlin.time.Clock
 import kotlin.time.Instant
 

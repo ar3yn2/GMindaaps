@@ -1,8 +1,8 @@
-package app.aaps.pump.insight.keys
+﻿package app.gmaaps.pump.insight.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.insight.R
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.insight.R
 
 enum class InsightBooleanKey(
     override val key: String,
@@ -25,3 +25,4 @@ enum class InsightBooleanKey(
     override val title: TextRef = TextRef.AndroidRes(titleResId)
     override val summary: TextRef? = summaryResId?.let { TextRef.AndroidRes(it) }
 }
+

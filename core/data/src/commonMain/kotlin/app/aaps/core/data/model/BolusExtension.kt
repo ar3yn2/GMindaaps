@@ -1,6 +1,6 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
-import app.aaps.core.data.iob.Iob
+import app.gmaaps.core.data.iob.Iob
 
 /**
  * Insulin on board from this bolus at [time].
@@ -12,3 +12,4 @@ import app.aaps.core.data.iob.Iob
 fun BS.iobCalc(time: Long): Iob =
     if (!isValid || type == BS.Type.PRIMING) Iob()
     else iCfg.iobCalcForTreatment(this, time)
+

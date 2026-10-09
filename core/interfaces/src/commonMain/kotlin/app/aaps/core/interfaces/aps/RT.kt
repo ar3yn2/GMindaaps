@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.aps
+﻿package app.gmaaps.core.interfaces.aps
 
-import app.aaps.core.data.datetime.parseIsoToEpochMillisOrNull
+import app.gmaaps.core.data.datetime.parseIsoToEpochMillisOrNull
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.format.char

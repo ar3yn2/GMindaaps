@@ -1,11 +1,11 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
 
 import androidx.annotation.NonNull;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
-import app.aaps.pump.omnipod.eros.driver.definition.PodInfoType;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodInfoType;
 
 public class PodInfoResponse extends MessageBlock {
     private final PodInfoType subType;
@@ -40,3 +40,4 @@ public class PodInfoResponse extends MessageBlock {
                 '}';
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose.elements
+﻿package app.gmaaps.plugins.automation.compose.elements
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
@@ -64,3 +64,4 @@ class DropdownElementsTest {
         compose.onNodeWithText("Profile").assertIsDisplayed()
     }
 }
+

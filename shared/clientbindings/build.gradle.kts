@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     kotlin("multiplatform")
     alias(libs.plugins.metro)
 }
@@ -62,3 +62,4 @@ kotlin {
         }
     }
 }
+

@@ -1,88 +1,88 @@
-package app.aaps.pump.danars.services
+﻿package app.gmaaps.pump.danars.services
 
 import android.content.Context
 import android.content.Intent
 import android.os.Binder
 import android.os.IBinder
 import android.os.SystemClock
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.di.ApplicationScope
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.DetailedBolusInfoStorage
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.Command
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventAppExit
-import app.aaps.core.interfaces.rx.events.EventInitializationChanged
-import app.aaps.core.interfaces.rx.events.EventProfileChangeRequested
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.objects.workflow.MetroService
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.R
-import app.aaps.pump.dana.comm.RecordTypes
-import app.aaps.pump.dana.events.EventDanaRNewStatus
-import app.aaps.pump.dana.keys.DanaIntKey
-import app.aaps.pump.danars.DanaRSPlugin
-import app.aaps.pump.danars.comm.DanaRSPacket
-import app.aaps.pump.danars.comm.DanaRSPacketAPSBasalSetTemporaryBasal
-import app.aaps.pump.danars.comm.DanaRSPacketAPSHistoryEvents
-import app.aaps.pump.danars.comm.DanaRSPacketAPSSetEventHistory
-import app.aaps.pump.danars.comm.DanaRSPacketBasalGetBasalRate
-import app.aaps.pump.danars.comm.DanaRSPacketBasalGetProfileNumber
-import app.aaps.pump.danars.comm.DanaRSPacketBasalSetCancelTemporaryBasal
-import app.aaps.pump.danars.comm.DanaRSPacketBasalSetProfileBasalRate
-import app.aaps.pump.danars.comm.DanaRSPacketBasalSetProfileNumber
-import app.aaps.pump.danars.comm.DanaRSPacketBasalSetTemporaryBasal
-import app.aaps.pump.danars.comm.DanaRSPacketBolusGet24CIRCFArray
-import app.aaps.pump.danars.comm.DanaRSPacketBolusGetBolusOption
-import app.aaps.pump.danars.comm.DanaRSPacketBolusGetCIRCFArray
-import app.aaps.pump.danars.comm.DanaRSPacketBolusGetCalculationInformation
-import app.aaps.pump.danars.comm.DanaRSPacketBolusGetStepBolusInformation
-import app.aaps.pump.danars.comm.DanaRSPacketBolusSet24CIRCFArray
-import app.aaps.pump.danars.comm.DanaRSPacketBolusSetExtendedBolus
-import app.aaps.pump.danars.comm.DanaRSPacketBolusSetExtendedBolusCancel
-import app.aaps.pump.danars.comm.DanaRSPacketBolusSetStepBolusStart
-import app.aaps.pump.danars.comm.DanaRSPacketBolusSetStepBolusStop
-import app.aaps.pump.danars.comm.DanaRSPacketEtcKeepConnection
-import app.aaps.pump.danars.comm.DanaRSPacketGeneralGetPumpCheck
-import app.aaps.pump.danars.comm.DanaRSPacketGeneralGetShippingInformation
-import app.aaps.pump.danars.comm.DanaRSPacketGeneralInitialScreenInformation
-import app.aaps.pump.danars.comm.DanaRSPacketGeneralSetHistoryUploadMode
-import app.aaps.pump.danars.comm.DanaRSPacketHistory
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryAlarm
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryBasal
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryBloodGlucose
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryBolus
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryCarbohydrate
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryDaily
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryPrime
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryRefill
-import app.aaps.pump.danars.comm.DanaRSPacketHistorySuspend
-import app.aaps.pump.danars.comm.DanaRSPacketOptionGetPumpTime
-import app.aaps.pump.danars.comm.DanaRSPacketOptionGetPumpUTCAndTimeZone
-import app.aaps.pump.danars.comm.DanaRSPacketOptionGetUserOption
-import app.aaps.pump.danars.comm.DanaRSPacketOptionSetPumpTime
-import app.aaps.pump.danars.comm.DanaRSPacketOptionSetPumpUTCAndTimeZone
-import app.aaps.pump.danars.comm.DanaRSPacketOptionSetUserOption
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.di.ApplicationScope
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfoStorage
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.Command
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventAppExit
+import app.gmaaps.core.interfaces.rx.events.EventInitializationChanged
+import app.gmaaps.core.interfaces.rx.events.EventProfileChangeRequested
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.objects.workflow.MetroService
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.R
+import app.gmaaps.pump.dana.comm.RecordTypes
+import app.gmaaps.pump.dana.events.EventDanaRNewStatus
+import app.gmaaps.pump.dana.keys.DanaIntKey
+import app.gmaaps.pump.danars.DanaRSPlugin
+import app.gmaaps.pump.danars.comm.DanaRSPacket
+import app.gmaaps.pump.danars.comm.DanaRSPacketAPSBasalSetTemporaryBasal
+import app.gmaaps.pump.danars.comm.DanaRSPacketAPSHistoryEvents
+import app.gmaaps.pump.danars.comm.DanaRSPacketAPSSetEventHistory
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalGetBasalRate
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalGetProfileNumber
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalSetCancelTemporaryBasal
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalSetProfileBasalRate
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalSetProfileNumber
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalSetTemporaryBasal
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusGet24CIRCFArray
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusGetBolusOption
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusGetCIRCFArray
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusGetCalculationInformation
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusGetStepBolusInformation
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusSet24CIRCFArray
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusSetExtendedBolus
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusSetExtendedBolusCancel
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusSetStepBolusStart
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusSetStepBolusStop
+import app.gmaaps.pump.danars.comm.DanaRSPacketEtcKeepConnection
+import app.gmaaps.pump.danars.comm.DanaRSPacketGeneralGetPumpCheck
+import app.gmaaps.pump.danars.comm.DanaRSPacketGeneralGetShippingInformation
+import app.gmaaps.pump.danars.comm.DanaRSPacketGeneralInitialScreenInformation
+import app.gmaaps.pump.danars.comm.DanaRSPacketGeneralSetHistoryUploadMode
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistory
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryAlarm
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryBasal
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryBloodGlucose
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryBolus
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryCarbohydrate
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryDaily
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryPrime
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryRefill
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistorySuspend
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionGetPumpTime
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionGetPumpUTCAndTimeZone
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionGetUserOption
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionSetPumpTime
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionSetPumpUTCAndTimeZone
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionSetUserOption
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
@@ -277,7 +277,7 @@ class DanaRSService : MetroService() {
                     aapsLogger.debug(LTag.PUMPCOMM, "Pump time difference: $timeDiff seconds")
                 }
             }
-            rxBus.send(EventPumpStatusChanged(rh.gs(app.aaps.core.ui.R.string.reading_pump_history)))
+            rxBus.send(EventPumpStatusChanged(rh.gs(app.gmaaps.core.ui.R.string.reading_pump_history)))
             loadEvents()
             // RS doesn't provide exact timestamp = rely on history
             val expectedState = pumpSync.expectedPumpState()
@@ -389,7 +389,7 @@ class DanaRSService : MetroService() {
             // reread bolus status
             rxBus.send(EventPumpStatusChanged(rh.gs(R.string.gettingbolusstatus)))
             sendMessage(danaRSPacketBolusGetStepBolusInformation()) // last bolus
-            bolusProgressData.updateProgress(100, TextRef.AndroidRes(app.aaps.core.interfaces.R.string.disconnecting), bolusProgressData.state.value?.delivered ?: PumpInsulin(0.0))
+            bolusProgressData.updateProgress(100, TextRef.AndroidRes(app.gmaaps.core.interfaces.R.string.disconnecting), bolusProgressData.state.value?.delivered ?: PumpInsulin(0.0))
             rxBus.send(EventPumpStatusChanged(EventPumpStatusChanged.Status.DISCONNECTING))
         }
         return !start.failed && !connectionBroken

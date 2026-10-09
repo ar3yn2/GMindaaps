@@ -1,4 +1,4 @@
-package info.nightscout.pump.combov2.compose
+﻿package info.nightscout.pump.combov2.compose
 
 import android.app.Activity
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -24,10 +24,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.pump.BluetoothPermissionsHost
-import app.aaps.core.ui.compose.pump.KeepScreenOnEffect
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.core.ui.compose.pump.BluetoothPermissionsHost
+import app.gmaaps.core.ui.compose.pump.KeepScreenOnEffect
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
 import info.nightscout.comboctl.base.PAIRING_PIN_SIZE
 import info.nightscout.pump.combov2.ComboV2Plugin
 import info.nightscout.pump.combov2.R
@@ -242,7 +242,7 @@ private fun PinEntrySection(
                 onClick = { onSubmitPin() },
                 enabled = pinText.length == PAIRING_PIN_SIZE
             ) {
-                Text(stringResource(app.aaps.core.ui.R.string.ok))
+                Text(stringResource(app.gmaaps.core.ui.R.string.ok))
             }
         }
         if (pinFailed) {
@@ -266,11 +266,11 @@ internal fun ConfirmCancelSection(
 ) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.ok),
+            text = stringResource(app.gmaaps.core.ui.R.string.ok),
             onClick = onConfirm
         ),
         secondaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.cancel),
+            text = stringResource(app.gmaaps.core.ui.R.string.cancel),
             onClick = onDismiss
         )
     ) {
@@ -288,7 +288,7 @@ internal fun ConfirmCancelSection(
 internal fun FinishedSection(onOk: () -> Unit) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.ok),
+            text = stringResource(app.gmaaps.core.ui.R.string.ok),
             onClick = onOk
         )
     ) {
@@ -307,7 +307,7 @@ internal fun FinishedSection(onOk: () -> Unit) {
 internal fun AbortedSection(reason: String, onOk: () -> Unit) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.ok),
+            text = stringResource(app.gmaaps.core.ui.R.string.ok),
             onClick = onOk
         )
     ) {
@@ -330,7 +330,7 @@ internal fun PermissionsDeniedSection(
 ) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.retry),
+            text = stringResource(app.gmaaps.core.ui.R.string.retry),
             onClick = onRetry
         ),
         secondaryButton = WizardButton(
@@ -339,7 +339,7 @@ internal fun PermissionsDeniedSection(
         )
     ) {
         Text(
-            text = stringResource(app.aaps.core.ui.R.string.ble_permissions_missing),
+            text = stringResource(app.gmaaps.core.ui.R.string.ble_permissions_missing),
             style = MaterialTheme.typography.bodyMedium
         )
     }
@@ -348,3 +348,4 @@ internal fun PermissionsDeniedSection(
 // ── Previews ──────────────────────────────────────────────────────────────
 // Wrapped in plain MaterialTheme (not AapsTheme) because AapsTheme depends on
 // LocalPreferences, which is not provided in preview contexts.
+

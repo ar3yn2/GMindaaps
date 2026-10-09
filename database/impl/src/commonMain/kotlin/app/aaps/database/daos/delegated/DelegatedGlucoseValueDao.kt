@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.GlucoseValueDao
-import app.aaps.database.entities.GlucoseValue
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.GlucoseValueDao
+import app.gmaaps.database.entities.GlucoseValue
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedGlucoseValueDao(changes: MutableList<DBEntry>, private val dao: GlucoseValueDao) : DelegatedDao(changes), GlucoseValueDao by dao {
 

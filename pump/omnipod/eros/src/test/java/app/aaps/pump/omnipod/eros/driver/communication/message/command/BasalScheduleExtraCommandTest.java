@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import org.joda.time.Duration;
 import org.junit.jupiter.api.Assertions;
@@ -8,10 +8,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BasalSchedule;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BasalScheduleEntry;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.RateEntry;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BasalSchedule;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BasalScheduleEntry;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.RateEntry;
 
 class BasalScheduleExtraCommandTest {
     @Test
@@ -167,3 +167,4 @@ class BasalScheduleExtraCommandTest {
         return ByteUtil.INSTANCE.toInt(message[6], (int) message[7], (int) message[8], (int) message[9], ByteUtil.BitConversion.BIG_ENDIAN) / 1_000_000.0;
     }
 }
+

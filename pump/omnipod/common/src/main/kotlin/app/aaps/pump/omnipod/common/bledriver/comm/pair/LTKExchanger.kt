@@ -1,19 +1,19 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.pair
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.pair
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.hexStringToByteArray
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.Ids
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.MessageIOException
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.PairingException
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageIO
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessagePacket
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageSendSuccess
-import app.aaps.pump.omnipod.common.bledriver.comm.message.StringLengthPrefixEncoding.Companion.parseKeys
-import app.aaps.pump.omnipod.common.bledriver.pod.util.RandomByteGenerator
-import app.aaps.pump.omnipod.common.bledriver.pod.util.X25519KeyGenerator
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.hexStringToByteArray
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.Ids
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.MessageIOException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.PairingException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageIO
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessagePacket
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageSendSuccess
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.StringLengthPrefixEncoding.Companion.parseKeys
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.RandomByteGenerator
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.X25519KeyGenerator
 
 internal class LTKExchanger(
     private val aapsLogger: AAPSLogger,
@@ -147,3 +147,4 @@ internal class LTKExchanger(
         private val UNKNOWN_P0_PAYLOAD = byteArrayOf(0xa5.toByte())
     }
 }
+

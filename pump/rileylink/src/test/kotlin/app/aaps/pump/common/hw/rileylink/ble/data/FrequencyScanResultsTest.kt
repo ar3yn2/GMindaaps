@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.data
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
@@ -259,3 +259,4 @@ class FrequencyScanResultsTest {
         }
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.di
+﻿package app.gmaaps.plugins.automation.di
 
-import app.aaps.core.interfaces.di.FeatureMemberInjectors
-import app.aaps.plugins.automation.TimerReminderReceiver
-import app.aaps.plugins.automation.services.LocationService
+import app.gmaaps.core.interfaces.di.FeatureMemberInjectors
+import app.gmaaps.plugins.automation.TimerReminderReceiver
+import app.gmaaps.plugins.automation.services.LocationService
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ClassKey
@@ -38,3 +38,4 @@ object AutomationMemberInjectors {
     @ClassKey(LocationService::class)
     fun bindLocationService(injector: MembersInjector<LocationService>): MembersInjector<*> = injector
 }
+

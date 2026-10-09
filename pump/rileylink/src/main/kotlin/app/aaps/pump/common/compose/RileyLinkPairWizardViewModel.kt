@@ -1,4 +1,4 @@
-package app.aaps.pump.common.compose
+﻿package app.gmaaps.pump.common.compose
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothManager
@@ -10,16 +10,16 @@ import android.content.Context
 import android.os.ParcelUuid
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.ble.ScannedDevice
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.common.hw.rileylink.RileyLinkConst
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.ble.data.GattAttributes
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkStringKey
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.ble.ScannedDevice
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkConst
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.data.GattAttributes
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkStringKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -140,3 +140,4 @@ class RileyLinkPairWizardViewModel(
         stopScan()
     }
 }
+

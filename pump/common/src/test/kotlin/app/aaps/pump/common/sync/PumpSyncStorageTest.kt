@@ -1,12 +1,12 @@
-package app.aaps.pump.common.sync
+﻿package app.gmaaps.pump.common.sync
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
@@ -341,3 +341,4 @@ internal class PumpSyncStorageTest {
         assertThat(stamped.pumpId).isEqualTo(99L)
     }
 }
+

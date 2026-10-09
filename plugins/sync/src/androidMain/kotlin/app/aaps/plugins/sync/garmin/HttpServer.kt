@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.garmin
+﻿package app.gmaaps.plugins.sync.garmin
 
 import android.os.StrictMode
 import androidx.annotation.VisibleForTesting
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.pump.ThreadUtil
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.pump.ThreadUtil
 import java.io.BufferedOutputStream
 import java.io.ByteArrayOutputStream
 import java.io.Closeable
@@ -276,3 +276,4 @@ class HttpServer internal constructor(private var aapsLogger: AAPSLogger, val po
         }
     }
 }
+

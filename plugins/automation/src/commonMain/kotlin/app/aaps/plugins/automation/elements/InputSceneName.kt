@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
 /**
  * Holds the id of a scene selected by the user. The display name is resolved
@@ -9,3 +9,4 @@ class InputSceneName(val id: String = "") {
 
     var value: String = id
 }
+

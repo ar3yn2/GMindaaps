@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.presentation.type
+﻿package app.gmaaps.pump.carelevo.presentation.type
 
 enum class CarelevoScreenType {
     CONNECTION_FLOW_START,
@@ -6,3 +6,4 @@ enum class CarelevoScreenType {
     SAFETY_CHECK,
     NEEDLE_INSERTION,
 }
+

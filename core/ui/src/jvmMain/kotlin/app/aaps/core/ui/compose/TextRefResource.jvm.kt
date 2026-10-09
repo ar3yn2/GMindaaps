@@ -1,9 +1,9 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.Composable
-import app.aaps.core.interfaces.resources.TextRefValueRegistry
-import app.aaps.core.interfaces.resources.formatTemplate
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.resources.TextRefValueRegistry
+import app.gmaaps.core.interfaces.resources.formatTemplate
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * Compose text on the desktop JVM, read from the generated English string maps.
@@ -24,3 +24,4 @@ actual fun stringResource(ref: TextRef): String = when (ref) {
     is TextRef.Named      -> formatTemplate(TextRefValueRegistry.textOf(ref) ?: ref.name, ref.args)
     is TextRef.AndroidRes -> "?"
 }
+

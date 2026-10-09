@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.session
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.MessageIOException
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.MessageIOException
 import java.nio.ByteBuffer
 
 @Suppress("unused")
@@ -96,3 +96,4 @@ private fun ByteArray.assertSizeAtLeast(size: Int) {
         throw MessageIOException("Payload too short: ${this.toHex()}")
     }
 }
+

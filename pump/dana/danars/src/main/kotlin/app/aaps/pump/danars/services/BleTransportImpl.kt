@@ -1,4 +1,4 @@
-package app.aaps.pump.danars.services
+﻿package app.gmaaps.pump.danars.services
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -16,18 +16,18 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.SystemClock
 import androidx.core.app.ActivityCompat
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.ble.BleAdapter
-import app.aaps.core.interfaces.pump.ble.BleGatt
-import app.aaps.core.interfaces.pump.ble.BleScanner
-import app.aaps.core.interfaces.pump.ble.BleTransport
-import app.aaps.core.interfaces.pump.ble.BleTransportListener
-import app.aaps.core.interfaces.pump.ble.BondState
-import app.aaps.core.interfaces.pump.ble.PairingState
-import app.aaps.core.interfaces.pump.ble.ScannedDevice
-import app.aaps.core.utils.extensions.connectGattCompat
-import app.aaps.core.utils.extensions.safeEnable
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.ble.BleAdapter
+import app.gmaaps.core.interfaces.pump.ble.BleGatt
+import app.gmaaps.core.interfaces.pump.ble.BleScanner
+import app.gmaaps.core.interfaces.pump.ble.BleTransport
+import app.gmaaps.core.interfaces.pump.ble.BleTransportListener
+import app.gmaaps.core.interfaces.pump.ble.BondState
+import app.gmaaps.core.interfaces.pump.ble.PairingState
+import app.gmaaps.core.interfaces.pump.ble.ScannedDevice
+import app.gmaaps.core.utils.extensions.connectGattCompat
+import app.gmaaps.core.utils.extensions.safeEnable
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -293,3 +293,4 @@ class BleTransportImpl(
     private fun hasPermission(): Boolean =
         ActivityCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED
 }
+

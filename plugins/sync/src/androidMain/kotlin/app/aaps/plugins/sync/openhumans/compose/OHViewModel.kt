@@ -1,11 +1,11 @@
-package app.aaps.plugins.sync.openhumans.compose
+﻿package app.gmaaps.plugins.sync.openhumans.compose
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.plugins.sync.di.OpenHumansScope
-import app.aaps.plugins.sync.openhumans.delegates.OHStateDelegate
+import app.gmaaps.plugins.sync.di.OpenHumansScope
+import app.gmaaps.plugins.sync.openhumans.delegates.OHStateDelegate
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.binding
@@ -48,3 +48,4 @@ internal class OHViewModel(
         }
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.common.compose
+﻿package app.gmaaps.pump.common.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -26,9 +26,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.AapsCard
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.pump.common.hw.rileylink.R
+import app.gmaaps.core.ui.compose.AapsCard
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.pump.common.hw.rileylink.R
 import kotlinx.coroutines.launch
 
 @Composable
@@ -44,12 +44,12 @@ fun RileyLinkStatusScreen(
             Tab(
                 selected = pagerState.currentPage == 0,
                 onClick = { scope.launch { pagerState.animateScrollToPage(0) } },
-                text = { Text(stringResource(app.aaps.core.ui.R.string.settings)) }
+                text = { Text(stringResource(app.gmaaps.core.ui.R.string.settings)) }
             )
             Tab(
                 selected = pagerState.currentPage == 1,
                 onClick = { scope.launch { pagerState.animateScrollToPage(1) } },
-                text = { Text(stringResource(app.aaps.core.ui.R.string.history)) }
+                text = { Text(stringResource(app.gmaaps.core.ui.R.string.history)) }
             )
         }
 
@@ -171,3 +171,4 @@ private fun InfoRow(label: String, value: String) {
         )
     }
 }
+

@@ -1,13 +1,13 @@
-package app.aaps.plugins.aps.openAPSSMB
+﻿package app.gmaaps.plugins.aps.openAPSSMB
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.bgQualityCheck.BgQualityCheck
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.profiling.Profiler
-import app.aaps.core.interfaces.stats.TddCalculator
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.bgQualityCheck.BgQualityCheck
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.profiling.Profiler
+import app.gmaaps.core.interfaces.stats.TddCalculator
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -39,3 +39,4 @@ class OpenAPSSMBPluginTest : TestBaseWithProfile() {
         assertThat(openAPSSMBPlugin.getType()).isEqualTo(PluginType.APS)
     }
 }
+

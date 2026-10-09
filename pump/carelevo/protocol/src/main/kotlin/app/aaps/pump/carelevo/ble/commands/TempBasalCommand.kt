@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.commands.TempBasalCommand.Companion.byPercent
-import app.aaps.pump.carelevo.ble.commands.TempBasalCommand.Companion.byUnit
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.commands.TempBasalCommand.Companion.byPercent
+import app.gmaaps.pump.carelevo.ble.commands.TempBasalCommand.Companion.byUnit
 
 /**
  * `CMD_TEMP_BASAL_REQ` (0x23) → `CMD_TEMP_BASAL_RES` (0x83). Starts a temp basal — **safety-critical
@@ -89,3 +89,4 @@ class TempBasalCommand private constructor(
             TempBasalCommand(Mode.BY_PERCENT, infusionPercent.toDouble() / 100.0, infusionHour, infusionMin)
     }
 }
+

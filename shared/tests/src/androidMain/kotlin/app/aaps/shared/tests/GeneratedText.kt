@@ -1,14 +1,14 @@
-package app.aaps.shared.tests
+﻿package app.gmaaps.shared.tests
 
-import app.aaps.core.interfaces.InterfacesStringsValues
-import app.aaps.core.interfaces.resources.TextRefValueRegistry
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.KeysStringsValues
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStringsValues
-import app.aaps.implementation.ImplementationStringsValues
-import app.aaps.implementation.resources.GeneratedTextResolver
-import app.aaps.plugins.aps.ApsStringsValues
+import app.gmaaps.core.interfaces.InterfacesStringsValues
+import app.gmaaps.core.interfaces.resources.TextRefValueRegistry
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.KeysStringsValues
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStringsValues
+import app.gmaaps.implementation.ImplementationStringsValues
+import app.gmaaps.implementation.resources.GeneratedTextResolver
+import app.gmaaps.plugins.aps.ApsStringsValues
 
 /**
  * A [TextResolver] that answers with the REAL English text, so a test need not stub `rh.gs` at all.
@@ -27,8 +27,8 @@ import app.aaps.plugins.aps.ApsStringsValues
  *
  * ## What it resolves, and what it cannot
  *
- * Only [app.aaps.core.keys.interfaces.TextRef.Named] - the generated, platform neutral form. A
- * [app.aaps.core.keys.interfaces.TextRef.AndroidRes] holds an AAPT id that means nothing off Android,
+ * Only [app.gmaaps.core.keys.interfaces.TextRef.Named] - the generated, platform neutral form. A
+ * [app.gmaaps.core.keys.interfaces.TextRef.AndroidRes] holds an AAPT id that means nothing off Android,
  * so it renders as `res:<id>`, and the legacy `gs(Int)` overload does not exist on [TextResolver] at
  * all. A test whose subject still uses resource ids has to keep the mock.
  *
@@ -89,3 +89,4 @@ fun generatedTextResolver(fallback: TextResolver, vararg extraOwners: Pair<Strin
         override fun shortTextMode(): Boolean = generated.shortTextMode()
     }
 }
+

@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.xdrip.workers
+﻿package app.gmaaps.plugins.sync.xdrip.workers
 
 import androidx.work.ListenableWorker
 import androidx.work.WorkerParameters
-import app.aaps.core.interfaces.sync.DataSyncSelectorXdrip
-import app.aaps.plugins.sync.xdrip.compose.XdripMvvmRepository
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.sync.DataSyncSelectorXdrip
+import app.gmaaps.plugins.sync.xdrip.compose.XdripMvvmRepository
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
@@ -32,3 +32,4 @@ class XdripDataSyncWorkerTest : TestBaseWithProfile() {
         verify(xdripMvvmRepository).updateQueueSize(5L)
     }
 }
+

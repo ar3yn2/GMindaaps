@@ -1,10 +1,10 @@
-package app.aaps.implementation.pump
+﻿package app.gmaaps.implementation.pump
 
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import com.google.gson.Gson
 import org.junit.jupiter.api.BeforeEach
@@ -95,3 +95,4 @@ class DetailedBolusInfoStorageImplTest : TestBase() {
         assertThat(loaded.store).isEmpty()
     }
 }
+

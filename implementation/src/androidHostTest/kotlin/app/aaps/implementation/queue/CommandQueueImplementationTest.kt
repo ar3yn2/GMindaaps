@@ -1,41 +1,41 @@
-package app.aaps.implementation.queue
+﻿package app.gmaaps.implementation.queue
 
 import android.content.Context
 import android.os.PowerManager
 import androidx.compose.ui.text.font.FontWeight
-import app.aaps.core.data.model.BS
-import app.aaps.core.interfaces.alerts.LocalAlertUtils
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationAction
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.Command
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventProfileChangeRequested
-import app.aaps.core.interfaces.smsCommunicator.SmsCommunicator
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.objects.constraints.ConstraintObject
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.implementation.profile.ProfileSwitchSilentGate
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.interfaces.alerts.LocalAlertUtils
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationAction
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.Command
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventProfileChangeRequested
+import app.gmaaps.core.interfaces.smsCommunicator.SmsCommunicator
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.objects.constraints.ConstraintObject
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.implementation.profile.ProfileSwitchSilentGate
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -175,10 +175,10 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
             whenever(constraintChecker.applyBasalConstraints(anyOrNull(), anyOrNull())).thenReturn(rateConstraint)
             val percentageConstraint = ConstraintObject(0, aapsLogger)
             whenever(constraintChecker.applyBasalPercentConstraints(anyOrNull(), anyOrNull())).thenReturn(percentageConstraint)
-            whenever(rh.gs(app.aaps.core.ui.R.string.connectiontimedout)).thenReturn("Connection timed out")
-            whenever(rh.gs(app.aaps.implementation.R.string.executing_right_now)).thenReturn("Executing right now")
-            whenever(rh.gs(app.aaps.core.ui.R.string.command_replaced)).thenReturn("Replaced by newer command")
-            whenever(rh.gs(app.aaps.core.ui.R.string.goingtodeliver)).thenReturn("Going to deliver %1\$.2f U")
+            whenever(rh.gs(app.gmaaps.core.ui.R.string.connectiontimedout)).thenReturn("Connection timed out")
+            whenever(rh.gs(app.gmaaps.implementation.R.string.executing_right_now)).thenReturn("Executing right now")
+            whenever(rh.gs(app.gmaaps.core.ui.R.string.command_replaced)).thenReturn("Replaced by newer command")
+            whenever(rh.gs(app.gmaaps.core.ui.R.string.goingtodeliver)).thenReturn("Going to deliver %1\$.2f U")
         }
     }
 
@@ -238,7 +238,7 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
         executor = CommandExecutor(
             aapsLogger, fabricPrivacy, commandQueue, rxBus, activePlugin, text, preferences, config, bolusProgressData, TestCommandExecutionPlatform()
         )
-        whenever(rh.gs(app.aaps.core.ui.R.string.carbs_not_saved_after_bolus)).thenReturn("Carbs could not be saved")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.carbs_not_saved_after_bolus)).thenReturn("Carbs could not be saved")
         // The pump delivers successfully (TestPumpPlugin), but storing carbs blows up.
         whenever(persistenceLayer.insertOrUpdateCarbs(anyOrNull(), anyOrNull(), anyOrNull(), anyOrNull()))
             .thenThrow(RuntimeException("db unavailable"))
@@ -415,7 +415,7 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
     @Test
     fun postProfileWriteResult_timeout_ringsFailureAlarmWithFallbackText() {
         // timeout: result == null (the command was never completed) → treated as failure, generic fallback text.
-        whenever(rh.gs(app.aaps.core.ui.R.string.failed_update_basal_profile)).thenReturn("Failed to update basal profile")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.failed_update_basal_profile)).thenReturn("Failed to update basal profile")
 
         val persisted = commandQueue.postProfileWriteResult(null, silent = false)
 
@@ -868,7 +868,7 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
 
     @Test
     fun `tempBasalAbsolute non-zero is rejected during DISCONNECTED_PUMP`() = runTest {
-        stubActiveMode(app.aaps.core.data.model.RM.Mode.DISCONNECTED_PUMP)
+        stubActiveMode(app.gmaaps.core.data.model.RM.Mode.DISCONNECTED_PUMP)
         val result = commandQueue.tempBasalAbsolute(1.5, 30, true, validProfile, PumpSync.TemporaryBasalType.NORMAL)
         assertThat(result.success).isFalse()
         assertThat(result.enacted).isFalse()
@@ -877,7 +877,7 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
     @Test
     fun `tempBasalAbsolute rate zero passes during DISCONNECTED_PUMP`() = runTest {
         // The reconciler must be able to enact zero-TBR while DISCONNECTED_PUMP is active.
-        stubActiveMode(app.aaps.core.data.model.RM.Mode.DISCONNECTED_PUMP)
+        stubActiveMode(app.gmaaps.core.data.model.RM.Mode.DISCONNECTED_PUMP)
         backgroundScope.launch { commandQueue.tempBasalAbsolute(0.0, 30, true, validProfile, PumpSync.TemporaryBasalType.EMULATED_PUMP_SUSPEND) }
         yield()
         assertThat(commandQueue.size()).isGreaterThan(0)
@@ -885,7 +885,7 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
 
     @Test
     fun `bolus is rejected during DISCONNECTED_PUMP`() = runTest {
-        stubActiveMode(app.aaps.core.data.model.RM.Mode.DISCONNECTED_PUMP)
+        stubActiveMode(app.gmaaps.core.data.model.RM.Mode.DISCONNECTED_PUMP)
         val info = DetailedBolusInfo().also { it.insulin = 1.0 }
         val result = commandQueue.bolus(info)
         assertThat(result.success).isFalse()
@@ -893,7 +893,7 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
 
     @Test
     fun `extendedBolus is rejected during DISCONNECTED_PUMP`() = runTest {
-        stubActiveMode(app.aaps.core.data.model.RM.Mode.DISCONNECTED_PUMP)
+        stubActiveMode(app.gmaaps.core.data.model.RM.Mode.DISCONNECTED_PUMP)
         val result = commandQueue.extendedBolus(2.0, 30)
         assertThat(result.success).isFalse()
     }
@@ -901,7 +901,7 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
     @Test
     fun `cancelTempBasal is allowed during DISCONNECTED_PUMP`() = runTest {
         // Cancel is always allowed — it is the primitive used by RESUME and startup drift.
-        stubActiveMode(app.aaps.core.data.model.RM.Mode.DISCONNECTED_PUMP)
+        stubActiveMode(app.gmaaps.core.data.model.RM.Mode.DISCONNECTED_PUMP)
         backgroundScope.launch { commandQueue.cancelTempBasal(enforceNew = true, autoForced = false) }
         yield()
         assertThat(commandQueue.size()).isGreaterThan(0)
@@ -911,7 +911,7 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
     fun `tempBasalAbsolute non-zero is allowed during SUSPENDED_BY_USER`() = runTest {
         // SUSPENDED_BY_USER is the temporary counterpart of DISABLED_LOOP — manual delivery stays
         // available; the gate does not block TBR / bolus / EB.
-        stubActiveMode(app.aaps.core.data.model.RM.Mode.SUSPENDED_BY_USER)
+        stubActiveMode(app.gmaaps.core.data.model.RM.Mode.SUSPENDED_BY_USER)
         backgroundScope.launch { commandQueue.tempBasalAbsolute(1.5, 30, true, validProfile, PumpSync.TemporaryBasalType.NORMAL) }
         yield()
         assertThat(commandQueue.size()).isGreaterThan(0)
@@ -919,7 +919,7 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
 
     @Test
     fun `bolus is allowed during SUSPENDED_BY_USER`() = runTest {
-        stubActiveMode(app.aaps.core.data.model.RM.Mode.SUSPENDED_BY_USER)
+        stubActiveMode(app.gmaaps.core.data.model.RM.Mode.SUSPENDED_BY_USER)
         val info = DetailedBolusInfo().also { it.insulin = 1.0 }
         backgroundScope.launch { commandQueue.bolus(info) }
         yield()
@@ -928,7 +928,7 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
 
     @Test
     fun `working mode allows all commands`() = runTest {
-        stubActiveMode(app.aaps.core.data.model.RM.Mode.CLOSED_LOOP)
+        stubActiveMode(app.gmaaps.core.data.model.RM.Mode.CLOSED_LOOP)
         backgroundScope.launch { commandQueue.tempBasalAbsolute(1.5, 30, true, validProfile, PumpSync.TemporaryBasalType.NORMAL) }
         yield()
         // cancelTempBasal replaces pending TEMPBASAL commands, so size stays at 1
@@ -1090,14 +1090,14 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
         assertThat(order).containsExactly("first in", "first out", "second in").inOrder()
     }
 
-    private suspend fun stubActiveMode(mode: app.aaps.core.data.model.RM.Mode) {
+    private suspend fun stubActiveMode(mode: app.gmaaps.core.data.model.RM.Mode) {
         whenever(persistenceLayer.getRunningModeActiveAt(anyLong())).thenReturn(
-            app.aaps.core.data.model.RM(timestamp = 0, mode = mode, duration = 0L)
+            app.gmaaps.core.data.model.RM(timestamp = 0, mode = mode, duration = 0L)
         )
         // Resource strings used by the gate's rejection comment.
-        whenever(rh.gs(app.aaps.core.interfaces.R.string.pump_disconnected)).thenReturn("pump disconnected")
-        whenever(rh.gs(app.aaps.core.interfaces.R.string.loopsuspended)).thenReturn("loop suspended")
-        whenever(rh.gs(app.aaps.core.interfaces.R.string.pumpsuspended)).thenReturn("pump suspended")
+        whenever(rh.gs(app.gmaaps.core.interfaces.R.string.pump_disconnected)).thenReturn("pump disconnected")
+        whenever(rh.gs(app.gmaaps.core.interfaces.R.string.loopsuspended)).thenReturn("loop suspended")
+        whenever(rh.gs(app.gmaaps.core.interfaces.R.string.pumpsuspended)).thenReturn("pump suspended")
     }
 
     // ---- dropping the queue ---------------------------------------------------------------
@@ -1309,3 +1309,4 @@ class CommandQueueImplementationTest : TestBaseWithProfile() {
         assertThat(bolusProgressData.state.value).isNull()
     }
 }
+

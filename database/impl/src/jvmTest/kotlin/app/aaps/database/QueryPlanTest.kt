@@ -1,12 +1,12 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
 import androidx.sqlite.SQLiteConnection
 import androidx.sqlite.SQLiteDriver
 import androidx.sqlite.SQLiteStatement
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
-import app.aaps.database.di.JvmAppDatabaseBuilder
-import app.aaps.database.entities.Bolus
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.di.JvmAppDatabaseBuilder
+import app.gmaaps.database.entities.Bolus
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 import com.google.common.truth.Truth.assertWithMessage
 import kotlinx.coroutines.test.runTest
 import java.util.concurrent.CopyOnWriteArrayList
@@ -167,3 +167,4 @@ class QueryPlanTest {
         val PUMP_TYPE = InterfaceIDs.PumpType.entries.first()
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.danars.encryption
+﻿package app.gmaaps.pump.danars.encryption
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test

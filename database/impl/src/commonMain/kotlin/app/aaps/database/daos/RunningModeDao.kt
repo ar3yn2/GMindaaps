@@ -1,9 +1,9 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.RunningMode
-import app.aaps.database.entities.TABLE_RUNNING_MODE
+import app.gmaaps.database.entities.RunningMode
+import app.gmaaps.database.entities.TABLE_RUNNING_MODE
 
 @Dao
 internal interface RunningModeDao : TraceableDao<RunningMode> {
@@ -57,3 +57,4 @@ internal interface RunningModeDao : TraceableDao<RunningMode> {
     @Query("SELECT * FROM $TABLE_RUNNING_MODE WHERE dateCreated > :since AND dateCreated <= :until LIMIT :limit OFFSET :offset")
     suspend fun getNewEntriesSince(since: Long, until: Long, limit: Int, offset: Int): List<RunningMode>
 }
+

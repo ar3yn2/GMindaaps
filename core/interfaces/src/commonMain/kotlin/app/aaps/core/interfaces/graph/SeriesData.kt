@@ -1,3 +1,3 @@
-package app.aaps.core.interfaces.graph
+﻿package app.gmaaps.core.interfaces.graph
 
 interface SeriesData

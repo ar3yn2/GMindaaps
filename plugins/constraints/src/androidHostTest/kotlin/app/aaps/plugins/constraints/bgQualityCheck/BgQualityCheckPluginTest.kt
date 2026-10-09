@@ -1,19 +1,19 @@
-package app.aaps.plugins.constraints.bgQualityCheck
+﻿package app.gmaaps.plugins.constraints.bgQualityCheck
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.aps.AutosensDataStore
-import app.aaps.core.interfaces.bgQualityCheck.BgQualityCheck
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.objects.constraints.ConstraintObject
-import app.aaps.core.objects.extensions.fromGv
-import app.aaps.plugins.constraints.ConstraintsStringsValues
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.core.interfaces.bgQualityCheck.BgQualityCheck
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.objects.constraints.ConstraintObject
+import app.gmaaps.core.objects.extensions.fromGv
+import app.gmaaps.plugins.constraints.ConstraintsStringsValues
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -558,3 +558,4 @@ class BgQualityCheckPluginTest : TestBase() {
     }
 
 }
+

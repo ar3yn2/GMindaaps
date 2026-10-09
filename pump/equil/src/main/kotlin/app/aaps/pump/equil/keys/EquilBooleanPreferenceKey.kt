@@ -1,8 +1,8 @@
-package app.aaps.pump.equil.keys
+﻿package app.gmaaps.pump.equil.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.equil.R
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.equil.R
 
 enum class EquilBooleanPreferenceKey(
     override val key: String,
@@ -16,3 +16,4 @@ enum class EquilBooleanPreferenceKey(
 
     override val title: TextRef = TextRef.AndroidRes(titleResId)
 }
+

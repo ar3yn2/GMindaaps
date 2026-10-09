@@ -1,20 +1,20 @@
-package app.aaps.pump.insight.app_layer.status
+﻿package app.gmaaps.pump.insight.app_layer.status
 
-import app.aaps.pump.insight.app_layer.AppLayerMessage
-import app.aaps.pump.insight.app_layer.Service
-import app.aaps.pump.insight.descriptors.AlertCategory
-import app.aaps.pump.insight.descriptors.AlertStatus
-import app.aaps.pump.insight.descriptors.AlertType
-import app.aaps.pump.insight.descriptors.MessagePriority
-import app.aaps.pump.insight.utils.ByteBuf
+import app.gmaaps.pump.insight.app_layer.AppLayerMessage
+import app.gmaaps.pump.insight.app_layer.Service
+import app.gmaaps.pump.insight.descriptors.AlertCategory
+import app.gmaaps.pump.insight.descriptors.AlertStatus
+import app.gmaaps.pump.insight.descriptors.AlertType
+import app.gmaaps.pump.insight.descriptors.MessagePriority
+import app.gmaaps.pump.insight.utils.ByteBuf
 
 class GetActiveAlertMessage : AppLayerMessage(MessagePriority.NORMAL, true, false, Service.STATUS) {
 
-    internal var alert: app.aaps.pump.insight.descriptors.Alert? = null
+    internal var alert: app.gmaaps.pump.insight.descriptors.Alert? = null
         private set
 
     override fun parse(byteBuf: ByteBuf) {
-        val alert = app.aaps.pump.insight.descriptors.Alert().apply {
+        val alert = app.gmaaps.pump.insight.descriptors.Alert().apply {
             byteBuf.let {
                 alertId = it.readUInt16LE()
                 alertCategory = AlertCategory.fromId(it.readUInt16LE())

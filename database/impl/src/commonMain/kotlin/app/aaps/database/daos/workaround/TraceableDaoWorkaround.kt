@@ -1,10 +1,10 @@
-package app.aaps.database.daos.workaround
+﻿package app.gmaaps.database.daos.workaround
 
 import androidx.room.Transaction
-import app.aaps.database.daos.TraceableDao
-import app.aaps.database.daos.insertNewEntryImpl
-import app.aaps.database.daos.updateExistingEntryImpl
-import app.aaps.database.entities.interfaces.TraceableDBEntry
+import app.gmaaps.database.daos.TraceableDao
+import app.gmaaps.database.daos.insertNewEntryImpl
+import app.gmaaps.database.daos.updateExistingEntryImpl
+import app.gmaaps.database.entities.interfaces.TraceableDBEntry
 
 interface TraceableDaoWorkaround<T : TraceableDBEntry> {
 
@@ -26,3 +26,4 @@ interface TraceableDaoWorkaround<T : TraceableDBEntry> {
     suspend fun updateExistingEntry(entry: T): Long =
         (this as TraceableDao<T>).updateExistingEntryImpl(entry)
 }
+

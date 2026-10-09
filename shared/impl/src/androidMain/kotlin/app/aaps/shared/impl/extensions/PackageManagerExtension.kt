@@ -1,4 +1,4 @@
-package app.aaps.shared.impl.extensions
+﻿package app.gmaaps.shared.impl.extensions
 
 import android.content.Intent
 import android.content.pm.PackageInfo
@@ -23,3 +23,4 @@ fun PackageManager.safeQueryBroadcastReceivers(intent: Intent, flags: Long): Lis
 fun PackageManager.safeGetPackageInfo(packageName: String, flags: Int): PackageInfo =
     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) getPackageInfo(packageName, PackageManager.PackageInfoFlags.of(flags.toLong()))
     else @Suppress("DEPRECATION") getPackageInfo(packageName, flags)
+

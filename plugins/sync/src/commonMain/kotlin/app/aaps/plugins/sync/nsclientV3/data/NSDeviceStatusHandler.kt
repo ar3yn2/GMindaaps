@@ -1,22 +1,22 @@
-package app.aaps.plugins.sync.nsclientV3.data
+﻿package app.gmaaps.plugins.sync.nsclientV3.data
 
-import app.aaps.core.interfaces.aps.RT
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.overview.OverviewData
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventNsClientStatusUpdated
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.workflow.CalculationWorkflow
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.nssdk.localmodel.devicestatus.NSDeviceStatus
-import app.aaps.core.utils.safeGetString
-import app.aaps.core.utils.safeGetStringAllowNull
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.core.interfaces.aps.RT
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.overview.OverviewData
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventNsClientStatusUpdated
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.workflow.CalculationWorkflow
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.nssdk.localmodel.devicestatus.NSDeviceStatus
+import app.gmaaps.core.utils.safeGetString
+import app.gmaaps.core.utils.safeGetStringAllowNull
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -234,3 +234,4 @@ private fun Any?.toPlainText(): String =
         .replace("<br>", "\n")
         .replace(Regex("<[^>]*>"), "")
         .replace("&nbsp;", " ")
+

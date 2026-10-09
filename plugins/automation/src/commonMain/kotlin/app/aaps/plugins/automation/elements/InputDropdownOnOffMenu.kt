@@ -1,7 +1,7 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.plugins.automation.AutomationStrings
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.plugins.automation.AutomationStrings
 
 class InputDropdownOnOffMenu(private val rh: TextResolver) {
 
@@ -26,3 +26,4 @@ class InputDropdownOnOffMenu(private val rh: TextResolver) {
         return this
     }
 }
+

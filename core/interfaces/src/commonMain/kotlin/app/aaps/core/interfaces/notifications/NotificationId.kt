@@ -1,19 +1,19 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
-import app.aaps.core.interfaces.notifications.NotificationCategory.AUTOMATION
-import app.aaps.core.interfaces.notifications.NotificationCategory.CGM
-import app.aaps.core.interfaces.notifications.NotificationCategory.LOOP
-import app.aaps.core.interfaces.notifications.NotificationCategory.PROFILE
-import app.aaps.core.interfaces.notifications.NotificationCategory.PUMP
-import app.aaps.core.interfaces.notifications.NotificationCategory.SYNC
-import app.aaps.core.interfaces.notifications.NotificationCategory.SYSTEM
-import app.aaps.core.interfaces.notifications.NotificationId.Companion.fromOrdinal
-import app.aaps.core.interfaces.notifications.NotificationLevel.ANNOUNCEMENT
-import app.aaps.core.interfaces.notifications.NotificationLevel.IMPORTANT
-import app.aaps.core.interfaces.notifications.NotificationLevel.INFO
-import app.aaps.core.interfaces.notifications.NotificationLevel.LOW
-import app.aaps.core.interfaces.notifications.NotificationLevel.NORMAL
-import app.aaps.core.interfaces.notifications.NotificationLevel.URGENT
+import app.gmaaps.core.interfaces.notifications.NotificationCategory.AUTOMATION
+import app.gmaaps.core.interfaces.notifications.NotificationCategory.CGM
+import app.gmaaps.core.interfaces.notifications.NotificationCategory.LOOP
+import app.gmaaps.core.interfaces.notifications.NotificationCategory.PROFILE
+import app.gmaaps.core.interfaces.notifications.NotificationCategory.PUMP
+import app.gmaaps.core.interfaces.notifications.NotificationCategory.SYNC
+import app.gmaaps.core.interfaces.notifications.NotificationCategory.SYSTEM
+import app.gmaaps.core.interfaces.notifications.NotificationId.Companion.fromOrdinal
+import app.gmaaps.core.interfaces.notifications.NotificationLevel.ANNOUNCEMENT
+import app.gmaaps.core.interfaces.notifications.NotificationLevel.IMPORTANT
+import app.gmaaps.core.interfaces.notifications.NotificationLevel.INFO
+import app.gmaaps.core.interfaces.notifications.NotificationLevel.LOW
+import app.gmaaps.core.interfaces.notifications.NotificationLevel.NORMAL
+import app.gmaaps.core.interfaces.notifications.NotificationLevel.URGENT
 
 /**
  * Identity + intrinsic severity of every AAPS notification.
@@ -41,6 +41,9 @@ enum class NotificationId(
     // DanaR-only PROFILE_SET_FAILED, which was merged here.
     FAILED_UPDATE_PROFILE(URGENT, PROFILE),
     INVALID_PROFILE_NOT_ACCEPTED(NORMAL, PROFILE),
+
+    // AI Profile analysis notifications
+    AI_PROFILE_RECOMMENDATION(INFO, PROFILE),
 
     // Pump — general
     EXTENDED_BOLUS_DISABLED(IMPORTANT, PUMP),
@@ -215,7 +218,7 @@ enum class NotificationId(
     // allowMultiple, because one id is shared by every plugin. Without it a second failing plugin would
     // replace the first one's card, and one plugin starting cleanly would dismiss the card of another that
     // is still broken - leaving a blocked pump with no alarm to explain it. Same reason EQUIL_LOW_BATTERY
-    // keeps its own id above. [app.aaps.core.interfaces.plugin.PluginBase] dismisses by handle, not by id.
+    // keeps its own id above. [app.gmaaps.core.interfaces.plugin.PluginBase] dismisses by handle, not by id.
     PLUGIN_START_FAILED(URGENT, SYSTEM, allowMultiple = true),
 
     // Work the plugin launched itself ended with an error. Separate from PLUGIN_START_FAILED because the
@@ -230,6 +233,7 @@ enum class NotificationId(
 
     // One command has been running in the queue for too long, so nothing else reaches the pump (#5209).
     // Appended at the END for the same reason as above.
+    AI_PROFILE_ERROR(URGENT, PROFILE),
     PUMP_DRIVER_NOT_RESPONDING(URGENT, PUMP);
 
     companion object {
@@ -237,3 +241,4 @@ enum class NotificationId(
         fun fromOrdinal(ordinal: Int): NotificationId? = entries.getOrNull(ordinal)
     }
 }
+

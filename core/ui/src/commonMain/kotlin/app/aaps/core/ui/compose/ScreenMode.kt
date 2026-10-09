@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 /**
  * Screen mode for management screens (TT, QuickWizard, Profile).
@@ -18,3 +18,4 @@ enum class ScreenMode {
             entries.find { it.name.equals(value, ignoreCase = true) } ?: EDIT
     }
 }
+

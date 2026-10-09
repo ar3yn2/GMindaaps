@@ -1,37 +1,37 @@
-package app.aaps.plugins.configuration.configBuilder
+﻿package app.gmaaps.plugins.configuration.configBuilder
 
-import app.aaps.core.data.model.SceneLifecycle
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.RunningConfigurationKeys
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.VirtualPump
-import app.aaps.core.interfaces.pump.defs.fillFor
-import app.aaps.core.interfaces.scenes.ActiveSceneSnapshot
-import app.aaps.core.interfaces.scenes.ActiveSceneSync
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.BooleanNonPreferenceKey
-import app.aaps.core.keys.interfaces.DoubleNonPreferenceKey
-import app.aaps.core.keys.interfaces.IntNonPreferenceKey
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
-import app.aaps.core.keys.interfaces.SyncChannel
-import app.aaps.core.keys.interfaces.UnitDoublePreferenceKey
-import app.aaps.core.nssdk.interfaces.RunningConfiguration
-import app.aaps.core.nssdk.localmodel.configuration.NSActiveScene
-import app.aaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
-import app.aaps.plugins.configuration.ConfigurationStrings
+import app.gmaaps.core.data.model.SceneLifecycle
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.RunningConfigurationKeys
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.VirtualPump
+import app.gmaaps.core.interfaces.pump.defs.fillFor
+import app.gmaaps.core.interfaces.scenes.ActiveSceneSnapshot
+import app.gmaaps.core.interfaces.scenes.ActiveSceneSync
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.DoubleNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.SyncChannel
+import app.gmaaps.core.keys.interfaces.UnitDoublePreferenceKey
+import app.gmaaps.core.nssdk.interfaces.RunningConfiguration
+import app.gmaaps.core.nssdk.localmodel.configuration.NSActiveScene
+import app.gmaaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
+import app.gmaaps.plugins.configuration.ConfigurationStrings
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -233,3 +233,4 @@ class RunningConfigurationImpl(
         )
 
 }
+

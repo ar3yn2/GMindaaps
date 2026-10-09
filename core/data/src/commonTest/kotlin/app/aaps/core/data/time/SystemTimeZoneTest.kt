@@ -1,4 +1,4 @@
-package app.aaps.core.data.time
+﻿package app.gmaaps.core.data.time
 
 import kotlin.math.abs
 import kotlin.test.Test
@@ -68,3 +68,4 @@ class SystemTimeZoneTest {
         assertEquals(systemUtcOffsetAt(summer), systemUtcOffsetAt(summer))
     }
 }
+

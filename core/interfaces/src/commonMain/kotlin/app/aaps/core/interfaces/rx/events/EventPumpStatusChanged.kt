@@ -1,8 +1,8 @@
-package app.aaps.core.interfaces.rx.events
+﻿package app.gmaaps.core.interfaces.rx.events
 
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.TextRef.Companion.withArgs
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef.Companion.withArgs
 
 /**
  * Fired when the pump connection status changes.

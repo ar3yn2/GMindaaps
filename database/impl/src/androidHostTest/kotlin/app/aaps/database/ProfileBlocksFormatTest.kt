@@ -1,7 +1,7 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
-import app.aaps.database.entities.data.Block
-import app.aaps.database.entities.data.TargetBlock
+import app.gmaaps.database.entities.data.Block
+import app.gmaaps.database.entities.data.TargetBlock
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -50,3 +50,4 @@ internal class ProfileBlocksFormatTest {
         assertThat(converters.toListOfBlocks("[]")).isEmpty()
     }
 }
+

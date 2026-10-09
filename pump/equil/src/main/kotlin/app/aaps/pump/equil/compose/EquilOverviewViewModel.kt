@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.compose
+﻿package app.gmaaps.pump.equil.compose
 
 import android.content.Context
 import android.text.TextUtils
@@ -9,32 +9,32 @@ import androidx.compose.material.icons.filled.SwapHoriz
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.ActionCategory
-import app.aaps.core.ui.compose.pump.PumpAction
-import app.aaps.core.ui.compose.pump.PumpCommunicationStatus
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.core.ui.compose.pump.PumpOverviewUiState
-import app.aaps.core.ui.compose.pump.StatusBanner
-import app.aaps.core.ui.compose.pump.tickerFlow
-import app.aaps.pump.equil.EquilPumpPlugin
-import app.aaps.pump.equil.R
-import app.aaps.pump.equil.data.RunMode
-import app.aaps.pump.equil.events.EventEquilDataChanged
-import app.aaps.pump.equil.events.EventEquilModeChanged
-import app.aaps.pump.equil.manager.EquilManager
-import app.aaps.pump.equil.manager.command.CmdModelSet
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.ActionCategory
+import app.gmaaps.core.ui.compose.pump.PumpAction
+import app.gmaaps.core.ui.compose.pump.PumpCommunicationStatus
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.core.ui.compose.pump.PumpOverviewUiState
+import app.gmaaps.core.ui.compose.pump.StatusBanner
+import app.gmaaps.core.ui.compose.pump.tickerFlow
+import app.gmaaps.pump.equil.EquilPumpPlugin
+import app.gmaaps.pump.equil.R
+import app.gmaaps.pump.equil.data.RunMode
+import app.gmaaps.pump.equil.events.EventEquilDataChanged
+import app.gmaaps.pump.equil.events.EventEquilModeChanged
+import app.gmaaps.pump.equil.manager.EquilManager
+import app.gmaaps.pump.equil.manager.command.CmdModelSet
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -50,7 +50,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 sealed class EquilOverviewEvent {
     data class StartWizard(val workflow: EquilWorkflow) : EquilOverviewEvent()
@@ -280,3 +280,4 @@ class EquilOverviewViewModel(
 
     // viewModelScope cancels all coroutines automatically on onCleared()
 }
+

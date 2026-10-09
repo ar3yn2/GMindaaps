@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.compose.steps
+﻿package app.gmaaps.pump.eopatch.compose.steps
 
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.MaterialTheme
@@ -12,12 +12,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.eopatch.R
-import app.aaps.pump.eopatch.code.PatchStep
-import app.aaps.pump.eopatch.compose.EopatchPatchViewModel
-import app.aaps.pump.eopatch.compose.EopatchPatchViewModel.SetupStep
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.eopatch.R
+import app.gmaaps.pump.eopatch.code.PatchStep
+import app.gmaaps.pump.eopatch.compose.EopatchPatchViewModel
+import app.gmaaps.pump.eopatch.compose.EopatchPatchViewModel.SetupStep
 
 /**
  * @see RotateKnobStepPreview
@@ -59,20 +59,20 @@ fun RotateKnobStep(viewModel: EopatchPatchViewModel) {
                 TextButton(onClick = {
                     showActivationFailedDialog = false
                     viewModel.startNeedleSensing()
-                }) { Text(stringResource(app.aaps.core.ui.R.string.retry)) }
+                }) { Text(stringResource(app.gmaaps.core.ui.R.string.retry)) }
             },
             dismissButton = {
                 TextButton(onClick = {
                     showActivationFailedDialog = false
                     viewModel.handleCancel()
-                }) { Text(stringResource(app.aaps.core.ui.R.string.cancel)) }
+                }) { Text(stringResource(app.gmaaps.core.ui.R.string.cancel)) }
             }
         )
     }
 
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = if (isNeedleInsertionError) stringResource(app.aaps.core.ui.R.string.retry) else stringResource(app.aaps.core.ui.R.string.next),
+            text = if (isNeedleInsertionError) stringResource(app.gmaaps.core.ui.R.string.retry) else stringResource(app.gmaaps.core.ui.R.string.next),
             onClick = { viewModel.startNeedleSensing() }
         )
     ) {
@@ -93,3 +93,4 @@ fun RotateKnobStep(viewModel: EopatchPatchViewModel) {
         )
     }
 }
+

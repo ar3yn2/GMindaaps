@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.SerialName
@@ -127,3 +127,4 @@ class KotlinxCoercionSpikeTest {
         assertThat(parsed.insulin).isNull()
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
@@ -133,3 +133,4 @@ class NsWsPayloadTest {
         assertEquals("abc", NsWsPayload.string(NsWsPayload.document(frame)!!, "_id"))
     }
 }
+

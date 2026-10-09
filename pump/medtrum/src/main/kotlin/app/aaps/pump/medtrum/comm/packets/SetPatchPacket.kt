@@ -1,11 +1,11 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.pump.medtrum.MedtrumPump
-import app.aaps.pump.medtrum.comm.enums.AlarmSetting
-import app.aaps.pump.medtrum.comm.enums.CommandType.SET_PATCH
-import app.aaps.pump.medtrum.extension.toByte
-import app.aaps.pump.medtrum.extension.toByteArray
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.pump.medtrum.MedtrumPump
+import app.gmaaps.pump.medtrum.comm.enums.AlarmSetting
+import app.gmaaps.pump.medtrum.comm.enums.CommandType.SET_PATCH
+import app.gmaaps.pump.medtrum.extension.toByte
+import app.gmaaps.pump.medtrum.extension.toByteArray
 import dev.zacsweers.metro.Inject
 import kotlin.math.round
 
@@ -44,3 +44,4 @@ class SetPatchPacket(injector: MetroMemberInjector) : MedtrumPacket(injector) {
         return byteArrayOf(opCode) + alarmSetting.code + hourlyMaxInsulin.toByteArray(2) + dailyMaxInsulin.toByteArray(2) + patchExpiration + autoSuspendEnable + autoSuspendTime + lowSuspend + predictiveLowSuspend + predictiveLowSuspendRange
     }
 }
+

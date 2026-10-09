@@ -1,11 +1,11 @@
-package app.aaps.implementation.plugin
+﻿package app.gmaaps.implementation.plugin
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.PermissionGroup
-import app.aaps.core.interfaces.plugin.PermissionProvider
-import app.aaps.core.interfaces.plugin.PluginPermissions
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.PermissionGroup
+import app.gmaaps.core.interfaces.plugin.PermissionProvider
+import app.gmaaps.core.interfaces.plugin.PluginPermissions
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -62,3 +62,4 @@ class IosPluginPermissions(
         return emptyList()
     }
 }
+

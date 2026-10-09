@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.di
+﻿package app.gmaaps.core.interfaces.di
 
 import android.content.Context
 
@@ -22,3 +22,4 @@ fun Context.injectMetroMembers(target: Any) {
         "No Metro binding for ${target::class.java.name}. Add a @Provides @IntoMap @ClassKey entry for it."
     }
 }
+

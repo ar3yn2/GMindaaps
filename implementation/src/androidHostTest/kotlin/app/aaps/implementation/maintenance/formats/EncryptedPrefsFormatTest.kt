@@ -1,19 +1,19 @@
-package app.aaps.implementation.maintenance.formats
+﻿package app.gmaaps.implementation.maintenance.formats
 
 import android.content.ContentResolver
 import android.content.Context
 import androidx.documentfile.provider.DocumentFile
-import app.aaps.core.interfaces.maintenance.PrefMetadata
-import app.aaps.core.interfaces.maintenance.Prefs
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.objects.crypto.CryptoUtil
-import app.aaps.implementation.maintenance.PrefsMetadataKeyImpl
-import app.aaps.implementation.maintenance.data.PrefFormatError
-import app.aaps.implementation.maintenance.data.PrefsFormat
-import app.aaps.implementation.maintenance.data.PrefsStatusImpl
-import app.aaps.implementation.protection.SecureEncryptImpl
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.maintenance.PrefMetadata
+import app.gmaaps.core.interfaces.maintenance.Prefs
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.objects.crypto.CryptoUtil
+import app.gmaaps.implementation.maintenance.PrefsMetadataKeyImpl
+import app.gmaaps.implementation.maintenance.data.PrefFormatError
+import app.gmaaps.implementation.maintenance.data.PrefsFormat
+import app.gmaaps.implementation.maintenance.data.PrefsStatusImpl
+import app.gmaaps.implementation.protection.SecureEncryptImpl
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import com.google.common.truth.TruthJUnit.assume
 import org.junit.jupiter.api.BeforeEach
@@ -264,3 +264,4 @@ open class EncryptedPrefsFormatTest : TestBase() {
         return file
     }
 }
+

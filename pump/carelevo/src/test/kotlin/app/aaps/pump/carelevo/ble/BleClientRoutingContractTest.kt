@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble
+﻿package app.gmaaps.pump.carelevo.ble
 
-import app.aaps.pump.carelevo.ble.gatt.FakeGattConnection
-import app.aaps.pump.carelevo.ble.gatt.GattConnState
+import app.gmaaps.pump.carelevo.ble.gatt.FakeGattConnection
+import app.gmaaps.pump.carelevo.ble.gatt.GattConnState
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -219,3 +219,4 @@ internal class BleClientRoutingContractTest {
             override fun decode(responses: Map<Byte, ByteArray>) = FakeMultiResponse(responses)
         }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
 
 /**
  * `CMD_INFUSION_THRESHOLD_REQ` (0x17) → `CMD_INFUSION_THRESHOLD_RES` (0x77). Sets an infusion limit —
@@ -52,3 +52,4 @@ data class InfusionThresholdResponse(
     val type: Int,
     val resultCode: Int
 ) : BleResponse
+

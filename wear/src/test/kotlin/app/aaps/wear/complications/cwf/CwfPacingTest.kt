@@ -1,6 +1,6 @@
-package app.aaps.wear.complications.cwf
+﻿package app.gmaaps.wear.complications.cwf
 
-import app.aaps.wear.AAPSLoggerTest
+import app.gmaaps.wear.AAPSLoggerTest
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -182,3 +182,4 @@ class CwfDemandTest {
         assertThat(CwfFaceComplication.lastRequestMs).isEqualTo(0L)
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.shared.clientbindings
+﻿package app.gmaaps.shared.clientbindings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.CreationExtras
@@ -77,3 +77,4 @@ class ClientViewModelFactoryTest {
         assertTrue(factory.create(FakeViewModel::class, CreationExtras.Empty) is FakeViewModel)
     }
 }
+

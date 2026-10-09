@@ -1,4 +1,4 @@
-package app.aaps.ios.shell.ui
+﻿package app.gmaaps.ios.shell.ui
 
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.decodeToImageBitmap
@@ -17,7 +17,7 @@ import platform.posix.memcpy
  * ## Why it is read rather than chosen
  *
  * Android picks a launcher icon per flavour in `IconsProviderImplementation`, and the desktop copy
- * of that rule reads [app.aaps.core.interfaces.configuration.Config]. iOS needs neither: the two app
+ * of that rule reads [app.gmaaps.core.interfaces.configuration.Config]. iOS needs neither: the two app
  * targets, AAPSClient and AAPSClient2, already carry their own `AppIcon` asset, and one Kotlin
  * framework is linked into both. Asking the bundle therefore gives the icon of the app that is
  * actually running, and it cannot disagree with the icon on the home screen - which a second copy of
@@ -57,3 +57,4 @@ private fun NSData.toByteArray(): ByteArray {
     if (size == 0) return ByteArray(0)
     return ByteArray(size).also { out -> out.usePinned { memcpy(it.addressOf(0), bytes, length) } }
 }
+

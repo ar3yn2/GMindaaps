@@ -1,10 +1,10 @@
-package app.aaps.shared.tests
+﻿package app.gmaaps.shared.tests
 
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.HardLimits
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.HardLimits
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
 import dev.zacsweers.metro.Inject
 import kotlin.math.max
 import kotlin.math.min
@@ -54,11 +54,11 @@ class HardLimitsMock(
     }
 
     override fun ageEntries() = arrayOf<CharSequence>(
-        rh.gs(app.aaps.core.ui.R.string.child),
-        rh.gs(app.aaps.core.ui.R.string.teenage),
-        rh.gs(app.aaps.core.ui.R.string.adult),
-        rh.gs(app.aaps.core.ui.R.string.resistant_adult),
-        rh.gs(app.aaps.core.ui.R.string.pregnant),
+        rh.gs(app.gmaaps.core.ui.R.string.child),
+        rh.gs(app.gmaaps.core.ui.R.string.teenage),
+        rh.gs(app.gmaaps.core.ui.R.string.adult),
+        rh.gs(app.gmaaps.core.ui.R.string.resistant_adult),
+        rh.gs(app.gmaaps.core.ui.R.string.pregnant),
     )
 
     @Suppress("SpellCheckingInspection")

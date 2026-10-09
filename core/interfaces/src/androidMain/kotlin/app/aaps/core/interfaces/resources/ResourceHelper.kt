@@ -1,11 +1,11 @@
-package app.aaps.core.interfaces.resources
+﻿package app.gmaaps.core.interfaces.resources
 
 import androidx.annotation.PluralsRes
 import androidx.annotation.StringRes
-import app.aaps.core.interfaces.InterfacesStringIds
-import app.aaps.core.keys.KeysStringIds
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.TextRef.Companion.withArgs
+import app.gmaaps.core.interfaces.InterfacesStringIds
+import app.gmaaps.core.keys.KeysStringIds
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef.Companion.withArgs
 
 interface ResourceHelper : TextResolver {
 
@@ -16,7 +16,7 @@ interface ResourceHelper : TextResolver {
 
     /**
      * Resolves a [TextRef] outside Compose. Inside Compose use
-     * `app.aaps.core.ui.compose.stringResource` instead.
+     * `app.gmaaps.core.ui.compose.stringResource` instead.
      *
      * Every non-Compose reader of a preference title goes through here, which is the point: a module
      * that stops naming resource ids in its own code changes only this method, not its call sites.
@@ -70,3 +70,4 @@ private fun keysIdOf(ref: TextRef.Named): Int? = when (ref.owner) {
     "interfaces" -> InterfacesStringIds.idOf(ref.name)
     else         -> TextRefIdRegistry.idOf(ref)
 }
+

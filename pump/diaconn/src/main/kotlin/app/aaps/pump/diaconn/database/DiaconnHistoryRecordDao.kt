@@ -1,4 +1,4 @@
-package app.aaps.pump.diaconn.database
+﻿package app.gmaaps.pump.diaconn.database
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -17,3 +17,4 @@ abstract class DiaconnHistoryRecordDao {
     @Query( "SELECT * from $TABLE_DIACONN_HISTORY WHERE pumpUid = :pumpUid ORDER BY wrappingCount DESC, lognum DESC LIMIT 1" )
     abstract fun getLastRecord(pumpUid: String): DiaconnHistoryRecord?
 }
+

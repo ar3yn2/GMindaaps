@@ -1,10 +1,10 @@
-package app.aaps.core.interfaces.workflow
+﻿package app.gmaaps.core.interfaces.workflow
 
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.overview.OverviewData
-import app.aaps.core.interfaces.overview.graph.OverviewDataCache
-import app.aaps.core.interfaces.workflow.CalculationWorkflow.Companion.HISTORY_CALCULATION
-import app.aaps.core.interfaces.workflow.CalculationWorkflow.Companion.MAIN_CALCULATION
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.overview.OverviewData
+import app.gmaaps.core.interfaces.overview.graph.OverviewDataCache
+import app.gmaaps.core.interfaces.workflow.CalculationWorkflow.Companion.HISTORY_CALCULATION
+import app.gmaaps.core.interfaces.workflow.CalculationWorkflow.Companion.MAIN_CALCULATION
 import kotlin.time.Duration
 
 interface CalculationWorkflow {

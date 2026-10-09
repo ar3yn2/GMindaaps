@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.devicestatus
+﻿package app.gmaaps.core.nssdk.localmodel.devicestatus
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -56,3 +56,4 @@ data class NSDeviceStatus(
         val battery: Int? = null
     )
 }
+

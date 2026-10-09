@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose.actions
+﻿package app.gmaaps.plugins.automation.compose.actions
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -8,34 +8,34 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.Scene
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.NumberInputRow
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.actions.Action
-import app.aaps.plugins.automation.actions.ActionAlarm
-import app.aaps.plugins.automation.actions.ActionCarePortalEvent
-import app.aaps.plugins.automation.actions.ActionDisableScene
-import app.aaps.plugins.automation.actions.ActionEnableScene
-import app.aaps.plugins.automation.actions.ActionNotification
-import app.aaps.plugins.automation.actions.ActionProfileSwitch
-import app.aaps.plugins.automation.actions.ActionProfileSwitchPercent
-import app.aaps.plugins.automation.actions.ActionRunAutotune
-import app.aaps.plugins.automation.actions.ActionRunScene
-import app.aaps.plugins.automation.actions.ActionSMBChange
-import app.aaps.plugins.automation.actions.ActionSendSMS
-import app.aaps.plugins.automation.actions.ActionSettingsExport
-import app.aaps.plugins.automation.actions.ActionSmoothingChange
-import app.aaps.plugins.automation.actions.ActionStartTempTarget
-import app.aaps.plugins.automation.compose.elements.AutomationDropdown
-import app.aaps.plugins.automation.compose.elements.InputDropdownOnOffEditor
-import app.aaps.plugins.automation.compose.elements.InputStringEditor
-import app.aaps.plugins.automation.compose.elements.InputWeekDayEditor
-import app.aaps.plugins.automation.compose.elements.LabelWithElementRow
-import app.aaps.plugins.automation.elements.InputPercent
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.NumberInputRow
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.actions.Action
+import app.gmaaps.plugins.automation.actions.ActionAlarm
+import app.gmaaps.plugins.automation.actions.ActionCarePortalEvent
+import app.gmaaps.plugins.automation.actions.ActionDisableScene
+import app.gmaaps.plugins.automation.actions.ActionEnableScene
+import app.gmaaps.plugins.automation.actions.ActionNotification
+import app.gmaaps.plugins.automation.actions.ActionProfileSwitch
+import app.gmaaps.plugins.automation.actions.ActionProfileSwitchPercent
+import app.gmaaps.plugins.automation.actions.ActionRunAutotune
+import app.gmaaps.plugins.automation.actions.ActionRunScene
+import app.gmaaps.plugins.automation.actions.ActionSMBChange
+import app.gmaaps.plugins.automation.actions.ActionSendSMS
+import app.gmaaps.plugins.automation.actions.ActionSettingsExport
+import app.gmaaps.plugins.automation.actions.ActionSmoothingChange
+import app.gmaaps.plugins.automation.actions.ActionStartTempTarget
+import app.gmaaps.plugins.automation.compose.elements.AutomationDropdown
+import app.gmaaps.plugins.automation.compose.elements.InputDropdownOnOffEditor
+import app.gmaaps.plugins.automation.compose.elements.InputStringEditor
+import app.gmaaps.plugins.automation.compose.elements.InputWeekDayEditor
+import app.gmaaps.plugins.automation.compose.elements.LabelWithElementRow
+import app.gmaaps.plugins.automation.elements.InputPercent
 
 @Composable
 fun ActionEditor(
@@ -126,7 +126,7 @@ fun ActionSettingsExportEditor(a: ActionSettingsExport, onChange: () -> Unit) {
 @Composable
 fun ActionCarePortalEventEditor(a: ActionCarePortalEvent, tick: Int = 0, onChange: () -> Unit) {
     @Suppress("UNUSED_EXPRESSION") tick
-    val options = app.aaps.plugins.automation.elements.InputCarePortalMenu.EventType.entries
+    val options = app.gmaaps.plugins.automation.elements.InputCarePortalMenu.EventType.entries
     val labels = options.map { stringResource(it.stringRes) }
     AutomationDropdown(
         value = labels[options.indexOf(a.cpEvent.value)],
@@ -326,3 +326,4 @@ fun ActionDisableSceneEditor(a: ActionDisableScene, sceneOptions: List<Scene>, t
         onPicked = { a.scene.value = it; onChange() }
     )
 }
+

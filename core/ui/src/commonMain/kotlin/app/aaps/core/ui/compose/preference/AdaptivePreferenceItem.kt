@@ -1,27 +1,27 @@
-/*
+﻿/*
  * Adaptive Preference Renderer for Jetpack Compose
  * Provides generic rendering for any PreferenceKey type
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
-import app.aaps.core.keys.PreferenceType
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.DoublePreferenceKey
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.IntentPreferenceKey
-import app.aaps.core.keys.interfaces.PreferenceKey
-import app.aaps.core.keys.interfaces.StringKeyWithEntriesProvider
-import app.aaps.core.keys.interfaces.StringPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.UnitDoublePreferenceKey
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.ui.compose.ComposeScreenContent
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.keys.PreferenceType
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.DoublePreferenceKey
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntentPreferenceKey
+import app.gmaaps.core.keys.interfaces.PreferenceKey
+import app.gmaaps.core.keys.interfaces.StringKeyWithEntriesProvider
+import app.gmaaps.core.keys.interfaces.StringPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.UnitDoublePreferenceKey
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.ui.compose.ComposeScreenContent
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Renders a preference based on its PreferenceKey type and preferenceType.
@@ -211,4 +211,5 @@ fun AdaptivePreferenceItem(
         }
     }
 }
+
 

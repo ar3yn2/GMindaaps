@@ -1,5 +1,6 @@
-package app.aaps.plugins.sync.tidepool.events
+﻿package app.gmaaps.plugins.sync.tidepool.events
 
-import app.aaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.events.Event
 
 class EventTidepoolUpdateGUI : Event()
+

@@ -1,8 +1,8 @@
-package app.aaps.ios.shell
+﻿package app.gmaaps.ios.shell
 
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.implementation.plugin.PluginStore
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.implementation.plugin.PluginStore
 import kotlinx.coroutines.Job
 
 /**
@@ -51,3 +51,4 @@ internal class PluginStoreRegistry(
     // that directly any more.
     override fun initializeConfig(): List<Job> = configBuilder.initialize()
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleCommand
 
 /**
  * `CMD_TEMP_BASAL_CANCEL_REQ` (0x2D) → `CMD_TEMP_BASAL_CANCEL_RES` (0x8D). Cancels a running temp-basal
@@ -30,3 +30,4 @@ class TempBasalCancelCommand : BleCommand<SimpleResultResponse> {
         private const val MIN_RESPONSE_LENGTH = 2
     }
 }
+

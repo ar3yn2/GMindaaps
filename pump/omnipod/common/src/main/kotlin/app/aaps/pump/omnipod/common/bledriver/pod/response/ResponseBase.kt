@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.response
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.response
 
 abstract class ResponseBase(
     override val responseType: ResponseType,
@@ -7,3 +7,4 @@ abstract class ResponseBase(
 
     override val encoded: ByteArray = encoded.copyOf(encoded.size)
 }
+

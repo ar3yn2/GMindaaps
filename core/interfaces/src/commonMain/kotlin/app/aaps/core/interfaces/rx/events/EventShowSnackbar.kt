@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.rx.events
+﻿package app.gmaaps.core.interfaces.rx.events
 
 /**
  * Request a snackbar to be displayed on the currently-visible screen.
@@ -22,3 +22,4 @@ data class EventShowSnackbar(
 
     enum class Type { Error, Warning, Info, Success }
 }
+

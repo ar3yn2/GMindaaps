@@ -1,11 +1,11 @@
-package app.aaps.shared.impl.sharedPreferences
+﻿package app.gmaaps.shared.impl.sharedPreferences
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
-import app.aaps.core.interfaces.sharedPreferences.KeyValueStore
-import app.aaps.core.interfaces.sharedPreferences.SP
-import app.aaps.core.interfaces.utils.SafeParse
+import app.gmaaps.core.interfaces.sharedPreferences.KeyValueStore
+import app.gmaaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.core.interfaces.utils.SafeParse
 
 /**
  * The one preferences file the phone and the watch both use.

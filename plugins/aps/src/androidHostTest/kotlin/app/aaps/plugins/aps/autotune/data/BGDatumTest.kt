@@ -1,9 +1,9 @@
-package app.aaps.plugins.aps.autotune.data
+﻿package app.gmaaps.plugins.aps.autotune.data
 
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
 import org.junit.jupiter.api.Test
@@ -328,3 +328,4 @@ class BGDatumTest : TestBaseWithProfile() {
         }
     }
 }
+

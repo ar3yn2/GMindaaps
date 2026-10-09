@@ -1,14 +1,14 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.alarm.AlarmCode
-import app.aaps.pump.eopatch.alarm.IAlarmRegistry
-import app.aaps.pump.eopatch.core.api.StartNeedleCheck
-import app.aaps.pump.eopatch.core.api.UpdateConnection
-import app.aaps.pump.eopatch.core.response.PatchBooleanResponse
-import app.aaps.pump.eopatch.core.response.UpdateConnectionResponse
-import app.aaps.pump.eopatch.vo.PatchState
-import app.aaps.pump.eopatch.vo.PatchState.Companion.create
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.alarm.AlarmCode
+import app.gmaaps.pump.eopatch.alarm.IAlarmRegistry
+import app.gmaaps.pump.eopatch.core.api.StartNeedleCheck
+import app.gmaaps.pump.eopatch.core.api.UpdateConnection
+import app.gmaaps.pump.eopatch.core.response.PatchBooleanResponse
+import app.gmaaps.pump.eopatch.core.response.UpdateConnectionResponse
+import app.gmaaps.pump.eopatch.vo.PatchState
+import app.gmaaps.pump.eopatch.vo.PatchState.Companion.create
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -47,3 +47,4 @@ class NeedleSensingTask(
         }
     }
 }
+

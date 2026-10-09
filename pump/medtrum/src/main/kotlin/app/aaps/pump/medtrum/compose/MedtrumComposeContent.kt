@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.compose
+﻿package app.gmaaps.pump.medtrum.compose
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material.icons.Icons
@@ -13,19 +13,19 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.protection.ProtectionResult
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.dialogs.OkDialog
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.core.ui.compose.pump.BlePreCheckHost
-import app.aaps.core.ui.compose.pump.KeepScreenOnEffect
-import app.aaps.pump.medtrum.code.PatchStep
-import app.aaps.core.ui.R as CoreUiR
-import app.aaps.pump.medtrum.R as MedtrumR
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.protection.ProtectionResult
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.dialogs.OkDialog
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.core.ui.compose.pump.BlePreCheckHost
+import app.gmaaps.core.ui.compose.pump.KeepScreenOnEffect
+import app.gmaaps.pump.medtrum.code.PatchStep
+import app.gmaaps.core.ui.R as CoreUiR
+import app.gmaaps.pump.medtrum.R as MedtrumR
 
 class MedtrumComposeContent(
     private val pluginName: String,
@@ -165,3 +165,4 @@ class MedtrumComposeContent(
         }
     }
 }
+

@@ -1,22 +1,22 @@
-package app.aaps.plugins.source
+﻿package app.gmaaps.plugins.source
 
 import android.content.Context
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PermissionGroup
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.source.BgSource
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.icons.IcPluginByoda
-import app.aaps.plugins.source.compose.BgSourceComposeContent
-import app.aaps.plugins.source.notificationreader.PackageConfig
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PermissionGroup
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.source.BgSource
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.icons.IcPluginByoda
+import app.gmaaps.plugins.source.compose.BgSourceComposeContent
+import app.gmaaps.plugins.source.notificationreader.PackageConfig
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -106,8 +106,9 @@ class NotificationReaderPlugin(
 
     companion object {
 
-        const val PERMISSION_NOTIFICATION_LISTENER = "app.aaps.permission.NOTIFICATION_LISTENER"
+        const val PERMISSION_NOTIFICATION_LISTENER = "app.gmaaps.permission.NOTIFICATION_LISTENER"
         private const val PACKAGE_CONFIG_ASSET = "notification_reader_packages.json"
         private const val REMOTE_DEFINITIONS_URL = "https://raw.githubusercontent.com/nightscout/AndroidAPS/refs/heads/versions/notification_reader_packages.json"
     }
 }
+

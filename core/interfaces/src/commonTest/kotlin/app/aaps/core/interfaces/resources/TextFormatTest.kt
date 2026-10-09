@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.resources
+﻿package app.gmaaps.core.interfaces.resources
 
-import app.aaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.format.NumberFormat
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -94,3 +94,4 @@ class TextFormatTest {
         assertEquals("nothing to do", formatTemplate("nothing to do", listOf("unused")))
     }
 }
+

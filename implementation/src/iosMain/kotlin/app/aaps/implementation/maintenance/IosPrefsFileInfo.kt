@@ -1,9 +1,9 @@
-package app.aaps.implementation.maintenance
+﻿package app.gmaaps.implementation.maintenance
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.maintenance.PrefsFile
-import app.aaps.core.interfaces.maintenance.PrefsFileInfo
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.maintenance.PrefsFile
+import app.gmaaps.core.interfaces.maintenance.PrefsFileInfo
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -92,3 +92,4 @@ private fun Instant.toNSDate(): NSDate = NSDate.dateWithTimeIntervalSince1970(to
  */
 private fun defaultDocumentsDirectory(): String? =
     NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).firstOrNull() as? String
+

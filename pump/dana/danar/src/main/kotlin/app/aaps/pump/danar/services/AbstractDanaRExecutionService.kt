@@ -1,55 +1,55 @@
-package app.aaps.pump.danar.services
+﻿package app.gmaaps.pump.danar.services
 
 import android.content.Context
 import android.content.Intent
 import android.os.IBinder
 import android.os.SystemClock
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.di.ApplicationScope
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.rfcomm.RfcommSocket
-import app.aaps.core.interfaces.pump.rfcomm.RfcommTransport
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventAppExit
-import app.aaps.core.interfaces.rx.events.EventBTChange
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.objects.workflow.MetroService
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.R
-import app.aaps.pump.dana.comm.RecordTypes
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danar.SerialIOThread
-import app.aaps.pump.danar.comm.MessageBase
-import app.aaps.pump.danar.comm.MessageHashTableBase
-import app.aaps.pump.danar.comm.MsgBolusStop
-import app.aaps.pump.danar.comm.MsgHistoryAlarm
-import app.aaps.pump.danar.comm.MsgHistoryBasalHour
-import app.aaps.pump.danar.comm.MsgHistoryBolus
-import app.aaps.pump.danar.comm.MsgHistoryCarbo
-import app.aaps.pump.danar.comm.MsgHistoryDailyInsulin
-import app.aaps.pump.danar.comm.MsgHistoryError
-import app.aaps.pump.danar.comm.MsgHistoryGlucose
-import app.aaps.pump.danar.comm.MsgHistoryRefill
-import app.aaps.pump.danar.comm.MsgHistorySuspend
-import app.aaps.pump.danar.comm.MsgPCCommStart
-import app.aaps.pump.danar.comm.MsgPCCommStop
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.di.ApplicationScope
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommSocket
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommTransport
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventAppExit
+import app.gmaaps.core.interfaces.rx.events.EventBTChange
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.objects.workflow.MetroService
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.R
+import app.gmaaps.pump.dana.comm.RecordTypes
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danar.SerialIOThread
+import app.gmaaps.pump.danar.comm.MessageBase
+import app.gmaaps.pump.danar.comm.MessageHashTableBase
+import app.gmaaps.pump.danar.comm.MsgBolusStop
+import app.gmaaps.pump.danar.comm.MsgHistoryAlarm
+import app.gmaaps.pump.danar.comm.MsgHistoryBasalHour
+import app.gmaaps.pump.danar.comm.MsgHistoryBolus
+import app.gmaaps.pump.danar.comm.MsgHistoryCarbo
+import app.gmaaps.pump.danar.comm.MsgHistoryDailyInsulin
+import app.gmaaps.pump.danar.comm.MsgHistoryError
+import app.gmaaps.pump.danar.comm.MsgHistoryGlucose
+import app.gmaaps.pump.danar.comm.MsgHistoryRefill
+import app.gmaaps.pump.danar.comm.MsgHistorySuspend
+import app.gmaaps.pump.danar.comm.MsgPCCommStart
+import app.gmaaps.pump.danar.comm.MsgPCCommStop
 import dev.zacsweers.metro.HasMemberInjections
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CoroutineScope
@@ -292,7 +292,7 @@ abstract class AbstractDanaRExecutionService : MetroService() {
                 if (temporaryBasal.rate != danaPump.tempBasalPercent.toDouble()
                     || abs(temporaryBasal.timestamp - danaPump.tempBasalStart) > 10000
                 ) { // Close current temp basal
-                    notificationManager.post(NotificationId.UNSUPPORTED_ACTION_IN_PUMP, TextRef.AndroidRes(app.aaps.pump.danar.R.string.unsupported_action_in_pump))
+                    notificationManager.post(NotificationId.UNSUPPORTED_ACTION_IN_PUMP, TextRef.AndroidRes(app.gmaaps.pump.danar.R.string.unsupported_action_in_pump))
                     aapsLogger.error(LTag.PUMP, "Different temporary basal found running AAPS: " + (temporaryBasal.toString() + " DanaPump " + danaPump.temporaryBasalToString()))
                     pumpSync.syncTemporaryBasalWithPumpId(
                         danaPump.tempBasalStart,
@@ -312,7 +312,7 @@ abstract class AbstractDanaRExecutionService : MetroService() {
                     activePlugin.activePump.model(),
                     activePlugin.activePump.serialNumber()
                 )
-                notificationManager.post(NotificationId.UNSUPPORTED_ACTION_IN_PUMP, TextRef.AndroidRes(app.aaps.pump.danar.R.string.unsupported_action_in_pump))
+                notificationManager.post(NotificationId.UNSUPPORTED_ACTION_IN_PUMP, TextRef.AndroidRes(app.gmaaps.pump.danar.R.string.unsupported_action_in_pump))
                 aapsLogger.error(LTag.PUMP, "Temporary basal should not be running. Sending stop to AAPS")
             }
         } else {
@@ -327,7 +327,7 @@ abstract class AbstractDanaRExecutionService : MetroService() {
                     activePlugin.activePump.model(),
                     activePlugin.activePump.serialNumber()
                 )
-                notificationManager.post(NotificationId.UNSUPPORTED_ACTION_IN_PUMP, TextRef.AndroidRes(app.aaps.pump.danar.R.string.unsupported_action_in_pump))
+                notificationManager.post(NotificationId.UNSUPPORTED_ACTION_IN_PUMP, TextRef.AndroidRes(app.gmaaps.pump.danar.R.string.unsupported_action_in_pump))
                 aapsLogger.error(LTag.PUMP, "Temporary basal should be running: DanaPump " + danaPump.temporaryBasalToString())
             }
         }
@@ -337,7 +337,7 @@ abstract class AbstractDanaRExecutionService : MetroService() {
                 if (extendedBolus.rate != danaPump.extendedBolusAbsoluteRate
                     || abs(extendedBolus.timestamp - danaPump.extendedBolusStart) > 10000
                 ) { // Close current extended
-                    notificationManager.post(NotificationId.UNSUPPORTED_ACTION_IN_PUMP, TextRef.AndroidRes(app.aaps.pump.danar.R.string.unsupported_action_in_pump))
+                    notificationManager.post(NotificationId.UNSUPPORTED_ACTION_IN_PUMP, TextRef.AndroidRes(app.gmaaps.pump.danar.R.string.unsupported_action_in_pump))
                     aapsLogger.error(LTag.PUMP, "Different extended bolus found running AAPS: " + (extendedBolus.toString() + " DanaPump " + danaPump.extendedBolusToString()))
                     pumpSync.syncExtendedBolusWithPumpId(
                         danaPump.extendedBolusStart,
@@ -356,12 +356,12 @@ abstract class AbstractDanaRExecutionService : MetroService() {
                     activePlugin.activePump.model(),
                     activePlugin.activePump.serialNumber()
                 )
-                notificationManager.post(NotificationId.UNSUPPORTED_ACTION_IN_PUMP, TextRef.AndroidRes(app.aaps.pump.danar.R.string.unsupported_action_in_pump))
+                notificationManager.post(NotificationId.UNSUPPORTED_ACTION_IN_PUMP, TextRef.AndroidRes(app.gmaaps.pump.danar.R.string.unsupported_action_in_pump))
                 aapsLogger.error(LTag.PUMP, "Extended bolus should not be running. Sending stop to AAPS")
             }
         } else {
             if (danaPump.isExtendedInProgress) { // Create new
-                notificationManager.post(NotificationId.UNSUPPORTED_ACTION_IN_PUMP, TextRef.AndroidRes(app.aaps.pump.danar.R.string.unsupported_action_in_pump))
+                notificationManager.post(NotificationId.UNSUPPORTED_ACTION_IN_PUMP, TextRef.AndroidRes(app.gmaaps.pump.danar.R.string.unsupported_action_in_pump))
                 aapsLogger.error(LTag.PUMP, "Extended bolus should not be running:  DanaPump " + danaPump.extendedBolusToString())
                 pumpSync.syncExtendedBolusWithPumpId(
                     danaPump.extendedBolusStart,
@@ -376,3 +376,4 @@ abstract class AbstractDanaRExecutionService : MetroService() {
         }
     }
 }
+

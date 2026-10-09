@@ -1,6 +1,6 @@
-package app.aaps.core.objects.interfaces.utils
+﻿package app.gmaaps.core.objects.interfaces.utils
 
-import app.aaps.core.interfaces.utils.MidnightTime
+import app.gmaaps.core.interfaces.utils.MidnightTime
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import java.util.Calendar
@@ -68,3 +68,4 @@ class MidnightTimeTest {
         assertThat(MidnightTime.calc(now)).isEqualTo(MidnightTime.calc(now))
     }
 }
+

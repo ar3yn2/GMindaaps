@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 @Suppress("SpellCheckingInspection")
 enum class GlucoseUnit(val asText: String) {

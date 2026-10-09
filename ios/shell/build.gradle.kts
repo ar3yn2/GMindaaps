@@ -1,4 +1,4 @@
-import java.text.SimpleDateFormat
+﻿import java.text.SimpleDateFormat
 import java.util.Date
 
 plugins {
@@ -138,7 +138,7 @@ val generateIosBuildInfo = tasks.register<GenerateBuildInfoTask>("generateIosBui
     version.set(Versions.appVersion)
     buildStamp.set(buildStamp())
     platform.set("iOS")
-    packageName.set("app.aaps.ios.shell.config")
+    packageName.set("app.gmaaps.ios.shell.config")
     outputDir.set(layout.buildDirectory.dir("generated/buildInfo"))
 }
 
@@ -158,7 +158,7 @@ val generateIosVersionXcconfig = tasks.register<GenerateVersionXcconfigTask>("ge
 
 val generateIosStringOwners = tasks.register<GenerateStringOwnerRegistryTask>("generateIosStringOwners") {
     owners.set(StringOwnerModules.ALL)
-    packageName.set("app.aaps.ios.shell.di")
+    packageName.set("app.gmaaps.ios.shell.di")
     objectName.set("GeneratedStringOwners")
     // Text, not resource ids: there is no AAPT table on Apple.
     useResourceIds.set(false)
@@ -210,3 +210,4 @@ kotlin {
         }
     }
 }
+

@@ -1,17 +1,17 @@
-package app.aaps.pump.diaconn
+﻿package app.gmaaps.pump.diaconn
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfoStorage
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.TemporaryBasalStorage
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.pump.diaconn.database.DiaconnHistoryDatabase
-import app.aaps.pump.diaconn.keys.DiaconnStringNonKey
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfoStorage
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.TemporaryBasalStorage
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.pump.diaconn.database.DiaconnHistoryDatabase
+import app.gmaaps.pump.diaconn.keys.DiaconnStringNonKey
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -37,11 +37,11 @@ class DiaconnG8PluginTest : TestBaseWithProfile() {
 
     @BeforeEach
     fun prepareMocks() {
-        whenever(rh.gs(app.aaps.core.ui.R.string.pumplimit)).thenReturn("pump limit")
-        whenever(rh.gs(app.aaps.core.ui.R.string.itmustbepositivevalue)).thenReturn("it must be positive value")
-        whenever(rh.gs(app.aaps.core.ui.R.string.limitingbasalratio)).thenReturn("Limiting max basal rate to %1\$.2f U/h because of %2\$s")
-        whenever(rh.gs(app.aaps.core.ui.R.string.limitingpercentrate)).thenReturn("Limiting max percent rate to %1\$d%% because of %2\$s")
-        whenever(rh.gs(app.aaps.core.ui.R.string.limitingbolus)).thenReturn("Limiting bolus to %1\$.1f U because of %2\$s")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.pumplimit)).thenReturn("pump limit")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.itmustbepositivevalue)).thenReturn("it must be positive value")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.limitingbasalratio)).thenReturn("Limiting max basal rate to %1\$.2f U/h because of %2\$s")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.limitingpercentrate)).thenReturn("Limiting max percent rate to %1\$d%% because of %2\$s")
+        whenever(rh.gs(app.gmaaps.core.ui.R.string.limitingbolus)).thenReturn("Limiting bolus to %1\$.1f U because of %2\$s")
 
         diaconnG8Pump = DiaconnG8Pump(aapsLogger, dateUtil, decimalFormatter)
         diaconnG8Plugin = DiaconnG8Plugin(
@@ -95,3 +95,4 @@ class DiaconnG8PluginTest : TestBaseWithProfile() {
     }
 
 }
+

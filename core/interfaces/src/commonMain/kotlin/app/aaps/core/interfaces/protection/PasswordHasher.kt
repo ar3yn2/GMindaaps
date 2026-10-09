@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.protection
+﻿package app.gmaaps.core.interfaces.protection
 
 /**
  * Hashes a password, and compares one against a stored hash.
@@ -21,3 +21,4 @@ interface PasswordHasher {
     /** @return true if [password] hashes to [referenceHash]. */
     fun checkPassword(password: String, referenceHash: String): Boolean
 }
+

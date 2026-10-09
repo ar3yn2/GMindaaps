@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.comm.enums
+﻿package app.gmaaps.pump.medtrum.comm.enums
 
 enum class BasalEndReason {
     SUCCESS,
@@ -32,3 +32,4 @@ enum class BasalEndReason {
         return this in SUSPEND_LOW_GLUCOSE..STOP_DISCARD
     }
 }
+

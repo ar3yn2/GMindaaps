@@ -1,9 +1,9 @@
-package app.aaps.appshell.navigation
+﻿package app.gmaaps.appshell.navigation
 
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.core.ui.search.SearchableItem
-import app.aaps.core.ui.search.SearchableProvider
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.core.ui.search.SearchableItem
+import app.gmaaps.core.ui.search.SearchableProvider
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -110,3 +110,4 @@ class FindPreferenceScreenTest {
         assertThat(findPreferenceScreen("protection", provider(), emptyList())).isNull()
     }
 }
+

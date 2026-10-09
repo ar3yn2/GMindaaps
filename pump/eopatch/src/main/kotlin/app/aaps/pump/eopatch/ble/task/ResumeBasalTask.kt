@@ -1,12 +1,12 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.alarm.AlarmCode
-import app.aaps.pump.eopatch.alarm.IAlarmRegistry
-import app.aaps.pump.eopatch.ble.PatchStateManager
-import app.aaps.pump.eopatch.core.api.BasalResume
-import app.aaps.pump.eopatch.core.response.BaseResponse
-import app.aaps.pump.eopatch.core.response.PatchBooleanResponse
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.alarm.AlarmCode
+import app.gmaaps.pump.eopatch.alarm.IAlarmRegistry
+import app.gmaaps.pump.eopatch.ble.PatchStateManager
+import app.gmaaps.pump.eopatch.core.api.BasalResume
+import app.gmaaps.pump.eopatch.core.response.BaseResponse
+import app.gmaaps.pump.eopatch.core.response.PatchBooleanResponse
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -49,3 +49,4 @@ class ResumeBasalTask(
         checkPatchConnected()
     }
 }
+

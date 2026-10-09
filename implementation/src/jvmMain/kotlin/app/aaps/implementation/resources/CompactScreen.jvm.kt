@@ -1,4 +1,5 @@
-package app.aaps.implementation.resources
+﻿package app.gmaaps.implementation.resources
 
 /** A desktop window is wide, and the user can make it wider. */
 actual fun isCompactScreen(): Boolean = false
+

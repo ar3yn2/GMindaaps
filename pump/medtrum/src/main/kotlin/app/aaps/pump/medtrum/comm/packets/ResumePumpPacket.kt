@@ -1,7 +1,7 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.pump.medtrum.comm.enums.CommandType.RESUME_PUMP
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.pump.medtrum.comm.enums.CommandType.RESUME_PUMP
 
 class ResumePumpPacket(injector: MetroMemberInjector) : MedtrumPacket(injector) {
 
@@ -13,3 +13,4 @@ class ResumePumpPacket(injector: MetroMemberInjector) : MedtrumPacket(injector) 
         return byteArrayOf(opCode)
     }
 }
+

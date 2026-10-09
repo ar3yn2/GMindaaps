@@ -1,6 +1,6 @@
-package app.aaps.pump.insight.descriptors
+﻿package app.gmaaps.pump.insight.descriptors
 
-import app.aaps.pump.insight.app_layer.history.history_events.HistoryEvent
+import app.gmaaps.pump.insight.app_layer.history.history_events.HistoryEvent
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import java.lang.reflect.Modifier
@@ -88,3 +88,4 @@ class HistoryEventsTest {
         assertThat(shared.map { it.first }).isEmpty()
     }
 }
+

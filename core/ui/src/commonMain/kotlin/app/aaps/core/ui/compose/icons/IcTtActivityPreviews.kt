@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.icons
+﻿package app.gmaaps.core.ui.compose.icons
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -75,3 +75,4 @@ internal fun IcTtActivityIconPreview() {
 </g>
 </svg>
  */
+

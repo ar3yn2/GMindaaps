@@ -1,29 +1,29 @@
-package app.aaps.plugins.sync.wear.wearintegration
+﻿package app.gmaaps.plugins.sync.wear.wearintegration
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.automation.Automation
-import app.aaps.core.interfaces.automation.AutomationEvent
-import app.aaps.core.interfaces.bolus.BatchExecutor
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
-import app.aaps.core.interfaces.bolus.WizardExecutor
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.maintenance.ImportExportPrefs
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.pump.PumpStatusProvider
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.rx.events.EventMobileToWear
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.TrendCalculator
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.objects.runningMode.RunningModeGuard
-import app.aaps.core.objects.wizard.QuickWizard
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.automation.Automation
+import app.gmaaps.core.interfaces.automation.AutomationEvent
+import app.gmaaps.core.interfaces.bolus.BatchExecutor
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.bolus.WizardExecutor
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.maintenance.ImportExportPrefs
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.pump.PumpStatusProvider
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.rx.events.EventMobileToWear
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.TrendCalculator
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.objects.runningMode.RunningModeGuard
+import app.gmaaps.core.objects.wizard.QuickWizard
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
@@ -246,3 +246,4 @@ class DataHandlerMobileUserActionTest : TestBaseWithProfile() {
         assertThat(sentToWatch).isEmpty()
     }
 }
+

@@ -1,17 +1,17 @@
-package app.aaps.core.interfaces.plugin
+﻿package app.gmaaps.core.interfaces.plugin
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.aps.APS
-import app.aaps.core.interfaces.aps.Sensitivity
-import app.aaps.core.interfaces.calibration.Calibration
-import app.aaps.core.interfaces.constraints.Objectives
-import app.aaps.core.interfaces.constraints.Safety
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.smoothing.Smoothing
-import app.aaps.core.interfaces.source.BgSource
-import app.aaps.core.interfaces.sync.Sync
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.aps.APS
+import app.gmaaps.core.interfaces.aps.Sensitivity
+import app.gmaaps.core.interfaces.calibration.Calibration
+import app.gmaaps.core.interfaces.constraints.Objectives
+import app.gmaaps.core.interfaces.constraints.Safety
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.smoothing.Smoothing
+import app.gmaaps.core.interfaces.source.BgSource
+import app.gmaaps.core.interfaces.sync.Sync
 import kotlinx.coroutines.Job
 import kotlin.reflect.KClass
 
@@ -120,11 +120,11 @@ interface ActivePlugin {
      *
      * This function is called BEFORE clearing and importing preferences to preserve some current values.
      * Needed content should be stored into plugin variables and then processed and restored
-     * in [app.aaps.core.interfaces.plugin.PluginBaseWithPreferences.afterImport]
+     * in [app.gmaaps.core.interfaces.plugin.PluginBaseWithPreferences.afterImport]
      *
      * App is restarted after import.
      *
-     * See: [app.aaps.core.interfaces.maintenance.ImportExportPrefs.doImportSharedPreferences]
+     * See: [app.gmaaps.core.interfaces.maintenance.ImportExportPrefs.doImportSharedPreferences]
      */
     fun beforeImport()
 
@@ -134,11 +134,11 @@ interface ActivePlugin {
      * new content is imported.
      *
      * This function is called AFTER clearing and importing preferences to process and restore
-     * saved state from [app.aaps.core.interfaces.plugin.PluginBaseWithPreferences.beforeImport]
+     * saved state from [app.gmaaps.core.interfaces.plugin.PluginBaseWithPreferences.beforeImport]
      *
      * App is restarted after import.
      *
-     * See: [app.aaps.core.interfaces.maintenance.ImportExportPrefs.doImportSharedPreferences]
+     * See: [app.gmaaps.core.interfaces.maintenance.ImportExportPrefs.doImportSharedPreferences]
      */
     fun afterImport()
 }

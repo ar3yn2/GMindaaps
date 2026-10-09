@@ -1,14 +1,14 @@
-package app.aaps.plugins.sync.xdrip.workers
+﻿package app.gmaaps.plugins.sync.xdrip.workers
 
 import android.content.Context
 import androidx.work.WorkerParameters
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.sync.DataSyncSelectorXdrip
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.objects.workflow.LoggingWorker
-import app.aaps.core.objects.workflow.WorkerInstanceFactory
-import app.aaps.plugins.sync.xdrip.compose.XdripMvvmRepository
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.sync.DataSyncSelectorXdrip
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.objects.workflow.LoggingWorker
+import app.gmaaps.core.objects.workflow.WorkerInstanceFactory
+import app.gmaaps.plugins.sync.xdrip.compose.XdripMvvmRepository
 import dev.zacsweers.metro.Assisted
 import dev.zacsweers.metro.AssistedFactory
 import dev.zacsweers.metro.AssistedInject
@@ -37,3 +37,4 @@ class XdripDataSyncWorker(
     @AssistedFactory
     abstract class Factory : WorkerInstanceFactory<XdripDataSyncWorker>()
 }
+

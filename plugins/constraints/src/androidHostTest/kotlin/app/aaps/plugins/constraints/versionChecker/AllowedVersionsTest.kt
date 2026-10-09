@@ -1,4 +1,4 @@
-package app.aaps.plugins.constraints.versionChecker
+﻿package app.gmaaps.plugins.constraints.versionChecker
 
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.json.Json
@@ -55,3 +55,4 @@ class AllowedVersionsTest {
         assertThat(AllowedVersions.endDateToMilliseconds("abdef")).isNull()
     }
 }
+

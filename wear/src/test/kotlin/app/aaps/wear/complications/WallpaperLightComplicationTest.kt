@@ -1,7 +1,7 @@
-package app.aaps.wear.complications
+﻿package app.gmaaps.wear.complications
 
 import androidx.wear.watchface.complications.data.ComplicationType
-import app.aaps.wear.AAPSLoggerTest
+import app.gmaaps.wear.AAPSLoggerTest
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -35,3 +35,4 @@ internal class WallpaperLightComplicationTest {
         assertThat(sut().getProviderCanonicalName()).contains("WallpaperLightComplication")
     }
 }
+

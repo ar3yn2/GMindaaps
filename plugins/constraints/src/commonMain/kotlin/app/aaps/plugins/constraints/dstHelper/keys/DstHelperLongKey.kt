@@ -1,6 +1,6 @@
-package app.aaps.plugins.constraints.dstHelper.keys
+﻿package app.gmaaps.plugins.constraints.dstHelper.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 enum class DstHelperLongKey(
     override val key: String,
@@ -10,3 +10,4 @@ enum class DstHelperLongKey(
     SnoozeDstIn24h(key = "snooze_dst_in24h", 0L),
     SnoozeLoopDisabled(key = "snooze_loop_disabled", 0L),
 }
+

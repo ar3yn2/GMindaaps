@@ -1,12 +1,12 @@
-package app.aaps.plugins.aps.loop.compose
+﻿package app.gmaaps.plugins.aps.loop.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.interfaces.resources.TextRefIdRegistry
-import app.aaps.plugins.aps.ApsStringIds
-import app.aaps.plugins.aps.R
+import app.gmaaps.core.interfaces.resources.TextRefIdRegistry
+import app.gmaaps.plugins.aps.ApsStringIds
+import app.gmaaps.plugins.aps.R
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -75,3 +75,4 @@ class LoopScreenTest {
         compose.onNodeWithText("12:34").assertIsDisplayed()
     }
 }
+

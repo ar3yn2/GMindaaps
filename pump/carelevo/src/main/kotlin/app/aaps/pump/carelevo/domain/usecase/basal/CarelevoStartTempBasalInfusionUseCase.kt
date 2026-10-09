@@ -1,10 +1,10 @@
-package app.aaps.pump.carelevo.domain.usecase.basal
+﻿package app.gmaaps.pump.carelevo.domain.usecase.basal
 
-import app.aaps.pump.carelevo.domain.ext.generateUUID
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoTempBasalInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
-import app.aaps.pump.carelevo.domain.usecase.basal.model.StartTempBasalInfusionRequestModel
+import app.gmaaps.pump.carelevo.domain.ext.generateUUID
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoTempBasalInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.pump.carelevo.domain.usecase.basal.model.StartTempBasalInfusionRequestModel
 import dev.zacsweers.metro.Inject
 import kotlin.time.Clock
 
@@ -35,3 +35,4 @@ class CarelevoStartTempBasalInfusionUseCase @Inject constructor(
         require(patchInfoRepository.updatePatchInfo(patchInfo.copy(updatedAt = Clock.System.now(), mode = 2))) { "update patch info is failed" }
     }.isSuccess
 }
+

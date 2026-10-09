@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose.elements
+﻿package app.gmaaps.plugins.automation.compose.elements
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -26,3 +26,4 @@ internal fun PreviewTimeRange() {
         InputTimeRangeEditor(startMinutes = s, endMinutes = e, onChangeStart = { s = it }, onChangeEnd = { e = it })
     }
 }
+

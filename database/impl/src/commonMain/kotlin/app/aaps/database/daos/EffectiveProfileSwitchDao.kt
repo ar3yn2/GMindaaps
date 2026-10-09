@@ -1,9 +1,9 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.EffectiveProfileSwitch
-import app.aaps.database.entities.TABLE_EFFECTIVE_PROFILE_SWITCHES
+import app.gmaaps.database.entities.EffectiveProfileSwitch
+import app.gmaaps.database.entities.TABLE_EFFECTIVE_PROFILE_SWITCHES
 
 @Dao
 internal interface EffectiveProfileSwitchDao : TraceableDao<EffectiveProfileSwitch> {
@@ -60,3 +60,4 @@ internal interface EffectiveProfileSwitchDao : TraceableDao<EffectiveProfileSwit
     @Query("UPDATE $TABLE_EFFECTIVE_PROFILE_SWITCHES SET insulinLabel = :label, insulinEndTime = :end, insulinPeakTime = :peak, concentration = :conc WHERE insulinEndTime = -1 AND referenceId IS NULL")
     suspend fun bulkMigrateInsulinConfig(label: String, end: Long, peak: Long, conc: Double): Int
 }
+

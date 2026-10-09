@@ -1,4 +1,4 @@
-package app.aaps.core.data.time
+﻿package app.gmaaps.core.data.time
 
 import platform.Foundation.NSDate
 import platform.Foundation.NSTimeZone
@@ -16,3 +16,4 @@ actual fun systemUtcOffsetAt(timestamp: Long): Long =
     NSTimeZone.localTimeZone
         .secondsFromGMTForDate(NSDate.dateWithTimeIntervalSince1970(timestamp / 1000.0))
         .toLong() * 1000L
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Assertions.assertThrows
@@ -140,3 +140,4 @@ class BasalSegmentTest {
         assertThat(segment.endIndex).isEqualTo(48)
     }
 }
+

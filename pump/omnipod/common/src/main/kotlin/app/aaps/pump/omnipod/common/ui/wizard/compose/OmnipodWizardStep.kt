@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.ui.wizard.compose
+﻿package app.gmaaps.pump.omnipod.common.ui.wizard.compose
 
 /**
  * Wizard steps for Omnipod pod activation and deactivation.
@@ -24,3 +24,4 @@ enum class OmnipodWizardStep {
     POD_DEACTIVATED,
     POD_DISCARDED
 }
+

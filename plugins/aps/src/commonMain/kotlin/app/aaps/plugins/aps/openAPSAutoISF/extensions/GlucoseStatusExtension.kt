@@ -1,8 +1,8 @@
-package app.aaps.plugins.aps.openAPSAutoISF.extensions
+﻿package app.gmaaps.plugins.aps.openAPSAutoISF.extensions
 
-import app.aaps.core.interfaces.aps.GlucoseStatusAutoIsf
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.interfaces.utils.Round
+import app.gmaaps.core.interfaces.aps.GlucoseStatusAutoIsf
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.interfaces.utils.Round
 
 fun GlucoseStatusAutoIsf.log(decimalFormatter: DecimalFormatter): String = "Glucose: " + decimalFormatter.to0Decimal(glucose) + " mg/dl " +
     "Noise: " + decimalFormatter.to0Decimal(noise) + " " +

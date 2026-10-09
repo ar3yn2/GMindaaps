@@ -1,11 +1,11 @@
-package app.aaps.pump.carelevo.ble.data
+﻿package app.gmaaps.pump.carelevo.ble.data
 
 import android.bluetooth.BluetoothDevice
-import app.aaps.pump.carelevo.ble.data.BondingState.Companion.codeToBondingResult
-import app.aaps.pump.carelevo.ble.data.DeviceModuleState.Companion.codeToDeviceResult
-import app.aaps.pump.carelevo.ble.data.NotificationState.Companion.codeToNotificationResult
-import app.aaps.pump.carelevo.ble.data.PeripheralConnectionState.Companion.codeToConnectionResult
-import app.aaps.pump.carelevo.ble.data.ServiceDiscoverState.Companion.codeToDiscoverResult
+import app.gmaaps.pump.carelevo.ble.data.BondingState.Companion.codeToBondingResult
+import app.gmaaps.pump.carelevo.ble.data.DeviceModuleState.Companion.codeToDeviceResult
+import app.gmaaps.pump.carelevo.ble.data.NotificationState.Companion.codeToNotificationResult
+import app.gmaaps.pump.carelevo.ble.data.PeripheralConnectionState.Companion.codeToConnectionResult
+import app.gmaaps.pump.carelevo.ble.data.ServiceDiscoverState.Companion.codeToDiscoverResult
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.mock
@@ -487,3 +487,4 @@ internal class CarelevoBleDataTest {
         assertThat(connectedState.copy(isBonded = BondingState.BOND_NONE)).isNotEqualTo(connectedState)
     }
 }
+

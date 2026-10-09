@@ -1,22 +1,22 @@
-package app.aaps.pump.common.compose
+﻿package app.gmaaps.pump.common.compose
 
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.defs.PumpDeviceState
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.common.events.EventRileyLinkDeviceStatusChange
-import app.aaps.pump.common.hw.rileylink.R
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.data.RLHistoryItem
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkTargetDevice
-import app.aaps.pump.common.hw.rileylink.keys.RileylinkBooleanPreferenceKey
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.defs.PumpDeviceState
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.common.events.EventRileyLinkDeviceStatusChange
+import app.gmaaps.pump.common.hw.rileylink.R
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.data.RLHistoryItem
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkTargetDevice
+import app.gmaaps.pump.common.hw.rileylink.keys.RileylinkBooleanPreferenceKey
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -154,3 +154,4 @@ class RileyLinkStatusViewModel(
         private const val EMPTY = "-"
     }
 }
+

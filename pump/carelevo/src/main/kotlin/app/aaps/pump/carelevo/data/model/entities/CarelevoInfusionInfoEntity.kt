@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.data.model.entities
+﻿package app.gmaaps.pump.carelevo.data.model.entities
 
-import app.aaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
 
 // NOTE: these entities are Gson-(de)serialized. Timestamps are deliberately REQUIRED parameters —
 // a `= DateTime.now().toString()` default is both non-deterministic (evaluated at call time) and
@@ -74,3 +74,4 @@ data class CarelevoAlarmInfoEntity(
     val acknowledged: Boolean,
     val occurrenceCount: Int = 1
 )
+

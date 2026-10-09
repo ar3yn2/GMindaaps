@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.CA
-import app.aaps.database.entities.Carbs
+import app.gmaaps.core.data.model.CA
+import app.gmaaps.database.entities.Carbs
 
 fun Carbs.fromDb(): CA =
     CA(
@@ -32,3 +32,4 @@ fun CA.toDb(): Carbs =
         notes = this.notes,
         interfaceIDs_backing = this.ids.toDb()
     )
+

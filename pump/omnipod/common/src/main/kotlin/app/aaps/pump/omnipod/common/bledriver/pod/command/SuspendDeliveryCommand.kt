@@ -1,14 +1,14 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.NonceEnabledCommand
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertConfiguration
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertTrigger
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BeepRepetitionType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BeepType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.Encodable
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.NonceEnabledCommand
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertConfiguration
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertTrigger
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BeepRepetitionType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BeepType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.Encodable
 import java.nio.ByteBuffer
 import java.util.BitSet
 
@@ -117,3 +117,4 @@ class SuspendDeliveryCommand private constructor(
         private const val BODY_LENGTH: Byte = 5
     }
 }
+

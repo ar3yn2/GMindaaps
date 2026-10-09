@@ -1,4 +1,4 @@
-package app.aaps.implementation.locale
+﻿package app.gmaaps.implementation.locale
 
 import platform.Foundation.NSLocale
 import platform.Foundation.countryCode
@@ -17,3 +17,4 @@ internal actual object LocalePlatform {
     actual val language: String get() = NSLocale.currentLocale.languageCode
     actual val country: String get() = NSLocale.currentLocale.countryCode ?: ""
 }
+

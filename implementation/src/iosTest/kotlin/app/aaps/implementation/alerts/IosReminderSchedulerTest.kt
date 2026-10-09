@@ -1,7 +1,7 @@
-package app.aaps.implementation.alerts
+﻿package app.gmaaps.implementation.alerts
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -68,3 +68,4 @@ class IosReminderSchedulerTest {
         assertTrue(IosReminderScheduler.IDENTIFIER_PREFIX.startsWith("aaps-"))
     }
 }
+

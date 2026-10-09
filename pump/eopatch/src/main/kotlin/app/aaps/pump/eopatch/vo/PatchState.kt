@@ -1,11 +1,11 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.eopatch.AppConstant
-import app.aaps.pump.eopatch.GsonHelper
-import app.aaps.pump.eopatch.core.code.BolusType
-import app.aaps.pump.eopatch.core.util.FloatAdjusters
-import app.aaps.pump.eopatch.keys.EopatchStringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.eopatch.AppConstant
+import app.gmaaps.pump.eopatch.GsonHelper
+import app.gmaaps.pump.eopatch.core.code.BolusType
+import app.gmaaps.pump.eopatch.core.util.FloatAdjusters
+import app.gmaaps.pump.eopatch.keys.EopatchStringNonKey
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.subjects.BehaviorSubject
 import java.io.Serializable

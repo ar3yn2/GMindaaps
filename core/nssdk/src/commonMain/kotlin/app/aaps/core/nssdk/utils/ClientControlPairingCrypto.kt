@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.utils
+﻿package app.gmaaps.core.nssdk.utils
 
 import dev.whyoleg.cryptography.BinarySize.Companion.bytes
 import dev.whyoleg.cryptography.CryptographyProvider
@@ -105,3 +105,4 @@ object ClientControlPairingCrypto {
         return aesKeyDecoder.decodeFromByteArrayBlocking(AES.Key.Format.RAW, keyBytes)
     }
 }
+

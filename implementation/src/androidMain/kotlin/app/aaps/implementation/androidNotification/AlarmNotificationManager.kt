@@ -1,4 +1,4 @@
-package app.aaps.implementation.androidNotification
+﻿package app.gmaaps.implementation.androidNotification
 
 import android.app.AlarmManager
 import android.app.NotificationChannel
@@ -13,18 +13,18 @@ import android.net.Uri
 import android.os.SystemClock
 import androidx.core.app.NotificationCompat
 import androidx.core.app.TaskStackBuilder
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmIntent
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.AlarmSoundPlayer
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.ui.IconsProvider
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.rawRes
-import app.aaps.implementation.androidNotification.AlarmNotificationManager.Companion.CHANNEL_FULL_SCREEN_SILENT
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmIntent
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.AlarmSoundPlayer
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.ui.IconsProvider
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.rawRes
+import app.gmaaps.implementation.androidNotification.AlarmNotificationManager.Companion.CHANNEL_FULL_SCREEN_SILENT
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -61,7 +61,7 @@ class AlarmNotificationManager(
 
         /**
          * Sound-suppressed channel used by [postSilentAlarmNotification], where audio is owned
-         * externally by [app.aaps.core.interfaces.notifications.AlarmSoundPlayer]. Heads-up popup still
+         * externally by [app.gmaaps.core.interfaces.notifications.AlarmSoundPlayer]. Heads-up popup still
          * shows (IMPORTANCE_HIGH) and vibration still fires, but the channel itself plays no sound.
          * (No longer used by [postFullScreenAlarm], which always posts on a sound-bearing channel so
          * the alarm is audible even when its full-screen activity can't launch.)
@@ -289,7 +289,7 @@ class AlarmNotificationManager(
             .setOngoing(true)
             .setAutoCancel(false)
             .setContentIntent(pendingIntent)
-            .addAction(0, rh.gs(app.aaps.core.ui.R.string.mute), mutePendingIntent)
+            .addAction(0, rh.gs(app.gmaaps.core.ui.R.string.mute), mutePendingIntent)
             .build()
 
         try {
@@ -317,7 +317,7 @@ class AlarmNotificationManager(
     }
 
     /**
-     * Wakes the display and launches [app.aaps.core.interfaces.ui.UiInteraction.errorHelperActivity]
+     * Wakes the display and launches [app.gmaaps.core.interfaces.ui.UiInteraction.errorHelperActivity]
      * for a background alarm without `USE_FULL_SCREEN_INTENT`, by firing two simultaneous
      * [AlarmManager.setAlarmClock] alarms (alarm-clock alarms are Doze-exempt and get the
      * background-activity-launch exemption):
@@ -451,3 +451,4 @@ class AlarmNotificationManager(
         aapsLogger.debug(LTag.NOTIFICATION, "Cancelled all AAPS alarm notifications")
     }
 }
+

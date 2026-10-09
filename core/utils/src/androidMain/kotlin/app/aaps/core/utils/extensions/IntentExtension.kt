@@ -1,4 +1,4 @@
-package app.aaps.core.utils.extensions
+﻿package app.gmaaps.core.utils.extensions
 
 import android.content.Intent
 
@@ -8,3 +8,4 @@ import android.content.Intent
 fun <T> Intent.safeGetParcelableExtra(name: String?, clazz: Class<T>): T? =
     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) getParcelableExtra(name, clazz)
     else @Suppress("DEPRECATION") getParcelableExtra(name)
+

@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.DeviceStatus
+import app.gmaaps.database.entities.DeviceStatus
 
 class UpdateNsIdDeviceStatusTransaction(private val deviceStatuses: List<DeviceStatus>) : Transaction<UpdateNsIdDeviceStatusTransaction.TransactionResult>() {
 

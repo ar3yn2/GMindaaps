@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.protection
+﻿package app.gmaaps.core.interfaces.protection
 
 /**
  * The platform side of remembering the export password.
@@ -45,3 +45,4 @@ interface ExportPasswordPlatform {
     /** How long a remembered password lasts, and how long before that the user is warned. */
     data class Validity(val window: Long, val gracePeriod: Long)
 }
+

@@ -1,32 +1,32 @@
-package app.aaps.core.interfaces.db
+﻿package app.gmaaps.core.interfaces.db
 
-import app.aaps.core.data.model.BCR
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.CA
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.DS
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.FD
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.HR
-import app.aaps.core.data.model.NE
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.SC
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.model.TDD
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.model.TT
-import app.aaps.core.data.model.UE
-import app.aaps.core.data.model.advancedFilteringSupported
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.data.model.BCR
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.CA
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.DS
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.FD
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.HR
+import app.gmaaps.core.data.model.NE
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.SC
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.model.TDD
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.data.model.UE
+import app.gmaaps.core.data.model.advancedFilteringSupported
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.aps.APSResult
 import kotlinx.coroutines.flow.Flow
 import kotlin.reflect.KClass
 import kotlin.time.Clock
@@ -463,7 +463,7 @@ interface PersistenceLayer {
 
     /**
      * Check if the latest glucose value's sensor supports advanced filtering.
-     * Derived from [getLastGlucoseValue]'s [app.aaps.core.data.model.SourceSensor].
+     * Derived from [getLastGlucoseValue]'s [app.gmaaps.core.data.model.SourceSensor].
      */
     suspend fun isAdvancedFilteringSupported(): Boolean =
         getLastGlucoseValue()?.sourceSensor?.advancedFilteringSupported() ?: false

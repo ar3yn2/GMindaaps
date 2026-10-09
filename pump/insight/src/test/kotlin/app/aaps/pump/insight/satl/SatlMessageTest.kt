@@ -1,8 +1,8 @@
-package app.aaps.pump.insight.satl
+﻿package app.gmaaps.pump.insight.satl
 
-import app.aaps.pump.insight.exceptions.InvalidNonceException
-import app.aaps.pump.insight.utils.ByteBuf
-import app.aaps.pump.insight.utils.Nonce
+import app.gmaaps.pump.insight.exceptions.InvalidNonceException
+import app.gmaaps.pump.insight.utils.ByteBuf
+import app.gmaaps.pump.insight.utils.Nonce
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
@@ -51,3 +51,4 @@ class SatlMessageTest {
         assertThat(SatlMessage.hasCompletePacket(ByteBuf(10))).isFalse() // filledSize 0 < 37
     }
 }
+

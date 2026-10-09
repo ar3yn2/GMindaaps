@@ -1,9 +1,9 @@
-package app.aaps.pump.common.hw.rileylink.keys
+﻿package app.gmaaps.pump.common.hw.rileylink.keys
 
-import app.aaps.core.keys.PreferenceType
-import app.aaps.core.keys.interfaces.StringPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.common.hw.rileylink.R
+import app.gmaaps.core.keys.PreferenceType
+import app.gmaaps.core.keys.interfaces.StringPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.common.hw.rileylink.R
 
 enum class RileyLinkStringPreferenceKey(
     override val key: String,
@@ -32,3 +32,4 @@ enum class RileyLinkStringPreferenceKey(
     override val entries: Map<String, TextRef> = entriesResIds.mapValues { TextRef.AndroidRes(it.value) }
     override val summary: TextRef? = summaryResId?.let { TextRef.AndroidRes(it) }
 }
+

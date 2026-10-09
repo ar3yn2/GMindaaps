@@ -1,6 +1,6 @@
-package app.aaps.desktop.shell.platform
+﻿package app.gmaaps.desktop.shell.platform
 
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -73,3 +73,4 @@ class DesktopReceiverStatusStore() : ReceiverStatusStore {
     override val isCharging: Boolean get() = _chargingStatusFlow.value?.isCharging == true
     override val batteryLevel: Int get() = _chargingStatusFlow.value?.batteryLevel ?: 100
 }
+

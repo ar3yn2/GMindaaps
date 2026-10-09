@@ -1,12 +1,12 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.danars.encryption.BleEncryption
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.danars.encryption.BleEncryption
 import dev.zacsweers.metro.Inject
 import java.util.Locale
 
@@ -44,7 +44,7 @@ class DanaRSPacketBasalGetBasalRate(
             aapsLogger.debug(LTag.PUMPCOMM, "Basal " + String.format(Locale.ENGLISH, "%02d", index) + "h: " + danaPump.pumpProfiles!![danaPump.activeProfile][index])
         if (danaPump.basalStep != 0.01) {
             failed = true
-            notificationManager.post(NotificationId.WRONG_BASAL_STEP, TextRef.AndroidRes(app.aaps.pump.dana.R.string.danar_setbasalstep001))
+            notificationManager.post(NotificationId.WRONG_BASAL_STEP, TextRef.AndroidRes(app.gmaaps.pump.dana.R.string.danar_setbasalstep001))
         } else {
             notificationManager.dismiss(NotificationId.WRONG_BASAL_STEP)
         }
@@ -52,3 +52,4 @@ class DanaRSPacketBasalGetBasalRate(
 
     override val friendlyName: String = "BASAL__GET_BASAL_RATE"
 }
+

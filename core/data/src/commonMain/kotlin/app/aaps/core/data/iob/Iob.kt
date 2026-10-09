@@ -1,4 +1,4 @@
-package app.aaps.core.data.iob
+﻿package app.gmaaps.core.data.iob
 
 data class Iob(
     var iobContrib: Double = 0.0,

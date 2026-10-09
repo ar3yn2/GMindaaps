@@ -1,10 +1,10 @@
-package app.aaps.pump.carelevo.coordinator
+﻿package app.gmaaps.pump.carelevo.coordinator
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.usecase.userSetting.CarelevoDeleteUserSettingInfoUseCase
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.usecase.userSetting.CarelevoDeleteUserSettingInfoUseCase
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit
 
 /**
  * The preference-driven patch settings (max bolus, reminders, buzzer) are routed through the AAPS
- * CommandQueue as custom commands ([app.aaps.pump.carelevo.command.CarelevoActivationExecutor]); this
+ * CommandQueue as custom commands ([app.gmaaps.pump.carelevo.command.CarelevoActivationExecutor]); this
  * coordinator now only owns the shutdown-time settings clear.
  */
 @SingleIn(AppScope::class)
@@ -49,3 +49,4 @@ class CarelevoSettingsCoordinator @Inject constructor(
             }
     }
 }
+

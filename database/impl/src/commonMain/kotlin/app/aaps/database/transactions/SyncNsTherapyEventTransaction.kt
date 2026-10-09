@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.TherapyEvent
+import app.gmaaps.database.entities.TherapyEvent
 
 /**
  * Sync the TherapyEvents from NS

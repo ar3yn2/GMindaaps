@@ -1,23 +1,23 @@
-package app.aaps.pump.danars
+﻿package app.gmaaps.pump.danars
 
 import android.content.ComponentName
 import android.content.Intent
 import android.content.ServiceConnection
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.DetailedBolusInfoStorage
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.TemporaryBasalStorage
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.comm.RecordTypes
-import app.aaps.pump.dana.database.DanaHistoryDatabase
-import app.aaps.pump.dana.keys.DanaStringComposedKey
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danars.services.DanaRSService
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfoStorage
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.TemporaryBasalStorage
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.comm.RecordTypes
+import app.gmaaps.pump.dana.database.DanaHistoryDatabase
+import app.gmaaps.pump.dana.keys.DanaStringComposedKey
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danars.services.DanaRSService
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions
@@ -341,7 +341,7 @@ class DanaRSPluginTest : DanaRSTestBase() {
 
     @Test
     fun failedBolusIsNotEnacted() {
-        whenever(rh.gs(eq(app.aaps.pump.dana.R.string.boluserrorcode), anyOrNull(), anyOrNull(), anyOrNull())).thenReturn("bolus error")
+        whenever(rh.gs(eq(app.gmaaps.pump.dana.R.string.boluserrorcode), anyOrNull(), anyOrNull(), anyOrNull())).thenReturn("bolus error")
         bind(bolusService(connectionOk = false, delivered = 0.4))
         val result = runBlocking { danaRSPlugin.deliverTreatment(DetailedBolusInfo().apply { insulin = 1.0 }) }
         assertThat(result.success).isFalse()
@@ -352,8 +352,8 @@ class DanaRSPluginTest : DanaRSTestBase() {
     fun prepareMocks() {
         whenever(preferences.get(DanaStringNonKey.RsName)).thenReturn("")
         whenever(preferences.get(DanaStringNonKey.MacAddress)).thenReturn("")
-        whenever(rh.gs(eq(app.aaps.core.ui.R.string.limitingbasalratio), anyOrNull(), anyOrNull())).thenReturn("limitingbasalratio")
-        whenever(rh.gs(eq(app.aaps.core.ui.R.string.limitingpercentrate), anyOrNull(), anyOrNull())).thenReturn("limitingpercentrate")
+        whenever(rh.gs(eq(app.gmaaps.core.ui.R.string.limitingbasalratio), anyOrNull(), anyOrNull())).thenReturn("limitingbasalratio")
+        whenever(rh.gs(eq(app.gmaaps.core.ui.R.string.limitingpercentrate), anyOrNull(), anyOrNull())).thenReturn("limitingpercentrate")
 
         danaRSPlugin =
             DanaRSPlugin(

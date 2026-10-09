@@ -1,4 +1,4 @@
-package app.aaps.implementation.androidNotification
+﻿package app.gmaaps.implementation.androidNotification
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -9,10 +9,10 @@ import android.content.Intent
 import android.graphics.BitmapFactory
 import androidx.core.app.NotificationCompat
 import androidx.core.app.TaskStackBuilder
-import app.aaps.core.interfaces.notifications.NotificationHolder
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.ui.IconsProvider
-import app.aaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.notifications.NotificationHolder
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.ui.IconsProvider
+import app.gmaaps.core.interfaces.ui.UiInteraction
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -53,7 +53,7 @@ class NotificationHolderImpl(
             .setCategory(NotificationCompat.CATEGORY_STATUS)
             .setSmallIcon(iconsProvider.getNotificationIcon())
             .setLargeIcon(BitmapFactory.decodeResource(context.resources, iconsProvider.getIcon()))
-            .setContentTitle(rh.gs(app.aaps.core.ui.R.string.loading))
+            .setContentTitle(rh.gs(app.gmaaps.core.ui.R.string.loading))
             .setContentIntent(openAppIntent())
             .build()
             .also {
@@ -67,3 +67,4 @@ class NotificationHolderImpl(
         mNotificationManager.createNotificationChannel(channel)
     }
 }
+

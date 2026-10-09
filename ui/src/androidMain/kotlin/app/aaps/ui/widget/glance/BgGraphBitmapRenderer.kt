@@ -1,11 +1,11 @@
-package app.aaps.ui.widget.glance
+﻿package app.gmaaps.ui.widget.glance
 
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
-import app.aaps.core.interfaces.overview.graph.BgDataPoint
-import app.aaps.core.interfaces.overview.graph.BgRange
-import app.aaps.core.interfaces.overview.graph.BgType
+import app.gmaaps.core.interfaces.overview.graph.BgDataPoint
+import app.gmaaps.core.interfaces.overview.graph.BgRange
+import app.gmaaps.core.interfaces.overview.graph.BgType
 
 /**
  * Inputs for [BgGraphBitmapRenderer]. All BG values are in user units
@@ -32,7 +32,7 @@ data class BgGraphColors(
          * `widget_inrange` and `widget_high` resources, which have no `values-night` variant, so
          * reading them through resources could only ever return these constants.
          *
-         * They are deliberately not the [app.aaps.core.ui.compose.AapsTheme] BG colors: a widget sits
+         * They are deliberately not the [app.gmaaps.core.ui.compose.AapsTheme] BG colors: a widget sits
          * on the launcher over unknown wallpaper, not inside the app, so it keeps one high-contrast
          * set instead of following the app's light and dark themes.
          */
@@ -95,3 +95,4 @@ class BgGraphBitmapRenderer {
         private const val GAP_ALPHA = 110
     }
 }
+

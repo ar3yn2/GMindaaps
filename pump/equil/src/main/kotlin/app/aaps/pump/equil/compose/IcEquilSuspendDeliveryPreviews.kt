@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.compose
+﻿package app.gmaaps.pump.equil.compose
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -21,3 +21,4 @@ internal fun IcEquilSuspendDeliveryPreview() {
         tint = Color.Unspecified
     )
 }
+

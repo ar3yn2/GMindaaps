@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.device
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.device
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothGattCharacteristic
@@ -9,13 +9,13 @@ import android.bluetooth.le.ScanSettings
 import android.os.Handler
 import android.os.HandlerThread
 import android.os.Message
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.pump.common.hw.rileylink.ble.RileyLinkBLE
-import app.aaps.pump.common.hw.rileylink.ble.data.GattAttributes
-import app.aaps.pump.common.hw.rileylink.ble.operations.BLECommOperationResult
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.RileyLinkBLE
+import app.gmaaps.pump.common.hw.rileylink.ble.data.GattAttributes
+import app.gmaaps.pump.common.hw.rileylink.ble.operations.BLECommOperationResult
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn

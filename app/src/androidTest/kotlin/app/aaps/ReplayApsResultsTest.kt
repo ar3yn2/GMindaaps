@@ -1,32 +1,32 @@
-package app.aaps
+﻿package app.gmaaps
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.aps.APSResult
-import app.aaps.core.interfaces.aps.AutosensResult
-import app.aaps.core.interfaces.aps.CurrentTemp
-import app.aaps.core.interfaces.aps.GlucoseStatusAutoIsf
-import app.aaps.core.interfaces.aps.GlucoseStatusSMB
-import app.aaps.core.interfaces.aps.IobTotal
-import app.aaps.core.interfaces.aps.MealData
-import app.aaps.core.interfaces.aps.OapsProfile
-import app.aaps.core.interfaces.aps.OapsProfileAutoIsf
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.utils.JsonHelper
-import app.aaps.di.newStaticInjector
-import app.aaps.di.testGraphs
-import app.aaps.plugins.aps.openAPSAMA.DetermineBasalAdapterAMAJS
-import app.aaps.plugins.aps.openAPSAMA.OpenAPSAMAPlugin
-import app.aaps.plugins.aps.openAPSSMB.DetermineBasalAdapterSMBJS
-import app.aaps.plugins.aps.openAPSSMB.OpenAPSSMBPlugin
-import app.aaps.plugins.aps.openAPSSMBAutoISF.DetermineBasalAdapterAutoISFJS
-import app.aaps.plugins.aps.openAPSSMBDynamicISF.DetermineBasalAdapterSMBDynamicISFJS
-import app.aaps.plugins.aps.utils.ScriptReader
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.aps.AutosensResult
+import app.gmaaps.core.interfaces.aps.CurrentTemp
+import app.gmaaps.core.interfaces.aps.GlucoseStatusAutoIsf
+import app.gmaaps.core.interfaces.aps.GlucoseStatusSMB
+import app.gmaaps.core.interfaces.aps.IobTotal
+import app.gmaaps.core.interfaces.aps.MealData
+import app.gmaaps.core.interfaces.aps.OapsProfile
+import app.gmaaps.core.interfaces.aps.OapsProfileAutoIsf
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.utils.JsonHelper
+import app.gmaaps.di.newStaticInjector
+import app.gmaaps.di.testGraphs
+import app.gmaaps.plugins.aps.openAPSAMA.DetermineBasalAdapterAMAJS
+import app.gmaaps.plugins.aps.openAPSAMA.OpenAPSAMAPlugin
+import app.gmaaps.plugins.aps.openAPSSMB.DetermineBasalAdapterSMBJS
+import app.gmaaps.plugins.aps.openAPSSMB.OpenAPSSMBPlugin
+import app.gmaaps.plugins.aps.openAPSSMBAutoISF.DetermineBasalAdapterAutoISFJS
+import app.gmaaps.plugins.aps.openAPSSMBDynamicISF.DetermineBasalAdapterSMBDynamicISFJS
+import app.gmaaps.plugins.aps.utils.ScriptReader
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
 import org.junit.Test
@@ -807,3 +807,4 @@ class ReplayApsResultsTest : AapsInstrumentedTest() {
      */
     private fun APSResult.jsonOrg(): JSONObject? = json()?.let { JSONObject(it.toString()) }
 }
+

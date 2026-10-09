@@ -1,7 +1,7 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -26,3 +26,4 @@ class MinutesUnitTest {
         assertThat(TextRef.Literal("min").isMinutesUnit()).isFalse()
     }
 }
+

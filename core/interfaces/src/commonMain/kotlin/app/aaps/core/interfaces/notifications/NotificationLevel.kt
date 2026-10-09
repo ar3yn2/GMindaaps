@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
 enum class NotificationLevel(val priority: Int) {
     /**
@@ -15,3 +15,4 @@ enum class NotificationLevel(val priority: Int) {
     INFO(4),
     ANNOUNCEMENT(5)
 }
+

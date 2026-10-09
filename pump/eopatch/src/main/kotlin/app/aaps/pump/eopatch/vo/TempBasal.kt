@@ -1,8 +1,8 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.pump.eopatch.CommonUtils
-import app.aaps.pump.eopatch.FloatFormatters
-import app.aaps.pump.eopatch.code.UnitOrPercent
+import app.gmaaps.pump.eopatch.CommonUtils
+import app.gmaaps.pump.eopatch.FloatFormatters
+import app.gmaaps.pump.eopatch.code.UnitOrPercent
 import java.util.Locale
 import kotlin.time.Duration.Companion.minutes
 
@@ -67,3 +67,4 @@ class TempBasal {
     }
 
 }
+

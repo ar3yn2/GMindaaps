@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action.service;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action.service;
 
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
@@ -8,11 +8,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import app.aaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSlot;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.driver.util.AlertConfigurationUtil;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSlot;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.driver.util.AlertConfigurationUtil;
 
 public final class ExpirationReminderBuilder {
     private final Map<AlertSlot, AlertConfiguration> alerts = new HashMap<>();
@@ -61,3 +61,4 @@ public final class ExpirationReminderBuilder {
         return new ArrayList<>(alerts.values());
     }
 }
+

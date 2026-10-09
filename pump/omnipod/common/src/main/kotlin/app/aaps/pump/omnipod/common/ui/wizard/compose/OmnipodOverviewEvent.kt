@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.ui.wizard.compose
+﻿package app.gmaaps.pump.omnipod.common.ui.wizard.compose
 
 import android.content.Intent
 
@@ -18,3 +18,4 @@ sealed class OmnipodOverviewEvent {
     data object ShowRileyLinkStats : OmnipodOverviewEvent()
     data class ShowSnackbar(val message: String) : OmnipodOverviewEvent()
 }
+

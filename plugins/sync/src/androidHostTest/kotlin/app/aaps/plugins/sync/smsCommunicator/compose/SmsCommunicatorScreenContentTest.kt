@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.smsCommunicator.compose
+﻿package app.gmaaps.plugins.sync.smsCommunicator.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
@@ -89,3 +89,4 @@ class SmsCommunicatorScreenContentTest {
         compose.onNodeWithText("BOLUS 1.5", substring = true).assertDoesNotExist()
     }
 }
+

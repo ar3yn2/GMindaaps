@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.comm.enums
+﻿package app.gmaaps.pump.medtrum.comm.enums
 
 enum class CommandType(val code: Byte) {
     SYNCHRONIZE(3),
@@ -24,3 +24,4 @@ enum class CommandType(val code: Byte) {
     GET_RECORD(99),
     CLEAR_ALARM(115)
 }
+

@@ -1,35 +1,35 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationAction
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.nsclient.NSAlarm
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.nsclient.StoreDataForDb
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.LongComposedKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.nssdk.interfaces.RunningConfiguration
-import app.aaps.core.nssdk.mapper.toCalibrationMbg
-import app.aaps.core.nssdk.mapper.toNSDeviceStatus
-import app.aaps.core.nssdk.mapper.toNSFood
-import app.aaps.core.nssdk.mapper.toNSSgvV3
-import app.aaps.core.nssdk.mapper.toNSTreatment
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.plugins.sync.nsclientV3.NSAlarmObject
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.NsIncomingDataProcessor
-import app.aaps.plugins.sync.nsclientV3.SettingsIdentifiers
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.ClientControlPublisher
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector
-import app.aaps.plugins.sync.nsclientV3.data.NSDeviceStatusHandler
-import app.aaps.plugins.sync.nsclientV3.extensions.toRunningConfiguration
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationAction
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.nsclient.NSAlarm
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.nsclient.StoreDataForDb
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.LongComposedKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.nssdk.interfaces.RunningConfiguration
+import app.gmaaps.core.nssdk.mapper.toCalibrationMbg
+import app.gmaaps.core.nssdk.mapper.toNSDeviceStatus
+import app.gmaaps.core.nssdk.mapper.toNSFood
+import app.gmaaps.core.nssdk.mapper.toNSSgvV3
+import app.gmaaps.core.nssdk.mapper.toNSTreatment
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.plugins.sync.nsclientV3.NSAlarmObject
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.NsIncomingDataProcessor
+import app.gmaaps.plugins.sync.nsclientV3.SettingsIdentifiers
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.ClientControlPublisher
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector
+import app.gmaaps.plugins.sync.nsclientV3.data.NSDeviceStatusHandler
+import app.gmaaps.plugins.sync.nsclientV3.extensions.toRunningConfiguration
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -306,3 +306,4 @@ class NsFrameHandler(
     private fun JsonObject.str(key: String): String? = NsWsPayload.string(this, key)
     private fun JsonObject.long(key: String): Long? = NsWsPayload.long(this, key)
 }
+

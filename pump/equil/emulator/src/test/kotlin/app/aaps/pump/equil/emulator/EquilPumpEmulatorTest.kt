@@ -1,7 +1,7 @@
-package app.aaps.pump.equil.emulator
+﻿package app.gmaaps.pump.equil.emulator
 
-import app.aaps.pump.equil.manager.AESUtil
-import app.aaps.pump.equil.manager.Utils
+import app.gmaaps.pump.equil.manager.AESUtil
+import app.gmaaps.pump.equil.manager.Utils
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertNotNull
@@ -360,9 +360,10 @@ class EquilPumpEmulatorTest {
         state.sessionPassword
     )
 
-    private fun decryptResponse(model: app.aaps.pump.equil.manager.EquilCmdModel, password: ByteArray): ByteArray =
+    private fun decryptResponse(model: app.gmaaps.pump.equil.manager.EquilCmdModel, password: ByteArray): ByteArray =
         Utils.hexStringToBytes(AESUtil.decrypt(model, password))
 
     private fun getInt(data: ByteArray, offset: Int): Int =
         Utils.bytes2Int(byteArrayOf(data[offset], data[offset + 1], data[offset + 2], data[offset + 3]))
 }
+

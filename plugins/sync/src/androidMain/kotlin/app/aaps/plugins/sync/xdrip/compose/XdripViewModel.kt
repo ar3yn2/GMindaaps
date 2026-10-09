@@ -1,12 +1,12 @@
-package app.aaps.plugins.sync.xdrip.compose
+﻿package app.gmaaps.plugins.sync.xdrip.compose
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.sync.DataSyncSelectorXdrip
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.sync.DataSyncSelectorXdrip
+import app.gmaaps.core.ui.CoreUiStrings
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -57,3 +57,4 @@ class XdripViewModel(
         xdripMvvmRepository.updateQueueSize(size)
     }
 }
+

@@ -1,21 +1,21 @@
-package app.aaps.plugins.sync.nsclientV3.workers
+﻿package app.gmaaps.plugins.sync.nsclientV3.workers
 
-import app.aaps.core.data.json.OrgJsonCompat.optLongCompat
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.json.OrgJsonCompat.optLongCompat
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.utils.DateUtil
 
-import app.aaps.core.nssdk.interfaces.NSAndroidClient
-import app.aaps.core.nssdk.interfaces.RunningConfiguration
-import app.aaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
-import app.aaps.core.objects.workflow.WorkOutcome
+import app.gmaaps.core.nssdk.interfaces.NSAndroidClient
+import app.gmaaps.core.nssdk.interfaces.RunningConfiguration
+import app.gmaaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
+import app.gmaaps.core.objects.workflow.WorkOutcome
 
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.SettingsIdentifiers
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector
-import app.aaps.plugins.sync.nsclientV3.extensions.toRunningConfiguration
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.SettingsIdentifiers
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector
+import app.gmaaps.plugins.sync.nsclientV3.extensions.toRunningConfiguration
 import dev.zacsweers.metro.Inject
 
 /**
@@ -93,3 +93,4 @@ class LoadSettingsRunner(
         } ?: nsClientRepository.addLog("◄ SETTINGS", "$identifier present but missing/invalid runningConfig")
     }
 }
+

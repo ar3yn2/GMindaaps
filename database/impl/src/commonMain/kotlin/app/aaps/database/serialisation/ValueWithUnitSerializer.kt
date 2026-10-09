@@ -1,9 +1,9 @@
-package app.aaps.database.serialisation
+﻿package app.gmaaps.database.serialisation
 
-import app.aaps.database.entities.RunningMode
-import app.aaps.database.entities.TemporaryTarget
-import app.aaps.database.entities.TherapyEvent
-import app.aaps.database.entities.ValueWithUnit
+import app.gmaaps.database.entities.RunningMode
+import app.gmaaps.database.entities.TemporaryTarget
+import app.gmaaps.database.entities.TherapyEvent
+import app.gmaaps.database.entities.ValueWithUnit
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.descriptors.buildClassSerialDescriptor
@@ -35,7 +35,7 @@ import kotlinx.serialization.json.put
  */
 internal object ValueWithUnitSerializer : KSerializer<ValueWithUnit> {
 
-    override val descriptor: SerialDescriptor = buildClassSerialDescriptor("app.aaps.database.entities.ValueWithUnit")
+    override val descriptor: SerialDescriptor = buildClassSerialDescriptor("app.gmaaps.database.entities.ValueWithUnit")
 
     override fun serialize(encoder: Encoder, value: ValueWithUnit) {
         val body = when (value) {
@@ -117,3 +117,4 @@ internal object ValueWithUnitSerializer : KSerializer<ValueWithUnit> {
         is ValueWithUnit.RunningModeMode       -> "RunningModeMode"
     }
 }
+

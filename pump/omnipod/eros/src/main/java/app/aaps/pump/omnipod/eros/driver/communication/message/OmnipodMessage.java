@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message;
 
 import androidx.annotation.NonNull;
 
@@ -6,19 +6,19 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
-import app.aaps.core.interfaces.logging.AAPSLogger;
-import app.aaps.core.interfaces.logging.LTag;
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.CancelDeliveryCommand;
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.GetStatusCommand;
-import app.aaps.pump.omnipod.eros.driver.definition.DeliveryType;
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodCrc;
-import app.aaps.pump.omnipod.eros.driver.definition.PacketType;
-import app.aaps.pump.omnipod.eros.driver.definition.PodInfoType;
-import app.aaps.pump.omnipod.eros.driver.exception.CrcMismatchException;
-import app.aaps.pump.omnipod.eros.driver.exception.MessageDecodingException;
-import app.aaps.pump.omnipod.eros.driver.exception.NotEnoughDataException;
+import app.gmaaps.core.interfaces.logging.AAPSLogger;
+import app.gmaaps.core.interfaces.logging.LTag;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.CancelDeliveryCommand;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.GetStatusCommand;
+import app.gmaaps.pump.omnipod.eros.driver.definition.DeliveryType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodCrc;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PacketType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodInfoType;
+import app.gmaaps.pump.omnipod.eros.driver.exception.CrcMismatchException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.MessageDecodingException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.NotEnoughDataException;
 
 public class OmnipodMessage {
 
@@ -172,3 +172,4 @@ public class OmnipodMessage {
                 '}';
     }
 }
+

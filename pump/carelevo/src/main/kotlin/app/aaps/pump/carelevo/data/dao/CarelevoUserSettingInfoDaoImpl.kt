@@ -1,9 +1,9 @@
-package app.aaps.pump.carelevo.data.dao
+﻿package app.gmaaps.pump.carelevo.data.dao
 
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.carelevo.common.keys.CarelevoStringNonKey
-import app.aaps.pump.carelevo.data.common.CarelevoGsonHelper
-import app.aaps.pump.carelevo.data.model.entities.CarelevoUserSettingInfoEntity
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.carelevo.common.keys.CarelevoStringNonKey
+import app.gmaaps.pump.carelevo.data.common.CarelevoGsonHelper
+import app.gmaaps.pump.carelevo.data.model.entities.CarelevoUserSettingInfoEntity
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject

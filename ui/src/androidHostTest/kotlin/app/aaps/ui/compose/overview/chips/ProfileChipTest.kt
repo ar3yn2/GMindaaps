@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.overview.chips
+﻿package app.gmaaps.ui.compose.overview.chips
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.Modifier
@@ -76,3 +76,4 @@ class ProfileChipTest {
         assertThat(clicks).isEqualTo(0)
     }
 }
+

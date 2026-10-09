@@ -1,12 +1,12 @@
-package app.aaps.workflow
+﻿package app.gmaaps.workflow
 
 import android.content.Context
 import androidx.work.WorkerParameters
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.objects.workflow.RunnerWorker
-import app.aaps.core.objects.workflow.WorkOutcome
-import app.aaps.core.objects.workflow.WorkerInstanceFactory
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.objects.workflow.RunnerWorker
+import app.gmaaps.core.objects.workflow.WorkOutcome
+import app.gmaaps.core.objects.workflow.WorkerInstanceFactory
 import dev.zacsweers.metro.Assisted
 import dev.zacsweers.metro.AssistedFactory
 import dev.zacsweers.metro.AssistedInject
@@ -36,3 +36,4 @@ class PostCalculationWorker(
     @AssistedFactory
     abstract class Factory : WorkerInstanceFactory<PostCalculationWorker>()
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.keys.interfaces
+﻿package app.gmaaps.core.keys.interfaces
 
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -84,14 +84,14 @@ interface Preferences {
     /**
      * Get [String] value from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.BooleanNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey] enum
      * @return value
      */
     fun get(key: BooleanNonPreferenceKey): Boolean
 
     /**
      * Variant for publishing to the cold running-config (sync) doc. With [forSync] = `true`, returns the
-     * persisted value, falling back to the COMPUTED default ([app.aaps.core.keys.interfaces.PreferenceKey.calculatedDefaultValue])
+     * persisted value, falling back to the COMPUTED default ([app.gmaaps.core.keys.interfaces.PreferenceKey.calculatedDefaultValue])
      * when unset, WITHOUT simple-mode presentation forcing — i.e. the value the device operatively uses, which
      * is what must travel to clients (a plain raw read would publish the literal default and mis-tell clients
      * for computed-default keys). Equals the raw value for keys without a computed default (incl. defaultedBySM
@@ -102,7 +102,7 @@ interface Preferences {
     /**
      * Get [Boolean] value from [android.content.SharedPreferences] or null if doesn't exist
      *
-     * @param key [app.aaps.core.keys.interfaces.BooleanNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey] enum
      * @return value or null
      */
     fun getIfExists(key: BooleanNonPreferenceKey): Boolean?
@@ -110,7 +110,7 @@ interface Preferences {
     /**
      * Update [String] value in [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.BooleanNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey] enum
      * @param value value
      */
     fun put(key: BooleanNonPreferenceKey, value: Boolean)
@@ -118,7 +118,7 @@ interface Preferences {
     /**
      * Observe [Boolean] value changes from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.BooleanNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey] enum
      * @return [StateFlow] that emits current value and all subsequent changes
      */
     fun observe(key: BooleanNonPreferenceKey): StateFlow<Boolean>
@@ -128,7 +128,7 @@ interface Preferences {
      * In SimpleMode return default value
      * In FullMode return value from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.BooleanPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.BooleanPreferenceKey] enum
      * @return value
      */
     fun get(key: BooleanPreferenceKey): Boolean
@@ -136,7 +136,7 @@ interface Preferences {
     /**
      * Get [String] value from [android.content.SharedPreferences]
      * *
-     * @param key [app.aaps.core.keys.interfaces.BooleanComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.BooleanComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return value
      */
@@ -145,7 +145,7 @@ interface Preferences {
     /**
      * Get [String] value from [android.content.SharedPreferences]
      * *
-     * @param key [app.aaps.core.keys.interfaces.BooleanComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.BooleanComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @param defaultValue alternative default value
      * @return value
@@ -155,7 +155,7 @@ interface Preferences {
     /**
      * Get [String] value from [android.content.SharedPreferences] or null if doesn't exist
      *
-     * @param key [app.aaps.core.keys.interfaces.BooleanComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.BooleanComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return value or null
      */
@@ -164,7 +164,7 @@ interface Preferences {
     /**
      * Update [String] value in [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.BooleanComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.BooleanComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @param value value
      */
@@ -173,7 +173,7 @@ interface Preferences {
     /**
      * Observe [Boolean] value changes for composed key
      *
-     * @param key [app.aaps.core.keys.interfaces.BooleanComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.BooleanComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return [StateFlow] that emits current value and all subsequent changes
      */
@@ -182,7 +182,7 @@ interface Preferences {
     /**
      * Remove value from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.PreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.PreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      */
     fun remove(key: ComposedKey, vararg arguments: Any)
@@ -234,7 +234,7 @@ interface Preferences {
     /**
      * Get [String] value from [android.content.SharedPreferences]
      * *
-     * @param key [app.aaps.core.keys.interfaces.StringComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.StringComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return value
      */
@@ -243,7 +243,7 @@ interface Preferences {
     /**
      * Get [String] value from [android.content.SharedPreferences] or null if doesn't exist
      *
-     * @param key [app.aaps.core.keys.interfaces.StringComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.StringComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return value or null
      */
@@ -252,7 +252,7 @@ interface Preferences {
     /**
      * Update [String] value in [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.StringComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.StringComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @param value value
      */
@@ -261,7 +261,7 @@ interface Preferences {
     /**
      * Observe [String] value changes for composed key
      *
-     * @param key [app.aaps.core.keys.interfaces.StringComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.StringComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return [StateFlow] that emits current value and all subsequent changes
      */
@@ -274,7 +274,7 @@ interface Preferences {
      * In SimpleMode return default value
      * In FullMode return value from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.DoubleNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.DoubleNonPreferenceKey] enum
      * @return value
      */
     fun get(key: DoubleNonPreferenceKey): Double
@@ -284,7 +284,7 @@ interface Preferences {
      * In SimpleMode return default value
      * In FullMode return value from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.DoublePreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.DoublePreferenceKey] enum
      * @return value
      */
     fun get(key: DoublePreferenceKey): Double
@@ -292,7 +292,7 @@ interface Preferences {
     /**
      * Get [Double] value from [android.content.SharedPreferences] or null if doesn't exist
      *
-     * @param key [app.aaps.core.keys.interfaces.DoublePreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.DoublePreferenceKey] enum
      * @return value or null
      */
     fun getIfExists(key: DoublePreferenceKey): Double?
@@ -300,7 +300,7 @@ interface Preferences {
     /**
      * Update [Double] value in [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.DoubleNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.DoubleNonPreferenceKey] enum
      * @param value value
      */
     fun put(key: DoubleNonPreferenceKey, value: Double)
@@ -308,7 +308,7 @@ interface Preferences {
     /**
      * Observe [Double] value changes from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.DoubleNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.DoubleNonPreferenceKey] enum
      * @return [StateFlow] that emits current value and all subsequent changes
      */
     fun observe(key: DoubleNonPreferenceKey): StateFlow<Double>
@@ -316,7 +316,7 @@ interface Preferences {
     /**
      * Get [String] value from [android.content.SharedPreferences]
      * *
-     * @param key [app.aaps.core.keys.interfaces.DoubleComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.DoubleComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return value
      */
@@ -325,7 +325,7 @@ interface Preferences {
     /**
      * Get [String] value from [android.content.SharedPreferences] or null if doesn't exist
      *
-     * @param key [app.aaps.core.keys.interfaces.DoubleComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.DoubleComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return value or null
      */
@@ -334,7 +334,7 @@ interface Preferences {
     /**
      * Update [String] value in [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.DoubleComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.DoubleComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @param value value
      */
@@ -343,7 +343,7 @@ interface Preferences {
     /**
      * Observe [Double] value changes for composed key
      *
-     * @param key [app.aaps.core.keys.interfaces.DoubleComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.DoubleComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return [StateFlow] that emits current value and all subsequent changes
      */
@@ -393,7 +393,7 @@ interface Preferences {
      * In SimpleMode return default value
      * In FullMode return value from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.IntNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.IntNonPreferenceKey] enum
      * @return value
      */
     fun get(key: IntNonPreferenceKey): Int
@@ -404,7 +404,7 @@ interface Preferences {
     /**
      * Get [Int] value from [android.content.SharedPreferences] or null if doesn't exist
      *
-     * @param key [app.aaps.core.keys.interfaces.IntNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.IntNonPreferenceKey] enum
      * @return value or null
      */
     fun getIfExists(key: IntNonPreferenceKey): Int?
@@ -412,7 +412,7 @@ interface Preferences {
     /**
      * Update [Int] value in [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.IntComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.IntComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @param value value
      */
@@ -421,7 +421,7 @@ interface Preferences {
     /**
      * Update [Int] value in [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.IntNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.IntNonPreferenceKey] enum
      * @param value value
      */
     fun put(key: IntNonPreferenceKey, value: Int)
@@ -429,7 +429,7 @@ interface Preferences {
     /**
      * Observe [Int] value changes from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.IntNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.IntNonPreferenceKey] enum
      * @return [StateFlow] that emits current value and all subsequent changes
      */
     fun observe(key: IntNonPreferenceKey): StateFlow<Int>
@@ -437,7 +437,7 @@ interface Preferences {
     /**
      * Increment [Int] value in [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.IntNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.IntNonPreferenceKey] enum
      * @param value value
      */
     fun inc(key: IntNonPreferenceKey)
@@ -445,7 +445,7 @@ interface Preferences {
     /**
      * Get [Int] value from [android.content.SharedPreferences]
      * *
-     * @param key [app.aaps.core.keys.interfaces.IntComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.IntComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return value
      */
@@ -454,7 +454,7 @@ interface Preferences {
     /**
      * Observe [Int] value changes for composed key
      *
-     * @param key [app.aaps.core.keys.interfaces.IntComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.IntComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return [StateFlow] that emits current value and all subsequent changes
      */
@@ -465,7 +465,7 @@ interface Preferences {
      * In SimpleMode return default value
      * In FullMode return value from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.IntPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.IntPreferenceKey] enum
      * @return value
      */
     fun get(key: IntPreferenceKey): Int
@@ -477,7 +477,7 @@ interface Preferences {
      * In SimpleMode return default value
      * In FullMode return value from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.LongNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.LongNonPreferenceKey] enum
      * @return value
      */
     fun get(key: LongNonPreferenceKey): Long
@@ -485,7 +485,7 @@ interface Preferences {
     /**
      * Get [Long] value from [android.content.SharedPreferences] or null if doesn't exist
      *
-     * @param key [app.aaps.core.keys.interfaces.LongNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.LongNonPreferenceKey] enum
      * @return value or null
      */
     fun getIfExists(key: LongNonPreferenceKey): Long?
@@ -493,7 +493,7 @@ interface Preferences {
     /**
      * Update [Long] value in [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.LongNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.LongNonPreferenceKey] enum
      * @param value value
      */
     fun put(key: LongNonPreferenceKey, value: Long)
@@ -501,7 +501,7 @@ interface Preferences {
     /**
      * Observe [Long] value changes from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.LongNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.LongNonPreferenceKey] enum
      * @return [StateFlow] that emits current value and all subsequent changes
      */
     fun observe(key: LongNonPreferenceKey): StateFlow<Long>
@@ -511,7 +511,7 @@ interface Preferences {
      * In SimpleMode return default value
      * In FullMode return value from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.LongPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.LongPreferenceKey] enum
      * @return value
      */
     fun get(key: LongPreferenceKey): Long
@@ -527,7 +527,7 @@ interface Preferences {
     /**
      * Get [Long] value from [android.content.SharedPreferences]
      * *
-     * @param key [app.aaps.core.keys.interfaces.LongComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.LongComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return value
      */
@@ -536,7 +536,7 @@ interface Preferences {
     /**
      * Get [Long] value from [android.content.SharedPreferences] or null if doesn't exist
      *
-     * @param key [app.aaps.core.keys.interfaces.LongComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.LongComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return value or null
      */
@@ -545,7 +545,7 @@ interface Preferences {
     /**
      * Update [Long] value in [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.LongComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.LongComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @param value value
      */
@@ -554,7 +554,7 @@ interface Preferences {
     /**
      * Observe [Long] value changes for composed key
      *
-     * @param key [app.aaps.core.keys.interfaces.LongComposedNonPreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.LongComposedNonPreferenceKey] enum
      * @param arguments arguments to compose final key using String::format
      * @return [StateFlow] that emits current value and all subsequent changes
      */
@@ -565,7 +565,7 @@ interface Preferences {
     /**
      * Remove value from [android.content.SharedPreferences]
      *
-     * @param key [app.aaps.core.keys.interfaces.PreferenceKey] enum
+     * @param key [app.gmaaps.core.keys.interfaces.PreferenceKey] enum
      */
     fun remove(key: NonPreferenceKey)
 
@@ -576,16 +576,16 @@ interface Preferences {
     fun isUnitDependent(key: String): Boolean
 
     /**
-     * Find [app.aaps.core.keys.interfaces.NonPreferenceKey] definition
+     * Find [app.gmaaps.core.keys.interfaces.NonPreferenceKey] definition
      * @param key string representation of key
-     * @return [app.aaps.core.keys.interfaces.NonPreferenceKey] or null for [ComposedKey]
+     * @return [app.gmaaps.core.keys.interfaces.NonPreferenceKey] or null for [ComposedKey]
      */
     fun get(key: String): NonPreferenceKey?
 
     /**
-     * Find [app.aaps.core.keys.interfaces.NonPreferenceKey] definition
+     * Find [app.gmaaps.core.keys.interfaces.NonPreferenceKey] definition
      * @param key string representation of key
-     * @return [app.aaps.core.keys.interfaces.NonPreferenceKey] or null
+     * @return [app.gmaaps.core.keys.interfaces.NonPreferenceKey] or null
      */
     fun getIfExists(key: String): NonPreferenceKey?
 

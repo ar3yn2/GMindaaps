@@ -1,30 +1,30 @@
-package app.aaps.pump.carelevo.common
+﻿package app.gmaaps.pump.carelevo.common
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.carelevo.ble.CarelevoBleTransport
-import app.aaps.pump.carelevo.ble.UnsolicitedMessage
-import app.aaps.pump.carelevo.ble.data.BleState
-import app.aaps.pump.carelevo.ble.data.BondingState
-import app.aaps.pump.carelevo.ble.data.DeviceModuleState
-import app.aaps.pump.carelevo.ble.data.NotificationState
-import app.aaps.pump.carelevo.ble.data.PeripheralConnectionState
-import app.aaps.pump.carelevo.ble.data.ServiceDiscoverState
-import app.aaps.pump.carelevo.common.model.PatchState
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
-import app.aaps.pump.carelevo.domain.usecase.infusion.CarelevoInfusionInfoMonitorUseCase
-import app.aaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpResumeUseCase
-import app.aaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpStopUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchInfoMonitorUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchRptInfusionInfoProcessUseCase
-import app.aaps.pump.carelevo.domain.usecase.userSetting.CarelevoCreateUserSettingInfoUseCase
-import app.aaps.pump.carelevo.domain.usecase.userSetting.CarelevoUserSettingInfoMonitorUseCase
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.carelevo.ble.CarelevoBleTransport
+import app.gmaaps.pump.carelevo.ble.UnsolicitedMessage
+import app.gmaaps.pump.carelevo.ble.data.BleState
+import app.gmaaps.pump.carelevo.ble.data.BondingState
+import app.gmaaps.pump.carelevo.ble.data.DeviceModuleState
+import app.gmaaps.pump.carelevo.ble.data.NotificationState
+import app.gmaaps.pump.carelevo.ble.data.PeripheralConnectionState
+import app.gmaaps.pump.carelevo.ble.data.ServiceDiscoverState
+import app.gmaaps.pump.carelevo.common.model.PatchState
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.CarelevoInfusionInfoMonitorUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpResumeUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpStopUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchInfoMonitorUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchRptInfusionInfoProcessUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.userSetting.CarelevoCreateUserSettingInfoUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.userSetting.CarelevoUserSettingInfoMonitorUseCase
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Observable
@@ -242,3 +242,4 @@ internal class CarelevoPatchTest {
         assertThat(alarm.value).isEqualTo(45)
     }
 }
+

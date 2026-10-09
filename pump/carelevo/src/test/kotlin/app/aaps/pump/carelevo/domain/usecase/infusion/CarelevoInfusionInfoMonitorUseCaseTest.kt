@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.domain.usecase.infusion
+﻿package app.gmaaps.pump.carelevo.domain.usecase.infusion
 
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.model.infusion.CarelevoInfusionInfoDomainModel
-import app.aaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.model.infusion.CarelevoInfusionInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Observable
 import org.junit.jupiter.api.Test
@@ -26,3 +26,4 @@ internal class CarelevoInfusionInfoMonitorUseCaseTest {
         assertThat(result).isInstanceOf(ResponseResult.Success::class.java)
     }
 }
+

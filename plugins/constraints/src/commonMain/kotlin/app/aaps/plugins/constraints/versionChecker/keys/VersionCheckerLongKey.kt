@@ -1,6 +1,6 @@
-package app.aaps.plugins.constraints.versionChecker.keys
+﻿package app.gmaaps.plugins.constraints.versionChecker.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 @Suppress("SpellCheckingInspection")
 enum class VersionCheckerLongKey(

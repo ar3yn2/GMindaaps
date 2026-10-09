@@ -1,6 +1,6 @@
-package app.aaps.pump.common.hw.rileylink.ble
+﻿package app.gmaaps.pump.common.hw.rileylink.ble
 
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkBLEError
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkBLEError
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Assertions.assertNull
@@ -195,3 +195,4 @@ class RileyLinkCommunicationExceptionTest {
         assert(exception.stackTrace.isNotEmpty())
     }
 }
+

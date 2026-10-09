@@ -1,7 +1,7 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
-import app.aaps.core.interfaces.di.PumpDriver
-import app.aaps.shared.tests.aapsClassesOnClasspath
+import app.gmaaps.core.interfaces.di.PumpDriver
+import app.gmaaps.shared.tests.aapsClassesOnClasspath
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.mockingDetails
@@ -104,3 +104,4 @@ class PumpDriverBucketTest {
         assertThat(root.contributedPlugins.keys).containsNoneIn(root.contributedPumpDriverPlugins.keys)
     }
 }
+

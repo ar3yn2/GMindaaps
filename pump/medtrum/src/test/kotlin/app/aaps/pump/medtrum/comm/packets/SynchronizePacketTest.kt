@@ -1,11 +1,11 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.pump.medtrum.MedtrumTestBase
-import app.aaps.pump.medtrum.comm.enums.BasalType
-import app.aaps.pump.medtrum.comm.enums.MedtrumPumpState
-import app.aaps.pump.medtrum.extension.toByteArray
-import app.aaps.pump.medtrum.util.MedtrumTimeUtil
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.pump.medtrum.MedtrumTestBase
+import app.gmaaps.pump.medtrum.comm.enums.BasalType
+import app.gmaaps.pump.medtrum.comm.enums.MedtrumPumpState
+import app.gmaaps.pump.medtrum.extension.toByteArray
+import app.gmaaps.pump.medtrum.util.MedtrumTimeUtil
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -149,3 +149,4 @@ class SynchronizePacketTest : MedtrumTestBase() {
         assertThat(packet.medtrumPump.batteryVoltage_B).isWithin(0.01).of(2.8125)
     }
 }
+

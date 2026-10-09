@@ -1,10 +1,10 @@
-package app.aaps.pump.equil.emulator
+﻿package app.gmaaps.pump.equil.emulator
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.equil.manager.AESUtil
-import app.aaps.pump.equil.manager.EquilCmdModel
-import app.aaps.pump.equil.manager.Utils
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.equil.manager.AESUtil
+import app.gmaaps.pump.equil.manager.EquilCmdModel
+import app.gmaaps.pump.equil.manager.Utils
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toInstant
@@ -477,3 +477,4 @@ class EquilPumpEmulator(val state: EquilPumpState = EquilPumpState(), private va
     private fun getInt(data: ByteArray, offset: Int): Int =
         Utils.bytes2Int(byteArrayOf(data[offset], data[offset + 1], data[offset + 2], data[offset + 3]))
 }
+

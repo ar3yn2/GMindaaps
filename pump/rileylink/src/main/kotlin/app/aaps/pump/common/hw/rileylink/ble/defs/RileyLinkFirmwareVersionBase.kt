@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.defs
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.defs
 
 @Suppress("EnumEntryName")
 enum class RileyLinkFirmwareVersionBase(val major: Int?, val minor: Int?, val versionKey: String) {

@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.bolus
+﻿package app.gmaaps.core.interfaces.bolus
 
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.clientcontrol.ActionProgress
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.clientcontrol.ActionProgress
 
 /**
  * Role-transparent **recompute** bolus path (QuickWizard WIZARD-mode + manual Bolus Wizard) — the sibling of
@@ -43,3 +43,4 @@ interface WizardExecutor {
         data class Manual(val inputs: WizardBolusExecutor.WizardInputs) : WizardSource
     }
 }
+

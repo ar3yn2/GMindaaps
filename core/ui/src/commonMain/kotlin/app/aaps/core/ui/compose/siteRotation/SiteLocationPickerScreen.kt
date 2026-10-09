@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.siteRotation
+﻿package app.gmaaps.core.ui.compose.siteRotation
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -16,10 +16,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import app.aaps.core.data.model.TE
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsTopAppBar
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsTopAppBar
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Full-screen wrapper for [SiteLocationPicker] with a top bar and confirm button.
@@ -81,3 +81,4 @@ fun SiteLocationPickerScreen(
         )
     }
 }
+

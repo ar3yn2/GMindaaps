@@ -1,10 +1,10 @@
-package app.aaps.implementation.profile
+﻿package app.gmaaps.implementation.profile
 
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -195,3 +195,4 @@ class ProfileFunctionImplTest : TestBaseWithProfile() {
         assertThat(profiles.all { (it as ProfileSealed.EPS).value === shared }).isTrue()
     }
 }
+

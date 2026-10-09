@@ -1,4 +1,4 @@
-package app.aaps.plugins.constraints.objectives.compose
+﻿package app.gmaaps.plugins.constraints.objectives.compose
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -24,9 +24,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.consumeOverscroll
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.constraints.ConstraintsStrings
+import app.gmaaps.core.ui.compose.consumeOverscroll
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.constraints.ConstraintsStrings
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -92,3 +92,4 @@ fun LearnedBottomSheet(
         }
     }
 }
+

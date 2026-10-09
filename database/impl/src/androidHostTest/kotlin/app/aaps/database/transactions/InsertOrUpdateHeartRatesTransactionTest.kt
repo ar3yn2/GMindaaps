@@ -1,8 +1,8 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.DelegatedAppDatabase
-import app.aaps.database.daos.HeartRateDao
-import app.aaps.database.entities.HeartRate
+import app.gmaaps.database.DelegatedAppDatabase
+import app.gmaaps.database.daos.HeartRateDao
+import app.gmaaps.database.entities.HeartRate
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -135,3 +135,4 @@ class InsertOrUpdateHeartRatesTransactionTest {
         duration = 60_000L
     ).also { it.id = id }
 }
+

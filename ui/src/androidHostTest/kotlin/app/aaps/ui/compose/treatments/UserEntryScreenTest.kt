@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.treatments
+﻿package app.gmaaps.ui.compose.treatments
 
 import android.content.Context
 import androidx.compose.material.icons.Icons
@@ -8,29 +8,29 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.data.model.UE
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.maintenance.ImportExportPrefs
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.resources.TextRefIdRegistry
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.userEntry.UserEntryPresentationHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.Translator
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.LocalDateUtil
-import app.aaps.core.ui.compose.LocalPreferences
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.ui.R
-import app.aaps.ui.UiStringIds
-import app.aaps.ui.compose.treatments.viewmodels.UserEntryViewModel
+import app.gmaaps.core.data.model.UE
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.maintenance.ImportExportPrefs
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.resources.TextRefIdRegistry
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.userEntry.UserEntryPresentationHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.Translator
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.LocalDateUtil
+import app.gmaaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.ui.R
+import app.gmaaps.ui.UiStringIds
+import app.gmaaps.ui.compose.treatments.viewmodels.UserEntryViewModel
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -228,3 +228,4 @@ class UserEntryScreenTest {
         assertThat(config).isNotNull()
     }
 }
+

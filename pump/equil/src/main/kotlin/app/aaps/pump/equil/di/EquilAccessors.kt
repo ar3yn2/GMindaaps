@@ -1,10 +1,10 @@
-package app.aaps.pump.equil.di
+﻿package app.gmaaps.pump.equil.di
 
-import app.aaps.pump.equil.EquilPumpPlugin
-import app.aaps.pump.equil.ble.EquilBleTransport
-import app.aaps.pump.equil.database.EquilHistoryPumpDao
-import app.aaps.pump.equil.database.EquilHistoryRecordDao
-import app.aaps.pump.equil.manager.EquilManager
+import app.gmaaps.pump.equil.EquilPumpPlugin
+import app.gmaaps.pump.equil.ble.EquilBleTransport
+import app.gmaaps.pump.equil.database.EquilHistoryPumpDao
+import app.gmaaps.pump.equil.database.EquilHistoryRecordDao
+import app.gmaaps.pump.equil.manager.EquilManager
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesTo
 
@@ -26,3 +26,4 @@ interface EquilAccessors {
     val equilHistoryRecordDao: EquilHistoryRecordDao
     val equilHistoryPumpDao: EquilHistoryPumpDao
 }
+

@@ -1,23 +1,23 @@
-package app.aaps.plugins.aps.compose
+﻿package app.gmaaps.plugins.aps.compose
 
 import androidx.compose.runtime.Immutable
-import app.aaps.core.interfaces.aps.APS
-import app.aaps.core.interfaces.aps.AutosensResult
-import app.aaps.core.interfaces.aps.CurrentTemp
-import app.aaps.core.interfaces.aps.GlucoseStatus
-import app.aaps.core.interfaces.aps.IobTotal
-import app.aaps.core.interfaces.aps.MealData
-import app.aaps.core.interfaces.aps.OapsProfile
-import app.aaps.core.interfaces.aps.OapsProfileAutoIsf
-import app.aaps.core.interfaces.aps.RT
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.plugins.aps.ApsStrings
-import app.aaps.plugins.aps.events.EventOpenAPSUpdateGui
-import app.aaps.plugins.aps.events.EventResetOpenAPSGui
+import app.gmaaps.core.interfaces.aps.APS
+import app.gmaaps.core.interfaces.aps.AutosensResult
+import app.gmaaps.core.interfaces.aps.CurrentTemp
+import app.gmaaps.core.interfaces.aps.GlucoseStatus
+import app.gmaaps.core.interfaces.aps.IobTotal
+import app.gmaaps.core.interfaces.aps.MealData
+import app.gmaaps.core.interfaces.aps.OapsProfile
+import app.gmaaps.core.interfaces.aps.OapsProfileAutoIsf
+import app.gmaaps.core.interfaces.aps.RT
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.plugins.aps.ApsStrings
+import app.gmaaps.plugins.aps.events.EventOpenAPSUpdateGui
+import app.gmaaps.plugins.aps.events.EventResetOpenAPSGui
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -405,3 +405,4 @@ class OpenAPSViewModel(
         isfMgdlForCarbs?.let { add(KeyValueRow("isfMgdlForCarbs", it.toString())) }
     }
 }
+

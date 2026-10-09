@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
@@ -19,12 +19,12 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.core.keys.interfaces.SyncDirection
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.LocalConfig
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.core.keys.interfaces.SyncDirection
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.LocalConfig
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Small badge marking something that two-way syncs with the master ("main phone").
@@ -100,3 +100,4 @@ fun TextWithSyncBadge(
 @Composable
 fun PreferenceTitleWithSyncBadge(title: TextRef, key: NonPreferenceKey?) =
     TextWithSyncBadge(stringResource(title), key)
+

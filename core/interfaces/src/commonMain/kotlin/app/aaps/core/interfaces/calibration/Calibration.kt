@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.calibration
+﻿package app.gmaaps.core.interfaces.calibration
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
 
 interface Calibration {
 
@@ -48,3 +48,4 @@ interface Calibration {
      */
     suspend fun checkPreconditions(): AddEntryResult
 }
+

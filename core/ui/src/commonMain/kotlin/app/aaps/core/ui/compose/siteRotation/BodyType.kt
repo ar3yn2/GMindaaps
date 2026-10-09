@@ -1,20 +1,20 @@
-package app.aaps.core.ui.compose.siteRotation
+﻿package app.gmaaps.core.ui.compose.siteRotation
 
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.data.model.TE
-import app.aaps.core.ui.compose.icons.library.ChildBack
-import app.aaps.core.ui.compose.icons.library.ChildBackPaths
-import app.aaps.core.ui.compose.icons.library.ChildFront
-import app.aaps.core.ui.compose.icons.library.ChildFrontPaths
-import app.aaps.core.ui.compose.icons.library.ManBack
-import app.aaps.core.ui.compose.icons.library.ManBackPaths
-import app.aaps.core.ui.compose.icons.library.ManFront
-import app.aaps.core.ui.compose.icons.library.ManFrontPaths
-import app.aaps.core.ui.compose.icons.library.WomanBack
-import app.aaps.core.ui.compose.icons.library.WomanBackPaths
-import app.aaps.core.ui.compose.icons.library.WomanFront
-import app.aaps.core.ui.compose.icons.library.WomanFrontPaths
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.ui.compose.icons.library.ChildBack
+import app.gmaaps.core.ui.compose.icons.library.ChildBackPaths
+import app.gmaaps.core.ui.compose.icons.library.ChildFront
+import app.gmaaps.core.ui.compose.icons.library.ChildFrontPaths
+import app.gmaaps.core.ui.compose.icons.library.ManBack
+import app.gmaaps.core.ui.compose.icons.library.ManBackPaths
+import app.gmaaps.core.ui.compose.icons.library.ManFront
+import app.gmaaps.core.ui.compose.icons.library.ManFrontPaths
+import app.gmaaps.core.ui.compose.icons.library.WomanBack
+import app.gmaaps.core.ui.compose.icons.library.WomanBackPaths
+import app.gmaaps.core.ui.compose.icons.library.WomanFront
+import app.gmaaps.core.ui.compose.icons.library.WomanFrontPaths
 
 enum class BodyType(
     val value: Int,
@@ -34,3 +34,4 @@ enum class BodyType(
         fun fromPref(pref: Int): BodyType = entries.firstOrNull { it.value == pref } ?: MAN
     }
 }
+

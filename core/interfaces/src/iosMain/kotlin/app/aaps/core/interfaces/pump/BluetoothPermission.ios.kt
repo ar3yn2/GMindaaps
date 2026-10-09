@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
-import app.aaps.core.interfaces.plugin.PermissionGroup
+import app.gmaaps.core.interfaces.plugin.PermissionGroup
 
 /**
  * iOS has no runtime permission to request here. Bluetooth access is declared once in `Info.plist`
@@ -8,3 +8,4 @@ import app.aaps.core.interfaces.plugin.PermissionGroup
  * a plugin to list or for the permission screen to ask for.
  */
 internal actual fun bluetoothPermissionGroup(): PermissionGroup? = null
+

@@ -1,8 +1,8 @@
-package app.aaps.plugins.sync.tidepool.elements
+﻿package app.gmaaps.plugins.sync.tidepool.elements
 
-import app.aaps.core.data.model.TE
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.utils.DateUtil
 import com.google.gson.annotations.Expose
 import java.util.LinkedList
 import java.util.UUID

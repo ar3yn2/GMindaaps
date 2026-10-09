@@ -1,11 +1,11 @@
-package app.aaps.testcategories
+﻿package app.gmaaps.testcategories
 
 /**
  * Marks an instrumented test class as **shard A** so CI can split the app module's androidTest suite
  * across three emulators. The runner filters natively on the annotations:
- *  - **shard A** runs `-e annotation app.aaps.testcategories.ShardA`
- *  - **shard B** runs `-e annotation app.aaps.testcategories.ShardB` (see [ShardB])
- *  - **shard C** runs `-e notAnnotation app.aaps.testcategories.ShardA,app.aaps.testcategories.ShardB`
+ *  - **shard A** runs `-e annotation app.gmaaps.testcategories.ShardA`
+ *  - **shard B** runs `-e annotation app.gmaaps.testcategories.ShardB` (see [ShardB])
+ *  - **shard C** runs `-e notAnnotation app.gmaaps.testcategories.ShardA,app.gmaaps.testcategories.ShardB`
  *    — i.e. *everything else*, including any new, untagged test, so a test can never fall into no shard
  *    and be silently skipped.
  *
@@ -23,3 +23,4 @@ package app.aaps.testcategories
 @Retention(AnnotationRetention.RUNTIME)
 @Target(AnnotationTarget.CLASS)
 annotation class ShardA
+

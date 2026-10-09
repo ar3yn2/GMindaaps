@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.widget
+﻿package app.gmaaps.core.interfaces.widget
 
 /**
  * Fires a refresh of the app widget. Implementation lives in the `ui` module
@@ -14,3 +14,4 @@ interface WidgetUpdater {
      */
     fun update(from: String)
 }
+

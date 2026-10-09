@@ -1,8 +1,8 @@
-package app.aaps.core.objects.constraints
+﻿package app.gmaaps.core.objects.constraints
 
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 
 class ConstraintObject<T : Comparable<T>>(private var value: T, private val aapsLogger: AAPSLogger) : Constraint<T> {
 

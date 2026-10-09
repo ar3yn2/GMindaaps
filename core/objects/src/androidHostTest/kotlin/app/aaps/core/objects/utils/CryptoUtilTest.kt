@@ -1,7 +1,7 @@
-package app.aaps.core.objects.utils
+﻿package app.gmaaps.core.objects.utils
 
-import app.aaps.core.objects.crypto.CryptoUtil
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.objects.crypto.CryptoUtil
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import com.google.common.truth.TruthJUnit.assume
 import org.junit.jupiter.api.Test
@@ -111,4 +111,5 @@ class CryptoUtilTest : TestBase() {
     }
 
 }
+
 

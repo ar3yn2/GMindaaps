@@ -1,4 +1,4 @@
-package app.aaps.wear.watchfaces.utils
+﻿package app.gmaaps.wear.watchfaces.utils
 
 import androidx.wear.watchface.complications.data.ComplicationType
 import com.google.common.truth.Truth.assertThat
@@ -86,3 +86,4 @@ internal class ComplicationTypePriorityTest {
         assertThat(negotiated(ComplicationTypePriority.TEXT)).isEqualTo(ComplicationType.SHORT_TEXT)
     }
 }
+

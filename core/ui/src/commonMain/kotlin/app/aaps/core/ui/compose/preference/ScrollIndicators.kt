@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2023 Google LLC
  * Adapted for AAPS
  *
@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.ScrollableDefaults
@@ -129,3 +129,4 @@ private fun Modifier.scrollIndicators(
 
 private const val ScrollIndicatorOpacity = 0.12f
 private val ScrollIndicatorThickness = 1.dp
+

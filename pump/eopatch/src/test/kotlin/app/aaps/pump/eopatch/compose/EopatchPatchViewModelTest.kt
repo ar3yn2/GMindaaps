@@ -1,23 +1,23 @@
-package app.aaps.pump.eopatch.compose
+﻿package app.gmaaps.pump.eopatch.compose
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.TE
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.InsulinManager
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.eopatch.R
-import app.aaps.pump.eopatch.RxAction
-import app.aaps.pump.eopatch.alarm.IAlarmRegistry
-import app.aaps.pump.eopatch.ble.IPatchManager
-import app.aaps.pump.eopatch.ble.PatchManagerExecutor
-import app.aaps.pump.eopatch.ble.PreferenceManager
-import app.aaps.pump.eopatch.vo.PatchConfig
-import app.aaps.pump.eopatch.vo.PatchState
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.InsulinManager
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.eopatch.R
+import app.gmaaps.pump.eopatch.RxAction
+import app.gmaaps.pump.eopatch.alarm.IAlarmRegistry
+import app.gmaaps.pump.eopatch.ble.IPatchManager
+import app.gmaaps.pump.eopatch.ble.PatchManagerExecutor
+import app.gmaaps.pump.eopatch.ble.PreferenceManager
+import app.gmaaps.pump.eopatch.vo.PatchConfig
+import app.gmaaps.pump.eopatch.vo.PatchState
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -139,3 +139,4 @@ internal class EopatchPatchViewModelTest {
         assertThat(sut.siteArrow.value).isEqualTo(TE.Arrow.UP)
     }
 }
+

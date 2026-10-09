@@ -1,12 +1,12 @@
-package app.aaps.ui.compose.profileManagement
+﻿package app.gmaaps.ui.compose.profileManagement
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.compose.LocalDateUtil
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.compose.LocalDateUtil
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -69,3 +69,4 @@ class ProfileCarouselCardTest {
         compose.onNodeWithText("24.0 U", substring = true).assertIsDisplayed()
     }
 }
+

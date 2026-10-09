@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.ui.text.PlatformTextStyle
 
@@ -11,3 +11,4 @@ import androidx.compose.ui.text.PlatformTextStyle
  * [Typography.withoutFontPadding] that cannot be shared.
  */
 expect fun noFontPaddingPlatformStyle(): PlatformTextStyle?
+

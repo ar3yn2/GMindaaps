@@ -1,4 +1,4 @@
-package app.aaps.receivers
+﻿package app.gmaaps.receivers
 
 import android.content.Context
 import android.content.Intent
@@ -8,22 +8,22 @@ import androidx.work.ExistingWorkPolicy
 import androidx.work.ListenableWorker
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
-import app.aaps.core.interfaces.receivers.Intents
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.utils.receivers.DataInbox
-import app.aaps.plugins.source.AidexPlugin
-import app.aaps.plugins.source.DexcomInbox
-import app.aaps.plugins.source.GlimpPlugin
-import app.aaps.plugins.source.MM640gPlugin
-import app.aaps.plugins.source.PatchedSiAppPlugin
-import app.aaps.plugins.source.PatchedSinoAppPlugin
-import app.aaps.plugins.source.PoctechPlugin
-import app.aaps.plugins.source.SyaiPlugin
-import app.aaps.plugins.source.TomatoPlugin
-import app.aaps.plugins.source.XdripInbox
-import app.aaps.plugins.source.instara.InstaraPlugin
-import app.aaps.plugins.sync.smsCommunicator.SmsInbox
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.receivers.Intents
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.utils.receivers.DataInbox
+import app.gmaaps.plugins.source.AidexPlugin
+import app.gmaaps.plugins.source.DexcomInbox
+import app.gmaaps.plugins.source.GlimpPlugin
+import app.gmaaps.plugins.source.MM640gPlugin
+import app.gmaaps.plugins.source.PatchedSiAppPlugin
+import app.gmaaps.plugins.source.PatchedSinoAppPlugin
+import app.gmaaps.plugins.source.PoctechPlugin
+import app.gmaaps.plugins.source.SyaiPlugin
+import app.gmaaps.plugins.source.TomatoPlugin
+import app.gmaaps.plugins.source.XdripInbox
+import app.gmaaps.plugins.source.instara.InstaraPlugin
+import app.gmaaps.plugins.sync.smsCommunicator.SmsInbox
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -160,3 +160,4 @@ class DataReceiverTest : TestBase() {
         )
     }
 }
+

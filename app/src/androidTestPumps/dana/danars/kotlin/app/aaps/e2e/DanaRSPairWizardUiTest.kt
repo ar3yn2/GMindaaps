@@ -1,4 +1,4 @@
-package app.aaps.e2e
+﻿package app.gmaaps.e2e
 
 import android.Manifest
 import android.content.Context
@@ -12,25 +12,25 @@ import androidx.test.uiautomator.StaleObjectException
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiObject2
 import androidx.work.WorkManager
-import app.aaps.ComposeMainActivity
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.pump.ble.PairingState
-import app.aaps.core.interfaces.pump.ble.PairingStep
-import app.aaps.core.keys.BooleanComposedKey
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.objects.extensions.singleBlock
-import app.aaps.core.objects.extensions.singleTargetBlock
-import app.aaps.di.EmulatedOptions
-import app.aaps.di.ResetGraphRule
-import app.aaps.di.testGraphs
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danars.di.DanaRSAccessors
-import app.aaps.pump.danars.emulator.EmulatorBleTransport
-import app.aaps.testcategories.ShardB
+import app.gmaaps.ComposeMainActivity
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.pump.ble.PairingState
+import app.gmaaps.core.interfaces.pump.ble.PairingStep
+import app.gmaaps.core.keys.BooleanComposedKey
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.objects.extensions.singleBlock
+import app.gmaaps.core.objects.extensions.singleTargetBlock
+import app.gmaaps.di.EmulatedOptions
+import app.gmaaps.di.ResetGraphRule
+import app.gmaaps.di.testGraphs
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danars.di.DanaRSAccessors
+import app.gmaaps.pump.danars.emulator.EmulatorBleTransport
+import app.gmaaps.testcategories.ShardB
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import org.junit.After
@@ -326,3 +326,4 @@ class DanaRSPairWizardUiTest {
         private const val POLL_MS = 250L
     }
 }
+

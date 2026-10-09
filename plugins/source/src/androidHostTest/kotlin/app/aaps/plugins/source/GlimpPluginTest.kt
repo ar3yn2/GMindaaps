@@ -1,6 +1,6 @@
-package app.aaps.plugins.source
+﻿package app.gmaaps.plugins.source
 
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import org.junit.jupiter.api.BeforeEach
 import org.mockito.kotlin.mock
 
@@ -13,3 +13,4 @@ class GlimpPluginTest : TestBaseWithProfile() {
         glimpPlugin = GlimpPlugin(rh, aapsLogger, preferences, config, mock())
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.ui.activities
+﻿package app.gmaaps.ui.activities
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -29,8 +29,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Modal-style screen rendered over a scrim by [ErrorActivity] when an urgent alarm fires.
@@ -163,3 +163,4 @@ fun ErrorScreen(
         }
     }
 }
+

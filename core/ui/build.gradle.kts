@@ -1,4 +1,4 @@
-import kotlin.math.min
+﻿import kotlin.math.min
 
 plugins {
     id("kmp-test-defaults")
@@ -19,7 +19,7 @@ plugins {
 // Android exactly as before.
 val generateCoreUiStrings = tasks.register<GenerateKeyStringsTask>("generateCoreUiStrings") {
     resDir.set(layout.projectDirectory.dir("src/androidMain/res"))
-    packageName.set("app.aaps.core.ui")
+    packageName.set("app.gmaaps.core.ui")
     owner.set("coreUi")
     objectName.set("CoreUiStrings")
     idsObjectName.set("CoreUiStringIds")
@@ -33,7 +33,7 @@ val generateCoreUiStrings = tasks.register<GenerateKeyStringsTask>("generateCore
 
 kotlin {
     android {
-        namespace = "app.aaps.core.ui"
+        namespace = "app.gmaaps.core.ui"
         compileSdk = Versions.compileSdk
         minSdk = min(Versions.minSdk, Versions.wearMinSdk)  // Compatible with wear module
         // Off by default for a multiplatform library, unlike a plain android library. This module is
@@ -166,3 +166,4 @@ kotlin {
 // only one that did remember: :core:graph and :plugins:calibration lost it when they flipped to
 // multiplatform and reported 0% and 33.5% for Compose screens their Robolectric tests were already
 // driving.
+

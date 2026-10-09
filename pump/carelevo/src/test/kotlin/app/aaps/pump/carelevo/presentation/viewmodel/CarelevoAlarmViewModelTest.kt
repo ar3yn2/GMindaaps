@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.presentation.viewmodel
+﻿package app.gmaaps.pump.carelevo.presentation.viewmodel
 
-import app.aaps.pump.carelevo.common.CarelevoAlarmActionHandler
-import app.aaps.pump.carelevo.presentation.model.AlarmEvent
+import app.gmaaps.pump.carelevo.common.CarelevoAlarmActionHandler
+import app.gmaaps.pump.carelevo.presentation.model.AlarmEvent
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableSharedFlow
 import org.junit.jupiter.api.BeforeEach
@@ -12,7 +12,7 @@ import org.mockito.kotlin.whenever
 /**
  * Unit tests for [CarelevoAlarmViewModel].
  *
- * The VM is now a pure pass-through: [app.aaps.pump.carelevo.compose.alarm.CarelevoAlarmHost] only
+ * The VM is now a pure pass-through: [app.gmaaps.pump.carelevo.compose.alarm.CarelevoAlarmHost] only
  * ever needs the handler's UI-request stream (Bluetooth-enable intent, failure toast). The actual
  * alarm state machine — including clearing an alarm — lives entirely in [CarelevoAlarmActionHandler],
  * driven directly from `CarelevoAlarmNotifier.showTopNotification`'s action button; this shell is not
@@ -37,3 +37,4 @@ class CarelevoAlarmViewModelTest {
         assertThat(sut.event).isSameInstanceAs(uiRequestsFlow)
     }
 }
+

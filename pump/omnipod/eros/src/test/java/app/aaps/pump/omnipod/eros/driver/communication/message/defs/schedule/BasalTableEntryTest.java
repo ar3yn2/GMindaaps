@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.defs.schedule;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.defs.schedule;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BasalTableEntry;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BasalTableEntry;
 
 class BasalTableEntryTest {
     @Test
@@ -18,3 +18,4 @@ class BasalTableEntryTest {
         Assertions.assertEquals(0x0b, basalTableEntry.getChecksum());
     }
 }
+

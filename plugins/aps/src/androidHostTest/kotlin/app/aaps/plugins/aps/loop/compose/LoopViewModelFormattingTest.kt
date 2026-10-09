@@ -1,19 +1,19 @@
-package app.aaps.plugins.aps.loop.compose
+﻿package app.gmaaps.plugins.aps.loop.compose
 
-import app.aaps.core.interfaces.aps.APSResult
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventLoopUpdateGui
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.plugins.aps.loop.events.EventLoopSetLastRunGui
+import app.gmaaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventLoopUpdateGui
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.plugins.aps.loop.events.EventLoopSetLastRunGui
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -321,17 +321,17 @@ internal class LoopViewModelFormattingTest {
     private class FakeTextResources : ResourceHelper {
 
         private val words = listOf(
-            app.aaps.core.ui.R.string.success to ("success" to "Success"),
-            app.aaps.core.ui.R.string.waitingforpumpresult to ("waitingforpumpresult" to "Waiting for result"),
-            app.aaps.core.ui.R.string.enacted to ("enacted" to "Enacted"),
-            app.aaps.core.ui.R.string.comment to ("comment" to "Comment"),
-            app.aaps.core.ui.R.string.smb_shortname to ("smb_shortname" to "SMB"),
-            app.aaps.core.ui.R.string.insulin_unit_shortname to ("insulin_unit_shortname" to "U"),
-            app.aaps.core.ui.R.string.cancel_temp to ("cancel_temp" to "Cancel temp"),
-            app.aaps.core.ui.R.string.duration to ("duration" to "Duration"),
-            app.aaps.core.ui.R.string.percent to ("percent" to "Percent"),
-            app.aaps.core.ui.R.string.absolute to ("absolute" to "Absolute"),
-            app.aaps.core.ui.R.string.not_available_full to ("not_available_full" to "Not available")
+            app.gmaaps.core.ui.R.string.success to ("success" to "Success"),
+            app.gmaaps.core.ui.R.string.waitingforpumpresult to ("waitingforpumpresult" to "Waiting for result"),
+            app.gmaaps.core.ui.R.string.enacted to ("enacted" to "Enacted"),
+            app.gmaaps.core.ui.R.string.comment to ("comment" to "Comment"),
+            app.gmaaps.core.ui.R.string.smb_shortname to ("smb_shortname" to "SMB"),
+            app.gmaaps.core.ui.R.string.insulin_unit_shortname to ("insulin_unit_shortname" to "U"),
+            app.gmaaps.core.ui.R.string.cancel_temp to ("cancel_temp" to "Cancel temp"),
+            app.gmaaps.core.ui.R.string.duration to ("duration" to "Duration"),
+            app.gmaaps.core.ui.R.string.percent to ("percent" to "Percent"),
+            app.gmaaps.core.ui.R.string.absolute to ("absolute" to "Absolute"),
+            app.gmaaps.core.ui.R.string.not_available_full to ("not_available_full" to "Not available")
         )
 
         private val byId = words.associate { it.first to it.second.second }
@@ -401,3 +401,4 @@ internal class LoopViewModelFormattingTest {
         override fun cancelled(cancelled: Boolean) = apply { this.cancelled = cancelled }
     }
 }
+

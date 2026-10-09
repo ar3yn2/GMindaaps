@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright 2023 Google LLC
  * Adapted for AAPS
  *
@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
@@ -87,3 +87,4 @@ private class CopiedPaddingValues(
         return "Copied($start, $top, $end, $bottom, $paddingValues)"
     }
 }
+

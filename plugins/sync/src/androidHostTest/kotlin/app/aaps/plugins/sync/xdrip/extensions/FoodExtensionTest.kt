@@ -1,8 +1,8 @@
-package app.aaps.plugins.sync.xdrip.extensions
+﻿package app.gmaaps.plugins.sync.xdrip.extensions
 
-import app.aaps.core.data.model.FD
-import app.aaps.core.data.model.IDs
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.FD
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -36,3 +36,4 @@ class FoodExtensionTest : TestBase() {
         assertThat(food(IDs(nightscoutId = "N")).toJson(isAdd = false).has("_id")).isFalse()
     }
 }
+

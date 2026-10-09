@@ -1,10 +1,10 @@
-package app.aaps.pump.carelevo.ble
+﻿package app.gmaaps.pump.carelevo.ble
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharedFlow
 
 /**
- * Request/response client over a [app.aaps.pump.carelevo.ble.gatt.GattConnection].
+ * Request/response client over a [app.gmaaps.pump.carelevo.ble.gatt.GattConnection].
  *
  * Serializes outgoing writes with a mutex so at most one request is in flight at any
  * moment, and correlates each request with the peripheral's notification by opcode
@@ -27,7 +27,7 @@ interface BleClient {
      * Throws:
      * - [BleDisconnectedException] if the GATT connection drops while the request
      *   is pending.
-     * - [app.aaps.pump.carelevo.ble.gatt.GattWriteException] if the BLE write fails.
+     * - [app.gmaaps.pump.carelevo.ble.gatt.GattWriteException] if the BLE write fails.
      * - [kotlinx.coroutines.CancellationException] on coroutine cancellation
      *   (including `withTimeout`).
      */
@@ -45,7 +45,7 @@ interface BleClient {
      * Same deadline policy as [request] — no built-in timeout, wrap in `withTimeout(...)`.
      * A single deadline wraps the whole call (not per-response).
      *
-     * Throws [BleDisconnectedException] / [app.aaps.pump.carelevo.ble.gatt.GattWriteException] /
+     * Throws [BleDisconnectedException] / [app.gmaaps.pump.carelevo.ble.gatt.GattWriteException] /
      * [kotlinx.coroutines.CancellationException] on the same conditions as [request].
      */
     suspend fun <R : BleResponse> requestMultiple(cmd: BleMultiCommand<R>): R
@@ -180,3 +180,4 @@ data class UnsolicitedMessage(
 
 /** Thrown by a pending [BleClient.request] if the GATT connection drops. */
 class BleDisconnectedException(message: String = "connection dropped") : RuntimeException(message)
+

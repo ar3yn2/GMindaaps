@@ -1,25 +1,25 @@
-package app.aaps.plugins.sync.wear.wearintegration
+﻿package app.gmaaps.plugins.sync.wear.wearintegration
 
-import app.aaps.core.data.model.ActiveSceneState
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.bolus.BatchExecutor
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
-import app.aaps.core.interfaces.bolus.WizardExecutor
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.maintenance.ImportExportPrefs
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.pump.PumpStatusProvider
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.rx.weardata.ProfileInfo
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.TrendCalculator
-import app.aaps.core.objects.runningMode.RunningModeGuard
-import app.aaps.core.objects.wizard.QuickWizard
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.ActiveSceneState
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.bolus.BatchExecutor
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.bolus.WizardExecutor
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.maintenance.ImportExportPrefs
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.pump.PumpStatusProvider
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.rx.weardata.ProfileInfo
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.TrendCalculator
+import app.gmaaps.core.objects.runningMode.RunningModeGuard
+import app.gmaaps.core.objects.wizard.QuickWizard
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -131,3 +131,4 @@ class DataHandlerMobileProfileInfoTest : TestBaseWithProfile() {
         assertThat(noScene?.fromScene).isFalse()
     }
 }
+

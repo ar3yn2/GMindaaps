@@ -1,17 +1,17 @@
-package app.aaps.pump.equil.compose
+﻿package app.gmaaps.pump.equil.compose
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.pump.equil.EquilPumpPlugin
-import app.aaps.pump.equil.R
-import app.aaps.pump.equil.database.EquilHistoryPumpDao
-import app.aaps.pump.equil.database.EquilHistoryRecord
-import app.aaps.pump.equil.database.EquilHistoryRecordDao
-import app.aaps.pump.equil.database.ResolvedResult
-import app.aaps.pump.equil.driver.definition.EquilHistoryEntryGroup
-import app.aaps.pump.equil.events.EventEquilDataChanged
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.pump.equil.EquilPumpPlugin
+import app.gmaaps.pump.equil.R
+import app.gmaaps.pump.equil.database.EquilHistoryPumpDao
+import app.gmaaps.pump.equil.database.EquilHistoryRecord
+import app.gmaaps.pump.equil.database.EquilHistoryRecordDao
+import app.gmaaps.pump.equil.database.ResolvedResult
+import app.gmaaps.pump.equil.driver.definition.EquilHistoryEntryGroup
+import app.gmaaps.pump.equil.events.EventEquilDataChanged
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -122,3 +122,4 @@ internal class EquilHistoryViewModelTest {
             .isEqualTo(R.string.equil_command__unknown)
     }
 }
+

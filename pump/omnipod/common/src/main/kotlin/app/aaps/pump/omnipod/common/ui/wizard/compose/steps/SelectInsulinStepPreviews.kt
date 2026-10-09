@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.common.ui.wizard.compose.steps
+﻿package app.gmaaps.pump.omnipod.common.ui.wizard.compose.steps
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.ui.compose.insulin.SelectInsulin
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.ui.compose.insulin.SelectInsulin
 
 private val previewInsulins = listOf(
     ICfg("Fiasp U100", peak = 55, dia = 5.0, concentration = 1.0),
@@ -26,3 +26,4 @@ internal fun PreviewSelectInsulin() {
         )
     }
 }
+

@@ -1,19 +1,19 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
-import app.aaps.plugins.source.AidexPlugin
-import app.aaps.plugins.source.DexcomPlugin
-import app.aaps.plugins.source.GlimpPlugin
-import app.aaps.plugins.source.MM640gPlugin
-import app.aaps.plugins.source.PatchedSiAppPlugin
-import app.aaps.plugins.source.PatchedSinoAppPlugin
-import app.aaps.plugins.source.PoctechPlugin
-import app.aaps.plugins.source.SyaiPlugin
-import app.aaps.plugins.source.TomatoPlugin
-import app.aaps.plugins.source.XdripSourcePlugin
-import app.aaps.plugins.source.di.SourceMetroGraph
-import app.aaps.plugins.source.instara.InstaraPlugin
-import app.aaps.plugins.source.instara.InstaraStaleCheckWorker
-import app.aaps.plugins.source.notificationreader.NotificationCollectorService
+import app.gmaaps.plugins.source.AidexPlugin
+import app.gmaaps.plugins.source.DexcomPlugin
+import app.gmaaps.plugins.source.GlimpPlugin
+import app.gmaaps.plugins.source.MM640gPlugin
+import app.gmaaps.plugins.source.PatchedSiAppPlugin
+import app.gmaaps.plugins.source.PatchedSinoAppPlugin
+import app.gmaaps.plugins.source.PoctechPlugin
+import app.gmaaps.plugins.source.SyaiPlugin
+import app.gmaaps.plugins.source.TomatoPlugin
+import app.gmaaps.plugins.source.XdripSourcePlugin
+import app.gmaaps.plugins.source.di.SourceMetroGraph
+import app.gmaaps.plugins.source.instara.InstaraPlugin
+import app.gmaaps.plugins.source.instara.InstaraStaleCheckWorker
+import app.gmaaps.plugins.source.notificationreader.NotificationCollectorService
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -51,3 +51,4 @@ class SourceGraphTest {
         assertThat(graph().memberInjectors.keys).containsExactly(NotificationCollectorService::class)
     }
 }
+

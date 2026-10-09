@@ -1,30 +1,30 @@
-package app.aaps.pump.omnipod.eros.di
+﻿package app.gmaaps.pump.omnipod.eros.di
 
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.ble.RFSpy
-import app.aaps.pump.common.hw.rileylink.ble.data.RadioResponse
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
-import app.aaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
-import app.aaps.pump.common.hw.rileylink.service.tasks.WakeAndTuneTask
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
-import app.aaps.pump.omnipod.eros.driver.manager.OmnipodManager
-import app.aaps.pump.omnipod.eros.history.ErosHistory
-import app.aaps.pump.omnipod.eros.manager.AapsOmnipodErosManager
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager
-import app.aaps.pump.omnipod.eros.util.AapsOmnipodUtil
-import app.aaps.pump.omnipod.eros.util.OmnipodAlertUtil
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.RFSpy
+import app.gmaaps.pump.common.hw.rileylink.ble.data.RadioResponse
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.WakeAndTuneTask
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
+import app.gmaaps.pump.omnipod.eros.driver.manager.OmnipodManager
+import app.gmaaps.pump.omnipod.eros.history.ErosHistory
+import app.gmaaps.pump.omnipod.eros.manager.AapsOmnipodErosManager
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager
+import app.gmaaps.pump.omnipod.eros.util.AapsOmnipodUtil
+import app.gmaaps.pump.omnipod.eros.util.OmnipodAlertUtil
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -98,3 +98,4 @@ object ErosJavaBindings {
         podStateManager: ErosPodStateManager
     ): OmnipodManager = OmnipodManager(aapsLogger, aapsSchedulers, communicationService, podStateManager)
 }
+

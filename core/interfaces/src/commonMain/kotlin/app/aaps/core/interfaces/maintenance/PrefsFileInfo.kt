@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.maintenance
+﻿package app.gmaaps.core.interfaces.maintenance
 
 /**
  * The two things a maintenance or import screen needs to know about the export store.
@@ -32,3 +32,4 @@ interface PrefsFileInfo {
      */
     fun isDirectoryAccessGranted(): Boolean
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.utils
+﻿package app.gmaaps.core.nssdk.utils
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -74,3 +74,4 @@ class ClientControlPairingCryptoTest {
         assertThat(a).isNotEqualTo(b)
     }
 }
+

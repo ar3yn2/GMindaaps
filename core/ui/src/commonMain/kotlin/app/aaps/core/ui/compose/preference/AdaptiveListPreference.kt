@@ -1,18 +1,18 @@
-/*
+﻿/*
  * Adaptive List Preferences for Jetpack Compose
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.AnnotatedString
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.StringPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.core.ui.compose.stringResourceOrNull
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.core.ui.compose.stringResourceOrNull
 
 /**
  * Composable list int preference for use inside card sections.
@@ -104,3 +104,4 @@ fun AdaptiveStringListPreferenceItem(
         }
     )
 }
+

@@ -1,24 +1,24 @@
-package app.aaps.plugins.aps.autotune.compose
+﻿package app.gmaaps.plugins.aps.autotune.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.profile.ProfileStore
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.plugins.aps.autotune.AutotuneFS
-import app.aaps.plugins.aps.autotune.AutotunePlugin
-import app.aaps.plugins.aps.autotune.data.ATProfile
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.profile.ProfileStore
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.plugins.aps.autotune.AutotuneFS
+import app.gmaaps.plugins.aps.autotune.AutotunePlugin
+import app.gmaaps.plugins.aps.autotune.data.ATProfile
 
 class AutotuneComposeContent(
     private val autotunePlugin: AutotunePlugin,
@@ -96,3 +96,4 @@ class AutotuneComposeContent(
         )
     }
 }
+

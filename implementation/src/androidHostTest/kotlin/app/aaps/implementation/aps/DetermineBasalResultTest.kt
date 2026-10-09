@@ -1,8 +1,8 @@
-package app.aaps.implementation.aps
+﻿package app.gmaaps.implementation.aps
 
-import app.aaps.core.interfaces.aps.APSResult
-import app.aaps.core.interfaces.aps.RT
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.aps.RT
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.json.double
 import kotlinx.serialization.json.int
@@ -103,3 +103,4 @@ class DetermineBasalResultTest : TestBaseWithProfile() {
         assertThat(result.json().toString()).contains("\"rate\":1.0")
     }
 }
+

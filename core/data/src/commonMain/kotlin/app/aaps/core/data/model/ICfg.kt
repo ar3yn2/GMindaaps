@@ -1,6 +1,6 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
-import app.aaps.core.data.iob.Iob
+import app.gmaaps.core.data.iob.Iob
 import kotlin.math.exp
 import kotlin.math.pow
 import kotlin.math.roundToInt

@@ -1,4 +1,4 @@
-package app.aaps.core.graph.profile
+﻿package app.gmaaps.core.graph.profile
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -17,15 +17,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import app.aaps.core.graph.BasalProfileGraphCompose
-import app.aaps.core.graph.IcProfileGraphCompose
-import app.aaps.core.graph.IsfProfileGraphCompose
-import app.aaps.core.graph.TargetBgProfileGraphCompose
-import app.aaps.core.interfaces.insulin.ConcentrationType
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsTheme
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.graph.BasalProfileGraphCompose
+import app.gmaaps.core.graph.IcProfileGraphCompose
+import app.gmaaps.core.graph.IsfProfileGraphCompose
+import app.gmaaps.core.graph.TargetBgProfileGraphCompose
+import app.gmaaps.core.interfaces.insulin.ConcentrationType
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsTheme
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * Data class representing a single row in a profile comparison table.
@@ -554,3 +554,4 @@ fun ProfileCompareTable(rows: List<ProfileCompareRow>, units: String) {
         }
     }
 }
+

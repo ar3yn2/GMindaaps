@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.code
+﻿package app.gmaaps.pump.eopatch.core.code
 
 class PatchAeCode private constructor(val aeValue: Int) {
 
@@ -7,3 +7,4 @@ class PatchAeCode private constructor(val aeValue: Int) {
         fun create(aeValue: Int, @Suppress("UNUSED_PARAMETER") timeOffset: Int) = PatchAeCode(aeValue)
     }
 }
+

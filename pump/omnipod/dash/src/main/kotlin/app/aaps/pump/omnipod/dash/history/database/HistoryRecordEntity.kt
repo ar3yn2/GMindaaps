@@ -1,15 +1,15 @@
-package app.aaps.pump.omnipod.dash.history.database
+﻿package app.gmaaps.pump.omnipod.dash.history.database
 
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import app.aaps.pump.omnipod.common.definition.OmnipodCommandType
-import app.aaps.pump.omnipod.dash.history.data.BasalValuesRecord
-import app.aaps.pump.omnipod.dash.history.data.BolusRecord
-import app.aaps.pump.omnipod.dash.history.data.InitialResult
-import app.aaps.pump.omnipod.dash.history.data.ResolvedResult
-import app.aaps.pump.omnipod.dash.history.data.TempBasalRecord
+import app.gmaaps.pump.omnipod.common.definition.OmnipodCommandType
+import app.gmaaps.pump.omnipod.dash.history.data.BasalValuesRecord
+import app.gmaaps.pump.omnipod.dash.history.data.BolusRecord
+import app.gmaaps.pump.omnipod.dash.history.data.InitialResult
+import app.gmaaps.pump.omnipod.dash.history.data.ResolvedResult
+import app.gmaaps.pump.omnipod.dash.history.data.TempBasalRecord
 
 @Entity(
     tableName = "historyrecords",
@@ -31,3 +31,4 @@ data class HistoryRecordEntity(
     val resolvedResult: ResolvedResult?,
     val resolvedAt: Long?
 )
+

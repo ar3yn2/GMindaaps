@@ -1,50 +1,50 @@
-package app.aaps.pump.eopatch.compose
+﻿package app.gmaaps.pump.eopatch.compose
 
 import android.content.res.Resources
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.InsulinManager
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.pump.ProfileGateStepHost
-import app.aaps.core.ui.compose.siteRotation.BodyType
-import app.aaps.core.ui.compose.siteRotation.SiteLocationStepHost
-import app.aaps.pump.eopatch.CommonUtils
-import app.aaps.pump.eopatch.R
-import app.aaps.pump.eopatch.RxAction
-import app.aaps.pump.eopatch.alarm.AlarmCode
-import app.aaps.pump.eopatch.alarm.IAlarmRegistry
-import app.aaps.pump.eopatch.ble.IPatchManager
-import app.aaps.pump.eopatch.ble.PatchManagerExecutor
-import app.aaps.pump.eopatch.ble.PreferenceManager
-import app.aaps.pump.eopatch.code.PatchLifecycle
-import app.aaps.pump.eopatch.code.PatchStep
-import app.aaps.pump.eopatch.core.define.IPatchConstant
-import app.aaps.pump.eopatch.core.scan.BleConnectionState
-import app.aaps.pump.eopatch.core.scan.PatchSelfTestResult.TEST_SUCCESS
-import app.aaps.pump.eopatch.extension.getDiffDays
-import app.aaps.pump.eopatch.extension.subscribeDefault
-import app.aaps.pump.eopatch.extension.subscribeEmpty
-import app.aaps.pump.eopatch.extension.takeOne
-import app.aaps.pump.eopatch.keys.EopatchIntKey
-import app.aaps.pump.eopatch.vo.PatchConfig
-import app.aaps.pump.eopatch.vo.PatchLifecycleEvent
-import app.aaps.pump.eopatch.vo.PatchState
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.InsulinManager
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.pump.ProfileGateStepHost
+import app.gmaaps.core.ui.compose.siteRotation.BodyType
+import app.gmaaps.core.ui.compose.siteRotation.SiteLocationStepHost
+import app.gmaaps.pump.eopatch.CommonUtils
+import app.gmaaps.pump.eopatch.R
+import app.gmaaps.pump.eopatch.RxAction
+import app.gmaaps.pump.eopatch.alarm.AlarmCode
+import app.gmaaps.pump.eopatch.alarm.IAlarmRegistry
+import app.gmaaps.pump.eopatch.ble.IPatchManager
+import app.gmaaps.pump.eopatch.ble.PatchManagerExecutor
+import app.gmaaps.pump.eopatch.ble.PreferenceManager
+import app.gmaaps.pump.eopatch.code.PatchLifecycle
+import app.gmaaps.pump.eopatch.code.PatchStep
+import app.gmaaps.pump.eopatch.core.define.IPatchConstant
+import app.gmaaps.pump.eopatch.core.scan.BleConnectionState
+import app.gmaaps.pump.eopatch.core.scan.PatchSelfTestResult.TEST_SUCCESS
+import app.gmaaps.pump.eopatch.extension.getDiffDays
+import app.gmaaps.pump.eopatch.extension.subscribeDefault
+import app.gmaaps.pump.eopatch.extension.subscribeEmpty
+import app.gmaaps.pump.eopatch.extension.takeOne
+import app.gmaaps.pump.eopatch.keys.EopatchIntKey
+import app.gmaaps.pump.eopatch.vo.PatchConfig
+import app.gmaaps.pump.eopatch.vo.PatchLifecycleEvent
+import app.gmaaps.pump.eopatch.vo.PatchState
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -191,9 +191,9 @@ class EopatchPatchViewModel(
     val commCheckCancelLabel: String
         get() = rh.gs(
             when (_patchStep.value) {
-                PatchStep.CONNECT_NEW       -> isBonded.takeOne(app.aaps.core.ui.R.string.cancel, R.string.patch_cancel_pairing)
+                PatchStep.CONNECT_NEW       -> isBonded.takeOne(app.gmaaps.core.ui.R.string.cancel, R.string.patch_cancel_pairing)
                 PatchStep.SAFE_DEACTIVATION -> R.string.patch_forced_discard
-                else                        -> app.aaps.core.ui.R.string.cancel
+                else                        -> app.gmaaps.core.ui.R.string.cancel
             }
         )
 
@@ -396,7 +396,7 @@ class EopatchPatchViewModel(
                 PatchStep.DISCARDED_FOR_CHANGE       -> R.string.patch_discard_complete_title
 
                 PatchStep.MANUALLY_TURNING_OFF_ALARM -> R.string.patch_manually_turning_off_alarm_title
-                PatchStep.PROFILE_GATE               -> app.aaps.core.ui.R.string.pump_wizard_profile_gate_title
+                PatchStep.PROFILE_GATE               -> app.gmaaps.core.ui.R.string.pump_wizard_profile_gate_title
                 PatchStep.WAKE_UP,
                 PatchStep.CONNECT_NEW,
                 PatchStep.SELECT_INSULIN,
@@ -987,3 +987,4 @@ class EopatchPatchViewModel(
 
     // endregion
 }
+

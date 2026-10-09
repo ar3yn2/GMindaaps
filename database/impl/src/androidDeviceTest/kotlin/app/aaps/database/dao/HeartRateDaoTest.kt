@@ -1,4 +1,4 @@
-package app.aaps.database.dao
+﻿package app.gmaaps.database.dao
 
 import android.content.Context
 import androidx.room.Room
@@ -9,10 +9,10 @@ import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import app.aaps.database.AppDatabase
-import app.aaps.database.di.databaseMigrations
-import app.aaps.database.entities.HeartRate
-import app.aaps.database.entities.TABLE_HEART_RATE
+import app.gmaaps.database.AppDatabase
+import app.gmaaps.database.di.databaseMigrations
+import app.gmaaps.database.entities.HeartRate
+import app.gmaaps.database.entities.TABLE_HEART_RATE
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert
 import org.junit.Test

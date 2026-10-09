@@ -1,27 +1,27 @@
-package app.aaps.pump.dana.compose
+﻿package app.gmaaps.pump.dana.compose
 
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.ui.compose.pump.PumpHistoryType
-import app.aaps.core.ui.compose.pump.PumpHistoryUiState
-import app.aaps.pump.dana.R
-import app.aaps.pump.dana.comm.RecordTypes
-import app.aaps.pump.dana.database.DanaHistoryRecord
-import app.aaps.pump.dana.database.DanaHistoryRecordDao
-import app.aaps.pump.dana.events.EventDanaRSyncStatus
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.ui.compose.pump.PumpHistoryType
+import app.gmaaps.core.ui.compose.pump.PumpHistoryUiState
+import app.gmaaps.pump.dana.R
+import app.gmaaps.pump.dana.comm.RecordTypes
+import app.gmaaps.pump.dana.database.DanaHistoryRecord
+import app.gmaaps.pump.dana.database.DanaHistoryRecordDao
+import app.gmaaps.pump.dana.events.EventDanaRSyncStatus
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -66,7 +66,7 @@ class DanaHistoryViewModel(
             add(PumpHistoryType(RecordTypes.RECORD_TYPE_CARBO, rh.gs(R.string.danar_history_carbohydrates)))
             add(PumpHistoryType(RecordTypes.RECORD_TYPE_DAILY, rh.gs(R.string.danar_history_dailyinsulin)))
             add(PumpHistoryType(RecordTypes.RECORD_TYPE_GLUCOSE, rh.gs(R.string.danar_history_glucose)))
-            if (!isKorean && !isRS) add(PumpHistoryType(RecordTypes.RECORD_TYPE_ERROR, rh.gs(app.aaps.core.ui.R.string.errors)))
+            if (!isKorean && !isRS) add(PumpHistoryType(RecordTypes.RECORD_TYPE_ERROR, rh.gs(app.gmaaps.core.ui.R.string.errors)))
             if (isRS) add(PumpHistoryType(RecordTypes.RECORD_TYPE_PRIME, rh.gs(R.string.danar_history_prime)))
             if (!isKorean) {
                 add(PumpHistoryType(RecordTypes.RECORD_TYPE_REFILL, rh.gs(R.string.danar_history_refill)))
@@ -120,13 +120,13 @@ class DanaHistoryViewModel(
     }
 
     fun formatDailyTotal(record: DanaHistoryRecord): String =
-        rh.gs(app.aaps.core.interfaces.R.string.format_insulin_units, record.dailyBolus + record.dailyBasal)
+        rh.gs(app.gmaaps.core.interfaces.R.string.format_insulin_units, record.dailyBolus + record.dailyBasal)
 
     fun formatDailyBolus(record: DanaHistoryRecord): String =
-        rh.gs(app.aaps.core.interfaces.R.string.format_insulin_units, record.dailyBolus)
+        rh.gs(app.gmaaps.core.interfaces.R.string.format_insulin_units, record.dailyBolus)
 
     fun formatDailyBasal(record: DanaHistoryRecord): String =
-        rh.gs(app.aaps.core.interfaces.R.string.format_insulin_units, record.dailyBasal)
+        rh.gs(app.gmaaps.core.interfaces.R.string.format_insulin_units, record.dailyBasal)
 
     // Room runs the suspend query on its own executor, so no dispatcher switch is needed here.
     private suspend fun loadRecords(type: Byte) {
@@ -138,3 +138,4 @@ class DanaHistoryViewModel(
         }
     }
 }
+

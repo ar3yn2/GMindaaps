@@ -1,12 +1,12 @@
-package app.aaps.plugins.sync.xdrip.extensions
+﻿package app.gmaaps.plugins.sync.xdrip.extensions
 
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.objects.extensions.getCustomizedName
-import app.aaps.core.objects.profile.ProfileSealed
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.objects.extensions.getCustomizedName
+import app.gmaaps.core.objects.profile.ProfileSealed
 import org.json.JSONObject
 
 fun PS.toJson(isAdd: Boolean, dateUtil: DateUtil, decimalFormatter: DecimalFormatter): JSONObject =
@@ -46,3 +46,4 @@ fun PS.toJson(isAdd: Boolean, dateUtil: DateUtil, decimalFormatter: DecimalForma
    "mgdl":98
 }
  */
+

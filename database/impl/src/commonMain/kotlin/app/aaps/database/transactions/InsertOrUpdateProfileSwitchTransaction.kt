@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.ProfileSwitch
+import app.gmaaps.database.entities.ProfileSwitch
 
 class InsertOrUpdateProfileSwitchTransaction(val profileSwitch: ProfileSwitch) : Transaction<InsertOrUpdateProfileSwitchTransaction.TransactionResult>() {
 

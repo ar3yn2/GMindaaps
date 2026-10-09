@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose.elements
+﻿package app.gmaaps.plugins.automation.compose.elements
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.DropdownMenuItem
@@ -17,8 +17,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.automation.elements.InputLocationMode
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.automation.elements.InputLocationMode
 
 /**
  * @see PreviewDropdown
@@ -103,3 +103,4 @@ fun InputLocationModeEditor(
         modifier = modifier
     )
 }
+

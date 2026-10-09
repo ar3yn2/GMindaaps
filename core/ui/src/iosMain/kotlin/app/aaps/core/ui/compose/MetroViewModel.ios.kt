@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.Composable
 import dev.zacsweers.metrox.viewmodel.MetroViewModelFactory
@@ -11,3 +11,4 @@ import dev.zacsweers.metrox.viewmodel.MetroViewModelFactory
 @Composable
 actual fun platformMetroViewModelFactory(): MetroViewModelFactory =
     error("No MetroViewModelFactory. Provide LocalMetroViewModelFactory around the shared UI.")
+

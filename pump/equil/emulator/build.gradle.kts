@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     id("android-module-dependencies")
     id("test-module-dependencies")
@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "app.aaps.pump.equil.emulator"
+    namespace = "app.gmaaps.pump.equil.emulator"
 }
 
 dependencies {
@@ -17,3 +17,4 @@ dependencies {
     testImplementation(project(":shared:tests"))
 
 }
+

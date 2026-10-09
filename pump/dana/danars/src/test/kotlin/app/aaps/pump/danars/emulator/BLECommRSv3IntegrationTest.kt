@@ -1,33 +1,33 @@
-package app.aaps.pump.danars.emulator
+﻿package app.gmaaps.pump.danars.emulator
 
 import android.content.Context
 import android.content.Intent
 import android.util.Base64
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.profile.ProfileStore
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.StringComposedNonPreferenceKey
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.keys.DanaStringComposedKey
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danars.DanaRSPlugin
-import app.aaps.pump.danars.comm.DanaRSMessageHashTable
-import app.aaps.pump.danars.comm.DanaRSPacketAPSBasalSetTemporaryBasal
-import app.aaps.pump.danars.comm.DanaRSPacketBasalGetProfileNumber
-import app.aaps.pump.danars.comm.DanaRSPacketBasalSetCancelTemporaryBasal
-import app.aaps.pump.danars.comm.DanaRSPacketEtcKeepConnection
-import app.aaps.pump.danars.comm.DanaRSPacketGeneralInitialScreenInformation
-import app.aaps.pump.danars.comm.DanaRSPacketOptionGetPumpTime
-import app.aaps.pump.danars.encryption.BleEncryption
-import app.aaps.pump.danars.encryption.EncryptionType
-import app.aaps.pump.danars.services.BLEComm
-import app.aaps.pump.danars.services.DanaRSAlarmReporter
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.profile.ProfileStore
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.StringComposedNonPreferenceKey
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.keys.DanaStringComposedKey
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danars.DanaRSPlugin
+import app.gmaaps.pump.danars.comm.DanaRSMessageHashTable
+import app.gmaaps.pump.danars.comm.DanaRSPacketAPSBasalSetTemporaryBasal
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalGetProfileNumber
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalSetCancelTemporaryBasal
+import app.gmaaps.pump.danars.comm.DanaRSPacketEtcKeepConnection
+import app.gmaaps.pump.danars.comm.DanaRSPacketGeneralInitialScreenInformation
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionGetPumpTime
+import app.gmaaps.pump.danars.encryption.BleEncryption
+import app.gmaaps.pump.danars.encryption.EncryptionType
+import app.gmaaps.pump.danars.services.BLEComm
+import app.gmaaps.pump.danars.services.DanaRSAlarmReporter
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
@@ -237,3 +237,4 @@ class BLECommRSv3IntegrationTest : TestBase() {
         assertThat(timePacket.isReceived).isTrue()
     }
 }
+

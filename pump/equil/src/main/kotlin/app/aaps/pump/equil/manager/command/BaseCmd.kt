@@ -1,16 +1,16 @@
-package app.aaps.pump.equil.manager.command
+﻿package app.gmaaps.pump.equil.manager.command
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.equil.database.EquilHistoryRecord
-import app.aaps.pump.equil.database.ResolvedResult
-import app.aaps.pump.equil.keys.EquilStringKey
-import app.aaps.pump.equil.manager.EquilCmdModel
-import app.aaps.pump.equil.manager.EquilManager
-import app.aaps.pump.equil.manager.EquilPacketCodec
-import app.aaps.pump.equil.manager.EquilResponse
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.equil.database.EquilHistoryRecord
+import app.gmaaps.pump.equil.database.ResolvedResult
+import app.gmaaps.pump.equil.keys.EquilStringKey
+import app.gmaaps.pump.equil.manager.EquilCmdModel
+import app.gmaaps.pump.equil.manager.EquilManager
+import app.gmaaps.pump.equil.manager.EquilPacketCodec
+import app.gmaaps.pump.equil.manager.EquilResponse
 
 abstract class BaseCmd(
     val createTime: Long,
@@ -82,3 +82,4 @@ abstract class BaseCmd(
         var rspIndex: Int = -1
     }
 }
+

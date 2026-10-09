@@ -1,11 +1,11 @@
-package app.aaps.plugins.sync.wear.wearintegration
+﻿package app.gmaaps.plugins.sync.wear.wearintegration
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
 import android.os.IBinder
-import app.aaps.core.interfaces.notifications.NotificationHolder
+import app.gmaaps.core.interfaces.notifications.NotificationHolder
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn

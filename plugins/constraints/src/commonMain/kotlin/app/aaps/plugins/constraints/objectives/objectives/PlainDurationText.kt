@@ -1,6 +1,6 @@
-package app.aaps.plugins.constraints.objectives.objectives
+﻿package app.gmaaps.plugins.constraints.objectives.objectives
 
-import app.aaps.core.data.time.T
+import app.gmaaps.core.data.time.T
 import kotlin.math.floor
 
 /**
@@ -26,3 +26,4 @@ class PlainDurationText : DurationText {
         }
     }
 }
+

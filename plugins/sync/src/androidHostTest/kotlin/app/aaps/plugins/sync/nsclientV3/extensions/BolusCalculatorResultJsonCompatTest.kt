@@ -1,8 +1,8 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.BCR
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.model.BCR
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.pump.defs.PumpType
 import com.google.common.truth.Truth.assertThat
 import com.google.gson.Gson
 import org.json.JSONObject
@@ -112,3 +112,4 @@ class BolusCalculatorResultJsonCompatTest {
             .isEqualTo(PumpType.OMNIPOD_DASH)
     }
 }
+

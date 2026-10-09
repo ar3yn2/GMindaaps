@@ -1,9 +1,9 @@
-package app.aaps.plugins.constraints.objectives
+﻿package app.gmaaps.plugins.constraints.objectives
 
-import app.aaps.annotations.OpenForTesting
-import app.aaps.core.interfaces.local.LocaleDependentSetting
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.annotations.OpenForTesting
+import app.gmaaps.core.interfaces.local.LocaleDependentSetting
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.utils.DateUtil
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject

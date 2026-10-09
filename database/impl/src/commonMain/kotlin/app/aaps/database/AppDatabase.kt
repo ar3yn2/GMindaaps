@@ -1,57 +1,57 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
 import androidx.room.ConstructedBy
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.RoomDatabaseConstructor
 import androidx.room.TypeConverters
-import app.aaps.database.daos.APSResultDao
-import app.aaps.database.daos.BolusCalculatorResultDao
-import app.aaps.database.daos.BolusDao
-import app.aaps.database.daos.CalibrationEntryDao
-import app.aaps.database.daos.CarbsDao
-import app.aaps.database.daos.DeviceStatusDao
-import app.aaps.database.daos.EffectiveProfileSwitchDao
-import app.aaps.database.daos.ExtendedBolusDao
-import app.aaps.database.daos.FoodDao
-import app.aaps.database.daos.GlucoseValueDao
-import app.aaps.database.daos.HeartRateDao
-import app.aaps.database.daos.PreferenceChangeDao
-import app.aaps.database.daos.ProfileSwitchDao
-import app.aaps.database.daos.RunningModeDao
-import app.aaps.database.daos.StepsCountDao
-import app.aaps.database.daos.TemporaryBasalDao
-import app.aaps.database.daos.TemporaryTargetDao
-import app.aaps.database.daos.TherapyEventDao
-import app.aaps.database.daos.TotalDailyDoseDao
-import app.aaps.database.daos.UserEntryDao
-import app.aaps.database.daos.VersionChangeDao
-import app.aaps.database.entities.Bolus
-import app.aaps.database.entities.BolusCalculatorResult
-import app.aaps.database.entities.CalibrationEntry
-import app.aaps.database.entities.Carbs
-import app.aaps.database.entities.DeviceStatus
-import app.aaps.database.entities.EffectiveProfileSwitch
-import app.aaps.database.entities.ExtendedBolus
-import app.aaps.database.entities.Food
-import app.aaps.database.entities.GlucoseValue
-import app.aaps.database.entities.HeartRate
-import app.aaps.database.entities.PreferenceChange
-import app.aaps.database.entities.ProfileSwitch
-import app.aaps.database.entities.RunningMode
-import app.aaps.database.entities.StepsCount
-import app.aaps.database.entities.TemporaryBasal
-import app.aaps.database.entities.TemporaryTarget
-import app.aaps.database.entities.TherapyEvent
-import app.aaps.database.entities.TotalDailyDose
-import app.aaps.database.entities.UserEntry
-import app.aaps.database.entities.VersionChange
+import app.gmaaps.database.daos.APSResultDao
+import app.gmaaps.database.daos.BolusCalculatorResultDao
+import app.gmaaps.database.daos.BolusDao
+import app.gmaaps.database.daos.CalibrationEntryDao
+import app.gmaaps.database.daos.CarbsDao
+import app.gmaaps.database.daos.DeviceStatusDao
+import app.gmaaps.database.daos.EffectiveProfileSwitchDao
+import app.gmaaps.database.daos.ExtendedBolusDao
+import app.gmaaps.database.daos.FoodDao
+import app.gmaaps.database.daos.GlucoseValueDao
+import app.gmaaps.database.daos.HeartRateDao
+import app.gmaaps.database.daos.PreferenceChangeDao
+import app.gmaaps.database.daos.ProfileSwitchDao
+import app.gmaaps.database.daos.RunningModeDao
+import app.gmaaps.database.daos.StepsCountDao
+import app.gmaaps.database.daos.TemporaryBasalDao
+import app.gmaaps.database.daos.TemporaryTargetDao
+import app.gmaaps.database.daos.TherapyEventDao
+import app.gmaaps.database.daos.TotalDailyDoseDao
+import app.gmaaps.database.daos.UserEntryDao
+import app.gmaaps.database.daos.VersionChangeDao
+import app.gmaaps.database.entities.Bolus
+import app.gmaaps.database.entities.BolusCalculatorResult
+import app.gmaaps.database.entities.CalibrationEntry
+import app.gmaaps.database.entities.Carbs
+import app.gmaaps.database.entities.DeviceStatus
+import app.gmaaps.database.entities.EffectiveProfileSwitch
+import app.gmaaps.database.entities.ExtendedBolus
+import app.gmaaps.database.entities.Food
+import app.gmaaps.database.entities.GlucoseValue
+import app.gmaaps.database.entities.HeartRate
+import app.gmaaps.database.entities.PreferenceChange
+import app.gmaaps.database.entities.ProfileSwitch
+import app.gmaaps.database.entities.RunningMode
+import app.gmaaps.database.entities.StepsCount
+import app.gmaaps.database.entities.TemporaryBasal
+import app.gmaaps.database.entities.TemporaryTarget
+import app.gmaaps.database.entities.TherapyEvent
+import app.gmaaps.database.entities.TotalDailyDose
+import app.gmaaps.database.entities.UserEntry
+import app.gmaaps.database.entities.VersionChange
 
 const val DATABASE_VERSION = 36
 
 @Database(
     version = DATABASE_VERSION,
-    entities = [app.aaps.database.entities.APSResult::class, Bolus::class, BolusCalculatorResult::class, Carbs::class,
+    entities = [app.gmaaps.database.entities.APSResult::class, Bolus::class, BolusCalculatorResult::class, Carbs::class,
         EffectiveProfileSwitch::class, ExtendedBolus::class, GlucoseValue::class, ProfileSwitch::class,
         TemporaryBasal::class, TemporaryTarget::class, TherapyEvent::class, TotalDailyDose::class,
         PreferenceChange::class, VersionChange::class, UserEntry::class,
@@ -115,3 +115,4 @@ internal expect object AppDatabaseConstructor : RoomDatabaseConstructor<AppDatab
 
     override fun initialize(): AppDatabase
 }
+

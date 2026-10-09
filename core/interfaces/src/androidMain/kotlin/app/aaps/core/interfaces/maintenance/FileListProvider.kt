@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.maintenance
+﻿package app.gmaaps.core.interfaces.maintenance
 
 import androidx.documentfile.provider.DocumentFile
-import app.aaps.core.interfaces.rx.weardata.CwfFile
+import app.gmaaps.core.interfaces.rx.weardata.CwfFile
 import java.io.File
 
 interface FileListProvider : PrefsFileInfo {

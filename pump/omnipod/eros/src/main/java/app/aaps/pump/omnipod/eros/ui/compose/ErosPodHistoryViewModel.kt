@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.eros.ui.compose
+﻿package app.gmaaps.pump.omnipod.eros.ui.compose
 
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.omnipod.eros.history.ErosHistory
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryRecordEntity
-import app.aaps.pump.omnipod.eros.util.AapsOmnipodUtil
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.omnipod.eros.history.ErosHistory
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryRecordEntity
+import app.gmaaps.pump.omnipod.eros.util.AapsOmnipodUtil
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -44,3 +44,4 @@ class ErosPodHistoryViewModel(
         _records.value = records.sorted()
     }
 }
+

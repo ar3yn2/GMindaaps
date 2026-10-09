@@ -1,8 +1,8 @@
-package app.aaps.implementation.maintenance.formats
+﻿package app.gmaaps.implementation.maintenance.formats
 
 import android.content.ContentResolver
 import androidx.documentfile.provider.DocumentFile
-import app.aaps.core.interfaces.storage.Storage
+import app.gmaaps.core.interfaces.storage.Storage
 import java.io.File
 
 class SingleStringStorage(var contents: String) : Storage {

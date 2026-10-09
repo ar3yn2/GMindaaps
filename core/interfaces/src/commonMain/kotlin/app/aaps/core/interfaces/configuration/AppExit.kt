@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.configuration
+﻿package app.gmaaps.core.interfaces.configuration
 
 /**
  * Ends the running app, which is the one part of [ConfigBuilder.exitApp] that is not shared.
@@ -26,3 +26,4 @@ interface AppExit {
      */
     fun exit(launchAgain: Boolean)
 }
+

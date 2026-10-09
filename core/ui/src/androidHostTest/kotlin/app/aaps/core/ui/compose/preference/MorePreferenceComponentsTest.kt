@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -15,14 +15,14 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performSemanticsAction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.UnitDoubleKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.LocalConfig
-import app.aaps.core.ui.compose.LocalPreferences
-import app.aaps.core.ui.compose.LocalProfileUtil
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.UnitDoubleKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.LocalConfig
+import app.gmaaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.ui.compose.LocalProfileUtil
 import com.google.common.truth.Truth.assertThat
 import org.junit.Rule
 import org.junit.Test
@@ -31,8 +31,8 @@ import org.mockito.kotlin.mock
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.interfaces.configuration.Config as AppConfig
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.interfaces.configuration.Config as AppConfig
+import app.gmaaps.core.ui.R as CoreUiR
 
 /** Robolectric render tests for the remaining preference composables (adaptive variants + base widgets). */
 @RunWith(RobolectricTestRunner::class)
@@ -185,3 +185,4 @@ class MorePreferenceComponentsTest {
         compose.onNodeWithText("cardbody").assertIsDisplayed()
     }
 }
+

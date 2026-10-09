@@ -1,7 +1,7 @@
-package app.aaps.pump.medtronic.di
+﻿package app.gmaaps.pump.medtronic.di
 
-import app.aaps.core.interfaces.di.FeatureMemberInjectors
-import app.aaps.pump.medtronic.service.RileyLinkMedtronicService
+import app.gmaaps.core.interfaces.di.FeatureMemberInjectors
+import app.gmaaps.pump.medtronic.service.RileyLinkMedtronicService
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ClassKey
@@ -29,3 +29,4 @@ object MedtronicMemberInjectors {
         injector: MembersInjector<RileyLinkMedtronicService>
     ): MembersInjector<*> = injector
 }
+

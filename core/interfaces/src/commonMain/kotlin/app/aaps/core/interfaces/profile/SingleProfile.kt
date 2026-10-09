@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.profile
+﻿package app.gmaaps.core.interfaces.profile
 
-import app.aaps.core.data.model.data.Block
-import app.aaps.core.data.model.data.TargetBlock
+import app.gmaaps.core.data.model.data.Block
+import app.gmaaps.core.data.model.data.TargetBlock
 
 /**
  * One entry in the local profile list.
@@ -25,3 +25,4 @@ data class SingleProfile(
     val basal: List<Block>,
     val target: List<TargetBlock>
 )
+

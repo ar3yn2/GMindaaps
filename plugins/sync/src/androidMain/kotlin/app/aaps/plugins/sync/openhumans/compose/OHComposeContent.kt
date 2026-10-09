@@ -1,13 +1,13 @@
-package app.aaps.plugins.sync.openhumans.compose
+﻿package app.gmaaps.plugins.sync.openhumans.compose
 
 import android.content.Context
 import android.content.Intent
 import androidx.compose.runtime.Composable
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.plugins.sync.openhumans.OpenHumansUploaderPlugin
-import app.aaps.plugins.sync.openhumans.ui.OHLoginActivity
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.plugins.sync.openhumans.OpenHumansUploaderPlugin
+import app.gmaaps.plugins.sync.openhumans.ui.OHLoginActivity
 
 internal class OHComposeContent(
     private val plugin: OpenHumansUploaderPlugin,
@@ -37,3 +37,4 @@ internal class OHComposeContent(
         )
     }
 }
+

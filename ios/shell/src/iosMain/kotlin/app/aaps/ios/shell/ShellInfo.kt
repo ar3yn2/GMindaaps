@@ -1,15 +1,15 @@
-package app.aaps.ios.shell
+﻿package app.gmaaps.ios.shell
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.AlarmSoundPlayer
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.objects.di.CoreObjectsGraph
-import app.aaps.implementation.logging.AAPSLoggerIos
-import app.aaps.ios.shell.di.IosProbeGraph
-import app.aaps.ios.shell.prefs.IosSp
-import app.aaps.shared.clientbindings.ClientGraphBindings
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.AlarmSoundPlayer
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.objects.di.CoreObjectsGraph
+import app.gmaaps.implementation.logging.AAPSLoggerIos
+import app.gmaaps.ios.shell.di.IosProbeGraph
+import app.gmaaps.ios.shell.prefs.IosSp
+import app.gmaaps.shared.clientbindings.ClientGraphBindings
 import dev.zacsweers.metro.createGraphFactory
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
@@ -205,3 +205,4 @@ object ShellInfo {
         "ALARM FAILED: ${e::class.simpleName}: ${e.message}"
     }
 }
+

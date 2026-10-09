@@ -1,4 +1,4 @@
-package app.aaps.database.entities.interfaces
+﻿package app.gmaaps.database.entities.interfaces
 
 interface DBEntryWithTime {
 

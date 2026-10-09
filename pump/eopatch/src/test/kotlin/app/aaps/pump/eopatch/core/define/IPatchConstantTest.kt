@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.define
+﻿package app.gmaaps.pump.eopatch.core.define
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -41,3 +41,4 @@ class IPatchConstantTest {
         assertThat(IPatchConstant.BASAL_HISTORY_SIZE_BIG).isEqualTo(220)
     }
 }
+

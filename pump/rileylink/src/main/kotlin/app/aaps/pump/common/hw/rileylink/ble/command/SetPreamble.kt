@@ -1,8 +1,8 @@
-package app.aaps.pump.common.hw.rileylink.ble.command
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.command
 
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersion
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersion
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
 import org.apache.commons.lang3.NotImplementedException
 import java.nio.ByteBuffer
 
@@ -23,3 +23,4 @@ class SetPreamble(rileyLinkServiceData: RileyLinkServiceData, private val preamb
         return getByteArray(this.getCommandType().code, bytes[2], bytes[3])
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.openhumans.compose
+﻿package app.gmaaps.plugins.sync.openhumans.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -43,3 +43,4 @@ internal fun DoneStepPreview() {
         DoneStep(onClose = {})
     }
 }
+

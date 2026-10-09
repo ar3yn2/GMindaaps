@@ -1,4 +1,4 @@
-package app.aaps.core.utils
+﻿package app.gmaaps.core.utils
 
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonNull
@@ -122,3 +122,4 @@ fun JsonObject?.lenientBooleanOrNull(key: String): Boolean? =
 
 /** True when a real quoted string is stored, for the few places that must not coerce a number. */
 fun JsonObject?.holdsQuotedString(key: String): Boolean = primitiveOrNull(key)?.isQuoted() == true
+

@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.receivers
+﻿package app.gmaaps.core.interfaces.receivers
 
 import kotlinx.coroutines.flow.StateFlow
 
@@ -47,3 +47,4 @@ interface ReceiverStatusStore {
             get() = mobileConnected || wifiConnected
     }
 }
+

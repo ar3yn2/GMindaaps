@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BeepType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BeepType
 import com.google.common.truth.Truth.assertThat
 import org.apache.commons.codec.binary.Hex
 import org.junit.jupiter.api.Test
@@ -35,3 +35,4 @@ class StopDeliveryCommandTest {
 
     // TODO test cancel bolus
 }
+

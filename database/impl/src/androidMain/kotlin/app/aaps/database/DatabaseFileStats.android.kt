@@ -1,4 +1,4 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
 import android.os.StatFs
 import java.io.File
@@ -14,3 +14,4 @@ internal actual fun databaseFileStats(path: String): DatabaseFileStats {
 }
 
 internal actual suspend fun AppDatabase.clearAllTablesCompat() = clearAllTables()
+

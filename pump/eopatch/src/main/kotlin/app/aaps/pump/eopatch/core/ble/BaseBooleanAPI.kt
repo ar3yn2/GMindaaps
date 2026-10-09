@@ -1,8 +1,8 @@
-package app.aaps.pump.eopatch.core.ble
+﻿package app.gmaaps.pump.eopatch.core.ble
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.eopatch.core.response.PatchBooleanResponse
-import app.aaps.pump.eopatch.core.scan.IBleDevice
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.eopatch.core.response.PatchBooleanResponse
+import app.gmaaps.pump.eopatch.core.scan.IBleDevice
 
 abstract class BaseBooleanAPI(func: PatchFunc, patch: IBleDevice, aapsLogger: AAPSLogger) :
     BaseAPI<PatchBooleanResponse>(func, patch, aapsLogger) {
@@ -13,3 +13,4 @@ abstract class BaseBooleanAPI(func: PatchFunc, patch: IBleDevice, aapsLogger: AA
 
     protected fun parseBoolean(success: Boolean) = PatchBooleanResponse(success)
 }
+

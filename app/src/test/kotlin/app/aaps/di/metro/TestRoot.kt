@@ -1,10 +1,10 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
 import android.content.Context
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.objects.di.CoreObjectsGraph
-import app.aaps.database.di.DatabaseConfig
-import app.aaps.di.ExternalOptionsOverride
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.objects.di.CoreObjectsGraph
+import app.gmaaps.database.di.DatabaseConfig
+import app.gmaaps.di.ExternalOptionsOverride
 import dev.zacsweers.metro.createGraphFactory
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -37,3 +37,4 @@ fun testRoot(): AppRootGraph {
         CoreObjectsGraph
     )
 }
+

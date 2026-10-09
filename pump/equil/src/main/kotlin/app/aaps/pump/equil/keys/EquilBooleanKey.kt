@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.keys
+﻿package app.gmaaps.pump.equil.keys
 
-import app.aaps.core.keys.interfaces.BooleanNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey
 
 enum class EquilBooleanKey(
     override val key: String,
@@ -12,3 +12,4 @@ enum class EquilBooleanKey(
     AlarmInsulin10("key_equil_alarm_insulin_10", false),
     AlarmInsulin5("key_equil_alarm_insulin_5", false),
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BeepType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BeepType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
 import com.google.common.truth.Truth.assertThat
 import org.apache.commons.codec.binary.Hex
 import org.junit.jupiter.api.Test
@@ -22,3 +22,4 @@ class ProgramBeepsCommandTest {
         assertThat(encoded).asList().containsExactlyElementsIn(Hex.decodeHex("024200022C061E0402000000800F").asList()).inOrder()
     }
 }
+

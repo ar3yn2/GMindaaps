@@ -1,10 +1,10 @@
-package app.aaps.implementation.receivers
+﻿package app.gmaaps.implementation.receivers
 
 import android.content.Context
 import android.content.Intent
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore.ChargingStatus
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore.NetworkStatus
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore.ChargingStatus
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore.NetworkStatus
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -50,3 +50,4 @@ class ReceiverStatusStoreImpl(val context: Context) : ReceiverStatusStore {
     override val batteryLevel: Int
         get() = _chargingStatusFlow.value?.batteryLevel ?: 0
 }
+

@@ -1,13 +1,13 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.time.T
-import app.aaps.core.data.xdrip.XdripSourceResolver
-import app.aaps.core.nssdk.localmodel.entry.Direction
-import app.aaps.core.nssdk.localmodel.entry.NSSgvV3
-import app.aaps.core.nssdk.localmodel.entry.NsUnits
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.xdrip.XdripSourceResolver
+import app.gmaaps.core.nssdk.localmodel.entry.Direction
+import app.gmaaps.core.nssdk.localmodel.entry.NSSgvV3
+import app.gmaaps.core.nssdk.localmodel.entry.NsUnits
 
 fun NSSgvV3.toGV(): GV {
     return GV(
@@ -38,3 +38,4 @@ fun GV.toNSSvgV3(): NSSgvV3 =
         device = sourceSensor.text,
         identifier = ids.nightscoutId
     )
+

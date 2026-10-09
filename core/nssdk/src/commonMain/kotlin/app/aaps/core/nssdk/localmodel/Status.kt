@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel
+﻿package app.gmaaps.core.nssdk.localmodel
 
 data class Status(
     val version: String,
@@ -7,3 +7,4 @@ data class Status(
     val storage: Storage,
     val apiPermissions: ApiPermissions
 )
+

@@ -1,10 +1,10 @@
-package app.aaps.database.dao
+﻿package app.gmaaps.database.dao
 
 import android.content.Context
 import androidx.room.useReaderConnection
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import app.aaps.database.di.AppDatabaseBuilder
+import app.gmaaps.database.di.AppDatabaseBuilder
 import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Assert
@@ -58,3 +58,4 @@ class CustomIndexesTest {
         private const val TEST_DB_NAME = "customIndexesTest.db"
     }
 }
+

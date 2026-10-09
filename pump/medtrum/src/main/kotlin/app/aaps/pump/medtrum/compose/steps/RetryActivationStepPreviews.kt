@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.compose.steps
+﻿package app.gmaaps.pump.medtrum.compose.steps
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -19,3 +19,4 @@ internal fun PreviewRetryConnecting() {
         RetryActivationContent(isConnecting = true, onRetry = {}, onDiscard = {}, onCancel = {})
     }
 }
+

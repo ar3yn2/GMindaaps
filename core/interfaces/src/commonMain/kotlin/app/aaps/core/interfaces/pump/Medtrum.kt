@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
 /**
  * Functionality supported by Medtrum* pumps only
@@ -11,3 +11,4 @@ interface Medtrum {
     fun deactivate(): PumpEnactResult               // deactivate patch
     fun updateTime(): PumpEnactResult               // update time
 }
+

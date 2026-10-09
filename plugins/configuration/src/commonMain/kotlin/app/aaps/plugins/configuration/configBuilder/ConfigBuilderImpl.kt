@@ -1,36 +1,36 @@
-package app.aaps.plugins.configuration.configBuilder
+﻿package app.gmaaps.plugins.configuration.configBuilder
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.aps.APS
-import app.aaps.core.interfaces.aps.Sensitivity
-import app.aaps.core.interfaces.calibration.Calibration
-import app.aaps.core.interfaces.configuration.AppExit
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.EnforcedState
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventAppExit
-import app.aaps.core.interfaces.rx.events.EventConfigBuilderChange
-import app.aaps.core.interfaces.smoothing.Smoothing
-import app.aaps.core.interfaces.source.BgSource
-import app.aaps.core.interfaces.sync.NsClient
-import app.aaps.core.keys.BooleanComposedKey
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.plugins.configuration.ConfigurationStrings
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.aps.APS
+import app.gmaaps.core.interfaces.aps.Sensitivity
+import app.gmaaps.core.interfaces.calibration.Calibration
+import app.gmaaps.core.interfaces.configuration.AppExit
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.EnforcedState
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventAppExit
+import app.gmaaps.core.interfaces.rx.events.EventConfigBuilderChange
+import app.gmaaps.core.interfaces.smoothing.Smoothing
+import app.gmaaps.core.interfaces.source.BgSource
+import app.gmaaps.core.interfaces.sync.NsClient
+import app.gmaaps.core.keys.BooleanComposedKey
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.plugins.configuration.ConfigurationStrings
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -367,3 +367,4 @@ class ConfigBuilderImpl(
         val PLUGIN_SETTLE_WAIT = 30.seconds
     }
 }
+

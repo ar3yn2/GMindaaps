@@ -1,10 +1,10 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.pump.BolusProgressData.Companion.AUTO_CLEAR_DELAY_MS
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.TextRef.Companion.withArgs
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.pump.BolusProgressData.Companion.AUTO_CLEAR_DELAY_MS
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef.Companion.withArgs
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -235,3 +235,4 @@ data class BolusProgressState(
      */
     val stalled: Boolean = false
 )
+

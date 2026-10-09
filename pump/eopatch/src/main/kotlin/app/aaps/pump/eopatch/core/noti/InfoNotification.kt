@@ -1,7 +1,7 @@
-package app.aaps.pump.eopatch.core.noti
+﻿package app.gmaaps.pump.eopatch.core.noti
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.eopatch.core.code.BolusType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.eopatch.core.code.BolusType
 
 class InfoNotification(bytes: ByteArray, aapsLogger: AAPSLogger) : BaseNotification(bytes, aapsLogger) {
 
@@ -55,3 +55,4 @@ class InfoNotification(bytes: ByteArray, aapsLogger: AAPSLogger) : BaseNotificat
         private const val IDX_COUNT = 2
     }
 }
+

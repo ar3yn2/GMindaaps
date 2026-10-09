@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.profile
+﻿package app.gmaaps.core.interfaces.profile
 
 import kotlinx.coroutines.flow.StateFlow
 
@@ -93,7 +93,7 @@ interface ProfileRepository {
      *
      * Note the list order is user-visible well beyond the profile carousel: it is the key order of
      * the serialised store, so it also drives every picker fed by
-     * [app.aaps.core.interfaces.profile.ProfileStore.getProfileList] and the profile numbering of
+     * [app.gmaaps.core.interfaces.profile.ProfileStore.getProfileList] and the profile numbering of
      * the SMS `PROFILE` command.
      *
      * Note this validates only that [order] is a permutation of the current *indices* — it cannot
@@ -169,3 +169,4 @@ interface ProfileRepository {
      */
     suspend fun replace(index: Int, profile: SingleProfile): Result<Unit>
 }
+

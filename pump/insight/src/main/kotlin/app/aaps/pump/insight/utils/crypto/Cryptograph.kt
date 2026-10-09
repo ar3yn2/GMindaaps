@@ -1,6 +1,6 @@
-package app.aaps.pump.insight.utils.crypto
+﻿package app.gmaaps.pump.insight.utils.crypto
 
-import app.aaps.pump.insight.utils.ByteBuf
+import app.gmaaps.pump.insight.utils.ByteBuf
 import org.spongycastle.crypto.Digest
 import org.spongycastle.crypto.InvalidCipherTextException
 import org.spongycastle.crypto.digests.MD5Digest

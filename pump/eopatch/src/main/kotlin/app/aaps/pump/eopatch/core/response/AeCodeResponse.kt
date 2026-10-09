@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
-import app.aaps.pump.eopatch.core.code.PatchAeCode
+import app.gmaaps.pump.eopatch.core.code.PatchAeCode
 
 class AeCodeResponse(
     private val aeCodes: Set<PatchAeCode>,
@@ -9,3 +9,4 @@ class AeCodeResponse(
 
     val alarmCodes: Set<PatchAeCode> get() = aeCodes.filterNotNull().toSet()
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 data class NE(
     val bolusCalculatorResults: List<BCR>,
@@ -17,3 +17,4 @@ data class NE(
     //val versionChanges: List<VersionChange>,
     val heartRates: List<HR>,
 )
+

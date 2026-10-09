@@ -1,16 +1,16 @@
-package app.aaps.implementation.maintenance.cloud
+﻿package app.gmaaps.implementation.maintenance.cloud
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Cloud
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.maintenance.CloudFile
-import app.aaps.core.interfaces.maintenance.CloudFileListResult
-import app.aaps.core.interfaces.maintenance.CloudFolder
-import app.aaps.core.interfaces.maintenance.CloudStorageProvider
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.implementation.maintenance.formats.FakeKeyValueStore
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.maintenance.CloudFile
+import app.gmaaps.core.interfaces.maintenance.CloudFileListResult
+import app.gmaaps.core.interfaces.maintenance.CloudFolder
+import app.gmaaps.core.interfaces.maintenance.CloudStorageProvider
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.implementation.maintenance.formats.FakeKeyValueStore
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -155,3 +155,4 @@ class CloudStorageManagerTest {
         override fun error(className: String, methodName: String, lineNumber: Int, tag: LTag, message: String) {}
     }
 }
+

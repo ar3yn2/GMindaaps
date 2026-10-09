@@ -1,9 +1,9 @@
-package app.aaps.pump.carelevo.domain.usecase.alarm
+﻿package app.gmaaps.pump.carelevo.domain.usecase.alarm
 
-import app.aaps.pump.carelevo.domain.repository.CarelevoAlarmInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoUserSettingInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoAlarmInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoUserSettingInfoRepository
 import dev.zacsweers.metro.Inject
 import kotlin.time.Clock
 
@@ -33,3 +33,4 @@ class AlarmClearPatchDiscardUseCase @Inject constructor(
         require(patchInfoRepository.deletePatchInfo()) { "delete patch info is failed" }
     }.isSuccess
 }
+

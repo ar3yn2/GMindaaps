@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
 
 import androidx.annotation.NonNull;
 
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
 
-import app.aaps.pump.omnipod.eros.driver.definition.FaultEventCode;
-import app.aaps.pump.omnipod.eros.driver.definition.PodInfoType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.FaultEventCode;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodInfoType;
 
 public class PodInfoFaultAndInitializationTime extends PodInfo {
     private static final int MINIMUM_MESSAGE_LENGTH = 17;
@@ -54,3 +54,4 @@ public class PodInfoFaultAndInitializationTime extends PodInfo {
                 '}';
     }
 }
+

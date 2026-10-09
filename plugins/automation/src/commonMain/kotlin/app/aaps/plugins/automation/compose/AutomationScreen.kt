@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose
+﻿package app.gmaaps.plugins.automation.compose
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
@@ -39,14 +39,14 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsFab
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.MasterOfflineBanner
-import app.aaps.core.ui.compose.icons.IcAutomation
-import app.aaps.core.ui.compose.navigation.color
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.automation.AutomationStrings
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsFab
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.MasterOfflineBanner
+import app.gmaaps.core.ui.compose.icons.IcAutomation
+import app.gmaaps.core.ui.compose.navigation.color
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.automation.AutomationStrings
 import sh.calvin.reorderable.ReorderableItem
 import sh.calvin.reorderable.rememberReorderableLazyListState
 
@@ -393,3 +393,4 @@ private fun PreviewAutomationScreenEmpty() {
         )
     }
 }
+

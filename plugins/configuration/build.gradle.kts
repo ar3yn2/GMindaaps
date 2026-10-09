@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     // NOT com.android.library. AGP 9 refuses that plugin together with the multiplatform plugin.
@@ -15,7 +15,7 @@ plugins {
 // strings themselves do not move, and AAPT keeps resolving them on Android exactly as before.
 val generateConfigurationStrings = tasks.register<GenerateKeyStringsTask>("generateConfigurationStrings") {
     resDir.set(layout.projectDirectory.dir("src/androidMain/res"))
-    packageName.set("app.aaps.plugins.configuration")
+    packageName.set("app.gmaaps.plugins.configuration")
     owner.set("configuration")
     objectName.set("ConfigurationStrings")
     idsObjectName.set("ConfigurationStringIds")
@@ -28,7 +28,7 @@ val generateConfigurationStrings = tasks.register<GenerateKeyStringsTask>("gener
 
 kotlin {
     android {
-        namespace = "app.aaps.plugins.configuration"
+        namespace = "app.gmaaps.plugins.configuration"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         androidResources { enable = true }
@@ -131,3 +131,4 @@ tasks.withType<Test> {
         excludes = listOf("jdk.internal.*")
     }
 }
+

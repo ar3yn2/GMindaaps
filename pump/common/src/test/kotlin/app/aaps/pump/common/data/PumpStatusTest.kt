@@ -1,7 +1,7 @@
-package app.aaps.pump.common.data
+﻿package app.gmaaps.pump.common.data
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.pump.common.defs.TempBasalPair
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.pump.common.defs.TempBasalPair
 import com.google.common.truth.Truth.assertThat
 import org.joda.time.DateTime
 import org.junit.jupiter.api.Test
@@ -136,3 +136,4 @@ internal class PumpStatusTest {
         assertThat(dto.timeDifference).isEqualTo(120)
     }
 }
+

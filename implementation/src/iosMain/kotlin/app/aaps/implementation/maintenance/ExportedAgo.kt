@@ -1,6 +1,6 @@
-package app.aaps.implementation.maintenance
+﻿package app.gmaaps.implementation.maintenance
 
-import app.aaps.implementation.maintenance.ExportedAgo.relativeWindow
+import app.gmaaps.implementation.maintenance.ExportedAgo.relativeWindow
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.days
 import kotlin.time.Instant
@@ -55,3 +55,4 @@ internal object ExportedAgo {
      */
     fun datePart(utcTime: String): String = if (utcTime.length >= 10) utcTime.substring(0, 10) else utcTime
 }
+

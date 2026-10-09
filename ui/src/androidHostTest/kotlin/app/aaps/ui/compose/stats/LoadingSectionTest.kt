@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.stats
+﻿package app.gmaaps.ui.compose.stats
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
@@ -41,3 +41,4 @@ class LoadingSectionTest {
         compose.onNodeWithText("Loading data", substring = true).assertIsDisplayed()
     }
 }
+

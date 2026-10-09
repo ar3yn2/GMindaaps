@@ -1,27 +1,27 @@
-package app.aaps.pump.eopatch
+﻿package app.gmaaps.pump.eopatch
 
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.eopatch.alarm.IAlarmManager
-import app.aaps.pump.eopatch.ble.IPatchManager
-import app.aaps.pump.eopatch.ble.PatchManagerExecutor
-import app.aaps.pump.eopatch.ble.PreferenceManager
-import app.aaps.pump.eopatch.core.scan.BleConnectionState
-import app.aaps.pump.eopatch.vo.NormalBasalManager
-import app.aaps.pump.eopatch.vo.PatchConfig
-import app.aaps.pump.eopatch.vo.PatchState
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.eopatch.alarm.IAlarmManager
+import app.gmaaps.pump.eopatch.ble.IPatchManager
+import app.gmaaps.pump.eopatch.ble.PatchManagerExecutor
+import app.gmaaps.pump.eopatch.ble.PreferenceManager
+import app.gmaaps.pump.eopatch.core.scan.BleConnectionState
+import app.gmaaps.pump.eopatch.vo.NormalBasalManager
+import app.gmaaps.pump.eopatch.vo.PatchConfig
+import app.gmaaps.pump.eopatch.vo.PatchState
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.mock
@@ -196,3 +196,4 @@ class EopatchPumpPluginStateTest {
         assertThat(plugin.serialNumber()).isEqualTo("SN-4242")
     }
 }
+

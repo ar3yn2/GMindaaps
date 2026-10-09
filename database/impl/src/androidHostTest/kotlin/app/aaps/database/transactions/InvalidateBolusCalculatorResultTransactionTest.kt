@@ -1,9 +1,9 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.DelegatedAppDatabase
-import app.aaps.database.daos.BolusCalculatorResultDao
-import app.aaps.database.entities.BolusCalculatorResult
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.DelegatedAppDatabase
+import app.gmaaps.database.daos.BolusCalculatorResultDao
+import app.gmaaps.database.entities.BolusCalculatorResult
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -110,3 +110,4 @@ class InvalidateBolusCalculatorResultTransactionTest {
         interfaceIDs_backing = InterfaceIDs()
     ).also { it.id = id }
 }
+

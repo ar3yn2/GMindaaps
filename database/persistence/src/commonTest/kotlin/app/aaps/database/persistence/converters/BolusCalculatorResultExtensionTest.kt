@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.BCR
-import app.aaps.core.data.model.IDs
+import app.gmaaps.core.data.model.BCR
+import app.gmaaps.core.data.model.IDs
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -127,3 +127,4 @@ internal class BolusCalculatorResultExtensionTest {
         assertFalse(back.wasTempTargetUsed)
     }
 }
+

@@ -1,10 +1,10 @@
-package app.aaps.pump.carelevo.data.repository
+﻿package app.gmaaps.pump.carelevo.data.repository
 
-import app.aaps.pump.carelevo.data.dataSource.local.CarelevoPatchInfoDataSource
-import app.aaps.pump.carelevo.data.mapper.transformToCarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.data.mapper.transformToCarelevoPatchInfoEntity
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.pump.carelevo.data.dataSource.local.CarelevoPatchInfoDataSource
+import app.gmaaps.pump.carelevo.data.mapper.transformToCarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.data.mapper.transformToCarelevoPatchInfoEntity
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject

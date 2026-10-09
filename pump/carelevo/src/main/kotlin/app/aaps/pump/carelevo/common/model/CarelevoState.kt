@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.common.model
+﻿package app.gmaaps.pump.carelevo.common.model
 
 /** Marker for observable state values exposed by ViewModels/singletons (vs one-shot [Event]s). */
 interface State

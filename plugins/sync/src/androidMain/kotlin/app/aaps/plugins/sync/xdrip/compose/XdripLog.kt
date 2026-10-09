@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.xdrip.compose
+﻿package app.gmaaps.plugins.sync.xdrip.compose
 
 import java.util.concurrent.atomic.AtomicLong
 
@@ -15,3 +15,4 @@ class XdripLog(
         private val idCounter = AtomicLong(0)
     }
 }
+

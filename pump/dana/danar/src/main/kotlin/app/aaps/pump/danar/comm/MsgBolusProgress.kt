@@ -1,8 +1,8 @@
-package app.aaps.pump.danar.comm
+﻿package app.gmaaps.pump.danar.comm
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.PumpInsulin
 
 class MsgBolusProgress(
     injector: MetroMemberInjector
@@ -20,3 +20,4 @@ class MsgBolusProgress(
         aapsLogger.debug(LTag.PUMPCOMM, "Delivered insulin so far: $deliveredInsulin")
     }
 }
+

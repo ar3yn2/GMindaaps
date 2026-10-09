@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -11,3 +11,4 @@ internal fun QuickAddButtonsPreview() {
         QuickAddButtons(increment1 = 5, increment2 = 10, increment3 = 20, onAddCarbs = {})
     }
 }
+

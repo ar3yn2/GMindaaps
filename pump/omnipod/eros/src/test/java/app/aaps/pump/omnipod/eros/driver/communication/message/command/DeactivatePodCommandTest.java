@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
 
 class DeactivatePodCommandTest {
 
@@ -20,3 +20,4 @@ class DeactivatePodCommandTest {
 
     // TODO add tests
 }
+

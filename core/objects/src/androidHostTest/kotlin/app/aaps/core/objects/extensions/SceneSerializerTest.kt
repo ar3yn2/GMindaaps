@@ -1,12 +1,12 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.Scene
-import app.aaps.core.data.model.SceneAction
-import app.aaps.core.data.model.SceneEndAction
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.model.TT
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.data.model.SceneAction
+import app.gmaaps.core.data.model.SceneEndAction
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONArray
 import org.json.JSONObject
@@ -209,3 +209,4 @@ class SceneSerializerTest : TestBase() {
         }
     }
 }
+

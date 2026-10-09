@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.profile
+﻿package app.gmaaps.core.interfaces.profile
 
 import kotlinx.serialization.json.JsonObject
 

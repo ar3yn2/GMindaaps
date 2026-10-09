@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.services
+﻿package app.gmaaps.plugins.automation.services
 
 import android.location.Location
-import app.aaps.plugins.automation.GeoPosition
-import app.aaps.plugins.automation.LastKnownLocation
+import app.gmaaps.plugins.automation.GeoPosition
+import app.gmaaps.plugins.automation.LastKnownLocation
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -27,3 +27,4 @@ class LastLocationDataContainer() : LastKnownLocation {
     override fun position(): GeoPosition? =
         lastLocation?.let { GeoPosition(it.latitude, it.longitude) }
 }
+

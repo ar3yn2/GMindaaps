@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.ui
+﻿package app.gmaaps.core.interfaces.ui
 
 /**
  * Opens a web address in whatever the platform uses for browsing.
@@ -16,3 +16,4 @@ interface UrlOpener {
      */
     fun open(url: String)
 }
+

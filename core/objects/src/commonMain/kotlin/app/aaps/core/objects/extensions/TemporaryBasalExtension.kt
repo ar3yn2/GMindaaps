@@ -1,15 +1,15 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.model.getPassedDurationToTimeInMinutes
-import app.aaps.core.data.model.iobCalc
-import app.aaps.core.interfaces.aps.AutosensResult
-import app.aaps.core.interfaces.aps.IobTotal
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.model.getPassedDurationToTimeInMinutes
+import app.gmaaps.core.data.model.iobCalc
+import app.gmaaps.core.interfaces.aps.AutosensResult
+import app.gmaaps.core.interfaces.aps.IobTotal
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.utils.DateUtil
 import kotlin.math.ceil
 import kotlin.math.max
 import kotlin.math.round
@@ -19,7 +19,7 @@ import kotlin.time.Clock
  * True while the temporary basal is running.
  *
  * An extension taking [DateUtil], not a property on [TB], for the same reason as
- * [app.aaps.core.objects.extensions.isInProgress] on `EB`: the answer depends on the current time,
+ * [app.gmaaps.core.objects.extensions.isInProgress] on `EB`: the answer depends on the current time,
  * so the model itself stays a plain value that does not read the clock, and a test can control
  * "now" instead of waiting for it.
  */
@@ -139,3 +139,4 @@ fun TB.iobCalc(
     result.netInsulin = netBasalAmount
     return result
 }
+

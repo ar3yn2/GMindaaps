@@ -1,13 +1,13 @@
-package app.aaps.ui.compose.profileManagement.viewmodels
+﻿package app.gmaaps.ui.compose.profileManagement.viewmodels
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.profile.ProfileErrorType
-import app.aaps.core.interfaces.profile.ProfileValidationError
-import app.aaps.core.interfaces.profile.SingleProfile
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.objects.extensions.singleBlock
-import app.aaps.core.objects.extensions.singleTargetBlock
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.profile.ProfileErrorType
+import app.gmaaps.core.interfaces.profile.ProfileValidationError
+import app.gmaaps.core.interfaces.profile.SingleProfile
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.objects.extensions.singleBlock
+import app.gmaaps.core.objects.extensions.singleTargetBlock
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -165,7 +165,7 @@ internal class ProfileEditorViewModelTest : TestBaseWithProfile() {
     }
 
     /**
-     * The reason the editor watches [app.aaps.core.interfaces.profile.ProfileRepository.revision]
+     * The reason the editor watches [app.gmaaps.core.interfaces.profile.ProfileRepository.revision]
      * rather than the profile list.
      *
      * Reset re-reads the stored profile and republishes it. When the user's edit happened to bring
@@ -201,3 +201,4 @@ internal class ProfileEditorViewModelTest : TestBaseWithProfile() {
         assertThat(sut.uiState.value.isEdited).isFalse()
     }
 }
+

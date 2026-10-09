@@ -1,7 +1,7 @@
-package app.aaps.desktop.shell.prefs
+﻿package app.gmaaps.desktop.shell.prefs
 
-import app.aaps.core.interfaces.sharedPreferences.KeyValueStore
-import app.aaps.implementation.maintenance.DesktopFolders
+import app.gmaaps.core.interfaces.sharedPreferences.KeyValueStore
+import app.gmaaps.implementation.maintenance.DesktopFolders
 import java.io.File
 import java.io.FileOutputStream
 import java.nio.file.AtomicMoveNotSupportedException
@@ -129,3 +129,4 @@ class DesktopSp(
     override fun incInt(key: String) = putInt(key, getInt(key, 0) + 1)
     override fun incLong(key: String) = putLong(key, getLong(key, 0L) + 1L)
 }
+

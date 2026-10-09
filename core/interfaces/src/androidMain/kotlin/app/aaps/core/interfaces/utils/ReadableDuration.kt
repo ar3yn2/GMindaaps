@@ -1,8 +1,8 @@
-package app.aaps.core.interfaces.utils
+﻿package app.gmaaps.core.interfaces.utils
 
 import androidx.annotation.PluralsRes
 import androidx.annotation.StringRes
-import app.aaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.resources.ResourceHelper
 
 /**
  * The strings [readableDuration] needs. Each caller passes its own set, so a driver keeps the wording
@@ -32,7 +32,7 @@ class DurationLabels(
  * The Omnipod Eros, Omnipod Dash and Equil overviews each carried their own copy of this, identical
  * apart from the resource names, which is also where most of the project's plural use sat. It lives
  * here once now, and it is the only place that has to change when plurals get a
- * [app.aaps.core.keys.interfaces.TextRef] form - a plural cannot be expressed as a TextRef today.
+ * [app.gmaaps.core.keys.interfaces.TextRef] form - a plural cannot be expressed as a TextRef today.
  *
  * It stays on Android because plural selection must come from the platform: plural categories are not
  * just one and other. Czech has one, few, many and other; Arabic has six. `getQuantityString` uses the
@@ -75,3 +75,4 @@ fun ResourceHelper.readableDuration(millis: Long, labels: DurationLabels): Strin
         }
     }
 }
+

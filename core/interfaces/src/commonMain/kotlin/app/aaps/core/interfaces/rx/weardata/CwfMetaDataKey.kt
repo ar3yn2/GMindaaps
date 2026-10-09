@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.rx.weardata
+﻿package app.gmaaps.core.interfaces.rx.weardata
 
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.keys.interfaces.TextRef
 
 enum class CwfMetadataKey(val key: String, val label: TextRef, val isPref: Boolean) {
 
@@ -46,3 +46,4 @@ enum class CwfMetadataKey(val key: String, val label: TextRef, val isPref: Boole
 }
 
 typealias CwfMetadataMap = MutableMap<CwfMetadataKey, String>
+

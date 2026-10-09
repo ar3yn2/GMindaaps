@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.comm.enums
+﻿package app.gmaaps.pump.medtrum.comm.enums
 
 enum class AlarmState {
     NONE,
@@ -21,3 +21,4 @@ enum class AlarmState {
     BATTERY_OUT,            // Mapped from pump status 102
     NO_CALIBRATION          // Mapped from pump status 103
 }
+

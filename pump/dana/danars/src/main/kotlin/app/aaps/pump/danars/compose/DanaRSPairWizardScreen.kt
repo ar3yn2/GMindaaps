@@ -1,4 +1,4 @@
-package app.aaps.pump.danars.compose
+﻿package app.gmaaps.pump.danars.compose
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -22,12 +22,12 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.banner.ErrorBanner
-import app.aaps.core.ui.compose.pump.BleScanStep
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardScreen
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.dana.R
+import app.gmaaps.core.ui.compose.banner.ErrorBanner
+import app.gmaaps.core.ui.compose.pump.BleScanStep
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardScreen
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.dana.R
 
 @Composable
 fun DanaRSPairWizardScreen(
@@ -106,7 +106,7 @@ private fun PairingProgressStep(
 ) {
     WizardStepLayout(
         secondaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.cancel),
+            text = stringResource(app.gmaaps.core.ui.R.string.cancel),
             onClick = onCancel
         )
     ) {
@@ -135,12 +135,12 @@ private fun EnterPasswordStep(
 ) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.ok),
+            text = stringResource(app.gmaaps.core.ui.R.string.ok),
             onClick = onSubmit,
             enabled = password.length == 4
         ),
         secondaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.cancel),
+            text = stringResource(app.gmaaps.core.ui.R.string.cancel),
             onClick = onCancel
         )
     ) {
@@ -153,7 +153,7 @@ private fun EnterPasswordStep(
             value = password,
             onValueChange = { input -> input.filter { it.isHexChar() }.take(4).uppercase().let(onPasswordChange) },
             label = { Text(stringResource(R.string.danars_password_title)) },
-            supportingText = { Text(stringResource(app.aaps.core.ui.R.string.error_mustbe4hexadidits)) },
+            supportingText = { Text(stringResource(app.gmaaps.core.ui.R.string.error_mustbe4hexadidits)) },
             keyboardOptions = hexKeyboardOptions,
             singleLine = true,
             modifier = Modifier.fillMaxWidth()
@@ -173,12 +173,12 @@ private fun EnterPinStep(
 ) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.ok),
+            text = stringResource(app.gmaaps.core.ui.R.string.ok),
             onClick = onSubmit,
             enabled = pin1.length == 12 && pin2.length == 8
         ),
         secondaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.cancel),
+            text = stringResource(app.gmaaps.core.ui.R.string.cancel),
             onClick = onCancel
         )
     ) {
@@ -253,17 +253,17 @@ private fun PairingErrorStep(
 ) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.pairing),
+            text = stringResource(app.gmaaps.core.ui.R.string.pairing),
             onClick = onRetry
         ),
         secondaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.cancel),
+            text = stringResource(app.gmaaps.core.ui.R.string.cancel),
             onClick = onCancel
         )
     ) {
         Spacer(modifier = Modifier.height(24.dp))
         errorMessage?.let { ErrorBanner(message = it) }
-            ?: ErrorBanner(message = stringResource(app.aaps.core.ui.R.string.error))
+            ?: ErrorBanner(message = stringResource(app.gmaaps.core.ui.R.string.error))
     }
 }
 
@@ -274,3 +274,4 @@ private val hexKeyboardOptions = KeyboardOptions(
 
 private fun Char.isHexChar(): Boolean =
     this in '0'..'9' || this in 'a'..'f' || this in 'A'..'F'
+

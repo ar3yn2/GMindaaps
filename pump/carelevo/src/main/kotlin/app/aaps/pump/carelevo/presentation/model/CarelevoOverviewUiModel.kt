@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.presentation.model
+﻿package app.gmaaps.pump.carelevo.presentation.model
 
 data class CarelevoOverviewUiModel(
     val serialNumber: String,
@@ -11,3 +11,4 @@ data class CarelevoOverviewUiModel(
     val isPumpStopped: Boolean,
     val runningRemainMinutes: Int
 )
+

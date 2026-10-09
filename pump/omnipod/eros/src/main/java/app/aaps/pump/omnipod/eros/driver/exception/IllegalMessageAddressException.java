@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
 public class IllegalMessageAddressException extends OmnipodException {
     private final int expected;
@@ -18,3 +18,4 @@ public class IllegalMessageAddressException extends OmnipodException {
         return actual;
     }
 }
+

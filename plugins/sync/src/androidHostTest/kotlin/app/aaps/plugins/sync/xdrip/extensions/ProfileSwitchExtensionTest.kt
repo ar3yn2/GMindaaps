@@ -1,11 +1,11 @@
-package app.aaps.plugins.sync.xdrip.extensions
+﻿package app.gmaaps.plugins.sync.xdrip.extensions
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -54,3 +54,4 @@ internal class ProfileSwitchExtensionTest : TestBaseWithProfile() {
         assertThat(json.has("_id")).isFalse()
     }
 }
+

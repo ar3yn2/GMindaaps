@@ -1,29 +1,29 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.icons.IcActivity
-import app.aaps.core.ui.compose.icons.IcAnnouncement
-import app.aaps.core.ui.compose.icons.IcNote
-import app.aaps.core.ui.compose.icons.IcQuestion
-import app.aaps.core.utils.lenientInt
-import app.aaps.core.utils.lenientString
-import app.aaps.core.utils.lenientStringOrNull
-import app.aaps.plugins.automation.elements.InputCarePortalMenu
-import app.aaps.plugins.automation.elements.InputDuration
-import app.aaps.plugins.automation.elements.InputString
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.icons.IcActivity
+import app.gmaaps.core.ui.compose.icons.IcAnnouncement
+import app.gmaaps.core.ui.compose.icons.IcNote
+import app.gmaaps.core.ui.compose.icons.IcQuestion
+import app.gmaaps.core.utils.lenientInt
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.core.utils.lenientStringOrNull
+import app.gmaaps.plugins.automation.elements.InputCarePortalMenu
+import app.gmaaps.plugins.automation.elements.InputDuration
+import app.gmaaps.plugins.automation.elements.InputString
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 
@@ -87,7 +87,7 @@ class ActionCarePortalEvent(
         valuesWithUnit.addAll(listOfNotNull(ValueWithUnit.SimpleString(note.value).takeIf { note.value.isNotBlank() }))
         persistenceLayer.insertPumpTherapyEventIfNewByTimestamp(
             therapyEvent = therapyEvent,
-            action = app.aaps.core.data.ue.Action.CAREPORTAL,
+            action = app.gmaaps.core.data.ue.Action.CAREPORTAL,
             source = Sources.Automation,
             note = title,
             listValues = valuesWithUnit
@@ -119,3 +119,4 @@ class ActionCarePortalEvent(
 
     override fun isValid(): Boolean = true
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.comm.enums
+﻿package app.gmaaps.pump.medtrum.comm.enums
 
 enum class AlarmSetting(val code: Byte) {
     LIGHT_VIBRATE_AND_BEEP(0),
@@ -10,3 +10,4 @@ enum class AlarmSetting(val code: Byte) {
     BEEP_ONLY(6),
     NONE(7)
 }
+

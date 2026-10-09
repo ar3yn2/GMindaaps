@@ -1,6 +1,6 @@
-package app.aaps.pump.common.hw.rileylink.defs
+﻿package app.gmaaps.pump.common.hw.rileylink.defs
 
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkService
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkService
 
 interface RileyLinkPumpDevice {
 

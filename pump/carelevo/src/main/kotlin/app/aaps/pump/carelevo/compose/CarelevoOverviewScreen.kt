@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose
+﻿package app.gmaaps.pump.carelevo.compose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -31,22 +31,22 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.icons.IcLoopPaused
-import app.aaps.core.ui.compose.pump.ActionCategory
-import app.aaps.core.ui.compose.pump.PumpAction
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.core.ui.compose.pump.PumpOverviewScreen
-import app.aaps.core.ui.compose.pump.PumpOverviewUiState
-import app.aaps.core.ui.compose.pump.StatusBanner
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.common.model.UiState
-import app.aaps.pump.carelevo.compose.dialog.CarelevoActionDialog
-import app.aaps.pump.carelevo.compose.dialog.CarelevoPumpStopDurationDialog
-import app.aaps.pump.carelevo.presentation.model.CarelevoOverviewEvent
-import app.aaps.pump.carelevo.presentation.type.CarelevoScreenType
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoOverviewViewModel
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.icons.IcLoopPaused
+import app.gmaaps.core.ui.compose.pump.ActionCategory
+import app.gmaaps.core.ui.compose.pump.PumpAction
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.core.ui.compose.pump.PumpOverviewScreen
+import app.gmaaps.core.ui.compose.pump.PumpOverviewUiState
+import app.gmaaps.core.ui.compose.pump.StatusBanner
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.common.model.UiState
+import app.gmaaps.pump.carelevo.compose.dialog.CarelevoActionDialog
+import app.gmaaps.pump.carelevo.compose.dialog.CarelevoPumpStopDurationDialog
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoOverviewEvent
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoScreenType
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoOverviewViewModel
+import app.gmaaps.core.ui.R as CoreUiR
 
 @Composable
 internal fun CarelevoOverviewScreen(
@@ -314,3 +314,4 @@ private fun CarelevoOverviewScreenDisconnectedPreview() {
         )
     }
 }
+

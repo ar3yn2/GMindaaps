@@ -1,22 +1,22 @@
-package app.aaps.ui.compose.scenes
+﻿package app.gmaaps.ui.compose.scenes
 
-import app.aaps.core.data.model.ActiveSceneState
-import app.aaps.core.data.model.Scene
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventInitializationChanged
-import app.aaps.core.interfaces.rx.events.EventLoopUpdateGui
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
-import app.aaps.core.interfaces.scenes.ActiveSceneSync
-import app.aaps.core.interfaces.scenes.SceneActions
-import app.aaps.core.interfaces.scenes.SceneChainResolver
-import app.aaps.core.interfaces.scenes.SceneStore
-import app.aaps.core.interfaces.sync.NsClient
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.ActiveSceneState
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventInitializationChanged
+import app.gmaaps.core.interfaces.rx.events.EventLoopUpdateGui
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.core.interfaces.scenes.ActiveSceneSync
+import app.gmaaps.core.interfaces.scenes.SceneActions
+import app.gmaaps.core.interfaces.scenes.SceneChainResolver
+import app.gmaaps.core.interfaces.scenes.SceneStore
+import app.gmaaps.core.interfaces.sync.NsClient
+import app.gmaaps.core.interfaces.utils.DateUtil
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -110,3 +110,4 @@ internal class SceneListViewModelTest {
         verify(sceneRepository).saveScene(scene.copy(isEnabled = false))
     }
 }
+

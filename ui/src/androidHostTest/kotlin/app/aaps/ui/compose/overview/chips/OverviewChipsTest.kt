@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.overview.chips
+﻿package app.gmaaps.ui.compose.overview.chips
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
@@ -53,3 +53,4 @@ class OverviewChipsTest {
         assertThat(clicked).isTrue()
     }
 }
+

@@ -1,10 +1,10 @@
-package app.aaps.pump.carelevo.data.repository
+﻿package app.gmaaps.pump.carelevo.data.repository
 
-import app.aaps.pump.carelevo.data.dataSource.local.CarelevoUserSettingInfoDataSource
-import app.aaps.pump.carelevo.data.mapper.transformToCarelevoUserSettingInfoDomainModel
-import app.aaps.pump.carelevo.data.mapper.transformToCarelevoUserSettingInfoEntity
-import app.aaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
-import app.aaps.pump.carelevo.domain.repository.CarelevoUserSettingInfoRepository
+import app.gmaaps.pump.carelevo.data.dataSource.local.CarelevoUserSettingInfoDataSource
+import app.gmaaps.pump.carelevo.data.mapper.transformToCarelevoUserSettingInfoDomainModel
+import app.gmaaps.pump.carelevo.data.mapper.transformToCarelevoUserSettingInfoEntity
+import app.gmaaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoUserSettingInfoRepository
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject

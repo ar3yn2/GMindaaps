@@ -1,8 +1,8 @@
-package app.aaps.pump.danars.emulator
+﻿package app.gmaaps.pump.danars.emulator
 
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
 
 /**
  * PumpDisplay implementation that shows emulated pump screen content as app notifications.
@@ -37,3 +37,4 @@ class NotificationPumpDisplay(
         notificationManager.dismiss(NotificationId.PUMP_EMULATOR_DISPLAY)
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.compose.steps
+﻿package app.gmaaps.pump.eopatch.compose.steps
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -7,10 +7,10 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.eopatch.R
-import app.aaps.pump.eopatch.compose.EopatchPatchViewModel
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.eopatch.R
+import app.gmaaps.pump.eopatch.compose.EopatchPatchViewModel
 
 /**
  * @see SafeDeactivationStepPreview
@@ -70,8 +70,9 @@ fun SafeDeactivationStep(viewModel: EopatchPatchViewModel) {
         }
         val insulinSymbol = if (remainedInsulin > 1) stringResource(R.string.symbol_plus) else stringResource(R.string.symbol_minus)
         Text(
-            text = stringResource(app.aaps.core.ui.R.string.reservoir_label) + ": $insulinValue${stringResource(R.string.all_dose_unit)}$insulinSymbol",
+            text = stringResource(app.gmaaps.core.ui.R.string.reservoir_label) + ": $insulinValue${stringResource(R.string.all_dose_unit)}$insulinSymbol",
             style = MaterialTheme.typography.bodyMedium
         )
     }
 }
+

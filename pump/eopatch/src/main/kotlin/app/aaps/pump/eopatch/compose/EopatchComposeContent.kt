@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.compose
+﻿package app.gmaaps.pump.eopatch.compose
 
 import android.content.pm.ActivityInfo
 import android.view.WindowManager
@@ -16,15 +16,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.protection.ProtectionResult
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.core.ui.compose.pump.BlePreCheckHost
-import app.aaps.pump.eopatch.R
-import app.aaps.pump.eopatch.code.PatchStep
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.protection.ProtectionResult
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.core.ui.compose.pump.BlePreCheckHost
+import app.gmaaps.pump.eopatch.R
+import app.gmaaps.pump.eopatch.code.PatchStep
 
 class EopatchComposeContent(
     private val protectionCheck: ProtectionCheck,
@@ -49,13 +49,13 @@ class EopatchComposeContent(
         val pluginName = stringResource(R.string.eopatch)
         val overviewNavIcon: @Composable () -> Unit = {
             IconButton(onClick = onNavigateBack) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.aaps.core.ui.R.string.back))
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.gmaaps.core.ui.R.string.back))
             }
         }
         val settingsAction: @Composable androidx.compose.foundation.layout.RowScope.() -> Unit = {
             onSettings?.let { action ->
                 IconButton(onClick = action) {
-                    Icon(Icons.Filled.Settings, contentDescription = stringResource(app.aaps.core.ui.R.string.settings))
+                    Icon(Icons.Filled.Settings, contentDescription = stringResource(app.gmaaps.core.ui.R.string.settings))
                 }
             }
         }
@@ -147,3 +147,4 @@ class EopatchComposeContent(
         }
     }
 }
+

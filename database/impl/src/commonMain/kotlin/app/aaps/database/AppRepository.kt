@@ -1,30 +1,30 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
 import androidx.room.Transactor.SQLiteTransactionType
 import androidx.room.useWriterConnection
-import app.aaps.database.entities.APSResult
-import app.aaps.database.entities.Bolus
-import app.aaps.database.entities.BolusCalculatorResult
-import app.aaps.database.entities.CalibrationEntry
-import app.aaps.database.entities.Carbs
-import app.aaps.database.entities.DeviceStatus
-import app.aaps.database.entities.EffectiveProfileSwitch
-import app.aaps.database.entities.ExtendedBolus
-import app.aaps.database.entities.Food
-import app.aaps.database.entities.GlucoseValue
-import app.aaps.database.entities.HeartRate
-import app.aaps.database.entities.ProfileSwitch
-import app.aaps.database.entities.RunningMode
-import app.aaps.database.entities.StepsCount
-import app.aaps.database.entities.TemporaryBasal
-import app.aaps.database.entities.TemporaryTarget
-import app.aaps.database.entities.TherapyEvent
-import app.aaps.database.entities.TotalDailyDose
-import app.aaps.database.entities.UserEntry
-import app.aaps.database.entities.data.NewEntries
-import app.aaps.database.entities.embedments.InterfaceIDs
-import app.aaps.database.entities.interfaces.DBEntry
-import app.aaps.database.transactions.Transaction
+import app.gmaaps.database.entities.APSResult
+import app.gmaaps.database.entities.Bolus
+import app.gmaaps.database.entities.BolusCalculatorResult
+import app.gmaaps.database.entities.CalibrationEntry
+import app.gmaaps.database.entities.Carbs
+import app.gmaaps.database.entities.DeviceStatus
+import app.gmaaps.database.entities.EffectiveProfileSwitch
+import app.gmaaps.database.entities.ExtendedBolus
+import app.gmaaps.database.entities.Food
+import app.gmaaps.database.entities.GlucoseValue
+import app.gmaaps.database.entities.HeartRate
+import app.gmaaps.database.entities.ProfileSwitch
+import app.gmaaps.database.entities.RunningMode
+import app.gmaaps.database.entities.StepsCount
+import app.gmaaps.database.entities.TemporaryBasal
+import app.gmaaps.database.entities.TemporaryTarget
+import app.gmaaps.database.entities.TherapyEvent
+import app.gmaaps.database.entities.TotalDailyDose
+import app.gmaaps.database.entities.UserEntry
+import app.gmaaps.database.entities.data.NewEntries
+import app.gmaaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.transactions.Transaction
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.SupervisorJob
@@ -239,7 +239,7 @@ class AppRepository internal constructor(
      * counts and a human-readable per-table report). Tables are discovered from `sqlite_master`, and
      * every count is independent and failure-tolerant (missing column → -1), so a schema quirk can
      * never break logging. Returned as a module-local type because `database:impl` does not depend on
-     * `core:interfaces`; [app.aaps.database.persistence] maps it to `DatabaseMaintenanceInfo`.
+     * `core:interfaces`; [app.gmaaps.database.persistence] maps it to `DatabaseMaintenanceInfo`.
      */
     suspend fun databaseMaintenanceInfo(retentionDays: Long): DatabaseMaintenanceRaw {
         val cutoff = Clock.System.now().toEpochMilliseconds() - retentionDays.days.inWholeMilliseconds

@@ -1,4 +1,4 @@
-package app.aaps.implementation.receivers
+﻿package app.gmaaps.implementation.receivers
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -8,10 +8,10 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.annotation.VisibleForTesting
 import androidx.core.content.ContextCompat
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventBTChange
-import app.aaps.core.objects.workflow.MetroBroadcastReceiver
-import app.aaps.core.utils.extensions.safeGetParcelableExtra
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventBTChange
+import app.gmaaps.core.objects.workflow.MetroBroadcastReceiver
+import app.gmaaps.core.utils.extensions.safeGetParcelableExtra
 import dev.zacsweers.metro.Inject
 
 class BTReceiver : MetroBroadcastReceiver() {
@@ -39,3 +39,4 @@ class BTReceiver : MetroBroadcastReceiver() {
         }
     }
 }
+

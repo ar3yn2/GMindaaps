@@ -1,9 +1,9 @@
-package app.aaps.ios.shell.missing
+﻿package app.gmaaps.ios.shell.missing
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.maintenance.ExportResult
-import app.aaps.core.interfaces.maintenance.Maintenance
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.maintenance.ExportResult
+import app.gmaaps.core.interfaces.maintenance.Maintenance
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -87,3 +87,4 @@ class IosMaintenance(
 @OptIn(ExperimentalForeignApi::class)
 private fun defaultLogDirectory(): String? =
     NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).firstOrNull() as? String
+

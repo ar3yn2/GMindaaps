@@ -1,82 +1,82 @@
-package app.aaps.pump.danars.emulator
+﻿package app.gmaaps.pump.danars.emulator
 
 import android.content.Context
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.profile.ProfileStore
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.DetailedBolusInfoStorage
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.pump.TemporaryBasalStorage
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.StringComposedNonPreferenceKey
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.comm.RecordTypes
-import app.aaps.pump.dana.database.DanaHistoryRecordDao
-import app.aaps.pump.dana.keys.DanaStringComposedKey
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danars.DanaRSPlugin
-import app.aaps.pump.danars.comm.DanaRSMessageHashTable
-import app.aaps.pump.danars.comm.DanaRSPacketAPSBasalSetTemporaryBasal
-import app.aaps.pump.danars.comm.DanaRSPacketAPSHistoryEvents
-import app.aaps.pump.danars.comm.DanaRSPacketAPSSetEventHistory
-import app.aaps.pump.danars.comm.DanaRSPacketBasalGetBasalRate
-import app.aaps.pump.danars.comm.DanaRSPacketBasalGetProfileNumber
-import app.aaps.pump.danars.comm.DanaRSPacketBasalSetCancelTemporaryBasal
-import app.aaps.pump.danars.comm.DanaRSPacketBasalSetProfileBasalRate
-import app.aaps.pump.danars.comm.DanaRSPacketBasalSetProfileNumber
-import app.aaps.pump.danars.comm.DanaRSPacketBasalSetTemporaryBasal
-import app.aaps.pump.danars.comm.DanaRSPacketBolusGet24CIRCFArray
-import app.aaps.pump.danars.comm.DanaRSPacketBolusGetBolusOption
-import app.aaps.pump.danars.comm.DanaRSPacketBolusGetCIRCFArray
-import app.aaps.pump.danars.comm.DanaRSPacketBolusGetCalculationInformation
-import app.aaps.pump.danars.comm.DanaRSPacketBolusGetStepBolusInformation
-import app.aaps.pump.danars.comm.DanaRSPacketBolusSet24CIRCFArray
-import app.aaps.pump.danars.comm.DanaRSPacketBolusSetExtendedBolus
-import app.aaps.pump.danars.comm.DanaRSPacketBolusSetExtendedBolusCancel
-import app.aaps.pump.danars.comm.DanaRSPacketBolusSetStepBolusStart
-import app.aaps.pump.danars.comm.DanaRSPacketBolusSetStepBolusStop
-import app.aaps.pump.danars.comm.DanaRSPacketEtcKeepConnection
-import app.aaps.pump.danars.comm.DanaRSPacketGeneralGetPumpCheck
-import app.aaps.pump.danars.comm.DanaRSPacketGeneralGetShippingInformation
-import app.aaps.pump.danars.comm.DanaRSPacketGeneralInitialScreenInformation
-import app.aaps.pump.danars.comm.DanaRSPacketGeneralSetHistoryUploadMode
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryAlarm
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryBasal
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryBloodGlucose
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryBolus
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryCarbohydrate
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryDaily
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryPrime
-import app.aaps.pump.danars.comm.DanaRSPacketHistoryRefill
-import app.aaps.pump.danars.comm.DanaRSPacketHistorySuspend
-import app.aaps.pump.danars.comm.DanaRSPacketNotifyDeliveryComplete
-import app.aaps.pump.danars.comm.DanaRSPacketNotifyDeliveryRateDisplay
-import app.aaps.pump.danars.comm.DanaRSPacketOptionGetPumpTime
-import app.aaps.pump.danars.comm.DanaRSPacketOptionGetPumpUTCAndTimeZone
-import app.aaps.pump.danars.comm.DanaRSPacketOptionGetUserOption
-import app.aaps.pump.danars.comm.DanaRSPacketOptionSetPumpTime
-import app.aaps.pump.danars.comm.DanaRSPacketOptionSetPumpUTCAndTimeZone
-import app.aaps.pump.danars.comm.DanaRSPacketOptionSetUserOption
-import app.aaps.pump.danars.encryption.BleEncryption
-import app.aaps.pump.danars.services.BLEComm
-import app.aaps.pump.danars.services.DanaRSAlarmReporter
-import app.aaps.pump.danars.services.DanaRSService
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.ProfileStore
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfoStorage
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.pump.TemporaryBasalStorage
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.StringComposedNonPreferenceKey
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.comm.RecordTypes
+import app.gmaaps.pump.dana.database.DanaHistoryRecordDao
+import app.gmaaps.pump.dana.keys.DanaStringComposedKey
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danars.DanaRSPlugin
+import app.gmaaps.pump.danars.comm.DanaRSMessageHashTable
+import app.gmaaps.pump.danars.comm.DanaRSPacketAPSBasalSetTemporaryBasal
+import app.gmaaps.pump.danars.comm.DanaRSPacketAPSHistoryEvents
+import app.gmaaps.pump.danars.comm.DanaRSPacketAPSSetEventHistory
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalGetBasalRate
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalGetProfileNumber
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalSetCancelTemporaryBasal
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalSetProfileBasalRate
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalSetProfileNumber
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalSetTemporaryBasal
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusGet24CIRCFArray
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusGetBolusOption
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusGetCIRCFArray
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusGetCalculationInformation
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusGetStepBolusInformation
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusSet24CIRCFArray
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusSetExtendedBolus
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusSetExtendedBolusCancel
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusSetStepBolusStart
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusSetStepBolusStop
+import app.gmaaps.pump.danars.comm.DanaRSPacketEtcKeepConnection
+import app.gmaaps.pump.danars.comm.DanaRSPacketGeneralGetPumpCheck
+import app.gmaaps.pump.danars.comm.DanaRSPacketGeneralGetShippingInformation
+import app.gmaaps.pump.danars.comm.DanaRSPacketGeneralInitialScreenInformation
+import app.gmaaps.pump.danars.comm.DanaRSPacketGeneralSetHistoryUploadMode
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryAlarm
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryBasal
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryBloodGlucose
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryBolus
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryCarbohydrate
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryDaily
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryPrime
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistoryRefill
+import app.gmaaps.pump.danars.comm.DanaRSPacketHistorySuspend
+import app.gmaaps.pump.danars.comm.DanaRSPacketNotifyDeliveryComplete
+import app.gmaaps.pump.danars.comm.DanaRSPacketNotifyDeliveryRateDisplay
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionGetPumpTime
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionGetPumpUTCAndTimeZone
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionGetUserOption
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionSetPumpTime
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionSetPumpUTCAndTimeZone
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionSetUserOption
+import app.gmaaps.pump.danars.encryption.BleEncryption
+import app.gmaaps.pump.danars.services.BLEComm
+import app.gmaaps.pump.danars.services.DanaRSAlarmReporter
+import app.gmaaps.pump.danars.services.DanaRSService
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -156,11 +156,11 @@ class DanaRSServiceIntegrationTest : TestBase() {
         whenever(preferences.get(DanaStringComposedKey.ParingKey, deviceName)).thenReturn("ABCD")
         whenever(danaRSPlugin.mDeviceName).thenReturn(deviceName)
         whenever(pumpWithConcentration.pumpDescription).thenReturn(
-            app.aaps.core.data.pump.defs.PumpDescription().apply { basalStep = 0.01 }
+            app.gmaaps.core.data.pump.defs.PumpDescription().apply { basalStep = 0.01 }
         )
         whenever(activePlugin.activePump).thenReturn(pumpWithConcentration)
         whenever(danaRSPlugin.pumpDescription).thenReturn(
-            app.aaps.core.data.pump.defs.PumpDescription().apply { basalStep = 0.01 }
+            app.gmaaps.core.data.pump.defs.PumpDescription().apply { basalStep = 0.01 }
         )
         whenever(dateUtil.now()).thenReturn(System.currentTimeMillis())
         whenever(dateUtil.dateAndTimeAndSecondsString(any())).thenReturn("2026-01-01 12:00:00")
@@ -710,3 +710,4 @@ class DanaRSServiceIntegrationTest : TestBase() {
         assertThat(result).isFalse()
     }
 }
+

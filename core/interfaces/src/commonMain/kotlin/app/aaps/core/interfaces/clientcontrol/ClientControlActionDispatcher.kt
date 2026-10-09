@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.clientcontrol
+﻿package app.gmaaps.core.interfaces.clientcontrol
 
-import app.aaps.core.interfaces.bolus.BatchAction
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.bolus.BatchAction
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -106,3 +106,4 @@ interface ClientControlActionDispatcher {
         private val NO_PENDING_ACTION: StateFlow<PendingAction?> = MutableStateFlow(null)
     }
 }
+

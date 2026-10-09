@@ -1,10 +1,10 @@
-package app.aaps.implementation.maintenance
+﻿package app.gmaaps.implementation.maintenance
 
-import app.aaps.core.interfaces.logging.LoggerUtils
-import app.aaps.core.interfaces.maintenance.FileListProvider
-import app.aaps.core.interfaces.sync.NsClient
-import app.aaps.implementation.maintenance.cloud.CloudStorageManager
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.logging.LoggerUtils
+import app.gmaaps.core.interfaces.maintenance.FileListProvider
+import app.gmaaps.core.interfaces.sync.NsClient
+import app.gmaaps.implementation.maintenance.cloud.CloudStorageManager
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -37,3 +37,4 @@ class MaintenanceImplTest : TestBaseWithProfile() {
         assertThat(logs).hasSize(4)
     }
 }
+

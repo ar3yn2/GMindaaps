@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.quickLaunch
+﻿package app.gmaaps.ui.compose.quickLaunch
 
 import android.content.Context
 import androidx.compose.ui.test.assertIsDisplayed
@@ -10,11 +10,11 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToNode
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.objects.wizard.QuickWizardEntry
-import app.aaps.ui.compose.testing.AapsScreenFixture
-import app.aaps.ui.compose.testing.QuickLaunchConfigViewModelFixture
-import app.aaps.ui.compose.testing.setAapsContent
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.objects.wizard.QuickWizardEntry
+import app.gmaaps.ui.compose.testing.AapsScreenFixture
+import app.gmaaps.ui.compose.testing.QuickLaunchConfigViewModelFixture
+import app.gmaaps.ui.compose.testing.setAapsContent
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
@@ -72,15 +72,15 @@ class QuickLaunchConfigScreenTest {
         screen = AapsScreenFixture()
         viewModels = QuickLaunchConfigViewModelFixture(screen)
         context = RuntimeEnvironment.getApplication()
-        selectedHeader = context.getString(app.aaps.ui.R.string.quick_launch_selected_actions)
-        noItems = context.getString(app.aaps.ui.R.string.quick_launch_no_dynamic_items)
-        quickWizardHeader = context.getString(app.aaps.ui.R.string.quick_launch_category_quick_wizard)
-        treatmentHeader = context.getString(app.aaps.ui.R.string.quick_launch_category_treatment)
-        careHeader = context.getString(app.aaps.ui.R.string.quick_launch_category_care)
-        editPreset = context.getString(app.aaps.ui.R.string.quick_launch_edit_profile_preset)
-        permanent = context.getString(app.aaps.ui.R.string.quick_launch_profile_permanent)
-        addLabel = context.getString(app.aaps.core.ui.R.string.add)
-        removeLabel = context.getString(app.aaps.core.ui.R.string.remove)
+        selectedHeader = context.getString(app.gmaaps.ui.R.string.quick_launch_selected_actions)
+        noItems = context.getString(app.gmaaps.ui.R.string.quick_launch_no_dynamic_items)
+        quickWizardHeader = context.getString(app.gmaaps.ui.R.string.quick_launch_category_quick_wizard)
+        treatmentHeader = context.getString(app.gmaaps.ui.R.string.quick_launch_category_treatment)
+        careHeader = context.getString(app.gmaaps.ui.R.string.quick_launch_category_care)
+        editPreset = context.getString(app.gmaaps.ui.R.string.quick_launch_edit_profile_preset)
+        permanent = context.getString(app.gmaaps.ui.R.string.quick_launch_profile_permanent)
+        addLabel = context.getString(app.gmaaps.core.ui.R.string.add)
+        removeLabel = context.getString(app.gmaaps.core.ui.R.string.remove)
     }
 
     private fun setScreen(onNavigateBack: () -> Unit = {}) {
@@ -221,3 +221,4 @@ class QuickLaunchConfigScreenTest {
         compose.onNodeWithText(permanent).assertIsDisplayed()
     }
 }
+

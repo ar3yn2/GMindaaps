@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.pickers
+﻿package app.gmaaps.core.ui.compose.pickers
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -9,8 +9,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.core.ui.elements.WeekDay
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.core.ui.elements.WeekDay
 
 /**
  * Compose weekday selector using FilterChips.
@@ -50,3 +50,4 @@ fun WeekDaySelector(
         }
     }
 }
+

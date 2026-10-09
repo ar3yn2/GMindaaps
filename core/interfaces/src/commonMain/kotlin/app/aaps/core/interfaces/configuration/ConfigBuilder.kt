@@ -1,8 +1,8 @@
-package app.aaps.core.interfaces.configuration
+﻿package app.gmaaps.core.interfaces.configuration
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.plugin.PluginBase
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.Flow
 
@@ -85,3 +85,4 @@ interface ConfigBuilder {
      */
     fun exitApp(from: String, source: Sources, launchAgain: Boolean)
 }
+

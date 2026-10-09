@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
 
 /**
  * `CMD_BOLUS_CANCEL_REQ` (0x2C) → `CMD_BOLUS_CANCEL_RES` (0x8C). Cancels the running immediate bolus.
@@ -49,3 +49,4 @@ data class BolusCancelResponse(
     val resultCode: Int,
     val infusedAmount: Double
 ) : BleResponse
+

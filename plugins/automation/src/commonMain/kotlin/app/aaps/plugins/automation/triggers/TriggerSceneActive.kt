@@ -1,21 +1,21 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PlayArrow
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.utils.lenientStringOrNull
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.ComparatorExists
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.utils.lenientStringOrNull
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.ComparatorExists
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 
 /**
  * Triggers based on whether any scene is currently active.
- * Used as a precondition by [app.aaps.plugins.automation.actions.ActionRunScene]
+ * Used as a precondition by [app.gmaaps.plugins.automation.actions.ActionRunScene]
  * to skip activation when a scene is already running.
  */
 class TriggerSceneActive(
@@ -63,3 +63,4 @@ class TriggerSceneActive(
 
     override fun duplicate(): Trigger = TriggerSceneActive(deps, sceneApi, this)
 }
+

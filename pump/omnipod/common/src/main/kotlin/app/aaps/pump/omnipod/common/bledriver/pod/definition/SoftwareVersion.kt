@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.definition
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.definition
 
 import java.io.Serializable
 
@@ -12,3 +12,4 @@ data class SoftwareVersion(
         return "$major.$minor.$interim"
     }
 }
+

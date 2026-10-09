@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.nsclientV3
+﻿package app.gmaaps.plugins.sync.nsclientV3
 
-import app.aaps.core.interfaces.concurrent.AapsLock
-import app.aaps.core.interfaces.concurrent.withLock
+import app.gmaaps.core.interfaces.concurrent.AapsLock
+import app.gmaaps.core.interfaces.concurrent.withLock
 
 /**
  * A buffer of records waiting to be written to the database, which guards its own mutations.
@@ -65,3 +65,4 @@ internal class SyncedCounters {
 
     fun removeClass(key: String) = lock.withLock { values.remove(key) }
 }
+

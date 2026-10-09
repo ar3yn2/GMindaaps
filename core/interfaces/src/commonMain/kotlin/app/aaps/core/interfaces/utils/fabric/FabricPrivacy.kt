@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.utils.fabric
+﻿package app.gmaaps.core.interfaces.utils.fabric
 
-import app.aaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.rx.weardata.EventData
 
 /**
  * Analytics and crash reporting, with the user's opt-out honoured by the implementation.
@@ -30,3 +30,4 @@ interface FabricPrivacy {
 
     fun logWearException(wearException: EventData.WearException)
 }
+

@@ -1,11 +1,11 @@
-package app.aaps.pump.danars.services
+﻿package app.gmaaps.pump.danars.services
 
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.R
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.R
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -48,3 +48,4 @@ class DanaRSAlarmReporter(
             else                     -> rh.gs(R.string.pumperror)
         }
 }
+

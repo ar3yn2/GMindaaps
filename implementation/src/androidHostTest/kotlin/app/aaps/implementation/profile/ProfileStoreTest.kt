@@ -1,7 +1,7 @@
-package app.aaps.implementation.profile
+﻿package app.gmaaps.implementation.profile
 
-import app.aaps.core.interfaces.profile.PureProfile
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.profile.PureProfile
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import kotlin.test.assertIs
@@ -51,3 +51,4 @@ internal class ProfileStoreTest : TestBaseWithProfile() {
         assertThat(getInvalidProfileStore1().allProfilesValid).isFalse()
     }
 }
+

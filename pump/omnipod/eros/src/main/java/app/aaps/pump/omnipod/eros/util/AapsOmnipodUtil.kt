@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.eros.util
+﻿package app.gmaaps.pump.omnipod.eros.util
 
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.omnipod.common.R
-import app.aaps.pump.omnipod.eros.driver.definition.AlertType
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.omnipod.common.R
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertType
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonDeserializer
@@ -67,3 +67,4 @@ class AapsOmnipodUtil(
         else                                  -> alertType.name
     }
 }
+

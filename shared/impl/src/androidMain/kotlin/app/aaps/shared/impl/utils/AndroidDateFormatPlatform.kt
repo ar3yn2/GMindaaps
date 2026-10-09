@@ -1,4 +1,4 @@
-package app.aaps.shared.impl.utils
+﻿package app.gmaaps.shared.impl.utils
 
 import android.content.Context
 import java.time.Instant
@@ -37,3 +37,4 @@ class AndroidDateFormatPlatform(
     override fun standardUtcOffsetMillis(): Long =
         systemZone.rules.getStandardOffset(Instant.now()).totalSeconds * 1000L
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 /**
  * The entry of this list that is running at [time], picked the way the "active at" database queries
@@ -14,3 +14,4 @@ package app.aaps.core.data.model
  */
 fun <T : TimeStamped> List<T>.latestRunningAt(time: Long, duration: (T) -> Long): T? =
     lastOrNull { it.timestamp <= time && it.timestamp + duration(it) > time }
+

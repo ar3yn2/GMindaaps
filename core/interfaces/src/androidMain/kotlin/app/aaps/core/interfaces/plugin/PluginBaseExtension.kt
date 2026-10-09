@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.plugin
+﻿package app.gmaaps.core.interfaces.plugin
 
 import android.content.Context
 import android.content.pm.PackageManager
@@ -19,3 +19,4 @@ fun PluginBase.missingPermissions(context: Context): List<PermissionGroup> =
             ContextCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED
         }
     }
+

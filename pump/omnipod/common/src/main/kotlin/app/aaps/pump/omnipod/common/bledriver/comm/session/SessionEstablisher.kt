@@ -1,16 +1,16 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.session
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.Ids
-import app.aaps.pump.omnipod.common.bledriver.comm.endecrypt.Nonce
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.SessionEstablishmentException
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageIO
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessagePacket
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageSendSuccess
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageType
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.Ids
+import app.gmaaps.pump.omnipod.common.bledriver.comm.endecrypt.Nonce
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.SessionEstablishmentException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageIO
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessagePacket
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageSendSuccess
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageType
 import java.security.SecureRandom
 
 class SessionEstablisher(
@@ -205,3 +205,4 @@ class SessionEstablisher(
         private const val IV_SIZE = 4
     }
 }
+

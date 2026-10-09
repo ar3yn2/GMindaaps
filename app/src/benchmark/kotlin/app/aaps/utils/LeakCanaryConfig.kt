@@ -1,6 +1,6 @@
-package app.aaps.utils
+﻿package app.gmaaps.utils
 
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
 
 @Suppress("UNUSED_PARAMETER")
 fun configureLeakCanary(
@@ -9,3 +9,4 @@ fun configureLeakCanary(
 ) {
     // no-op for benchmark variant
 }
+

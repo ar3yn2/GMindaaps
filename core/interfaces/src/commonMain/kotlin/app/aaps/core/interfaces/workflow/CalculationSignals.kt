@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.workflow
+﻿package app.gmaaps.core.interfaces.workflow
 
 import kotlinx.coroutines.flow.StateFlow
 
@@ -23,3 +23,4 @@ interface CalculationSignalsEmitter : CalculationSignals {
 
     fun emitProgress(pass: CalculationWorkflow.ProgressData, pct: Int)
 }
+

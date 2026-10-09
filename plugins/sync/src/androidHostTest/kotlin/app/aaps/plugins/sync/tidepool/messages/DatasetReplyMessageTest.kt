@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.tidepool.messages
+﻿package app.gmaaps.plugins.sync.tidepool.messages
 
 import com.google.common.truth.Truth.assertThat
 import com.google.gson.Gson
@@ -50,3 +50,4 @@ class DatasetReplyMessageTest {
         assertThat(reply.getUploadId()).isNull()
     }
 }
+

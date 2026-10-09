@@ -1,8 +1,8 @@
-package app.aaps.pump.equil.manager.command
+﻿package app.gmaaps.pump.equil.manager.command
 
-import app.aaps.pump.equil.keys.EquilStringKey
-import app.aaps.pump.equil.manager.EquilManager
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.pump.equil.keys.EquilStringKey
+import app.gmaaps.pump.equil.manager.EquilManager
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Assertions.assertNull
@@ -168,3 +168,4 @@ class CmdTempBasalGetTest : TestBaseWithProfile() {
         assertTrue(cmd.createTime <= afterTime)
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.pump.danars.DanaRSTestBase
+import app.gmaaps.pump.danars.DanaRSTestBase
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import java.util.Calendar

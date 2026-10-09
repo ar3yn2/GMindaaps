@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action.service;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action.service;
 
 import androidx.annotation.NonNull;
 
@@ -6,16 +6,16 @@ import org.joda.time.Duration;
 
 import java.util.Collections;
 
-import app.aaps.pump.omnipod.eros.driver.communication.action.BolusAction;
-import app.aaps.pump.omnipod.eros.driver.communication.action.ConfigureAlertsAction;
-import app.aaps.pump.omnipod.eros.driver.communication.message.OmnipodMessage;
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.FaultConfigCommand;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.driver.util.AlertConfigurationUtil;
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.pump.omnipod.eros.driver.communication.action.BolusAction;
+import app.gmaaps.pump.omnipod.eros.driver.communication.action.ConfigureAlertsAction;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.OmnipodMessage;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.FaultConfigCommand;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.driver.util.AlertConfigurationUtil;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
 
 public class PrimeService {
 
@@ -37,3 +37,4 @@ public class PrimeService {
                 Duration.standardSeconds(1), false, true));
     }
 }
+

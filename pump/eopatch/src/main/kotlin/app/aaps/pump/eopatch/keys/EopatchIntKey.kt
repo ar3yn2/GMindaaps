@@ -1,9 +1,9 @@
-package app.aaps.pump.eopatch.keys
+﻿package app.gmaaps.pump.eopatch.keys
 
-import app.aaps.core.keys.PreferenceType
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.eopatch.R
+import app.gmaaps.core.keys.PreferenceType
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.eopatch.R
 
 enum class EopatchIntKey(
     override val key: String,
@@ -22,3 +22,4 @@ enum class EopatchIntKey(
     override val title: TextRef = TextRef.AndroidRes(titleResId)
     override val entries: Map<Int, TextRef> = entriesResIds.mapValues { TextRef.AndroidRes(it.value) }
 }
+

@@ -1,11 +1,11 @@
-package app.aaps.wear.comm
+﻿package app.gmaaps.wear.comm
 
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.Event
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.interfaces.sharedPreferences.SP
-import app.aaps.wear.AAPSLoggerTest
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.wear.AAPSLoggerTest
 import com.google.android.gms.wearable.MessageEvent
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
@@ -37,7 +37,7 @@ internal class DataLayerListenerServiceWearTest {
     @Test
     fun `a command on the rx path is deserialized and republished tagged with the sender node`() {
         val sut = service()
-        val rxPath = sut.getString(app.aaps.core.interfaces.R.string.path_rx_bridge)
+        val rxPath = sut.getString(app.gmaaps.core.interfaces.R.string.path_rx_bridge)
         val command = EventData.ActionPing(1_000L)
         val message = mock<MessageEvent> {
             on { path } doReturn rxPath
@@ -68,3 +68,4 @@ internal class DataLayerListenerServiceWearTest {
         verify(rxBus, never()).send(any())
     }
 }
+

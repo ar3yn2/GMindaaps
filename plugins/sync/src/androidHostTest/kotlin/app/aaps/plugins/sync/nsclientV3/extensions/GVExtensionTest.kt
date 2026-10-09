@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
@@ -164,3 +164,4 @@ class GVExtensionTest : TestBase() {
 
     // endregion
 }
+

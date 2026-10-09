@@ -1,14 +1,14 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.ServiceConnection
-import app.aaps.core.interfaces.nsclient.NSAlarm
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.sync.nsclientV3.services.NSClientV3Service
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.nsclient.NSAlarm
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.sync.nsclientV3.services.NSClientV3Service
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -175,3 +175,4 @@ class ServiceNsConnectionTest : TestBase() {
 
     private fun mockSocket(): NsSocket = org.mockito.kotlin.mock()
 }
+

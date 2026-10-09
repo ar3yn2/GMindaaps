@@ -1,7 +1,7 @@
-package app.aaps.plugins.source.notificationreader
+﻿package app.gmaaps.plugins.source.notificationreader
 
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.SourceSensor
 import kotlin.math.roundToInt
 
 /**
@@ -88,3 +88,4 @@ class NotificationParser(private val packageConfig: PackageConfig) {
             .replace("≥", "")
     }
 }
+

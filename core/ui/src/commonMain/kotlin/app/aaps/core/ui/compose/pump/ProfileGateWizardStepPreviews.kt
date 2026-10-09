@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -30,3 +30,4 @@ internal fun ProfileGateNoStorePreview() {
     }
     MaterialTheme { ProfileGateWizardStep(host) }
 }
+

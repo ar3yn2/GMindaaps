@@ -1,6 +1,6 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
-import app.aaps.database.entities.GlucoseValue
+import app.gmaaps.database.entities.GlucoseValue
 
 /**
  * Names that older versions stored in the `sourceSensor` column, and the entry each one means now.
@@ -38,3 +38,4 @@ internal val LEGACY_SOURCE_SENSOR_NAMES: Map<String, GlucoseValue.SourceSensor> 
     // The same sensor under its other brand name.
     "OTTAI" to GlucoseValue.SourceSensor.SYAI_TAG,
 )
+

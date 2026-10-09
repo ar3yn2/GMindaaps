@@ -1,20 +1,20 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.utils.lenientBoolean
-import app.aaps.core.utils.lenientString
-import app.aaps.plugins.automation.actions.Action
-import app.aaps.plugins.automation.actions.ActionFactory
-import app.aaps.plugins.automation.actions.ActionSMBChange
-import app.aaps.plugins.automation.actions.ActionStopProcessing
-import app.aaps.plugins.automation.triggers.TriggerConnector
-import app.aaps.plugins.automation.triggers.TriggerConnectorTest
-import app.aaps.plugins.automation.triggers.TriggerUnknown
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.utils.lenientBoolean
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.plugins.automation.actions.Action
+import app.gmaaps.plugins.automation.actions.ActionFactory
+import app.gmaaps.plugins.automation.actions.ActionSMBChange
+import app.gmaaps.plugins.automation.actions.ActionStopProcessing
+import app.gmaaps.plugins.automation.triggers.TriggerConnector
+import app.gmaaps.plugins.automation.triggers.TriggerConnectorTest
+import app.gmaaps.plugins.automation.triggers.TriggerUnknown
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.json.buildJsonArray
@@ -36,14 +36,14 @@ class AutomationEventTest : TestBase() {
     @Mock lateinit var pumpEnactResultProvider: () -> PumpEnactResult
 
     // Real factories over mocks: fromJSON has to rebuild actions and triggers for the clone assertions.
-    private val triggerDeps: app.aaps.plugins.automation.triggers.TriggerDeps by lazy {
-        app.aaps.plugins.automation.triggers.TriggerDeps(
+    private val triggerDeps: app.gmaaps.plugins.automation.triggers.TriggerDeps by lazy {
+        app.gmaaps.plugins.automation.triggers.TriggerDeps(
             aapsLogger, mock(), rh, profileFunction, mock(), preferences, mock(), mock(), mock(), mock(), mock(), dateUtil
         )
     }
 
-    private val triggerFactory: app.aaps.plugins.automation.triggers.TriggerFactory by lazy {
-        app.aaps.plugins.automation.triggers.TriggerFactory(triggerDeps, mock(), mock(), mock())
+    private val triggerFactory: app.gmaaps.plugins.automation.triggers.TriggerFactory by lazy {
+        app.gmaaps.plugins.automation.triggers.TriggerFactory(triggerDeps, mock(), mock(), mock())
     }
 
     private val actionFactory: ActionFactory by lazy {
@@ -168,3 +168,4 @@ class AutomationEventTest : TestBase() {
         assertThat(event.hasStopProcessing()).isTrue()
     }
 }
+

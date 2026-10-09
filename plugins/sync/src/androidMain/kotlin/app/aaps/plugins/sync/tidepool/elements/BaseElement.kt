@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.tidepool.elements
+﻿package app.gmaaps.plugins.sync.tidepool.elements
 
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DateUtil
 import com.google.gson.annotations.Expose
 
 open class BaseElement(timestamp: Long, uuid: String, dateUtil: DateUtil) {

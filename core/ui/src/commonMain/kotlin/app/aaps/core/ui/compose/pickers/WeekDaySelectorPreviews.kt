@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.pickers
+﻿package app.gmaaps.core.ui.compose.pickers
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -14,3 +14,4 @@ internal fun WeekDaySelectorPreview() {
         )
     }
 }
+

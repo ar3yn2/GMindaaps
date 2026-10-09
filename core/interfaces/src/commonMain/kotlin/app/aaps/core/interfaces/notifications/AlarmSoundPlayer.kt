@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
-import app.aaps.core.interfaces.notifications.AlarmSoundPlayer.Companion.OWNER_FULLSCREEN
-import app.aaps.core.interfaces.notifications.AlarmSoundPlayer.Companion.OWNER_INTERNAL
+import app.gmaaps.core.interfaces.notifications.AlarmSoundPlayer.Companion.OWNER_FULLSCREEN
+import app.gmaaps.core.interfaces.notifications.AlarmSoundPlayer.Companion.OWNER_INTERNAL
 
 /**
  * Plays AAPS alarm audio (looping, with optional volume ramp) without owning a foreground service
@@ -53,3 +53,4 @@ interface AlarmSoundPlayer {
         const val OWNER_INTERNAL = "internal"
     }
 }
+

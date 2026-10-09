@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.profiling
+﻿package app.gmaaps.core.interfaces.profiling
 
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.LTag
 
 interface Profiler {
 

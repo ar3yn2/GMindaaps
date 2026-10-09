@@ -1,11 +1,11 @@
-package app.aaps.pump.omnipod.dash.di
+﻿package app.gmaaps.pump.omnipod.dash.di
 
 import android.content.Context
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.omnipod.dash.history.DashHistory
-import app.aaps.pump.omnipod.dash.history.database.DashHistoryDatabase
-import app.aaps.pump.omnipod.dash.history.database.HistoryRecordDao
-import app.aaps.pump.omnipod.dash.history.mapper.HistoryMapper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.omnipod.dash.history.DashHistory
+import app.gmaaps.pump.omnipod.dash.history.database.DashHistoryDatabase
+import app.gmaaps.pump.omnipod.dash.history.database.HistoryRecordDao
+import app.gmaaps.pump.omnipod.dash.history.mapper.HistoryMapper
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -37,3 +37,4 @@ object OmnipodDashHistoryBindings {
     fun provideDashHistory(dao: HistoryRecordDao, historyMapper: HistoryMapper, logger: AAPSLogger): DashHistory =
         DashHistory(dao, historyMapper, logger)
 }
+

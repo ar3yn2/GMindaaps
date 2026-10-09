@@ -1,9 +1,9 @@
-package app.aaps.wear.complications.cwf
+﻿package app.gmaaps.wear.complications.cwf
 
 import android.graphics.Bitmap
 import androidx.core.graphics.createBitmap
-import app.aaps.wear.AAPSLoggerTest
-import app.aaps.wear.watchfaces.CustomWatchface
+import app.gmaaps.wear.AAPSLoggerTest
+import app.gmaaps.wear.watchfaces.CustomWatchface
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -203,3 +203,4 @@ internal class CwfFramePipelineTest {
         assertThat(target.calls).contains("clearSeconds")
     }
 }
+

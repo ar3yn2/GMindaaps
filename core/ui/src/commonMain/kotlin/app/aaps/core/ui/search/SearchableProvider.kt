@@ -1,4 +1,4 @@
-package app.aaps.core.ui.search
+﻿package app.gmaaps.core.ui.search
 
 /**
  * Built-in screens, dialogs, hints, and other non-plugin searchables
@@ -13,3 +13,4 @@ interface SearchableProvider {
      */
     fun getSearchableItems(): List<SearchableItem>
 }
+

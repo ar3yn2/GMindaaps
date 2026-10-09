@@ -1,4 +1,4 @@
-package app.aaps.pump.danar.compose
+﻿package app.gmaaps.pump.danar.compose
 
 import android.content.Intent
 import android.provider.Settings
@@ -36,11 +36,11 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.banner.ErrorBanner
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardScreen
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.dana.R
+import app.gmaaps.core.ui.compose.banner.ErrorBanner
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardScreen
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.dana.R
 
 @Composable
 fun DanaRPairWizardScreen(
@@ -106,12 +106,12 @@ private fun ConfigureStep(
     WizardStepLayout(
         scrollable = false,
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.pairing),
+            text = stringResource(app.gmaaps.core.ui.R.string.pairing),
             onClick = onPair,
             enabled = state.password.isNotEmpty() && state.selectedDevice != null
         ),
         secondaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.cancel),
+            text = stringResource(app.gmaaps.core.ui.R.string.cancel),
             onClick = onCancel
         )
     ) {
@@ -160,7 +160,7 @@ private fun ConfigureStep(
                 style = MaterialTheme.typography.bodyLarge
             )
             IconButton(onClick = onRefreshDevices) {
-                Icon(Icons.Filled.Refresh, contentDescription = stringResource(app.aaps.core.ui.R.string.refresh))
+                Icon(Icons.Filled.Refresh, contentDescription = stringResource(app.gmaaps.core.ui.R.string.refresh))
             }
         }
 
@@ -229,7 +229,7 @@ private fun ConnectingStep(
 ) {
     WizardStepLayout(
         secondaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.cancel),
+            text = stringResource(app.gmaaps.core.ui.R.string.cancel),
             onClick = onCancel
         )
     ) {
@@ -294,11 +294,11 @@ private fun ErrorStep(
 ) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.back),
+            text = stringResource(app.gmaaps.core.ui.R.string.back),
             onClick = onGoBack
         ),
         secondaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.cancel),
+            text = stringResource(app.gmaaps.core.ui.R.string.cancel),
             onClick = onCancel
         )
     ) {
@@ -306,3 +306,4 @@ private fun ErrorStep(
         ErrorBanner(message = stringResource(R.string.password_wrong))
     }
 }
+

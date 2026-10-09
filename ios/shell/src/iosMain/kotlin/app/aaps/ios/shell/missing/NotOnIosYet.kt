@@ -1,7 +1,7 @@
-package app.aaps.ios.shell.missing
+﻿package app.gmaaps.ios.shell.missing
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 
 /**
  * The first pass at running the real app on iOS: say what is missing, loudly, instead of pretending.
@@ -35,3 +35,4 @@ internal fun AAPSLogger.failNotOnIosYet(what: String): Nothing {
     error(LTag.CORE, "Not implemented on iOS yet: $what")
     throw NotImplementedError("$what is not implemented on iOS yet")
 }
+

@@ -1,29 +1,29 @@
-package app.aaps.pump.equil.compose
+﻿package app.gmaaps.pump.equil.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.pump.ProfileGateWizardStep
-import app.aaps.core.ui.compose.pump.WizardScreen
-import app.aaps.pump.equil.R
-import app.aaps.pump.equil.compose.steps.AirStep
-import app.aaps.pump.equil.compose.steps.AssembleStep
-import app.aaps.pump.equil.compose.steps.AttachStep
-import app.aaps.pump.equil.compose.steps.BleScanStepWrapper
-import app.aaps.pump.equil.compose.steps.ChangeInsulinStep
-import app.aaps.pump.equil.compose.steps.ConfirmStep
-import app.aaps.pump.equil.compose.steps.FillStep
-import app.aaps.pump.equil.compose.steps.PasswordStep
-import app.aaps.pump.equil.compose.steps.SelectInsulinStep
-import app.aaps.pump.equil.compose.steps.SiteLocationStep
-import app.aaps.pump.equil.compose.steps.UnpairConfirmStep
-import app.aaps.pump.equil.compose.steps.UnpairDetachStep
+import app.gmaaps.core.ui.compose.pump.ProfileGateWizardStep
+import app.gmaaps.core.ui.compose.pump.WizardScreen
+import app.gmaaps.pump.equil.R
+import app.gmaaps.pump.equil.compose.steps.AirStep
+import app.gmaaps.pump.equil.compose.steps.AssembleStep
+import app.gmaaps.pump.equil.compose.steps.AttachStep
+import app.gmaaps.pump.equil.compose.steps.BleScanStepWrapper
+import app.gmaaps.pump.equil.compose.steps.ChangeInsulinStep
+import app.gmaaps.pump.equil.compose.steps.ConfirmStep
+import app.gmaaps.pump.equil.compose.steps.FillStep
+import app.gmaaps.pump.equil.compose.steps.PasswordStep
+import app.gmaaps.pump.equil.compose.steps.SelectInsulinStep
+import app.gmaaps.pump.equil.compose.steps.SiteLocationStep
+import app.gmaaps.pump.equil.compose.steps.UnpairConfirmStep
+import app.gmaaps.pump.equil.compose.steps.UnpairDetachStep
 
 @Composable
 internal fun EquilWizardScreen(
     viewModel: EquilWizardViewModel,
-    setToolbarConfig: ((app.aaps.core.ui.compose.ToolbarConfig) -> Unit)? = null
+    setToolbarConfig: ((app.gmaaps.core.ui.compose.ToolbarConfig) -> Unit)? = null
 ) {
     val wizardStep by viewModel.wizardStep.collectAsStateWithLifecycle()
     val totalSteps by viewModel.totalSteps.collectAsStateWithLifecycle()
@@ -63,3 +63,4 @@ internal fun EquilWizardScreen(
         }
     )
 }
+

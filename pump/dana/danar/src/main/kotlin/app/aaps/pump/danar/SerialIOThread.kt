@@ -1,15 +1,15 @@
-package app.aaps.pump.danar
+﻿package app.gmaaps.pump.danar
 
 import android.os.SystemClock
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.rfcomm.RfcommSocket
-import app.aaps.core.utils.notifyAll
-import app.aaps.core.utils.waitMillis
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.danar.comm.MessageBase
-import app.aaps.pump.danar.comm.MessageHashTableBase
-import app.aaps.pump.utils.CRC
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommSocket
+import app.gmaaps.core.utils.notifyAll
+import app.gmaaps.core.utils.waitMillis
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.danar.comm.MessageBase
+import app.gmaaps.pump.danar.comm.MessageHashTableBase
+import app.gmaaps.pump.utils.CRC
 import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream
@@ -196,3 +196,4 @@ class SerialIOThread(
         aapsLogger.debug(LTag.PUMPBTCOMM, "Disconnected: $reason")
     }
 }
+

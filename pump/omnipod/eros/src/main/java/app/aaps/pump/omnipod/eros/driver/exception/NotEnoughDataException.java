@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
-import app.aaps.core.utils.pump.ByteUtil;
+import app.gmaaps.core.utils.pump.ByteUtil;
 
 public class NotEnoughDataException extends OmnipodException {
     private final byte[] data;
@@ -14,3 +14,4 @@ public class NotEnoughDataException extends OmnipodException {
         return data;
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.siteRotation
+﻿package app.gmaaps.core.ui.compose.siteRotation
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -18,7 +18,7 @@ import androidx.compose.ui.graphics.PathOperation
 import androidx.compose.ui.graphics.drawscope.Fill
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInput
-import app.aaps.core.data.model.TE
+import app.gmaaps.core.data.model.TE
 
 @Composable
 fun BodyView(
@@ -221,3 +221,4 @@ private fun interpolateColor(start: Color, end: Color, fraction: Float): Color {
         alpha = 1f
     )
 }
+

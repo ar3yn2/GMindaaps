@@ -1,7 +1,7 @@
-package app.aaps.pump.medtrum.util
+﻿package app.gmaaps.pump.medtrum.util
 
-import app.aaps.pump.medtrum.comm.enums.ModelType
-import app.aaps.pump.medtrum.encryption.Crypt
+import app.gmaaps.pump.medtrum.comm.enums.ModelType
+import app.gmaaps.pump.medtrum.encryption.Crypt
 
 class MedtrumSnUtil {
 
@@ -17,3 +17,4 @@ class MedtrumSnUtil {
         }
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import org.joda.time.Duration;
 import org.junit.jupiter.api.Assertions;
@@ -8,10 +8,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BasalSchedule;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BasalScheduleEntry;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BolusDeliverySchedule;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BasalSchedule;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BasalScheduleEntry;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BolusDeliverySchedule;
 
 class SetInsulinScheduleCommandTest {
     @Test
@@ -245,3 +245,4 @@ class SetInsulinScheduleCommandTest {
                 setInsulinScheduleCommand.getRawData());
     }
 }
+

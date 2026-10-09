@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
-import app.aaps.core.objects.workflow.WorkOutcome
+import app.gmaaps.core.objects.workflow.WorkOutcome
 
 /**
  * Whether a load round carries on after a step.
@@ -36,3 +36,4 @@ object NsLoadChain {
         is WorkOutcome.Retry   -> false
     }
 }
+

@@ -1,19 +1,19 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Visibility
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.core.interfaces.scenes.SceneAutomationResult
-import app.aaps.core.interfaces.scenes.SceneIconResolver
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.utils.lenientString
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.InputSceneName
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.core.interfaces.scenes.SceneAutomationResult
+import app.gmaaps.core.interfaces.scenes.SceneIconResolver
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.InputSceneName
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 
@@ -68,3 +68,4 @@ class ActionEnableScene(
 
     override fun isValid(): Boolean = sceneApi.getScene(scene.value) != null
 }
+

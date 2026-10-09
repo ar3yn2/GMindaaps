@@ -1,12 +1,12 @@
-package app.aaps.implementation.maintenance.migration
+﻿package app.gmaaps.implementation.maintenance.migration
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.tempTargets.toTTPresets
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.tempTargets.toTTPresets
+import app.gmaaps.core.interfaces.utils.DateUtil
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Test
@@ -375,3 +375,4 @@ class PreferenceMigrationsTest {
     }
 
 }
+

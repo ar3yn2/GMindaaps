@@ -1,4 +1,4 @@
-import java.io.Serializable
+﻿import java.io.Serializable
 
 /**
  * One module that owns strings, as `GenerateKeyStringsTask` was told to generate them.
@@ -49,21 +49,22 @@ data class StringOwnerModule(
 object StringOwnerModules {
 
     val ALL: List<StringOwnerModule> = listOf(
-        StringOwnerModule("interfaces", "app.aaps.core.interfaces", "InterfacesStrings", "InterfacesStringIds"),
-        StringOwnerModule("keys", "app.aaps.core.keys", "KeysStrings", "KeysStringIds"),
-        StringOwnerModule("coreUi", "app.aaps.core.ui", "CoreUiStrings", "CoreUiStringIds"),
-        StringOwnerModule("implementation", "app.aaps.implementation", "ImplementationStrings", "ImplementationStringIds"),
-        StringOwnerModule("ui", "app.aaps.ui", "UiStrings", "UiStringIds"),
-        StringOwnerModule("aps", "app.aaps.plugins.aps", "ApsStrings", "ApsStringIds"),
-        StringOwnerModule("automation", "app.aaps.plugins.automation", "AutomationStrings", "AutomationStringIds"),
-        StringOwnerModule("calibration", "app.aaps.plugins.calibration", "CalibrationStrings", "CalibrationStringIds"),
-        StringOwnerModule("configuration", "app.aaps.plugins.configuration", "ConfigurationStrings", "ConfigurationStringIds"),
-        StringOwnerModule("constraints", "app.aaps.plugins.constraints", "ConstraintsStrings", "ConstraintsStringIds"),
-        StringOwnerModule("main", "app.aaps.plugins.main", "MainStrings", "MainStringIds"),
-        StringOwnerModule("sensitivity", "app.aaps.plugins.sensitivity", "SensitivityStrings", "SensitivityStringIds"),
-        StringOwnerModule("smoothing", "app.aaps.plugins.smoothing", "SmoothingStrings", "SmoothingStringIds"),
-        StringOwnerModule("source", "app.aaps.plugins.source", "SourceStrings", "SourceStringIds"),
-        StringOwnerModule("sync", "app.aaps.plugins.sync", "SyncStrings", "SyncStringIds"),
-        StringOwnerModule("virtual", "app.aaps.pump.virtual", "VirtualStrings", "VirtualStringIds")
+        StringOwnerModule("interfaces", "app.gmaaps.core.interfaces", "InterfacesStrings", "InterfacesStringIds"),
+        StringOwnerModule("keys", "app.gmaaps.core.keys", "KeysStrings", "KeysStringIds"),
+        StringOwnerModule("coreUi", "app.gmaaps.core.ui", "CoreUiStrings", "CoreUiStringIds"),
+        StringOwnerModule("implementation", "app.gmaaps.implementation", "ImplementationStrings", "ImplementationStringIds"),
+        StringOwnerModule("ui", "app.gmaaps.ui", "UiStrings", "UiStringIds"),
+        StringOwnerModule("aps", "app.gmaaps.plugins.aps", "ApsStrings", "ApsStringIds"),
+        StringOwnerModule("automation", "app.gmaaps.plugins.automation", "AutomationStrings", "AutomationStringIds"),
+        StringOwnerModule("calibration", "app.gmaaps.plugins.calibration", "CalibrationStrings", "CalibrationStringIds"),
+        StringOwnerModule("configuration", "app.gmaaps.plugins.configuration", "ConfigurationStrings", "ConfigurationStringIds"),
+        StringOwnerModule("constraints", "app.gmaaps.plugins.constraints", "ConstraintsStrings", "ConstraintsStringIds"),
+        StringOwnerModule("main", "app.gmaaps.plugins.main", "MainStrings", "MainStringIds"),
+        StringOwnerModule("sensitivity", "app.gmaaps.plugins.sensitivity", "SensitivityStrings", "SensitivityStringIds"),
+        StringOwnerModule("smoothing", "app.gmaaps.plugins.smoothing", "SmoothingStrings", "SmoothingStringIds"),
+        StringOwnerModule("source", "app.gmaaps.plugins.source", "SourceStrings", "SourceStringIds"),
+        StringOwnerModule("sync", "app.gmaaps.plugins.sync", "SyncStrings", "SyncStringIds"),
+        StringOwnerModule("virtual", "app.gmaaps.pump.virtual", "VirtualStrings", "VirtualStringIds")
     )
 }
+

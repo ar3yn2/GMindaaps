@@ -1,9 +1,9 @@
-package app.aaps.wear.data
+﻿package app.gmaaps.wear.data
 
-import app.aaps.core.interfaces.rx.weardata.CwfData
-import app.aaps.wear.AAPSLoggerTest
-import app.aaps.wear.R
-import app.aaps.wear.WearTestBase
+import app.gmaaps.core.interfaces.rx.weardata.CwfData
+import app.gmaaps.wear.AAPSLoggerTest
+import app.gmaaps.wear.R
+import app.gmaaps.wear.WearTestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -48,3 +48,4 @@ class ComplicationDataRepositorySelectDefaultTest : WearTestBase() {
         assertThat(repository.selectDefaultWatchface(data)?.json).isEqualTo("default")
     }
 }
+

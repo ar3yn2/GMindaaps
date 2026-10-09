@@ -1,4 +1,4 @@
-package app.aaps.core.utils
+﻿package app.gmaaps.core.utils
 
 import kotlinx.serialization.json.JsonObject
 
@@ -73,4 +73,5 @@ fun JsonObject?.safeGetBoolean(fieldName: String, defaultValue: Boolean = false)
 
 fun JsonObject?.safeGetBooleanAllowNull(fieldName: String, defaultValue: Boolean? = null): Boolean? =
     lenientBooleanOrNull(fieldName) ?: defaultValue
+
 

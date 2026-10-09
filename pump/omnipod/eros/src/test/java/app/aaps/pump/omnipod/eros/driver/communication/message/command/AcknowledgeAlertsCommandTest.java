@@ -1,13 +1,13 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSet;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSlot;
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSet;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSlot;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
 
 class AcknowledgeAlertsCommandTest {
 
@@ -39,3 +39,4 @@ class AcknowledgeAlertsCommandTest {
 
     // TODO add tests
 }
+

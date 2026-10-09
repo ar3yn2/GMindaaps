@@ -1,11 +1,11 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import app.aaps.database.entities.DeviceStatus
-import app.aaps.database.entities.TABLE_DEVICE_STATUS
+import app.gmaaps.database.entities.DeviceStatus
+import app.gmaaps.database.entities.TABLE_DEVICE_STATUS
 
 @Dao
 internal interface DeviceStatusDao {

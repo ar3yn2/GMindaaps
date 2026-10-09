@@ -1,28 +1,28 @@
-package app.aaps.pump.danars.compose
+﻿package app.gmaaps.pump.danars.compose
 
 import android.util.Base64
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.di.ApplicationScope
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.ble.BleTransport
-import app.aaps.core.interfaces.pump.ble.BondState
-import app.aaps.core.interfaces.pump.ble.PairingState
-import app.aaps.core.interfaces.pump.ble.PairingStep
-import app.aaps.core.interfaces.pump.ble.ScannedDevice
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.utils.hexStringToByteArray
-import app.aaps.pump.dana.keys.DanaStringComposedKey
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danars.DanaRSPlugin
-import app.aaps.pump.danars.services.BLEComm
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.di.ApplicationScope
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.ble.BleTransport
+import app.gmaaps.core.interfaces.pump.ble.BondState
+import app.gmaaps.core.interfaces.pump.ble.PairingState
+import app.gmaaps.core.interfaces.pump.ble.PairingStep
+import app.gmaaps.core.interfaces.pump.ble.ScannedDevice
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.utils.hexStringToByteArray
+import app.gmaaps.pump.dana.keys.DanaStringComposedKey
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danars.DanaRSPlugin
+import app.gmaaps.pump.danars.services.BLEComm
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -173,7 +173,7 @@ class DanaRSPairWizardViewModel(
         viewModelScope.launch(Dispatchers.IO) {
             if (!awaitBond(address)) {
                 if (_uiState.value.step == WizardStep.PAIRING_PROGRESS)
-                    _uiState.update { it.copy(step = WizardStep.ERROR, errorMessage = rh.gs(app.aaps.pump.dana.R.string.danars_bonding_failed)) }
+                    _uiState.update { it.copy(step = WizardStep.ERROR, errorMessage = rh.gs(app.gmaaps.pump.dana.R.string.danars_bonding_failed)) }
                 return@launch
             }
             if (_uiState.value.step == WizardStep.PAIRING_PROGRESS)
@@ -260,7 +260,7 @@ class DanaRSPairWizardViewModel(
         val checksum = pin2.substring(6, 8).hexStringToByteArray()
 
         if (!checkPairingCheckSum(pairingKey, randomPairingKey, checksum)) {
-            _uiState.update { it.copy(errorMessage = rh.gs(app.aaps.core.ui.R.string.invalid_input)) }
+            _uiState.update { it.copy(errorMessage = rh.gs(app.gmaaps.core.ui.R.string.invalid_input)) }
             return
         }
 
@@ -329,7 +329,7 @@ class DanaRSPairWizardViewModel(
                 // If we were in pairing progress, treat IDLE as a disconnect/failure
                 if (_uiState.value.step == WizardStep.PAIRING_PROGRESS) {
                     cancelPairingTimeout()
-                    _uiState.update { it.copy(step = WizardStep.ERROR, errorMessage = rh.gs(app.aaps.core.ui.R.string.connection_error)) }
+                    _uiState.update { it.copy(step = WizardStep.ERROR, errorMessage = rh.gs(app.gmaaps.core.ui.R.string.connection_error)) }
                 }
             }
 
@@ -369,7 +369,7 @@ class DanaRSPairWizardViewModel(
             delay(PAIRING_TIMEOUT_MS)
             aapsLogger.warn(LTag.PUMP, "PairWizard: pairing timeout after ${PAIRING_TIMEOUT_MS}ms")
             _uiState.update {
-                it.copy(step = WizardStep.ERROR, errorMessage = rh.gs(app.aaps.pump.dana.R.string.danars_pairingtimedout))
+                it.copy(step = WizardStep.ERROR, errorMessage = rh.gs(app.gmaaps.pump.dana.R.string.danars_pairingtimedout))
             }
         }
     }
@@ -394,3 +394,4 @@ class DanaRSPairWizardViewModel(
         return checksum[0] == pairingKeyCheckSum
     }
 }
+

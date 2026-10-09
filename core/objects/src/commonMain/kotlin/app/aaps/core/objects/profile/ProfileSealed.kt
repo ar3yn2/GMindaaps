@@ -1,39 +1,39 @@
-package app.aaps.core.objects.profile
+﻿package app.gmaaps.core.objects.profile
 
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.data.Block
-import app.aaps.core.data.model.data.TargetBlock
-import app.aaps.core.data.time.T
-import app.aaps.core.data.time.systemUtcOffsetAt
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.aps.APS
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.profile.Profile.ProfileValue
-import app.aaps.core.interfaces.profile.PureProfile
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.HardLimits
-import app.aaps.core.keys.interfaces.TextRef.Companion.withArgs
-import app.aaps.core.objects.extensions.blockValueBySeconds
-import app.aaps.core.objects.extensions.highTargetBlockValueBySeconds
-import app.aaps.core.objects.extensions.lowTargetBlockValueBySeconds
-import app.aaps.core.objects.extensions.shiftBlock
-import app.aaps.core.objects.extensions.shiftTargetBlock
-import app.aaps.core.objects.extensions.targetBlockValueBySeconds
-import app.aaps.core.objects.extensions.toJsonObject
-import app.aaps.core.utils.MidnightUtils
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.data.Block
+import app.gmaaps.core.data.model.data.TargetBlock
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.time.systemUtcOffsetAt
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.aps.APS
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.Profile.ProfileValue
+import app.gmaaps.core.interfaces.profile.PureProfile
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.HardLimits
+import app.gmaaps.core.keys.interfaces.TextRef.Companion.withArgs
+import app.gmaaps.core.objects.extensions.blockValueBySeconds
+import app.gmaaps.core.objects.extensions.highTargetBlockValueBySeconds
+import app.gmaaps.core.objects.extensions.lowTargetBlockValueBySeconds
+import app.gmaaps.core.objects.extensions.shiftBlock
+import app.gmaaps.core.objects.extensions.shiftTargetBlock
+import app.gmaaps.core.objects.extensions.targetBlockValueBySeconds
+import app.gmaaps.core.objects.extensions.toJsonObject
+import app.gmaaps.core.utils.MidnightUtils
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonArray
@@ -63,7 +63,7 @@ sealed class ProfileSealed(
      * @param value ProfileSwitch
      * @param activePlugin access to active APS. Must be provided only when accessing dynamic runtime IC, ISF
      */
-    data class PS(val value: app.aaps.core.data.model.PS, val activePlugin: ActivePlugin?) : ProfileSealed(
+    data class PS(val value: app.gmaaps.core.data.model.PS, val activePlugin: ActivePlugin?) : ProfileSealed(
         value.id,
         value.isValid,
         value.ids,
@@ -88,7 +88,7 @@ sealed class ProfileSealed(
      * @param value EffectiveProfileSwitch
      * @param activePlugin access to active APS. Must be provided only when accessing dynamic runtime IC, ISF
      */
-    data class EPS(val value: app.aaps.core.data.model.EPS, val activePlugin: ActivePlugin?) : ProfileSealed(
+    data class EPS(val value: app.gmaaps.core.data.model.EPS, val activePlugin: ActivePlugin?) : ProfileSealed(
         value.id,
         value.isValid,
         value.ids,
@@ -245,7 +245,7 @@ sealed class ProfileSealed(
      * place, which made a "validity check" quietly rewrite the caller's profile. No caller ever used
      * the clamped value - both build a throwaway [Pure] first and read only [Profile.ValidityCheck] -
      * and the clamp `break`s after the first offending block, so it could not have produced a
-     * consistently corrected profile anyway. Removing it is what let [app.aaps.core.data.model.data.Block]
+     * consistently corrected profile anyway. Removing it is what let [app.gmaaps.core.data.model.data.Block]
      * become immutable.
      */
     fun validatePump(from: String, pump: Pump, config: Config, rh: TextResolver, notificationManager: NotificationManager, sendNotifications: Boolean): Profile.ValidityCheck {
@@ -527,3 +527,4 @@ sealed class ProfileSealed(
     private fun toMgdl(value: Double, units: GlucoseUnit): Double =
         if (units == GlucoseUnit.MGDL) value else value * Constants.MMOLL_TO_MGDL
 }
+

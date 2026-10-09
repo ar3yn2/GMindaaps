@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.defs
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.defs
 
 enum class RFSpyRLResponse(val value: Byte) {
     // 0xaa == timeout
@@ -22,3 +22,4 @@ enum class RFSpyRLResponse(val value: Byte) {
         fun fromByte(input: Byte): RFSpyRLResponse? = entries.find { it.value == input }
     }
 }
+

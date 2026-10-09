@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.domain.usecase.basal.model
+﻿package app.gmaaps.pump.carelevo.domain.usecase.basal.model
 
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
 
 data class SetBasalProgramRequestModel(
     val profile: Profile

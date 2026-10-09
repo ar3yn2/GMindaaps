@@ -1,3 +1,3 @@
-package app.aaps.core.interfaces.sync
+﻿package app.gmaaps.core.interfaces.sync
 
 interface Tidepool : Sync

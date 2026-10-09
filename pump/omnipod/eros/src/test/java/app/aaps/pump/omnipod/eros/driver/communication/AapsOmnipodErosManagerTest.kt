@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.eros.driver.communication
+﻿package app.gmaaps.pump.omnipod.eros.driver.communication
 
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.profile.Profile.ProfileValue
-import app.aaps.pump.omnipod.eros.manager.AapsOmnipodErosManager
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.Profile.ProfileValue
+import app.gmaaps.pump.omnipod.eros.manager.AapsOmnipodErosManager
 import com.google.common.truth.Truth.assertThat
 import org.joda.time.Duration
 import org.junit.jupiter.api.Test
@@ -84,3 +84,4 @@ internal class AapsOmnipodErosManagerTest {
         assertThat(basalScheduleEntry.rate).isWithin(0.000001).of(0.05)
     }
 }
+

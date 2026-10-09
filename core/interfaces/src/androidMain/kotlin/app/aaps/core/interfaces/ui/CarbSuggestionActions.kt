@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.ui
+﻿package app.gmaaps.core.interfaces.ui
 
 import android.app.PendingIntent
 
@@ -22,3 +22,4 @@ interface CarbSuggestionActions {
      */
     fun ignoreFor(minutes: Int, requestCode: Int): PendingIntent
 }
+

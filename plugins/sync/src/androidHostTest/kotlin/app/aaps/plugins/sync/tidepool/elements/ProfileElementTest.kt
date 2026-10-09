@@ -1,13 +1,13 @@
-package app.aaps.plugins.sync.tidepool.elements
+﻿package app.gmaaps.plugins.sync.tidepool.elements
 
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.data.Block
-import app.aaps.core.data.model.data.TargetBlock
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.plugins.sync.tidepool.utils.GsonInstance
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.data.Block
+import app.gmaaps.core.data.model.data.TargetBlock
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.plugins.sync.tidepool.utils.GsonInstance
 import com.google.common.truth.Truth.assertThat
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
@@ -178,3 +178,4 @@ class ProfileElementTest {
         assertThat(o.getAsJsonObject("origin").get("id").asString).isNotEmpty()
     }
 }
+

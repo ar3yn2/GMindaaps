@@ -1,15 +1,15 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.icons.IcTtCancel
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.icons.IcTtCancel
 
 class ActionStopTempTarget(
     aapsLogger: AAPSLogger,
@@ -26,9 +26,10 @@ class ActionStopTempTarget(
     override fun elementType() = ElementType.TEMP_TARGET_MANAGEMENT
 
     override suspend fun doAction(): PumpEnactResult {
-        persistenceLayer.cancelCurrentTemporaryTargetIfAny(dateUtil.now(), app.aaps.core.data.ue.Action.CANCEL_TT, Sources.Automation, title, listOf())
+        persistenceLayer.cancelCurrentTemporaryTargetIfAny(dateUtil.now(), app.gmaaps.core.data.ue.Action.CANCEL_TT, Sources.Automation, title, listOf())
         return pumpEnactResultProvider().success(true).comment(CoreUiStrings.ok)
     }
 
     override fun isValid(): Boolean = true
 }
+

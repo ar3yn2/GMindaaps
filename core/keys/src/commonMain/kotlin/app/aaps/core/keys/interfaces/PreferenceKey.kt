@@ -1,11 +1,11 @@
-package app.aaps.core.keys.interfaces
+﻿package app.gmaaps.core.keys.interfaces
 
-import app.aaps.core.keys.PreferenceType
-import app.aaps.core.keys.UnitType
+import app.gmaaps.core.keys.PreferenceType
+import app.gmaaps.core.keys.UnitType
 
 /**
  * Marker interface for items that can appear in a preference list.
- * Can be either a [PreferenceKey] or a [app.aaps.core.ui.compose.preference.PreferenceSubScreen].
+ * Can be either a [PreferenceKey] or a [app.gmaaps.core.ui.compose.preference.PreferenceSubScreen].
  *
  * Note: Not sealed to allow cross-module implementation.
  */
@@ -80,7 +80,7 @@ interface PreferenceKey : NonPreferenceKey, PreferenceItem {
      * Defaulted here, like [platforms] beside it. Without a default every implementor had to declare
      * all three of these, so 38 of the 40 key enums carried the same three lines saying "yes, yes,
      * yes" - `= true` repeated 114 times, and three more to copy each time a driver added a key. Only
-     * [app.aaps.core.keys.BooleanKey] and Instara's keys ever set one.
+     * [app.gmaaps.core.keys.BooleanKey] and Instara's keys ever set one.
      */
     val showInApsMode: Boolean
         get() = true

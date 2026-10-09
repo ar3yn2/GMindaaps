@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.material3.CardDefaults
@@ -38,3 +38,4 @@ fun AapsCard(
         content = content
     )
 }
+

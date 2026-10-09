@@ -1,9 +1,9 @@
-package app.aaps.pump.insight.di
+﻿package app.gmaaps.pump.insight.di
 
 import android.content.Context
-import app.aaps.pump.insight.database.InsightDatabase
-import app.aaps.pump.insight.database.InsightDatabaseDao
-import app.aaps.pump.insight.database.InsightDbHelper
+import app.gmaaps.pump.insight.database.InsightDatabase
+import app.gmaaps.pump.insight.database.InsightDatabaseDao
+import app.gmaaps.pump.insight.database.InsightDbHelper
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -30,3 +30,4 @@ object InsightDatabaseBindings {
     fun provideInsightDbHelper(insightDatabaseDao: InsightDatabaseDao): InsightDbHelper =
         InsightDbHelper(insightDatabaseDao)
 }
+

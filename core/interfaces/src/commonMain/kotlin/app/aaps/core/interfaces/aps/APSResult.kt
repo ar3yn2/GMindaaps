@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.aps
+﻿package app.gmaaps.core.interfaces.aps
 
-import app.aaps.core.data.model.GV
-import app.aaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.interfaces.constraints.Constraint
 import kotlinx.serialization.json.JsonObject
 
 interface APSResult {

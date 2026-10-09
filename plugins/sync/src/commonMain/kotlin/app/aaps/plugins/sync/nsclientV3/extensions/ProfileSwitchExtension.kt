@@ -1,19 +1,19 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.nssdk.localmodel.treatment.EventType
-import app.aaps.core.nssdk.localmodel.treatment.NSICfg
-import app.aaps.core.nssdk.localmodel.treatment.NSProfileSwitch
-import app.aaps.core.objects.extensions.getCustomizedName
-import app.aaps.core.objects.extensions.pureProfileFromJson
-import app.aaps.core.objects.profile.ProfileSealed
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.nssdk.localmodel.treatment.EventType
+import app.gmaaps.core.nssdk.localmodel.treatment.NSICfg
+import app.gmaaps.core.nssdk.localmodel.treatment.NSProfileSwitch
+import app.gmaaps.core.objects.extensions.getCustomizedName
+import app.gmaaps.core.objects.extensions.pureProfileFromJson
+import app.gmaaps.core.objects.profile.ProfileSealed
 
 /** [insulinFallback] stamps records uploaded without one — see `NsIncomingDataProcessor.fallbackICfg`. */
 fun NSProfileSwitch.toProfileSwitch(profileRepository: ProfileRepository, dateUtil: DateUtil, insulinFallback: ICfg): PS? {

@@ -1,9 +1,9 @@
-package app.aaps.core.objects.profile
+﻿package app.gmaaps.core.objects.profile
 
 import android.content.Context
-import app.aaps.core.objects.extensions.pureProfileFromJson
-import app.aaps.shared.impl.utils.DateUtilImpl
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.objects.extensions.pureProfileFromJson
+import app.gmaaps.shared.impl.utils.DateUtilImpl
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
 import org.junit.jupiter.api.BeforeEach
@@ -107,3 +107,4 @@ class ProfileTimeZoneTest : TestBase() {
             """"basal":[{"time":"00:00","value":1}],"target_low":[{"time":"00:00","value":4.5}],""" +
             """"target_high":[{"time":"00:00","value":7}],"units":"mmol","timezone":"$zone"}"""
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.openhumans.ui
+﻿package app.gmaaps.plugins.sync.openhumans.ui
 
 import android.content.Context
 import android.content.Intent
@@ -12,18 +12,18 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.ui.SnackbarHostPresence
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.AapsTheme
-import app.aaps.core.ui.compose.LocalPreferences
-import app.aaps.core.ui.compose.LocalSnackbarHostState
-import app.aaps.core.ui.compose.MetroAppCompatActivity
-import app.aaps.core.ui.compose.MetroViewModelFactoryOwner
-import app.aaps.core.ui.compose.dialogs.GlobalSnackbarHost
-import app.aaps.core.ui.locale.LocaleHelper
-import app.aaps.plugins.sync.di.AuthUrl
-import app.aaps.plugins.sync.openhumans.compose.OHLoginScreen
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.ui.SnackbarHostPresence
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.AapsTheme
+import app.gmaaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.ui.compose.LocalSnackbarHostState
+import app.gmaaps.core.ui.compose.MetroAppCompatActivity
+import app.gmaaps.core.ui.compose.MetroViewModelFactoryOwner
+import app.gmaaps.core.ui.compose.dialogs.GlobalSnackbarHost
+import app.gmaaps.core.ui.locale.LocaleHelper
+import app.gmaaps.plugins.sync.di.AuthUrl
+import app.gmaaps.plugins.sync.openhumans.compose.OHLoginScreen
 import dev.zacsweers.metro.Inject
 
 class OHLoginActivity : MetroAppCompatActivity() {
@@ -91,3 +91,4 @@ class OHLoginActivity : MetroAppCompatActivity() {
         }
     }
 }
+

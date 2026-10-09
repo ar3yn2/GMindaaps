@@ -1,17 +1,17 @@
-package app.aaps.plugins.sync.garmin
+﻿package app.gmaaps.plugins.sync.garmin
 
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.IntNonKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.plugins.sync.garmin.keys.GarminBooleanKey
-import app.aaps.plugins.sync.garmin.keys.GarminIntKey
-import app.aaps.plugins.sync.garmin.keys.GarminStringKey
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.IntNonKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.plugins.sync.garmin.keys.GarminBooleanKey
+import app.gmaaps.plugins.sync.garmin.keys.GarminIntKey
+import app.gmaaps.plugins.sync.garmin.keys.GarminStringKey
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertArrayEquals
@@ -465,3 +465,4 @@ class GarminPluginTest : TestBaseWithProfile() {
     }
 
 }
+

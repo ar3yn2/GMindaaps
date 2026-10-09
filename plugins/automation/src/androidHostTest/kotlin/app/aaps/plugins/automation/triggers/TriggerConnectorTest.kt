@@ -1,6 +1,6 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.plugins.automation.asJsonObject
+import app.gmaaps.plugins.automation.asJsonObject
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.json.JSONException
@@ -143,3 +143,4 @@ class TriggerConnectorTest : TriggerTestBase() {
         assertThat(t.friendlyDescription()).contains("TriggerFromTheFuture")
     }
 }
+

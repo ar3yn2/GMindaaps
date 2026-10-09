@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.clientcontrol
+﻿package app.gmaaps.core.nssdk.localmodel.clientcontrol
 
 import kotlinx.serialization.Serializable
 
@@ -26,3 +26,4 @@ data class PairingPayload(
     val secretHex: String,
     val expiresAt: Long
 )
+

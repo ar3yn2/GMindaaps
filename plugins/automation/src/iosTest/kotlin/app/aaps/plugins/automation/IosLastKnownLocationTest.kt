@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.CoreLocation.CLLocation
@@ -63,3 +63,4 @@ class IosLastKnownLocationTest {
         assertTrue(abs(prague.distanceFromLocation(east) - east.distanceFromLocation(prague)) < 1.0)
     }
 }
+

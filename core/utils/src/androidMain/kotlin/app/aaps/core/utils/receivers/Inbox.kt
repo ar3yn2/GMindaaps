@@ -1,4 +1,4 @@
-package app.aaps.core.utils.receivers
+﻿package app.gmaaps.core.utils.receivers
 
 import android.content.Context
 import androidx.work.ExistingWorkPolicy
@@ -120,3 +120,4 @@ class DataInbox(
         )
     }
 }
+

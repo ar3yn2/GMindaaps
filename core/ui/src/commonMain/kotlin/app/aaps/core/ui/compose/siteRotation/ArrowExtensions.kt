@@ -1,17 +1,17 @@
-package app.aaps.core.ui.compose.siteRotation
+﻿package app.gmaaps.core.ui.compose.siteRotation
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.data.model.TE.Arrow
-import app.aaps.core.ui.compose.icons.IcArrowFlat
-import app.aaps.core.ui.compose.icons.IcArrowFortyfiveDown
-import app.aaps.core.ui.compose.icons.IcArrowFortyfiveUp
-import app.aaps.core.ui.compose.icons.IcArrowLeft
-import app.aaps.core.ui.compose.icons.IcArrowLeftDown
-import app.aaps.core.ui.compose.icons.IcArrowLeftUp
-import app.aaps.core.ui.compose.icons.IcArrowNone
-import app.aaps.core.ui.compose.icons.IcArrowSimpleDown
-import app.aaps.core.ui.compose.icons.IcArrowSimpleUp
-import app.aaps.core.ui.compose.icons.library.unused.IcArrowCenter
+import app.gmaaps.core.data.model.TE.Arrow
+import app.gmaaps.core.ui.compose.icons.IcArrowFlat
+import app.gmaaps.core.ui.compose.icons.IcArrowFortyfiveDown
+import app.gmaaps.core.ui.compose.icons.IcArrowFortyfiveUp
+import app.gmaaps.core.ui.compose.icons.IcArrowLeft
+import app.gmaaps.core.ui.compose.icons.IcArrowLeftDown
+import app.gmaaps.core.ui.compose.icons.IcArrowLeftUp
+import app.gmaaps.core.ui.compose.icons.IcArrowNone
+import app.gmaaps.core.ui.compose.icons.IcArrowSimpleDown
+import app.gmaaps.core.ui.compose.icons.IcArrowSimpleUp
+import app.gmaaps.core.ui.compose.icons.library.unused.IcArrowCenter
 
 fun Arrow.directionToComposeIcon(): ImageVector =
     when (this) {
@@ -26,3 +26,4 @@ fun Arrow.directionToComposeIcon(): ImageVector =
         Arrow.CENTER     -> IcArrowCenter
         Arrow.NONE       -> IcArrowNone
     }
+

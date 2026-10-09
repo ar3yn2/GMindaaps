@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.openhumans.compose
+﻿package app.gmaaps.plugins.sync.openhumans.compose
 
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -79,3 +79,4 @@ internal val OHLogo: ImageVector by lazy {
         }
     }.build()
 }
+

@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.FD
-import app.aaps.core.data.model.IDs
-import app.aaps.core.nssdk.localmodel.food.NSFood
-import app.aaps.core.nssdk.mapper.convertToRemoteAndBack
-import app.aaps.plugins.sync.extensions.contentEqualsTo
+import app.gmaaps.core.data.model.FD
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.nssdk.localmodel.food.NSFood
+import app.gmaaps.core.nssdk.mapper.convertToRemoteAndBack
+import app.gmaaps.plugins.sync.extensions.contentEqualsTo
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -34,3 +34,4 @@ internal class FoodExtensionKtTest {
         assertThat(food.ids.contentEqualsTo(food2.ids)).isTrue()
     }
 }
+

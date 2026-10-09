@@ -1,10 +1,10 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.Bolus
-import app.aaps.database.entities.TABLE_BOLUSES
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.entities.Bolus
+import app.gmaaps.database.entities.TABLE_BOLUSES
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 
 @Dao
 internal interface BolusDao : TraceableDao<Bolus> {

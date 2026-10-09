@@ -1,8 +1,8 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.GlucoseValue
-import app.aaps.database.entities.TherapyEvent
-import app.aaps.database.entities.data.GlucoseUnit
+import app.gmaaps.database.entities.GlucoseValue
+import app.gmaaps.database.entities.TherapyEvent
+import app.gmaaps.database.entities.data.GlucoseUnit
 
 /**
  * Inserts data from a CGM source into the database

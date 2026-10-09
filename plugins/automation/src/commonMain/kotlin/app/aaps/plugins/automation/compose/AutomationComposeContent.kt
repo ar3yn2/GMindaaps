@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose
+﻿package app.gmaaps.plugins.automation.compose
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material.icons.Icons
@@ -28,31 +28,31 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigationevent.NavigationEventInfo
 import androidx.navigationevent.compose.NavigationBackHandler
 import androidx.navigationevent.compose.rememberNavigationEventState
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.core.objects.extensions.profileNames
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.masterEditingEnabled
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.automation.AutomationEventFactory
-import app.aaps.plugins.automation.AutomationRuntime
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.PairedBtDevices
-import app.aaps.plugins.automation.actions.ActionFactory
-import app.aaps.plugins.automation.compose.actions.ActionOption
-import app.aaps.plugins.automation.compose.actions.ChooseActionSheet
-import app.aaps.plugins.automation.triggers.Trigger
-import app.aaps.plugins.automation.triggers.TriggerConnector
-import app.aaps.plugins.automation.triggers.TriggerFactory
-import app.aaps.plugins.automation.triggers.TriggerLocation
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.core.objects.extensions.profileNames
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.masterEditingEnabled
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.automation.AutomationEventFactory
+import app.gmaaps.plugins.automation.AutomationRuntime
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.PairedBtDevices
+import app.gmaaps.plugins.automation.actions.ActionFactory
+import app.gmaaps.plugins.automation.compose.actions.ActionOption
+import app.gmaaps.plugins.automation.compose.actions.ChooseActionSheet
+import app.gmaaps.plugins.automation.triggers.Trigger
+import app.gmaaps.plugins.automation.triggers.TriggerConnector
+import app.gmaaps.plugins.automation.triggers.TriggerFactory
+import app.gmaaps.plugins.automation.triggers.TriggerLocation
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -470,8 +470,8 @@ class AutomationComposeContent(
 
     }
 
-    // Fully qualified: `Action` here is app.aaps.core.data.ue.Action, imported for the UserEntry logging.
-    private fun instantiateAction(className: String): app.aaps.plugins.automation.actions.Action? = actionFactory.instantiate(className)
+    // Fully qualified: `Action` here is app.gmaaps.core.data.ue.Action, imported for the UserEntry logging.
+    private fun instantiateAction(className: String): app.gmaaps.plugins.automation.actions.Action? = actionFactory.instantiate(className)
 
     private fun localProfileNames(): List<String> = profileRepository.profileNames()
 }
@@ -515,3 +515,4 @@ private fun AutomationOverflow(onRun: () -> Unit) {
         )
     }
 }
+

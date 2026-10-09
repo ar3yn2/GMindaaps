@@ -1,11 +1,11 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.text.AnnotatedString
-import app.aaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.StatusLevel
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -107,3 +107,4 @@ class PumpOverviewScreenTest {
         compose.onNodeWithText("Hidden action").assertDoesNotExist()
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.shared.impl.utils
+﻿package app.gmaaps.shared.impl.utils
 
 import android.content.Context
 import android.text.format.DateFormat
@@ -1469,17 +1469,17 @@ class DateUtilImplTest {
      * A fake implementation of ResourceHelper for unit testing.
      * This class implements the full ResourceHelper interface, providing predictable values.
      */
-    class FakeResourceHelper : app.aaps.core.interfaces.resources.ResourceHelper {
+    class FakeResourceHelper : app.gmaaps.core.interfaces.resources.ResourceHelper {
 
         // --- Methods genuinely used by DateUtil tests ---
         override fun gs(id: Int): String = getStringForId(id)
         override fun gs(id: Int, vararg args: Any?): String {
             return when (id) {
-                app.aaps.core.interfaces.R.string.minago      -> "${args.firstOrNull() ?: ""} min ago"
-                app.aaps.core.interfaces.R.string.minago_long -> "${args.firstOrNull() ?: ""} minutes ago"
-                app.aaps.core.interfaces.R.string.secago      -> "${args.firstOrNull() ?: ""} sec ago"
+                app.gmaaps.core.interfaces.R.string.minago      -> "${args.firstOrNull() ?: ""} min ago"
+                app.gmaaps.core.interfaces.R.string.minago_long -> "${args.firstOrNull() ?: ""} minutes ago"
+                app.gmaaps.core.interfaces.R.string.secago      -> "${args.firstOrNull() ?: ""} sec ago"
 
-                app.aaps.core.interfaces.R.string.hoursago    -> {
+                app.gmaaps.core.interfaces.R.string.hoursago    -> {
                     val hours = when (val arg = args.firstOrNull()) {
                         is Double -> arg.toLong()
                         is Long   -> arg
@@ -1488,8 +1488,8 @@ class DateUtilImplTest {
                     "${hours} hours ago"
                 }
 
-                app.aaps.core.interfaces.R.string.days_ago_round,
-                app.aaps.core.interfaces.R.string.days_ago    -> {
+                app.gmaaps.core.interfaces.R.string.days_ago_round,
+                app.gmaaps.core.interfaces.R.string.days_ago    -> {
                     val days = when (val arg = args.firstOrNull()) {
                         is Double -> arg.toLong()
                         is Long   -> arg
@@ -1504,19 +1504,19 @@ class DateUtilImplTest {
 
         private fun getStringForId(id: Int): String {
             return when (id) {
-                app.aaps.core.interfaces.R.string.shortday     -> "d"
-                app.aaps.core.interfaces.R.string.shorthour    -> "h"
-                app.aaps.core.interfaces.R.string.shortminute  -> "m"
-                app.aaps.core.interfaces.R.string.unit_seconds -> "seconds"
-                app.aaps.core.interfaces.R.string.unit_minutes -> "minutes"
-                app.aaps.core.interfaces.R.string.unit_hours   -> "hours"
-                app.aaps.core.interfaces.R.string.unit_days    -> "days"
-                app.aaps.core.interfaces.R.string.unit_weeks   -> "weeks"
-                app.aaps.core.interfaces.R.string.hours        -> "hours"
-                app.aaps.core.interfaces.R.string.today        -> "Today"
-                app.aaps.core.interfaces.R.string.yesterday    -> "Yesterday"
-                app.aaps.core.interfaces.R.string.tomorrow     -> "Tomorrow"
-                app.aaps.core.interfaces.R.string.later_today  -> "Later today"
+                app.gmaaps.core.interfaces.R.string.shortday     -> "d"
+                app.gmaaps.core.interfaces.R.string.shorthour    -> "h"
+                app.gmaaps.core.interfaces.R.string.shortminute  -> "m"
+                app.gmaaps.core.interfaces.R.string.unit_seconds -> "seconds"
+                app.gmaaps.core.interfaces.R.string.unit_minutes -> "minutes"
+                app.gmaaps.core.interfaces.R.string.unit_hours   -> "hours"
+                app.gmaaps.core.interfaces.R.string.unit_days    -> "days"
+                app.gmaaps.core.interfaces.R.string.unit_weeks   -> "weeks"
+                app.gmaaps.core.interfaces.R.string.hours        -> "hours"
+                app.gmaaps.core.interfaces.R.string.today        -> "Today"
+                app.gmaaps.core.interfaces.R.string.yesterday    -> "Yesterday"
+                app.gmaaps.core.interfaces.R.string.tomorrow     -> "Tomorrow"
+                app.gmaaps.core.interfaces.R.string.later_today  -> "Later today"
                 else                                           -> "unhandled" // Default for unhandled resources
             }
         }
@@ -1527,3 +1527,4 @@ class DateUtilImplTest {
         override fun shortTextMode(): Boolean = true
     }
 }
+

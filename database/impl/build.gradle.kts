@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     // NOT com.android.library. AGP 9 refuses that plugin together with the multiplatform plugin.
@@ -20,7 +20,7 @@ ksp {
 
 kotlin {
     android {
-        namespace = "app.aaps.database.impl"
+        namespace = "app.gmaaps.database.impl"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         // Needed for the schema JSONs under src/androidDeviceTest/assets to be packaged: with resources
@@ -162,3 +162,4 @@ dependencies {
     // only looked for at runtime.
     add("kspJvm", libs.androidx.room.compiler)
 }
+

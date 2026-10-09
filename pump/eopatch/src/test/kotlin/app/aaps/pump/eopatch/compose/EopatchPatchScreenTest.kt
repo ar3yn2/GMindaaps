@@ -1,12 +1,12 @@
-package app.aaps.pump.eopatch.compose
+﻿package app.gmaaps.pump.eopatch.compose
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.pump.eopatch.R
-import app.aaps.pump.eopatch.code.PatchStep
+import app.gmaaps.pump.eopatch.R
+import app.gmaaps.pump.eopatch.code.PatchStep
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -96,3 +96,4 @@ class EopatchPatchScreenTest : EopatchViewModelTestBase() {
         compose.onNodeWithText(context.getString(R.string.patch_discard_complete_title)).assertDoesNotExist()
     }
 }
+

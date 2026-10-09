@@ -1,7 +1,7 @@
-package app.aaps.pump.common.defs
+﻿package app.gmaaps.pump.common.defs
 
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.common.R
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.common.R
 
 /**
  * This file was taken from GGC - GNU Gluco Control (ggc.sourceforge.net), application for diabetes

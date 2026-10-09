@@ -1,6 +1,6 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.plugins.automation.asJsonObject
+import app.gmaaps.plugins.automation.asJsonObject
 import org.junit.jupiter.api.Test
 import kotlin.test.assertIs
 
@@ -11,7 +11,7 @@ class TriggerDummyTest : TriggerTestBase() {
         var trigger: Trigger? = triggerFactory.instantiate("{\"data\":{},\"type\":\"info.nightscout.androidaps.plugins.general.automation.triggers.TriggerDummy\"}".asJsonObject())
         assertIs<TriggerDummy>(trigger)
 
-        trigger = triggerFactory.instantiate("{\"data\":{},\"type\":\"app.aaps.plugins.automation.triggers.TriggerDummy\"}".asJsonObject())
+        trigger = triggerFactory.instantiate("{\"data\":{},\"type\":\"app.gmaaps.plugins.automation.triggers.TriggerDummy\"}".asJsonObject())
         assertIs<TriggerDummy>(trigger)
 
         trigger = triggerFactory.instantiate("{\"data\":{},\"type\":\"TriggerDummy\"}".asJsonObject())
@@ -19,3 +19,4 @@ class TriggerDummyTest : TriggerTestBase() {
     }
 
 }
+

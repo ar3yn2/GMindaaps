@@ -1,15 +1,15 @@
-package app.aaps.plugins.sync.nsclientV3
+﻿package app.gmaaps.plugins.sync.nsclientV3
 
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.L
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.plugins.sync.SyncStringsValues
-import app.aaps.plugins.sync.nsclientV3.keys.NsclientBooleanKey
-import app.aaps.plugins.sync.nsclientV3.ws.NsConnection
-import app.aaps.plugins.sync.nsclientV3.ws.NsLoadExecutor
-import app.aaps.plugins.sync.nsclientV3.ws.NsLoadStep
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.L
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.plugins.sync.SyncStringsValues
+import app.gmaaps.plugins.sync.nsclientV3.keys.NsclientBooleanKey
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsConnection
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsLoadExecutor
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsLoadStep
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.emptyFlow
@@ -141,3 +141,4 @@ class NSClientV3PluginSchedulingTest : TestBaseWithProfile() {
         verify(nsLoadExecutor, never()).runReplacing(any())
     }
 }
+

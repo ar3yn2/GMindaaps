@@ -1,9 +1,9 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.eopatch.code.BasalStatus
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.eopatch.code.BasalStatus
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -240,3 +240,4 @@ class NormalBasalManagerTest : TestBaseWithProfile() {
         assertThat(manager.normalBasal.status).isEqualTo(BasalStatus.SELECTED)
     }
 }
+

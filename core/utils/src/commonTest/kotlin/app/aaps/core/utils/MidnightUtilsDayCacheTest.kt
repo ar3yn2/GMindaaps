@@ -1,4 +1,4 @@
-package app.aaps.core.utils
+﻿package app.gmaaps.core.utils
 
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
@@ -99,3 +99,4 @@ class MidnightUtilsDayCacheTest {
 
     private fun TimeZone.offsetAtMillis(t: Long) = Instant.fromEpochMilliseconds(t).toLocalDateTime(this).let { it.toInstant(TimeZone.UTC).toEpochMilliseconds() - t }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,7 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.AapsSpacing
 
 @Immutable
 data class WizardButton(
@@ -90,3 +90,4 @@ fun WizardStepLayout(
         }
     }
 }
+

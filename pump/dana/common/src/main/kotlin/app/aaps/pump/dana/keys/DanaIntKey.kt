@@ -1,9 +1,9 @@
-package app.aaps.pump.dana.keys
+﻿package app.gmaaps.pump.dana.keys
 
-import app.aaps.core.keys.PreferenceType
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.dana.R
+import app.gmaaps.core.keys.PreferenceType
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.dana.R
 
 enum class DanaIntKey(
     override val key: String,
@@ -18,7 +18,7 @@ enum class DanaIntKey(
     BolusSpeed(
         key = "danars_bolusspeed",
         defaultValue = 0,
-        titleResId = app.aaps.core.ui.R.string.bolusspeed,
+        titleResId = app.gmaaps.core.ui.R.string.bolusspeed,
         preferenceType = PreferenceType.LIST,
         entriesResIds = mapOf(
             0 to R.string.bolus_speed_12,
@@ -31,3 +31,4 @@ enum class DanaIntKey(
     override val title: TextRef = TextRef.AndroidRes(titleResId)
     override val entries: Map<Int, TextRef> = entriesResIds.mapValues { TextRef.AndroidRes(it.value) }
 }
+

@@ -1,10 +1,10 @@
-package app.aaps.core.objects.wizard
+﻿package app.gmaaps.core.objects.wizard
 
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.keys.StringNonKey
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.serialization.json.Json
@@ -142,3 +142,4 @@ class QuickWizardTest : TestBaseWithProfile() {
         assertThat(buttonTexts()).containsExactly("Meal", "Lunch", "Dinner").inOrder()
     }
 }
+

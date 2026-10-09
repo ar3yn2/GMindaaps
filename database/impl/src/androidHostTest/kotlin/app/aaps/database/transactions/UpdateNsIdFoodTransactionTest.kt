@@ -1,9 +1,9 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.DelegatedAppDatabase
-import app.aaps.database.daos.FoodDao
-import app.aaps.database.entities.Food
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.DelegatedAppDatabase
+import app.gmaaps.database.daos.FoodDao
+import app.gmaaps.database.entities.Food
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -88,3 +88,4 @@ class UpdateNsIdFoodTransactionTest {
         interfaceIDs_backing = InterfaceIDs(nightscoutId = nsId)
     ).also { it.id = id }
 }
+

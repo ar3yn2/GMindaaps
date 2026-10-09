@@ -1,8 +1,8 @@
-package app.aaps.pump.dana.di
+﻿package app.gmaaps.pump.dana.di
 
 import android.content.Context
-import app.aaps.pump.dana.database.DanaHistoryDatabase
-import app.aaps.pump.dana.database.DanaHistoryRecordDao
+import app.gmaaps.pump.dana.database.DanaHistoryDatabase
+import app.gmaaps.pump.dana.database.DanaHistoryRecordDao
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -30,3 +30,4 @@ object DanaHistoryBindings {
     fun provideHistoryRecordDao(danaHistoryDatabase: DanaHistoryDatabase): DanaHistoryRecordDao =
         danaHistoryDatabase.historyRecordDao()
 }
+

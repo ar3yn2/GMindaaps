@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.code
+﻿package app.gmaaps.pump.eopatch.code
 
 enum class PatchLifecycle(val rawValue: Int) {
     SHUTDOWN(1),
@@ -17,3 +17,4 @@ enum class PatchLifecycle(val rawValue: Int) {
         get() = this == ACTIVATED
 
 }
+

@@ -1,11 +1,11 @@
-package app.aaps.wear
+﻿package app.gmaaps.wear
 
 import android.content.Context
 import android.content.SharedPreferences
-import app.aaps.core.interfaces.sharedPreferences.SP
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.wear.interaction.utils.Constants
-import app.aaps.wear.testing.mocks.SharedPreferencesMock
+import app.gmaaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.wear.interaction.utils.Constants
+import app.gmaaps.wear.testing.mocks.SharedPreferencesMock
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.ArgumentMatchers
@@ -69,3 +69,4 @@ open class WearTestBase {
             REF_NOW - (Constants.DAY_IN_MS * d + Constants.HOUR_IN_MS * h + Constants.MINUTE_IN_MS * m + Constants.SECOND_IN_MS * s)
     }
 }
+

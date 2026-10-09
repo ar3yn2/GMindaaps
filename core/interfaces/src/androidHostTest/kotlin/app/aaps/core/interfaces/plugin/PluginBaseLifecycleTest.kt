@@ -1,9 +1,9 @@
-package app.aaps.core.interfaces.plugin
+﻿package app.gmaaps.core.interfaces.plugin
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.resources.TextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.async
@@ -123,3 +123,4 @@ class PluginBaseLifecycleTest {
         assertThat(sut.started).isFalse()
     }
 }
+

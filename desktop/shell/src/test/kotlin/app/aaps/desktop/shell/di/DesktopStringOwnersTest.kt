@@ -1,16 +1,16 @@
-package app.aaps.desktop.shell.di
+﻿package app.gmaaps.desktop.shell.di
 
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.resources.TextRefValueRegistry
-import app.aaps.core.keys.KeysStrings
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.implementation.ImplementationStrings
-import app.aaps.implementation.resources.GeneratedTextResolver
-import app.aaps.plugins.aps.ApsStrings
-import app.aaps.plugins.main.MainStrings
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.ui.UiStrings
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.resources.TextRefValueRegistry
+import app.gmaaps.core.keys.KeysStrings
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.implementation.ImplementationStrings
+import app.gmaaps.implementation.resources.GeneratedTextResolver
+import app.gmaaps.plugins.aps.ApsStrings
+import app.gmaaps.plugins.main.MainStrings
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.ui.UiStrings
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test
@@ -78,3 +78,4 @@ class DesktopStringOwnersTest {
         assertEquals("greeting", resolver.gs(TextRef.Named("no_such_module", "greeting")))
     }
 }
+

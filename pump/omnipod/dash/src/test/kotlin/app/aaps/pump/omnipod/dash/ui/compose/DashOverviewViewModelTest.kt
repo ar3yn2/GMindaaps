@@ -1,26 +1,26 @@
-package app.aaps.pump.omnipod.dash.ui.compose
+﻿package app.gmaaps.pump.omnipod.dash.ui.compose
 
 import android.content.Context
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventQueueChanged
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.pump.omnipod.common.EventOmnipodDashPumpValuesChanged
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ActivationProgress
-import app.aaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
-import app.aaps.pump.omnipod.dash.OmnipodDashPumpPlugin
-import app.aaps.pump.omnipod.dash.R
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventQueueChanged
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.pump.omnipod.common.EventOmnipodDashPumpValuesChanged
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ActivationProgress
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
+import app.gmaaps.pump.omnipod.dash.OmnipodDashPumpPlugin
+import app.gmaaps.pump.omnipod.dash.R
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -36,8 +36,8 @@ import org.mockito.MockitoAnnotations
 import org.mockito.kotlin.any
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.whenever
-import app.aaps.core.ui.R as CoreUiR
-import app.aaps.pump.omnipod.common.R as CommonR
+import app.gmaaps.core.ui.R as CoreUiR
+import app.gmaaps.pump.omnipod.common.R as CommonR
 
 /**
  * Unit test for [DashOverviewViewModel]'s [PumpOverviewUiState] assembly (the initial value produced
@@ -133,3 +133,4 @@ internal class DashOverviewViewModelTest {
         assertThat(btQualityRow.level).isEqualTo(StatusLevel.CRITICAL)
     }
 }
+

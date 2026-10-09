@@ -1,8 +1,8 @@
-package app.aaps.pump.diaconn.packet
+﻿package app.gmaaps.pump.diaconn.packet
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.pump.diaconn.DiaconnG8Pump
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.pump.diaconn.DiaconnG8Pump
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -138,3 +138,4 @@ class BatteryWarningReportPacketTest : TestBaseWithProfile() {
         return data
     }
 }
+

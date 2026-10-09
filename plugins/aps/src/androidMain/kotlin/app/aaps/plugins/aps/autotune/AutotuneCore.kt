@@ -1,12 +1,12 @@
-package app.aaps.plugins.aps.autotune
+﻿package app.gmaaps.plugins.aps.autotune
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.interfaces.utils.Round
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.utils.Percentile
-import app.aaps.plugins.aps.autotune.data.ATProfile
-import app.aaps.plugins.aps.autotune.data.PreppedGlucose
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.interfaces.utils.Round
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.utils.Percentile
+import app.gmaaps.plugins.aps.autotune.data.ATProfile
+import app.gmaaps.plugins.aps.autotune.data.PreppedGlucose
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn

@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.database
+﻿package app.gmaaps.pump.equil.database
 
 import android.content.Context
 import androidx.room.Database
@@ -29,3 +29,4 @@ abstract class EquilHistoryDatabase : RoomDatabase() {
                 .build()
     }
 }
+

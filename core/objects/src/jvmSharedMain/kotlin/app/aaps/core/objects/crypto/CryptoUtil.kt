@@ -1,8 +1,8 @@
-package app.aaps.core.objects.crypto
+﻿package app.gmaaps.core.objects.crypto
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.protection.PasswordHasher
-import app.aaps.core.utils.toHex
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.protection.PasswordHasher
+import app.gmaaps.core.utils.toHex
 import org.spongycastle.util.encoders.Base64
 import java.nio.ByteBuffer
 import java.security.MessageDigest

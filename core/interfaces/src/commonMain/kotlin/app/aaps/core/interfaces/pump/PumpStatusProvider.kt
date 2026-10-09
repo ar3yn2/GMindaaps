@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
 import kotlinx.serialization.json.JsonObject
 
@@ -14,3 +14,4 @@ interface PumpStatusProvider {
      */
     suspend fun generatePumpJsonStatus(): JsonObject
 }
+

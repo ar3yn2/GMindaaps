@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.rx
+﻿package app.gmaaps.core.interfaces.rx
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
@@ -37,3 +37,4 @@ fun <T> Flow<T>.chunkedOnQuietPeriod(quietPeriodMs: Long): Flow<List<T>> = flow 
         emit(complete)
     }.collect { emit(it) }
 }
+

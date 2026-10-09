@@ -1,20 +1,20 @@
-package app.aaps.plugins.sensitivity
+﻿package app.gmaaps.plugins.sensitivity
 
 import androidx.collection.LongSparseArray
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.aps.AutosensData
-import app.aaps.core.interfaces.aps.AutosensDataStore
-import app.aaps.core.interfaces.aps.AutosensResult
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.IntKey
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.aps.AutosensData
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.core.interfaces.aps.AutosensResult
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import org.junit.jupiter.api.BeforeEach
 import org.mockito.kotlin.any
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.whenever
 
 /**
- * Shared setup for the sensitivity [app.aaps.core.interfaces.aps.Sensitivity.detectSensitivity] tests.
+ * Shared setup for the sensitivity [app.gmaaps.core.interfaces.aps.Sensitivity.detectSensitivity] tests.
  *
  * Test inputs use the SAME deviation on every data point on purpose. The median (used by AAPS and
  * Oref1) and the weighted average (used by WeightedAverage) of a constant series is that same
@@ -119,3 +119,4 @@ abstract class SensitivityTestBase : TestBaseWithProfile() {
         return ads
     }
 }
+

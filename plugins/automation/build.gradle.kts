@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     // NOT com.android.library. AGP 9 refuses that plugin together with the multiplatform plugin.
@@ -15,7 +15,7 @@ plugins {
 // strings themselves do not move, and AAPT keeps resolving them on Android exactly as before.
 val generateAutomationStrings = tasks.register<GenerateKeyStringsTask>("generateAutomationStrings") {
     resDir.set(layout.projectDirectory.dir("src/androidMain/res"))
-    packageName.set("app.aaps.plugins.automation")
+    packageName.set("app.gmaaps.plugins.automation")
     owner.set("automation")
     objectName.set("AutomationStrings")
     idsObjectName.set("AutomationStringIds")
@@ -29,7 +29,7 @@ val generateAutomationStrings = tasks.register<GenerateKeyStringsTask>("generate
 
 kotlin {
     android {
-        namespace = "app.aaps.plugins.automation"
+        namespace = "app.gmaaps.plugins.automation"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         androidResources { enable = true }
@@ -159,3 +159,4 @@ tasks.withType<Test> {
         excludes = listOf("jdk.internal.*")
     }
 }
+

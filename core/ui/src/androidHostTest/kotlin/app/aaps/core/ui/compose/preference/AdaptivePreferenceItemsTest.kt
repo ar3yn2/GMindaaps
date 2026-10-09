@@ -1,17 +1,17 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onRoot
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.LocalConfig
-import app.aaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.LocalConfig
+import app.gmaaps.core.ui.compose.LocalPreferences
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -19,7 +19,7 @@ import org.mockito.kotlin.mock
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.interfaces.configuration.Config as AppConfig
+import app.gmaaps.core.interfaces.configuration.Config as AppConfig
 
 /**
  * Robolectric render tests for the Adaptive*PreferenceItem composables (key-driven rows), mirroring
@@ -91,3 +91,4 @@ class AdaptivePreferenceItemsTest {
         compose.onRoot().assertIsDisplayed()
     }
 }
+

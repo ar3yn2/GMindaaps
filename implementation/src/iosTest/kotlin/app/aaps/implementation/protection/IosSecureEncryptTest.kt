@@ -1,7 +1,7 @@
-package app.aaps.implementation.protection
+﻿package app.gmaaps.implementation.protection
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -161,3 +161,4 @@ class IosSecureEncryptTest {
         assertTrue(key.contentEquals(keychain.load("alias1")))
     }
 }
+

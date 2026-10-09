@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.pump.eopatch.alarm.AlarmCode
+import app.gmaaps.pump.eopatch.alarm.AlarmCode
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -276,3 +276,4 @@ class AlarmsTest {
         assertThat(item?.triggerTimeMilli).isEqualTo(item?.createTimestamp?.plus(triggerAfter))
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.overview.chips
+﻿package app.gmaaps.ui.compose.overview.chips
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.Modifier
@@ -8,8 +8,8 @@ import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.core.data.model.TT
-import app.aaps.ui.compose.main.TempTargetChipState
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.ui.compose.main.TempTargetChipState
 import com.google.common.truth.Truth.assertThat
 import org.junit.Rule
 import org.junit.Test
@@ -81,3 +81,4 @@ class TempTargetChipTest {
         assertThat(clicks).isEqualTo(1)
     }
 }
+

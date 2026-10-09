@@ -1,18 +1,18 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
 import android.os.SystemClock
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.di.ApplicationScope
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.Command
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.pump.eopatch.alarm.AlarmCode
-import app.aaps.pump.eopatch.alarm.IAlarmRegistry
-import app.aaps.pump.eopatch.core.api.BasalPause
-import app.aaps.pump.eopatch.core.response.PatchBooleanResponse
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.di.ApplicationScope
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.Command
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.pump.eopatch.alarm.AlarmCode
+import app.gmaaps.pump.eopatch.alarm.IAlarmRegistry
+import app.gmaaps.pump.eopatch.core.api.BasalPause
+import app.gmaaps.pump.eopatch.core.response.PatchBooleanResponse
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -146,3 +146,4 @@ class PauseBasalTask(
         }
     }
 }
+

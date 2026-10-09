@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.definition
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.definition
 
 import java.io.Serializable
 import kotlin.experimental.and
@@ -22,3 +22,4 @@ class ProgramReminder(
         return "ProgramReminder(atStart=$atStart, atEnd=$atEnd, atInterval=$atInterval)"
     }
 }
+

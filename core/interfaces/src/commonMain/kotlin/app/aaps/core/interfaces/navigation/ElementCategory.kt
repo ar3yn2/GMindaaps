@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.navigation
+﻿package app.gmaaps.core.interfaces.navigation
 
 /**
  * Logical grouping for configuration screens and bottom sheets.
@@ -15,3 +15,4 @@ enum class ElementCategory {
     NAVIGATION,
     INTERNAL
 }
+

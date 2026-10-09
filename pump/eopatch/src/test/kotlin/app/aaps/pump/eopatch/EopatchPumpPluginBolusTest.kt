@@ -1,15 +1,15 @@
-package app.aaps.pump.eopatch
+﻿package app.gmaaps.pump.eopatch
 
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.pump.eopatch.core.scan.BleConnectionState
-import app.aaps.pump.eopatch.vo.PatchLifecycleEvent
-import app.aaps.pump.eopatch.vo.PatchState
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.pump.eopatch.core.scan.BleConnectionState
+import app.gmaaps.pump.eopatch.vo.PatchLifecycleEvent
+import app.gmaaps.pump.eopatch.vo.PatchState
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Single
 import kotlinx.coroutines.runBlocking
@@ -48,7 +48,7 @@ class EopatchPumpPluginBolusTest : EopatchTestBase() {
         val patchState = PatchState()
         whenever(eopatchPreferenceManager.patchState).thenReturn(patchState)
 
-        val bolusCurrent = app.aaps.pump.eopatch.vo.BolusCurrent()
+        val bolusCurrent = app.gmaaps.pump.eopatch.vo.BolusCurrent()
         whenever(eopatchPreferenceManager.bolusCurrent).thenReturn(bolusCurrent)
 
         // Set patch as activated
@@ -166,7 +166,7 @@ class EopatchPumpPluginBolusTest : EopatchTestBase() {
 
     @Test
     fun `executeCustomCommand should return null`() {
-        val result = plugin.executeCustomCommand(object : app.aaps.core.interfaces.queue.CustomCommand {
+        val result = plugin.executeCustomCommand(object : app.gmaaps.core.interfaces.queue.CustomCommand {
             override val statusDescription: String = "TEST"
         })
 
@@ -176,8 +176,8 @@ class EopatchPumpPluginBolusTest : EopatchTestBase() {
     @Test
     fun `timezoneOrDSTChanged should not throw exception`() = runTest {
         // Should not throw
-        plugin.timezoneOrDSTChanged(app.aaps.core.data.pump.defs.TimeChangeType.TimezoneChanged)
-        plugin.timezoneOrDSTChanged(app.aaps.core.data.pump.defs.TimeChangeType.DSTStarted)
+        plugin.timezoneOrDSTChanged(app.gmaaps.core.data.pump.defs.TimeChangeType.TimezoneChanged)
+        plugin.timezoneOrDSTChanged(app.gmaaps.core.data.pump.defs.TimeChangeType.DSTStarted)
     }
 
     @Test
@@ -218,3 +218,4 @@ class EopatchPumpPluginBolusTest : EopatchTestBase() {
         // Should not throw exception
     }
 }
+

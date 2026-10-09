@@ -1,34 +1,34 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.notifications.AapsNotification
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.protection.SecureEncrypt
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.BolusProgressState
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.scenes.ActiveSceneSync
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.LongComposedKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
-import app.aaps.core.nssdk.interfaces.NSAndroidClient
-import app.aaps.core.nssdk.localmodel.clientcontrol.PairingPayload
-import app.aaps.core.nssdk.localmodel.treatment.CreateUpdateResponse
-import app.aaps.plugins.sync.SyncStringsValues
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.services.RunningConfigurationPublisher
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.notifications.AapsNotification
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.protection.SecureEncrypt
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.BolusProgressState
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.scenes.ActiveSceneSync
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.LongComposedKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.nssdk.interfaces.NSAndroidClient
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.PairingPayload
+import app.gmaaps.core.nssdk.localmodel.treatment.CreateUpdateResponse
+import app.gmaaps.plugins.sync.SyncStringsValues
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.services.RunningConfigurationPublisher
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -270,3 +270,4 @@ class ClientControlUplinkIntegrationTest {
 
     private fun clientId(): String = clientStrings[StringNonKey.NsClientControlClientId.key] ?: error("not paired")
 }
+

@@ -1,14 +1,14 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action;
 
 import androidx.annotation.NonNull;
 
 import org.joda.time.Duration;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.BeepConfigCommand;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
-import app.aaps.pump.omnipod.eros.driver.definition.BeepConfigType;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.BeepConfigCommand;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
+import app.gmaaps.pump.omnipod.eros.driver.definition.BeepConfigType;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
 
 public class ConfigureBeepAction implements OmnipodAction<StatusResponse> {
     @NonNull private final ErosPodStateManager podStateManager;
@@ -48,3 +48,4 @@ public class ConfigureBeepAction implements OmnipodAction<StatusResponse> {
                         bolusCompletionBeep, bolusIntervalBeep));
     }
 }
+

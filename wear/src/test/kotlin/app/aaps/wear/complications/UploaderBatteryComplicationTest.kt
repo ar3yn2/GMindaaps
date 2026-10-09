@@ -1,11 +1,11 @@
-package app.aaps.wear.complications
+﻿package app.gmaaps.wear.complications
 
 import androidx.wear.watchface.complications.data.ComplicationType
 import androidx.wear.watchface.complications.data.MonochromaticImageComplicationData
 import androidx.wear.watchface.complications.data.RangedValueComplicationData
 import androidx.wear.watchface.complications.data.ShortTextComplicationData
 import androidx.wear.watchface.complications.data.SmallImageComplicationData
-import app.aaps.wear.AAPSLoggerTest
+import app.gmaaps.wear.AAPSLoggerTest
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -55,3 +55,4 @@ internal class UploaderBatteryComplicationTest {
         assertThat(sut().getProviderCanonicalName()).contains("UploaderBatteryComplication")
     }
 }
+

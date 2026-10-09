@@ -1,4 +1,4 @@
-package app.aaps.core.ui.elements
+﻿package app.gmaaps.core.ui.elements
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -66,3 +66,4 @@ class WeekDayTest {
         assertThat(actual).hasSize(1)
     }
 }
+

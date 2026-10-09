@@ -1,9 +1,9 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.pump.medtrum.comm.enums.CommandType.GET_DEVICE_TYPE
-import app.aaps.pump.medtrum.extension.toInt
-import app.aaps.pump.medtrum.extension.toLong
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.pump.medtrum.comm.enums.CommandType.GET_DEVICE_TYPE
+import app.gmaaps.pump.medtrum.extension.toInt
+import app.gmaaps.pump.medtrum.extension.toLong
 
 class GetDeviceTypePacket(injector: MetroMemberInjector) : MedtrumPacket(injector) {
 
@@ -33,3 +33,4 @@ class GetDeviceTypePacket(injector: MetroMemberInjector) : MedtrumPacket(injecto
         return success
     }
 }
+

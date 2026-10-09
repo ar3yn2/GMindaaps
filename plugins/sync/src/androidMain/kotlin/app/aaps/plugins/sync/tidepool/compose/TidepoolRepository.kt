@@ -1,8 +1,8 @@
-package app.aaps.plugins.sync.tidepool.compose
+﻿package app.gmaaps.plugins.sync.tidepool.compose
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.plugins.sync.tidepool.auth.AuthFlowOut
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.plugins.sync.tidepool.auth.AuthFlowOut
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -57,3 +57,4 @@ class TidepoolRepository(
         _logList.value = emptyList()
     }
 }
+

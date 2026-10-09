@@ -1,6 +1,6 @@
-package app.aaps.wear.complications.cwf
+﻿package app.gmaaps.wear.complications.cwf
 
-import app.aaps.wear.watchfaces.CustomWatchface.RenderLayer.Refresh
+import app.gmaaps.wear.watchfaces.CustomWatchface.RenderLayer.Refresh
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -76,3 +76,4 @@ class CwfCachePolicyTest {
             .isEmpty()
     }
 }
+

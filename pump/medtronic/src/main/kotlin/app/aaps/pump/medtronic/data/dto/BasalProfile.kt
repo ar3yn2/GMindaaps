@@ -1,11 +1,11 @@
-package app.aaps.pump.medtronic.data.dto
+﻿package app.gmaaps.pump.medtronic.data.dto
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.defs.determineCorrectBasalSize
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.defs.determineCorrectBasalSize
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
 import com.google.gson.annotations.Expose
 import org.joda.time.Instant
 import java.util.Locale

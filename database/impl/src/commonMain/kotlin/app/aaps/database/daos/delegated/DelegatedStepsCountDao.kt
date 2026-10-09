@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.StepsCountDao
-import app.aaps.database.entities.StepsCount
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.StepsCountDao
+import app.gmaaps.database.entities.StepsCount
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedStepsCountDao(
     changes: MutableList<DBEntry>,
@@ -19,3 +19,4 @@ internal class DelegatedStepsCountDao(
         return dao.updateExistingEntry(entry)
     }
 }
+

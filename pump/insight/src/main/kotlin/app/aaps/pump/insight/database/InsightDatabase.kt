@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.database
+﻿package app.gmaaps.pump.insight.database
 
 import android.content.Context
 import androidx.room.Database
@@ -34,3 +34,4 @@ abstract class InsightDatabase : RoomDatabase() {
                 .build()
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.ble
+﻿package app.gmaaps.pump.eopatch.core.ble
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -33,3 +33,4 @@ class PatchFuncTest {
         assertThat(PatchFunc.valueOf("DEACTIVATE")).isEqualTo(PatchFunc.DEACTIVATE)
     }
 }
+

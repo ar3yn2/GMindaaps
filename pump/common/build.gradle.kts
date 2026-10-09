@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.metro)
     id("kotlinx-serialization")
@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "app.aaps.pump.common"
+    namespace = "app.gmaaps.pump.common"
 }
 
 dependencies {
@@ -25,3 +25,4 @@ dependencies {
     implementation(libs.com.google.code.gson)
 
 }
+

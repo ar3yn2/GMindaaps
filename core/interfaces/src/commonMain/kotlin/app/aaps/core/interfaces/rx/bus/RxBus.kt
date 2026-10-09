@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.rx.bus
+﻿package app.gmaaps.core.interfaces.rx.bus
 
-import app.aaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.events.Event
 import kotlinx.coroutines.flow.Flow
 import kotlin.reflect.KClass
 
@@ -20,7 +20,7 @@ interface RxBus {
      * Subscribes to events of a specific type.
      *
      * The bus has no replay, so a collector only sees what is sent after it starts. Collect with
-     * `app.aaps.core.interfaces.rx.collectResilient` and `CoroutineStart.UNDISPATCHED` when the
+     * `app.gmaaps.core.interfaces.rx.collectResilient` and `CoroutineStart.UNDISPATCHED` when the
      * subscription is made from a constructor or `onStart`, so nothing sent right after it is lost.
      *
      * @param eventType The class of the event to listen for.
@@ -28,3 +28,4 @@ interface RxBus {
      */
     fun <T : Event> toFlow(eventType: KClass<T>): Flow<T>
 }
+

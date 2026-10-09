@@ -1,4 +1,4 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
 /**
  * Defines the UI type for rendering a preference.
@@ -24,3 +24,4 @@ enum class PreferenceType {
     /** Launches an Activity (for IntentPreferenceKey) */
     ACTIVITY
 }
+

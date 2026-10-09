@@ -1,27 +1,27 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.message
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.message
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.command.BleCommand
-import app.aaps.pump.omnipod.common.bledriver.comm.command.BleCommandAbort
-import app.aaps.pump.omnipod.common.bledriver.comm.command.BleCommandCTS
-import app.aaps.pump.omnipod.common.bledriver.comm.command.BleCommandFail
-import app.aaps.pump.omnipod.common.bledriver.comm.command.BleCommandNack
-import app.aaps.pump.omnipod.common.bledriver.comm.command.BleCommandRTS
-import app.aaps.pump.omnipod.common.bledriver.comm.command.BleCommandSuccess
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmError
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmIncorrectData
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmSuccess
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendErrorConfirming
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendErrorSending
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendResult
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendSuccess
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.CmdBleIO
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.DataBleIO
-import app.aaps.pump.omnipod.common.bledriver.comm.packet.BlePacket
-import app.aaps.pump.omnipod.common.bledriver.comm.packet.PayloadJoiner
-import app.aaps.pump.omnipod.common.bledriver.comm.packet.PayloadSplitter
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.command.BleCommand
+import app.gmaaps.pump.omnipod.common.bledriver.comm.command.BleCommandAbort
+import app.gmaaps.pump.omnipod.common.bledriver.comm.command.BleCommandCTS
+import app.gmaaps.pump.omnipod.common.bledriver.comm.command.BleCommandFail
+import app.gmaaps.pump.omnipod.common.bledriver.comm.command.BleCommandNack
+import app.gmaaps.pump.omnipod.common.bledriver.comm.command.BleCommandRTS
+import app.gmaaps.pump.omnipod.common.bledriver.comm.command.BleCommandSuccess
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmError
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmIncorrectData
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmSuccess
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendErrorConfirming
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendErrorSending
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendResult
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendSuccess
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.CmdBleIO
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.DataBleIO
+import app.gmaaps.pump.omnipod.common.bledriver.comm.packet.BlePacket
+import app.gmaaps.pump.omnipod.common.bledriver.comm.packet.PayloadJoiner
+import app.gmaaps.pump.omnipod.common.bledriver.comm.packet.PayloadSplitter
 
 sealed class MessageSendResult
 object MessageSendSuccess : MessageSendResult()
@@ -248,3 +248,4 @@ class MessageIO(
         private const val MESSAGE_READ_TIMEOUT_MS = 5000.toLong()
     }
 }
+

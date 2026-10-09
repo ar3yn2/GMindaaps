@@ -1,18 +1,18 @@
-package app.aaps.ui.compose.careDialog
+﻿package app.gmaaps.ui.compose.careDialog
 
 import androidx.lifecycle.SavedStateHandle
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.TE
-import app.aaps.core.interfaces.bolus.BatchExecutor
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.Translator
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.interfaces.bolus.BatchExecutor
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.Translator
+import app.gmaaps.core.keys.interfaces.Preferences
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -88,3 +88,4 @@ internal class CareDialogViewModelTest {
         assertThat(sut.uiState.value.eventTimeChanged).isTrue()
     }
 }
+

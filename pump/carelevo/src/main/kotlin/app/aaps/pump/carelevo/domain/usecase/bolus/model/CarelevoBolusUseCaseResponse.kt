@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.domain.usecase.bolus.model
+﻿package app.gmaaps.pump.carelevo.domain.usecase.bolus.model
 
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
 
 data class CancelBolusInfusionResponseModel(
     val infusedAmount: Double,

@@ -1,11 +1,11 @@
-package app.aaps.keys
+﻿package app.gmaaps.keys
 
-import app.aaps.core.keys.PreferenceKeyResolver
-import app.aaps.core.keys.ResolvedKey
-import app.aaps.core.keys.interfaces.ComposedKey
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.di.metro.AppRootGraph
-import app.aaps.shared.tests.aapsClassesOnClasspath
+import app.gmaaps.core.keys.PreferenceKeyResolver
+import app.gmaaps.core.keys.ResolvedKey
+import app.gmaaps.core.keys.interfaces.ComposedKey
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.di.metro.AppRootGraph
+import app.gmaaps.shared.tests.aapsClassesOnClasspath
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -88,3 +88,4 @@ class PreferenceKeyRoundTripTest {
         assertThat(unresolvable).isEmpty()
     }
 }
+

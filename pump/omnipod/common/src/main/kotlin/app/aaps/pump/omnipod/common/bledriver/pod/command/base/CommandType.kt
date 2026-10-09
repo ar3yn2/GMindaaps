@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command.base
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command.base
 
 enum class CommandType(val value: Byte) {
 
@@ -15,3 +15,4 @@ enum class CommandType(val value: Byte) {
     PROGRAM_BEEPS(0x1e.toByte()),
     STOP_DELIVERY(0x1f.toByte());
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.shared.impl
+﻿package app.gmaaps.shared.impl
 
 import android.content.SharedPreferences
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener

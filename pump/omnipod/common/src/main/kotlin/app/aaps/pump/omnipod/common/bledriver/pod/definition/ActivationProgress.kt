@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.definition
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.definition
 
 enum class ActivationProgress {
     NOT_STARTED,
@@ -19,3 +19,4 @@ enum class ActivationProgress {
 
     fun isAtLeast(other: ActivationProgress): Boolean = ordinal >= other.ordinal
 }
+

@@ -1,5 +1,6 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message;
 
 public interface IRawRepresentable {
     byte[] getRawData();
 }
+

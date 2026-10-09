@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.Composable
 
@@ -16,3 +16,4 @@ fun interface ComposeScreenContent {
     @Composable
     fun Content(onBack: () -> Unit)
 }
+

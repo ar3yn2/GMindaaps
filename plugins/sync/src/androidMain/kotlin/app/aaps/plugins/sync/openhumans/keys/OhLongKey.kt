@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.openhumans.keys
+﻿package app.gmaaps.plugins.sync.openhumans.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 /**
  * Not all of one kind, so the flag is set per entry rather than on the constructor.
@@ -25,3 +25,4 @@ enum class OhLongKey(
     ExpiresAt("openhumans_expires_at", 0),
     UploadOffset("openhumans_upload_offset", 0, exportable = false),
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 
 fun InterfaceIDs.PumpType.fromDb(): PumpType =
     when (this) {
@@ -89,3 +89,4 @@ fun PumpType.toDb(): InterfaceIDs.PumpType =
         PumpType.CAREMEDI_CARELEVO         -> InterfaceIDs.PumpType.CARELEVO
 
     }
+

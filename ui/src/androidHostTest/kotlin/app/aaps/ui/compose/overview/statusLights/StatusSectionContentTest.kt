@@ -1,14 +1,14 @@
-package app.aaps.ui.compose.overview.statusLights
+﻿package app.gmaaps.ui.compose.overview.statusLights
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.icons.IcCannulaChange
-import app.aaps.core.ui.compose.icons.IcCgmInsert
-import app.aaps.core.ui.compose.icons.IcPumpBattery
-import app.aaps.core.ui.compose.icons.IcPumpCartridge
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.icons.IcCannulaChange
+import app.gmaaps.core.ui.compose.icons.IcCgmInsert
+import app.gmaaps.core.ui.compose.icons.IcPumpBattery
+import app.gmaaps.core.ui.compose.icons.IcPumpCartridge
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -57,3 +57,4 @@ class StatusSectionContentTest {
         compose.onNodeWithText("12%").assertIsDisplayed()
     }
 }
+

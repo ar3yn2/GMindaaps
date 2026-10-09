@@ -1,9 +1,9 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
-import app.aaps.core.keys.interfaces.SyncChannel
-import app.aaps.core.keys.interfaces.SyncDirection
-import app.aaps.core.keys.interfaces.SyncSpec
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.SyncChannel
+import app.gmaaps.core.keys.interfaces.SyncDirection
+import app.gmaaps.core.keys.interfaces.SyncSpec
 
 enum class StringNonKey(
     override val key: String,
@@ -57,14 +57,14 @@ enum class StringNonKey(
      */
     ActiveScene(key = "active_scene", defaultValue = "", exportable = false),
 
-    // Whole local profile list as one JSON document: {"lastChange": <ms>, "profiles": [ … ]}.
+    // Whole local profile list as one JSON document: {"lastChange": <ms>, "profiles": [ � ]}.
     // One key means one atomic apply and one last-writer-wins unit, which is what makes the profile
     // list safe to sync. The older per-profile keys (ProfileComposedStringKey / ProfileComposedBooleanKey /
     // ProfileIntKey.AmountOfProfiles) are still read as a fallback and are deliberately NOT deleted, so a
     // downgrade to an older build still finds its profiles. See ProfileRepositoryImpl.
     LocalProfileData(key = "local_profile_data", defaultValue = "", sync = SyncSpec(SyncChannel.Cold, SyncDirection.Bidirectional)),
 
-    // Standalone Automation runtime. In core/keys (not the automation module) so the client→master
+    // Standalone Automation runtime. In core/keys (not the automation module) so the client?master
     // sync publisher/receiver in :plugins:sync can observe it without an inter-module dependency.
     AutomationEvents(key = "AUTOMATION_EVENTS", defaultValue = "", sync = SyncSpec(SyncChannel.Cold, SyncDirection.Bidirectional)),
     QuickLaunchActions(key = "quick_launch_actions", defaultValue = "[{\"type\":\"wizard\"},{\"type\":\"quick_launch_config\"}]"),
@@ -92,11 +92,15 @@ enum class StringNonKey(
     GoogleDriveFolderId(key = "google_drive_folder_id", defaultValue = ""),
     GoogleDriveRefreshToken(key = "google_drive_refresh_token", defaultValue = ""),
 
-    // NSCv3 client-control pairing (excluded from export — secrets / monotonic state)
+    // NSCv3 client-control pairing (excluded from export � secrets / monotonic state)
     NsClientControlAuthorizedClients(key = "nsclient_control_authorized_clients", defaultValue = "[]", exportable = false),
     NsClientControlOwnInstallId(key = "nsclient_control_own_install_id", defaultValue = "", exportable = false),
     NsClientControlMasterInstallId(key = "nsclient_control_master_install_id", defaultValue = "", exportable = false),
     NsClientControlClientId(key = "nsclient_control_client_id", defaultValue = "", exportable = false),
     NsClientControlMasterSecretEnc(key = "nsclient_control_master_secret_enc", defaultValue = "", exportable = false),
-
+    // AI Profile settings
+    AiApiUrl(key = "ai_api_url", defaultValue = "https://api.yourai.com/v1/analyze", exportable = true),
+    AiApiKey(key = "ai_api_key", defaultValue = "", exportable = false),
+    AiAggressiveness(key = "ai_aggressiveness", defaultValue = "MODERATE", exportable = true)
 }
+

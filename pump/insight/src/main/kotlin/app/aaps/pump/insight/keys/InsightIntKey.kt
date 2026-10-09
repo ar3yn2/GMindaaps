@@ -1,8 +1,8 @@
-package app.aaps.pump.insight.keys
+﻿package app.gmaaps.pump.insight.keys
 
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.insight.R
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.insight.R
 
 enum class InsightIntKey(
     override val key: String,
@@ -23,3 +23,4 @@ enum class InsightIntKey(
 
     override val title: TextRef = TextRef.AndroidRes(titleResId)
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.data
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data
 
 import kotlin.math.abs
 
@@ -22,3 +22,4 @@ class FrequencyTrial {
             else -99.0
     }
 }
+

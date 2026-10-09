@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.tidepool.keys
+﻿package app.gmaaps.plugins.sync.tidepool.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 
 enum class TidepoolStringNonKey(
     override val key: String,

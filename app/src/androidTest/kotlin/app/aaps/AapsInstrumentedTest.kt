@@ -1,8 +1,8 @@
-package app.aaps
+﻿package app.gmaaps
 
-import app.aaps.di.ResetGraphRule
-import app.aaps.di.testGraphs
-import app.aaps.e2e.RetryRule
+import app.gmaaps.di.ResetGraphRule
+import app.gmaaps.di.testGraphs
+import app.gmaaps.e2e.RetryRule
 import org.junit.Before
 import org.junit.Rule
 import org.junit.rules.RuleChain
@@ -29,3 +29,4 @@ abstract class AapsInstrumentedTest {
         configBuilder.initialize()
     }
 }
+

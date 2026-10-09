@@ -1,4 +1,4 @@
-package app.aaps.core.keys.interfaces
+﻿package app.gmaaps.core.keys.interfaces
 
 /**
  * A reference to user visible text, without saying where that text comes from.
@@ -89,3 +89,4 @@ sealed interface TextRef {
         }
     }
 }
+

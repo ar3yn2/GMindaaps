@@ -1,10 +1,10 @@
-package app.aaps.pump.medtronic.comm.history
+﻿package app.gmaaps.pump.medtronic.comm.history
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.StringUtil
-import app.aaps.core.utils.formatUS
-import app.aaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.StringUtil
+import app.gmaaps.core.utils.formatUS
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
 import org.apache.commons.lang3.StringUtils
 
 /**

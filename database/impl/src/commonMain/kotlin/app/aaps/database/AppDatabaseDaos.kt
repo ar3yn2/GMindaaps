@@ -1,26 +1,26 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
-import app.aaps.database.daos.APSResultDao
-import app.aaps.database.daos.BolusCalculatorResultDao
-import app.aaps.database.daos.BolusDao
-import app.aaps.database.daos.CalibrationEntryDao
-import app.aaps.database.daos.CarbsDao
-import app.aaps.database.daos.DeviceStatusDao
-import app.aaps.database.daos.EffectiveProfileSwitchDao
-import app.aaps.database.daos.ExtendedBolusDao
-import app.aaps.database.daos.FoodDao
-import app.aaps.database.daos.GlucoseValueDao
-import app.aaps.database.daos.HeartRateDao
-import app.aaps.database.daos.PreferenceChangeDao
-import app.aaps.database.daos.ProfileSwitchDao
-import app.aaps.database.daos.RunningModeDao
-import app.aaps.database.daos.StepsCountDao
-import app.aaps.database.daos.TemporaryBasalDao
-import app.aaps.database.daos.TemporaryTargetDao
-import app.aaps.database.daos.TherapyEventDao
-import app.aaps.database.daos.TotalDailyDoseDao
-import app.aaps.database.daos.UserEntryDao
-import app.aaps.database.daos.VersionChangeDao
+import app.gmaaps.database.daos.APSResultDao
+import app.gmaaps.database.daos.BolusCalculatorResultDao
+import app.gmaaps.database.daos.BolusDao
+import app.gmaaps.database.daos.CalibrationEntryDao
+import app.gmaaps.database.daos.CarbsDao
+import app.gmaaps.database.daos.DeviceStatusDao
+import app.gmaaps.database.daos.EffectiveProfileSwitchDao
+import app.gmaaps.database.daos.ExtendedBolusDao
+import app.gmaaps.database.daos.FoodDao
+import app.gmaaps.database.daos.GlucoseValueDao
+import app.gmaaps.database.daos.HeartRateDao
+import app.gmaaps.database.daos.PreferenceChangeDao
+import app.gmaaps.database.daos.ProfileSwitchDao
+import app.gmaaps.database.daos.RunningModeDao
+import app.gmaaps.database.daos.StepsCountDao
+import app.gmaaps.database.daos.TemporaryBasalDao
+import app.gmaaps.database.daos.TemporaryTargetDao
+import app.gmaaps.database.daos.TherapyEventDao
+import app.gmaaps.database.daos.TotalDailyDoseDao
+import app.gmaaps.database.daos.UserEntryDao
+import app.gmaaps.database.daos.VersionChangeDao
 
 /**
  * Every DAO the database exposes, without the Room class that carries them.
@@ -53,3 +53,4 @@ internal interface AppDatabaseDaos {
     val stepsCountDao: StepsCountDao
     val calibrationEntryDao: CalibrationEntryDao
 }
+

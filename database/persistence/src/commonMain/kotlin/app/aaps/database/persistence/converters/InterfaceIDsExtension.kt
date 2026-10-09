@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.IDs
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 
 fun InterfaceIDs.fromDb(): IDs =
     IDs(
@@ -26,4 +26,5 @@ fun IDs.toDb(): InterfaceIDs =
         startId = this.startId,
         endId = this.endId
     )
+
 

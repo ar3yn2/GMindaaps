@@ -1,17 +1,17 @@
-package app.aaps.pump.common.driver
+﻿package app.gmaaps.pump.common.driver
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.common.defs.PumpHistoryEntryGroup
-import app.aaps.pump.common.driver.connector.defs.PumpCommandType
-import app.aaps.pump.common.driver.history.PumpHistoryDataProviderAbstract
-import app.aaps.pump.common.driver.history.PumpHistoryEntry
-import app.aaps.pump.common.driver.history.PumpHistoryPeriod
-import app.aaps.pump.common.driver.history.PumpHistoryText
-import app.aaps.pump.common.driver.refresh.PumpDataRefreshType
-import app.aaps.pump.common.utils.ProfileUtil
-import app.aaps.pump.common.utils.and
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.common.defs.PumpHistoryEntryGroup
+import app.gmaaps.pump.common.driver.connector.defs.PumpCommandType
+import app.gmaaps.pump.common.driver.history.PumpHistoryDataProviderAbstract
+import app.gmaaps.pump.common.driver.history.PumpHistoryEntry
+import app.gmaaps.pump.common.driver.history.PumpHistoryPeriod
+import app.gmaaps.pump.common.driver.history.PumpHistoryText
+import app.gmaaps.pump.common.driver.refresh.PumpDataRefreshType
+import app.gmaaps.pump.common.utils.ProfileUtil
+import app.gmaaps.pump.common.utils.and
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.any
@@ -218,3 +218,4 @@ internal class PumpDriverSupportTest {
         assertThat(values.toSet()).containsExactly("0.800")
     }
 }
+

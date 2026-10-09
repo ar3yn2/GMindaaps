@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.ui.wizard.compose.steps
+﻿package app.gmaaps.pump.omnipod.common.ui.wizard.compose.steps
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -10,11 +10,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.insulin.SelectInsulin
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardViewModel
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.compose.insulin.SelectInsulin
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardViewModel
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Insulin selection step — shown when more than one insulin is configured.
@@ -58,3 +58,4 @@ fun SelectInsulinStep(
         )
     }
 }
+

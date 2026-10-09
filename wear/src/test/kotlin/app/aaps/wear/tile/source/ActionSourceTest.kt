@@ -1,18 +1,18 @@
-package app.aaps.wear.tile.source
+﻿package app.gmaaps.wear.tile.source
 
 import android.content.Context
 import android.content.res.Resources
-import app.aaps.core.interfaces.sharedPreferences.SP
-import app.aaps.wear.AAPSLoggerTest
-import app.aaps.wear.R
-import app.aaps.wear.interaction.actions.BackgroundActionActivity
-import app.aaps.wear.interaction.actions.BolusActivity
-import app.aaps.wear.interaction.actions.CarbActivity
-import app.aaps.wear.interaction.actions.ECarbActivity
-import app.aaps.wear.interaction.actions.TempTargetActivity
-import app.aaps.wear.interaction.actions.TreatmentActivity
-import app.aaps.wear.interaction.actions.WizardActivity
-import app.aaps.wear.tile.source.StaticTileSource.StaticAction
+import app.gmaaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.wear.AAPSLoggerTest
+import app.gmaaps.wear.R
+import app.gmaaps.wear.interaction.actions.BackgroundActionActivity
+import app.gmaaps.wear.interaction.actions.BolusActivity
+import app.gmaaps.wear.interaction.actions.CarbActivity
+import app.gmaaps.wear.interaction.actions.ECarbActivity
+import app.gmaaps.wear.interaction.actions.TempTargetActivity
+import app.gmaaps.wear.interaction.actions.TreatmentActivity
+import app.gmaaps.wear.interaction.actions.WizardActivity
+import app.gmaaps.wear.tile.source.StaticTileSource.StaticAction
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -209,3 +209,4 @@ internal class ActionSourceTest {
         assertThat(actionSource.preferencePrefix).isEqualTo("tile_action_")
     }
 }
+

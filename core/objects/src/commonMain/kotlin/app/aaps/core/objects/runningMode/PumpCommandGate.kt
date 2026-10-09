@@ -1,6 +1,6 @@
-package app.aaps.core.objects.runningMode
+﻿package app.gmaaps.core.objects.runningMode
 
-import app.aaps.core.data.model.RM
+import app.gmaaps.core.data.model.RM
 
 /**
  * Gate that decides whether a given pump command is allowed for the currently active running mode.
@@ -85,3 +85,4 @@ object PumpCommandGate {
             }
         }
 }
+

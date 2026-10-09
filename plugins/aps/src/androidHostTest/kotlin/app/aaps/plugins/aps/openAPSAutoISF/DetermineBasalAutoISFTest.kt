@@ -1,14 +1,14 @@
-package app.aaps.plugins.aps.openAPSAutoISF
+﻿package app.gmaaps.plugins.aps.openAPSAutoISF
 
-import app.aaps.core.interfaces.aps.APSResult
-import app.aaps.core.interfaces.aps.AutosensResult
-import app.aaps.core.interfaces.aps.CurrentTemp
-import app.aaps.core.interfaces.aps.GlucoseStatusSMB
-import app.aaps.core.interfaces.aps.IobTotal
-import app.aaps.core.interfaces.aps.MealData
-import app.aaps.core.interfaces.aps.OapsProfileAutoIsf
-import app.aaps.core.interfaces.aps.RT
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.aps.AutosensResult
+import app.gmaaps.core.interfaces.aps.CurrentTemp
+import app.gmaaps.core.interfaces.aps.GlucoseStatusSMB
+import app.gmaaps.core.interfaces.aps.IobTotal
+import app.gmaaps.core.interfaces.aps.MealData
+import app.gmaaps.core.interfaces.aps.OapsProfileAutoIsf
+import app.gmaaps.core.interfaces.aps.RT
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -261,3 +261,4 @@ class DetermineBasalAutoISFTest : TestBaseWithProfile() {
         )
     }
 }
+

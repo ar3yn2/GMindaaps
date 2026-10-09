@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.core.util
+﻿package app.gmaaps.pump.eopatch.core.util
 
-import app.aaps.pump.eopatch.core.ble.AppConstant
+import app.gmaaps.pump.eopatch.core.ble.AppConstant
 import java.math.BigDecimal
 import java.math.RoundingMode
 import kotlin.math.floor
@@ -57,3 +57,4 @@ object FloatAdjusters {
         return floorToDecimal(adjustVal, AppConstant.INSULIN_DECIMAL_PLACE_VAR)
     }
 }
+

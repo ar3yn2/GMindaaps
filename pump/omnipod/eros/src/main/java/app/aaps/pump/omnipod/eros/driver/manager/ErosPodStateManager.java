@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.manager;
+package app.gmaaps.pump.omnipod.eros.driver.manager;
 
 import androidx.annotation.NonNull;
 
@@ -21,23 +21,23 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-import app.aaps.core.interfaces.logging.AAPSLogger;
-import app.aaps.core.interfaces.logging.LTag;
-import app.aaps.pump.omnipod.eros.driver.communication.message.OmnipodMessage;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.StatusUpdatableResponse;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoDetailedStatus;
-import app.aaps.pump.omnipod.eros.driver.definition.ActivationProgress;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSet;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSlot;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertType;
-import app.aaps.pump.omnipod.eros.driver.definition.DeliveryStatus;
-import app.aaps.pump.omnipod.eros.driver.definition.FaultEventCode;
-import app.aaps.pump.omnipod.eros.driver.definition.FirmwareVersion;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodCrc;
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BasalSchedule;
-import app.aaps.pump.omnipod.eros.driver.util.TimeUtil;
+import app.gmaaps.core.interfaces.logging.AAPSLogger;
+import app.gmaaps.core.interfaces.logging.LTag;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.OmnipodMessage;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.StatusUpdatableResponse;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoDetailedStatus;
+import app.gmaaps.pump.omnipod.eros.driver.definition.ActivationProgress;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSet;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSlot;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.DeliveryStatus;
+import app.gmaaps.pump.omnipod.eros.driver.definition.FaultEventCode;
+import app.gmaaps.pump.omnipod.eros.driver.definition.FirmwareVersion;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodCrc;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BasalSchedule;
+import app.gmaaps.pump.omnipod.eros.driver.util.TimeUtil;
 
 // TODO add nullchecks on some setters
 public abstract class ErosPodStateManager {
@@ -1131,3 +1131,4 @@ public abstract class ErosPodStateManager {
         }
     }
 }
+

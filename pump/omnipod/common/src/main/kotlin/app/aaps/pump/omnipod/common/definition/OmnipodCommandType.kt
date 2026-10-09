@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.definition
+﻿package app.gmaaps.pump.omnipod.common.definition
 
-import app.aaps.pump.omnipod.common.R
+import app.gmaaps.pump.omnipod.common.R
 
 /**
  * Created by andy on 4.8.2019

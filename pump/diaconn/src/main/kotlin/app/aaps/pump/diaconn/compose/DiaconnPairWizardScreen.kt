@@ -1,4 +1,4 @@
-package app.aaps.pump.diaconn.compose
+﻿package app.gmaaps.pump.diaconn.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -17,11 +17,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.pump.BleScanStep
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardScreen
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.diaconn.R
+import app.gmaaps.core.ui.compose.pump.BleScanStep
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardScreen
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.diaconn.R
 
 @Composable
 fun DiaconnPairWizardScreen(
@@ -38,7 +38,7 @@ fun DiaconnPairWizardScreen(
         canGoBack = true,
         onBack = onCancel,
         cancelDialogTitle = stringResource(R.string.diaconn_pairing),
-        cancelDialogText = stringResource(app.aaps.core.ui.R.string.cancel)
+        cancelDialogText = stringResource(app.gmaaps.core.ui.R.string.cancel)
     ) { step, wizardCancel ->
         when (step) {
             DiaconnPairStep.BLE_SCAN -> {
@@ -69,7 +69,7 @@ private fun PairingCompleteStep(
 ) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.ok),
+            text = stringResource(app.gmaaps.core.ui.R.string.ok),
             onClick = onFinish
         )
     ) {
@@ -98,3 +98,4 @@ private fun PairingCompleteStep(
         }
     }
 }
+

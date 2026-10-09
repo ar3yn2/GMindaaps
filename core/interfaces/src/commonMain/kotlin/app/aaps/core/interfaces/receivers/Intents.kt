@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.receivers
+﻿package app.gmaaps.core.interfaces.receivers
 
 @Suppress("unused")
 interface Intents {
@@ -6,7 +6,7 @@ interface Intents {
     companion object {
 
         // AAPS -> AAPS
-        const val AAPS_CLIENT_WEAR_DATA = "app.aaps.aapsclient.weardata"
+        const val AAPS_CLIENT_WEAR_DATA = "app.gmaaps.aapsclient.weardata"
 
         // AAPS -> Xdrip
         const val ACTION_NEW_TREATMENT = "info.nightscout.client.NEW_TREATMENT"
@@ -86,3 +86,4 @@ interface Intents {
         const val INSTARA_APP = "info.nightscout.androidaps.action.Teljane_APP"
     }
 }
+

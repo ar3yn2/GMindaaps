@@ -1,8 +1,8 @@
-package app.aaps.ios.shell.platform
+﻿package app.gmaaps.ios.shell.platform
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.ui.activityMonitor.ActivityStats
-import app.aaps.ui.activityMonitor.ActivityStatsProvider
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.ui.activityMonitor.ActivityStats
+import app.gmaaps.ui.activityMonitor.ActivityStatsProvider
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -35,3 +35,4 @@ class IosActivityStatsProvider(
 
     override fun reset() = aapsLogger.notOnThisPlatform("resetting screen usage statistics")
 }
+

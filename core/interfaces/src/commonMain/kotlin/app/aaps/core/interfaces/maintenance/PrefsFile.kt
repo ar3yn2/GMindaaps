@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.maintenance
+﻿package app.gmaaps.core.interfaces.maintenance
 
 data class PrefsFile(
     val name: String,
@@ -11,3 +11,4 @@ data class PrefsFile(
     // Null for local files, which are uniquely identified by their name.
     val id: String? = null
 )
+

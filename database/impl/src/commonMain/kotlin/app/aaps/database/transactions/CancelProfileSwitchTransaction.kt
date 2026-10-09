@@ -1,7 +1,7 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.ProfileSwitch
-import app.aaps.database.entities.interfaces.end
+import app.gmaaps.database.entities.ProfileSwitch
+import app.gmaaps.database.entities.interfaces.end
 
 class CancelProfileSwitchTransaction(
     val id: Long,
@@ -29,3 +29,4 @@ class CancelProfileSwitchTransaction(
         val updated = mutableListOf<ProfileSwitch>()
     }
 }
+

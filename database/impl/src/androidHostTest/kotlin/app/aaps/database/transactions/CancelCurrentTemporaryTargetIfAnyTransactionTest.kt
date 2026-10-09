@@ -1,10 +1,10 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.DelegatedAppDatabase
-import app.aaps.database.daos.TemporaryTargetDao
-import app.aaps.database.entities.TemporaryTarget
-import app.aaps.database.entities.embedments.InterfaceIDs
-import app.aaps.database.entities.interfaces.end
+import app.gmaaps.database.DelegatedAppDatabase
+import app.gmaaps.database.daos.TemporaryTargetDao
+import app.gmaaps.database.entities.TemporaryTarget
+import app.gmaaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.entities.interfaces.end
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -71,3 +71,4 @@ class CancelCurrentTemporaryTargetIfAnyTransactionTest {
         interfaceIDs_backing = InterfaceIDs()
     )
 }
+

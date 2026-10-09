@@ -1,9 +1,9 @@
-package app.aaps.helpers
+﻿package app.gmaaps.helpers
 
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.Dispatchers
@@ -144,3 +144,4 @@ class IntegrationWaits(
         else aapsLogger.debug(LTag.CORE, "IntegrationWaits: $what quiet for ${quietMs}ms")
     }
 }
+

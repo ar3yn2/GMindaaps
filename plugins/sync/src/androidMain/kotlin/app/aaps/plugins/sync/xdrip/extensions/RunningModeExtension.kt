@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.xdrip.extensions
+﻿package app.gmaaps.plugins.sync.xdrip.extensions
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.utils.DateUtil
 import org.json.JSONObject
 
 fun RM.toJson(isAdd: Boolean, dateUtil: DateUtil): JSONObject {
@@ -53,3 +53,4 @@ fun RM.toJson(isAdd: Boolean, dateUtil: DateUtil): JSONObject {
     "insulin": null
 }
  */
+

@@ -1,12 +1,12 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.data.model.TE
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.icons.IcPatchPump
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.Comparator
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.icons.IcPatchPump
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.Comparator
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject
 
@@ -46,3 +46,4 @@ class TriggerPodChange(deps: TriggerDeps) : Trigger(deps) {
     override fun duplicate(): Trigger = TriggerPodChange(deps)
 
 }
+

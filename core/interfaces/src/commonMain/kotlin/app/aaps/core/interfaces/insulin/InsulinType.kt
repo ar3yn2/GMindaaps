@@ -1,9 +1,9 @@
-package app.aaps.core.interfaces.insulin
+﻿package app.gmaaps.core.interfaces.insulin
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef
 
 enum class InsulinType(val value: Int, val insulinEndTime: Long, val insulinPeakTime: Long, val label: TextRef, val comment: TextRef) {
     UNKNOWN(-1, 0, 0, InterfacesStrings.unknown, InterfacesStrings.unknown),
@@ -28,3 +28,4 @@ enum class InsulinType(val value: Int, val insulinEndTime: Long, val insulinPeak
         fun fromPeak(insulinPeakTime: Long) = entries.firstOrNull { it.insulinPeakTime == insulinPeakTime } ?: OREF_FREE_PEAK
     }
 }
+

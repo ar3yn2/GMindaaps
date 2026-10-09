@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -63,3 +63,4 @@ class PumpRateTest {
         assertThat(PumpRate(1.5).toString()).isEqualTo("PumpRate(1.5)")
     }
 }
+

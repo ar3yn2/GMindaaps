@@ -1,15 +1,15 @@
-package app.aaps.pump.carelevo.di
+﻿package app.gmaaps.pump.carelevo.di
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.carelevo.ble.CarelevoBleTransport
-import app.aaps.pump.carelevo.ble.CarelevoBleTransportImpl
-import app.aaps.pump.carelevo.config.BleEnvConfig
-import app.aaps.pump.carelevo.di.CarelevoBleBindings.provideCarelevoBleTransport
-import app.aaps.pump.carelevo.emulator.CarelevoEmulatorBleTransport
-import app.aaps.pump.carelevo.emulator.CarelevoPumpEmulator
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.carelevo.ble.CarelevoBleTransport
+import app.gmaaps.pump.carelevo.ble.CarelevoBleTransportImpl
+import app.gmaaps.pump.carelevo.config.BleEnvConfig
+import app.gmaaps.pump.carelevo.di.CarelevoBleBindings.provideCarelevoBleTransport
+import app.gmaaps.pump.carelevo.emulator.CarelevoEmulatorBleTransport
+import app.gmaaps.pump.carelevo.emulator.CarelevoPumpEmulator
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -92,3 +92,4 @@ object CarelevoBleBindings {
             carelevoBleTransportImpl
         }
 }
+

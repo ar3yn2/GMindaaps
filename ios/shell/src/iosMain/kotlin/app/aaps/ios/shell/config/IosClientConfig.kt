@@ -1,10 +1,10 @@
-package app.aaps.ios.shell.config
+﻿package app.gmaaps.ios.shell.config
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.configuration.InitProgress
-import app.aaps.core.keys.interfaces.AppPlatform
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.configuration.InitProgress
+import app.gmaaps.core.keys.interfaces.AppPlatform
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -201,7 +201,7 @@ class IosClientConfig(
  * binary's, so the real [IosClientConfig] can never observe anything but client 1 under test.
  *
  * Matched on the trailing `client<n>` rather than on a whole identifier, so it holds for both the
- * `app.aaps.client2` the targets use now and the older `info.nightscout.aapsclient2`. Client 1's
+ * `app.gmaaps.client2` the targets use now and the older `info.nightscout.aapsclient2`. Client 1's
  * identifier is a prefix of the others, so the numbered ones are checked first. Anything
  * unrecognised is client 1, which keeps exactly one of the three flags true.
  */
@@ -226,3 +226,4 @@ private fun defaultExtraDir(): String? {
     NSFileManager.defaultManager.createDirectoryAtPath(extra, withIntermediateDirectories = true, attributes = null, error = null)
     return extra
 }
+

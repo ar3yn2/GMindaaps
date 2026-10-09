@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.xdrip.extensions
+﻿package app.gmaaps.plugins.sync.xdrip.extensions
 
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -26,3 +26,4 @@ class GlucoseValueExtensionTest : TestBase() {
         assertThat(json.getString("direction")).isEqualTo(TrendArrow.FLAT.text)
     }
 }
+

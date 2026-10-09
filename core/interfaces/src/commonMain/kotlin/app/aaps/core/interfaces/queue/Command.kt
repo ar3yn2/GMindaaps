@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.queue
+﻿package app.gmaaps.core.interfaces.queue
 
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlinx.coroutines.CompletableDeferred
 
 /**
@@ -71,3 +71,4 @@ abstract class Command {
         completion.complete(pumpEnactResultProvider().success(success).cancelled(cancelled).comment(comment))
     }
 }
+

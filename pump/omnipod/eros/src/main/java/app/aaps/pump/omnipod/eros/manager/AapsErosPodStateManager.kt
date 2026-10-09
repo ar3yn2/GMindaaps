@@ -1,16 +1,16 @@
-package app.aaps.pump.omnipod.eros.manager
+﻿package app.gmaaps.pump.omnipod.eros.manager
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
-import app.aaps.pump.omnipod.eros.event.EventOmnipodErosActiveAlertsChanged
-import app.aaps.pump.omnipod.eros.event.EventOmnipodErosFaultEventChanged
-import app.aaps.pump.omnipod.eros.event.EventOmnipodErosTbrChanged
-import app.aaps.pump.omnipod.eros.event.EventOmnipodErosUncertainTbrRecovered
-import app.aaps.pump.omnipod.eros.keys.ErosStringNonPreferenceKey
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
+import app.gmaaps.pump.omnipod.eros.event.EventOmnipodErosActiveAlertsChanged
+import app.gmaaps.pump.omnipod.eros.event.EventOmnipodErosFaultEventChanged
+import app.gmaaps.pump.omnipod.eros.event.EventOmnipodErosTbrChanged
+import app.gmaaps.pump.omnipod.eros.event.EventOmnipodErosUncertainTbrRecovered
+import app.gmaaps.pump.omnipod.eros.keys.ErosStringNonPreferenceKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -53,3 +53,4 @@ class AapsErosPodStateManager(
         notificationManager.dismiss(NotificationId.OMNIPOD_STARTUP_STATUS_REFRESH_FAILED)
     }
 }
+

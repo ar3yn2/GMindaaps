@@ -1,20 +1,20 @@
-package app.aaps.pump.medtrum.compose
+﻿package app.gmaaps.pump.medtrum.compose
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.TE
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.InsulinManager
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.medtrum.MedtrumPlugin
-import app.aaps.pump.medtrum.MedtrumPump
-import app.aaps.pump.medtrum.R
-import app.aaps.pump.medtrum.ble.MedtrumBleTransport
-import app.aaps.pump.medtrum.code.ConnectionState
-import app.aaps.pump.medtrum.comm.enums.MedtrumPumpState
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.InsulinManager
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.medtrum.MedtrumPlugin
+import app.gmaaps.pump.medtrum.MedtrumPump
+import app.gmaaps.pump.medtrum.R
+import app.gmaaps.pump.medtrum.ble.MedtrumBleTransport
+import app.gmaaps.pump.medtrum.code.ConnectionState
+import app.gmaaps.pump.medtrum.comm.enums.MedtrumPumpState
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -126,3 +126,4 @@ internal class MedtrumPatchViewModelTest {
         assertThat(sut.setupStep.value).isEqualTo(MedtrumPatchViewModel.SetupStep.PRIMED)
     }
 }
+

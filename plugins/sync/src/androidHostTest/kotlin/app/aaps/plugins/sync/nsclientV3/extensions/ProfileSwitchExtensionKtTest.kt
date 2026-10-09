@@ -1,14 +1,14 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.nssdk.localmodel.treatment.EventType
-import app.aaps.core.nssdk.localmodel.treatment.NSProfileSwitch
-import app.aaps.core.nssdk.mapper.convertToRemoteAndBack
-import app.aaps.plugins.sync.extensions.contentEqualsTo
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.nssdk.localmodel.treatment.EventType
+import app.gmaaps.core.nssdk.localmodel.treatment.NSProfileSwitch
+import app.gmaaps.core.nssdk.mapper.convertToRemoteAndBack
+import app.gmaaps.plugins.sync.extensions.contentEqualsTo
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -120,3 +120,4 @@ internal class ProfileSwitchExtensionKtTest : TestBaseWithProfile() {
         assertThat(parsed.duration).isEqualTo(nineHours)
     }
 }
+

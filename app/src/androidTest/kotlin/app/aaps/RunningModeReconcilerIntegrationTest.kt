@@ -1,25 +1,25 @@
-package app.aaps
+﻿package app.gmaaps
 
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.di.newIntegrationWaits
-import app.aaps.di.newRxHelper
-import app.aaps.di.testGraphs
-import app.aaps.helpers.IntegrationWaits
-import app.aaps.implementation.profile.ProfileFunctionImpl
-import app.aaps.plugins.aps.loop.runningMode.RunningModeExpiryWorker
-import app.aaps.testcategories.ShardB
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.di.newIntegrationWaits
+import app.gmaaps.di.newRxHelper
+import app.gmaaps.di.testGraphs
+import app.gmaaps.helpers.IntegrationWaits
+import app.gmaaps.implementation.profile.ProfileFunctionImpl
+import app.gmaaps.plugins.aps.loop.runningMode.RunningModeExpiryWorker
+import app.gmaaps.testcategories.ShardB
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -360,7 +360,7 @@ class RunningModeReconcilerIntegrationTest : AapsInstrumentedTest() {
      * Verified passing in a manual run (see commit history / test run on emulator).
      * Run locally on demand with:
      *   ./gradlew.bat :app:connectedFullDebugAndroidTest \
-     *     -Pandroid.testInstrumentationRunnerArguments.class=app.aaps.RunningModeReconcilerIntegrationTest#expiry_worker_cancels_zero-TBR_at_natural_RM_end
+     *     -Pandroid.testInstrumentationRunnerArguments.class=app.gmaaps.RunningModeReconcilerIntegrationTest#expiry_worker_cancels_zero-TBR_at_natural_RM_end
      *
      * The worker-scheduling logic is covered by [RunningModeExpirySchedulerTest] (JVM unit) and
      * the two `expiry scheduler …` tests above (schedule + cancel on transition).
@@ -430,3 +430,4 @@ class RunningModeReconcilerIntegrationTest : AapsInstrumentedTest() {
                 "\"srvModified\":1698763282534,\"srvCreated\":1698664636986,\"subject\":\"Phone\"}"
     }
 }
+

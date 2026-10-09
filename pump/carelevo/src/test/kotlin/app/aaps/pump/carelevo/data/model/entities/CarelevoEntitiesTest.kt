@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.data.model.entities
+﻿package app.gmaaps.pump.carelevo.data.model.entities
 
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -429,3 +429,4 @@ internal class CarelevoEntitiesTest {
         assertThat(syncBolus).isTrue()
     }
 }
+

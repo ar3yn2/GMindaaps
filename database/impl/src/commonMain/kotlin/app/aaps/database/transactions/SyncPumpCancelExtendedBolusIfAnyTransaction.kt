@@ -1,8 +1,8 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.ExtendedBolus
-import app.aaps.database.entities.embedments.InterfaceIDs
-import app.aaps.database.entities.interfaces.end
+import app.gmaaps.database.entities.ExtendedBolus
+import app.gmaaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.entities.interfaces.end
 
 class SyncPumpCancelExtendedBolusIfAnyTransaction(
     private val timestamp: Long, private val endPumpId: Long, private val pumpType: InterfaceIDs.PumpType, private val pumpSerial: String

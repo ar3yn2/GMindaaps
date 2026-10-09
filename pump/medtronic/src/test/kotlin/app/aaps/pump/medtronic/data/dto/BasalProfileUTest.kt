@@ -1,7 +1,7 @@
-package app.aaps.pump.medtronic.data.dto
+﻿package app.gmaaps.pump.medtronic.data.dto
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.pump.medtronic.MedtronicTestBase
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.pump.medtronic.MedtronicTestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -161,3 +161,4 @@ class BasalProfileUTest : MedtronicTestBase() {
         assertThat(entries[1].rate).isWithin(0.01).of(1.1)   // 44 / 40 = 1.1
     }
 }
+

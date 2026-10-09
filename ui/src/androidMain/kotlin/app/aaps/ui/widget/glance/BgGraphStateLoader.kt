@@ -1,21 +1,21 @@
-package app.aaps.ui.widget.glance
+﻿package app.gmaaps.ui.widget.glance
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.overview.LastBgData
-import app.aaps.core.interfaces.overview.graph.OverviewDataCache
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.TrendCalculator
-import app.aaps.core.keys.BooleanComposedKey
-import app.aaps.core.keys.IntComposedKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.ui.widget.directionToDrawableRes
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.overview.LastBgData
+import app.gmaaps.core.interfaces.overview.graph.OverviewDataCache
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.TrendCalculator
+import app.gmaaps.core.keys.BooleanComposedKey
+import app.gmaaps.core.keys.IntComposedKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.ui.widget.directionToDrawableRes
 import dev.zacsweers.metro.Inject
 
 data class BgGraphRenderState(
@@ -115,3 +115,4 @@ class BgGraphStateLoader(
         const val Y_MAX_MMOL = 12.2
     }
 }
+

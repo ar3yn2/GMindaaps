@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -130,3 +130,4 @@ class SourceSensorTest {
         }
     }
 }
+

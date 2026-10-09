@@ -1,4 +1,4 @@
-package app.aaps.plugins.aps.loop.compose
+﻿package app.gmaaps.plugins.aps.loop.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -18,9 +18,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.AapsCard
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.aps.ApsStrings
+import app.gmaaps.core.ui.compose.AapsCard
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.aps.ApsStrings
 
 @Composable
 fun LoopScreen(
@@ -155,3 +155,4 @@ private fun LoopDivider() {
         color = MaterialTheme.colorScheme.outlineVariant
     )
 }
+

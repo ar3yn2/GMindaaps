@@ -1,13 +1,13 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
-import app.aaps.pump.omnipod.eros.driver.definition.FaultEventCode;
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
+import app.gmaaps.pump.omnipod.eros.driver.definition.FaultEventCode;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
 
 public class ErrorResponse extends MessageBlock {
     public static final byte ERROR_RESPONSE_CODE_BAD_NONCE = (byte) 0x14;
@@ -72,3 +72,4 @@ public class ErrorResponse extends MessageBlock {
                 '}';
     }
 }
+

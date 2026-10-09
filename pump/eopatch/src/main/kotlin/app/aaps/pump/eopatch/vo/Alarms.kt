@@ -1,9 +1,9 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.eopatch.GsonHelper
-import app.aaps.pump.eopatch.alarm.AlarmCode
-import app.aaps.pump.eopatch.keys.EopatchStringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.eopatch.GsonHelper
+import app.gmaaps.pump.eopatch.alarm.AlarmCode
+import app.gmaaps.pump.eopatch.keys.EopatchStringNonKey
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.subjects.BehaviorSubject
 
@@ -101,3 +101,4 @@ class Alarms : IPreference<Alarms> {
         return "Alarms(subject=$subject, registered=${registered.keys}, occurred=${occurred.keys}"
     }
 }
+

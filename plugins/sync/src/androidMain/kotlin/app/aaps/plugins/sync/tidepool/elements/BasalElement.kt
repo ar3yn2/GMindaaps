@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.tidepool.elements
+﻿package app.gmaaps.plugins.sync.tidepool.elements
 
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DateUtil
 import com.google.gson.annotations.Expose
 import java.util.UUID
 
@@ -74,3 +74,4 @@ class BasalElement private constructor(
             BasalElement(timestamp, duration, "suspend", null, null, "AAPS-basal-suspend$tbrTimestamp-$timestamp", dateUtil)
     }
 }
+

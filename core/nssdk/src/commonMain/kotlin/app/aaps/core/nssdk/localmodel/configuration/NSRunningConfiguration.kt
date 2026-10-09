@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.configuration
+﻿package app.gmaaps.core.nssdk.localmodel.configuration
 
 import kotlinx.serialization.Serializable
 
@@ -6,7 +6,7 @@ import kotlinx.serialization.Serializable
  * Typed payload of the NS `settings/aaps` doc's `runningConfig` block.
  *
  * Carries the master AAPS install's currently selected plugin set and their owned
- * preference values, applied by clients via [app.aaps.core.nssdk.interfaces.RunningConfiguration].
+ * preference values, applied by clients via [app.gmaaps.core.nssdk.interfaces.RunningConfiguration].
  *
  * Lives in the settings collection, not in devicestatus — though the field shape
  * was originally introduced for the (now-removed) devicestatus piggyback channel.
@@ -60,7 +60,7 @@ data class NSAuthorizedClients(
  * [lifecycle] is master-owned: "ACTIVE" while the scene is running, "EXPIRED" once
  * master has run its expiry side-effects (revert SMB, chain scheduling). Encoded as
  * String so this DTO stays free of any core/data dependency; consumers map back to the
- * [app.aaps.core.data.model.SceneLifecycle] enum. Null is treated as ACTIVE for
+ * [app.gmaaps.core.data.model.SceneLifecycle] enum. Null is treated as ACTIVE for
  * backward compatibility with masters that pre-date this field.
  *
  * NS IDs may be null transiently while the corresponding record is still uploading on the
@@ -78,3 +78,4 @@ data class NSActiveScene(
     val rmNsId: String? = null,
     val teNsId: String? = null
 )
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
 public enum AlertSlot {
     SLOT0((byte) 0x00),
@@ -33,3 +33,4 @@ public enum AlertSlot {
         return value;
     }
 }
+

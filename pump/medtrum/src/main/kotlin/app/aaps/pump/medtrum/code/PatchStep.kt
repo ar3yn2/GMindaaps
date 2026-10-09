@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.code
+﻿package app.gmaaps.pump.medtrum.code
 
 enum class PatchStep {
     START_DEACTIVATION,
@@ -22,3 +22,4 @@ enum class PatchStep {
     CANCEL,
     COMPLETE;
 }
+

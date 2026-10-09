@@ -1,16 +1,16 @@
-package app.aaps.plugins.aps.openAPSAMA
+﻿package app.gmaaps.plugins.aps.openAPSAMA
 
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.interfaces.aps.APSResult
-import app.aaps.core.interfaces.aps.AutosensResult
-import app.aaps.core.interfaces.aps.CurrentTemp
-import app.aaps.core.interfaces.aps.GlucoseStatus
-import app.aaps.core.interfaces.aps.IobTotal
-import app.aaps.core.interfaces.aps.MealData
-import app.aaps.core.interfaces.aps.OapsProfile
-import app.aaps.core.interfaces.aps.Predictions
-import app.aaps.core.interfaces.aps.RT
-import app.aaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.aps.AutosensResult
+import app.gmaaps.core.interfaces.aps.CurrentTemp
+import app.gmaaps.core.interfaces.aps.GlucoseStatus
+import app.gmaaps.core.interfaces.aps.IobTotal
+import app.gmaaps.core.interfaces.aps.MealData
+import app.gmaaps.core.interfaces.aps.OapsProfile
+import app.gmaaps.core.interfaces.aps.Predictions
+import app.gmaaps.core.interfaces.aps.RT
+import app.gmaaps.core.interfaces.profile.ProfileUtil
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -527,3 +527,4 @@ class DetermineBasalAMA(
         }
     }
 }
+

@@ -1,39 +1,39 @@
-package app.aaps.pump.insight.descriptors
+﻿package app.gmaaps.pump.insight.descriptors
 
-import app.aaps.pump.insight.app_layer.AppLayerMessage
-import app.aaps.pump.insight.app_layer.ReadParameterBlockMessage
-import app.aaps.pump.insight.app_layer.configuration.CloseConfigurationWriteSessionMessage
-import app.aaps.pump.insight.app_layer.configuration.OpenConfigurationWriteSessionMessage
-import app.aaps.pump.insight.app_layer.configuration.WriteConfigurationBlockMessage
-import app.aaps.pump.insight.app_layer.connection.ActivateServiceMessage
-import app.aaps.pump.insight.app_layer.connection.BindMessage
-import app.aaps.pump.insight.app_layer.connection.ConnectMessage
-import app.aaps.pump.insight.app_layer.connection.DisconnectMessage
-import app.aaps.pump.insight.app_layer.connection.ServiceChallengeMessage
-import app.aaps.pump.insight.app_layer.history.StartReadingHistoryMessage
-import app.aaps.pump.insight.app_layer.history.StopReadingHistoryMessage
-import app.aaps.pump.insight.app_layer.remote_control.CancelBolusMessage
-import app.aaps.pump.insight.app_layer.remote_control.CancelTBRMessage
-import app.aaps.pump.insight.app_layer.remote_control.ChangeTBRMessage
-import app.aaps.pump.insight.app_layer.remote_control.ConfirmAlertMessage
-import app.aaps.pump.insight.app_layer.remote_control.DeliverBolusMessage
-import app.aaps.pump.insight.app_layer.remote_control.GetAvailableBolusTypesMessage
-import app.aaps.pump.insight.app_layer.remote_control.SetDateTimeMessage
-import app.aaps.pump.insight.app_layer.remote_control.SetOperatingModeMessage
-import app.aaps.pump.insight.app_layer.remote_control.SetTBRMessage
-import app.aaps.pump.insight.app_layer.remote_control.SnoozeAlertMessage
-import app.aaps.pump.insight.app_layer.status.GetActiveAlertMessage
-import app.aaps.pump.insight.app_layer.status.GetActiveBasalRateMessage
-import app.aaps.pump.insight.app_layer.status.GetActiveBolusesMessage
-import app.aaps.pump.insight.app_layer.status.GetActiveTBRMessage
-import app.aaps.pump.insight.app_layer.status.GetBatteryStatusMessage
-import app.aaps.pump.insight.app_layer.status.GetCartridgeStatusMessage
-import app.aaps.pump.insight.app_layer.status.GetDateTimeMessage
-import app.aaps.pump.insight.app_layer.status.GetFirmwareVersionsMessage
-import app.aaps.pump.insight.app_layer.status.GetOperatingModeMessage
-import app.aaps.pump.insight.app_layer.status.GetPumpStatusRegisterMessage
-import app.aaps.pump.insight.app_layer.status.GetTotalDailyDoseMessage
-import app.aaps.pump.insight.app_layer.status.ResetPumpStatusRegisterMessage
+import app.gmaaps.pump.insight.app_layer.AppLayerMessage
+import app.gmaaps.pump.insight.app_layer.ReadParameterBlockMessage
+import app.gmaaps.pump.insight.app_layer.configuration.CloseConfigurationWriteSessionMessage
+import app.gmaaps.pump.insight.app_layer.configuration.OpenConfigurationWriteSessionMessage
+import app.gmaaps.pump.insight.app_layer.configuration.WriteConfigurationBlockMessage
+import app.gmaaps.pump.insight.app_layer.connection.ActivateServiceMessage
+import app.gmaaps.pump.insight.app_layer.connection.BindMessage
+import app.gmaaps.pump.insight.app_layer.connection.ConnectMessage
+import app.gmaaps.pump.insight.app_layer.connection.DisconnectMessage
+import app.gmaaps.pump.insight.app_layer.connection.ServiceChallengeMessage
+import app.gmaaps.pump.insight.app_layer.history.StartReadingHistoryMessage
+import app.gmaaps.pump.insight.app_layer.history.StopReadingHistoryMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.CancelBolusMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.CancelTBRMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.ChangeTBRMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.ConfirmAlertMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.DeliverBolusMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.GetAvailableBolusTypesMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.SetDateTimeMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.SetOperatingModeMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.SetTBRMessage
+import app.gmaaps.pump.insight.app_layer.remote_control.SnoozeAlertMessage
+import app.gmaaps.pump.insight.app_layer.status.GetActiveAlertMessage
+import app.gmaaps.pump.insight.app_layer.status.GetActiveBasalRateMessage
+import app.gmaaps.pump.insight.app_layer.status.GetActiveBolusesMessage
+import app.gmaaps.pump.insight.app_layer.status.GetActiveTBRMessage
+import app.gmaaps.pump.insight.app_layer.status.GetBatteryStatusMessage
+import app.gmaaps.pump.insight.app_layer.status.GetCartridgeStatusMessage
+import app.gmaaps.pump.insight.app_layer.status.GetDateTimeMessage
+import app.gmaaps.pump.insight.app_layer.status.GetFirmwareVersionsMessage
+import app.gmaaps.pump.insight.app_layer.status.GetOperatingModeMessage
+import app.gmaaps.pump.insight.app_layer.status.GetPumpStatusRegisterMessage
+import app.gmaaps.pump.insight.app_layer.status.GetTotalDailyDoseMessage
+import app.gmaaps.pump.insight.app_layer.status.ResetPumpStatusRegisterMessage
 
 class AppCommands(val id: Int, val type: Class<out AppLayerMessage?>) {
 
@@ -68,7 +68,7 @@ class AppCommands(val id: Int, val type: Class<out AppLayerMessage?>) {
             DELIVERBOLUSMESSAGE                   -> DeliverBolusMessage()
             SETTBRMESSAGE                         -> SetTBRMessage()
             CHANGETBRMESSAGE                      -> ChangeTBRMessage()
-            READHISTORYEVENTSMESSAGE              -> app.aaps.pump.insight.app_layer.history.ReadHistoryEventsMessage()
+            READHISTORYEVENTSMESSAGE              -> app.gmaaps.pump.insight.app_layer.history.ReadHistoryEventsMessage()
             STARTREADINGHISTORYMESSAGE            -> StartReadingHistoryMessage()
             STOPREADINGHISTORYMESSAGE             -> StopReadingHistoryMessage()
             CONFIRMALERTMESSAGE                   -> ConfirmAlertMessage()
@@ -106,7 +106,7 @@ class AppCommands(val id: Int, val type: Class<out AppLayerMessage?>) {
             is DeliverBolusMessage                                              -> DELIVERBOLUSMESSAGE
             is SetTBRMessage                                                    -> SETTBRMESSAGE
             is ChangeTBRMessage                                                 -> CHANGETBRMESSAGE
-            is app.aaps.pump.insight.app_layer.history.ReadHistoryEventsMessage -> READHISTORYEVENTSMESSAGE
+            is app.gmaaps.pump.insight.app_layer.history.ReadHistoryEventsMessage -> READHISTORYEVENTSMESSAGE
             is StartReadingHistoryMessage                                       -> STARTREADINGHISTORYMESSAGE
             is StopReadingHistoryMessage                                        -> STOPREADINGHISTORYMESSAGE
             is ConfirmAlertMessage                                              -> CONFIRMALERTMESSAGE

@@ -1,7 +1,7 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.plugins.automation.asJsonObject
-import app.aaps.plugins.automation.elements.ComparatorConnect
+import app.gmaaps.plugins.automation.asJsonObject
+import app.gmaaps.plugins.automation.elements.ComparatorConnect
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.skyscreamer.jsonassert.JSONAssert
@@ -39,3 +39,4 @@ class TriggerBTDeviceTest : TriggerTestBase() {
         assertThat(t.comparator.value).isEqualTo(ComparatorConnect.Compare.ON_DISCONNECT)
     }
 }
+

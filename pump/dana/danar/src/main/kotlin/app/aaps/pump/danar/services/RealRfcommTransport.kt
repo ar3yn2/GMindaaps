@@ -1,4 +1,4 @@
-package app.aaps.pump.danar.services
+﻿package app.gmaaps.pump.danar.services
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -7,11 +7,11 @@ import android.bluetooth.BluetoothSocket
 import android.content.Context
 import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.rfcomm.RfcommDevice
-import app.aaps.core.interfaces.pump.rfcomm.RfcommSocket
-import app.aaps.core.interfaces.pump.rfcomm.RfcommTransport
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommDevice
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommSocket
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommTransport
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -82,3 +82,4 @@ private class BluetoothRfcommSocket(
 
     override fun close() = btSocket.close()
 }
+

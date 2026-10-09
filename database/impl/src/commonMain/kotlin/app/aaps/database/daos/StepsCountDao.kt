@@ -1,9 +1,9 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.StepsCount
-import app.aaps.database.entities.TABLE_STEPS_COUNT
+import app.gmaaps.database.entities.StepsCount
+import app.gmaaps.database.entities.TABLE_STEPS_COUNT
 
 @Dao
 internal interface StepsCountDao : TraceableDao<StepsCount> {
@@ -35,3 +35,4 @@ internal interface StepsCountDao : TraceableDao<StepsCount> {
     @Query("SELECT * FROM $TABLE_STEPS_COUNT WHERE timestamp BETWEEN :startMillis AND :endMillis ORDER BY timestamp DESC LIMIT 1")
     suspend fun getLastStepsCountFromTimeToTime(startMillis: Long, endMillis: Long): StepsCount?
 }
+

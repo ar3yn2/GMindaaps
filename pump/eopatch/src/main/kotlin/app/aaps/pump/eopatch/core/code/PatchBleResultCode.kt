@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.code
+﻿package app.gmaaps.pump.eopatch.core.code
 
 enum class PatchBleResultCode {
     SUCCESS,
@@ -20,3 +20,4 @@ enum class PatchBleResultCode {
 
     val isSuccess: Boolean get() = this == SUCCESS
 }
+

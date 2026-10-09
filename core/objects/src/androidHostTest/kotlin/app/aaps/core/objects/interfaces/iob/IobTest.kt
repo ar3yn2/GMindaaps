@@ -1,6 +1,6 @@
-package app.aaps.core.objects.interfaces.iob
+﻿package app.gmaaps.core.objects.interfaces.iob
 
-import app.aaps.core.data.iob.Iob
+import app.gmaaps.core.data.iob.Iob
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -32,3 +32,4 @@ class IobTest {
         assertThat(a.hashCode().toLong()).isNotEqualTo(0L)
     }
 }
+

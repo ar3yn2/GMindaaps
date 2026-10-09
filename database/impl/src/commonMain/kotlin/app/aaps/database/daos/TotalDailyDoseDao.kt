@@ -1,10 +1,10 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Query
-import app.aaps.database.entities.TABLE_TOTAL_DAILY_DOSES
-import app.aaps.database.entities.TotalDailyDose
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.entities.TABLE_TOTAL_DAILY_DOSES
+import app.gmaaps.database.entities.TotalDailyDose
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 
 @Dao
 internal interface TotalDailyDoseDao : TraceableDao<TotalDailyDose> {
@@ -42,3 +42,4 @@ internal interface TotalDailyDoseDao : TraceableDao<TotalDailyDose> {
     @Query("DELETE FROM $TABLE_TOTAL_DAILY_DOSES WHERE timestamp >= :since AND pumpType = :pumpType")
     suspend fun deleteNewerThan(since: Long, pumpType: InterfaceIDs.PumpType)
 }
+

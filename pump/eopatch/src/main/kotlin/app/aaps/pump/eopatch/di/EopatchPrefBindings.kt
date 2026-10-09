@@ -1,9 +1,9 @@
-package app.aaps.pump.eopatch.di
+﻿package app.gmaaps.pump.eopatch.di
 
-import app.aaps.pump.eopatch.vo.Alarms
-import app.aaps.pump.eopatch.vo.NormalBasalManager
-import app.aaps.pump.eopatch.vo.PatchConfig
-import app.aaps.pump.eopatch.vo.TempBasalManager
+import app.gmaaps.pump.eopatch.vo.Alarms
+import app.gmaaps.pump.eopatch.vo.NormalBasalManager
+import app.gmaaps.pump.eopatch.vo.PatchConfig
+import app.gmaaps.pump.eopatch.vo.TempBasalManager
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -25,3 +25,4 @@ object EopatchPrefBindings {
 
     @Provides @SingleIn(AppScope::class) fun provideAlarms(): Alarms = Alarms()
 }
+

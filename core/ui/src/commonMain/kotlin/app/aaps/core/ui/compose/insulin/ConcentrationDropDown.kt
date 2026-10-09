@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.insulin
+﻿package app.gmaaps.core.ui.compose.insulin
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.DropdownMenuItem
@@ -14,9 +14,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import app.aaps.core.interfaces.insulin.ConcentrationType
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.interfaces.insulin.ConcentrationType
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.stringResource
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -59,3 +59,4 @@ fun ConcentrationDropdown(
         }
     }
 }
+

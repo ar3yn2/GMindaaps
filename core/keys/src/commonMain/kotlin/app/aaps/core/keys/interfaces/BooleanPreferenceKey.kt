@@ -1,4 +1,4 @@
-package app.aaps.core.keys.interfaces
+﻿package app.gmaaps.core.keys.interfaces
 
 interface BooleanPreferenceKey : PreferenceKey, BooleanNonPreferenceKey {
 
@@ -44,3 +44,4 @@ fun BooleanPreferenceKey.withChangeGuard(
     guard: (newValue: Boolean) -> String?
 ): BooleanKeyWithChangeGuard =
     BooleanKeyWithChangeGuard(this, guard)
+

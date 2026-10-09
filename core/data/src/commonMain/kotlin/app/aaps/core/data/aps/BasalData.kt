@@ -1,4 +1,4 @@
-package app.aaps.core.data.aps
+﻿package app.gmaaps.core.data.aps
 
 class BasalData {
 

@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.satl
+﻿package app.gmaaps.pump.insight.satl
 
 enum class SatlError(val id: Byte) {
     UNDEFINED(0.toByte()),

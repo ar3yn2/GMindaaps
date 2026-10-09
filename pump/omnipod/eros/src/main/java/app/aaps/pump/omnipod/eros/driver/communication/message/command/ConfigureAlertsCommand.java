@@ -1,13 +1,13 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import androidx.annotation.NonNull;
 
 import java.util.List;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.communication.message.NonceResyncableMessageBlock;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.NonceResyncableMessageBlock;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
 
 public class ConfigureAlertsCommand extends NonceResyncableMessageBlock {
     private final List<AlertConfiguration> configurations;
@@ -50,3 +50,4 @@ public class ConfigureAlertsCommand extends NonceResyncableMessageBlock {
                 '}';
     }
 }
+

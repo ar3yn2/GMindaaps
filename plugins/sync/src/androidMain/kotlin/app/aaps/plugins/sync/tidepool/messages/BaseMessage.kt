@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.tidepool.messages
+﻿package app.gmaaps.plugins.sync.tidepool.messages
 
-import app.aaps.plugins.sync.tidepool.utils.GsonInstance
+import app.gmaaps.plugins.sync.tidepool.utils.GsonInstance
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody

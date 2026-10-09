@@ -1,9 +1,9 @@
-package app.aaps.pump.diaconn.keys
+﻿package app.gmaaps.pump.diaconn.keys
 
-import app.aaps.core.keys.PreferenceType
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.diaconn.R
+import app.gmaaps.core.keys.PreferenceType
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.diaconn.R
 
 enum class DiaconnIntKey(
     override val key: String,
@@ -18,7 +18,7 @@ enum class DiaconnIntKey(
     BolusSpeed(
         key = "g8_bolusspeed",
         defaultValue = 5,
-        titleResId = app.aaps.core.ui.R.string.bolusspeed,
+        titleResId = app.gmaaps.core.ui.R.string.bolusspeed,
         preferenceType = PreferenceType.LIST,
         entriesResIds = mapOf(
             1 to R.string.bolus_speed_1,
@@ -36,3 +36,4 @@ enum class DiaconnIntKey(
     override val title: TextRef = TextRef.AndroidRes(titleResId)
     override val entries: Map<Int, TextRef> = entriesResIds.mapValues { TextRef.AndroidRes(it.value) }
 }
+

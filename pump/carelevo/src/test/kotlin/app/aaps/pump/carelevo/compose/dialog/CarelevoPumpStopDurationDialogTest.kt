@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.dialog
+﻿package app.gmaaps.pump.carelevo.compose.dialog
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -13,7 +13,7 @@ import androidx.compose.ui.test.isSelectable
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.R
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
@@ -284,3 +284,4 @@ class CarelevoPumpStopDurationDialogTest {
         assertThat(confirmed).isEqualTo(45)
     }
 }
+

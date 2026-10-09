@@ -1,9 +1,9 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.localmodel.treatment.NSBolus
-import app.aaps.core.nssdk.localmodel.treatment.NSCarbs
-import app.aaps.core.nssdk.nsSdkJson
-import app.aaps.core.nssdk.remotemodel.RemoteTreatment
+import app.gmaaps.core.nssdk.localmodel.treatment.NSBolus
+import app.gmaaps.core.nssdk.localmodel.treatment.NSCarbs
+import app.gmaaps.core.nssdk.nsSdkJson
+import app.gmaaps.core.nssdk.remotemodel.RemoteTreatment
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.SerializationException
 import org.junit.jupiter.api.Test
@@ -177,3 +177,4 @@ class WireTypeCoercionTest {
         assertThat((carbs as NSCarbs).carbs).isEqualTo(4.0)
     }
 }
+

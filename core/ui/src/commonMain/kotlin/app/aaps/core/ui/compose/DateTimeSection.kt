@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -19,8 +19,8 @@ import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.ui.CoreUiStrings
 
 /**
  * Shared date/time picker row with two read-only OutlinedTextFields.
@@ -124,3 +124,4 @@ fun DateTimeSection(
         }
     }
 }
+

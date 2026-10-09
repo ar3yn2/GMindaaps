@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.garmin.keys
+﻿package app.gmaaps.plugins.sync.garmin.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.plugins.sync.SyncStrings
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.plugins.sync.SyncStrings
 
 enum class GarminIntKey(
     override val key: String,
@@ -20,3 +20,4 @@ enum class GarminIntKey(
     ;
 
 }
+

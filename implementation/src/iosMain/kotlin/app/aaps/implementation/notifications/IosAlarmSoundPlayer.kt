@@ -1,11 +1,11 @@
-package app.aaps.implementation.notifications
+﻿package app.gmaaps.implementation.notifications
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.AlarmSoundPlayer
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.AlarmSoundPlayer
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -188,3 +188,4 @@ class IosAlarmSoundPlayer(
         AlarmSound.BOLUS_ERROR  -> "boluserror"
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleCommand
 
 /**
  * `CMD_ADD_PRIMING_REQ` (0x1D) → `CMD_ADD_PRIMING_RES` (0x7D). Requests an additional priming pulse on the
@@ -32,3 +32,4 @@ class AdditionalPrimingCommand : BleCommand<SimpleResultResponse> {
         private const val MIN_RESPONSE_LENGTH = 2
     }
 }
+

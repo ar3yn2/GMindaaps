@@ -1,4 +1,4 @@
-package app.aaps.implementation.maintenance
+﻿package app.gmaaps.implementation.maintenance
 
 import java.net.InetAddress
 
@@ -15,3 +15,4 @@ actual fun platformDeviceName(): String =
         ?.takeIf { it.isNotBlank() }
         ?: System.getProperty("user.name")
         ?: "Desktop"
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.data.model.ble
+﻿package app.gmaaps.pump.carelevo.data.model.ble
 
 internal interface ProtocolRequestModel
 

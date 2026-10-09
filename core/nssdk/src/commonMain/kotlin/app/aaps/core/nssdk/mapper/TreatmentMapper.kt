@@ -1,20 +1,20 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.localmodel.entry.NsUnits
-import app.aaps.core.nssdk.localmodel.treatment.EventType
-import app.aaps.core.nssdk.localmodel.treatment.NSBolus
-import app.aaps.core.nssdk.localmodel.treatment.NSBolusWizard
-import app.aaps.core.nssdk.localmodel.treatment.NSCarbs
-import app.aaps.core.nssdk.localmodel.treatment.NSEffectiveProfileSwitch
-import app.aaps.core.nssdk.localmodel.treatment.NSExtendedBolus
-import app.aaps.core.nssdk.localmodel.treatment.NSOfflineEvent
-import app.aaps.core.nssdk.localmodel.treatment.NSProfileSwitch
-import app.aaps.core.nssdk.localmodel.treatment.NSTemporaryBasal
-import app.aaps.core.nssdk.localmodel.treatment.NSTemporaryTarget
-import app.aaps.core.nssdk.localmodel.treatment.NSTherapyEvent
-import app.aaps.core.nssdk.localmodel.treatment.NSTreatment
-import app.aaps.core.nssdk.nsSdkJson
-import app.aaps.core.nssdk.remotemodel.RemoteTreatment
+import app.gmaaps.core.nssdk.localmodel.entry.NsUnits
+import app.gmaaps.core.nssdk.localmodel.treatment.EventType
+import app.gmaaps.core.nssdk.localmodel.treatment.NSBolus
+import app.gmaaps.core.nssdk.localmodel.treatment.NSBolusWizard
+import app.gmaaps.core.nssdk.localmodel.treatment.NSCarbs
+import app.gmaaps.core.nssdk.localmodel.treatment.NSEffectiveProfileSwitch
+import app.gmaaps.core.nssdk.localmodel.treatment.NSExtendedBolus
+import app.gmaaps.core.nssdk.localmodel.treatment.NSOfflineEvent
+import app.gmaaps.core.nssdk.localmodel.treatment.NSProfileSwitch
+import app.gmaaps.core.nssdk.localmodel.treatment.NSTemporaryBasal
+import app.gmaaps.core.nssdk.localmodel.treatment.NSTemporaryTarget
+import app.gmaaps.core.nssdk.localmodel.treatment.NSTherapyEvent
+import app.gmaaps.core.nssdk.localmodel.treatment.NSTreatment
+import app.gmaaps.core.nssdk.nsSdkJson
+import app.gmaaps.core.nssdk.remotemodel.RemoteTreatment
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.minutes
 
@@ -643,3 +643,4 @@ internal fun NSTreatment.toRemoteTreatment(): RemoteTreatment? =
                 pumpSerial = pumpSerial
             )
     }
+

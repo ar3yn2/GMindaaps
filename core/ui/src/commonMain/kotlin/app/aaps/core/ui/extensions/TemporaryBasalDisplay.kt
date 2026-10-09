@@ -1,14 +1,14 @@
-package app.aaps.core.ui.extensions
+﻿package app.gmaaps.core.ui.extensions
 
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.model.durationInMinutes
-import app.aaps.core.data.model.getPassedDurationToTimeInMinutes
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.model.durationInMinutes
+import app.gmaaps.core.data.model.getPassedDurationToTimeInMinutes
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.CoreUiStrings
 
 /**
  * Text for a temporary basal on screen.
@@ -43,3 +43,4 @@ fun TB.toStringFull(profile: Profile, dateUtil: DateUtil, ch: ConcentrationHelpe
 fun TB.toStringShort(rh: TextResolver): String =
     if (isAbsolute || type == TB.Type.FAKE_EXTENDED) rh.gs(CoreUiStrings.pump_base_basal_rate, rate)
     else rh.gs(CoreUiStrings.formatPercent, rate)
+

@@ -1,10 +1,10 @@
-package app.aaps.pump.medtronic.comm.message
+﻿package app.gmaaps.pump.medtronic.comm.message
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.pump.common.hw.rileylink.ble.data.RLMessage
-import app.aaps.pump.medtronic.defs.MedtronicCommandType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.data.RLMessage
+import app.gmaaps.pump.medtronic.defs.MedtronicCommandType
 import kotlin.math.min
 
 /**

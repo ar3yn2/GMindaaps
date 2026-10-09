@@ -1,6 +1,6 @@
-@file:Suppress("PrivatePropertyName")
+﻿@file:Suppress("PrivatePropertyName")
 
-package app.aaps.plugins.automation.services
+package app.gmaaps.plugins.automation.services
 
 import android.Manifest
 import android.content.Intent
@@ -10,20 +10,20 @@ import android.location.LocationManager
 import android.os.Binder
 import android.os.IBinder
 import androidx.core.app.ActivityCompat
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationHolder
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventAppExit
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.workflow.MetroService
-import app.aaps.plugins.automation.GeoPosition
-import app.aaps.plugins.automation.events.EventLocationChange
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationHolder
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventAppExit
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.workflow.MetroService
+import app.gmaaps.plugins.automation.GeoPosition
+import app.gmaaps.plugins.automation.events.EventLocationChange
 import com.google.android.gms.location.LocationServices
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CoroutineScope
@@ -149,7 +149,7 @@ class LocationService : MetroService() {
                 }
             }
         } else {
-            rxBus.send(EventShowSnackbar(getString(app.aaps.core.ui.R.string.location_permission_not_granted), EventShowSnackbar.Type.Error))
+            rxBus.send(EventShowSnackbar(getString(app.gmaaps.core.ui.R.string.location_permission_not_granted), EventShowSnackbar.Type.Error))
         }
 
         rxBus.toFlow(EventAppExit::class)
@@ -179,3 +179,4 @@ class LocationService : MetroService() {
         }
     }
 }
+

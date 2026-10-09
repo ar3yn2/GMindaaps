@@ -1,7 +1,7 @@
-package app.aaps.core.ui.compose.navigation
+﻿package app.gmaaps.core.ui.compose.navigation
 
 import androidx.compose.runtime.compositionLocalOf
-import app.aaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.navigation.ElementType
 
 sealed class NavigationRequest {
     data class Element(val type: ElementType) : NavigationRequest()
@@ -17,3 +17,4 @@ sealed class NavigationRequest {
  * route (previews, tests) don't crash.
  */
 val LocalPluginNavigationRequest = compositionLocalOf<(NavigationRequest) -> Unit> { { } }
+

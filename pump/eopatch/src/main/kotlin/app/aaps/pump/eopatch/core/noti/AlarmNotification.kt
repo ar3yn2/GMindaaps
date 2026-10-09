@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.core.noti
+﻿package app.gmaaps.pump.eopatch.core.noti
 
-import app.aaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.AAPSLogger
 
 class AlarmNotification(bytes: ByteArray, aapsLogger: AAPSLogger) : BaseNotification(bytes, aapsLogger) {
 
@@ -20,3 +20,4 @@ class AlarmNotification(bytes: ByteArray, aapsLogger: AAPSLogger) : BaseNotifica
         private const val INDEX_POSITION = 100
     }
 }
+

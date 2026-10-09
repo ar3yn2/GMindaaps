@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.compose.steps
+﻿package app.gmaaps.pump.eopatch.compose.steps
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,10 +18,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.eopatch.R
-import app.aaps.pump.eopatch.compose.EopatchPatchViewModel
-import app.aaps.pump.eopatch.compose.EopatchPatchViewModel.SetupStep
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.eopatch.R
+import app.gmaaps.pump.eopatch.compose.EopatchPatchViewModel
+import app.gmaaps.pump.eopatch.compose.EopatchPatchViewModel.SetupStep
 
 @Composable
 fun SafetyCheckStep(viewModel: EopatchPatchViewModel) {
@@ -53,13 +53,13 @@ fun SafetyCheckStep(viewModel: EopatchPatchViewModel) {
                 TextButton(onClick = {
                     showRetryDialog = false
                     viewModel.retrySafetyCheck()
-                }) { Text(stringResource(app.aaps.core.ui.R.string.retry)) }
+                }) { Text(stringResource(app.gmaaps.core.ui.R.string.retry)) }
             },
             dismissButton = {
                 TextButton(onClick = {
                     showRetryDialog = false
                     viewModel.handleCancel()
-                }) { Text(stringResource(app.aaps.core.ui.R.string.cancel)) }
+                }) { Text(stringResource(app.gmaaps.core.ui.R.string.cancel)) }
             }
         )
     }
@@ -86,3 +86,4 @@ fun SafetyCheckStep(viewModel: EopatchPatchViewModel) {
         )
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.keys.interfaces
+﻿package app.gmaaps.core.keys.interfaces
 
 /**
  * Which shell the code is running in.
@@ -46,3 +46,4 @@ enum class AppPlatform {
         val ANDROID_ONLY: Set<AppPlatform> = setOf(Android)
     }
 }
+

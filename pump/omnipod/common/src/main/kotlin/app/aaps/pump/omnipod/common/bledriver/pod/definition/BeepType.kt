@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.definition
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.definition
 
 enum class BeepType(val value: Byte) {
 
@@ -7,3 +7,4 @@ enum class BeepType(val value: Byte) {
     XXX(0x04.toByte()), // Used during suspend
     LONG_SINGLE_BEEP(0x06.toByte()); // Used in stop delivery command
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.manager
+﻿package app.gmaaps.pump.equil.manager
 
 import java.nio.charset.StandardCharsets
 import java.security.MessageDigest

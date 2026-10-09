@@ -1,24 +1,24 @@
-package app.aaps.plugins.configuration.configBuilder
+﻿package app.gmaaps.plugins.configuration.configBuilder
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.VirtualPump
-import app.aaps.core.interfaces.scenes.ActiveSceneSnapshot
-import app.aaps.core.interfaces.scenes.ActiveSceneSync
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.SyncChannel
-import app.aaps.core.keys.interfaces.SyncDirection
-import app.aaps.core.nssdk.localmodel.configuration.NSActiveScene
-import app.aaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.VirtualPump
+import app.gmaaps.core.interfaces.scenes.ActiveSceneSnapshot
+import app.gmaaps.core.interfaces.scenes.ActiveSceneSync
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.SyncChannel
+import app.gmaaps.core.keys.interfaces.SyncDirection
+import app.gmaaps.core.nssdk.localmodel.configuration.NSActiveScene
+import app.gmaaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -172,3 +172,4 @@ internal class RunningConfigurationImplTest {
         verify(activePlugin, never()).activePump
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.util
+﻿package app.gmaaps.pump.eopatch.core.util
 
 import kotlin.math.abs
 import kotlin.math.min
@@ -18,3 +18,4 @@ object CommonUtils {
         }
     }
 }
+

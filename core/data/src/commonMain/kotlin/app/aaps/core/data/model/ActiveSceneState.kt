@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 /**
  * Runtime state of the currently active scene.
@@ -57,3 +57,4 @@ data class ActiveSceneState(
         val teId: Long? = null, val teNsId: String? = null
     )
 }
+

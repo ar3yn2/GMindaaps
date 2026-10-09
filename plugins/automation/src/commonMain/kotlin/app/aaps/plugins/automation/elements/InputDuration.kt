@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
 class InputDuration(
     var value: Int = 0,
@@ -28,3 +28,4 @@ class InputDuration(
 
     override fun toString(): String = "InputDuration: $value $unit"
 }
+

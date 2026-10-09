@@ -1,8 +1,8 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.interfaces.aps.IobTotal
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.Round
+import app.gmaaps.core.interfaces.aps.IobTotal
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.Round
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonObjectBuilder
 import kotlinx.serialization.json.buildJsonObject
@@ -89,3 +89,4 @@ fun IobTotal.Companion.combine(bolusIOB: IobTotal, basalIob: IobTotal): IobTotal
     result.iobWithZeroTemp = basalIob.iobWithZeroTemp
     return result
 }
+

@@ -1,13 +1,13 @@
-package app.aaps.core.nssdk.networking
+﻿package app.gmaaps.core.nssdk.networking
 
-import app.aaps.core.nssdk.remotemodel.LastModified
-import app.aaps.core.nssdk.remotemodel.NSResponse
-import app.aaps.core.nssdk.remotemodel.RemoteCreateUpdateResponse
-import app.aaps.core.nssdk.remotemodel.RemoteDeviceStatus
-import app.aaps.core.nssdk.remotemodel.RemoteEntry
-import app.aaps.core.nssdk.remotemodel.RemoteFood
-import app.aaps.core.nssdk.remotemodel.RemoteStatusResponse
-import app.aaps.core.nssdk.remotemodel.RemoteTreatment
+import app.gmaaps.core.nssdk.remotemodel.LastModified
+import app.gmaaps.core.nssdk.remotemodel.NSResponse
+import app.gmaaps.core.nssdk.remotemodel.RemoteCreateUpdateResponse
+import app.gmaaps.core.nssdk.remotemodel.RemoteDeviceStatus
+import app.gmaaps.core.nssdk.remotemodel.RemoteEntry
+import app.gmaaps.core.nssdk.remotemodel.RemoteFood
+import app.gmaaps.core.nssdk.remotemodel.RemoteStatusResponse
+import app.gmaaps.core.nssdk.remotemodel.RemoteTreatment
 import io.ktor.client.HttpClient
 import io.ktor.client.request.HttpRequestBuilder
 import io.ktor.client.request.request
@@ -283,3 +283,4 @@ internal class NightscoutApi(
             }
         }
 }
+

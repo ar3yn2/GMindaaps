@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.remotemodel
+﻿package app.gmaaps.core.nssdk.remotemodel
 
 import kotlinx.serialization.Serializable
 
@@ -9,3 +9,4 @@ import kotlinx.serialization.Serializable
  */
 @Serializable
 internal data class RemoteAuthResponse(val token: String, val iat: Long, val exp: Long)
+

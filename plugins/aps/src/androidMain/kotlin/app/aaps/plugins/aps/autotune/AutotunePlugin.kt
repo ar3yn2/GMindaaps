@@ -1,58 +1,58 @@
-@file:Suppress("SpellCheckingInspection")
+﻿@file:Suppress("SpellCheckingInspection")
 
-package app.aaps.plugins.aps.autotune
+package app.gmaaps.plugins.aps.autotune
 
 import android.view.View
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.autotune.Autotune
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.EnforcedState
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginBaseWithPreferences
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.profile.ProfileStore
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.MidnightTime
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.objects.extensions.blockFromJson
-import app.aaps.core.objects.extensions.pureProfileFromJson
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.core.ui.compose.icons.IcPluginAutotune
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.core.ui.elements.WeekDay
-import app.aaps.core.utils.safeGetBoolean
-import app.aaps.core.utils.safeGetDouble
-import app.aaps.core.utils.safeGetInt
-import app.aaps.core.utils.safeGetJSONObject
-import app.aaps.core.utils.safeGetLong
-import app.aaps.core.utils.safeGetString
-import app.aaps.plugins.aps.R
-import app.aaps.plugins.aps.autotune.compose.AutotuneComposeContent
-import app.aaps.plugins.aps.autotune.data.ATProfile
-import app.aaps.plugins.aps.autotune.data.PreppedGlucose
-import app.aaps.plugins.aps.autotune.events.EventAutotuneUpdateGui
-import app.aaps.plugins.aps.autotune.keys.AutotuneStringKey
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.autotune.Autotune
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.EnforcedState
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginBaseWithPreferences
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.profile.ProfileStore
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.MidnightTime
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.objects.extensions.blockFromJson
+import app.gmaaps.core.objects.extensions.pureProfileFromJson
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.core.ui.compose.icons.IcPluginAutotune
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.core.ui.elements.WeekDay
+import app.gmaaps.core.utils.safeGetBoolean
+import app.gmaaps.core.utils.safeGetDouble
+import app.gmaaps.core.utils.safeGetInt
+import app.gmaaps.core.utils.safeGetJSONObject
+import app.gmaaps.core.utils.safeGetLong
+import app.gmaaps.core.utils.safeGetString
+import app.gmaaps.plugins.aps.R
+import app.gmaaps.plugins.aps.autotune.compose.AutotuneComposeContent
+import app.gmaaps.plugins.aps.autotune.data.ATProfile
+import app.gmaaps.plugins.aps.autotune.data.PreppedGlucose
+import app.gmaaps.plugins.aps.autotune.events.EventAutotuneUpdateGui
+import app.gmaaps.plugins.aps.autotune.keys.AutotuneStringKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.ContributesIntoMap
@@ -103,7 +103,7 @@ class AutotunePlugin(
     pluginDescription = PluginDescription()
         .mainType(PluginType.GENERAL)
         .icon(IcPluginAutotune)
-        .pluginName(TextRef.AndroidRes(app.aaps.core.ui.R.string.autotune))
+        .pluginName(TextRef.AndroidRes(app.gmaaps.core.ui.R.string.autotune))
         .composeContent { plugin ->
             AutotuneComposeContent(
                 autotunePlugin = plugin as AutotunePlugin,
@@ -169,7 +169,7 @@ class AutotunePlugin(
         var logResult = ""
         result = ""
         if (profileFunction.getProfile() == null) {
-            result = rh.gs(app.aaps.core.ui.R.string.profileswitch_ismissing)
+            result = rh.gs(app.gmaaps.core.ui.R.string.profileswitch_ismissing)
             rxBus.send(EventAutotuneUpdateGui())
             calculationRunning = false
             return
@@ -180,7 +180,7 @@ class AutotunePlugin(
         lastRun = dateUtil.now()
         val profileStore = profileRepository.profile.value
         if (profileStore == null) {
-            result = rh.gs(app.aaps.core.ui.R.string.profileswitch_ismissing)
+            result = rh.gs(app.gmaaps.core.ui.R.string.profileswitch_ismissing)
             rxBus.send(EventAutotuneUpdateGui())
             calculationRunning = false
             return
@@ -195,7 +195,7 @@ class AutotunePlugin(
         // own (insulin lives on the switch, not on the stored profile), so for those fall back to the insulin in
         // force. Copied into a new ICfg because "Tune Insulin peak/dia" mutates it during the run.
         val profileICfg = profile.iCfg ?: profileFunction.getRunningOrRequestedICfg() ?: run {
-            result = rh.gs(app.aaps.core.ui.R.string.profile_switch_no_insulin)
+            result = rh.gs(app.gmaaps.core.ui.R.string.profile_switch_no_insulin)
             rxBus.send(EventAutotuneUpdateGui())
             calculationRunning = false
             return
@@ -295,7 +295,7 @@ class AutotunePlugin(
                 uel.log(
                     action = Action.STORE_PROFILE,
                     source = Sources.Automation,
-                    note = rh.gs(app.aaps.core.ui.R.string.autotune),
+                    note = rh.gs(app.gmaaps.core.ui.R.string.autotune),
                     value = ValueWithUnit.SimpleString(tunedP.profileName)
                 )
                 updateButtonVisibility = View.GONE
@@ -307,7 +307,7 @@ class AutotunePlugin(
                     // Skipping the switch means the tuned profile was never applied, so undo the GONE above and
                     // say why — otherwise the user is left with no switch, no button and no explanation.
                     log("Profile Switch skipped, no insulin in use")
-                    result = rh.gs(app.aaps.core.ui.R.string.profile_switch_no_insulin)
+                    result = rh.gs(app.gmaaps.core.ui.R.string.profile_switch_no_insulin)
                     updateButtonVisibility = View.VISIBLE
                 } else tunedP.profileStore(circadian)?.let { profileStore ->
                     val psResult = profileFunction.createProfileSwitch(
@@ -319,7 +319,7 @@ class AutotunePlugin(
                         timestamp = dateUtil.now(),
                         action = Action.PROFILE_SWITCH,
                         source = Sources.Automation,
-                        note = rh.gs(app.aaps.core.ui.R.string.autotune),
+                        note = rh.gs(app.gmaaps.core.ui.R.string.autotune),
                         listValues = listOf(ValueWithUnit.SimpleString(tunedP.profileName)),
                         iCfg = iCfg
                     )
@@ -351,11 +351,11 @@ class AutotunePlugin(
         val tuneInsulin = preferences.get(BooleanKey.AutotuneTuneInsulinCurve)
         if (tuneInsulin) {
             strResult += rh.gs(R.string.autotune_log_peak, rh.gs(R.string.autotune_peak), pumpProfile.iCfg.peak, tunedProfile.iCfg.peak)
-            strResult += rh.gs(R.string.autotune_log_dia, rh.gs(app.aaps.core.ui.R.string.ic_short), pumpProfile.iCfg.dia, tunedProfile.iCfg.dia)
+            strResult += rh.gs(R.string.autotune_log_dia, rh.gs(app.gmaaps.core.ui.R.string.ic_short), pumpProfile.iCfg.dia, tunedProfile.iCfg.dia)
         }
         // show ISF and CR
-        strResult += rh.gs(R.string.autotune_log_ic_isf, rh.gs(app.aaps.core.ui.R.string.isf_short), pumpProfile.isf, tunedProfile.isf)
-        strResult += rh.gs(R.string.autotune_log_ic_isf, rh.gs(app.aaps.core.ui.R.string.ic_short), pumpProfile.ic, tunedProfile.ic)
+        strResult += rh.gs(R.string.autotune_log_ic_isf, rh.gs(app.gmaaps.core.ui.R.string.isf_short), pumpProfile.isf, tunedProfile.isf)
+        strResult += rh.gs(R.string.autotune_log_ic_isf, rh.gs(app.gmaaps.core.ui.R.string.ic_short), pumpProfile.ic, tunedProfile.ic)
         strResult += line
         var totalBasal = 0.0
         var totalTuned = 0.0
@@ -541,7 +541,7 @@ class AutotunePlugin(
 
     override fun getPreferenceScreenContent() = PreferenceSubScreenDef(
         key = "autotune_settings",
-        titleResId = app.aaps.core.ui.R.string.autotune,
+        titleResId = app.gmaaps.core.ui.R.string.autotune,
         items = listOf(
             BooleanKey.AutotuneAutoSwitchProfile,
             BooleanKey.AutotuneCategorizeUamAsBasal,

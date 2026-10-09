@@ -1,13 +1,13 @@
-package app.aaps.plugins.constraints.objectives.objectives
+﻿package app.gmaaps.plugins.constraints.objectives.objectives
 
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.plugins.constraints.ConstraintsStrings
-import app.aaps.plugins.constraints.objectives.keys.ObjectivesBooleanComposedKey
-import app.aaps.plugins.constraints.objectives.keys.ObjectivesLongComposedKey
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.plugins.constraints.ConstraintsStrings
+import app.gmaaps.plugins.constraints.objectives.keys.ObjectivesBooleanComposedKey
+import app.gmaaps.plugins.constraints.objectives.keys.ObjectivesLongComposedKey
 import kotlinx.coroutines.Runnable
 import kotlin.time.Clock
 

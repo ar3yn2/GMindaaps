@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.UserEntry
+import app.gmaaps.database.entities.UserEntry
 
 class UserEntryTransaction(private val entries: List<UserEntry>) : Transaction<List<UserEntry>>() {
 

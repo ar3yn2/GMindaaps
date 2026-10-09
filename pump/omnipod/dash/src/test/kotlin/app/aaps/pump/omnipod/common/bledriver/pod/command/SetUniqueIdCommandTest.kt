@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
 import com.google.common.truth.Truth.assertThat
 import org.apache.commons.codec.binary.Hex
@@ -20,3 +20,4 @@ class SetUniqueIdCommandTest {
         assertThat(encoded).asList().containsExactlyElementsIn(Hex.decodeHex("FFFFFFFF18150313024200031404020A150E2908146CC1000A67278344").asList()).inOrder()
     }
 }
+

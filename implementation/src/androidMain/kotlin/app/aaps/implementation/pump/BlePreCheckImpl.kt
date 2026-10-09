@@ -1,4 +1,4 @@
-package app.aaps.implementation.pump
+﻿package app.gmaaps.implementation.pump
 
 import android.Manifest
 import android.bluetooth.BluetoothManager
@@ -7,14 +7,14 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.BlePreCheckResult
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowDialog
-import app.aaps.core.utils.extensions.safeEnable
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheckResult
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowDialog
+import app.gmaaps.core.utils.extensions.safeEnable
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -38,7 +38,7 @@ class BlePreCheckImpl(
 
     override fun prerequisitesCheck(activity: AppCompatActivity, additionalPermissions: List<String>?): Boolean {
         if (!activity.packageManager.hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
-            rxBus.send(EventShowDialog.Ok(title = rh.gs(app.aaps.core.ui.R.string.message), message = rh.gs(app.aaps.core.ui.R.string.ble_not_supported)))
+            rxBus.send(EventShowDialog.Ok(title = rh.gs(app.gmaaps.core.ui.R.string.message), message = rh.gs(app.gmaaps.core.ui.R.string.ble_not_supported)))
             return false
         } else {
             if (ContextCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED ||
@@ -56,7 +56,7 @@ class BlePreCheckImpl(
             // Ensures Bluetooth is available on the device and it is enabled.
             bluetoothAdapter?.safeEnable(3000)
             if (bluetoothAdapter?.isEnabled != true) {
-                rxBus.send(EventShowDialog.Ok(title = rh.gs(app.aaps.core.ui.R.string.message), message = rh.gs(app.aaps.core.ui.R.string.ble_not_enabled)))
+                rxBus.send(EventShowDialog.Ok(title = rh.gs(app.gmaaps.core.ui.R.string.message), message = rh.gs(app.gmaaps.core.ui.R.string.ble_not_enabled)))
                 return false
             }
         }
@@ -109,3 +109,4 @@ class BlePreCheckImpl(
         return true
     }
 }
+

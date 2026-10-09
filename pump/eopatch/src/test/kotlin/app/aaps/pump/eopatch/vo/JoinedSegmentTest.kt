@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -104,3 +104,4 @@ class JoinedSegmentTest {
         assertThat(segment3.startMinute).isEqualTo(segment2.endMinute)
     }
 }
+

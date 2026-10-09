@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 /**
  * The sensor a reading came from.
@@ -95,3 +95,4 @@ enum class SourceSensor(val text: String, val aliases: Set<String> = emptySet())
         }
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.plugins.source.notificationreader
+﻿package app.gmaaps.plugins.source.notificationreader
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -260,3 +260,4 @@ class GlucoseDeduplicatorTest {
         assertThat(GlucoseDeduplicator.snapGapToKnownIntervalMs(60 * min1)).isEqualTo(min15)
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.core.objects.workflow
+﻿package app.gmaaps.core.objects.workflow
 
-import app.aaps.core.interfaces.workflow.CalculationSignalsEmitter
-import app.aaps.core.interfaces.workflow.CalculationWorkflow
+import app.gmaaps.core.interfaces.workflow.CalculationSignalsEmitter
+import app.gmaaps.core.interfaces.workflow.CalculationWorkflow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -15,3 +15,4 @@ class CalculationSignalsImpl : CalculationSignalsEmitter {
         _progress.value = pass.finalPercent(pct)
     }
 }
+

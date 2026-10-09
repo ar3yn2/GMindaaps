@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.clientcontrol
+﻿package app.gmaaps.core.nssdk.localmodel.clientcontrol
 
 /**
  * Client-local snapshot of a successful pairing. Reconstructed from the
@@ -13,3 +13,4 @@ data class MasterPairing(
     val clientId: String,
     val masterSecretEnc: String
 )
+

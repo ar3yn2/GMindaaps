@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.overview
+﻿package app.gmaaps.core.interfaces.overview
 
 /**
  * The sensitivity as the user sees it: the autosens ratio and the ISF values in force, worked
@@ -29,3 +29,4 @@ data class SensitivityOverviewData(
     val isEnabled: Boolean = true,
     val hasData: Boolean = false
 )
+

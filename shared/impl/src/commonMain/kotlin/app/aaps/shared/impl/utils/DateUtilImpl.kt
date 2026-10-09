@@ -1,12 +1,12 @@
-package app.aaps.shared.impl.utils
+﻿package app.gmaaps.shared.impl.utils
 
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.format.NumberFormatPlatform
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.SafeParse
-import app.aaps.core.interfaces.utils.TimeDiff
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.format.NumberFormatPlatform
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.SafeParse
+import app.gmaaps.core.interfaces.utils.TimeDiff
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.LocalTime
@@ -432,3 +432,4 @@ class DateUtilImpl(
         private val HH_MM_PATTERN = Regex("""(\d+):(\d+)( a\.m\.| p\.m\.| AM| PM|AM|PM|)""")
     }
 }
+

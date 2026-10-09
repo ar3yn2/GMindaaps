@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.rx
+﻿package app.gmaaps.core.interfaces.rx
 
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -88,3 +88,4 @@ internal class ChunkedOnQuietPeriodTest {
         collector.cancel()
     }
 }
+

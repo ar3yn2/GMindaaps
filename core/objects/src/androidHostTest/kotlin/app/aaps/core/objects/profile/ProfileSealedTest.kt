@@ -1,22 +1,22 @@
-package app.aaps.core.objects.profile
+﻿package app.gmaaps.core.objects.profile
 
 import android.content.Context
-import app.aaps.core.interfaces.aps.APS
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.nsclient.ProcessedDeviceStatusData
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.HardLimits
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.extensions.pureProfileFromJson
-import app.aaps.shared.impl.utils.DateUtilImpl
-import app.aaps.shared.tests.HardLimitsMock
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.TestPumpPlugin
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.aps.APS
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.nsclient.ProcessedDeviceStatusData
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.HardLimits
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.extensions.pureProfileFromJson
+import app.gmaaps.shared.impl.utils.DateUtilImpl
+import app.gmaaps.shared.tests.HardLimitsMock
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestPumpPlugin
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
 import org.junit.jupiter.api.BeforeEach
@@ -234,3 +234,4 @@ class ProfileSealedTest : TestBase() {
         assertThat(at200.isValid).isFalse()
     }
 }
+

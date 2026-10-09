@@ -1,9 +1,9 @@
-package app.aaps.pump.equil.emulator
+﻿package app.gmaaps.pump.equil.emulator
 
-import app.aaps.core.interfaces.pump.ble.BleTransportListener
-import app.aaps.pump.equil.manager.AESUtil
-import app.aaps.pump.equil.manager.EquilPacketCodec
-import app.aaps.pump.equil.manager.Utils
+import app.gmaaps.core.interfaces.pump.ble.BleTransportListener
+import app.gmaaps.pump.equil.manager.AESUtil
+import app.gmaaps.pump.equil.manager.EquilPacketCodec
+import app.gmaaps.pump.equil.manager.Utils
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Assertions.assertTrue
@@ -181,12 +181,13 @@ class EquilEmulatorTransportTest {
         }
     }
 
-    private fun reassembleResponse(): app.aaps.pump.equil.manager.EquilCmdModel? {
+    private fun reassembleResponse(): app.gmaaps.pump.equil.manager.EquilCmdModel? {
         if (receivedPackets.isEmpty()) return null
-        val response = app.aaps.pump.equil.manager.EquilResponse(System.currentTimeMillis())
+        val response = app.gmaaps.pump.equil.manager.EquilResponse(System.currentTimeMillis())
         for (packet in receivedPackets) {
             response.add(java.nio.ByteBuffer.wrap(packet))
         }
         return EquilPacketCodec.parseModel(response)
     }
 }
+

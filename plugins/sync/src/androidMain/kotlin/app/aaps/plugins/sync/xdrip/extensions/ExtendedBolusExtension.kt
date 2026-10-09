@@ -1,11 +1,11 @@
-package app.aaps.plugins.sync.xdrip.extensions
+﻿package app.gmaaps.plugins.sync.xdrip.extensions
 
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.objects.extensions.toTemporaryBasal
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.objects.extensions.toTemporaryBasal
 import org.json.JSONObject
 
 fun EB.toJson(isAdd: Boolean, profile: Profile?, dateUtil: DateUtil): JSONObject? =
@@ -37,4 +37,5 @@ fun EB.toRealJson(isAdd: Boolean, dateUtil: DateUtil): JSONObject =
             if (ids.pumpSerial != null) it.put("pumpSerial", ids.pumpSerial)
             if (isAdd && ids.nightscoutId != null) it.put("_id", ids.nightscoutId)
         }
+
 

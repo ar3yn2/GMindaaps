@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.domain.usecase.bolus.model
+﻿package app.gmaaps.pump.carelevo.domain.usecase.bolus.model
 
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -154,3 +154,4 @@ internal class CarelevoBolusUseCaseModelTest {
         assertThat(model.toString()).contains("expectSec=0")
     }
 }
+

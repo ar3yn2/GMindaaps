@@ -1,31 +1,31 @@
-package app.aaps.pump.medtrum.di
+﻿package app.gmaaps.pump.medtrum.di
 
-import app.aaps.core.interfaces.di.FeatureMemberInjectors
-import app.aaps.pump.medtrum.comm.packets.ActivatePacket
-import app.aaps.pump.medtrum.comm.packets.AuthorizePacket
-import app.aaps.pump.medtrum.comm.packets.CancelBolusPacket
-import app.aaps.pump.medtrum.comm.packets.CancelTempBasalPacket
-import app.aaps.pump.medtrum.comm.packets.ClearPumpAlarmPacket
-import app.aaps.pump.medtrum.comm.packets.GetDeviceTypePacket
-import app.aaps.pump.medtrum.comm.packets.GetRecordPacket
-import app.aaps.pump.medtrum.comm.packets.GetTimePacket
-import app.aaps.pump.medtrum.comm.packets.MedtrumPacket
-import app.aaps.pump.medtrum.comm.packets.NotificationPacket
-import app.aaps.pump.medtrum.comm.packets.PollPatchPacket
-import app.aaps.pump.medtrum.comm.packets.PrimePacket
-import app.aaps.pump.medtrum.comm.packets.ReadBolusStatePacket
-import app.aaps.pump.medtrum.comm.packets.ResumePumpPacket
-import app.aaps.pump.medtrum.comm.packets.SetBasalProfilePacket
-import app.aaps.pump.medtrum.comm.packets.SetBolusMotorPacket
-import app.aaps.pump.medtrum.comm.packets.SetBolusPacket
-import app.aaps.pump.medtrum.comm.packets.SetPatchPacket
-import app.aaps.pump.medtrum.comm.packets.SetTempBasalPacket
-import app.aaps.pump.medtrum.comm.packets.SetTimePacket
-import app.aaps.pump.medtrum.comm.packets.SetTimeZonePacket
-import app.aaps.pump.medtrum.comm.packets.StopPatchPacket
-import app.aaps.pump.medtrum.comm.packets.SubscribePacket
-import app.aaps.pump.medtrum.comm.packets.SynchronizePacket
-import app.aaps.pump.medtrum.services.MedtrumService
+import app.gmaaps.core.interfaces.di.FeatureMemberInjectors
+import app.gmaaps.pump.medtrum.comm.packets.ActivatePacket
+import app.gmaaps.pump.medtrum.comm.packets.AuthorizePacket
+import app.gmaaps.pump.medtrum.comm.packets.CancelBolusPacket
+import app.gmaaps.pump.medtrum.comm.packets.CancelTempBasalPacket
+import app.gmaaps.pump.medtrum.comm.packets.ClearPumpAlarmPacket
+import app.gmaaps.pump.medtrum.comm.packets.GetDeviceTypePacket
+import app.gmaaps.pump.medtrum.comm.packets.GetRecordPacket
+import app.gmaaps.pump.medtrum.comm.packets.GetTimePacket
+import app.gmaaps.pump.medtrum.comm.packets.MedtrumPacket
+import app.gmaaps.pump.medtrum.comm.packets.NotificationPacket
+import app.gmaaps.pump.medtrum.comm.packets.PollPatchPacket
+import app.gmaaps.pump.medtrum.comm.packets.PrimePacket
+import app.gmaaps.pump.medtrum.comm.packets.ReadBolusStatePacket
+import app.gmaaps.pump.medtrum.comm.packets.ResumePumpPacket
+import app.gmaaps.pump.medtrum.comm.packets.SetBasalProfilePacket
+import app.gmaaps.pump.medtrum.comm.packets.SetBolusMotorPacket
+import app.gmaaps.pump.medtrum.comm.packets.SetBolusPacket
+import app.gmaaps.pump.medtrum.comm.packets.SetPatchPacket
+import app.gmaaps.pump.medtrum.comm.packets.SetTempBasalPacket
+import app.gmaaps.pump.medtrum.comm.packets.SetTimePacket
+import app.gmaaps.pump.medtrum.comm.packets.SetTimeZonePacket
+import app.gmaaps.pump.medtrum.comm.packets.StopPatchPacket
+import app.gmaaps.pump.medtrum.comm.packets.SubscribePacket
+import app.gmaaps.pump.medtrum.comm.packets.SynchronizePacket
+import app.gmaaps.pump.medtrum.services.MedtrumService
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ClassKey
@@ -195,3 +195,4 @@ object MedtrumMemberInjectors {
     @ClassKey(MedtrumService::class)
     fun bindMedtrumService(injector: MembersInjector<MedtrumService>): MembersInjector<*> = injector
 }
+

@@ -1,10 +1,10 @@
-package app.aaps.pump.medtronic.comm.ui
+﻿package app.gmaaps.pump.medtronic.comm.ui
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.medtronic.comm.MedtronicCommunicationManager
-import app.aaps.pump.medtronic.defs.MedtronicCommandType
-import app.aaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.medtronic.comm.MedtronicCommunicationManager
+import app.gmaaps.pump.medtronic.defs.MedtronicCommandType
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
 import dev.zacsweers.metro.Inject
 
 /**

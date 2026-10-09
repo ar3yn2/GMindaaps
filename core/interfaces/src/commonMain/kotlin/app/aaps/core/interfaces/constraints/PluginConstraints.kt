@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.constraints
+﻿package app.gmaaps.core.interfaces.constraints
 
-import app.aaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.Profile
 
 /**
  * PluginConstraints interface
@@ -26,3 +26,4 @@ interface PluginConstraints {
     suspend fun applyMaxIOBConstraints(maxIob: Constraint<Double>): Constraint<Double> = maxIob
     fun isConcentrationEnabled(value: Constraint<Boolean>): Constraint<Boolean> = value
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.LocalTextStyle
@@ -18,17 +18,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.text.style.LineHeightStyle
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.UiMode
-import app.aaps.core.ui.compose.navigation.DarkElementColors
-import app.aaps.core.ui.compose.navigation.ElementColors
-import app.aaps.core.ui.compose.navigation.LightElementColors
-import app.aaps.core.ui.compose.navigation.LocalElementColors
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.UiMode
+import app.gmaaps.core.ui.compose.navigation.DarkElementColors
+import app.gmaaps.core.ui.compose.navigation.ElementColors
+import app.gmaaps.core.ui.compose.navigation.LightElementColors
+import app.gmaaps.core.ui.compose.navigation.LocalElementColors
 
 /**
  * Smallest-screen-width threshold (in dp) above which the device is treated as a tablet.
@@ -324,3 +324,4 @@ fun AapsTheme(
         }
     }
 }
+

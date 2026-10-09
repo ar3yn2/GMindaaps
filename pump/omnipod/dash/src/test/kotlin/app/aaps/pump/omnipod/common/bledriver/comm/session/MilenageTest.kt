@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.session
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.utils.toHex
-import app.aaps.shared.tests.AAPSLoggerTest
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.shared.tests.AAPSLoggerTest
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.Mock
@@ -71,3 +71,4 @@ class MilenageTest : TestBase() {
         assertThat(m.sqn.toHex()).isEqualTo(m.synchronizationSqn.toHex())
     }
 }
+

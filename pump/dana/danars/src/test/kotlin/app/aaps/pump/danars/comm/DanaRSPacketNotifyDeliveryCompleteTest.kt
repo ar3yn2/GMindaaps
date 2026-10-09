@@ -1,7 +1,7 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.pump.danars.DanaRSTestBase
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.pump.danars.DanaRSTestBase
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.mockito.ArgumentMatchers.anyDouble

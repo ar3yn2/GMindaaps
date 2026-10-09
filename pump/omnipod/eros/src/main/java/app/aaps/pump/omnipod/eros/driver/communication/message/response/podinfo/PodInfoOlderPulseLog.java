@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
 
 import android.text.TextUtils;
 
@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.definition.PodInfoType;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodInfoType;
 
 public class PodInfoOlderPulseLog extends PodInfo {
     private static final int MINIMUM_MESSAGE_LENGTH = 3;
@@ -56,3 +56,4 @@ public class PodInfoOlderPulseLog extends PodInfo {
         return out;
     }
 }
+

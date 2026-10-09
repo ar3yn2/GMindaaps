@@ -1,5 +1,6 @@
-package app.aaps.pump.omnipod.common
+﻿package app.gmaaps.pump.omnipod.common
 
-import app.aaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.events.Event
 
 class EventOmnipodDashPumpValuesChanged : Event()
+

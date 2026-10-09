@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.overview.graph
+﻿package app.gmaaps.core.interfaces.overview.graph
 
-import app.aaps.core.interfaces.overview.graph.GraphConfig.Companion.MAX_GRAPH_HEIGHT_DP
+import app.gmaaps.core.interfaces.overview.graph.GraphConfig.Companion.MAX_GRAPH_HEIGHT_DP
 import kotlinx.coroutines.flow.StateFlow
 
 /**
@@ -88,3 +88,4 @@ interface GraphConfigRepository {
     /** Update and persist graph configuration */
     fun update(config: GraphConfig)
 }
+

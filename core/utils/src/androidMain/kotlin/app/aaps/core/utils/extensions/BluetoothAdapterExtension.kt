@@ -1,4 +1,4 @@
-package app.aaps.core.utils.extensions
+﻿package app.gmaaps.core.utils.extensions
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothAdapter

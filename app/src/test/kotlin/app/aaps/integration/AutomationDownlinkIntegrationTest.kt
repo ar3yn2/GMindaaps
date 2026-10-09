@@ -1,26 +1,26 @@
-package app.aaps.integration
+﻿package app.gmaaps.integration
 
-import app.aaps.core.interfaces.alerts.ReminderScheduler
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.location.LocationServiceController
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.scenes.ActiveSceneSync
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
-import app.aaps.plugins.automation.AutomationEventFactory
-import app.aaps.plugins.automation.AutomationRuntime
-import app.aaps.plugins.automation.LocationPermissions
-import app.aaps.plugins.automation.triggers.TriggerConnector
-import app.aaps.plugins.automation.triggers.TriggerDeps
-import app.aaps.plugins.automation.triggers.TriggerFactory
-import app.aaps.plugins.configuration.configBuilder.RunningConfigurationImpl
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.alerts.ReminderScheduler
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.location.LocationServiceController
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.scenes.ActiveSceneSync
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
+import app.gmaaps.plugins.automation.AutomationEventFactory
+import app.gmaaps.plugins.automation.AutomationRuntime
+import app.gmaaps.plugins.automation.LocationPermissions
+import app.gmaaps.plugins.automation.triggers.TriggerConnector
+import app.gmaaps.plugins.automation.triggers.TriggerDeps
+import app.gmaaps.plugins.automation.triggers.TriggerFactory
+import app.gmaaps.plugins.configuration.configBuilder.RunningConfigurationImpl
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -67,7 +67,7 @@ class AutomationDownlinkIntegrationTest : TestBaseWithProfile() {
             activePlugin, mock(), mock(), dateUtil
         )
     }
-    @Mock private lateinit var actionFactory: app.aaps.plugins.automation.actions.ActionFactory
+    @Mock private lateinit var actionFactory: app.gmaaps.plugins.automation.actions.ActionFactory
     private val eventFactory by lazy { AutomationEventFactory(aapsLogger, dateUtil, actionFactory, triggerFactory, triggerDeps) }
     @Mock private lateinit var activeSceneSync: ActiveSceneSync
     @Mock private lateinit var pumpSync: PumpSync
@@ -166,3 +166,4 @@ class AutomationDownlinkIntegrationTest : TestBaseWithProfile() {
         clientScope.cancel()
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.nsSdkJson
-import app.aaps.core.nssdk.remotemodel.RemoteTreatment
+import app.gmaaps.core.nssdk.nsSdkJson
+import app.gmaaps.core.nssdk.remotemodel.RemoteTreatment
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import java.util.TimeZone
@@ -101,3 +101,4 @@ class CreatedAtParsingTest {
         assertThat(timestampOf(" 1785992179555 ")).isEqualTo(1785992179555L)
     }
 }
+

@@ -1,14 +1,14 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.ElementVisibility
-import app.aaps.core.keys.interfaces.PreferenceEnabledCondition
-import app.aaps.core.keys.interfaces.StringPreferenceKey
-import app.aaps.core.keys.interfaces.StringValidator
-import app.aaps.core.keys.interfaces.SyncChannel
-import app.aaps.core.keys.interfaces.SyncDirection
-import app.aaps.core.keys.interfaces.SyncSpec
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.ElementVisibility
+import app.gmaaps.core.keys.interfaces.PreferenceEnabledCondition
+import app.gmaaps.core.keys.interfaces.StringPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringValidator
+import app.gmaaps.core.keys.interfaces.SyncChannel
+import app.gmaaps.core.keys.interfaces.SyncDirection
+import app.gmaaps.core.keys.interfaces.SyncSpec
+import app.gmaaps.core.keys.interfaces.TextRef
 
 enum class StringKey(
     override val key: String,
@@ -225,3 +225,4 @@ enum class StringKey(
     override val entries: Map<String, TextRef> =
         entriesRefs + entriesLiterals.mapValues { TextRef.Literal(it.value) }
 }
+

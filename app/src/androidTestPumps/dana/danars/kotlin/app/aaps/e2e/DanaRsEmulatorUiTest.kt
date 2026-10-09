@@ -1,23 +1,23 @@
-package app.aaps.e2e
+﻿package app.gmaaps.e2e
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import app.aaps.ComposeMainActivity
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.keys.BooleanComposedKey
-import app.aaps.di.ResetGraphRule
-import app.aaps.di.testGraphs
-import app.aaps.e2e.DanaRsEmulatorUiTest.Companion.MAX_DAILY_UNITS
-import app.aaps.pump.dana.emulator.ReviewRecordCodes
-import app.aaps.pump.dana.keys.DanaStringComposedKey
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danars.DanaRSPlugin
-import app.aaps.pump.danars.di.DanaRSAccessors
-import app.aaps.pump.danars.emulator.EmulatorBleTransport
-import app.aaps.testcategories.ShardA
+import app.gmaaps.ComposeMainActivity
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.keys.BooleanComposedKey
+import app.gmaaps.di.ResetGraphRule
+import app.gmaaps.di.testGraphs
+import app.gmaaps.e2e.DanaRsEmulatorUiTest.Companion.MAX_DAILY_UNITS
+import app.gmaaps.pump.dana.emulator.ReviewRecordCodes
+import app.gmaaps.pump.dana.keys.DanaStringComposedKey
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danars.DanaRSPlugin
+import app.gmaaps.pump.danars.di.DanaRSAccessors
+import app.gmaaps.pump.danars.emulator.EmulatorBleTransport
+import app.gmaaps.testcategories.ShardA
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import org.junit.Rule
@@ -455,3 +455,4 @@ class DanaRsEmulatorUiTest : AbstractDanaEmulatorUiTest() {
         private const val SAVE_TIMEOUT = 30_000L
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.domain.model.basal
+﻿package app.gmaaps.pump.carelevo.domain.model.basal
 
 data class CarelevoBasalSegment(
     val injectStartHour: Int,

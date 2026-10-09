@@ -1,13 +1,13 @@
-package app.aaps.e2e
+﻿package app.gmaaps.e2e
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.di.EmulatedOptions
-import app.aaps.di.ResetGraphRule
-import app.aaps.di.testGraphs
-import app.aaps.pump.danars.di.DanaRSAccessors
-import app.aaps.pump.danars.emulator.EmulatorBleTransport
-import app.aaps.testcategories.ShardB
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.di.EmulatedOptions
+import app.gmaaps.di.ResetGraphRule
+import app.gmaaps.di.testGraphs
+import app.gmaaps.pump.danars.di.DanaRSAccessors
+import app.gmaaps.pump.danars.emulator.EmulatorBleTransport
+import app.gmaaps.testcategories.ShardB
 import com.google.common.truth.Truth.assertThat
 import org.junit.After
 import org.junit.Before
@@ -67,5 +67,6 @@ class DanaRsEmulatorTransportTest {
         assertThat(bleTransport).isInstanceOf(EmulatorBleTransport::class.java)
     }
 }
+
 
 

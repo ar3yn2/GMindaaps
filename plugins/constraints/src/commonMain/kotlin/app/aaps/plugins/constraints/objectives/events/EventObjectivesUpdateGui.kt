@@ -1,5 +1,5 @@
-package app.aaps.plugins.constraints.objectives.events
+﻿package app.gmaaps.plugins.constraints.objectives.events
 
-import app.aaps.core.interfaces.rx.events.EventUpdateGui
+import app.gmaaps.core.interfaces.rx.events.EventUpdateGui
 
 class EventObjectivesUpdateGui : EventUpdateGui()

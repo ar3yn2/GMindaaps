@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -17,3 +17,4 @@ internal fun TextFieldPreferencePreview() {
         )
     }
 }
+

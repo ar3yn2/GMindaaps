@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
@@ -15,3 +15,4 @@ fun String.asJsonObject(): JsonObject = Json.parseToJsonElement(this).jsonObject
 
 /** The nested `data` block of a serialized trigger or action, i.e. what its `fromJSON` is handed. */
 fun String.jsonData(): JsonObject = asJsonObject()["data"] as JsonObject
+

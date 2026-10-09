@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.rx.weardata
+﻿package app.gmaaps.core.interfaces.rx.weardata
 
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.ExperimentalSerializationApi
@@ -275,10 +275,10 @@ class EventDataTest {
     fun activeSceneStateFromAnOlderPhoneDecodesWithoutTheFollowUpFields() {
         // A phone from before the follow-up fields sends only the boolean; the watch must not
         // fall back to Error, and must see "no name, no end, no follow-up"
-        val decoded = EventData.deserialize("""{"type":"app.aaps.core.interfaces.rx.weardata.EventData.ActiveSceneState","active":true}""")
+        val decoded = EventData.deserialize("""{"type":"app.gmaaps.core.interfaces.rx.weardata.EventData.ActiveSceneState","active":true}""")
         assertThat(decoded).isEqualTo(EventData.ActiveSceneState(active = true))
         // And the other way round: an older watch reads a parameterless stop as "no chain"
-        val stop = EventData.deserialize("""{"type":"app.aaps.core.interfaces.rx.weardata.EventData.ActionSceneStopConfirmed"}""")
+        val stop = EventData.deserialize("""{"type":"app.gmaaps.core.interfaces.rx.weardata.EventData.ActionSceneStopConfirmed"}""")
         assertThat(stop).isEqualTo(EventData.ActionSceneStopConfirmed(triggerChain = false))
     }
 
@@ -314,3 +314,4 @@ class EventDataTest {
         assertThat(restored.loopMode).isEqualTo(LoopStatusData.LoopMode.UNKNOWN)
     }
 }
+

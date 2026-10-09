@@ -1,12 +1,12 @@
-package app.aaps.wear.tile.source
+﻿package app.gmaaps.wear.tile.source
 
 import android.content.Context
 import android.content.res.Resources
-import app.aaps.core.interfaces.rx.weardata.EventData
-import app.aaps.core.interfaces.sharedPreferences.SP
-import app.aaps.wear.AAPSLoggerTest
-import app.aaps.wear.R
-import app.aaps.wear.interaction.actions.BackgroundActionActivity
+import app.gmaaps.core.interfaces.rx.weardata.EventData
+import app.gmaaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.wear.AAPSLoggerTest
+import app.gmaaps.wear.R
+import app.gmaaps.wear.interaction.actions.BackgroundActionActivity
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -270,3 +270,4 @@ class SceneSourceTest {
         assertThat(refs).containsExactly(R.drawable.ic_scene_purple, R.drawable.ic_scene_end, R.drawable.ic_scene_skip)
     }
 }
+

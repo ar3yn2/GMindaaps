@@ -1,9 +1,9 @@
-package app.aaps.plugins.aps.autotune
+﻿package app.gmaaps.plugins.aps.autotune
 
-import app.aaps.plugins.aps.autotune.data.BGDatum
-import app.aaps.plugins.aps.autotune.data.CRDatum
-import app.aaps.plugins.aps.autotune.data.PreppedGlucose
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.plugins.aps.autotune.data.BGDatum
+import app.gmaaps.plugins.aps.autotune.data.CRDatum
+import app.gmaaps.plugins.aps.autotune.data.PreppedGlucose
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
 import org.junit.jupiter.api.BeforeEach
@@ -50,3 +50,4 @@ class PreppedGlucoseTest : TestBaseWithProfile() {
         assertThat(basalDataEnd.equals(prep1.basalGlucoseData[prep1.basalGlucoseData.size - 1])).isTrue()
     }
 }
+

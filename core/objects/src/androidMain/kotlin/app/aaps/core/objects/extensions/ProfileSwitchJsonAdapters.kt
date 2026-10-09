@@ -1,7 +1,7 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.interfaces.profile.PureProfile
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.profile.PureProfile
+import app.gmaaps.core.interfaces.utils.DateUtil
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import org.json.JSONObject
@@ -18,3 +18,4 @@ fun pureProfileFromJson(jsonObject: JSONObject, dateUtil: DateUtil, defaultUnits
     val parsed = runCatching { Json.parseToJsonElement(jsonObject.toString()) as? JsonObject }.getOrNull() ?: return null
     return pureProfileFromJson(parsed, dateUtil, defaultUnits)
 }
+

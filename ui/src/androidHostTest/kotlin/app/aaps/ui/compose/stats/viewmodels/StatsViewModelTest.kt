@@ -1,17 +1,17 @@
-package app.aaps.ui.compose.stats.viewmodels
+﻿package app.gmaaps.ui.compose.stats.viewmodels
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.stats.DexcomTirCalculator
-import app.aaps.core.interfaces.stats.TddCalculator
-import app.aaps.core.interfaces.stats.TirCalculator
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.AppPlatform
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.ui.activityMonitor.ActivityMonitor
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.stats.DexcomTirCalculator
+import app.gmaaps.core.interfaces.stats.TddCalculator
+import app.gmaaps.core.interfaces.stats.TirCalculator
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.AppPlatform
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.ui.activityMonitor.ActivityMonitor
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -115,3 +115,4 @@ internal class StatsViewModelTest {
         assertThat(sut.uiState.value.showResetActivityDialog).isFalse()
     }
 }
+

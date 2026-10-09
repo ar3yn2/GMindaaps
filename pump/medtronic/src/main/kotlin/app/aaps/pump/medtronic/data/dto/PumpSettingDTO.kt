@@ -1,6 +1,6 @@
-package app.aaps.pump.medtronic.data.dto
+﻿package app.gmaaps.pump.medtronic.data.dto
 
-import app.aaps.pump.medtronic.defs.PumpConfigurationGroup
+import app.gmaaps.pump.medtronic.defs.PumpConfigurationGroup
 
 /**
  * Created by andy on 6/6/18.

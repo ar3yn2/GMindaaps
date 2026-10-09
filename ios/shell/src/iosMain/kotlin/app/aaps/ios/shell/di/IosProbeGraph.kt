@@ -1,24 +1,24 @@
-package app.aaps.ios.shell.di
+﻿package app.gmaaps.ios.shell.di
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.AlarmSoundPlayer
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.di.CoreObjectsGraph
-import app.aaps.database.AppRepository
-import app.aaps.database.di.IosAppDatabaseBuilder
-import app.aaps.plugins.calibration.LinearCalibrationPlugin
-import app.aaps.plugins.calibration.NoCalibrationPlugin
-import app.aaps.plugins.sensitivity.SensitivityAAPSPlugin
-import app.aaps.plugins.sensitivity.SensitivityOref1Plugin
-import app.aaps.plugins.sensitivity.SensitivityWeightedAveragePlugin
-import app.aaps.plugins.smoothing.AvgSmoothingPlugin
-import app.aaps.plugins.smoothing.ExponentialSmoothingPlugin
-import app.aaps.plugins.smoothing.NoSmoothingPlugin
-import app.aaps.plugins.smoothing.UnscentedKalmanFilterPlugin
-import app.aaps.shared.clientbindings.ClientGraphBindings
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.AlarmSoundPlayer
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.di.CoreObjectsGraph
+import app.gmaaps.database.AppRepository
+import app.gmaaps.database.di.IosAppDatabaseBuilder
+import app.gmaaps.plugins.calibration.LinearCalibrationPlugin
+import app.gmaaps.plugins.calibration.NoCalibrationPlugin
+import app.gmaaps.plugins.sensitivity.SensitivityAAPSPlugin
+import app.gmaaps.plugins.sensitivity.SensitivityOref1Plugin
+import app.gmaaps.plugins.sensitivity.SensitivityWeightedAveragePlugin
+import app.gmaaps.plugins.smoothing.AvgSmoothingPlugin
+import app.gmaaps.plugins.smoothing.ExponentialSmoothingPlugin
+import app.gmaaps.plugins.smoothing.NoSmoothingPlugin
+import app.gmaaps.plugins.smoothing.UnscentedKalmanFilterPlugin
+import app.gmaaps.shared.clientbindings.ClientGraphBindings
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.DependencyGraph
 import dev.zacsweers.metro.Includes
@@ -111,3 +111,4 @@ interface IosProbeGraph {
         ): IosProbeGraph
     }
 }
+

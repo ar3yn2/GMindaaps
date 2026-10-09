@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.comm.enums
+﻿package app.gmaaps.pump.medtrum.comm.enums
 
 enum class ModelType(val value: Int) {
     INVALID(-1),
@@ -16,3 +16,4 @@ enum class ModelType(val value: Int) {
         }
     }
 }
+

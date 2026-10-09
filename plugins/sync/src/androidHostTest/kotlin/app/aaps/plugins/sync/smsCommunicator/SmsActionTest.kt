@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.smsCommunicator
+﻿package app.gmaaps.plugins.sync.smsCommunicator
 
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
@@ -24,3 +24,4 @@ class SmsActionTest {
         assertThat(pumpAction.pumpCommand).isTrue()
     }
 }
+

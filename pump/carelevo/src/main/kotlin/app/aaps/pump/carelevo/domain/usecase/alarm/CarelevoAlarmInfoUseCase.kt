@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.domain.usecase.alarm
+﻿package app.gmaaps.pump.carelevo.domain.usecase.alarm
 
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.repository.CarelevoAlarmInfoRepository
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoAlarmInfoRepository
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn

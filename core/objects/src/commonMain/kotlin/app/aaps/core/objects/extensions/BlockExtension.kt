@@ -1,9 +1,9 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.data.model.data.Block
-import app.aaps.core.data.model.data.TargetBlock
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.data.Block
+import app.gmaaps.core.data.model.data.TargetBlock
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.utils.DateUtil
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive

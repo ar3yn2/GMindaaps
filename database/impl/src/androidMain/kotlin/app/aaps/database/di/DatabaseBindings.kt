@@ -1,7 +1,7 @@
-package app.aaps.database.di
+﻿package app.gmaaps.database.di
 
 import android.content.Context
-import app.aaps.database.AppRepository
+import app.gmaaps.database.AppRepository
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -29,3 +29,4 @@ object DatabaseBindings {
         }
     }
 }
+

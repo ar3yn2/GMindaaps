@@ -1,12 +1,12 @@
-package app.aaps.pump.diaconn.packet
+﻿package app.gmaaps.pump.diaconn.packet
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.diaconn.DiaconnG8Pump
-import app.aaps.pump.diaconn.keys.DiaconnStringNonKey
-import app.aaps.pump.diaconn.pumplog.PumpLogUtil
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.diaconn.DiaconnG8Pump
+import app.gmaaps.pump.diaconn.keys.DiaconnStringNonKey
+import app.gmaaps.pump.diaconn.pumplog.PumpLogUtil
 import dev.zacsweers.metro.Inject
 
 /**

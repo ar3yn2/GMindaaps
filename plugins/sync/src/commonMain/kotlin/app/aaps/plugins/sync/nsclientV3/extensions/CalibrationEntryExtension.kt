@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.time.T
-import app.aaps.core.nssdk.localmodel.entry.NSMbgV3
-import app.aaps.core.nssdk.localmodel.entry.NsUnits
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.nssdk.localmodel.entry.NSMbgV3
+import app.gmaaps.core.nssdk.localmodel.entry.NsUnits
 
 fun NSMbgV3.toCAL(): CAL =
     CAL(
@@ -40,3 +40,4 @@ fun CAL.onlyNsIdAdded(previous: CAL): Boolean =
         contentEqualsTo(previous) &&
         previous.ids.nightscoutId == null &&
         ids.nightscoutId != null
+

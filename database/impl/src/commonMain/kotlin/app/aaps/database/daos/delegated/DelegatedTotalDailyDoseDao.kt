@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.TotalDailyDoseDao
-import app.aaps.database.entities.TotalDailyDose
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.TotalDailyDoseDao
+import app.gmaaps.database.entities.TotalDailyDose
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedTotalDailyDoseDao(changes: MutableList<DBEntry>, private val dao: TotalDailyDoseDao) : DelegatedDao(changes), TotalDailyDoseDao by dao {
 

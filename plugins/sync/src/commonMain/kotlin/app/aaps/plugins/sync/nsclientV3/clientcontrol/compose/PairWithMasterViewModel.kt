@@ -1,15 +1,15 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol.compose
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol.compose
 
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.nssdk.localmodel.clientcontrol.ClientControlMessage
-import app.aaps.core.nssdk.localmodel.clientcontrol.MasterPairing
-import app.aaps.core.nssdk.localmodel.clientcontrol.PairingPayload
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.ClientControlPublisher
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.ClientPairingRepository
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.PairingOfferFetcher
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.ClientControlMessage
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.MasterPairing
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.PairingPayload
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.ClientControlPublisher
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.ClientPairingRepository
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.PairingOfferFetcher
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -133,3 +133,4 @@ class PairWithMasterViewModel(
 
     enum class ErrorReason { WrongPin, AmbiguousPin, OfferExpired, NetworkUnavailable, SecretStoreFailed }
 }
+

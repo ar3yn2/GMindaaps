@@ -1,9 +1,9 @@
-package app.aaps.pump.insight.utils
+﻿package app.gmaaps.pump.insight.utils
 
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.insight.descriptors.Alert
-import app.aaps.pump.insight.descriptors.AlertCategory
-import app.aaps.pump.insight.descriptors.AlertType
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.insight.descriptors.Alert
+import app.gmaaps.pump.insight.descriptors.AlertCategory
+import app.gmaaps.pump.insight.descriptors.AlertType
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.ArgumentMatchers.anyInt
@@ -55,3 +55,4 @@ class AlertUtilsTest {
         AlertCategory.entries.forEach { assertThat(sut.getAlertIcon(it)).isNotNull() }
     }
 }
+

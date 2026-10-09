@@ -1,25 +1,25 @@
-package app.aaps.pump.common.hw.rileylink.service
+﻿package app.gmaaps.pump.common.hw.rileylink.service
 
 import android.app.Service
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
 import android.content.Intent
-import app.aaps.core.interfaces.di.injectMetroMembers
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.defs.PumpDeviceState
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.common.hw.rileylink.RileyLinkCommunicationManager
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.ble.RFSpy
-import app.aaps.pump.common.hw.rileylink.ble.RileyLinkBLE
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkError
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkDoubleKey
+import app.gmaaps.core.interfaces.di.injectMetroMembers
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.defs.PumpDeviceState
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkCommunicationManager
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.ble.RFSpy
+import app.gmaaps.pump.common.hw.rileylink.ble.RileyLinkBLE
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkEncodingType
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkError
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkDoubleKey
 import dev.zacsweers.metro.HasMemberInjections
 import dev.zacsweers.metro.Inject
 import java.util.Locale
@@ -169,3 +169,4 @@ abstract class RileyLinkService : Service() {
 
     abstract fun verifyConfiguration(forceRileyLinkAddressRenewal: Boolean): Boolean
 }
+

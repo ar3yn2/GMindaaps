@@ -1,13 +1,13 @@
-package app.aaps.pump.eopatch.core.ble
+﻿package app.gmaaps.pump.eopatch.core.ble
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.BIG_API
-import app.aaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.CIPHER
-import app.aaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.LEGACY
-import app.aaps.pump.eopatch.core.define.IPatchConstant
-import app.aaps.pump.eopatch.core.response.BaseResponse
-import app.aaps.pump.eopatch.core.scan.IBleDevice
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.BIG_API
+import app.gmaaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.CIPHER
+import app.gmaaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.LEGACY
+import app.gmaaps.pump.eopatch.core.define.IPatchConstant
+import app.gmaaps.pump.eopatch.core.response.BaseResponse
+import app.gmaaps.pump.eopatch.core.scan.IBleDevice
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
@@ -161,3 +161,4 @@ abstract class BaseAPI<T : BaseResponse>(
         private const val DEFAULT_BLE_MTU_SIZE = 21
     }
 }
+

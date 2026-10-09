@@ -1,10 +1,10 @@
-package app.aaps.pump.equil.compose.steps
+﻿package app.gmaaps.pump.equil.compose.steps
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.pump.BleScanStep
-import app.aaps.pump.equil.compose.EquilWizardViewModel
+import app.gmaaps.core.ui.compose.pump.BleScanStep
+import app.gmaaps.pump.equil.compose.EquilWizardViewModel
 
 /**
  * Equil-specific wrapper around the shared [BleScanStep].
@@ -26,3 +26,4 @@ internal fun BleScanStepWrapper(
         deviceNameFilter = Regex("^Equil")
     )
 }
+

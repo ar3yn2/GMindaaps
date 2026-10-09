@@ -1,4 +1,4 @@
-package app.aaps.plugins.aps.openAPS
+﻿package app.gmaaps.plugins.aps.openAPS
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -107,3 +107,4 @@ class TddStatusTest {
         assertEquals(8.999, tddStatus.tddLast8to4H, 0.001)
     }
 }
+

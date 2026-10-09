@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.ui.wizard.compose.steps
+﻿package app.gmaaps.pump.omnipod.common.ui.wizard.compose.steps
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.pump.omnipod.common.ui.wizard.compose.ActionState
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.ActionState
 
 @Preview(showBackground = true, name = "Deactivate - In Progress")
 @Composable
@@ -40,3 +40,4 @@ internal fun PreviewDeactivateError() {
         )
     }
 }
+

@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
 
 class VersionResponseTest {
     @Test
@@ -73,3 +73,4 @@ class VersionResponseTest {
         Assertions.assertNull(versionResponse.getGain());
     }
 }
+

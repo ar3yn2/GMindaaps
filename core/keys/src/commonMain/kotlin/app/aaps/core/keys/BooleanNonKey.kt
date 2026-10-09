@@ -1,6 +1,6 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.BooleanNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey
 
 @Suppress("SpellCheckingInspection")
 enum class BooleanNonKey(
@@ -47,4 +47,7 @@ enum class BooleanNonKey(
     // set on the next launch, the previous VACUUM died below the JVM (native abort / OOM) — used to
     // break the boot-crash loop. Transient device state, not a user setting → not exportable.
     VacuumInProgress("vacuum_in_progress", false, exportable = false),
+    // AI Profile settings
+    AiProfileEnabled("ai_profile_enabled", true, exportable = true),
+    AiAllowSameDayCorrection("ai_allow_same_day_correction", false, exportable = true)
 }

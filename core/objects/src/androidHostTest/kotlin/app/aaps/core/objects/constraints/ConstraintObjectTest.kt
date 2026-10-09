@@ -1,6 +1,6 @@
-package app.aaps.core.objects.constraints
+﻿package app.gmaaps.core.objects.constraints
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -47,3 +47,4 @@ class ConstraintObjectTest : TestBase() {
         assertThat(d.originalValue()).isWithin(0.01).of(10.0)
     }
 }
+

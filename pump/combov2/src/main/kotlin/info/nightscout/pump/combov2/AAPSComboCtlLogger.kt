@@ -1,8 +1,8 @@
-package info.nightscout.pump.combov2
+﻿package info.nightscout.pump.combov2
 
 import android.util.Log
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import info.nightscout.comboctl.base.LogLevel
 import info.nightscout.comboctl.base.LoggerBackend as ComboCtlLoggerBackend
 
@@ -39,3 +39,4 @@ internal class AAPSComboCtlLogger(private val aapsLogger: AAPSLogger) : ComboCtl
         }
     }
 }
+

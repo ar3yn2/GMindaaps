@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.icons.library
+﻿package app.gmaaps.core.ui.compose.icons.library
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.PathParser
 import androidx.compose.ui.graphics.vector.path
 import androidx.compose.ui.unit.dp
-import app.aaps.core.data.model.TE.Location
+import app.gmaaps.core.data.model.TE.Location
 
 /**
  * Icon for Woman Front View.
@@ -208,3 +208,4 @@ object WomanFrontPaths {
         }
     }
 }
+

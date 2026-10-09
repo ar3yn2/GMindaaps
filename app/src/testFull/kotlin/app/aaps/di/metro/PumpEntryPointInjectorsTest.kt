@@ -1,9 +1,9 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
 import android.app.Activity
 import android.app.Service
 import android.content.BroadcastReceiver
-import app.aaps.shared.tests.aapsClassesOnClasspath
+import app.gmaaps.shared.tests.aapsClassesOnClasspath
 import com.google.common.truth.Truth.assertThat
 import dev.zacsweers.metro.Inject
 import org.junit.jupiter.api.Test
@@ -39,7 +39,7 @@ class PumpEntryPointInjectorsTest {
     /** Concrete Android entry points belonging to a pump module that need their fields filled. */
     private fun pumpEntryPoints(): List<Class<*>> =
         aapsClassesOnClasspath(listOf(AppRootGraph::class.java))
-            .filter { it.name.startsWith("app.aaps.pump.") || it.name.startsWith("info.nightscout.pump.") }
+            .filter { it.name.startsWith("app.gmaaps.pump.") || it.name.startsWith("info.nightscout.pump.") }
             .filter { type -> androidEntryPoints.any { it.isAssignableFrom(type) } }
             // Android never builds a base class on its own; only the concrete one is looked up.
             .filterNot { it.isInterface || Modifier.isAbstract(it.modifiers) }
@@ -59,3 +59,4 @@ class PumpEntryPointInjectorsTest {
         assertThat(contributed).containsAtLeastElementsIn(expected)
     }
 }
+

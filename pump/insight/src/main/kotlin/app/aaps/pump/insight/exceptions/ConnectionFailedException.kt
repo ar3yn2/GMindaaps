@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.exceptions
+﻿package app.gmaaps.pump.insight.exceptions
 
 /**
  * The Bluetooth socket could not be connected.
@@ -8,3 +8,4 @@ package app.aaps.pump.insight.exceptions
  * "refused" are very different problems and only the platform message tells them apart.
  */
 class ConnectionFailedException(val durationOfConnectionAttempt: Long, cause: Throwable? = null) : InsightException(cause)
+

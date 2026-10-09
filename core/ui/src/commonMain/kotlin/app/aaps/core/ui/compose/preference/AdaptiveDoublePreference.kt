@@ -1,8 +1,8 @@
-/*
+﻿/*
  * Adaptive Double Preference for Jetpack Compose
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -10,20 +10,20 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.keys.decimalPlaces
-import app.aaps.core.keys.interfaces.DoublePreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.keys.step
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.LocalPreferences
-import app.aaps.core.ui.compose.isDuration
-import app.aaps.core.ui.compose.rangeText
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.core.ui.compose.stringResourceOrNull
-import app.aaps.core.ui.compose.unitLabel
-import app.aaps.core.ui.compose.valueFormat
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.keys.decimalPlaces
+import app.gmaaps.core.keys.interfaces.DoublePreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.keys.step
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.ui.compose.isDuration
+import app.gmaaps.core.ui.compose.rangeText
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.core.ui.compose.stringResourceOrNull
+import app.gmaaps.core.ui.compose.unitLabel
+import app.gmaaps.core.ui.compose.valueFormat
 
 /**
  * Composable double preference for use inside card sections.
@@ -132,3 +132,4 @@ fun AdaptiveDoublePreferenceItem(
         )
     }
 }
+

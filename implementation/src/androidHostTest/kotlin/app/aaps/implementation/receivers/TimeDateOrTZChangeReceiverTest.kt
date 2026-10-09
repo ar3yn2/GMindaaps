@@ -1,10 +1,10 @@
-package app.aaps.implementation.receivers
+﻿package app.gmaaps.implementation.receivers
 
 import android.content.Intent
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.core.interfaces.pump.PumpWithConcentration
-import app.aaps.core.interfaces.rx.events.EventTimeZoneChanged
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.core.interfaces.pump.PumpWithConcentration
+import app.gmaaps.core.interfaces.rx.events.EventTimeZoneChanged
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -173,3 +173,4 @@ class TimeDateOrTZChangeReceiverTest : TestBaseWithProfile() {
             .first { it.useDaylightTime() && it.inDaylightTime(nowDate) }
     }
 }
+

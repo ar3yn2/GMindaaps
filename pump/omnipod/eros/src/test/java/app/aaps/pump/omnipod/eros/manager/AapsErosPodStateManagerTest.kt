@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.eros.manager
+﻿package app.gmaaps.pump.omnipod.eros.manager
 
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.omnipod.eros.driver.definition.FirmwareVersion
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.omnipod.eros.driver.definition.FirmwareVersion
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.joda.time.DateTime
 import org.joda.time.DateTimeUtils
@@ -88,3 +88,4 @@ class AapsErosPodStateManagerTest : TestBase() {
         DateTimeUtils.setCurrentMillisSystem()
     }
 }
+

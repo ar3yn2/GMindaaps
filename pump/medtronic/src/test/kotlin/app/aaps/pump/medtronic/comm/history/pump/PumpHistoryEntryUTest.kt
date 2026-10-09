@@ -1,9 +1,9 @@
-package app.aaps.pump.medtronic.comm.history.pump
+﻿package app.gmaaps.pump.medtronic.comm.history.pump
 
-import app.aaps.pump.medtronic.MedtronicTestBase
-import app.aaps.pump.medtronic.defs.MedtronicDeviceType
-import app.aaps.pump.medtronic.driver.MedtronicPumpStatus
-import app.aaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.pump.medtronic.MedtronicTestBase
+import app.gmaaps.pump.medtronic.defs.MedtronicDeviceType
+import app.gmaaps.pump.medtronic.driver.MedtronicPumpStatus
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -51,3 +51,4 @@ class PumpHistoryEntryUTest : MedtronicTestBase() {
         assertThat(bgRecord.getDecodedDataEntry("MeterSerial")).isEqualTo(expectedMeterSerial)
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action;
 
 import androidx.annotation.Nullable;
 
@@ -7,14 +7,14 @@ import org.joda.time.Duration;
 import java.util.List;
 import java.util.Optional;
 
-import app.aaps.pump.omnipod.eros.driver.communication.action.service.ExpirationReminderBuilder;
-import app.aaps.pump.omnipod.eros.driver.definition.ActivationProgress;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
-import app.aaps.pump.omnipod.eros.driver.definition.schedule.BasalSchedule;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalActivationProgressException;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.pump.omnipod.eros.driver.communication.action.service.ExpirationReminderBuilder;
+import app.gmaaps.pump.omnipod.eros.driver.definition.ActivationProgress;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.pump.omnipod.eros.driver.definition.schedule.BasalSchedule;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalActivationProgressException;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
 
 public class InsertCannulaAction implements OmnipodAction<Void> {
 
@@ -75,3 +75,4 @@ public class InsertCannulaAction implements OmnipodAction<Void> {
         return builder.build();
     }
 }
+

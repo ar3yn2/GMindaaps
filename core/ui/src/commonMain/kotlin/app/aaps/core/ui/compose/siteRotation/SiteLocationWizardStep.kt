@@ -1,13 +1,13 @@
-package app.aaps.core.ui.compose.siteRotation
+﻿package app.gmaaps.core.ui.compose.siteRotation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.data.model.TE
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.core.ui.compose.stringResource
 import kotlinx.coroutines.flow.StateFlow
 
 /**
@@ -65,3 +65,4 @@ fun SiteLocationWizardStep(host: SiteLocationStepHost) {
         )
     }
 }
+

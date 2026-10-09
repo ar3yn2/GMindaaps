@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.scenes
+﻿package app.gmaaps.core.interfaces.scenes
 
-import app.aaps.core.data.model.Scene
-import app.aaps.core.interfaces.clientcontrol.ActionProgress
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.interfaces.clientcontrol.ActionProgress
 
 /**
  * Per-domain execution facade for scene actions, hiding the master-vs-client split from callers (VMs).
@@ -33,3 +33,4 @@ interface SceneActions {
     /** Validation gate for activating [scene] (pump/loop/profile/actions); null = OK, else a reason. */
     suspend fun validateActivation(scene: Scene): String?
 }
+

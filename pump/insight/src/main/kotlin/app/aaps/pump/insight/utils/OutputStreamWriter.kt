@@ -1,9 +1,9 @@
-package app.aaps.pump.insight.utils
+﻿package app.gmaaps.pump.insight.utils
 
-import app.aaps.core.utils.notifyAll
-import app.aaps.core.utils.wait
-import app.aaps.core.utils.waitMillis
-import app.aaps.pump.insight.utils.OutputStreamWriter.Companion.WRITE_AND_WAIT_TIMEOUT_MS
+import app.gmaaps.core.utils.notifyAll
+import app.gmaaps.core.utils.wait
+import app.gmaaps.core.utils.waitMillis
+import app.gmaaps.pump.insight.utils.OutputStreamWriter.Companion.WRITE_AND_WAIT_TIMEOUT_MS
 import java.io.IOException
 import java.io.OutputStream
 

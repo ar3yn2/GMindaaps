@@ -1,11 +1,11 @@
-package app.aaps.pump.equil.ble
+﻿package app.gmaaps.pump.equil.ble
 
 import android.bluetooth.BluetoothGatt
-import app.aaps.core.interfaces.pump.ble.BleGatt
-import app.aaps.core.interfaces.pump.ble.BleScanner
-import app.aaps.pump.equil.driver.definition.BluetoothConnectionState
-import app.aaps.pump.equil.manager.EquilManager
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.pump.ble.BleGatt
+import app.gmaaps.core.interfaces.pump.ble.BleScanner
+import app.gmaaps.pump.equil.driver.definition.BluetoothConnectionState
+import app.gmaaps.pump.equil.manager.EquilManager
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
@@ -28,7 +28,7 @@ class EquilBLECallbackTest : TestBase() {
     @Mock private lateinit var bleTransport: EquilBleTransport
     @Mock private lateinit var gatt: BleGatt
     @Mock private lateinit var scanner: BleScanner
-    @Mock private lateinit var bleAdapter: app.aaps.core.interfaces.pump.ble.BleAdapter
+    @Mock private lateinit var bleAdapter: app.gmaaps.core.interfaces.pump.ble.BleAdapter
     @Mock private lateinit var equilManager: EquilManager
 
     private lateinit var equilBLE: EquilBLE
@@ -258,3 +258,4 @@ class EquilBLECallbackTest : TestBase() {
         verify(scanner).stopScan()
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.packet
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.packet
 
-import app.aaps.pump.omnipod.common.bledriver.comm.message.CrcMismatchException
-import app.aaps.pump.omnipod.common.bledriver.comm.message.IncorrectPacketException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.CrcMismatchException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.IncorrectPacketException
 import java.nio.ByteBuffer
 import java.util.LinkedList
 
@@ -67,3 +67,4 @@ class PayloadJoiner(firstPacket: ByteArray) {
 }
 
 internal fun Int.toUnsignedLong() = this.toLong() and 0xffffffffL
+

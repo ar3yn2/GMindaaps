@@ -1,4 +1,4 @@
-package app.aaps.plugins.aps.autotune.compose
+﻿package app.gmaaps.plugins.aps.autotune.compose
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable
@@ -52,27 +52,27 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.graph.profile.ProfileCompareContent
-import app.aaps.core.graph.profile.ProfileSingleContent
-import app.aaps.core.graph.profile.ProfileViewerScreen
-import app.aaps.core.graph.profile.buildBasalRows
-import app.aaps.core.graph.profile.buildIcRows
-import app.aaps.core.graph.profile.buildIsfRows
-import app.aaps.core.graph.profile.buildTargetRows
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsCard
-import app.aaps.core.ui.compose.NumberInputRow
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.dialogs.OkDialog
-import app.aaps.core.ui.compose.pickers.WeekDaySelector
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.core.ui.elements.WeekDay
-import app.aaps.plugins.aps.R
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.graph.profile.ProfileCompareContent
+import app.gmaaps.core.graph.profile.ProfileSingleContent
+import app.gmaaps.core.graph.profile.ProfileViewerScreen
+import app.gmaaps.core.graph.profile.buildBasalRows
+import app.gmaaps.core.graph.profile.buildIcRows
+import app.gmaaps.core.graph.profile.buildIsfRows
+import app.gmaaps.core.graph.profile.buildTargetRows
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsCard
+import app.gmaaps.core.ui.compose.NumberInputRow
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.dialogs.OkDialog
+import app.gmaaps.core.ui.compose.pickers.WeekDaySelector
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.core.ui.elements.WeekDay
+import app.gmaaps.plugins.aps.R
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -204,7 +204,7 @@ fun AutotuneScreen(
                         if (state.basalRows.isNotEmpty()) {
                             HorizontalDivider(modifier = Modifier.padding(vertical = 4.dp))
                             Text(
-                                text = stringResource(app.aaps.core.ui.R.string.basal),
+                                text = stringResource(app.gmaaps.core.ui.R.string.basal),
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold,
                                 textAlign = TextAlign.Center,
@@ -223,7 +223,7 @@ fun AutotuneScreen(
                     ) {
                         val buttonModifier = Modifier.weight(1f)
                         if (state.showProfileSwitch) {
-                            AutotuneButton(stringResource(app.aaps.core.ui.R.string.activate_profile), Icons.Filled.SwapHoriz, buttonModifier, onClick = commit(onProfileSwitch))
+                            AutotuneButton(stringResource(app.gmaaps.core.ui.R.string.activate_profile), Icons.Filled.SwapHoriz, buttonModifier, onClick = commit(onProfileSwitch))
                         }
                         if (state.showCompare) {
                             AutotuneButton(stringResource(R.string.autotune_compare_profile), Icons.AutoMirrored.Filled.CompareArrows, buttonModifier, onClick = commit(onCompareProfiles))
@@ -280,7 +280,7 @@ fun AutotuneScreen(
 
         is DialogState.ProfileSwitch     -> {
             OkCancelDialog(
-                message = stringResource(app.aaps.core.ui.R.string.activate_profile) + ": " + dialog.profileName + "?",
+                message = stringResource(app.gmaaps.core.ui.R.string.activate_profile) + ": " + dialog.profileName + "?",
                 onConfirm = onDialogConfirm,
                 onDismiss = onDialogDismiss
             )
@@ -309,7 +309,7 @@ fun AutotuneScreen(
                             getIsfList = { it.getIsfList(rh, dateUtil) },
                             getBasalList = { it.getBasalList(rh, dateUtil) },
                             getTargetList = { it.getTargetList(rh, dateUtil) },
-                            formatBasalSum = { rh.gs(app.aaps.core.interfaces.R.string.format_insulin_units, it) }
+                            formatBasalSum = { rh.gs(app.gmaaps.core.interfaces.R.string.format_insulin_units, it) }
                         )
                     },
                     profileCompareContent = { profile1, profile2 ->
@@ -317,11 +317,11 @@ fun AutotuneScreen(
                             profile1 = profile1,
                             profile2 = profile2,
                             icsRows = buildIcRows(profile1, profile2, dateUtil),
-                            icUnits = stringResource(app.aaps.core.interfaces.R.string.profile_carbs_per_unit),
+                            icUnits = stringResource(app.gmaaps.core.interfaces.R.string.profile_carbs_per_unit),
                             isfsRows = buildIsfRows(profile1, profile2, profileUtil, dateUtil),
-                            isfUnits = stringResource(if (profileFunction.getUnits() == GlucoseUnit.MGDL) app.aaps.core.interfaces.R.string.profile_isf_units_mgdl else app.aaps.core.interfaces.R.string.profile_isf_units_mmol),
+                            isfUnits = stringResource(if (profileFunction.getUnits() == GlucoseUnit.MGDL) app.gmaaps.core.interfaces.R.string.profile_isf_units_mgdl else app.gmaaps.core.interfaces.R.string.profile_isf_units_mmol),
                             basalsRows = buildBasalRows(profile1, profile2, dateUtil),
-                            basalUnits = stringResource(app.aaps.core.interfaces.R.string.profile_ins_units_per_hour),
+                            basalUnits = stringResource(app.gmaaps.core.interfaces.R.string.profile_ins_units_per_hour),
                             targetsRows = buildTargetRows(profile1, profile2, dateUtil, profileUtil),
                             targetUnits = profileFunction.getUnits().displayLabel,
                             profileName1 = dialog.data.profileName ?: "",
@@ -428,8 +428,8 @@ internal fun ResultsTableHeader(isBasal: Boolean) {
         horizontalArrangement = Arrangement.SpaceEvenly
     ) {
         val headerStyle = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold)
-        Text(text = if (isBasal) stringResource(app.aaps.core.ui.R.string.time) else stringResource(R.string.autotune_param), style = headerStyle, modifier = Modifier.weight(1f), textAlign = TextAlign.Center)
-        Text(text = stringResource(app.aaps.core.ui.R.string.profile), style = headerStyle, modifier = Modifier.weight(1f), textAlign = TextAlign.Center)
+        Text(text = if (isBasal) stringResource(app.gmaaps.core.ui.R.string.time) else stringResource(R.string.autotune_param), style = headerStyle, modifier = Modifier.weight(1f), textAlign = TextAlign.Center)
+        Text(text = stringResource(app.gmaaps.core.ui.R.string.profile), style = headerStyle, modifier = Modifier.weight(1f), textAlign = TextAlign.Center)
         Text(text = stringResource(R.string.autotune_tunedprofile_name), style = headerStyle, modifier = Modifier.weight(1f), textAlign = TextAlign.Center)
         Text(text = stringResource(R.string.autotune_percent), style = headerStyle, modifier = Modifier.weight(0.7f), textAlign = TextAlign.Center)
         if (isBasal) {
@@ -487,3 +487,4 @@ internal fun AutotuneButton(
 }
 
 // --- Previews ---
+

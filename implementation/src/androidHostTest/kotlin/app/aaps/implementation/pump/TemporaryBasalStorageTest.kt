@@ -1,7 +1,7 @@
-package app.aaps.implementation.pump
+﻿package app.gmaaps.implementation.pump
 
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -75,3 +75,4 @@ class TemporaryBasalStorageTest : TestBase() {
 
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.core.objects.interfaces.utils
+﻿package app.gmaaps.core.objects.interfaces.utils
 
-import app.aaps.core.interfaces.utils.MidnightTime
+import app.gmaaps.core.interfaces.utils.MidnightTime
 import com.google.common.truth.Truth.assertWithMessage
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
@@ -126,3 +126,4 @@ class MidnightTimeParityTest {
         }
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.code
+﻿package app.gmaaps.pump.eopatch.code
 
 import kotlin.time.Duration.Companion.minutes
 
@@ -41,3 +41,4 @@ enum class BolusExDuration(val index: Int, val minute: Int, val hour: Float) {
     }
 
 }
+

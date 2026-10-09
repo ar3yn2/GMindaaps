@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.domain.type
+﻿package app.gmaaps.pump.carelevo.domain.type
 
 /**
  * Pump alarm severity tier as reported on the wire (`code` 0/1/2).
@@ -97,3 +97,4 @@ enum class AlarmCause(val alarmType: AlarmType, val code: Int?, val value: Int? 
                 ?: ALARM_UNKNOWN
     }
 }
+

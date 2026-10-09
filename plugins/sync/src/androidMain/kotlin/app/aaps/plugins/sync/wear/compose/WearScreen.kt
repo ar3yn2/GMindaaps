@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.wear.compose
+﻿package app.gmaaps.plugins.sync.wear.compose
 
 import android.content.Intent
 import androidx.activity.compose.BackHandler
@@ -56,19 +56,19 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.keys.KeysStrings
-import app.aaps.core.keys.PushedWatchfaceId
-import app.aaps.core.keys.StringKey
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.LocalSnackbarHostState
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.dialogs.OkDialog
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.sync.R
-import app.aaps.plugins.sync.SyncStrings
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.keys.KeysStrings
+import app.gmaaps.core.keys.PushedWatchfaceId
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.LocalSnackbarHostState
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.dialogs.OkDialog
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.sync.R
+import app.gmaaps.plugins.sync.SyncStrings
 
 @Composable
 internal fun WearScreen(
@@ -550,3 +550,4 @@ internal fun CwfInfosContent(
         }
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.TemporaryTarget
+import app.gmaaps.database.entities.TemporaryTarget
 
 class UpdateNsIdTemporaryTargetTransaction(private val temporaryTargets: List<TemporaryTarget>) : Transaction<UpdateNsIdTemporaryTargetTransaction.TransactionResult>() {
 

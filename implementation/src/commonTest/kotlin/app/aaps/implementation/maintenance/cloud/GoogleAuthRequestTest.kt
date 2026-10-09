@@ -1,6 +1,6 @@
-package app.aaps.implementation.maintenance.cloud
+﻿package app.gmaaps.implementation.maintenance.cloud
 
-import app.aaps.core.objects.crypto.platformCryptoPrimitives
+import app.gmaaps.core.objects.crypto.platformCryptoPrimitives
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
@@ -121,3 +121,4 @@ class GoogleAuthRequestTest {
         assertEquals("%C5%A1", sut.formEncode("š"))
     }
 }
+

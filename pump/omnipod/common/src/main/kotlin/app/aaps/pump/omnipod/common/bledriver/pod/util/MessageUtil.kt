@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.util
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.util
 
 import kotlin.experimental.and
 import kotlin.experimental.xor
@@ -300,3 +300,4 @@ object MessageUtil {
         return sum
     }
 }
+

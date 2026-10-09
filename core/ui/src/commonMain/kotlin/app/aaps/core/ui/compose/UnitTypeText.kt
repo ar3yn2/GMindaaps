@@ -1,9 +1,9 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
-import app.aaps.core.keys.UnitType
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.keys.interfaces.TextRef.Companion.withArgs
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.keys.UnitType
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef.Companion.withArgs
+import app.gmaaps.core.ui.CoreUiStrings
 
 /**
  * Maps a [UnitType] to the text that describes it.
@@ -84,3 +84,4 @@ private fun UnitType.rangeFormat(): TextRef? = when (this) {
 
 /** True when this unit should be rendered as a duration ("1 h 30 min") rather than a plain number. */
 fun UnitType.isDuration(): Boolean = this == UnitType.MIN
+

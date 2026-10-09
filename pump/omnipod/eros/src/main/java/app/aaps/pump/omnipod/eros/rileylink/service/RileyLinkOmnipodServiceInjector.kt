@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.eros.rileylink.service
+﻿package app.gmaaps.pump.omnipod.eros.rileylink.service
 
-import app.aaps.core.interfaces.di.FeatureMemberInjectors
+import app.gmaaps.core.interfaces.di.FeatureMemberInjectors
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ClassKey
@@ -29,3 +29,4 @@ object RileyLinkOmnipodServiceInjector {
         injector: MembersInjector<RileyLinkOmnipodService>
     ): MembersInjector<*> = injector
 }
+

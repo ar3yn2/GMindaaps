@@ -1,12 +1,12 @@
-package app.aaps.shared.tests
+﻿package app.gmaaps.shared.tests
 
-import app.aaps.core.interfaces.InterfacesStringIds
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.KeysStringIds
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStringIds
-import app.aaps.implementation.ImplementationStringIds
-import app.aaps.plugins.aps.ApsStringIds
+import app.gmaaps.core.interfaces.InterfacesStringIds
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.KeysStringIds
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStringIds
+import app.gmaaps.implementation.ImplementationStringIds
+import app.gmaaps.plugins.aps.ApsStringIds
 import org.mockito.invocation.InvocationOnMock
 import org.mockito.kotlin.any
 import org.mockito.kotlin.anyVararg
@@ -91,3 +91,4 @@ private fun namedIdOf(ref: TextRef.Named): Int? = when (ref.owner) {
     "aps"            -> ApsStringIds.idOf(ref.name)
     else             -> null
 }
+

@@ -1,14 +1,14 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
 import androidx.annotation.NonNull;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfo;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoActiveAlerts;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoDataLog;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoDetailedStatus;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoFaultAndInitializationTime;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoOlderPulseLog;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoRecentPulseLog;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfo;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoActiveAlerts;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoDataLog;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoDetailedStatus;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoFaultAndInitializationTime;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoOlderPulseLog;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoRecentPulseLog;
 
 public enum PodInfoType {
     NORMAL((byte) 0x00),

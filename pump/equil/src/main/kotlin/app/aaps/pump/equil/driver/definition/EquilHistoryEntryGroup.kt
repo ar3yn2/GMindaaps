@@ -1,7 +1,7 @@
-package app.aaps.pump.equil.driver.definition
+﻿package app.gmaaps.pump.equil.driver.definition
 
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.equil.R
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.equil.R
 
 enum class EquilHistoryEntryGroup(val resourceId: Int) {
 
@@ -34,4 +34,5 @@ enum class EquilHistoryEntryGroup(val resourceId: Int) {
         }
     }
 }
+
 

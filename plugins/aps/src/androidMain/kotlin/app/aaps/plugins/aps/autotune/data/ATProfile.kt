@@ -1,28 +1,28 @@
-package app.aaps.plugins.aps.autotune.data
+﻿package app.gmaaps.plugins.aps.autotune.data
 
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.data.Block
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.insulin.InsulinType
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.profile.ProfileStore
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.profile.PureProfile
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.Round
-import app.aaps.core.keys.DoubleKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.extensions.blockValueBySeconds
-import app.aaps.core.objects.extensions.pureProfileFromJson
-import app.aaps.core.objects.extensions.with
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.core.utils.MidnightUtils
-import app.aaps.plugins.aps.R
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.data.Block
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.insulin.InsulinType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.ProfileStore
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.profile.PureProfile
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.Round
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.extensions.blockValueBySeconds
+import app.gmaaps.core.objects.extensions.pureProfileFromJson
+import app.gmaaps.core.objects.extensions.with
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.core.utils.MidnightUtils
+import app.gmaaps.plugins.aps.R
 import dev.zacsweers.metro.Inject
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
@@ -293,3 +293,4 @@ class ATProfile(
         }
     }
 }
+

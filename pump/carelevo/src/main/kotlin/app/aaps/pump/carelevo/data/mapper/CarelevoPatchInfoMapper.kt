@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.data.mapper
+﻿package app.gmaaps.pump.carelevo.data.mapper
 
-import app.aaps.pump.carelevo.data.model.entities.CarelevoPatchInfoEntity
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.ext.parseIsoInstant
+import app.gmaaps.pump.carelevo.data.model.entities.CarelevoPatchInfoEntity
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.ext.parseIsoInstant
 
 internal fun CarelevoPatchInfoEntity.transformToCarelevoPatchInfoDomainModel() = CarelevoPatchInfoDomainModel(
     address = address,
@@ -73,3 +73,4 @@ internal fun CarelevoPatchInfoDomainModel.transformToCarelevoPatchInfoEntity() =
     mode = mode,
     bolusActionSeq = bolusActionSeq
 )
+

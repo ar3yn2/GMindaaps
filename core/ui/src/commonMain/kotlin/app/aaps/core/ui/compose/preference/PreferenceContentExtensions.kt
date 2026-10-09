@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
@@ -19,13 +19,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.IntentPreferenceKey
-import app.aaps.core.keys.interfaces.LongPreferenceKey
-import app.aaps.core.keys.interfaces.PreferenceKey
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.ui.compose.rememberBringIntoViewOnExpand
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntentPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongPreferenceKey
+import app.gmaaps.core.keys.interfaces.PreferenceKey
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.ui.compose.rememberBringIntoViewOnExpand
 import kotlinx.coroutines.delay
 
 /**
@@ -234,3 +234,4 @@ private fun HighlightablePreference(
         content()
     }
 }
+

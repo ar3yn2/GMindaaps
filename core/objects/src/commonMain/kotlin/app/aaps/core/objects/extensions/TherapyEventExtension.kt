@@ -1,9 +1,9 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.pump.defs.PumpType
 import kotlin.time.Clock
 
 fun TE.Companion.asAnnouncement(error: String, pumpId: Long? = null, pumpType: PumpType? = null, pumpSerial: String? = null): TE =
@@ -37,3 +37,4 @@ fun TE.Companion.asSettingsExport(error: String, pumpId: Long? = null, pumpType:
             pumpSerial = pumpSerial
         )
     )
+

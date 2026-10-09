@@ -1,12 +1,12 @@
-package app.aaps.pump.danars.services
+﻿package app.gmaaps.pump.danars.services
 
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.R
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.R
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -70,3 +70,4 @@ class DanaRSAlarmReporterTest : TestBase() {
         verifyBlocking(pumpSync) { insertAnnouncement(eq("Occlusion"), anyOrNull(), anyOrNull(), eq("CFL00001TJ")) }
     }
 }
+

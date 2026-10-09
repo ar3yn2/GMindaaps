@@ -1,6 +1,6 @@
-package app.aaps.pump.insight.utils
+﻿package app.gmaaps.pump.insight.utils
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 

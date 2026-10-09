@@ -1,13 +1,13 @@
-package app.aaps.implementation.protection
+﻿package app.gmaaps.implementation.protection
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.protection.ExportPasswordPlatform
-import app.aaps.core.interfaces.protection.PasswordHasher
-import app.aaps.core.interfaces.protection.SecureEncrypt
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.protection.ExportPasswordPlatform
+import app.gmaaps.core.interfaces.protection.PasswordHasher
+import app.gmaaps.core.interfaces.protection.SecureEncrypt
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertNull
@@ -192,3 +192,4 @@ class ExportPasswordDataStoreImplTest {
         assertEquals(0, platform.clearCount)
     }
 }
+

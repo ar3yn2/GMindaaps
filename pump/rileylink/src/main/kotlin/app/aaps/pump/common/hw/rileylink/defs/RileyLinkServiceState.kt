@@ -1,6 +1,6 @@
-package app.aaps.pump.common.hw.rileylink.defs
+﻿package app.gmaaps.pump.common.hw.rileylink.defs
 
-import app.aaps.pump.common.hw.rileylink.R
+import app.gmaaps.pump.common.hw.rileylink.R
 
 /**
  * Created by andy on 14/05/2018.
@@ -56,3 +56,4 @@ enum class RileyLinkServiceState(var resourceId: Int) {
             // this == PumpConnectorError ||
             this == RileyLinkError
 }
+

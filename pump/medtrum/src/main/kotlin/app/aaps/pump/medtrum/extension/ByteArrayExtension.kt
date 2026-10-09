@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.extension
+﻿package app.gmaaps.pump.medtrum.extension
 
 /** Extensions for different types of conversions needed when doing stuff with bytes */
 fun ByteArray.toLong(): Long {
@@ -39,3 +39,4 @@ fun ByteArray.toFloat(): Float {
     }
     return Float.fromBits(asInt)
 }
+

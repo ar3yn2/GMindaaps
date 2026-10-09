@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandVertically
@@ -19,7 +19,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.CoreUiStrings
 
 /**
  * Compact event time row with inline expand/collapse.
@@ -85,3 +85,4 @@ fun EventTimeRow(
         }
     }
 }
+

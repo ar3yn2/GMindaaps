@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose
+﻿package app.gmaaps.pump.carelevo.compose
 
 // Aliased: the simple name collides with Robolectric's @Config annotation used below.
 import android.content.Context
@@ -13,26 +13,26 @@ import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.text.AnnotatedString
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.ui.IconsProvider
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.PumpAction
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.core.ui.compose.pump.PumpOverviewUiState
-import app.aaps.core.ui.compose.pump.StatusBanner
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.common.CarelevoAlarmNotifier
-import app.aaps.pump.carelevo.common.MutableEventFlow
-import app.aaps.pump.carelevo.common.model.Event
-import app.aaps.pump.carelevo.common.model.State
-import app.aaps.pump.carelevo.common.model.UiState
-import app.aaps.pump.carelevo.presentation.model.CarelevoOverviewEvent
-import app.aaps.pump.carelevo.presentation.type.CarelevoScreenType
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoOverviewViewModel
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.ui.IconsProvider
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.PumpAction
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.core.ui.compose.pump.PumpOverviewUiState
+import app.gmaaps.core.ui.compose.pump.StatusBanner
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.common.CarelevoAlarmNotifier
+import app.gmaaps.pump.carelevo.common.MutableEventFlow
+import app.gmaaps.pump.carelevo.common.model.Event
+import app.gmaaps.pump.carelevo.common.model.State
+import app.gmaaps.pump.carelevo.common.model.UiState
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoOverviewEvent
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoScreenType
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoOverviewViewModel
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.runBlocking
@@ -54,8 +54,8 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.interfaces.configuration.Config as AapsConfig
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.interfaces.configuration.Config as AapsConfig
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Tests for [CarelevoComposeContent] — the module's `ComposablePluginContent` entry point.
@@ -441,3 +441,4 @@ class CarelevoComposeContentTest {
         assertSnackbarShown(context.getString(R.string.carelevo_toast_mag_set_basal_suspend_fail))
     }
 }
+

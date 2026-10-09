@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.GV
+import app.gmaaps.core.data.model.GV
 
 fun GV.contentEqualsTo(other: GV): Boolean =
     isValid == other.isValid &&
@@ -17,4 +17,5 @@ fun GV.onlyNsIdAdded(previous: GV): Boolean =
         contentEqualsTo(previous) &&
         previous.ids.nightscoutId == null &&
         ids.nightscoutId != null
+
 

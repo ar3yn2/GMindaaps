@@ -1,14 +1,14 @@
-package app.aaps.plugins.sync.tidepool.auth
+﻿package app.gmaaps.plugins.sync.tidepool.auth
 
 import android.content.Context
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.Event
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.crypto.CryptoUtil
-import app.aaps.plugins.sync.tidepool.events.EventTidepoolStatus
-import app.aaps.plugins.sync.tidepool.events.EventTidepoolUpdateGUI
-import app.aaps.plugins.sync.tidepool.keys.TidepoolStringNonKey
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.crypto.CryptoUtil
+import app.gmaaps.plugins.sync.tidepool.events.EventTidepoolStatus
+import app.gmaaps.plugins.sync.tidepool.events.EventTidepoolUpdateGUI
+import app.gmaaps.plugins.sync.tidepool.keys.TidepoolStringNonKey
 import com.google.common.truth.Truth.assertThat
 import net.openid.appauth.AuthorizationException
 import org.junit.Before
@@ -164,3 +164,4 @@ class AuthFlowOutTest {
         assertThat(AuthFlowOut.isTransientTokenError(null)).isFalse()
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.common.driver.history
+﻿package app.gmaaps.pump.common.driver.history
 
-import app.aaps.pump.common.defs.PumpHistoryEntryGroup
+import app.gmaaps.pump.common.defs.PumpHistoryEntryGroup
 import java.util.Calendar
 import java.util.GregorianCalendar
 

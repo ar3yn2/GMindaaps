@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.dash.util
+﻿package app.gmaaps.pump.omnipod.dash.util
 
 class Constants {
     companion object {
@@ -6,3 +6,4 @@ class Constants {
         const val PUMP_SERIAL_FOR_FAKE_TBR = "4241"
     }
 }
+

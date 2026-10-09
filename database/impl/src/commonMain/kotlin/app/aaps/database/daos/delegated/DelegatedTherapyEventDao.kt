@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.TherapyEventDao
-import app.aaps.database.entities.TherapyEvent
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.TherapyEventDao
+import app.gmaaps.database.entities.TherapyEvent
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedTherapyEventDao(changes: MutableList<DBEntry>, private val dao: TherapyEventDao) : DelegatedDao(changes), TherapyEventDao by dao {
 

@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.TotalDailyDose
+import app.gmaaps.database.entities.TotalDailyDose
 
 /**
  * Creates or updates the TotalDailyDose from pump synchronization

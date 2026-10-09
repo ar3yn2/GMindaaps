@@ -1,23 +1,23 @@
-package app.aaps.plugins.constraints.versionChecker
+﻿package app.gmaaps.plugins.constraints.versionChecker
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.constraints.Constraint
-import app.aaps.core.interfaces.constraints.PluginConstraints
-import app.aaps.core.interfaces.di.NotNSClient
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.EnforcedState
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginBaseWithPreferences
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.versionChecker.VersionCheckerUtils
-import app.aaps.core.keys.LongComposedKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.constraints.ConstraintsStrings
-import app.aaps.plugins.constraints.versionChecker.keys.VersionCheckerLongKey
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.constraints.Constraint
+import app.gmaaps.core.interfaces.constraints.PluginConstraints
+import app.gmaaps.core.interfaces.di.NotNSClient
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.EnforcedState
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginBaseWithPreferences
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.versionChecker.VersionCheckerUtils
+import app.gmaaps.core.keys.LongComposedKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.constraints.ConstraintsStrings
+import app.gmaaps.plugins.constraints.versionChecker.keys.VersionCheckerLongKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -57,3 +57,4 @@ class VersionCheckerPlugin(
             maxIob
     }
 }
+

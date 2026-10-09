@@ -1,26 +1,26 @@
-package app.aaps.pump.danars.services
+﻿package app.gmaaps.pump.danars.services
 
 import android.content.Context
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.ble.BleAdapter
-import app.aaps.core.interfaces.pump.ble.BleGatt
-import app.aaps.core.interfaces.pump.ble.BleScanner
-import app.aaps.core.interfaces.pump.ble.BleTransport
-import app.aaps.core.interfaces.pump.ble.PairingState
-import app.aaps.core.interfaces.pump.ble.PairingStep
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.R
-import app.aaps.pump.dana.keys.DanaStringComposedKey
-import app.aaps.pump.danars.DanaRSPlugin
-import app.aaps.pump.danars.comm.DanaRSMessageHashTable
-import app.aaps.pump.danars.comm.DanaRSPacket
-import app.aaps.pump.danars.encryption.BleEncryption
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.ble.BleAdapter
+import app.gmaaps.core.interfaces.pump.ble.BleGatt
+import app.gmaaps.core.interfaces.pump.ble.BleScanner
+import app.gmaaps.core.interfaces.pump.ble.BleTransport
+import app.gmaaps.core.interfaces.pump.ble.PairingState
+import app.gmaaps.core.interfaces.pump.ble.PairingStep
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.R
+import app.gmaaps.pump.dana.keys.DanaStringComposedKey
+import app.gmaaps.pump.danars.DanaRSPlugin
+import app.gmaaps.pump.danars.comm.DanaRSMessageHashTable
+import app.gmaaps.pump.danars.comm.DanaRSPacket
+import app.gmaaps.pump.danars.encryption.BleEncryption
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -336,3 +336,4 @@ class BLECommTest : TestBase() {
         verify(danaRSPlugin, never()).clearPairing()
     }
 }
+

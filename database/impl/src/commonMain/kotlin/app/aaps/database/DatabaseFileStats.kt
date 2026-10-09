@@ -1,4 +1,4 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
 /**
  * Size of the database on disk and the space left beside it, for the maintenance readout.
@@ -35,3 +35,4 @@ internal expect val databaseDispatcher: kotlinx.coroutines.CoroutineDispatcher
  * work twice.
  */
 internal expect suspend fun AppDatabase.clearAllTablesCompat()
+

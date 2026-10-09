@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -19,22 +19,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.core.ui.compose.pump.ProfileGateWizardStep
-import app.aaps.core.ui.compose.pump.WizardScreen
-import app.aaps.core.ui.compose.siteRotation.SiteLocationWizardStep
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.common.model.UiState
-import app.aaps.pump.carelevo.presentation.model.CarelevoConnectEvent
-import app.aaps.pump.carelevo.presentation.type.CarelevoPatchStep
-import app.aaps.pump.carelevo.presentation.type.CarelevoScreenType
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectViewModel
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchNeedleInsertionViewModel
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchSafetyCheckViewModel
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.core.ui.compose.pump.ProfileGateWizardStep
+import app.gmaaps.core.ui.compose.pump.WizardScreen
+import app.gmaaps.core.ui.compose.siteRotation.SiteLocationWizardStep
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.common.model.UiState
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoConnectEvent
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoPatchStep
+import app.gmaaps.pump.carelevo.presentation.type.CarelevoScreenType
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectViewModel
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchNeedleInsertionViewModel
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchSafetyCheckViewModel
+import app.gmaaps.core.ui.R as CoreUiR
 
 @Composable
 internal fun CarelevoPatchFlowScreen(
@@ -233,3 +233,4 @@ internal val PRE_PATCH_STEPS = setOf(
     CarelevoPatchStep.SET_AMOUNT,
     CarelevoPatchStep.PATCH_CONNECT
 )
+

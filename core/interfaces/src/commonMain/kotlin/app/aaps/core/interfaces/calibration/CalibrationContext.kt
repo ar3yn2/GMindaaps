@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.calibration
+﻿package app.gmaaps.core.interfaces.calibration
 
 /**
  * Optional hints passed to [Calibration.calibrate].
@@ -18,3 +18,4 @@ data class CalibrationContext(
         val NONE = CalibrationContext()
     }
 }
+

@@ -1,13 +1,13 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.nssdk.localmodel.treatment.EventType
-import app.aaps.core.nssdk.localmodel.treatment.NSTemporaryBasal
-import app.aaps.core.objects.extensions.convertedToAbsolute
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.nssdk.localmodel.treatment.EventType
+import app.gmaaps.core.nssdk.localmodel.treatment.NSTemporaryBasal
+import app.gmaaps.core.objects.extensions.convertedToAbsolute
 
 fun NSTemporaryBasal.toTemporaryBasal(): TB =
     TB(
@@ -45,3 +45,4 @@ fun TB.toNSTemporaryBasal(profile: Profile): NSTemporaryBasal =
 
 fun TB.Type?.toType(): NSTemporaryBasal.Type =
     NSTemporaryBasal.Type.fromString(this?.name)
+

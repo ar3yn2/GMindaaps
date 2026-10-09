@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.manager
+﻿package app.gmaaps.pump.equil.manager
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
@@ -222,3 +222,4 @@ class EquilPacketCodecTest {
         assertTrue(response.send.isNotEmpty())
     }
 }
+

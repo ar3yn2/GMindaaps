@@ -1,6 +1,6 @@
-package app.aaps.pump.danar.comm
+﻿package app.gmaaps.pump.danar.comm
 
-import app.aaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpDescription
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.whenever

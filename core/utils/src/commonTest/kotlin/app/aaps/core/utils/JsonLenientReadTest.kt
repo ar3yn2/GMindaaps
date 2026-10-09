@@ -1,4 +1,4 @@
-package app.aaps.core.utils
+﻿package app.gmaaps.core.utils
 
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
@@ -143,3 +143,4 @@ class JsonLenientReadTest {
         assertNull(o.lenientDoubleOrNull("absent"))
     }
 }
+

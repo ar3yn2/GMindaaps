@@ -1,7 +1,7 @@
-package app.aaps.core.ui
+﻿package app.gmaaps.core.ui
 
 import androidx.annotation.RawRes
-import app.aaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.AlarmSound
 
 /**
  * The Android resource behind an [AlarmSound].
@@ -19,3 +19,4 @@ val AlarmSound.rawRes: Int
         AlarmSound.ERROR        -> R.raw.error
         AlarmSound.BOLUS_ERROR  -> R.raw.boluserror
     }
+

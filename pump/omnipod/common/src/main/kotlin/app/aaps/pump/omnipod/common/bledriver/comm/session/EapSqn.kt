@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.session
 
 import java.nio.ByteBuffer
 
@@ -32,3 +32,4 @@ class EapSqn(val value: ByteArray) {
         }
     }
 }
+

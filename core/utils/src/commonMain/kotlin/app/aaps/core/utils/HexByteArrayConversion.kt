@@ -1,4 +1,4 @@
-package app.aaps.core.utils
+﻿package app.gmaaps.core.utils
 
 private val HEX_CHARS = "0123456789abcdef".toCharArray()
 
@@ -35,3 +35,4 @@ fun String.hexStringToByteArray(): ByteArray {
 
     return result
 }
+

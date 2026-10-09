@@ -1,21 +1,21 @@
-package app.aaps.pump.danars.services
+﻿package app.gmaaps.pump.danars.services
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.DetailedBolusInfoStorage
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.comm.RecordTypes
-import app.aaps.pump.danars.DanaRSPlugin
-import app.aaps.pump.danars.comm.DanaRSPacketAPSBasalSetTemporaryBasal
-import app.aaps.pump.danars.comm.DanaRSPacketBasalSetCancelTemporaryBasal
-import app.aaps.pump.danars.comm.DanaRSPacketBolusSetStepBolusStop
-import app.aaps.pump.danars.comm.DanaRSPacketGeneralInitialScreenInformation
-import app.aaps.pump.danars.comm.DanaRSPacketOptionSetUserOption
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfoStorage
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.comm.RecordTypes
+import app.gmaaps.pump.danars.DanaRSPlugin
+import app.gmaaps.pump.danars.comm.DanaRSPacketAPSBasalSetTemporaryBasal
+import app.gmaaps.pump.danars.comm.DanaRSPacketBasalSetCancelTemporaryBasal
+import app.gmaaps.pump.danars.comm.DanaRSPacketBolusSetStepBolusStop
+import app.gmaaps.pump.danars.comm.DanaRSPacketGeneralInitialScreenInformation
+import app.gmaaps.pump.danars.comm.DanaRSPacketOptionSetUserOption
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -318,9 +318,10 @@ class DanaRSServiceTest : TestBaseWithProfile() {
         assertThat(result).isFalse()
     }
 
-    private fun mockPumpDescription(): app.aaps.core.data.pump.defs.PumpDescription {
-        return app.aaps.core.data.pump.defs.PumpDescription().apply {
+    private fun mockPumpDescription(): app.gmaaps.core.data.pump.defs.PumpDescription {
+        return app.gmaaps.core.data.pump.defs.PumpDescription().apply {
             basalStep = 0.01
         }
     }
 }
+

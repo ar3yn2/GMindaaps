@@ -1,9 +1,9 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
-import app.aaps.di.metro.GraphScopeStabilityTest.Companion.FRESH_EACH_READ
-import app.aaps.di.metro.GraphScopeStabilityTest.Companion.PUMP_UNREADABLE
-import app.aaps.di.metro.GraphScopeStabilityTest.Companion.SINGLE_INSTANCE
-import app.aaps.di.metro.GraphScopeStabilityTest.Companion.UNREADABLE
+import app.gmaaps.di.metro.GraphScopeStabilityTest.Companion.FRESH_EACH_READ
+import app.gmaaps.di.metro.GraphScopeStabilityTest.Companion.PUMP_UNREADABLE
+import app.gmaaps.di.metro.GraphScopeStabilityTest.Companion.SINGLE_INSTANCE
+import app.gmaaps.di.metro.GraphScopeStabilityTest.Companion.UNREADABLE
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -75,7 +75,7 @@ class GraphScopeStabilityTest {
     /** Names of the accessors declared on an interface that a pump module contributes to the graph. */
     private fun pumpAccessorNames(graph: Class<*>): Set<String> =
         allInterfaces(graph)
-            .filter { it.name.startsWith("app.aaps.pump.") || it.name.startsWith("info.nightscout.pump.") }
+            .filter { it.name.startsWith("app.gmaaps.pump.") || it.name.startsWith("info.nightscout.pump.") }
             .flatMap { it.declaredMethods.toList() }
             .filter { it.parameterCount == 0 && it.name.startsWith("get") }
             .map { it.name.removePrefix("get").replaceFirstChar { c -> c.lowercase() } }
@@ -282,3 +282,4 @@ class GraphScopeStabilityTest {
         val PUMP_UNREADABLE = setOf("bleTransport")
     }
 }
+

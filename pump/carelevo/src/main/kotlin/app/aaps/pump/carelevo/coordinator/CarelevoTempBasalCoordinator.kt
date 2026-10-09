@@ -1,20 +1,20 @@
-package app.aaps.pump.carelevo.coordinator
+﻿package app.gmaaps.pump.carelevo.coordinator
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.ble.commands.TempBasalCancelCommand
-import app.aaps.pump.carelevo.ble.commands.TempBasalCommand
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.domain.usecase.basal.CarelevoCancelTempBasalInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.basal.CarelevoStartTempBasalInfusionUseCase
-import app.aaps.pump.carelevo.domain.usecase.basal.model.StartTempBasalInfusionRequestModel
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.ble.commands.TempBasalCancelCommand
+import app.gmaaps.pump.carelevo.ble.commands.TempBasalCommand
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.domain.usecase.basal.CarelevoCancelTempBasalInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.basal.CarelevoStartTempBasalInfusionUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.basal.model.StartTempBasalInfusionRequestModel
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.Provider
@@ -220,3 +220,4 @@ class CarelevoTempBasalCoordinator @Inject constructor(
         }
     }
 }
+

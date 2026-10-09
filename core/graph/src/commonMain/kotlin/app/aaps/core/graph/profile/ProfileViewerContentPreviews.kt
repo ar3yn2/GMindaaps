@@ -1,4 +1,4 @@
-package app.aaps.core.graph.profile
+﻿package app.gmaaps.core.graph.profile
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.MaterialTheme
@@ -16,3 +16,4 @@ internal fun ProfileRowPreview() {
         }
     }
 }
+

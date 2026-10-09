@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.resources
+﻿package app.gmaaps.core.interfaces.resources
 
-import app.aaps.core.keys.StringKey
+import app.gmaaps.core.keys.StringKey
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -73,3 +73,4 @@ class LanguageTagTest {
         }
     }
 }
+

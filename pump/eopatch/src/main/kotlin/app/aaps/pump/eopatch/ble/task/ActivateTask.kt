@@ -1,10 +1,10 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.core.api.SetKey
-import app.aaps.pump.eopatch.core.response.BasalScheduleSetResponse
-import app.aaps.pump.eopatch.core.response.PatchBooleanResponse
-import app.aaps.pump.eopatch.vo.PatchLifecycleEvent.Companion.createActivated
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.core.api.SetKey
+import app.gmaaps.pump.eopatch.core.response.BasalScheduleSetResponse
+import app.gmaaps.pump.eopatch.core.response.PatchBooleanResponse
+import app.gmaaps.pump.eopatch.vo.PatchLifecycleEvent.Companion.createActivated
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -37,3 +37,4 @@ class ActivateTask(
         pm.updatePatchLifeCycle(createActivated())
     }
 }
+

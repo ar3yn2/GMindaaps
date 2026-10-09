@@ -5,5 +5,5 @@ plugins {
 
 allOpen {
     // allows mocking for classes w/o directly opening them for release builds
-    annotation("app.aaps.annotations.OpenForTesting")
+    annotation("app.gmaaps.annotations.OpenForTesting")
 }

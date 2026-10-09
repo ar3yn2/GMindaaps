@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.Composable
 
@@ -15,7 +15,7 @@ interface ComposablePluginContent {
      *
      * To dispatch a navigation request from within this content (e.g. open a careportal
      * dialog, jump to another plugin), read `LocalPluginNavigationRequest.current` and
-     * invoke it with a [app.aaps.core.ui.compose.navigation.NavigationRequest]. The
+     * invoke it with a [app.gmaaps.core.ui.compose.navigation.NavigationRequest]. The
      * compose-time default is a no-op so previews don't crash.
      *
      * @param setToolbarConfig Callback to configure the toolbar from within the content
@@ -29,3 +29,4 @@ interface ComposablePluginContent {
         onSettings: (() -> Unit)? = null
     )
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.data.format
+﻿package app.gmaaps.core.data.format
 
 /**
  * How to render a number as text.
@@ -117,3 +117,4 @@ class NumberFormat(
         }
     }
 }
+

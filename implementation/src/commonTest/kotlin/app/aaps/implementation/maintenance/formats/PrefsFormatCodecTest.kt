@@ -1,14 +1,14 @@
-package app.aaps.implementation.maintenance.formats
+﻿package app.gmaaps.implementation.maintenance.formats
 
-import app.aaps.core.interfaces.maintenance.PrefMetadata
-import app.aaps.core.interfaces.maintenance.Prefs
-import app.aaps.core.interfaces.protection.SecureEncrypt
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.objects.crypto.platformCryptoPrimitives
-import app.aaps.implementation.maintenance.PrefsMetadataKeyImpl
-import app.aaps.implementation.maintenance.data.PrefsStatusImpl
-import app.aaps.implementation.maintenance.formats.PrefsFormatCodecTest.Companion.FROZEN_ENCRYPTED
+import app.gmaaps.core.interfaces.maintenance.PrefMetadata
+import app.gmaaps.core.interfaces.maintenance.Prefs
+import app.gmaaps.core.interfaces.protection.SecureEncrypt
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.objects.crypto.platformCryptoPrimitives
+import app.gmaaps.implementation.maintenance.PrefsMetadataKeyImpl
+import app.gmaaps.implementation.maintenance.data.PrefsStatusImpl
+import app.gmaaps.implementation.maintenance.formats.PrefsFormatCodecTest.Companion.FROZEN_ENCRYPTED
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
@@ -238,3 +238,4 @@ class PrefsFormatCodecTest {
         """.trimIndent()
     }
 }
+

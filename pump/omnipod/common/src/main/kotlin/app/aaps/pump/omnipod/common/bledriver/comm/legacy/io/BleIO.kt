@@ -1,24 +1,24 @@
-@file:Suppress("WildcardImport")
+﻿@file:Suppress("WildcardImport")
 
-package app.aaps.pump.omnipod.common.bledriver.comm.legacy.io
+package app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.io
 
 import android.bluetooth.BluetoothGatt
 import android.bluetooth.BluetoothGattCharacteristic
 import android.bluetooth.BluetoothGattDescriptor
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.command.BleCommandRTS
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.ConnectException
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleCharacteristicIO
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendErrorConfirming
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendErrorSending
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendResult
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendSuccess
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.CharacteristicType
-import app.aaps.pump.omnipod.common.bledriver.comm.legacy.callbacks.BleCommCallbacks
-import app.aaps.pump.omnipod.common.bledriver.comm.legacy.callbacks.WriteConfirmationError
-import app.aaps.pump.omnipod.common.bledriver.comm.legacy.callbacks.WriteConfirmationSuccess
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.command.BleCommandRTS
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.ConnectException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleCharacteristicIO
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendErrorConfirming
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendErrorSending
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendResult
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleSendSuccess
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.CharacteristicType
+import app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.callbacks.BleCommCallbacks
+import app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.callbacks.WriteConfirmationError
+import app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.callbacks.WriteConfirmationSuccess
 import java.util.concurrent.BlockingQueue
 import java.util.concurrent.TimeUnit
 
@@ -139,3 +139,4 @@ private fun Boolean.assertTrue(operation: String) {
         throw ConnectException("Could not $operation")
     }
 }
+

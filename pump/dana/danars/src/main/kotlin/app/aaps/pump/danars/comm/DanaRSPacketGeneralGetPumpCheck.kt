@@ -1,12 +1,12 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.danars.encryption.BleEncryption
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.danars.encryption.BleEncryption
 import dev.zacsweers.metro.Inject
 
 @Inject
@@ -40,9 +40,10 @@ class DanaRSPacketGeneralGetPumpCheck(
         aapsLogger.debug(LTag.PUMPCOMM, "Protocol: " + String.format("%02X ", danaPump.protocol))
         aapsLogger.debug(LTag.PUMPCOMM, "Product Code: " + String.format("%02X ", danaPump.productCode))
         if (danaPump.productCode < 2) {
-            notificationManager.post(NotificationId.UNSUPPORTED_FIRMWARE, TextRef.AndroidRes(app.aaps.pump.dana.R.string.unsupportedfirmware))
+            notificationManager.post(NotificationId.UNSUPPORTED_FIRMWARE, TextRef.AndroidRes(app.gmaaps.pump.dana.R.string.unsupportedfirmware))
         }
     }
 
     override val friendlyName: String = "REVIEW__GET_PUMP_CHECK"
 }
+

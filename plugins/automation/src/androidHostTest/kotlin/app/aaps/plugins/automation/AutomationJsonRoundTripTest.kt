@@ -1,19 +1,19 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.utils.lenientDouble
-import app.aaps.core.utils.lenientString
-import app.aaps.plugins.automation.actions.ActionFactory
-import app.aaps.plugins.automation.triggers.TriggerBg
-import app.aaps.plugins.automation.triggers.TriggerDeps
-import app.aaps.plugins.automation.triggers.TriggerFactory
-import app.aaps.plugins.automation.triggers.TriggerUnknown
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.utils.lenientDouble
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.plugins.automation.actions.ActionFactory
+import app.gmaaps.plugins.automation.triggers.TriggerBg
+import app.gmaaps.plugins.automation.triggers.TriggerDeps
+import app.gmaaps.plugins.automation.triggers.TriggerFactory
+import app.gmaaps.plugins.automation.triggers.TriggerUnknown
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import kotlinx.serialization.json.Json
@@ -130,3 +130,4 @@ class AutomationJsonRoundTripTest : TestBase() {
         assertThat(Json.parseToJsonElement(quoted).jsonObject.lenientDouble("bg")).isEqualTo(4.0)
     }
 }
+

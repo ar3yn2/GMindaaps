@@ -1,7 +1,7 @@
-package app.aaps.plugins.sensitivity.extensions
+﻿package app.gmaaps.plugins.sensitivity.extensions
 
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.time.T
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.time.T
 
 fun List<TE>.isTherapyEventEvent5minBack(time: Long): Boolean {
     for (event in this) {

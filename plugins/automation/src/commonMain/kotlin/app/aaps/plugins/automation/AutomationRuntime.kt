@@ -1,80 +1,80 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.alerts.ReminderScheduler
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.automation.Automation
-import app.aaps.core.interfaces.automation.AutomationEvent
-import app.aaps.core.interfaces.concurrent.AapsLock
-import app.aaps.core.interfaces.concurrent.withLock
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.location.LocationServiceController
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.PermissionGroup
-import app.aaps.core.interfaces.plugin.PermissionProvider
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventAutosensCalculationFinished
-import app.aaps.core.interfaces.rx.events.EventBTChange
-import app.aaps.core.interfaces.rx.events.EventWearUpdateTiles
-import app.aaps.core.interfaces.scenes.SceneAutomationApi
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.LongComposedKey
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.plugins.automation.actions.Action
-import app.aaps.plugins.automation.actions.ActionFactory
-import app.aaps.plugins.automation.compose.AutomationComposeContent
-import app.aaps.plugins.automation.elements.Comparator
-import app.aaps.plugins.automation.elements.InputDelta
-import app.aaps.plugins.automation.events.EventAutomationUpdateGui
-import app.aaps.plugins.automation.events.EventLocationChange
-import app.aaps.plugins.automation.triggers.Trigger
-import app.aaps.plugins.automation.triggers.TriggerAutosensValue
-import app.aaps.plugins.automation.triggers.TriggerBg
-import app.aaps.plugins.automation.triggers.TriggerBolusAgo
-import app.aaps.plugins.automation.triggers.TriggerCOB
-import app.aaps.plugins.automation.triggers.TriggerCannulaAge
-import app.aaps.plugins.automation.triggers.TriggerConnector
-import app.aaps.plugins.automation.triggers.TriggerDelta
-import app.aaps.plugins.automation.triggers.TriggerDeps
-import app.aaps.plugins.automation.triggers.TriggerFactory
-import app.aaps.plugins.automation.triggers.TriggerHeartRate
-import app.aaps.plugins.automation.triggers.TriggerInsulinAge
-import app.aaps.plugins.automation.triggers.TriggerIob
-import app.aaps.plugins.automation.triggers.TriggerLocation
-import app.aaps.plugins.automation.triggers.TriggerPodChange
-import app.aaps.plugins.automation.triggers.TriggerProfilePercent
-import app.aaps.plugins.automation.triggers.TriggerPumpBatteryAge
-import app.aaps.plugins.automation.triggers.TriggerPumpBatteryLevel
-import app.aaps.plugins.automation.triggers.TriggerPumpLastConnection
-import app.aaps.plugins.automation.triggers.TriggerRecurringTime
-import app.aaps.plugins.automation.triggers.TriggerReservoirLevel
-import app.aaps.plugins.automation.triggers.TriggerSensorAge
-import app.aaps.plugins.automation.triggers.TriggerStepsCount
-import app.aaps.plugins.automation.triggers.TriggerTempTarget
-import app.aaps.plugins.automation.triggers.TriggerTempTargetValue
-import app.aaps.plugins.automation.triggers.TriggerTime
-import app.aaps.plugins.automation.triggers.TriggerTimeRange
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.alerts.ReminderScheduler
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.automation.Automation
+import app.gmaaps.core.interfaces.automation.AutomationEvent
+import app.gmaaps.core.interfaces.concurrent.AapsLock
+import app.gmaaps.core.interfaces.concurrent.withLock
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.location.LocationServiceController
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.PermissionGroup
+import app.gmaaps.core.interfaces.plugin.PermissionProvider
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventAutosensCalculationFinished
+import app.gmaaps.core.interfaces.rx.events.EventBTChange
+import app.gmaaps.core.interfaces.rx.events.EventWearUpdateTiles
+import app.gmaaps.core.interfaces.scenes.SceneAutomationApi
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.LongComposedKey
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.plugins.automation.actions.Action
+import app.gmaaps.plugins.automation.actions.ActionFactory
+import app.gmaaps.plugins.automation.compose.AutomationComposeContent
+import app.gmaaps.plugins.automation.elements.Comparator
+import app.gmaaps.plugins.automation.elements.InputDelta
+import app.gmaaps.plugins.automation.events.EventAutomationUpdateGui
+import app.gmaaps.plugins.automation.events.EventLocationChange
+import app.gmaaps.plugins.automation.triggers.Trigger
+import app.gmaaps.plugins.automation.triggers.TriggerAutosensValue
+import app.gmaaps.plugins.automation.triggers.TriggerBg
+import app.gmaaps.plugins.automation.triggers.TriggerBolusAgo
+import app.gmaaps.plugins.automation.triggers.TriggerCOB
+import app.gmaaps.plugins.automation.triggers.TriggerCannulaAge
+import app.gmaaps.plugins.automation.triggers.TriggerConnector
+import app.gmaaps.plugins.automation.triggers.TriggerDelta
+import app.gmaaps.plugins.automation.triggers.TriggerDeps
+import app.gmaaps.plugins.automation.triggers.TriggerFactory
+import app.gmaaps.plugins.automation.triggers.TriggerHeartRate
+import app.gmaaps.plugins.automation.triggers.TriggerInsulinAge
+import app.gmaaps.plugins.automation.triggers.TriggerIob
+import app.gmaaps.plugins.automation.triggers.TriggerLocation
+import app.gmaaps.plugins.automation.triggers.TriggerPodChange
+import app.gmaaps.plugins.automation.triggers.TriggerProfilePercent
+import app.gmaaps.plugins.automation.triggers.TriggerPumpBatteryAge
+import app.gmaaps.plugins.automation.triggers.TriggerPumpBatteryLevel
+import app.gmaaps.plugins.automation.triggers.TriggerPumpLastConnection
+import app.gmaaps.plugins.automation.triggers.TriggerRecurringTime
+import app.gmaaps.plugins.automation.triggers.TriggerReservoirLevel
+import app.gmaaps.plugins.automation.triggers.TriggerSensorAge
+import app.gmaaps.plugins.automation.triggers.TriggerStepsCount
+import app.gmaaps.plugins.automation.triggers.TriggerTempTarget
+import app.gmaaps.plugins.automation.triggers.TriggerTempTargetValue
+import app.gmaaps.plugins.automation.triggers.TriggerTime
+import app.gmaaps.plugins.automation.triggers.TriggerTimeRange
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.ContributesIntoSet
@@ -302,7 +302,7 @@ class AutomationRuntime(
 
     /**
      * Location permission is required only on a master device that has at least one enabled event
-     * using a [TriggerLocation]. Queried by [app.aaps.core.interfaces.plugin.PluginPermissions.collectMissingPermissions] on every
+     * using a [TriggerLocation]. Queried by [app.gmaaps.core.interfaces.plugin.PluginPermissions.collectMissingPermissions] on every
      * collection pass, so the permission appears/disappears as the event set changes.
      */
     override fun requiredPermissions(): List<PermissionGroup> =
@@ -886,3 +886,4 @@ class AutomationRuntime(
         removeIfExists(event)
     }
 }
+

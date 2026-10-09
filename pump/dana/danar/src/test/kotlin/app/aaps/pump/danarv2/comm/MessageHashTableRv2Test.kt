@@ -1,7 +1,7 @@
-package app.aaps.pump.danarv2.comm
+﻿package app.gmaaps.pump.danarv2.comm
 
-import app.aaps.pump.danar.comm.DanaRTestBase
-import app.aaps.pump.danar.comm.MessageBase
+import app.gmaaps.pump.danar.comm.DanaRTestBase
+import app.gmaaps.pump.danar.comm.MessageBase
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

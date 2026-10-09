@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 import kotlin.test.Test
 import kotlin.test.assertFalse
@@ -123,3 +123,4 @@ class SourceSensorExtensionsTest {
         assertFalse(SourceSensor.CARESENS_AIR.needsFlatBgCheck())
     }
 }
+

@@ -1,13 +1,13 @@
-package app.aaps.core.ui.extensions
+﻿package app.gmaaps.core.ui.extensions
 
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.getPassedDurationToTimeInMinutes
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.getPassedDurationToTimeInMinutes
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.CoreUiStrings
 
 /**
  * Text for an extended bolus on screen. The record's own maths stays in `:core:objects` - see
@@ -21,3 +21,4 @@ fun EB.toStringFull(dateUtil: DateUtil, ch: ConcentrationHelper): String =
 
 fun EB.toStringMedium(dateUtil: DateUtil, rh: TextResolver): String =
     rh.gs(CoreUiStrings.extended_bolus_medium, rate, getPassedDurationToTimeInMinutes(dateUtil.now()), T.msecs(duration).mins())
+

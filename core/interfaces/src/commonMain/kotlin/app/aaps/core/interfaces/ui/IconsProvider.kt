@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.ui
+﻿package app.gmaaps.core.interfaces.ui
 
 interface IconsProvider {
 

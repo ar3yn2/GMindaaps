@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.keys.IntKey
-import app.aaps.plugins.automation.AutomationStrings
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.plugins.automation.AutomationStrings
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
 import org.junit.jupiter.api.BeforeEach
@@ -61,3 +61,4 @@ class ActionRunAutotuneTest : ActionsTestBase() {
         assertThat(data.getInt("tunedays")).isEqualTo(5)
     }
 }
+

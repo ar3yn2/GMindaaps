@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -87,3 +87,4 @@ class ICfgTest {
         assertFalse(ICfg(insulinLabel = "", insulinEndTime = 18_000_000, insulinPeakTime = 0, concentration = 1.0).isUsable)
     }
 }
+

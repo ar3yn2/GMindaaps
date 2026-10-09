@@ -1,4 +1,4 @@
-package app.aaps.core.data.model.data
+﻿package app.gmaaps.core.data.model.data
 
 import kotlin.time.Duration.Companion.days
 

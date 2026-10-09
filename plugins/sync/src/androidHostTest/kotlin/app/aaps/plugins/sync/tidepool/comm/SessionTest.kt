@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.tidepool.comm
+﻿package app.gmaaps.plugins.sync.tidepool.comm
 
-import app.aaps.plugins.sync.tidepool.messages.AuthReplyMessage
-import app.aaps.plugins.sync.tidepool.messages.DatasetReplyMessage
+import app.gmaaps.plugins.sync.tidepool.messages.AuthReplyMessage
+import app.gmaaps.plugins.sync.tidepool.messages.DatasetReplyMessage
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -42,3 +42,4 @@ class SessionTest {
         assertThat(session.datasetReply).isEqualTo(datasetReplyMessage)
     }
 }
+

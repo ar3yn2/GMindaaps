@@ -1,8 +1,8 @@
-package app.aaps.implementation.utils
+﻿package app.gmaaps.implementation.utils
 
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -39,3 +39,4 @@ class DecimalFormatterTest : TestBase() {
         assertThat(sut.to3Decimal(1.3333, "U").replace(",", ".")).isEqualTo("1.333U")
     }
 }
+

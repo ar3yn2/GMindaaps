@@ -1,10 +1,10 @@
-package app.aaps.pump.medtrum.comm.packets
+﻿package app.gmaaps.pump.medtrum.comm.packets
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.pump.medtrum.MedtrumPump
-import app.aaps.pump.medtrum.comm.enums.CommandType.STOP_PATCH
-import app.aaps.pump.medtrum.extension.toInt
-import app.aaps.pump.medtrum.extension.toLong
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.pump.medtrum.MedtrumPump
+import app.gmaaps.pump.medtrum.comm.enums.CommandType.STOP_PATCH
+import app.gmaaps.pump.medtrum.extension.toInt
+import app.gmaaps.pump.medtrum.extension.toLong
 import dev.zacsweers.metro.Inject
 
 class StopPatchPacket(injector: MetroMemberInjector) : MedtrumPacket(injector) {
@@ -35,3 +35,4 @@ class StopPatchPacket(injector: MetroMemberInjector) : MedtrumPacket(injector) {
         return success
     }
 }
+

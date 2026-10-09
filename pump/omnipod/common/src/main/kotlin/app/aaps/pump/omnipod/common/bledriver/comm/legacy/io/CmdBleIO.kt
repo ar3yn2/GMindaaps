@@ -1,19 +1,19 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.legacy.io
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.io
 
 import android.bluetooth.BluetoothGatt
 import android.bluetooth.BluetoothGattCharacteristic
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.omnipod.common.bledriver.comm.OmnipodDashBleManagerImpl
-import app.aaps.pump.omnipod.common.bledriver.comm.command.BleCommand
-import app.aaps.pump.omnipod.common.bledriver.comm.command.BleCommandHello
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmError
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmIncorrectData
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmResult
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmSuccess
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.CharacteristicType
-import app.aaps.pump.omnipod.common.bledriver.comm.legacy.callbacks.BleCommCallbacks
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.omnipod.common.bledriver.comm.OmnipodDashBleManagerImpl
+import app.gmaaps.pump.omnipod.common.bledriver.comm.command.BleCommand
+import app.gmaaps.pump.omnipod.common.bledriver.comm.command.BleCommandHello
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmError
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmIncorrectData
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmResult
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.BleConfirmSuccess
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.CharacteristicType
+import app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.callbacks.BleCommCallbacks
 import java.util.concurrent.BlockingQueue
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io.CmdBleIO as CmdBleIOInterface
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io.CmdBleIO as CmdBleIOInterface
 
 class CmdBleIO(
     logger: AAPSLogger,
@@ -46,3 +46,4 @@ class CmdBleIO(
             ?: BleConfirmError("Error reading packet")
     }
 }
+

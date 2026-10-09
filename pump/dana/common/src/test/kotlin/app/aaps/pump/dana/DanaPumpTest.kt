@@ -1,6 +1,6 @@
-package app.aaps.pump.dana
+﻿package app.gmaaps.pump.dana
 
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -20,3 +20,4 @@ class DanaPumpTest : TestBaseWithProfile() {
         assertThat(sut.modelFriendlyName()).contains("DanaRS")
     }
 }
+

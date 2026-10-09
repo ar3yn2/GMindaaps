@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     // NOT com.android.library. AGP 9 refuses that plugin together with the multiplatform plugin.
@@ -33,7 +33,7 @@ plugins {
  */
 kotlin {
     android {
-        namespace = "app.aaps.appshell"
+        namespace = "app.gmaaps.appshell"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         androidResources { enable = true }
@@ -117,3 +117,4 @@ kotlin {
         }
     }
 }
+

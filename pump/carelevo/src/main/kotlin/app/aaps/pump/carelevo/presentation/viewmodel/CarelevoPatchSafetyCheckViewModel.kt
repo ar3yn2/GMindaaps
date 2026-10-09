@@ -1,30 +1,30 @@
-package app.aaps.pump.carelevo.presentation.viewmodel
+﻿package app.gmaaps.pump.carelevo.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.pump.carelevo.command.CarelevoActivationExecutor
-import app.aaps.pump.carelevo.command.CmdAdditionalPriming
-import app.aaps.pump.carelevo.command.CmdDiscard
-import app.aaps.pump.carelevo.command.CmdSafetyCheck
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.common.MutableEventFlow
-import app.aaps.pump.carelevo.common.asEventFlow
-import app.aaps.pump.carelevo.common.model.Event
-import app.aaps.pump.carelevo.common.model.PatchState
-import app.aaps.pump.carelevo.common.model.State
-import app.aaps.pump.carelevo.common.model.UiState
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
-import app.aaps.pump.carelevo.domain.type.SafetyProgress
-import app.aaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchForceDiscardUseCase
-import app.aaps.pump.carelevo.presentation.model.CarelevoConnectSafetyCheckEvent
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.pump.carelevo.command.CarelevoActivationExecutor
+import app.gmaaps.pump.carelevo.command.CmdAdditionalPriming
+import app.gmaaps.pump.carelevo.command.CmdDiscard
+import app.gmaaps.pump.carelevo.command.CmdSafetyCheck
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.common.MutableEventFlow
+import app.gmaaps.pump.carelevo.common.asEventFlow
+import app.gmaaps.pump.carelevo.common.model.Event
+import app.gmaaps.pump.carelevo.common.model.PatchState
+import app.gmaaps.pump.carelevo.common.model.State
+import app.gmaaps.pump.carelevo.common.model.UiState
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.pump.carelevo.domain.type.SafetyProgress
+import app.gmaaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchForceDiscardUseCase
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoConnectSafetyCheckEvent
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -346,3 +346,4 @@ class CarelevoPatchSafetyCheckViewModel @Inject constructor(
         private const val SAFETY_CHECK_RETRY_DELAY_MS = 2_000L
     }
 }
+

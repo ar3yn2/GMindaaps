@@ -1,6 +1,6 @@
-package app.aaps.pump.medtronic.keys
+﻿package app.gmaaps.pump.medtronic.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 enum class MedtronicLongNonKey(
     override val key: String,

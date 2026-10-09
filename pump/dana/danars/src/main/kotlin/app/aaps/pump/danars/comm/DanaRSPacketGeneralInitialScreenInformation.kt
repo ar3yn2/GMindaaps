@@ -1,12 +1,12 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.danars.encryption.BleEncryption
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.danars.encryption.BleEncryption
 import dev.zacsweers.metro.Inject
 
 @Inject
@@ -52,7 +52,7 @@ class DanaRSPacketGeneralInitialScreenInformation(
             // configuration for AAPS (no insulin can be delivered and the loop gets suspended),
             // so raise an urgent notification asking the user to disable it.
             if (danaPump.errorState == DanaPump.ErrorState.BOLUS_BLOCK)
-                notificationManager.post(NotificationId.DANA_BOLUS_BLOCK, TextRef.AndroidRes(app.aaps.pump.dana.R.string.danar_disablebolusblock))
+                notificationManager.post(NotificationId.DANA_BOLUS_BLOCK, TextRef.AndroidRes(app.gmaaps.pump.dana.R.string.danar_disablebolusblock))
             else
                 notificationManager.dismiss(NotificationId.DANA_BOLUS_BLOCK)
         }

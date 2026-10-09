@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.remotemodel
+﻿package app.gmaaps.core.nssdk.remotemodel
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -49,3 +49,4 @@ internal data class RemoteFood(
     @SerialName("modifiedBy")
     val modifiedBy: String? = null      // string Name of the security subject (within Nightscout scope) which has patched or deleted the document for the last time. This field is automatically set by the server.
 )
+

@@ -1,15 +1,15 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action;
 
 import androidx.annotation.NonNull;
 
 import java.util.Collections;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.AcknowledgeAlertsCommand;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSet;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSlot;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.AcknowledgeAlertsCommand;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.StatusResponse;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSet;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSlot;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
 
 public class AcknowledgeAlertsAction implements OmnipodAction<StatusResponse> {
     private final ErosPodStateManager podStateManager;
@@ -38,3 +38,4 @@ public class AcknowledgeAlertsAction implements OmnipodAction<StatusResponse> {
                 new AcknowledgeAlertsCommand(podStateManager.getCurrentNonce(), alerts));
     }
 }
+

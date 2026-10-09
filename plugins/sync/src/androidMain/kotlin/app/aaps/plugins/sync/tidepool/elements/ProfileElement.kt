@@ -1,11 +1,11 @@
-package app.aaps.plugins.sync.tidepool.elements
+﻿package app.gmaaps.plugins.sync.tidepool.elements
 
-import app.aaps.core.data.model.EPS
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.plugins.sync.tidepool.comm.TidepoolUploader
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.plugins.sync.tidepool.comm.TidepoolUploader
 import com.google.gson.annotations.Expose
 import java.util.UUID
 
@@ -116,3 +116,4 @@ class ProfileElement(ps: EPS, serialNumber: String, dateUtil: DateUtil, profileU
         internal var amount: Int
     )
 }
+

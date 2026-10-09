@@ -1,4 +1,4 @@
-package app.aaps.di
+﻿package app.gmaaps.di
 
 import android.app.Application
 import android.content.Context
@@ -8,17 +8,17 @@ import androidx.work.WorkerFactory
 import androidx.work.WorkerParameters
 import androidx.work.testing.SynchronousExecutor
 import androidx.work.testing.WorkManagerTestInitHelper
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.ui.compose.MetroViewModelFactoryOwner
-import app.aaps.database.di.DatabaseConfig
-import app.aaps.di.metro.MetroGraphs
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.ui.compose.MetroViewModelFactoryOwner
+import app.gmaaps.database.di.DatabaseConfig
+import app.gmaaps.di.metro.MetroGraphs
 import com.google.firebase.Firebase
 import com.google.firebase.analytics.analytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dev.zacsweers.metrox.viewmodel.MetroViewModelFactory
 
 /**
- * Base application for instrumented tests. Mirrors [app.aaps.MainApp]: both build the one Metro root
+ * Base application for instrumented tests. Mirrors [app.gmaaps.MainApp]: both build the one Metro root
  * themselves and act as its member injector.
  *
  * `AapsTestRunner` installs this class, and the graph lives for the whole process, so [onCreate] can
@@ -119,4 +119,5 @@ open class BaseTestApp : Application(), MetroMemberInjector, MetroViewModelFacto
      * to `R.string` id map, and the registry is what a `TextRef.Named` is resolved through.
      */
 }
+
 

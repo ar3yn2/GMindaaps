@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
 
 /**
  * `CMD_PUMP_RESTART_REQ` (0x27) → `CMD_PUMP_RESTART_RES` (0x87). Resumes (restarts) a paused pump —
@@ -70,3 +70,4 @@ data class PumpResumeResponse(
     val mode: Int,
     val subId: Int
 ) : BleResponse
+

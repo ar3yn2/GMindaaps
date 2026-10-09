@@ -1,6 +1,6 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
-import app.aaps.core.data.time.systemUtcOffsetAt
+import app.gmaaps.core.data.time.systemUtcOffsetAt
 
 /** Steps count values measured by a user smartwatch or the like. */
 data class SC(

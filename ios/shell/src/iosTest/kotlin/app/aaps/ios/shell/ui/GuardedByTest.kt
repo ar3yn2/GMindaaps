@@ -1,10 +1,10 @@
-package app.aaps.ios.shell.ui
+﻿package app.gmaaps.ios.shell.ui
 
-import app.aaps.core.interfaces.protection.AuthorizationResult
-import app.aaps.core.interfaces.protection.HierarchicalProtectionRequest
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.protection.ProtectionRequest
-import app.aaps.core.interfaces.protection.ProtectionResult
+import app.gmaaps.core.interfaces.protection.AuthorizationResult
+import app.gmaaps.core.interfaces.protection.HierarchicalProtectionRequest
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.protection.ProtectionRequest
+import app.gmaaps.core.interfaces.protection.ProtectionResult
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlin.test.Test
@@ -106,3 +106,4 @@ class GuardedByTest {
         assertEquals(2, check.timesAsked)
     }
 }
+

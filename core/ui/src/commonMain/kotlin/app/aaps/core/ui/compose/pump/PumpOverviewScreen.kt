@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Arrangement
@@ -28,11 +28,11 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.AapsCard
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.statusLevelToColor
-import app.aaps.core.ui.compose.statusLevelToDescription
-import app.aaps.core.ui.compose.stringResourceOrNull
+import app.gmaaps.core.ui.compose.AapsCard
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.statusLevelToColor
+import app.gmaaps.core.ui.compose.statusLevelToDescription
+import app.gmaaps.core.ui.compose.stringResourceOrNull
 
 /**
  * Shared pump overview screen used by all pump plugins.
@@ -247,3 +247,4 @@ private fun ActionButtons(actions: List<PumpAction>) {
         }
     }
 }
+

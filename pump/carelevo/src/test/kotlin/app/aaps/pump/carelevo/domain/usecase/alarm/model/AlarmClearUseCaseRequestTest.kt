@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.domain.usecase.alarm.model
+﻿package app.gmaaps.pump.carelevo.domain.usecase.alarm.model
 
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -93,3 +93,4 @@ internal class AlarmClearUseCaseRequestTest {
         assertThat(request().toString()).contains("ALARM_ALERT_OUT_OF_INSULIN")
     }
 }
+

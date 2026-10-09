@@ -1,10 +1,10 @@
-package app.aaps.plugins.aps.autotune
+﻿package app.gmaaps.plugins.aps.autotune
 
-import app.aaps.core.interfaces.logging.LoggerUtils
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.plugins.aps.R
-import app.aaps.plugins.aps.autotune.data.ATProfile
-import app.aaps.plugins.aps.autotune.data.PreppedGlucose
+import app.gmaaps.core.interfaces.logging.LoggerUtils
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.plugins.aps.R
+import app.gmaaps.plugins.aps.autotune.data.ATProfile
+import app.gmaaps.plugins.aps.autotune.data.PreppedGlucose
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn

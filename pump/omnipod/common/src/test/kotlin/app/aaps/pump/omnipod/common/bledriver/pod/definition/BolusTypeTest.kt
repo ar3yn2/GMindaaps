@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.definition
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.definition
 
-import app.aaps.core.data.model.BS
+import app.gmaaps.core.data.model.BS
 import com.google.common.truth.Truth.assertThat
 import com.google.gson.Gson
 import org.junit.jupiter.api.Test
@@ -42,3 +42,4 @@ class BolusTypeTest {
         }
     }
 }
+

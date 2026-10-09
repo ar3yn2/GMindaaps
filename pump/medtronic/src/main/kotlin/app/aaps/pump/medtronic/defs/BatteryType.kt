@@ -1,7 +1,7 @@
-package app.aaps.pump.medtronic.defs
+﻿package app.gmaaps.pump.medtronic.defs
 
 import androidx.annotation.StringRes
-import app.aaps.pump.medtronic.R
+import app.gmaaps.pump.medtronic.R
 
 /**
  * Created by andy on 6/4/18.

@@ -1,8 +1,8 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.AppPlatform
-import app.aaps.core.keys.interfaces.PreferenceKey
-import app.aaps.core.keys.interfaces.SyncDirection
+import app.gmaaps.core.keys.interfaces.AppPlatform
+import app.gmaaps.core.keys.interfaces.PreferenceKey
+import app.gmaaps.core.keys.interfaces.SyncDirection
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -67,3 +67,4 @@ class PreferencePlatformRulesTest {
         )
     }
 }
+

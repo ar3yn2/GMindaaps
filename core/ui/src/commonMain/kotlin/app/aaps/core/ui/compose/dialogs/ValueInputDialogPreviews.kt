@@ -1,9 +1,9 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 
 @Preview(showBackground = true)
 @Composable
@@ -20,3 +20,4 @@ internal fun ValueInputDialogPreview() {
         )
     }
 }
+

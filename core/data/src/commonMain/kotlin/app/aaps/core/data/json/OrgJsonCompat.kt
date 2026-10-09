@@ -1,6 +1,6 @@
-package app.aaps.core.data.json
+﻿package app.gmaaps.core.data.json
 
-import app.aaps.core.data.json.OrgJsonCompat.optStringCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optStringCompat
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
@@ -143,3 +143,4 @@ object OrgJsonCompat {
      */
     fun JsonObject.hasCompat(key: String): Boolean = containsKey(key)
 }
+

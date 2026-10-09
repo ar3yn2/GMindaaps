@@ -1,10 +1,10 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.interfaces.aps.APSResult
+import app.gmaaps.core.interfaces.aps.APSResult
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
-import app.aaps.database.entities.APSResult as DbAPSResult
+import app.gmaaps.database.entities.APSResult as DbAPSResult
 
 /**
  * Tests for [APSResultExtension].
@@ -55,3 +55,4 @@ internal class APSResultExtensionTest {
         assertFailsWith<IllegalStateException> { DbAPSResult.Algorithm.UNKNOWN.fromDb() }
     }
 }
+

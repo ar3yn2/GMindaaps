@@ -1,6 +1,6 @@
-package app.aaps.pump.diaconn.packet
+﻿package app.gmaaps.pump.diaconn.packet
 
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -212,3 +212,4 @@ class DiaconnG8PacketTest : TestBaseWithProfile() {
         assertThat(DiaconnG8Packet.MSG_CON_CONTINUE).isEqualTo(0x01.toByte())
     }
 }
+

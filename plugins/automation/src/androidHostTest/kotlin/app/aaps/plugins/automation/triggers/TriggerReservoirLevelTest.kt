@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.plugins.automation.asJsonObject
-import app.aaps.plugins.automation.elements.Comparator
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.plugins.automation.asJsonObject
+import app.gmaaps.plugins.automation.elements.Comparator
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.test.runTest
@@ -67,3 +67,4 @@ class TriggerReservoirLevelTest : TriggerTestBase() {
         assertThat(t2.reservoirLevel.value).isWithin(0.01).of(4.0)
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.danars.emulator
+﻿package app.gmaaps.pump.danars.emulator
 
-import app.aaps.pump.danars.encryption.BleEncryption
+import app.gmaaps.pump.danars.encryption.BleEncryption
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -53,3 +53,4 @@ class EncryptionDebugTest {
         assertThat(decrypted[1].toInt() and 0xFF).isEqualTo(BleEncryption.DANAR_PACKET__OPCODE_ENCRYPTION__PUMP_CHECK)
     }
 }
+

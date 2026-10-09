@@ -1,13 +1,13 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.EnumSet;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.definition.BeepType;
-import app.aaps.pump.omnipod.eros.driver.definition.DeliveryType;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.definition.BeepType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.DeliveryType;
 
 /**
  * @noinspection SpellCheckingInspection
@@ -45,3 +45,4 @@ class CancelDeliveryCommandTest {
         Assertions.assertArrayEquals(ByteUtil.INSTANCE.fromHexString("1f05f76d34c402"), cancelDeliveryCommand.getRawData());
     }
 }
+

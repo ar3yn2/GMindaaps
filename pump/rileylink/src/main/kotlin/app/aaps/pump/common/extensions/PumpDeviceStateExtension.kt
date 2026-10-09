@@ -1,7 +1,7 @@
-package app.aaps.pump.common.extensions
+﻿package app.gmaaps.pump.common.extensions
 
-import app.aaps.core.interfaces.pump.defs.PumpDeviceState
-import app.aaps.pump.common.hw.rileylink.R
+import app.gmaaps.core.interfaces.pump.defs.PumpDeviceState
+import app.gmaaps.pump.common.hw.rileylink.R
 
 fun PumpDeviceState.stringResource() =
     when (this) {
@@ -11,6 +11,6 @@ fun PumpDeviceState.stringResource() =
         PumpDeviceState.Active                   -> R.string.pump_status_active
         PumpDeviceState.ErrorWhenCommunicating   -> R.string.pump_status_error_comm
         PumpDeviceState.TimeoutWhenCommunicating -> R.string.pump_status_timeout_comm
-        PumpDeviceState.PumpUnreachable          -> app.aaps.core.ui.R.string.pump_unreachable
+        PumpDeviceState.PumpUnreachable          -> app.gmaaps.core.ui.R.string.pump_unreachable
         PumpDeviceState.InvalidConfiguration     -> R.string.pump_status_invalid_config
     }

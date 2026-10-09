@@ -1,7 +1,8 @@
-package app.aaps.database.entities.data
+﻿package app.gmaaps.database.entities.data
 
 enum class GlucoseUnit {
     MGDL,
     MMOL;
 }
+
 

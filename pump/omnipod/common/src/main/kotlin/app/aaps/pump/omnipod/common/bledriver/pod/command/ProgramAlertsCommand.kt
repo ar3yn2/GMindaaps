@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.NonceEnabledCommand
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertConfiguration
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.NonceEnabledCommand
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertConfiguration
 import java.nio.ByteBuffer
 
 class ProgramAlertsCommand private constructor(
@@ -79,3 +79,4 @@ class ProgramAlertsCommand private constructor(
         this.alertConfigurations = ArrayList(alertConfigurations)
     }
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.plugins.aps.autotune.data
+﻿package app.gmaaps.plugins.aps.autotune.data
 
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.utils.DateUtil
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.TimeZone

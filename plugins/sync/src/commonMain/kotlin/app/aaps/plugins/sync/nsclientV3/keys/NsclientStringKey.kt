@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.nsclientV3.keys
+﻿package app.gmaaps.plugins.sync.nsclientV3.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
-import app.aaps.core.nssdk.remotemodel.LastModified
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.nssdk.remotemodel.LastModified
 import kotlinx.serialization.json.Json
 
 /**

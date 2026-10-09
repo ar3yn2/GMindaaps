@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.pump.actions
+﻿package app.gmaaps.core.interfaces.pump.actions
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * A pump driver's own action, shown in the Actions tab.
@@ -11,7 +11,7 @@ import app.aaps.core.keys.interfaces.TextRef
  * The extension point is kept so those actions, or a driver's equivalent, can come back without
  * redesigning the contract.
  *
- * A dead-code sweep will flag this, [CustomActionType], [app.aaps.core.interfaces.pump.Pump.getCustomActions]
+ * A dead-code sweep will flag this, [CustomActionType], [app.gmaaps.core.interfaces.pump.Pump.getCustomActions]
  * and `Pump.executeCustomAction` together - they are one feature, retained deliberately.
  *
  * [name] is a [TextRef] rather than an Android string resource id, so this compiles for every target.

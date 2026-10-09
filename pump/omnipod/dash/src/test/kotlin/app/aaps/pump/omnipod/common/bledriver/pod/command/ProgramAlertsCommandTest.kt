@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertConfiguration
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertTrigger
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BeepRepetitionType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BeepType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertConfiguration
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertTrigger
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BeepRepetitionType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BeepType
 import com.google.common.truth.Truth.assertThat
 import org.apache.commons.codec.binary.Hex
 import org.junit.jupiter.api.Test
@@ -124,3 +124,4 @@ class ProgramAlertsCommandTest {
         assertThat(encoded).asList().containsExactlyElementsIn(Hex.decodeHex("02420003280C190A494E532E7837000508020356").asList()).inOrder()
     }
 }
+

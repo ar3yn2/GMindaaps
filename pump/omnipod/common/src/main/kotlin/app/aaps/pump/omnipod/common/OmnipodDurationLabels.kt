@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common
+﻿package app.gmaaps.pump.omnipod.common
 
-import app.aaps.core.interfaces.utils.DurationLabels
+import app.gmaaps.core.interfaces.utils.DurationLabels
 
 /**
- * The Omnipod wording for [app.aaps.core.interfaces.utils.readableDuration], shared by Eros and Dash.
+ * The Omnipod wording for [app.gmaaps.core.interfaces.utils.readableDuration], shared by Eros and Dash.
  * Both drivers showed the same texts through their own copy of the formatter before.
  */
 val OMNIPOD_DURATION_LABELS = DurationLabels(
@@ -15,3 +15,4 @@ val OMNIPOD_DURATION_LABELS = DurationLabels(
     hours = R.plurals.omnipod_common_hours,
     days = R.plurals.omnipod_common_days
 )
+

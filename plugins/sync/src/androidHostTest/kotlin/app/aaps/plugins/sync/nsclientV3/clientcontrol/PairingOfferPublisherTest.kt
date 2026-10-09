@@ -1,11 +1,11 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.nssdk.interfaces.NSAndroidClient
-import app.aaps.core.nssdk.localmodel.treatment.CreateUpdateResponse
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.nssdk.interfaces.NSAndroidClient
+import app.gmaaps.core.nssdk.localmodel.treatment.CreateUpdateResponse
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -66,3 +66,4 @@ internal class PairingOfferPublisherTest {
         verify(aapsLogger).error(eq(LTag.NSCLIENT), argThat<String> { contains("delete failed") })
     }
 }
+

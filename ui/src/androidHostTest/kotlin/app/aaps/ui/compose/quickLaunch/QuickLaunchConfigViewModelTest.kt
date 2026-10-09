@@ -1,12 +1,12 @@
-package app.aaps.ui.compose.quickLaunch
+﻿package app.gmaaps.ui.compose.quickLaunch
 
-import app.aaps.core.interfaces.automation.Automation
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.scenes.SceneStore
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.objects.wizard.QuickWizard
+import app.gmaaps.core.interfaces.automation.Automation
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.scenes.SceneStore
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.objects.wizard.QuickWizard
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -55,3 +55,4 @@ internal class QuickLaunchConfigViewModelTest {
         assertThat(state.availablePluginGroups).isEmpty()
     }
 }
+

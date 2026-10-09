@@ -1,28 +1,28 @@
-package app.aaps.pump.carelevo.presentation.viewmodel
+﻿package app.gmaaps.pump.carelevo.presentation.viewmodel
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.pump.carelevo.command.CarelevoActivationExecutor
-import app.aaps.pump.carelevo.command.CmdAdditionalPriming
-import app.aaps.pump.carelevo.command.CmdDiscard
-import app.aaps.pump.carelevo.command.CmdSafetyCheck
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.common.model.Event
-import app.aaps.pump.carelevo.common.model.PatchState
-import app.aaps.pump.carelevo.common.model.UiState
-import app.aaps.pump.carelevo.domain.model.ResponseResult
-import app.aaps.pump.carelevo.domain.model.bt.SafetyCheckResult
-import app.aaps.pump.carelevo.domain.model.bt.SafetyCheckResultModel
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.model.result.ResultSuccess
-import app.aaps.pump.carelevo.domain.type.SafetyProgress
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
-import app.aaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchForceDiscardUseCase
-import app.aaps.pump.carelevo.presentation.model.CarelevoConnectSafetyCheckEvent
-import app.aaps.pump.carelevo.presentation.model.CarelevoOverviewEvent
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.pump.carelevo.command.CarelevoActivationExecutor
+import app.gmaaps.pump.carelevo.command.CmdAdditionalPriming
+import app.gmaaps.pump.carelevo.command.CmdDiscard
+import app.gmaaps.pump.carelevo.command.CmdSafetyCheck
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.common.model.Event
+import app.gmaaps.pump.carelevo.common.model.PatchState
+import app.gmaaps.pump.carelevo.common.model.UiState
+import app.gmaaps.pump.carelevo.domain.model.ResponseResult
+import app.gmaaps.pump.carelevo.domain.model.bt.SafetyCheckResult
+import app.gmaaps.pump.carelevo.domain.model.bt.SafetyCheckResultModel
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.model.result.ResultSuccess
+import app.gmaaps.pump.carelevo.domain.type.SafetyProgress
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
+import app.gmaaps.pump.carelevo.domain.usecase.alarm.CarelevoAlarmInfoUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchForceDiscardUseCase
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoConnectSafetyCheckEvent
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoOverviewEvent
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Single
@@ -937,3 +937,4 @@ internal class CarelevoPatchSafetyCheckViewModelTest {
         assertThat(sut.uiState.value).isEqualTo(UiState.Idle)
     }
 }
+

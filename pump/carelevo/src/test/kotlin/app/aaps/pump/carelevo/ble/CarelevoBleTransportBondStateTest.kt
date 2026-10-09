@@ -1,10 +1,10 @@
-package app.aaps.pump.carelevo.ble
+﻿package app.gmaaps.pump.carelevo.ble
 
 import android.Manifest
 import android.bluetooth.BluetoothDevice
 import android.bluetooth.BluetoothManager
 import android.content.Context
-import app.aaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.AAPSLogger
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Test
@@ -77,3 +77,4 @@ class CarelevoBleTransportBondStateTest {
         const val ADDRESS = "94:B2:16:1D:40:5C"
     }
 }
+

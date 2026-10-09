@@ -1,9 +1,9 @@
-package app.aaps.ui.defaultProfile
+﻿package app.gmaaps.ui.defaultProfile
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.ui.compose.profileHelper.defaultProfile.DefaultProfile
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.ui.compose.profileHelper.defaultProfile.DefaultProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -80,3 +80,4 @@ class DefaultProfileTest : TestBaseWithProfile() {
         assertThat(DefaultProfile(dateUtil, profileUtil).profile(19, 20.0, 0.0, GlucoseUnit.MMOL)).isNull()
     }
 }
+

@@ -1,22 +1,22 @@
-package app.aaps.ios.shell.di
+﻿package app.gmaaps.ios.shell.di
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.L
-import app.aaps.core.interfaces.notifications.AlarmSoundPlayer
-import app.aaps.core.interfaces.notifications.SystemNotificationPlatform
-import app.aaps.core.interfaces.sharedPreferences.KeyValueStore
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.implementation.logging.AAPSLoggerIos
-import app.aaps.implementation.notifications.IosSystemNotificationPlatform
-import app.aaps.ios.shell.config.IosClientConfig
-import app.aaps.ios.shell.platform.IosHistoryScope
-import app.aaps.ios.shell.prefs.IosSp
-import app.aaps.shared.impl.utils.DateUtilImpl
-import app.aaps.shared.impl.utils.IosDateFormatPlatform
-import app.aaps.ui.compose.history.HistoryScope
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.L
+import app.gmaaps.core.interfaces.notifications.AlarmSoundPlayer
+import app.gmaaps.core.interfaces.notifications.SystemNotificationPlatform
+import app.gmaaps.core.interfaces.sharedPreferences.KeyValueStore
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.implementation.logging.AAPSLoggerIos
+import app.gmaaps.implementation.notifications.IosSystemNotificationPlatform
+import app.gmaaps.ios.shell.config.IosClientConfig
+import app.gmaaps.ios.shell.platform.IosHistoryScope
+import app.gmaaps.ios.shell.prefs.IosSp
+import app.gmaaps.shared.impl.utils.DateUtilImpl
+import app.gmaaps.shared.impl.utils.IosDateFormatPlatform
+import app.gmaaps.ui.compose.history.HistoryScope
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -84,3 +84,4 @@ object IosPlatformBindings {
         IosHistoryScope(windowFactory.create())
 
 }
+

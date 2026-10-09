@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.domain.usecase.infusion.model
+﻿package app.gmaaps.pump.carelevo.domain.usecase.infusion.model
 
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
 
 data class CarelevoPumpStopRequestModel(
     val durationMin: Int

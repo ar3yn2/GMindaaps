@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.common.bledriver.comm
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm
 
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.scan.PodScanner
-import app.aaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.scan.PodScanner
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
 
 class Ids(podState: OmnipodDashPodStateManager) {
 
@@ -19,3 +19,4 @@ class Ids(podState: OmnipodDashPodStateManager) {
         }
     }
 }
+

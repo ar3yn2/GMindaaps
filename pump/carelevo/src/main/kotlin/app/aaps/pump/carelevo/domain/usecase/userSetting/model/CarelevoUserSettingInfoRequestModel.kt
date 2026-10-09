@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.domain.usecase.userSetting.model
+﻿package app.gmaaps.pump.carelevo.domain.usecase.userSetting.model
 
-import app.aaps.pump.carelevo.common.model.PatchState
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
+import app.gmaaps.pump.carelevo.common.model.PatchState
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseRequest
 
 data class CarelevoUserSettingInfoRequestModel(
     val patchState: PatchState? = null,

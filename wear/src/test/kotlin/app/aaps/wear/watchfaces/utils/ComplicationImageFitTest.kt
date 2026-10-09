@@ -1,4 +1,4 @@
-package app.aaps.wear.watchfaces.utils
+﻿package app.gmaaps.wear.watchfaces.utils
 
 import android.graphics.Rect
 import com.google.common.truth.Truth.assertThat
@@ -90,3 +90,4 @@ internal class ComplicationImageFitTest {
         }
     }
 }
+

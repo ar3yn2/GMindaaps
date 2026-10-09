@@ -1,7 +1,7 @@
-package app.aaps.pump.diaconn.packet
+﻿package app.gmaaps.pump.diaconn.packet
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -38,3 +38,4 @@ class DiaconnG8SettingResponseMessageHashTableTest : TestBaseWithProfile() {
         assertThat(unknown.friendlyName).isEqualTo("UNKNOWN_PACKET")
     }
 }
+

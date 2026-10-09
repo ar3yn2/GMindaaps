@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 /**
  * Scene (Situation Preset) definition.
@@ -25,3 +25,4 @@ data class Scene(
     /** Display order (lower = higher priority) */
     val sortOrder: Int = 0
 )
+

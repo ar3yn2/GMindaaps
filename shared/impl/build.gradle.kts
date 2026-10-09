@@ -1,4 +1,4 @@
-import kotlin.math.min
+﻿import kotlin.math.min
 
 plugins {
     kotlin("multiplatform")
@@ -9,7 +9,7 @@ plugins {
 
 kotlin {
     android {
-        namespace = "app.aaps.shared.impl"
+        namespace = "app.gmaaps.shared.impl"
         compileSdk = Versions.compileSdk
         minSdk = min(Versions.minSdk, Versions.wearMinSdk)  // shared with :wear
         // Off by default for a multiplatform library. This module owns the watchface view key strings
@@ -89,3 +89,4 @@ kotlin {
         }
     }
 }
+

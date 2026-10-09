@@ -1,18 +1,18 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
-import app.aaps.core.interfaces.notifications.NotificationAction
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.nsclient.StoreDataForDb
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.LongComposedKey
-import app.aaps.core.nssdk.interfaces.RunningConfiguration
-import app.aaps.core.nssdk.remotemodel.LastModified
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.NsIncomingDataProcessor
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector
-import app.aaps.plugins.sync.nsclientV3.compose.NSClientRepositoryImpl
-import app.aaps.plugins.sync.nsclientV3.data.NSDeviceStatusHandler
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.notifications.NotificationAction
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.nsclient.StoreDataForDb
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.LongComposedKey
+import app.gmaaps.core.nssdk.interfaces.RunningConfiguration
+import app.gmaaps.core.nssdk.remotemodel.LastModified
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.NsIncomingDataProcessor
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector
+import app.gmaaps.plugins.sync.nsclientV3.compose.NSClientRepositoryImpl
+import app.gmaaps.plugins.sync.nsclientV3.data.NSDeviceStatusHandler
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -343,3 +343,4 @@ class NsFrameHandlerTest : TestBaseWithProfile() {
         verify(notificationManager).dismiss(NotificationId.NS_URGENT_ALARM)
     }
 }
+

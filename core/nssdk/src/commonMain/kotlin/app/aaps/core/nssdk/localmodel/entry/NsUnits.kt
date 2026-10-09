@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.entry
+﻿package app.gmaaps.core.nssdk.localmodel.entry
 
 enum class NsUnits(val value: String) {
     MG_DL("mg/dl"),
@@ -10,3 +10,4 @@ enum class NsUnits(val value: String) {
         fun fromString(name: String?) = NsUnits.entries.firstOrNull { it.value == name } ?: MG_DL
     }
 }
+

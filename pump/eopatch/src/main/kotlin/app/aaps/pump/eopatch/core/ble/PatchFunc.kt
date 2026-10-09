@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.ble
+﻿package app.gmaaps.pump.eopatch.core.ble
 
 enum class PatchFunc(val noCrypt: Boolean) {
     REQUEST_BONDING(false),
@@ -43,3 +43,4 @@ enum class PatchFunc(val noCrypt: Boolean) {
     GET_PUBLIC_KEY(true),
     GET_SEQ_NUM(true)
 }
+

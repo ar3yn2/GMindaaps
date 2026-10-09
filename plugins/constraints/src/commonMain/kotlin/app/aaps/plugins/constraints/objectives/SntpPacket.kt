@@ -1,7 +1,7 @@
-package app.aaps.plugins.constraints.objectives
+﻿package app.gmaaps.plugins.constraints.objectives
 
-import app.aaps.plugins.constraints.objectives.SntpPacket.parseResponse
-import app.aaps.plugins.constraints.objectives.SntpPacket.readTimeStamp
+import app.gmaaps.plugins.constraints.objectives.SntpPacket.parseResponse
+import app.gmaaps.plugins.constraints.objectives.SntpPacket.readTimeStamp
 
 /**
  * The SNTP wire format, with no socket and no platform types.
@@ -118,3 +118,4 @@ internal object SntpPacket {
         buffer[offset] = lowOrderByte.toByte()
     }
 }
+

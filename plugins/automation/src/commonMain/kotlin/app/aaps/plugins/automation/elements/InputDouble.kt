@@ -1,6 +1,6 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
-import app.aaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.format.NumberFormat
 
 class InputDouble() {
 
@@ -31,3 +31,4 @@ class InputDouble() {
         return this
     }
 }
+

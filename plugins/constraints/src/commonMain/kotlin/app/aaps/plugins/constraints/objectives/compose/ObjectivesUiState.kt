@@ -1,4 +1,4 @@
-package app.aaps.plugins.constraints.objectives.compose
+﻿package app.gmaaps.plugins.constraints.objectives.compose
 
 import androidx.compose.runtime.Immutable
 
@@ -97,3 +97,4 @@ data class LearnedSheetState(
     val objectiveTitle: String,
     val items: List<String>
 )
+

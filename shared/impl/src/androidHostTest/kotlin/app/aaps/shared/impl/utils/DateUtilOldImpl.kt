@@ -1,12 +1,12 @@
-package app.aaps.shared.impl.utils
+﻿package app.gmaaps.shared.impl.utils
 
 import android.content.Context
 import androidx.collection.LongSparseArray
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.R
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.SafeParse
-import app.aaps.core.utils.pump.ThreadUtil
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.R
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.SafeParse
+import app.gmaaps.core.utils.pump.ThreadUtil
 import org.apache.commons.lang3.time.DateUtils.isSameDay
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
@@ -489,3 +489,4 @@ class DateUtilOldImpl(private val context: Context) {
         private var df: DecimalFormat? = null
     }
 }
+

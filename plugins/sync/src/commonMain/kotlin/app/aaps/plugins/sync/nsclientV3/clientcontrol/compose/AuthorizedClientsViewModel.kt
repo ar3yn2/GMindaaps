@@ -1,21 +1,21 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol.compose
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol.compose
 
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.nssdk.localmodel.clientcontrol.AuthorizedClient
-import app.aaps.core.nssdk.localmodel.clientcontrol.ClientState
-import app.aaps.core.nssdk.localmodel.clientcontrol.PairingPayload
-import app.aaps.core.nssdk.utils.ClientControlCrypto
-import app.aaps.core.nssdk.utils.ClientControlPairingCrypto
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.AuthorizedClientsRepository
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.PairingOfferPublisher
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.AuthorizedClient
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.ClientState
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.PairingPayload
+import app.gmaaps.core.nssdk.utils.ClientControlCrypto
+import app.gmaaps.core.nssdk.utils.ClientControlPairingCrypto
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.AuthorizedClientsRepository
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.PairingOfferPublisher
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -300,3 +300,4 @@ class AuthorizedClientsViewModel(
             "PendingPairingOffer(pin=****, expiresAt=$expiresAt, clientId=$clientId, publishStatus=$publishStatus)"
     }
 }
+

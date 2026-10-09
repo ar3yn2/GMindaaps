@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.nsclientV3
+﻿package app.gmaaps.plugins.sync.nsclientV3
 
-import app.aaps.plugins.sync.nsclientV3.SettingsIdentifiers.COLD
-import app.aaps.plugins.sync.nsclientV3.SettingsIdentifiers.STATE
+import app.gmaaps.plugins.sync.nsclientV3.SettingsIdentifiers.COLD
+import app.gmaaps.plugins.sync.nsclientV3.SettingsIdentifiers.STATE
 
 /**
  * NS `settings` collection document identifiers used by AAPS running-config sync.
@@ -11,7 +11,7 @@ import app.aaps.plugins.sync.nsclientV3.SettingsIdentifiers.STATE
  *  - [COLD]: plugin config, overview, definitions, authorized clients — published on user edits.
  *  - [STATE]: active scene + computed runtime flags — published on scene lifecycle (short debounce).
  *
- * [STATE] deliberately does not start with [app.aaps.plugins.sync.nsclientV3.clientcontrol.ClientControlPublisher.IDENTIFIER_PREFIX]
+ * [STATE] deliberately does not start with [app.gmaaps.plugins.sync.nsclientV3.clientcontrol.ClientControlPublisher.IDENTIFIER_PREFIX]
  * so the WS dispatcher can demux the three doc kinds by identifier.
  */
 object SettingsIdentifiers {
@@ -19,3 +19,4 @@ object SettingsIdentifiers {
     const val COLD = "aaps"
     const val STATE = "aaps-state"
 }
+

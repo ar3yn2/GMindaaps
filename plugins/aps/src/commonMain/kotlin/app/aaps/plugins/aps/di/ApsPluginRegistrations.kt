@@ -1,9 +1,9 @@
-package app.aaps.plugins.aps.di
+﻿package app.gmaaps.plugins.aps.di
 
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.plugins.aps.openAPSAMA.OpenAPSAMAPlugin
-import app.aaps.plugins.aps.openAPSAutoISF.OpenAPSAutoISFPlugin
-import app.aaps.plugins.aps.openAPSSMB.OpenAPSSMBPlugin
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.plugins.aps.openAPSAMA.OpenAPSAMAPlugin
+import app.gmaaps.plugins.aps.openAPSAutoISF.OpenAPSAutoISFPlugin
+import app.gmaaps.plugins.aps.openAPSSMB.OpenAPSSMBPlugin
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -52,3 +52,4 @@ object ApsPluginRegistrations {
     @IntKey(230)
     fun openApsAutoIsfEntry(plugin: OpenAPSAutoISFPlugin): PluginBase = plugin
 }
+

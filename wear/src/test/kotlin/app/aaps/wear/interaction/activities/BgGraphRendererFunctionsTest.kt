@@ -1,4 +1,4 @@
-package app.aaps.wear.interaction.activities
+﻿package app.gmaaps.wear.interaction.activities
 
 import androidx.compose.ui.graphics.Color
 import com.google.common.truth.Truth.assertThat
@@ -106,3 +106,4 @@ internal class BgGraphRendererFunctionsTest {
         assertThat(ageColor(60L * 60_000L)).isEqualTo(BgLowColor)
     }
 }
+

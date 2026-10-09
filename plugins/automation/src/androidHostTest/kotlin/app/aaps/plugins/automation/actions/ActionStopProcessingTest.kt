@@ -1,6 +1,6 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.AutomationStrings
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -32,3 +32,4 @@ class ActionStopProcessingTest : ActionsTestBase() {
         assertThat(result.success).isTrue()
     }
 }
+

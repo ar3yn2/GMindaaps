@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.common.bledriver.comm
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm
 
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.session.BleConnection
-import app.aaps.pump.omnipod.common.bledriver.comm.session.ConnectionState
-import app.aaps.pump.omnipod.common.bledriver.event.PodEvent
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.Command
-import app.aaps.pump.omnipod.common.bledriver.pod.response.Response
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.session.BleConnection
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.ConnectionState
+import app.gmaaps.pump.omnipod.common.bledriver.event.PodEvent
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.Command
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.Response
 import io.reactivex.rxjava3.core.Observable
 import java.util.concurrent.CountDownLatch
 import kotlin.reflect.KClass
@@ -26,3 +26,4 @@ interface OmnipodBleManager {
     fun disconnect(closeGatt: Boolean = false)
     fun removeBond()
 }
+

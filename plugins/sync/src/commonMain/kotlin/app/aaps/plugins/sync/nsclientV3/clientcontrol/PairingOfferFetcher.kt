@@ -1,15 +1,15 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
 import androidx.annotation.VisibleForTesting
-import app.aaps.core.data.json.OrgJsonCompat.optJsonObjectCompat
-import app.aaps.core.data.json.OrgJsonCompat.optStringCompat
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.nssdk.localmodel.clientcontrol.PairingOffer
-import app.aaps.core.nssdk.localmodel.clientcontrol.PairingPayload
-import app.aaps.core.nssdk.utils.ClientControlPairingCrypto
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.core.data.json.OrgJsonCompat.optJsonObjectCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optStringCompat
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.PairingOffer
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.PairingPayload
+import app.gmaaps.core.nssdk.utils.ClientControlPairingCrypto
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -132,3 +132,4 @@ class PairingOfferFetcher(
         null
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch
+﻿package app.gmaaps.pump.eopatch
 
 import com.google.common.truth.Truth.assertThat
 import com.google.gson.Gson
@@ -87,3 +87,4 @@ class GsonHelperTest {
         assertThat(deserialized.address.city).isEqualTo(person.address.city)
     }
 }
+

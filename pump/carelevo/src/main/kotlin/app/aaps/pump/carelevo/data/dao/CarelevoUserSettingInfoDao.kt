@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.data.dao
+﻿package app.gmaaps.pump.carelevo.data.dao
 
-import app.aaps.pump.carelevo.data.model.entities.CarelevoUserSettingInfoEntity
+import app.gmaaps.pump.carelevo.data.model.entities.CarelevoUserSettingInfoEntity
 import io.reactivex.rxjava3.core.Observable
 import java.util.Optional
 

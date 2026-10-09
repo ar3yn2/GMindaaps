@@ -1,11 +1,11 @@
-package app.aaps.plugins.constraints.versionChecker
+﻿package app.gmaaps.plugins.constraints.versionChecker
 
-import app.aaps.core.interfaces.versionChecker.VersionCheckerUtils
-import app.aaps.core.keys.LongComposedKey
-import app.aaps.core.objects.constraints.ConstraintObject
-import app.aaps.plugins.constraints.ConstraintsStringsValues
-import app.aaps.shared.tests.TestBaseWithProfile
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.interfaces.versionChecker.VersionCheckerUtils
+import app.gmaaps.core.keys.LongComposedKey
+import app.gmaaps.core.objects.constraints.ConstraintObject
+import app.gmaaps.plugins.constraints.ConstraintsStringsValues
+import app.gmaaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Test
@@ -39,3 +39,4 @@ class VersionCheckerPluginTest : TestBaseWithProfile() {
         assertThat(versionCheckerPlugin.applyMaxIOBConstraints(c3).value()).isEqualTo(0.0)
     }
 }
+

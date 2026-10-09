@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -34,3 +34,4 @@ class FallbackViewModelFactory(
             fallback.create(modelClass, extras)
         }
 }
+

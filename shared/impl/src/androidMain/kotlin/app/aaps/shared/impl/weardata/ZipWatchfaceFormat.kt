@@ -1,14 +1,14 @@
-package app.aaps.shared.impl.weardata
+﻿package app.gmaaps.shared.impl.weardata
 
 import android.content.ContentResolver
 import androidx.documentfile.provider.DocumentFile
-import app.aaps.core.interfaces.rx.weardata.CwfData
-import app.aaps.core.interfaces.rx.weardata.CwfFile
-import app.aaps.core.interfaces.rx.weardata.CwfMetadataKey
-import app.aaps.core.interfaces.rx.weardata.CwfMetadataMap
-import app.aaps.core.interfaces.rx.weardata.CwfResDataMap
-import app.aaps.core.interfaces.rx.weardata.ResData
-import app.aaps.core.interfaces.rx.weardata.ResFormat
+import app.gmaaps.core.interfaces.rx.weardata.CwfData
+import app.gmaaps.core.interfaces.rx.weardata.CwfFile
+import app.gmaaps.core.interfaces.rx.weardata.CwfMetadataKey
+import app.gmaaps.core.interfaces.rx.weardata.CwfMetadataMap
+import app.gmaaps.core.interfaces.rx.weardata.CwfResDataMap
+import app.gmaaps.core.interfaces.rx.weardata.ResData
+import app.gmaaps.core.interfaces.rx.weardata.ResFormat
 import org.json.JSONObject
 import java.io.BufferedOutputStream
 import java.io.ByteArrayInputStream

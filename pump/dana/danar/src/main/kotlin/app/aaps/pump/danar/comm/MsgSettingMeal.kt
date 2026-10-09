@@ -1,10 +1,10 @@
-package app.aaps.pump.danar.comm
+﻿package app.gmaaps.pump.danar.comm
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.keys.interfaces.TextRef
 
 class MsgSettingMeal(
     injector: MetroMemberInjector
@@ -33,12 +33,12 @@ class MsgSettingMeal(
             danaPump.basalStep = 0.01
         }
         if (danaPump.basalStep != 0.01) {
-            notificationManager.post(NotificationId.WRONG_BASAL_STEP, TextRef.AndroidRes(app.aaps.pump.dana.R.string.danar_setbasalstep001), level = NotificationLevel.IMPORTANT)
+            notificationManager.post(NotificationId.WRONG_BASAL_STEP, TextRef.AndroidRes(app.gmaaps.pump.dana.R.string.danar_setbasalstep001), level = NotificationLevel.IMPORTANT)
         } else {
             notificationManager.dismiss(NotificationId.WRONG_BASAL_STEP)
         }
         if (danaPump.isConfigUD) {
-            notificationManager.post(NotificationId.UD_MODE_ENABLED, TextRef.AndroidRes(app.aaps.pump.dana.R.string.danar_switchtouhmode))
+            notificationManager.post(NotificationId.UD_MODE_ENABLED, TextRef.AndroidRes(app.gmaaps.pump.dana.R.string.danar_switchtouhmode))
         } else {
             notificationManager.dismiss(NotificationId.UD_MODE_ENABLED)
         }

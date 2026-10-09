@@ -1,24 +1,24 @@
-package app.aaps.pump.equil.compose
+﻿package app.gmaaps.pump.equil.compose
 
 import android.content.Context
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventQueueChanged
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.pump.equil.EquilPumpPlugin
-import app.aaps.pump.equil.R
-import app.aaps.pump.equil.data.RunMode
-import app.aaps.pump.equil.events.EventEquilDataChanged
-import app.aaps.pump.equil.events.EventEquilModeChanged
-import app.aaps.pump.equil.manager.EquilManager
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventQueueChanged
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.pump.equil.EquilPumpPlugin
+import app.gmaaps.pump.equil.R
+import app.gmaaps.pump.equil.data.RunMode
+import app.gmaaps.pump.equil.events.EventEquilDataChanged
+import app.gmaaps.pump.equil.events.EventEquilModeChanged
+import app.gmaaps.pump.equil.manager.EquilManager
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -34,7 +34,7 @@ import org.mockito.MockitoAnnotations
 import org.mockito.kotlin.any
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.whenever
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /**
  * Unit test for the shared Equil overview state logic. [EquilOverviewViewModel] extends
@@ -156,3 +156,4 @@ internal class EquilOverviewViewModelTest {
         assertThat(state.primaryActions.map { it.label }).containsExactly("Resume")
     }
 }
+

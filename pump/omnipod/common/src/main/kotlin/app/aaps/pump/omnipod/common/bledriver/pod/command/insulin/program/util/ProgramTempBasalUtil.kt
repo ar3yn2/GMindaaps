@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.BasalInsulinProgramElement
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.ShortInsulinProgramElement
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.TempBasalInsulinProgramElement
-import app.aaps.pump.omnipod.common.bledriver.pod.util.MessageUtil
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.BasalInsulinProgramElement
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.ShortInsulinProgramElement
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.TempBasalInsulinProgramElement
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.MessageUtil
 import java.nio.ByteBuffer
 import kotlin.math.roundToInt
 
@@ -71,3 +71,4 @@ object ProgramTempBasalUtil {
     fun mapPulsesPerSlotToShortInsulinProgramElements(pulsesPerSlot: ShortArray?): List<ShortInsulinProgramElement> =
         ProgramBasalUtil.mapPulsesPerSlotToShortInsulinProgramElements(pulsesPerSlot)
 }
+

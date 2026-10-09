@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
 
 class ComparatorExists(private val rh: TextResolver, var value: Compare = Compare.EXISTS) {
 
@@ -25,3 +25,4 @@ class ComparatorExists(private val rh: TextResolver, var value: Compare = Compar
         }
     }
 }
+

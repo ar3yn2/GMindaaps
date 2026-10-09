@@ -1,9 +1,9 @@
-package app.aaps.database
+﻿package app.gmaaps.database
 
-import app.aaps.database.entities.RunningMode
-import app.aaps.database.entities.TemporaryTarget
-import app.aaps.database.entities.TherapyEvent
-import app.aaps.database.entities.ValueWithUnit
+import app.gmaaps.database.entities.RunningMode
+import app.gmaaps.database.entities.TemporaryTarget
+import app.gmaaps.database.entities.TherapyEvent
+import app.gmaaps.database.entities.ValueWithUnit
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -81,3 +81,4 @@ internal class UserEntryValuesFormatTest {
             .isEqualTo(listOf(ValueWithUnit.UNKNOWN))
     }
 }
+

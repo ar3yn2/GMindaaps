@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.RunningModeDao
-import app.aaps.database.entities.RunningMode
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.RunningModeDao
+import app.gmaaps.database.entities.RunningMode
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedRunningModeDao(changes: MutableList<DBEntry>, private val dao: RunningModeDao) : DelegatedDao(changes), RunningModeDao by dao {
 

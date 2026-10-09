@@ -1,4 +1,4 @@
-package app.aaps.core.utils
+﻿package app.gmaaps.core.utils
 
 import org.json.JSONException
 import org.json.JSONObject

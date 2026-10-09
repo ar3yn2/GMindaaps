@@ -1,4 +1,4 @@
-package app.aaps.implementation.receivers
+﻿package app.gmaaps.implementation.receivers
 
 import android.content.Context
 import android.content.Intent
@@ -7,12 +7,12 @@ import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.wifi.SupplicantState
 import android.net.wifi.WifiManager
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore.NetworkStatus
-import app.aaps.core.objects.workflow.MetroBroadcastReceiver
-import app.aaps.core.utils.receivers.StringUtils
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore.NetworkStatus
+import app.gmaaps.core.objects.workflow.MetroBroadcastReceiver
+import app.gmaaps.core.utils.receivers.StringUtils
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -66,3 +66,4 @@ class NetworkChangeReceiver : MetroBroadcastReceiver() {
         receiverStatusStore.setNetworkStatus(status)
     }
 }
+

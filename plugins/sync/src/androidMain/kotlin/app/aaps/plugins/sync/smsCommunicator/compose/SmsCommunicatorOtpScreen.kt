@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.smsCommunicator.compose
+﻿package app.gmaaps.plugins.sync.smsCommunicator.compose
 
 import android.graphics.Bitmap
 import android.view.WindowManager
@@ -36,15 +36,15 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.AapsTopAppBar
-import app.aaps.core.ui.compose.clearFocusOnTap
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.plugins.sync.smsCommunicator.otp.OneTimePassword
-import app.aaps.plugins.sync.smsCommunicator.otp.OneTimePasswordValidationResult
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.AapsTopAppBar
+import app.gmaaps.core.ui.compose.clearFocusOnTap
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.plugins.sync.smsCommunicator.otp.OneTimePassword
+import app.gmaaps.plugins.sync.smsCommunicator.otp.OneTimePasswordValidationResult
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel
 import net.glxn.qrgen.android.QRCode
 import kotlin.math.min
@@ -211,3 +211,4 @@ private fun generateQrBitmap(otp: OneTimePassword): Bitmap? =
     otp.provisioningURI()?.let { uri ->
         QRCode.from(uri).withErrorCorrection(ErrorCorrectionLevel.H).withSize(512, 512).bitmap()
     }
+

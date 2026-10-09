@@ -1,18 +1,18 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.icons.IcDelta
-import app.aaps.core.utils.lenientDouble
-import app.aaps.core.utils.lenientString
-import app.aaps.core.utils.lenientStringOrNull
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.Comparator
-import app.aaps.plugins.automation.elements.InputDelta
-import app.aaps.plugins.automation.elements.InputDelta.DeltaType
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.icons.IcDelta
+import app.gmaaps.core.utils.lenientDouble
+import app.gmaaps.core.utils.lenientString
+import app.gmaaps.core.utils.lenientStringOrNull
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.Comparator
+import app.gmaaps.plugins.automation.elements.InputDelta
+import app.gmaaps.plugins.automation.elements.InputDelta.DeltaType
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
@@ -116,3 +116,4 @@ class TriggerDelta(deps: TriggerDeps) : Trigger(deps) {
     override fun duplicate(): Trigger = TriggerDelta(deps, this)
 
 }
+

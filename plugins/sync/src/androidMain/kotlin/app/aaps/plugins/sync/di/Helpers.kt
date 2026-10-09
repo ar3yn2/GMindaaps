@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.di
+﻿package app.gmaaps.plugins.sync.di
 
 import dev.zacsweers.metro.Qualifier
 

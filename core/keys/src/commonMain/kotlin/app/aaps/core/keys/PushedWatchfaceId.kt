@@ -1,4 +1,4 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
 /**
  * Values of [StringKey.WearPushedWatchface]: the id of the embedded Watch Face Format face the wear
@@ -14,3 +14,4 @@ object PushedWatchfaceId {
     /** The face that shows the wearer's own Custom watchface zip as a picture */
     const val CWF = "cwf"
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.tempBasalDialog
+﻿package app.gmaaps.ui.compose.tempBasalDialog
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -15,7 +15,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /** Robolectric composable test for [TempBasalDialogContent]: renders + fires navigate-back (Close). */
 @RunWith(RobolectricTestRunner::class)
@@ -55,3 +55,4 @@ class TempBasalDialogContentTest {
         assertThat(back).isTrue()
     }
 }
+

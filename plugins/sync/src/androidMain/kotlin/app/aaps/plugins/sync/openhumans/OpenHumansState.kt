@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.openhumans
+﻿package app.gmaaps.plugins.sync.openhumans
 
 internal data class OpenHumansState(
     val accessToken: String,
@@ -7,3 +7,4 @@ internal data class OpenHumansState(
     val projectMemberId: String,
     val uploadOffset: Long
 )
+

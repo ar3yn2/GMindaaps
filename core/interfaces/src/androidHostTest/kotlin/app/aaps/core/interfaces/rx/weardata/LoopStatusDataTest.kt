@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.rx.weardata
+﻿package app.gmaaps.core.interfaces.rx.weardata
 
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.json.Json
@@ -101,3 +101,4 @@ class LoopStatusDataTest {
         }
     }
 }
+

@@ -1,4 +1,4 @@
-<WatchFace clipShape="CIRCLE" height="450" width="450">
+﻿<WatchFace clipShape="CIRCLE" height="450" width="450">
     <Metadata key="CLOCK_TYPE" value="ANALOG" />
 
     <!-- What the wearer can change by long-pressing the face.
@@ -115,7 +115,7 @@
             <DefaultProviderPolicy
                 defaultSystemProvider="EMPTY"
                 defaultSystemProviderType="EMPTY"
-                primaryProvider="AAPS_WEAR_APP_ID/app.aaps.wear.complications.cwf.CwfFaceComplication"
+                primaryProvider="AAPS_WEAR_APP_ID/app.gmaaps.wear.complications.cwf.CwfFaceComplication"
                 primaryProviderType="SMALL_IMAGE" />
             <BoundingBox x="0" y="0" width="450" height="450" />
             <Complication type="SMALL_IMAGE">
@@ -161,7 +161,7 @@
             <DefaultProviderPolicy
                 defaultSystemProvider="EMPTY"
                 defaultSystemProviderType="EMPTY"
-                primaryProvider="AAPS_WEAR_APP_ID/app.aaps.wear.complications.cwf.CwfAmbientFaceComplication"
+                primaryProvider="AAPS_WEAR_APP_ID/app.gmaaps.wear.complications.cwf.CwfAmbientFaceComplication"
                 primaryProviderType="SMALL_IMAGE" />
             <BoundingBox x="0" y="0" width="450" height="450" />
             <Complication type="SMALL_IMAGE">
@@ -240,7 +240,7 @@
             <DefaultProviderPolicy
                 defaultSystemProvider="EMPTY"
                 defaultSystemProviderType="EMPTY"
-                primaryProvider="AAPS_WEAR_APP_ID/app.aaps.wear.complications.CwfAmbientBgComplication"
+                primaryProvider="AAPS_WEAR_APP_ID/app.gmaaps.wear.complications.CwfAmbientBgComplication"
                 primaryProviderType="SHORT_TEXT" />
             <!-- Bounds the readout, and nothing more. A one-pixel box was tried here to make the
                  slot untappable while it still drew full size; everything in the slot then vanished,
@@ -293,7 +293,7 @@
             <DefaultProviderPolicy
                 defaultSystemProvider="EMPTY"
                 defaultSystemProviderType="EMPTY"
-                primaryProvider="AAPS_WEAR_APP_ID/app.aaps.wear.complications.CwfAmbientStatusComplication"
+                primaryProvider="AAPS_WEAR_APP_ID/app.gmaaps.wear.complications.CwfAmbientStatusComplication"
                 primaryProviderType="SHORT_TEXT" />
             <BoundingBox x="0" y="300" width="450" height="84" />
             <Complication type="SHORT_TEXT">
@@ -330,3 +330,4 @@
 
     </Scene>
 </WatchFace>
+

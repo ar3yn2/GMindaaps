@@ -1,9 +1,9 @@
-package app.aaps.core.nssdk
+﻿package app.gmaaps.core.nssdk
 
-import app.aaps.core.nssdk.interfaces.NSAndroidCallbackClient
-import app.aaps.core.nssdk.interfaces.NSAndroidClient
-import app.aaps.core.nssdk.localmodel.Status
-import app.aaps.core.nssdk.utils.nsIoDispatcher
+import app.gmaaps.core.nssdk.interfaces.NSAndroidCallbackClient
+import app.gmaaps.core.nssdk.interfaces.NSAndroidClient
+import app.gmaaps.core.nssdk.localmodel.Status
+import app.gmaaps.core.nssdk.utils.nsIoDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
@@ -25,3 +25,4 @@ class NSAndroidCallbackClientImpl(private val client: NSAndroidClient) :
             }
         )
 }
+

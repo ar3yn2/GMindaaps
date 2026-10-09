@@ -1,16 +1,16 @@
-package app.aaps.pump.omnipod.eros.driver.util;
+package app.gmaaps.pump.omnipod.eros.driver.util;
 
 import androidx.annotation.NonNull;
 
 import org.joda.time.Duration;
 
-import app.aaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertSlot;
-import app.aaps.pump.omnipod.eros.driver.definition.AlertType;
-import app.aaps.pump.omnipod.eros.driver.definition.BeepRepeat;
-import app.aaps.pump.omnipod.eros.driver.definition.BeepType;
-import app.aaps.pump.omnipod.eros.driver.definition.TimerAlertTrigger;
-import app.aaps.pump.omnipod.eros.driver.definition.UnitsRemainingAlertTrigger;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertConfiguration;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertSlot;
+import app.gmaaps.pump.omnipod.eros.driver.definition.AlertType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.BeepRepeat;
+import app.gmaaps.pump.omnipod.eros.driver.definition.BeepType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.TimerAlertTrigger;
+import app.gmaaps.pump.omnipod.eros.driver.definition.UnitsRemainingAlertTrigger;
 
 public class AlertConfigurationUtil {
     public static AlertConfiguration createLowReservoirAlertConfiguration(boolean active, Double units) {
@@ -40,3 +40,4 @@ public class AlertConfigurationUtil {
                 BeepType.BIP_BEEP_BIP_BEEP_BIP_BEEP_BIP_BEEP, BeepRepeat.EVERY_5_MINUTES);
     }
 }
+

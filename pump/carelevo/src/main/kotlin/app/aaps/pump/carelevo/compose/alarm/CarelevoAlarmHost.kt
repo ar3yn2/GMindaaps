@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.alarm
+﻿package app.gmaaps.pump.carelevo.compose.alarm
 
 import android.app.Activity
 import android.bluetooth.BluetoothAdapter
@@ -9,16 +9,16 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.platform.LocalContext
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.pump.carelevo.presentation.model.AlarmEvent
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoAlarmViewModel
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.pump.carelevo.presentation.model.AlarmEvent
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoAlarmViewModel
 
 /**
- * Hosts the two UI requests [app.aaps.pump.carelevo.common.CarelevoAlarmActionHandler] cannot fulfill
+ * Hosts the two UI requests [app.gmaaps.pump.carelevo.common.CarelevoAlarmActionHandler] cannot fulfill
  * itself: launching the Bluetooth-enable intent, and a failure toast. Critical alarms surface through
- * the shared AAPS full-screen alarm ([app.aaps.core.interfaces.ui.UiInteraction.runAlarm], fired from
+ * the shared AAPS full-screen alarm ([app.gmaaps.core.interfaces.ui.UiInteraction.runAlarm], fired from
  * `CarelevoPumpPlugin.handleAlarms`) and every alarm's actual clear action lives on the persistent
  * notification card (`CarelevoAlarmNotifier.showTopNotification`) — this host renders nothing itself.
  */
@@ -55,3 +55,4 @@ internal fun CarelevoAlarmHost(
         }
     }
 }
+

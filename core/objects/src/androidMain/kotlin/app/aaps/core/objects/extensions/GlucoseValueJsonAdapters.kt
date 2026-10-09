@@ -1,7 +1,7 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.data.model.GV
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.interfaces.utils.DateUtil
 import org.json.JSONObject
 
 /**
@@ -17,3 +17,4 @@ import org.json.JSONObject
  */
 fun GV.toJson(isAdd: Boolean, dateUtil: DateUtil): JSONObject =
     JSONObject(toJsonObject(isAdd, dateUtil).toString())
+

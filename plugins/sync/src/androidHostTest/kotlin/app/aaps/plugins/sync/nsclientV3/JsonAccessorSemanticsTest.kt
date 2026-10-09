@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3
+﻿package app.gmaaps.plugins.sync.nsclientV3
 
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
@@ -155,3 +155,4 @@ class JsonAccessorSemanticsTest {
         assertThat(doc.toString()).contains("\"a\"")
     }
 }
+

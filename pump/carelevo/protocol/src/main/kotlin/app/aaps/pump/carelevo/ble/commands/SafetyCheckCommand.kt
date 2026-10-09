@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleResponse
-import app.aaps.pump.carelevo.ble.BleStreamCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.BleStreamCommand
 
 /**
  * `CMD_SAFETY_CHECK_REQ` (0x12) → `CMD_SAFETY_CHECK_RES` (0x72). The activation safety check: the pump
@@ -72,3 +72,4 @@ data class SafetyCheckResponse(
     val insulinVolume: Int,
     val durationSeconds: Int
 ) : BleResponse
+

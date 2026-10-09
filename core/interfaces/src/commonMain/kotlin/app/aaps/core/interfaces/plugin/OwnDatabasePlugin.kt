@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.plugin
+﻿package app.gmaaps.core.interfaces.plugin
 
 interface OwnDatabasePlugin {
 

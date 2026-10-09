@@ -1,19 +1,19 @@
-package app.aaps.implementation.maintenance.formats
+﻿package app.gmaaps.implementation.maintenance.formats
 
 import android.content.Context
 import androidx.documentfile.provider.DocumentFile
-import app.aaps.core.interfaces.maintenance.PrefMetadataMap
-import app.aaps.core.interfaces.maintenance.Prefs
-import app.aaps.core.interfaces.protection.SecureEncrypt
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.storage.Storage
-import app.aaps.core.objects.crypto.platformCryptoPrimitives
-import app.aaps.implementation.R
-import app.aaps.implementation.maintenance.data.PrefFileNotFoundError
-import app.aaps.implementation.maintenance.data.PrefIOError
-import app.aaps.implementation.maintenance.data.PrefsFormat
+import app.gmaaps.core.interfaces.maintenance.PrefMetadataMap
+import app.gmaaps.core.interfaces.maintenance.Prefs
+import app.gmaaps.core.interfaces.protection.SecureEncrypt
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.storage.Storage
+import app.gmaaps.core.objects.crypto.platformCryptoPrimitives
+import app.gmaaps.implementation.R
+import app.gmaaps.implementation.maintenance.data.PrefFileNotFoundError
+import app.gmaaps.implementation.maintenance.data.PrefIOError
+import app.gmaaps.implementation.maintenance.data.PrefsFormat
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -81,3 +81,4 @@ class EncryptedPrefsFormat(
         )
     }
 }
+

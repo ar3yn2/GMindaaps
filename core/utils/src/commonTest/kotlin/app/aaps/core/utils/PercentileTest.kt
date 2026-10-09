@@ -1,4 +1,4 @@
-package app.aaps.core.utils
+﻿package app.gmaaps.core.utils
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -92,3 +92,4 @@ class PercentileTest {
         assertEquals(1.5, Percentile.percentile(doubleArrayOf(3.0, 1.0, 2.0), 0.5), tol)
     }
 }
+

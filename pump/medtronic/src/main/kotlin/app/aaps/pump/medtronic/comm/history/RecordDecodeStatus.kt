@@ -1,4 +1,4 @@
-package app.aaps.pump.medtronic.comm.history
+﻿package app.gmaaps.pump.medtronic.comm.history
 
 /**
  * This file was taken from GGC - GNU Gluco Control (ggc.sourceforge.net), application for diabetes

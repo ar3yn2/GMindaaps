@@ -1,9 +1,9 @@
-package app.aaps.pump.danar.emulator
+﻿package app.gmaaps.pump.danar.emulator
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.comm.RecordTypes
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.comm.RecordTypes
 import org.joda.time.DateTime
 
 /**
@@ -662,3 +662,4 @@ class DanaRPumpEmulator(
 
     private fun handleApsSetHistoryEntry(): ByteArray = byteArrayOf(0x01)
 }
+

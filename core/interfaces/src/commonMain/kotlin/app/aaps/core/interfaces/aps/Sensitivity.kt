@@ -1,8 +1,8 @@
-package app.aaps.core.interfaces.aps
+﻿package app.gmaaps.core.interfaces.aps
 
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.model.TE
-import app.aaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
 
 interface Sensitivity {
 

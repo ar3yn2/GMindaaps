@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.compose
+﻿package app.gmaaps.pump.eopatch.compose
 
 sealed class PatchEvent {
     data object Finish : PatchEvent()
@@ -8,3 +8,4 @@ sealed class PatchEvent {
     data class ShowDiscardDialog(val dummy: Unit = Unit) : PatchEvent()
     data object ShowForceResetDialog : PatchEvent()
 }
+

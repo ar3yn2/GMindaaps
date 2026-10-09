@@ -1,12 +1,12 @@
-package app.aaps.pump.insight.app_layer
+﻿package app.gmaaps.pump.insight.app_layer
 
-import app.aaps.pump.insight.descriptors.AppCommands
-import app.aaps.pump.insight.descriptors.AppErrors
-import app.aaps.pump.insight.descriptors.MessagePriority
-import app.aaps.pump.insight.exceptions.app_layer_errors.UnknownAppLayerErrorCodeException
-import app.aaps.pump.insight.satl.DataMessage
-import app.aaps.pump.insight.utils.ByteBuf
-import app.aaps.pump.insight.utils.crypto.Cryptograph
+import app.gmaaps.pump.insight.descriptors.AppCommands
+import app.gmaaps.pump.insight.descriptors.AppErrors
+import app.gmaaps.pump.insight.descriptors.MessagePriority
+import app.gmaaps.pump.insight.exceptions.app_layer_errors.UnknownAppLayerErrorCodeException
+import app.gmaaps.pump.insight.satl.DataMessage
+import app.gmaaps.pump.insight.utils.ByteBuf
+import app.gmaaps.pump.insight.utils.crypto.Cryptograph
 
 open class AppLayerMessage(private val messagePriority: MessagePriority, private val inCRC: Boolean, private val outCRC: Boolean, open var service: Service?) : Comparable<AppLayerMessage> {
 
@@ -40,15 +40,15 @@ open class AppLayerMessage(private val messagePriority: MessagePriority, private
             val command = byteBuf.readUInt16LE()
             val error = byteBuf.readUInt16LE()
             val message = AppCommands.fromId(command)
-            if (version != VERSION) throw app.aaps.pump.insight.exceptions.IncompatibleAppVersionException()
-            if (Service.fromId(service) == null) throw app.aaps.pump.insight.exceptions.UnknownServiceException()
+            if (version != VERSION) throw app.gmaaps.pump.insight.exceptions.IncompatibleAppVersionException()
+            if (Service.fromId(service) == null) throw app.gmaaps.pump.insight.exceptions.UnknownServiceException()
             if (error != 0 || message == null) {
                 val exceptionClass = AppErrors.fromId(error)
                 exceptionClass?.let { throw it.getConstructor(Int::class.javaPrimitiveType).newInstance(error) }
                     ?: throw UnknownAppLayerErrorCodeException(error)
             }
             val data = byteBuf.readBytes(byteBuf.filledSize - if (message.inCRC) 2 else 0)
-            if (message.inCRC && Cryptograph.calculateCRC(data) != byteBuf.readUInt16LE()) throw app.aaps.pump.insight.exceptions.InvalidAppCRCException()
+            if (message.inCRC && Cryptograph.calculateCRC(data) != byteBuf.readUInt16LE()) throw app.gmaaps.pump.insight.exceptions.InvalidAppCRCException()
             message.parse(ByteBuf.from(data))
             return message
         }

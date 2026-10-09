@@ -1,13 +1,13 @@
-package app.aaps.pump.carelevo.common
+﻿package app.gmaaps.pump.carelevo.common
 
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotFlags
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotResponse
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotTier
-import app.aaps.pump.carelevo.ble.commands.SnapshotAlarmFlag
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotFlags
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotResponse
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotTier
+import app.gmaaps.pump.carelevo.ble.commands.SnapshotAlarmFlag
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
 import dev.zacsweers.metro.Inject
 import java.util.UUID
 
@@ -104,3 +104,4 @@ class ActiveAlarmSnapshotAlarmMapper @Inject constructor() {
         else                             -> null
     }
 }
+

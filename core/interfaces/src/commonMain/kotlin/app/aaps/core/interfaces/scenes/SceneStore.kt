@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.scenes
+﻿package app.gmaaps.core.interfaces.scenes
 
-import app.aaps.core.data.model.Scene
+import app.gmaaps.core.data.model.Scene
 import kotlinx.coroutines.flow.StateFlow
 
 /**
@@ -28,3 +28,4 @@ interface SceneStore {
     /** Remove a scene by id. */
     fun deleteScene(id: String)
 }
+

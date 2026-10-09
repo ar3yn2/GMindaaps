@@ -1,6 +1,6 @@
-package app.aaps.ui.compose.permissionsSheet
+﻿package app.gmaaps.ui.compose.permissionsSheet
 
-import app.aaps.core.interfaces.plugin.PluginPermissions
+import app.gmaaps.core.interfaces.plugin.PluginPermissions
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -67,3 +67,4 @@ internal class PermissionsViewModelTest {
         assertThat(state.showSheet).isFalse()
     }
 }
+

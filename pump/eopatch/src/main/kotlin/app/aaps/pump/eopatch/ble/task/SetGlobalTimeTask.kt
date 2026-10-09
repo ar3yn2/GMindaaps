@@ -1,10 +1,10 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.core.api.GetGlobalTime
-import app.aaps.pump.eopatch.core.api.SetGlobalTime
-import app.aaps.pump.eopatch.core.response.GlobalTimeResponse
-import app.aaps.pump.eopatch.core.response.PatchBooleanResponse
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.core.api.GetGlobalTime
+import app.gmaaps.pump.eopatch.core.api.SetGlobalTime
+import app.gmaaps.pump.eopatch.core.response.GlobalTimeResponse
+import app.gmaaps.pump.eopatch.core.response.PatchBooleanResponse
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -67,3 +67,4 @@ class SetGlobalTimeTask() : TaskBase(TaskFunc.SET_GLOBAL_TIME) {
     private fun onSuccess() {
     }
 }
+

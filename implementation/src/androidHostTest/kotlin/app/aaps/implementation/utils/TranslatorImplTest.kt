@@ -1,12 +1,12 @@
-package app.aaps.implementation.utils
+﻿package app.gmaaps.implementation.utils
 
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.model.TT
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -29,7 +29,7 @@ internal class TranslatorImplTest {
         sut = TranslatorImpl(generatedTextResolver())
     }
 
-    /** Real text, not the snake_case name an unresolved [app.aaps.core.keys.interfaces.TextRef.Named] falls back to. */
+    /** Real text, not the snake_case name an unresolved [app.gmaaps.core.keys.interfaces.TextRef.Named] falls back to. */
     private fun assertTranslated(text: String) {
         assertThat(text).isNotEmpty()
         assertThat(text).doesNotContain("_")
@@ -80,3 +80,4 @@ internal class TranslatorImplTest {
         assertThat(sut.translate(null as ValueWithUnit?)).isEmpty()
     }
 }
+

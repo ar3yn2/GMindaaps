@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
+import app.gmaaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonObject
@@ -22,3 +22,4 @@ private val lenientJson = Json {
     ignoreUnknownKeys = true
     isLenient = true
 }
+

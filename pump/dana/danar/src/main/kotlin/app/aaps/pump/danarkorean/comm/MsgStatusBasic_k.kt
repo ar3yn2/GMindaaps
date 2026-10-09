@@ -1,8 +1,8 @@
-package app.aaps.pump.danarkorean.comm
+﻿package app.gmaaps.pump.danarkorean.comm
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.danar.comm.MessageBase
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.danar.comm.MessageBase
 
 class MsgStatusBasic_k(
     injector: MetroMemberInjector

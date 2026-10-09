@@ -1,25 +1,25 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.icons.IcProfile
-import app.aaps.core.utils.lenientDouble
-import app.aaps.core.utils.lenientInt
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.Comparator
-import app.aaps.plugins.automation.elements.InputDuration
-import app.aaps.plugins.automation.elements.InputPercent
-import app.aaps.plugins.automation.triggers.Trigger
-import app.aaps.plugins.automation.triggers.TriggerDeps
-import app.aaps.plugins.automation.triggers.TriggerProfilePercent
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.icons.IcProfile
+import app.gmaaps.core.utils.lenientDouble
+import app.gmaaps.core.utils.lenientInt
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.Comparator
+import app.gmaaps.plugins.automation.elements.InputDuration
+import app.gmaaps.plugins.automation.elements.InputPercent
+import app.gmaaps.plugins.automation.triggers.Trigger
+import app.gmaaps.plugins.automation.triggers.TriggerDeps
+import app.gmaaps.plugins.automation.triggers.TriggerProfilePercent
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 
@@ -51,7 +51,7 @@ class ActionProfileSwitchPercent(
             durationInMinutes = duration.value,
             percentage = pct.value.toInt(),
             timeShiftInHours = 0,
-            action = app.aaps.core.data.ue.Action.PROFILE_SWITCH,
+            action = app.gmaaps.core.data.ue.Action.PROFILE_SWITCH,
             source = Sources.Automation,
             note = title + ": " + rh.gs(CoreUiStrings.startprofile, pct.value.toInt(), duration.value),
             listValues = listOf(

@@ -1,6 +1,6 @@
-package app.aaps.core.nssdk.networking
+﻿package app.gmaaps.core.nssdk.networking
 
-import app.aaps.core.nssdk.nsSdkJson
+import app.gmaaps.core.nssdk.nsSdkJson
 import io.ktor.client.HttpClient
 import io.ktor.client.HttpClientConfig
 import io.ktor.client.plugins.HttpTimeout
@@ -86,3 +86,4 @@ internal object NsKtorClient {
      */
     private const val CONNECT_TIMEOUT = 10L * 1000
 }
+

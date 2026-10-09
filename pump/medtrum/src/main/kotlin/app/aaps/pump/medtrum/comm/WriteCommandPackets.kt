@@ -1,6 +1,6 @@
-package app.aaps.pump.medtrum.comm
+﻿package app.gmaaps.pump.medtrum.comm
 
-import app.aaps.pump.medtrum.util.CrcUtils.calcCrc8
+import app.gmaaps.pump.medtrum.util.CrcUtils.calcCrc8
 
 class WriteCommandPackets(data: ByteArray, sequenceNumber: Int) {
 
@@ -54,3 +54,4 @@ class WriteCommandPackets(data: ByteArray, sequenceNumber: Int) {
         return index >= packages.size
     }
 }
+

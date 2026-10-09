@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.tempTarget
+﻿package app.gmaaps.ui.compose.tempTarget
 
 import android.content.Context
 import androidx.compose.ui.test.assertIsDisplayed
@@ -8,12 +8,12 @@ import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
-import app.aaps.core.data.model.TT
-import app.aaps.core.data.model.TTPreset
-import app.aaps.core.ui.compose.ScreenMode
-import app.aaps.ui.compose.testing.AapsScreenFixture
-import app.aaps.ui.compose.testing.TempTargetManagementViewModelFixture
-import app.aaps.ui.compose.testing.setAapsContent
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.data.model.TTPreset
+import app.gmaaps.core.ui.compose.ScreenMode
+import app.gmaaps.ui.compose.testing.AapsScreenFixture
+import app.gmaaps.ui.compose.testing.TempTargetManagementViewModelFixture
+import app.gmaaps.ui.compose.testing.setAapsContent
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -80,18 +80,18 @@ class TempTargetManagementScreenTest {
         screen = AapsScreenFixture()
         viewModels = TempTargetManagementViewModelFixture(screen)
         context = RuntimeEnvironment.getApplication()
-        switchToEdit = context.getString(app.aaps.core.ui.R.string.switch_to_edit)
-        moreOptions = context.getString(app.aaps.core.ui.R.string.more_options)
-        removeLabel = context.getString(app.aaps.ui.R.string.remove_label)
-        activateLabel = context.getString(app.aaps.ui.R.string.activate_label)
-        cancelLabel = context.getString(app.aaps.core.ui.R.string.cancel)
-        saveLabel = context.getString(app.aaps.core.ui.R.string.save)
-        reorderLabel = context.getString(app.aaps.core.ui.R.string.reorder)
-        okLabel = context.getString(app.aaps.core.ui.R.string.ok)
-        presetSettings = context.getString(app.aaps.core.ui.R.string.preset_settings)
-        noRecords = context.getString(app.aaps.ui.R.string.no_records_available)
-        offlineBanner = context.getString(app.aaps.core.ui.R.string.master_offline_banner)
-        removeRecord = context.getString(app.aaps.core.ui.R.string.removerecord)
+        switchToEdit = context.getString(app.gmaaps.core.ui.R.string.switch_to_edit)
+        moreOptions = context.getString(app.gmaaps.core.ui.R.string.more_options)
+        removeLabel = context.getString(app.gmaaps.ui.R.string.remove_label)
+        activateLabel = context.getString(app.gmaaps.ui.R.string.activate_label)
+        cancelLabel = context.getString(app.gmaaps.core.ui.R.string.cancel)
+        saveLabel = context.getString(app.gmaaps.core.ui.R.string.save)
+        reorderLabel = context.getString(app.gmaaps.core.ui.R.string.reorder)
+        okLabel = context.getString(app.gmaaps.core.ui.R.string.ok)
+        presetSettings = context.getString(app.gmaaps.core.ui.R.string.preset_settings)
+        noRecords = context.getString(app.gmaaps.ui.R.string.no_records_available)
+        offlineBanner = context.getString(app.gmaaps.core.ui.R.string.master_offline_banner)
+        removeRecord = context.getString(app.gmaaps.core.ui.R.string.removerecord)
     }
 
     @After
@@ -307,3 +307,4 @@ class TempTargetManagementScreenTest {
         compose.onNodeWithText(presetSettings).assertDoesNotExist()
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.di
+﻿package app.gmaaps.core.interfaces.di
 
 import dev.zacsweers.metro.Qualifier
 
@@ -11,3 +11,4 @@ import dev.zacsweers.metro.Qualifier
  */
 @Qualifier
 annotation class FeatureMemberInjectors
+

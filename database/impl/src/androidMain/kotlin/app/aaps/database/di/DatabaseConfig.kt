@@ -1,4 +1,4 @@
-package app.aaps.database.di
+﻿package app.gmaaps.database.di
 
 /**
  * Which database the app opens.
@@ -19,3 +19,4 @@ data class DatabaseConfig(
         val IN_MEMORY = DatabaseConfig(inMemory = true, fileName = "")
     }
 }
+

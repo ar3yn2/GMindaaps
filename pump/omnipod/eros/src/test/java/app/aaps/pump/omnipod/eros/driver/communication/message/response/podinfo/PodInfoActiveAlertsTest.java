@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo;
 
 import static com.google.common.truth.Truth.assertThat;
 
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import app.aaps.core.utils.pump.ByteUtil;
+import app.gmaaps.core.utils.pump.ByteUtil;
 
 class PodInfoActiveAlertsTest {
     @Test
@@ -32,3 +32,4 @@ class PodInfoActiveAlertsTest {
         assertThat(expectedDuration).isEqualTo(alertActivation.getValueAsDuration());
     }
 }
+

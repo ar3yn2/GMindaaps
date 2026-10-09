@@ -1,16 +1,16 @@
-package app.aaps.implementation.iob
+﻿package app.gmaaps.implementation.iob
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.aps.AutosensDataStore
-import app.aaps.core.interfaces.aps.GlucoseStatusSMB
-import app.aaps.plugins.aps.openAPS.DeltaCalculator
-import app.aaps.plugins.aps.openAPSSMB.GlucoseStatusCalculatorSMB
-import app.aaps.plugins.aps.openAPSSMB.extensions.asRounded
-import app.aaps.plugins.aps.openAPSSMB.extensions.log
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.core.interfaces.aps.GlucoseStatusSMB
+import app.gmaaps.plugins.aps.openAPS.DeltaCalculator
+import app.gmaaps.plugins.aps.openAPSSMB.GlucoseStatusCalculatorSMB
+import app.gmaaps.plugins.aps.openAPSSMB.extensions.asRounded
+import app.gmaaps.plugins.aps.openAPSSMB.extensions.log
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -112,3 +112,4 @@ class GlucoseStatusTestSMB : TestBaseWithProfile() {
         return list
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.BooleanComposedNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.BooleanComposedNonPreferenceKey
 
 private const val LOCAL_PROFILE = "LocalProfile"
 
@@ -12,3 +12,4 @@ enum class ProfileComposedBooleanKey(
 
     LocalProfileNumberedMgdl(LOCAL_PROFILE + "_mgdl_", "%d", false),
 }
+

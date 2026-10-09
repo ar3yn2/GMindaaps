@@ -1,6 +1,6 @@
-package app.aaps.ios.shell.config
+﻿package app.gmaaps.ios.shell.config
 
-import app.aaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.Foundation.NSFileManager
 import platform.Foundation.NSTemporaryDirectory
@@ -112,3 +112,4 @@ class IosClientOptionsTest {
         assertFalse(none.isEngineeringMode())
     }
 }
+

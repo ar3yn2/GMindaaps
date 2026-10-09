@@ -1,9 +1,9 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.keys.DoubleKey
-import app.aaps.implementation.iob.AutosensDataObject
-import app.aaps.plugins.automation.asJsonObject
-import app.aaps.plugins.automation.elements.Comparator
+import app.gmaaps.core.keys.DoubleKey
+import app.gmaaps.implementation.iob.AutosensDataObject
+import app.gmaaps.plugins.automation.asJsonObject
+import app.gmaaps.plugins.automation.elements.Comparator
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Test
@@ -101,3 +101,4 @@ class TriggerAutosensValueTest : TriggerTestBase() {
 
     private fun generateAutosensData() = AutosensDataObject(aapsLogger, preferences, dateUtil)
 }
+

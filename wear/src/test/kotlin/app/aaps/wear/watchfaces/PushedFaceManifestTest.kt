@@ -1,4 +1,4 @@
-package app.aaps.wear.watchfaces
+﻿package app.gmaaps.wear.watchfaces
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -76,3 +76,4 @@ class PushedFaceManifestTest {
         const val SAFE_WATCH_FACES = "android.support.wearable.complications.SAFE_WATCH_FACES"
     }
 }
+

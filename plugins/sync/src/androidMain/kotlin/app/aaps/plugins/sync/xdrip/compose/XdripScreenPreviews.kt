@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.xdrip.compose
+﻿package app.gmaaps.plugins.sync.xdrip.compose
 
 import android.content.res.Configuration
 import androidx.compose.material3.MaterialTheme
@@ -35,3 +35,4 @@ internal fun XdripScreenEmptyPreview() {
         )
     }
 }
+

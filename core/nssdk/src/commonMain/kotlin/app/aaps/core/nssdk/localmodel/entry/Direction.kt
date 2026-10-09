@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.entry
+﻿package app.gmaaps.core.nssdk.localmodel.entry
 
 enum class Direction(val nsName: String) {
     TRIPLE_DOWN("TripleDown"), // ⤋
@@ -54,3 +54,4 @@ Nightscout:
 
 
  */
+

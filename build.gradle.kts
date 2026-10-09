@@ -1,4 +1,4 @@
-import org.gradle.testing.jacoco.plugins.JacocoPlugin
+﻿import org.gradle.testing.jacoco.plugins.JacocoPlugin
 import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
@@ -96,3 +96,4 @@ tasks.register<Delete>("clean") {
 }.configure {
     delete(rootProject.layout.buildDirectory)
 }
+

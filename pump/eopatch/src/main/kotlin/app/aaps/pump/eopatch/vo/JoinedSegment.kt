@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
 internal class JoinedSegment(index: Int) {
 
@@ -15,3 +15,4 @@ internal class JoinedSegment(index: Int) {
         endMinute = startMinute + SegmentEntity.TIME_BASE
     }
 }
+

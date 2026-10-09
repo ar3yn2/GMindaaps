@@ -1,10 +1,10 @@
-package app.aaps.plugins.smoothing
+﻿package app.gmaaps.plugins.smoothing
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.interfaces.Preferences
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.mock
@@ -90,3 +90,4 @@ internal class UnscentedKalmanFilterPluginTest {
         a.indices.forEach { assertThat(b[it].smoothed!!).isWithin(1e-9).of(a[it].smoothed!!) }
     }
 }
+

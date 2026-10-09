@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 /**
  * Common interface for pump history records. Implemented by pump-specific Room entities
@@ -26,3 +26,4 @@ data class PumpHistoryUiState<T : PumpHistoryRecord>(
     val statusMessage: String = "",
     val availableTypes: List<PumpHistoryType> = emptyList()
 )
+

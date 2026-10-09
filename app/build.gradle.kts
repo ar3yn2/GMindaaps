@@ -1,4 +1,4 @@
-import java.text.SimpleDateFormat
+﻿import java.text.SimpleDateFormat
 import java.util.Date
 
 plugins {
@@ -99,7 +99,7 @@ fun allCommitted(): Boolean {
  */
 val generateAppStringOwners = tasks.register<GenerateStringOwnerRegistryTask>("generateAppStringOwners") {
     owners.set(StringOwnerModules.ALL)
-    packageName.set("app.aaps.di")
+    packageName.set("app.gmaaps.di")
     objectName.set("GeneratedStringOwners")
     useResourceIds.set(true)
     outputDir.set(layout.buildDirectory.dir("generated/stringOwners"))
@@ -114,7 +114,7 @@ androidComponents {
 }
 android {
 
-    namespace = "app.aaps"
+    namespace = "app.gmaaps"
 
     defaultConfig {
         minSdk = Versions.minSdk
@@ -127,14 +127,14 @@ android {
         buildConfigField("String", "COMMITTED", "\"${allCommitted()}\"")
 
         // Runner for instrumentation tests in this module.
-        testInstrumentationRunner = "app.aaps.runners.AapsTestRunner"
+        testInstrumentationRunner = "app.gmaaps.runners.AapsTestRunner"
     }
 
     flavorDimensions += "standard"
     productFlavors {
         create("full") {
             isDefault = true
-            applicationId = "info.nightscout.androidaps"
+            applicationId = "app.gmaaps"
             dimension = "standard"
             resValue("string", "app_name", "AAPS")
             versionName = Versions.appVersion
@@ -142,7 +142,7 @@ android {
             manifestPlaceholders["appIconRound"] = "@mipmap/ic_launcher_round"
         }
         create("pumpcontrol") {
-            applicationId = "info.nightscout.aapspumpcontrol"
+            applicationId = "app.gmaaps.pumpcontrol"
             dimension = "standard"
             resValue("string", "app_name", "Pumpcontrol")
             versionName = Versions.appVersion + "-pumpcontrol"
@@ -150,7 +150,7 @@ android {
             manifestPlaceholders["appIconRound"] = "@null"
         }
         create("aapsclient") {
-            applicationId = "info.nightscout.aapsclient"
+            applicationId = "app.gmaaps.client"
             dimension = "standard"
             resValue("string", "app_name", "AAPSClient")
             versionName = Versions.appVersion + "-aapsclient"
@@ -158,7 +158,7 @@ android {
             manifestPlaceholders["appIconRound"] = "@mipmap/ic_yellowowl"
         }
         create("aapsclient2") {
-            applicationId = "info.nightscout.aapsclient2"
+            applicationId = "app.gmaaps.client2"
             dimension = "standard"
             resValue("string", "app_name", "AAPSClient2")
             versionName = Versions.appVersion + "-aapsclient"
@@ -166,7 +166,7 @@ android {
             manifestPlaceholders["appIconRound"] = "@mipmap/ic_blueowl"
         }
         create("aapsclient3") {
-            applicationId = "info.nightscout.aapsclient3"
+            applicationId = "app.gmaaps.client3"
             dimension = "standard"
             resValue("string", "app_name", "AAPSClient3")
             versionName = Versions.appVersion + "-aapsclient3"
@@ -238,7 +238,7 @@ dependencies {
     implementation(project(":pump:virtual"))
     implementation(project(":workflow"))
 
-    // Pump drivers — only for full + pumpcontrol flavors. Derived from the :pump:* modules included
+    // Pump drivers â€” only for full + pumpcontrol flavors. Derived from the :pump:* modules included
     // in settings.gradle (single source of truth) minus one exception:
     //  - :pump:virtual is @AllConfigs (all flavors) and is wired above as a plain implementation,
     //    so listing it again per flavor would declare it twice for different configurations.
@@ -304,3 +304,4 @@ if (!gitAvailable()) {
 if (isMaster() && !allCommitted()) {
     throw GradleException("There are uncommitted changes. Clone sources again as described in wiki and do not allow gradle update")
 }
+

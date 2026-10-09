@@ -1,4 +1,4 @@
-package app.aaps.plugins.calibration.compose
+﻿package app.gmaaps.plugins.calibration.compose
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -19,11 +19,11 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.plugins.calibration.CalibrationFit
-import app.aaps.plugins.calibration.weightFor
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.plugins.calibration.CalibrationFit
+import app.gmaaps.plugins.calibration.weightFor
 import kotlin.math.max
 import kotlin.math.min
 
@@ -268,3 +268,4 @@ private fun DrawScope.drawEntries(
         drawCircle(color = dotColor, radius = selectedRadius, center = center, style = Stroke(width = selectedStroke))
     }
 }
+

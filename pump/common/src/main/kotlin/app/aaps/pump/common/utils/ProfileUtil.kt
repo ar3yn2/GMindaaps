@@ -1,8 +1,8 @@
-package app.aaps.pump.common.utils
+﻿package app.gmaaps.pump.common.utils
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.defs.determineCorrectBasalSize
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.defs.determineCorrectBasalSize
 import java.util.Locale
 
 object ProfileUtil {

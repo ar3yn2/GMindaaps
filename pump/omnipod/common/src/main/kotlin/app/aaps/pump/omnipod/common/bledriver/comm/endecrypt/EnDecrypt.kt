@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.endecrypt
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.endecrypt
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessagePacket
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessagePacket
 import org.spongycastle.crypto.engines.AESEngine
 import org.spongycastle.crypto.modes.CCMBlockCipher
 import org.spongycastle.crypto.params.AEADParameters
@@ -64,3 +64,4 @@ class EnDecrypt(private val aapsLogger: AAPSLogger, private val nonce: Nonce, pr
         private const val MAC_SIZE = 8
     }
 }
+

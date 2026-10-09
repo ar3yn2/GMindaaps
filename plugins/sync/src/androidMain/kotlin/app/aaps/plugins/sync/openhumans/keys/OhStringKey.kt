@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.openhumans.keys
+﻿package app.gmaaps.plugins.sync.openhumans.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 
 @Suppress("SpellCheckingInspection")
 enum class OhStringKey(

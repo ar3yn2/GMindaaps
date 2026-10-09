@@ -1,6 +1,6 @@
-package app.aaps.core.nssdk.interfaces
+﻿package app.gmaaps.core.nssdk.interfaces
 
-import app.aaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
+import app.gmaaps.core.nssdk.localmodel.configuration.NSRunningConfiguration
 import kotlinx.serialization.json.JsonObject
 
 interface RunningConfiguration {
@@ -18,3 +18,4 @@ interface RunningConfiguration {
     // called in NSClient mode only — apply the hot doc (active scene + computed runtime flags).
     fun applyHot(configuration: NSRunningConfiguration)
 }
+

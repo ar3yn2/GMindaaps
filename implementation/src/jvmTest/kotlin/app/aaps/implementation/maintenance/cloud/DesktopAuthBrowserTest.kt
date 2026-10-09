@@ -1,6 +1,6 @@
-package app.aaps.implementation.maintenance.cloud
+﻿package app.gmaaps.implementation.maintenance.cloud
 
-import app.aaps.implementation.maintenance.cloud.DesktopAuthBrowser.Companion.browserCommandFor
+import app.gmaaps.implementation.maintenance.cloud.DesktopAuthBrowser.Companion.browserCommandFor
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -68,3 +68,4 @@ class DesktopAuthBrowserTest {
         assertTrue(command.none { it != url && it.contains("&") }, "no separator should have leaked into the launcher arguments")
     }
 }
+

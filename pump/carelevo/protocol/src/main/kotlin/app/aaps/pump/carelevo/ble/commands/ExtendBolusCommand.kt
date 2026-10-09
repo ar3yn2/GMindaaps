@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
 
 /**
  * `CMD_EXTENDED_BOLUS_REQ` (0x25) → `CMD_EXTENDED_BOLUS_RES` (0x85). **Safety-critical delivery** —
@@ -67,3 +67,4 @@ data class ExtendBolusResponse(
     val resultCode: Int,
     val expectedTimeSeconds: Int
 ) : BleResponse
+

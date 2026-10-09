@@ -1,8 +1,8 @@
-package app.aaps.plugins.sync.nsclientV3.extensions
+﻿package app.gmaaps.plugins.sync.nsclientV3.extensions
 
-import app.aaps.core.data.model.FD
-import app.aaps.core.data.model.IDs
-import app.aaps.core.nssdk.localmodel.food.NSFood
+import app.gmaaps.core.data.model.FD
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.nssdk.localmodel.food.NSFood
 import kotlin.time.Clock
 
 fun NSFood.toFood(): FD =
@@ -37,3 +37,4 @@ fun FD.toNSFood(): NSFood =
         gi = gi,
         identifier = ids.nightscoutId,
     )
+

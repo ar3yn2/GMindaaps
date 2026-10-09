@@ -1,12 +1,12 @@
-package app.aaps.core.interfaces.queue
+﻿package app.gmaaps.core.interfaces.queue
 
 import androidx.compose.ui.text.AnnotatedString
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlin.reflect.KClass
 import kotlin.time.Duration
 
@@ -60,7 +60,7 @@ interface CommandQueue {
      * [Command.cancel] - so a command that owns progress UI (a bolus) clears it as well.
      *
      * [success] is what the caller is told. Pass `false` when nothing reached the pump and the
-     * caller must not treat the command as done: [app.aaps.core.interfaces.aps.Loop.invoke] branches
+     * caller must not treat the command as done: [app.gmaaps.core.interfaces.aps.Loop.invoke] branches
      * on `enacted || success`, so `true` there lets it carry on as if the temp basal had been set,
      * and then deliver an SMB behind it. Pass `true` only where that no-op meaning is wanted.
      */

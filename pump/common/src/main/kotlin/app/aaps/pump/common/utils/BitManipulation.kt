@@ -1,4 +1,4 @@
-package app.aaps.pump.common.utils
+﻿package app.gmaaps.pump.common.utils
 
 infix fun Byte.and(mask: Int): Int = toInt() and mask
 infix fun Short.and(mask: Int): Int = toInt() and mask

@@ -1,4 +1,4 @@
-package app.aaps.shared.clientbindings
+﻿package app.gmaaps.shared.clientbindings
 
 import androidx.lifecycle.ViewModel
 import dev.zacsweers.metrox.viewmodel.ManualViewModelAssistedFactory
@@ -36,3 +36,4 @@ class ClientViewModelFactory(
         Map<KClass<out ManualViewModelAssistedFactory>, () -> ManualViewModelAssistedFactory>
         get() = graph.manualAssistedFactoryProviders
 }
+

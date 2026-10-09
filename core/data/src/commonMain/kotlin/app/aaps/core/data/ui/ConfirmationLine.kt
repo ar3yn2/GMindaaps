@@ -1,4 +1,4 @@
-package app.aaps.core.data.ui
+﻿package app.gmaaps.core.data.ui
 
 /**
  * Semantic role of a confirmation-summary line. The UI maps it to a theme color at render time — a
@@ -37,3 +37,4 @@ class ConfirmationLinesBuilder {
 /** Build a list of [ConfirmationLine]s. Each [text] must already be a fully localized string. */
 fun confirmationLines(block: ConfirmationLinesBuilder.() -> Unit): List<ConfirmationLine> =
     ConfirmationLinesBuilder().apply(block).build()
+

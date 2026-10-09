@@ -1,34 +1,34 @@
-package app.aaps.pump.carelevo.emulator
+﻿package app.gmaaps.pump.carelevo.emulator
 
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotCommand
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotTier
-import app.aaps.pump.carelevo.ble.commands.AdditionalPrimingCommand
-import app.aaps.pump.carelevo.ble.commands.AlarmClearCommand
-import app.aaps.pump.carelevo.ble.commands.AlertAlarmSetCommand
-import app.aaps.pump.carelevo.ble.commands.AppAuthCommand
-import app.aaps.pump.carelevo.ble.commands.BasalProgramCommand
-import app.aaps.pump.carelevo.ble.commands.BolusCancelCommand
-import app.aaps.pump.carelevo.ble.commands.BuzzModeCommand
-import app.aaps.pump.carelevo.ble.commands.ExtendBolusCancelCommand
-import app.aaps.pump.carelevo.ble.commands.ExtendBolusCommand
-import app.aaps.pump.carelevo.ble.commands.ImmediateBolusCommand
-import app.aaps.pump.carelevo.ble.commands.InfusionInfoCommand
-import app.aaps.pump.carelevo.ble.commands.InfusionThresholdCommand
-import app.aaps.pump.carelevo.ble.commands.MacAddressCommand
-import app.aaps.pump.carelevo.ble.commands.MacAddressResponse
-import app.aaps.pump.carelevo.ble.commands.NeedleAckCommand
-import app.aaps.pump.carelevo.ble.commands.NeedleStatusCommand
-import app.aaps.pump.carelevo.ble.commands.NoticeThresholdCommand
-import app.aaps.pump.carelevo.ble.commands.PatchDiscardCommand
-import app.aaps.pump.carelevo.ble.commands.PatchInfoCommand
-import app.aaps.pump.carelevo.ble.commands.PumpResumeCommand
-import app.aaps.pump.carelevo.ble.commands.PumpStopCommand
-import app.aaps.pump.carelevo.ble.commands.SafetyCheckCommand
-import app.aaps.pump.carelevo.ble.commands.SetTimeCommand
-import app.aaps.pump.carelevo.ble.commands.SetTimeForPatchInfoCommand
-import app.aaps.pump.carelevo.ble.commands.TempBasalCancelCommand
-import app.aaps.pump.carelevo.ble.commands.TempBasalCommand
-import app.aaps.pump.carelevo.ble.commands.ThresholdSetupCommand
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotCommand
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotTier
+import app.gmaaps.pump.carelevo.ble.commands.AdditionalPrimingCommand
+import app.gmaaps.pump.carelevo.ble.commands.AlarmClearCommand
+import app.gmaaps.pump.carelevo.ble.commands.AlertAlarmSetCommand
+import app.gmaaps.pump.carelevo.ble.commands.AppAuthCommand
+import app.gmaaps.pump.carelevo.ble.commands.BasalProgramCommand
+import app.gmaaps.pump.carelevo.ble.commands.BolusCancelCommand
+import app.gmaaps.pump.carelevo.ble.commands.BuzzModeCommand
+import app.gmaaps.pump.carelevo.ble.commands.ExtendBolusCancelCommand
+import app.gmaaps.pump.carelevo.ble.commands.ExtendBolusCommand
+import app.gmaaps.pump.carelevo.ble.commands.ImmediateBolusCommand
+import app.gmaaps.pump.carelevo.ble.commands.InfusionInfoCommand
+import app.gmaaps.pump.carelevo.ble.commands.InfusionThresholdCommand
+import app.gmaaps.pump.carelevo.ble.commands.MacAddressCommand
+import app.gmaaps.pump.carelevo.ble.commands.MacAddressResponse
+import app.gmaaps.pump.carelevo.ble.commands.NeedleAckCommand
+import app.gmaaps.pump.carelevo.ble.commands.NeedleStatusCommand
+import app.gmaaps.pump.carelevo.ble.commands.NoticeThresholdCommand
+import app.gmaaps.pump.carelevo.ble.commands.PatchDiscardCommand
+import app.gmaaps.pump.carelevo.ble.commands.PatchInfoCommand
+import app.gmaaps.pump.carelevo.ble.commands.PumpResumeCommand
+import app.gmaaps.pump.carelevo.ble.commands.PumpStopCommand
+import app.gmaaps.pump.carelevo.ble.commands.SafetyCheckCommand
+import app.gmaaps.pump.carelevo.ble.commands.SetTimeCommand
+import app.gmaaps.pump.carelevo.ble.commands.SetTimeForPatchInfoCommand
+import app.gmaaps.pump.carelevo.ble.commands.TempBasalCancelCommand
+import app.gmaaps.pump.carelevo.ble.commands.TempBasalCommand
+import app.gmaaps.pump.carelevo.ble.commands.ThresholdSetupCommand
 import com.google.common.truth.Truth.assertThat
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
@@ -45,10 +45,10 @@ import kotlin.time.Instant
  * test means the emulator is byte-for-byte compatible with what `BleClientImpl` actually writes and
  * reads — not merely self-consistent.
  *
- * The three [app.aaps.pump.carelevo.ble.BleClient] shapes are exercised the way the client drives them:
- * - [app.aaps.pump.carelevo.ble.BleCommand]      → `decode(frames.single())`
- * - [app.aaps.pump.carelevo.ble.BleMultiCommand] → `decode(frames.associateBy { it[0] })` (keyed by opcode)
- * - [app.aaps.pump.carelevo.ble.BleStreamCommand]→ decode each frame, terminate on `isTerminal(decoded)`
+ * The three [app.gmaaps.pump.carelevo.ble.BleClient] shapes are exercised the way the client drives them:
+ * - [app.gmaaps.pump.carelevo.ble.BleCommand]      → `decode(frames.single())`
+ * - [app.gmaaps.pump.carelevo.ble.BleMultiCommand] → `decode(frames.associateBy { it[0] })` (keyed by opcode)
+ * - [app.gmaaps.pump.carelevo.ble.BleStreamCommand]→ decode each frame, terminate on `isTerminal(decoded)`
  *
  * Pure JVM: the emulator takes a nullable logger and touches no Android API, so no Robolectric.
  */
@@ -933,3 +933,4 @@ class CarelevoPumpEmulatorTest {
         const val TOLERANCE = 1e-9
     }
 }
+

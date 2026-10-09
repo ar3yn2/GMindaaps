@@ -1,6 +1,6 @@
-package app.aaps.pump.insight.satl
+﻿package app.gmaaps.pump.insight.satl
 
-import app.aaps.pump.insight.utils.ByteBuf
+import app.gmaaps.pump.insight.utils.ByteBuf
 import java.util.Calendar
 
 class KeyRequest : SatlMessage() {

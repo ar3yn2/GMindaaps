@@ -1,11 +1,11 @@
-package app.aaps.pump.danar.emulator
+﻿package app.gmaaps.pump.danar.emulator
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.rfcomm.RfcommDevice
-import app.aaps.core.interfaces.pump.rfcomm.RfcommSocket
-import app.aaps.core.interfaces.pump.rfcomm.RfcommTransport
-import app.aaps.pump.utils.CRC
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommDevice
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommSocket
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommTransport
+import app.gmaaps.pump.utils.CRC
 import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream
@@ -253,3 +253,4 @@ class EmulatorRfcommTransport(
         }
     }
 }
+

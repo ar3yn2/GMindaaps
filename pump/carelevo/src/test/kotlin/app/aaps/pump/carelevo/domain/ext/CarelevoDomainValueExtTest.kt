@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.domain.ext
+﻿package app.gmaaps.pump.carelevo.domain.ext
 
-import app.aaps.pump.carelevo.domain.model.basal.CarelevoBasalSegmentDomainModel
+import app.gmaaps.pump.carelevo.domain.model.basal.CarelevoBasalSegmentDomainModel
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import java.util.UUID
@@ -136,3 +136,4 @@ internal class CarelevoDomainValueExtTest {
         assertThat(generateUUID()).isNotEqualTo(generateUUID())
     }
 }
+

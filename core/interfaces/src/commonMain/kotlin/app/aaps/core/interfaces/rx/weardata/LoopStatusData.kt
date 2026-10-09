@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.rx.weardata
+﻿package app.gmaaps.core.interfaces.rx.weardata
 
 import kotlinx.serialization.Serializable
 
@@ -105,3 +105,4 @@ data class ActiveSceneInfo(
     val endTime: Long?,
     val chainTargetName: String?
 )
+

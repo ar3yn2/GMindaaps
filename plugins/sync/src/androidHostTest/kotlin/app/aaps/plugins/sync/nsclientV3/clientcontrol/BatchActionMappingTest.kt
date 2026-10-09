@@ -1,11 +1,11 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.bolus.BatchAction
-import app.aaps.core.nssdk.localmodel.clientcontrol.BatchActionDto
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.bolus.BatchAction
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.BatchActionDto
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -170,3 +170,4 @@ class BatchActionMappingTest {
         assertThat(BatchActionDto(type = BatchActionDto.TYPE_THERAPY_EVENT_EDIT, teType = "NOT_A_TYPE").toDomain()).isNull()
     }
 }
+

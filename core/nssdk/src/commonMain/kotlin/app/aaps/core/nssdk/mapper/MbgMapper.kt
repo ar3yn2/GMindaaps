@@ -1,9 +1,9 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.localmodel.entry.NSMbgV3
-import app.aaps.core.nssdk.localmodel.entry.NsUnits
-import app.aaps.core.nssdk.nsSdkJson
-import app.aaps.core.nssdk.remotemodel.RemoteEntry
+import app.gmaaps.core.nssdk.localmodel.entry.NSMbgV3
+import app.gmaaps.core.nssdk.localmodel.entry.NsUnits
+import app.gmaaps.core.nssdk.nsSdkJson
+import app.gmaaps.core.nssdk.remotemodel.RemoteEntry
 
 fun String.toCalibrationMbg(): NSMbgV3? =
     nsSdkJson.decodeFromString(RemoteEntry.serializer(), this).toCalibrationMbg()
@@ -61,3 +61,4 @@ internal fun NSMbgV3.toRemoteEntry(): RemoteEntry =
         sensorMgdlAtPairing = this.sensorMgdlAtPairing,
         isCalibration = this.isCalibration
     )
+

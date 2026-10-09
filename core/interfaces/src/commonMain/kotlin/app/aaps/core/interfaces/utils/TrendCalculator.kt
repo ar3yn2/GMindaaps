@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.utils
+﻿package app.gmaaps.core.interfaces.utils
 
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
 
 /**
  *  Convert BG direction value to trend arrow or calculate it if not provided

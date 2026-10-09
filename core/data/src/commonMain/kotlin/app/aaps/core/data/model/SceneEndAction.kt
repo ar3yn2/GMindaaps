@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 /**
  * Sealed class representing what happens when a scene ends.
@@ -11,3 +11,4 @@ sealed class SceneEndAction {
     /** Auto-activate another scene when this one expires (ignored on manual end) */
     data class ChainScene(val sceneId: String) : SceneEndAction()
 }
+

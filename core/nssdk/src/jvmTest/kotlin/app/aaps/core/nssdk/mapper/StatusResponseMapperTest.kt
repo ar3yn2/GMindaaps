@@ -1,8 +1,8 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.remotemodel.RemoteApiPermissions
-import app.aaps.core.nssdk.remotemodel.RemoteStatusResponse
-import app.aaps.core.nssdk.remotemodel.RemoteStorage
+import app.gmaaps.core.nssdk.remotemodel.RemoteApiPermissions
+import app.gmaaps.core.nssdk.remotemodel.RemoteStatusResponse
+import app.gmaaps.core.nssdk.remotemodel.RemoteStorage
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -35,3 +35,4 @@ class StatusResponseMapperTest {
         assertThat(status.apiPermissions.settings.read).isFalse()
     }
 }
+

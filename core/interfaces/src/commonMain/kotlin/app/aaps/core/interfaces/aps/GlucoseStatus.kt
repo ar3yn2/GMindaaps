@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.aps
+﻿package app.gmaaps.core.interfaces.aps
 
 interface GlucoseStatus {
 

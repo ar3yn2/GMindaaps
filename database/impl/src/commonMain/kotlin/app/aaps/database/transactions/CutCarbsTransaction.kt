@@ -1,7 +1,7 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.Carbs
-import app.aaps.database.entities.interfaces.end
+import app.gmaaps.database.entities.Carbs
+import app.gmaaps.database.entities.interfaces.end
 import kotlin.math.roundToInt
 
 class CutCarbsTransaction(val id: Long, val end: Long) : Transaction<CutCarbsTransaction.TransactionResult>() {

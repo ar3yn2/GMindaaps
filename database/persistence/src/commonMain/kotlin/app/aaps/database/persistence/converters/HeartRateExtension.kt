@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.HR
-import app.aaps.database.entities.HeartRate
+import app.gmaaps.core.data.model.HR
+import app.gmaaps.database.entities.HeartRate
 
 fun HeartRate.fromDb(): HR =
     HR(
@@ -32,3 +32,4 @@ fun HR.toDb(): HeartRate =
         device = this.device,
         interfaceIDs_backing = this.ids.toDb()
     )
+

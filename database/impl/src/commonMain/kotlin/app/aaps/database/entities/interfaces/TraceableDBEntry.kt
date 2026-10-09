@@ -1,6 +1,6 @@
-package app.aaps.database.entities.interfaces
+﻿package app.gmaaps.database.entities.interfaces
 
-import app.aaps.database.entities.embedments.InterfaceIDs
+import app.gmaaps.database.entities.embedments.InterfaceIDs
 
 interface TraceableDBEntry : DBEntry {
 

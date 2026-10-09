@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.ui.compose
+﻿package app.gmaaps.pump.omnipod.common.ui.compose
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import app.aaps.pump.omnipod.common.R
+import app.gmaaps.pump.omnipod.common.R
 
 @Composable
 fun PodImage(modifier: Modifier = Modifier) {
@@ -26,3 +26,4 @@ fun PodImage(modifier: Modifier = Modifier) {
             }
     )
 }
+

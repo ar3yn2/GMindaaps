@@ -1,10 +1,10 @@
-package app.aaps.appshell
+﻿package app.gmaaps.appshell
 
 import androidx.compose.ui.test.isDialog
 import androidx.compose.ui.test.junit4.v2.createComposeRule
-import app.aaps.core.interfaces.pump.BolusProgressState
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.pump.BolusProgressState
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.keys.interfaces.TextRef
 import com.google.common.truth.Truth.assertThat
 import org.junit.Rule
 import org.junit.Test
@@ -76,3 +76,4 @@ class BolusProgressOverlayTest {
         assertThat(dialogCount()).isEqualTo(0)
     }
 }
+

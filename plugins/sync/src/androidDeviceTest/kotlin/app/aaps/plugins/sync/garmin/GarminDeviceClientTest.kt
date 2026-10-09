@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.garmin
+﻿package app.gmaaps.plugins.sync.garmin
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -9,7 +9,7 @@ import android.content.ServiceConnection
 import android.os.Binder
 import android.os.IBinder
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import com.garmin.android.apps.connectmobile.connectiq.IConnectIQService
 import com.garmin.android.connectiq.ConnectIQ
 import com.garmin.android.connectiq.IQApp
@@ -335,3 +335,4 @@ class GarminDeviceClientTest : TestBase() {
             argThat { payload -> "foo" == String(payload) })
     }
 }
+

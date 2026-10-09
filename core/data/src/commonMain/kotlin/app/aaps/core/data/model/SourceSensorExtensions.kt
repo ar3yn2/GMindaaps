@@ -1,4 +1,4 @@
-package app.aaps.core.data.model
+﻿package app.gmaaps.core.data.model
 
 fun SourceSensor.advancedFilteringSupported(): Boolean = this in ADVANCED_FILTERING_SENSORS
 
@@ -37,3 +37,4 @@ private val FLAT_BG_CHECK_SENSORS = setOf(
     SourceSensor.AIDEX_X,
     SourceSensor.UNKNOWN,
 )
+

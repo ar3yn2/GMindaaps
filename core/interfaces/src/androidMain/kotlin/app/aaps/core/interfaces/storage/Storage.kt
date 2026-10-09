@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.storage
+﻿package app.gmaaps.core.interfaces.storage
 
 import android.content.ContentResolver
 import androidx.documentfile.provider.DocumentFile
@@ -19,3 +19,4 @@ interface Storage {
     @Throws(SecurityException::class)
     fun getBinaryFileContents(contentResolver: ContentResolver, file: DocumentFile): ByteArray?
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.eros.driver.definition.schedule;
+package app.gmaaps.pump.omnipod.eros.driver.definition.schedule;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.IRawRepresentable;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.IRawRepresentable;
 
 public abstract class DeliverySchedule implements IRawRepresentable {
 
@@ -8,3 +8,4 @@ public abstract class DeliverySchedule implements IRawRepresentable {
 
     public abstract int getChecksum();
 }
+

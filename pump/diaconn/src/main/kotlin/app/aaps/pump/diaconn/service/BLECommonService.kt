@@ -1,4 +1,4 @@
-package app.aaps.pump.diaconn.service
+﻿package app.gmaaps.pump.diaconn.service
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -15,27 +15,27 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.SystemClock
 import androidx.core.app.ActivityCompat
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.utils.extensions.connectGattCompat
-import app.aaps.core.utils.notifyAll
-import app.aaps.core.utils.waitMillis
-import app.aaps.pump.diaconn.DiaconnG8Pump
-import app.aaps.pump.diaconn.R
-import app.aaps.pump.diaconn.packet.BatteryWarningReportPacket
-import app.aaps.pump.diaconn.packet.BigLogInquireResponsePacket
-import app.aaps.pump.diaconn.packet.DiaconnG8Packet
-import app.aaps.pump.diaconn.packet.DiaconnG8ResponseMessageHashTable
-import app.aaps.pump.diaconn.packet.DiaconnG8SettingResponseMessageHashTable
-import app.aaps.pump.diaconn.packet.InjectionBlockReportPacket
-import app.aaps.pump.diaconn.packet.InsulinLackReportPacket
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.utils.extensions.connectGattCompat
+import app.gmaaps.core.utils.notifyAll
+import app.gmaaps.core.utils.waitMillis
+import app.gmaaps.pump.diaconn.DiaconnG8Pump
+import app.gmaaps.pump.diaconn.R
+import app.gmaaps.pump.diaconn.packet.BatteryWarningReportPacket
+import app.gmaaps.pump.diaconn.packet.BigLogInquireResponsePacket
+import app.gmaaps.pump.diaconn.packet.DiaconnG8Packet
+import app.gmaaps.pump.diaconn.packet.DiaconnG8ResponseMessageHashTable
+import app.gmaaps.pump.diaconn.packet.DiaconnG8SettingResponseMessageHashTable
+import app.gmaaps.pump.diaconn.packet.InjectionBlockReportPacket
+import app.gmaaps.pump.diaconn.packet.InsulinLackReportPacket
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -92,7 +92,7 @@ class BLECommonService internal constructor(
     @Synchronized
     fun connect(from: String, address: String?): Boolean {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-            rxBus.send(EventShowSnackbar(context.getString(app.aaps.core.ui.R.string.need_connect_permission), EventShowSnackbar.Type.Error))
+            rxBus.send(EventShowSnackbar(context.getString(app.gmaaps.core.ui.R.string.need_connect_permission), EventShowSnackbar.Type.Error))
             aapsLogger.error(LTag.PUMPBTCOMM, "missing permission: $from")
             return false
         }
@@ -411,3 +411,4 @@ class BLECommonService internal constructor(
         } ?: aapsLogger.error("Unknown message received " + DiaconnG8Packet.toHex(data))
     }
 }
+

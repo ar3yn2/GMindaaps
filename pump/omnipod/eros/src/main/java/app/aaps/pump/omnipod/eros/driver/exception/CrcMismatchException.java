@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
 import java.util.Locale;
 
@@ -20,3 +20,4 @@ public class CrcMismatchException extends OmnipodException {
         return actual;
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.core.api.InfoReminderSet
-import app.aaps.pump.eopatch.core.response.PatchBooleanResponse
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.core.api.InfoReminderSet
+import app.gmaaps.pump.eopatch.core.response.PatchBooleanResponse
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -37,3 +37,4 @@ class InfoReminderTask() : TaskBase(TaskFunc.INFO_REMINDER) {
         }
     }
 }
+

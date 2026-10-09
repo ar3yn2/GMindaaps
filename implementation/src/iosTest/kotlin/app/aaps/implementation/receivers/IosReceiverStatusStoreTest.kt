@@ -1,8 +1,8 @@
-package app.aaps.implementation.receivers
+﻿package app.gmaaps.implementation.receivers
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.receivers.ReceiverStatusStore
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.receivers.ReceiverStatusStore
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -176,3 +176,4 @@ class IosReceiverStatusStoreTest {
         assertNotNull(s.chargingStatusFlow.value)
     }
 }
+

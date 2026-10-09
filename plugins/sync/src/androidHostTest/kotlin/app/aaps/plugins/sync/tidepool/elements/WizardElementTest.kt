@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.tidepool.elements
+﻿package app.gmaaps.plugins.sync.tidepool.elements
 
-import app.aaps.core.data.model.CA
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.plugins.sync.tidepool.utils.GsonInstance
+import app.gmaaps.core.data.model.CA
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.plugins.sync.tidepool.utils.GsonInstance
 import com.google.common.truth.Truth.assertThat
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
@@ -172,3 +172,4 @@ class WizardElementTest {
         )
     }
 }
+

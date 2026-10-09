@@ -1,28 +1,28 @@
-package app.aaps.plugins.sync.nsclientV3
+﻿package app.gmaaps.plugins.sync.nsclientV3
 
-import app.aaps.core.data.model.BCR
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.CA
-import app.aaps.core.data.model.DS
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.FD
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.model.TT
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.keys.BooleanKey
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.model.BCR
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.CA
+import app.gmaaps.core.data.model.DS
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.FD
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -843,3 +843,4 @@ class StoreDataForDbImplTest : TestBaseWithProfile() {
         verifyNoMoreInteractions(persistenceLayer)
     }
 }
+

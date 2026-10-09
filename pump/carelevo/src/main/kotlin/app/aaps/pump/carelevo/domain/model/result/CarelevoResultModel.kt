@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.domain.model.result
+﻿package app.gmaaps.pump.carelevo.domain.model.result
 
-import app.aaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
+import app.gmaaps.pump.carelevo.domain.usecase.CarelevoUseCaseResponse
 
 object ResultSuccess : CarelevoUseCaseResponse
 object ResultFailed : CarelevoUseCaseResponse

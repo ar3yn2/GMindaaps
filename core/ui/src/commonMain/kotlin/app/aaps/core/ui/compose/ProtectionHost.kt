@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -7,15 +7,15 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.interfaces.protection.AuthorizationResult
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.protection.ProtectionResult
-import app.aaps.core.interfaces.protection.ProtectionType
-import app.aaps.core.keys.StringKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.dialogs.QueryPasswordDialog
-import app.aaps.core.ui.compose.dialogs.UnifiedAuthDialog
+import app.gmaaps.core.interfaces.protection.AuthorizationResult
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.protection.ProtectionResult
+import app.gmaaps.core.interfaces.protection.ProtectionType
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.dialogs.QueryPasswordDialog
+import app.gmaaps.core.ui.compose.dialogs.UnifiedAuthDialog
 
 /**
  * Renders the password, PIN and biometric prompts that `ProtectionCheck` asks for.
@@ -174,3 +174,4 @@ fun ProtectionHost(
 /** Granted only on a match. Wrong credentials are denied, which is not the same as cancelled. */
 private fun resultFor(matches: Boolean): ProtectionResult =
     if (matches) ProtectionResult.GRANTED else ProtectionResult.DENIED
+

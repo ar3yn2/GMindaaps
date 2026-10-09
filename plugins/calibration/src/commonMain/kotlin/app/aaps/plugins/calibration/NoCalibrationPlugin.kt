@@ -1,16 +1,16 @@
-package app.aaps.plugins.calibration
+﻿package app.gmaaps.plugins.calibration
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.calibration.AddEntryResult
-import app.aaps.core.interfaces.calibration.Calibration
-import app.aaps.core.interfaces.calibration.CalibrationContext
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.ui.compose.icons.IcCalibration
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.calibration.AddEntryResult
+import app.gmaaps.core.interfaces.calibration.Calibration
+import app.gmaaps.core.interfaces.calibration.CalibrationContext
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.ui.compose.icons.IcCalibration
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -47,3 +47,4 @@ class NoCalibrationPlugin(
 
     override suspend fun checkPreconditions(): AddEntryResult = AddEntryResult.Accepted
 }
+

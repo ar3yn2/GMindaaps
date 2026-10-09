@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.code
+﻿package app.gmaaps.pump.eopatch.code
 
 enum class BasalStatus(val rawValue: Int) {
     STOPPED(0),
@@ -16,3 +16,4 @@ enum class BasalStatus(val rawValue: Int) {
     val isStopped: Boolean
         get() = this == STOPPED
 }
+

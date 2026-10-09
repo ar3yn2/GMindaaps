@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.compose
+﻿package app.gmaaps.pump.insight.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -22,11 +22,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import app.aaps.pump.insight.descriptors.AlertStatus
+import app.gmaaps.pump.insight.descriptors.AlertStatus
 
 /**
- * UI state for [InsightAlertScreen], produced by [app.aaps.pump.insight.app_layer.activities.InsightAlertActivity]
- * from observing [app.aaps.pump.insight.InsightAlertService.alertLiveData].
+ * UI state for [InsightAlertScreen], produced by [app.gmaaps.pump.insight.app_layer.activities.InsightAlertActivity]
+ * from observing [app.gmaaps.pump.insight.InsightAlertService.alertLiveData].
  */
 data class InsightAlertUiState(
     val icon: ImageVector,
@@ -87,15 +87,16 @@ fun InsightAlertScreen(
                     onClick = onMute,
                     enabled = state.muteEnabled
                 ) {
-                    Text(stringResource(id = app.aaps.core.ui.R.string.mute))
+                    Text(stringResource(id = app.gmaaps.core.ui.R.string.mute))
                 }
             }
             OutlinedButton(
                 onClick = onConfirm,
                 enabled = state.confirmEnabled
             ) {
-                Text(stringResource(id = app.aaps.core.ui.R.string.confirm))
+                Text(stringResource(id = app.gmaaps.core.ui.R.string.confirm))
             }
         }
     }
 }
+

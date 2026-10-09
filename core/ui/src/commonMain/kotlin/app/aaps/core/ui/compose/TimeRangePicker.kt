@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -19,8 +19,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.dialogs.TimePickerModal
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.dialogs.TimePickerModal
 
 /**
  * Time range picker for selecting a start and end time (e.g., valid hours for QuickWizard).
@@ -148,3 +148,4 @@ fun TimeRangePicker(
         )
     }
 }
+

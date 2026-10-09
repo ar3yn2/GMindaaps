@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.eros.history
+﻿package app.gmaaps.pump.omnipod.eros.history
 
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryRecordDao
-import app.aaps.pump.omnipod.eros.history.database.ErosHistoryRecordEntity
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryRecordDao
+import app.gmaaps.pump.omnipod.eros.history.database.ErosHistoryRecordEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 
@@ -23,3 +23,4 @@ class ErosHistory(private val dao: ErosHistoryRecordDao) {
     fun create(historyRecord: ErosHistoryRecordEntity?): Long =
         runBlocking(Dispatchers.IO) { dao.insert(historyRecord!!) }
 }
+

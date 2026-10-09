@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
 import com.google.common.truth.Truth.assertThat
 import org.apache.commons.codec.binary.Hex
@@ -17,3 +17,4 @@ class DeactivateCommandTest {
         assertThat(encoded).asList().containsExactlyElementsIn(Hex.decodeHex("0242000114061C04494E532E001C").asList()).inOrder()
     }
 }
+

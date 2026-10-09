@@ -1,4 +1,4 @@
-package app.aaps.implementation.locale
+﻿package app.gmaaps.implementation.locale
 
 import java.util.Locale
 
@@ -14,3 +14,4 @@ internal actual object LocalePlatform {
     actual val language: String get() = Locale.getDefault().language
     actual val country: String get() = Locale.getDefault().country
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.core.ui.extensions
+﻿package app.gmaaps.core.ui.extensions
 
-import app.aaps.core.data.iob.CobInfo
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.data.iob.CobInfo
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
 
 /**
  * Text for a [CobInfo] on screen.
@@ -28,3 +28,4 @@ fun CobInfo.displayText(rh: TextResolver, decimalFormatter: DecimalFormatter): S
         if (futureCarbs > 0) cobText += "(" + decimalFormatter.to0Decimal(futureCarbs) + ")"
         cobText
     }
+

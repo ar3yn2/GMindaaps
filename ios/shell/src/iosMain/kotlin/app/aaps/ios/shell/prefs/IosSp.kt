@@ -1,6 +1,6 @@
-package app.aaps.ios.shell.prefs
+﻿package app.gmaaps.ios.shell.prefs
 
-import app.aaps.core.interfaces.sharedPreferences.KeyValueStore
+import app.gmaaps.core.interfaces.sharedPreferences.KeyValueStore
 import platform.Foundation.NSBundle
 import platform.Foundation.NSUserDefaults
 
@@ -111,6 +111,7 @@ class IosSp(
     companion object {
 
         /** Used only if the bundle has no identifier, which should not happen in a real app. */
-        const val FALLBACK_DOMAIN: String = "app.aaps"
+        const val FALLBACK_DOMAIN: String = "app.gmaaps"
     }
 }
+

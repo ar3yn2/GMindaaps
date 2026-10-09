@@ -1,13 +1,13 @@
-package app.aaps.core.data.json
+﻿package app.gmaaps.core.data.json
 
-import app.aaps.core.data.json.OrgJsonCompat.hasCompat
-import app.aaps.core.data.json.OrgJsonCompat.optBooleanCompat
-import app.aaps.core.data.json.OrgJsonCompat.optDoubleCompat
-import app.aaps.core.data.json.OrgJsonCompat.optIntCompat
-import app.aaps.core.data.json.OrgJsonCompat.optJsonArrayCompat
-import app.aaps.core.data.json.OrgJsonCompat.optJsonObjectCompat
-import app.aaps.core.data.json.OrgJsonCompat.optLongCompat
-import app.aaps.core.data.json.OrgJsonCompat.optStringCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.hasCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optBooleanCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optDoubleCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optIntCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optJsonArrayCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optJsonObjectCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optLongCompat
+import app.gmaaps.core.data.json.OrgJsonCompat.optStringCompat
 import com.google.common.truth.Truth.assertThat
 import com.google.common.truth.Truth.assertWithMessage
 import kotlinx.serialization.json.Json
@@ -251,3 +251,4 @@ class OrgJsonCompatParityTest {
         assertThat(doc.toString()).isEqualTo("""{"z":1,"a":2,"m":3}""")
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ext
+﻿package app.gmaaps.pump.carelevo.ext
 
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -370,3 +370,4 @@ internal class AlarmExtTest {
         assertThat(sr.btnRes).isEqualTo(40)
     }
 }
+

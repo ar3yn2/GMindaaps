@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.ble
+﻿package app.gmaaps.pump.eopatch.core.ble
 
 import android.os.ParcelUuid
 import java.util.UUID
@@ -36,3 +36,4 @@ interface IPatchPacketConstant {
         const val DATA10 = 14
     }
 }
+

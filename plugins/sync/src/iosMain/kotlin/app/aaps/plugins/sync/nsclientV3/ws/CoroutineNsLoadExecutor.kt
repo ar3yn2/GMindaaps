@@ -1,17 +1,17 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.objects.workflow.WorkOutcome
-import app.aaps.plugins.sync.nsclientV3.workers.DataSyncRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadBgRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadDeviceStatusRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadFoodsRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadLastModificationRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadProfileStoreRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadSettingsRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadStatusRunner
-import app.aaps.plugins.sync.nsclientV3.workers.LoadTreatmentsRunner
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.objects.workflow.WorkOutcome
+import app.gmaaps.plugins.sync.nsclientV3.workers.DataSyncRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadBgRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadDeviceStatusRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadFoodsRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadLastModificationRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadProfileStoreRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadSettingsRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadStatusRunner
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadTreatmentsRunner
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -126,3 +126,4 @@ class CoroutineNsLoadExecutor(
         return outcome
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import dev.zacsweers.metrox.viewmodel.MetroViewModelFactory
 
@@ -16,3 +16,4 @@ interface MetroViewModelFactoryOwner {
 
     val metroViewModelFactory: MetroViewModelFactory
 }
+

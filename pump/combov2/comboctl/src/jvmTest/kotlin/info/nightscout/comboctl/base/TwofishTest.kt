@@ -1,6 +1,6 @@
-package info.nightscout.comboctl.base
+﻿package info.nightscout.comboctl.base
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -333,3 +333,4 @@ class TwofishTest : TestBase() {
         }
     }
 }
+

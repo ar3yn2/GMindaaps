@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,7 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.CoreUiStrings
 
 /**
  * Rounded search field styled like Google Contacts search bar.
@@ -86,3 +86,4 @@ fun AapsSearchField(
         keyboardActions = KeyboardActions(onSearch = { focusManager.clearFocus() })
     )
 }
+

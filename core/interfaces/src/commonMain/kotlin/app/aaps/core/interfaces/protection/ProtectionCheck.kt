@@ -1,13 +1,13 @@
-package app.aaps.core.interfaces.protection
+﻿package app.gmaaps.core.interfaces.protection
 
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlinx.coroutines.flow.StateFlow
 
 /**
  * Typealias for backward compatibility.
  * ProtectionType is now defined in core/keys module.
  */
-typealias ProtectionType = app.aaps.core.keys.ProtectionType
+typealias ProtectionType = app.gmaaps.core.keys.ProtectionType
 
 /**
  * Result of a protection query.

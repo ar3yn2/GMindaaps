@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.graphics.Color
@@ -44,3 +44,4 @@ internal val DarkSnackbarColors = SnackbarColors(
 
 /** CompositionLocal providing snackbar colors based on current theme. */
 internal val LocalSnackbarColors = compositionLocalOf { LightSnackbarColors }
+

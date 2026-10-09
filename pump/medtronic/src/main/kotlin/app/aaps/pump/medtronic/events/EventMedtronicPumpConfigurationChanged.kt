@@ -1,5 +1,6 @@
-package app.aaps.pump.medtronic.events
+﻿package app.gmaaps.pump.medtronic.events
 
-import app.aaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.events.Event
 
 class EventMedtronicPumpConfigurationChanged : Event()
+

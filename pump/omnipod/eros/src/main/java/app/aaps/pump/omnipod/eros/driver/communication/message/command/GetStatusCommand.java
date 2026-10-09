@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import androidx.annotation.NonNull;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
-import app.aaps.pump.omnipod.eros.driver.definition.PodInfoType;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodInfoType;
 
 public class GetStatusCommand extends MessageBlock {
     private final PodInfoType podInfoType;
@@ -30,3 +30,4 @@ public class GetStatusCommand extends MessageBlock {
                 '}';
     }
 }
+

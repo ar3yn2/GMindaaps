@@ -1,8 +1,8 @@
-package app.aaps.core.interfaces.db
+﻿package app.gmaaps.core.interfaces.db
 
-import app.aaps.core.data.model.TimeStamped
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.TimeStamped
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.utils.DateUtil
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.channelFlow
@@ -56,3 +56,4 @@ fun <E : TimeStamped> Flow<List<E>>.compensateForClockSkew(
         }
     }
 }
+

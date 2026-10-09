@@ -1,8 +1,8 @@
-package app.aaps.shared.impl.logging
+﻿package app.gmaaps.shared.impl.logging
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.L
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.L
+import app.gmaaps.core.interfaces.logging.LTag
 import org.slf4j.LoggerFactory
 
 /**

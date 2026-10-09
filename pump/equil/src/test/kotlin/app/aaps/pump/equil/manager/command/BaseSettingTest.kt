@@ -1,12 +1,12 @@
-package app.aaps.pump.equil.manager.command
+﻿package app.gmaaps.pump.equil.manager.command
 
-import app.aaps.pump.equil.database.EquilHistoryRecord
-import app.aaps.pump.equil.keys.EquilStringKey
-import app.aaps.pump.equil.manager.AESUtil
-import app.aaps.pump.equil.manager.EquilManager
-import app.aaps.pump.equil.manager.EquilPacketCodec
-import app.aaps.pump.equil.manager.Utils
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.pump.equil.database.EquilHistoryRecord
+import app.gmaaps.pump.equil.keys.EquilStringKey
+import app.gmaaps.pump.equil.manager.AESUtil
+import app.gmaaps.pump.equil.manager.EquilManager
+import app.gmaaps.pump.equil.manager.EquilPacketCodec
+import app.gmaaps.pump.equil.manager.Utils
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertNotNull
@@ -231,7 +231,7 @@ class BaseSettingTest : TestBaseWithProfile() {
         // Every packet must have valid CRC8
         for (buf in response.send) {
             val bytes = buf.array()
-            val expectedCrc = app.aaps.pump.equil.manager.Crc.crc8Maxim(bytes.copyOfRange(0, 5))
+            val expectedCrc = app.gmaaps.pump.equil.manager.Crc.crc8Maxim(bytes.copyOfRange(0, 5))
             assertEquals(expectedCrc.toByte(), bytes[5], "CRC8 mismatch on framed packet")
         }
 
@@ -249,7 +249,7 @@ class BaseSettingTest : TestBaseWithProfile() {
 
         // Build packets via responseCmd (which delegates to EquilPacketCodec.buildPackets)
         val port = "0F0F0000"
-        testSetting.response = app.aaps.pump.equil.manager.EquilResponse(testSetting.createTime)
+        testSetting.response = app.gmaaps.pump.equil.manager.EquilResponse(testSetting.createTime)
         val builtResponse = testSetting.responseCmd(encrypted, port)
 
         // Simulate receiving: store in response field, then parse
@@ -271,3 +271,4 @@ class BaseSettingTest : TestBaseWithProfile() {
         }
     }
 }
+

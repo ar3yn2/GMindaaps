@@ -1,5 +1,5 @@
-package app.aaps.plugins.automation.events
+﻿package app.gmaaps.plugins.automation.events
 
-import app.aaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.events.Event
 
 class EventAutomationUpdateGui : Event()

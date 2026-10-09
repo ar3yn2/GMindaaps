@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util.ProgramBasalUtil
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.Encodable
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util.ProgramBasalUtil
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.Encodable
 import java.io.Serializable
 import java.nio.ByteBuffer
 
@@ -32,3 +32,4 @@ open class BasalInsulinProgramElement(
             '}'
     }
 }
+

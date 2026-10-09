@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.TT
-import app.aaps.database.entities.TemporaryTarget
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.database.entities.TemporaryTarget
 
 fun TemporaryTarget.Reason.fromDb(): TT.Reason =
     when (this) {
@@ -54,3 +54,4 @@ fun TT.toDb(): TemporaryTarget =
         lowTarget = this.lowTarget,
         duration = this.duration
     )
+

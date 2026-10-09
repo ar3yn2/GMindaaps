@@ -1,7 +1,7 @@
-package app.aaps.pump.common.hw.rileylink.ble.data
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data
 
-import app.aaps.pump.common.hw.rileylink.ble.command.RileyLinkCommand
-import app.aaps.pump.common.hw.rileylink.ble.defs.RFSpyRLResponse
+import app.gmaaps.pump.common.hw.rileylink.ble.command.RileyLinkCommand
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RFSpyRLResponse
 import dev.zacsweers.metro.Inject
 
 /**
@@ -88,3 +88,4 @@ class RFSpyResponse(
         }
     }
 }
+

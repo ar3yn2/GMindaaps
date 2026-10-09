@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.dash.ui.compose
+﻿package app.gmaaps.pump.omnipod.dash.ui.compose
 
 import android.content.Context
 import androidx.compose.material.icons.Icons
@@ -13,46 +13,46 @@ import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.defs.determineCorrectBasalSize
-import app.aaps.core.interfaces.pump.defs.determineCorrectBolusSize
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.readableDuration
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.ActionCategory
-import app.aaps.core.ui.compose.pump.PumpAction
-import app.aaps.core.ui.compose.pump.PumpCommunicationStatus
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.core.ui.compose.pump.PumpOverviewUiState
-import app.aaps.core.ui.compose.pump.tickerFlow
-import app.aaps.pump.omnipod.common.EventOmnipodDashPumpValuesChanged
-import app.aaps.pump.omnipod.common.OMNIPOD_DURATION_LABELS
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ActivationProgress
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PdmFaultCategory
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PodConstants
-import app.aaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
-import app.aaps.pump.omnipod.common.queue.command.CommandHandleTimeChange
-import app.aaps.pump.omnipod.common.queue.command.CommandPlayTestBeep
-import app.aaps.pump.omnipod.common.queue.command.CommandResumeDelivery
-import app.aaps.pump.omnipod.common.queue.command.CommandSilenceAlerts
-import app.aaps.pump.omnipod.common.queue.command.CommandSuspendDelivery
-import app.aaps.pump.omnipod.common.ui.wizard.compose.ActivationType
-import app.aaps.pump.omnipod.common.ui.wizard.compose.OmnipodOverviewEvent
-import app.aaps.pump.omnipod.dash.OmnipodDashPumpPlugin
-import app.aaps.pump.omnipod.dash.R
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.defs.determineCorrectBasalSize
+import app.gmaaps.core.interfaces.pump.defs.determineCorrectBolusSize
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.readableDuration
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.ActionCategory
+import app.gmaaps.core.ui.compose.pump.PumpAction
+import app.gmaaps.core.ui.compose.pump.PumpCommunicationStatus
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.core.ui.compose.pump.PumpOverviewUiState
+import app.gmaaps.core.ui.compose.pump.tickerFlow
+import app.gmaaps.pump.omnipod.common.EventOmnipodDashPumpValuesChanged
+import app.gmaaps.pump.omnipod.common.OMNIPOD_DURATION_LABELS
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ActivationProgress
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PdmFaultCategory
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PodConstants
+import app.gmaaps.pump.omnipod.common.bledriver.pod.state.OmnipodDashPodStateManager
+import app.gmaaps.pump.omnipod.common.queue.command.CommandHandleTimeChange
+import app.gmaaps.pump.omnipod.common.queue.command.CommandPlayTestBeep
+import app.gmaaps.pump.omnipod.common.queue.command.CommandResumeDelivery
+import app.gmaaps.pump.omnipod.common.queue.command.CommandSilenceAlerts
+import app.gmaaps.pump.omnipod.common.queue.command.CommandSuspendDelivery
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.ActivationType
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.OmnipodOverviewEvent
+import app.gmaaps.pump.omnipod.dash.OmnipodDashPumpPlugin
+import app.gmaaps.pump.omnipod.dash.R
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -75,8 +75,8 @@ import java.time.ZonedDateTime
 import java.util.Date
 import java.util.Locale
 import java.util.TimeZone
-import app.aaps.core.ui.R as CoreUiR
-import app.aaps.pump.omnipod.common.R as CommonR
+import app.gmaaps.core.ui.R as CoreUiR
+import app.gmaaps.pump.omnipod.common.R as CommonR
 
 @Stable
 // Registers itself: @ViewModelKey infers the key from the class. No graph entry, and deliberately
@@ -580,3 +580,4 @@ class DashOverviewViewModel(
         scope.cancel()
     }
 }
+

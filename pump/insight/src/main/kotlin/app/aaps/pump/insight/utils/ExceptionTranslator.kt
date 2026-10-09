@@ -1,22 +1,22 @@
-package app.aaps.pump.insight.utils
+﻿package app.gmaaps.pump.insight.utils
 
 import android.content.Context
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.pump.insight.R
-import app.aaps.pump.insight.exceptions.ConnectionFailedException
-import app.aaps.pump.insight.exceptions.ConnectionLostException
-import app.aaps.pump.insight.exceptions.DisconnectedException
-import app.aaps.pump.insight.exceptions.SocketCreationFailedException
-import app.aaps.pump.insight.exceptions.TimeoutException
-import app.aaps.pump.insight.exceptions.app_layer_errors.MaximumNumberOfBolusTypeAlreadyRunningException
-import app.aaps.pump.insight.exceptions.app_layer_errors.NoActiveTBRToCancelException
-import app.aaps.pump.insight.exceptions.app_layer_errors.NoActiveTBRToChangeException
-import app.aaps.pump.insight.exceptions.app_layer_errors.NoSuchBolusToCancelException
-import app.aaps.pump.insight.exceptions.app_layer_errors.PumpAlreadyInThatStateException
-import app.aaps.pump.insight.exceptions.app_layer_errors.PumpStoppedException
-import app.aaps.pump.insight.exceptions.app_layer_errors.RunModeNotAllowedException
-import app.aaps.pump.insight.exceptions.satl_errors.SatlPairingRejectedException
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.pump.insight.R
+import app.gmaaps.pump.insight.exceptions.ConnectionFailedException
+import app.gmaaps.pump.insight.exceptions.ConnectionLostException
+import app.gmaaps.pump.insight.exceptions.DisconnectedException
+import app.gmaaps.pump.insight.exceptions.SocketCreationFailedException
+import app.gmaaps.pump.insight.exceptions.TimeoutException
+import app.gmaaps.pump.insight.exceptions.app_layer_errors.MaximumNumberOfBolusTypeAlreadyRunningException
+import app.gmaaps.pump.insight.exceptions.app_layer_errors.NoActiveTBRToCancelException
+import app.gmaaps.pump.insight.exceptions.app_layer_errors.NoActiveTBRToChangeException
+import app.gmaaps.pump.insight.exceptions.app_layer_errors.NoSuchBolusToCancelException
+import app.gmaaps.pump.insight.exceptions.app_layer_errors.PumpAlreadyInThatStateException
+import app.gmaaps.pump.insight.exceptions.app_layer_errors.PumpStoppedException
+import app.gmaaps.pump.insight.exceptions.app_layer_errors.RunModeNotAllowedException
+import app.gmaaps.pump.insight.exceptions.satl_errors.SatlPairingRejectedException
 
 object ExceptionTranslator {
 
@@ -33,7 +33,7 @@ object ExceptionTranslator {
     init {
         TABLE[ConnectionFailedException::class.java] = R.string.connection_failed
         TABLE[ConnectionLostException::class.java] = R.string.connection_lost
-        TABLE[DisconnectedException::class.java] = app.aaps.core.ui.R.string.disconnected
+        TABLE[DisconnectedException::class.java] = app.gmaaps.core.ui.R.string.disconnected
         TABLE[SatlPairingRejectedException::class.java] = R.string.pairing_rejected
         TABLE[SocketCreationFailedException::class.java] = R.string.socket_creation_failed
         TABLE[TimeoutException::class.java] = R.string.timeout

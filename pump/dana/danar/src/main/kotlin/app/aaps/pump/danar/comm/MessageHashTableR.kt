@@ -1,6 +1,6 @@
-package app.aaps.pump.danar.comm
+﻿package app.gmaaps.pump.danar.comm
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -79,3 +79,4 @@ class MessageHashTableR(
         return messages[command] ?: MessageBase(injector)
     }
 }
+

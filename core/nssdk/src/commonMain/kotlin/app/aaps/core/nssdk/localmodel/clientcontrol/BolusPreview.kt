@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.clientcontrol
+﻿package app.gmaaps.core.nssdk.localmodel.clientcontrol
 
 import kotlinx.serialization.Serializable
 
@@ -24,7 +24,7 @@ data class BolusPreview(
     val wizardDetail: WizardDetailDto? = null,
 )
 
-/** Wire mirror of [app.aaps.core.interfaces.rx.weardata.EventData.WizardDetail] (same module-boundary pattern as [ConfirmationLineDto]). */
+/** Wire mirror of [app.gmaaps.core.interfaces.rx.weardata.EventData.WizardDetail] (same module-boundary pattern as [ConfirmationLineDto]). */
 @Serializable
 data class WizardDetailDto(
     val totalInsulin: Double,
@@ -62,3 +62,4 @@ data class ConfirmationLineDto(
     val role: String,
     val text: String
 )
+

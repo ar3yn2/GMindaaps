@@ -1,6 +1,6 @@
-package app.aaps.pump.virtual.keys
+﻿package app.gmaaps.pump.virtual.keys
 
-import app.aaps.core.keys.interfaces.BooleanNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey
 
 enum class VirtualBooleanNonPreferenceKey(
     override val key: String,

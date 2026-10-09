@@ -1,6 +1,6 @@
-package app.aaps.pump.diaconn.pumplog
+﻿package app.gmaaps.pump.diaconn.pumplog
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -158,3 +158,4 @@ class LogAlarmBlockTest : TestBase() {
         assertThat(LogAlarmBlock.LOG_KIND).isEqualTo(0x29.toByte())
     }
 }
+

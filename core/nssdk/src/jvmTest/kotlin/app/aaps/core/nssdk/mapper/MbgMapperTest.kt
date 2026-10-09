@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -40,3 +40,4 @@ class MbgMapperTest {
         assertThat(json.toCalibrationMbg()).isNull()
     }
 }
+

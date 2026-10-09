@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.graph
+﻿package app.gmaaps.core.interfaces.graph
 
 class Scale(var shift: Double = 0.0, var multiplier: Double = 1.0) {
 

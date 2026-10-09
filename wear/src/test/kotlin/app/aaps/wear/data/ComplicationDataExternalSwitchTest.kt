@@ -1,4 +1,4 @@
-package app.aaps.wear.data
+﻿package app.gmaaps.wear.data
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -63,3 +63,4 @@ class ComplicationDataExternalSwitchTest {
         assertThat(status[2].dataset).isEqualTo(1)
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.shared.tests
+﻿package app.gmaaps.shared.tests
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 
 /**
  * Created by adrian on 2019-12-27.

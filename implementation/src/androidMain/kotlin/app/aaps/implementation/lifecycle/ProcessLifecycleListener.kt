@@ -1,8 +1,8 @@
-package app.aaps.implementation.lifecycle
+﻿package app.gmaaps.implementation.lifecycle
 
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
-import app.aaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
 import dev.zacsweers.metro.Inject
 
 /**

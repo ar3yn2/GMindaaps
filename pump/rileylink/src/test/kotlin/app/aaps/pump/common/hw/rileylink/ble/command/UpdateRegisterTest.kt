@@ -1,7 +1,7 @@
-package app.aaps.pump.common.hw.rileylink.ble.command
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.command
 
-import app.aaps.pump.common.hw.rileylink.ble.defs.CC111XRegister
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.CC111XRegister
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkCommandType
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
@@ -320,3 +320,4 @@ class UpdateRegisterTest {
         }
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition.schedule;
+package app.gmaaps.pump.omnipod.eros.driver.definition.schedule;
 
 import androidx.annotation.NonNull;
 
@@ -7,7 +7,7 @@ import org.joda.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
 
 public class BasalDeliveryTable {
 
@@ -111,4 +111,5 @@ public class BasalDeliveryTable {
         }
     }
 }
+
 

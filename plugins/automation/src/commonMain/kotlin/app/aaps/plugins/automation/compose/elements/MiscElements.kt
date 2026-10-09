@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.compose.elements
+﻿package app.gmaaps.plugins.automation.compose.elements
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -23,8 +23,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.core.ui.elements.WeekDay
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.core.ui.elements.WeekDay
 
 /**
  * @see PreviewString
@@ -155,3 +155,4 @@ fun AutomationElementColumn(content: @Composable () -> Unit) {
         verticalArrangement = Arrangement.spacedBy(4.dp)
     ) { content() }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.navigation
+﻿package app.gmaaps.core.ui.compose.navigation
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ExitToApp
@@ -9,48 +9,48 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.navigation.ElementCategory
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsTheme
-import app.aaps.core.ui.compose.icons.IcActivity
-import app.aaps.core.ui.compose.icons.IcAnnouncement
-import app.aaps.core.ui.compose.icons.IcAs
-import app.aaps.core.ui.compose.icons.IcAutomation
-import app.aaps.core.ui.compose.icons.IcBgCheck
-import app.aaps.core.ui.compose.icons.IcBolus
-import app.aaps.core.ui.compose.icons.IcByoda
-import app.aaps.core.ui.compose.icons.IcCalculator
-import app.aaps.core.ui.compose.icons.IcCalibration
-import app.aaps.core.ui.compose.icons.IcCannulaChange
-import app.aaps.core.ui.compose.icons.IcCarbs
-import app.aaps.core.ui.compose.icons.IcCgmInsert
-import app.aaps.core.ui.compose.icons.IcClinicalNotes
-import app.aaps.core.ui.compose.icons.IcExtendedBolus
-import app.aaps.core.ui.compose.icons.IcHistory
-import app.aaps.core.ui.compose.icons.IcLoopClosed
-import app.aaps.core.ui.compose.icons.IcNote
-import app.aaps.core.ui.compose.icons.IcPluginAutomation
-import app.aaps.core.ui.compose.icons.IcPluginConfigBuilder
-import app.aaps.core.ui.compose.icons.IcPluginFood
-import app.aaps.core.ui.compose.icons.IcPluginInsulin
-import app.aaps.core.ui.compose.icons.IcPluginMaintenance
-import app.aaps.core.ui.compose.icons.IcProfile
-import app.aaps.core.ui.compose.icons.IcPumpBattery
-import app.aaps.core.ui.compose.icons.IcPumpCartridge
-import app.aaps.core.ui.compose.icons.IcQuestion
-import app.aaps.core.ui.compose.icons.IcQuickwizard
-import app.aaps.core.ui.compose.icons.IcSetupWizard
-import app.aaps.core.ui.compose.icons.IcSiteRotation
-import app.aaps.core.ui.compose.icons.IcSmb
-import app.aaps.core.ui.compose.icons.IcStats
-import app.aaps.core.ui.compose.icons.IcTbrHigh
-import app.aaps.core.ui.compose.icons.IcTtHigh
-import app.aaps.core.ui.compose.icons.IcUserOptions
-import app.aaps.core.ui.compose.icons.IcXDrip
-import app.aaps.core.ui.compose.icons.Pump
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.navigation.ElementCategory
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsTheme
+import app.gmaaps.core.ui.compose.icons.IcActivity
+import app.gmaaps.core.ui.compose.icons.IcAnnouncement
+import app.gmaaps.core.ui.compose.icons.IcAs
+import app.gmaaps.core.ui.compose.icons.IcAutomation
+import app.gmaaps.core.ui.compose.icons.IcBgCheck
+import app.gmaaps.core.ui.compose.icons.IcBolus
+import app.gmaaps.core.ui.compose.icons.IcByoda
+import app.gmaaps.core.ui.compose.icons.IcCalculator
+import app.gmaaps.core.ui.compose.icons.IcCalibration
+import app.gmaaps.core.ui.compose.icons.IcCannulaChange
+import app.gmaaps.core.ui.compose.icons.IcCarbs
+import app.gmaaps.core.ui.compose.icons.IcCgmInsert
+import app.gmaaps.core.ui.compose.icons.IcClinicalNotes
+import app.gmaaps.core.ui.compose.icons.IcExtendedBolus
+import app.gmaaps.core.ui.compose.icons.IcHistory
+import app.gmaaps.core.ui.compose.icons.IcLoopClosed
+import app.gmaaps.core.ui.compose.icons.IcNote
+import app.gmaaps.core.ui.compose.icons.IcPluginAutomation
+import app.gmaaps.core.ui.compose.icons.IcPluginConfigBuilder
+import app.gmaaps.core.ui.compose.icons.IcPluginFood
+import app.gmaaps.core.ui.compose.icons.IcPluginInsulin
+import app.gmaaps.core.ui.compose.icons.IcPluginMaintenance
+import app.gmaaps.core.ui.compose.icons.IcProfile
+import app.gmaaps.core.ui.compose.icons.IcPumpBattery
+import app.gmaaps.core.ui.compose.icons.IcPumpCartridge
+import app.gmaaps.core.ui.compose.icons.IcQuestion
+import app.gmaaps.core.ui.compose.icons.IcQuickwizard
+import app.gmaaps.core.ui.compose.icons.IcSetupWizard
+import app.gmaaps.core.ui.compose.icons.IcSiteRotation
+import app.gmaaps.core.ui.compose.icons.IcSmb
+import app.gmaaps.core.ui.compose.icons.IcStats
+import app.gmaaps.core.ui.compose.icons.IcTbrHigh
+import app.gmaaps.core.ui.compose.icons.IcTtHigh
+import app.gmaaps.core.ui.compose.icons.IcUserOptions
+import app.gmaaps.core.ui.compose.icons.IcXDrip
+import app.gmaaps.core.ui.compose.icons.Pump
 
 /**
  * Extension functions providing the visual identity for each [ElementType].
@@ -306,3 +306,4 @@ fun ElementType.description(): TextRef? = when (this) {
     ElementType.AAPS,
     ElementType.EXIT                    -> null
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.Bolus
+import app.gmaaps.database.entities.Bolus
 
 /**
  * Sync the Bolus from NS

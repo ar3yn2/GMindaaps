@@ -1,7 +1,7 @@
-package app.aaps.pump.common.hw.rileylink.ble
+﻿package app.gmaaps.pump.common.hw.rileylink.ble
 
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersionBase
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkFirmwareVersionBase
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth
 import org.junit.jupiter.api.Test
 
@@ -32,3 +32,4 @@ import org.junit.jupiter.api.Test
         Truth.assertThat(RFSpy.getFirmwareVersion(aapsLogger, "", "subg_rfspy 5.5.5")).isEqualTo(RileyLinkFirmwareVersionBase.UnknownVersion)
     }
 }
+

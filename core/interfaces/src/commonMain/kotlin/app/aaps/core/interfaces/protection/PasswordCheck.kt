@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.protection
+﻿package app.gmaaps.core.interfaces.protection
 
-import app.aaps.core.keys.interfaces.StringPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.StringPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
 import kotlinx.coroutines.flow.StateFlow
 
 /**
@@ -51,3 +51,4 @@ interface PasswordCheck {
         cancel: (() -> Unit)? = null
     )
 }
+

@@ -1,11 +1,11 @@
-package app.aaps.pump.diaconn.compose
+﻿package app.gmaaps.pump.diaconn.compose
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.diaconn.DiaconnG8Pump
-import app.aaps.pump.diaconn.keys.DiaconnIntKey
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.diaconn.DiaconnG8Pump
+import app.gmaaps.pump.diaconn.keys.DiaconnIntKey
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -122,3 +122,4 @@ internal class DiaconnUserOptionsViewModelTest {
         assertThat(state.beepAndAlarm).isEqualTo(2)
     }
 }
+

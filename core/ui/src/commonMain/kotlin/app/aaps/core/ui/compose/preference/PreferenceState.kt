@@ -1,9 +1,9 @@
-/*
+﻿/*
  * Preference State Support for Jetpack Compose
  * Provides state classes and visibility calculation for preferences
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -12,28 +12,28 @@ import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.snapshots.SnapshotStateMap
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.format.NumberFormatPlatform
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.keys.interfaces.BooleanNonPreferenceKey
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.DoubleNonPreferenceKey
-import app.aaps.core.keys.interfaces.DoublePreferenceKey
-import app.aaps.core.keys.interfaces.IntNonPreferenceKey
-import app.aaps.core.keys.interfaces.IntPreferenceKey
-import app.aaps.core.keys.interfaces.IntentPreferenceKey
-import app.aaps.core.keys.interfaces.NonPreferenceKey
-import app.aaps.core.keys.interfaces.PreferenceKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
-import app.aaps.core.keys.interfaces.StringPreferenceKey
-import app.aaps.core.keys.interfaces.SyncDirection
-import app.aaps.core.keys.interfaces.UnitDoublePreferenceKey
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.ui.compose.LocalConfig
-import app.aaps.core.ui.compose.LocalMasterReachable
-import app.aaps.core.ui.compose.LocalPreferences
-import app.aaps.core.ui.compose.LocalProfileUtil
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.format.NumberFormatPlatform
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.keys.interfaces.BooleanNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.DoubleNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.DoublePreferenceKey
+import app.gmaaps.core.keys.interfaces.IntNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntentPreferenceKey
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.core.keys.interfaces.PreferenceKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringPreferenceKey
+import app.gmaaps.core.keys.interfaces.SyncDirection
+import app.gmaaps.core.keys.interfaces.UnitDoublePreferenceKey
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.ui.compose.LocalConfig
+import app.gmaaps.core.ui.compose.LocalMasterReachable
+import app.gmaaps.core.ui.compose.LocalPreferences
+import app.gmaaps.core.ui.compose.LocalProfileUtil
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
@@ -110,7 +110,7 @@ fun calculatePreferenceVisibility(
     val config = LocalConfig.current
     val sharedStates = LocalSharedPreferenceStates.current
     // Use reactive state for simpleMode - this triggers recomposition when it changes
-    val simpleModeState = rememberPreferenceBooleanState(app.aaps.core.keys.BooleanKey.GeneralSimpleMode)
+    val simpleModeState = rememberPreferenceBooleanState(app.gmaaps.core.keys.BooleanKey.GeneralSimpleMode)
 
     // Use reactive state for dependency checks
     val dependencyState = preferenceKey.dependency?.let {
@@ -209,7 +209,7 @@ fun calculateIntentPreferenceVisibility(
     val preferences = LocalPreferences.current
     val sharedStates = LocalSharedPreferenceStates.current
     // Use reactive state for simpleMode - this triggers recomposition when it changes
-    val simpleModeState = rememberPreferenceBooleanState(app.aaps.core.keys.BooleanKey.GeneralSimpleMode)
+    val simpleModeState = rememberPreferenceBooleanState(app.gmaaps.core.keys.BooleanKey.GeneralSimpleMode)
 
     // Use reactive state for dependency checks
     val dependencyState = intentKey.dependency?.let {
@@ -636,3 +636,4 @@ fun rememberUnitDoublePreferenceState(
         UnitDoublePreferenceState(preferences, profileUtil, key, displayState, sharedStates)
     }
 }
+

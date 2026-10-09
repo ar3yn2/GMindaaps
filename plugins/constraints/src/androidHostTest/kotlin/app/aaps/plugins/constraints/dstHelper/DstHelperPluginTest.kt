@@ -1,7 +1,7 @@
-package app.aaps.plugins.constraints.dstHelper
+﻿package app.gmaaps.plugins.constraints.dstHelper
 
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -59,3 +59,4 @@ class DstHelperPluginTest : TestBaseWithProfile() {
         assertThat(plugin.willBeDST(cal)).isFalse()
     }
 }
+

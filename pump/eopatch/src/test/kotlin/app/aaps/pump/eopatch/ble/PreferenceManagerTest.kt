@@ -1,11 +1,11 @@
-package app.aaps.pump.eopatch.ble
+﻿package app.gmaaps.pump.eopatch.ble
 
-import app.aaps.pump.eopatch.code.PatchLifecycle
-import app.aaps.pump.eopatch.vo.Alarms
-import app.aaps.pump.eopatch.vo.BolusCurrent
-import app.aaps.pump.eopatch.vo.PatchConfig
-import app.aaps.pump.eopatch.vo.PatchLifecycleEvent
-import app.aaps.pump.eopatch.vo.PatchState
+import app.gmaaps.pump.eopatch.code.PatchLifecycle
+import app.gmaaps.pump.eopatch.vo.Alarms
+import app.gmaaps.pump.eopatch.vo.BolusCurrent
+import app.gmaaps.pump.eopatch.vo.PatchConfig
+import app.gmaaps.pump.eopatch.vo.PatchLifecycleEvent
+import app.gmaaps.pump.eopatch.vo.PatchState
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Observable
 import org.junit.jupiter.api.Test
@@ -172,3 +172,4 @@ class PreferenceManagerTest {
         assertThat(result).isEqualTo(bolusCurrent)
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.driver.definition
+﻿package app.gmaaps.pump.equil.driver.definition
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import org.joda.time.Duration
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNotEquals
@@ -140,3 +140,4 @@ class BasalScheduleEntryTest : TestBase() {
         assertEquals(Duration.standardHours(23).plus(Duration.standardMinutes(59)), entry.startTime)
     }
 }
+

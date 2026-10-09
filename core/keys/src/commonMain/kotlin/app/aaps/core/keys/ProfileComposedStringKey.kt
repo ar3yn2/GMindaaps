@@ -1,6 +1,6 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.StringComposedNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringComposedNonPreferenceKey
 
 private const val LOCAL_PROFILE = "LocalProfile"
 private const val DEFAULT_ARRAY = "[{\"time\":\"00:00\",\"timeAsSeconds\":0,\"value\":0}]"
@@ -18,3 +18,4 @@ enum class ProfileComposedStringKey(
     LocalProfileNumberedTargetHigh(LOCAL_PROFILE + "_targethigh_", "%d", DEFAULT_ARRAY),
     LocalProfileNumberedName(LOCAL_PROFILE + "_name_", "%d", LOCAL_PROFILE + "0"),
 }
+

@@ -1,12 +1,12 @@
-package app.aaps.pump.equil.manager.command
+﻿package app.gmaaps.pump.equil.manager.command
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.utils.notify
-import app.aaps.pump.equil.database.EquilHistoryRecord
-import app.aaps.pump.equil.manager.EquilManager
-import app.aaps.pump.equil.manager.Utils
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.utils.notify
+import app.gmaaps.pump.equil.database.EquilHistoryRecord
+import app.gmaaps.pump.equil.manager.EquilManager
+import app.gmaaps.pump.equil.manager.Utils
 
 class CmdRunningModeGet(
     aapsLogger: AAPSLogger,
@@ -43,3 +43,4 @@ class CmdRunningModeGet(
 
     override fun getEventType(): EquilHistoryRecord.EventType? = null
 }
+

@@ -1,11 +1,11 @@
-package app.aaps.pump.medtrum
+﻿package app.gmaaps.pump.medtrum
 
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.TemporaryBasalStorage
-import app.aaps.core.interfaces.stats.TddCalculator
-import app.aaps.pump.medtrum.keys.MedtrumStringNonKey
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.TemporaryBasalStorage
+import app.gmaaps.core.interfaces.stats.TddCalculator
+import app.gmaaps.pump.medtrum.keys.MedtrumStringNonKey
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
@@ -41,3 +41,4 @@ open class MedtrumTestBase : TestBaseWithProfile() {
         medtrumPump = MedtrumPump(aapsLogger, rh, preferences, dateUtil, pumpSync, temporaryBasalStorage, bolusProgressData)
     }
 }
+

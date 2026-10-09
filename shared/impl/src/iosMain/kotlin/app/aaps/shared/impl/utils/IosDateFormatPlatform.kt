@@ -1,6 +1,6 @@
-package app.aaps.shared.impl.utils
+﻿package app.gmaaps.shared.impl.utils
 
-import app.aaps.core.interfaces.utils.usesTwelveHourClock
+import app.gmaaps.core.interfaces.utils.usesTwelveHourClock
 import platform.Foundation.NSCalendar
 import platform.Foundation.NSDate
 import platform.Foundation.NSDateFormatter
@@ -61,3 +61,4 @@ class IosDateFormatPlatform : DateFormatPlatform {
 
     private fun Long.toNsDate(): NSDate = NSDate.dateWithTimeIntervalSince1970(this / 1000.0)
 }
+

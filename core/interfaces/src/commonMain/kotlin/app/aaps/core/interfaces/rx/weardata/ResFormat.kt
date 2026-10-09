@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.rx.weardata
+﻿package app.gmaaps.core.interfaces.rx.weardata
 
 const val CUSTOM_VERSION = "3.0"
 

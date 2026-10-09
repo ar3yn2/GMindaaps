@@ -1,9 +1,9 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.core.api.BolusFinishTimeGet
-import app.aaps.pump.eopatch.core.code.BolusType
-import app.aaps.pump.eopatch.core.response.BolusFinishTimeResponse
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.core.api.BolusFinishTimeGet
+import app.gmaaps.pump.eopatch.core.code.BolusType
+import app.gmaaps.pump.eopatch.core.response.BolusFinishTimeResponse
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -56,3 +56,4 @@ class ReadBolusFinishTimeTask() : BolusTask(TaskFunc.READ_BOLUS_FINISH_TIME) {
         }
     }
 }
+

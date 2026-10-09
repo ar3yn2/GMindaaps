@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.stats
+﻿package app.gmaaps.core.interfaces.stats
 
 /**
  * Interface for Dexcom-style Time In Range (TIR) statistics.
@@ -21,7 +21,7 @@ package app.aaps.core.interfaces.stats
  * - Very High: > 250 mg/dL (13.9 mmol/L)
  *
  * @see DexcomTirCalculator
- * @see app.aaps.implementation.stats.DexcomTirImpl
+ * @see app.gmaaps.implementation.stats.DexcomTirImpl
  */
 interface DexcomTIR {
 
@@ -122,3 +122,4 @@ interface DexcomTIR {
      */
     fun veryHighTirMgdl(): Double
 }
+

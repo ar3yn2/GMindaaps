@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.profile
+﻿package app.gmaaps.core.interfaces.profile
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.pump.defs.PumpType
 
 interface ProfileUtil {
 

@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.RM
-import app.aaps.database.entities.RunningMode
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.database.entities.RunningMode
 
 fun RunningMode.Mode.fromDb(): RM.Mode =
     when (this) {
@@ -61,4 +61,5 @@ fun RM.toDb(): RunningMode =
         reasons = this.reasons,
         duration = this.duration
     )
+
 

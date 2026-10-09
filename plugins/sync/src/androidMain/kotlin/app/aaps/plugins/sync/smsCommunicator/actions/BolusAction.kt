@@ -1,25 +1,25 @@
-package app.aaps.plugins.sync.smsCommunicator.actions
+﻿package app.gmaaps.plugins.sync.smsCommunicator.actions
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.TT
-import app.aaps.core.interfaces.bolus.BatchAction
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.smsCommunicator.Sms
-import app.aaps.core.interfaces.smsCommunicator.SmsCommunicator
-import app.aaps.core.interfaces.tempTargets.ttDurationMinutes
-import app.aaps.core.interfaces.tempTargets.ttTargetMgdl
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.plugins.sync.SyncStrings
-import app.aaps.plugins.sync.smsCommunicator.SmsAction
-import app.aaps.plugins.sync.smsCommunicator.SmsBatchResult
-import app.aaps.plugins.sync.smsCommunicator.runSmsBatch
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.interfaces.bolus.BatchAction
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.smsCommunicator.Sms
+import app.gmaaps.core.interfaces.smsCommunicator.SmsCommunicator
+import app.gmaaps.core.interfaces.tempTargets.ttDurationMinutes
+import app.gmaaps.core.interfaces.tempTargets.ttTargetMgdl
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.plugins.sync.SyncStrings
+import app.gmaaps.plugins.sync.smsCommunicator.SmsAction
+import app.gmaaps.plugins.sync.smsCommunicator.SmsBatchResult
+import app.gmaaps.plugins.sync.smsCommunicator.runSmsBatch
 
 /**
  * Executes a remote bolus delivery: BOLUS <insulin> [MEAL].
@@ -85,3 +85,4 @@ class BolusAction(
         }
     }
 }
+

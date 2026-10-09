@@ -1,12 +1,12 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.danars.encryption.BleEncryption
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.danars.encryption.BleEncryption
 import dev.zacsweers.metro.Inject
 
 @Inject
@@ -80,7 +80,7 @@ class DanaRSPacketBolusGetBolusOption(
         dataSize = 1
         val missedBolus04EndMin = byteArrayToInt(getBytes(data, dataIndex, dataSize))
         if (!danaPump.isExtendedBolusEnabled) {
-            notificationManager.post(NotificationId.EXTENDED_BOLUS_DISABLED, TextRef.AndroidRes(app.aaps.pump.dana.R.string.danar_enableextendedbolus))
+            notificationManager.post(NotificationId.EXTENDED_BOLUS_DISABLED, TextRef.AndroidRes(app.gmaaps.pump.dana.R.string.danar_enableextendedbolus))
             failed = true
         } else {
             notificationManager.dismiss(NotificationId.EXTENDED_BOLUS_DISABLED)
@@ -107,3 +107,4 @@ class DanaRSPacketBolusGetBolusOption(
 
     override val friendlyName: String = "BOLUS__GET_BOLUS_OPTION"
 }
+

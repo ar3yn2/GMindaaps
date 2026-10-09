@@ -1,36 +1,36 @@
-package app.aaps.pump.eopatch.alarm
+﻿package app.gmaaps.pump.eopatch.alarm
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationAction
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.eopatch.EoPatchRxBus
-import app.aaps.pump.eopatch.alarm.AlarmCode.A005
-import app.aaps.pump.eopatch.alarm.AlarmCode.A016
-import app.aaps.pump.eopatch.alarm.AlarmCode.A020
-import app.aaps.pump.eopatch.alarm.AlarmCode.B000
-import app.aaps.pump.eopatch.alarm.AlarmCode.B001
-import app.aaps.pump.eopatch.alarm.AlarmCode.B012
-import app.aaps.pump.eopatch.ble.IPatchManager
-import app.aaps.pump.eopatch.ble.PatchManagerExecutor
-import app.aaps.pump.eopatch.ble.PreferenceManager
-import app.aaps.pump.eopatch.code.AlarmCategory
-import app.aaps.pump.eopatch.event.EventEoPatchAlarm
-import app.aaps.pump.eopatch.vo.Alarms
-import app.aaps.pump.eopatch.vo.PatchConfig
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationAction
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.eopatch.EoPatchRxBus
+import app.gmaaps.pump.eopatch.alarm.AlarmCode.A005
+import app.gmaaps.pump.eopatch.alarm.AlarmCode.A016
+import app.gmaaps.pump.eopatch.alarm.AlarmCode.A020
+import app.gmaaps.pump.eopatch.alarm.AlarmCode.B000
+import app.gmaaps.pump.eopatch.alarm.AlarmCode.B001
+import app.gmaaps.pump.eopatch.alarm.AlarmCode.B012
+import app.gmaaps.pump.eopatch.ble.IPatchManager
+import app.gmaaps.pump.eopatch.ble.PatchManagerExecutor
+import app.gmaaps.pump.eopatch.ble.PreferenceManager
+import app.gmaaps.pump.eopatch.code.AlarmCategory
+import app.gmaaps.pump.eopatch.event.EventEoPatchAlarm
+import app.gmaaps.pump.eopatch.vo.Alarms
+import app.gmaaps.pump.eopatch.vo.PatchConfig
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -144,7 +144,7 @@ class AlarmManager() : IAlarmManager {
 
         // Critical alarms trigger the global alarm sound overlay
         if (isCritical) {
-            uiInteraction.runAlarm(alarmMsg, resourceHelper.gs(app.aaps.core.ui.R.string.alarm), AlarmSound.ERROR)
+            uiInteraction.runAlarm(alarmMsg, resourceHelper.gs(app.gmaaps.core.ui.R.string.alarm), AlarmSound.ERROR)
         }
 
         notificationManager.post(
@@ -157,9 +157,9 @@ class AlarmManager() : IAlarmManager {
                 NotificationAction(
                     TextRef.AndroidRes(
                         when (alarmCode) {
-                            B001           -> app.aaps.core.ui.R.string.pump_resume
-                            AlarmCode.A007 -> app.aaps.core.ui.R.string.retry
-                            else           -> app.aaps.core.ui.R.string.confirm
+                            B001           -> app.gmaaps.core.ui.R.string.pump_resume
+                            AlarmCode.A007 -> app.gmaaps.core.ui.R.string.retry
+                            else           -> app.gmaaps.core.ui.R.string.confirm
                         }
                     )
                 ) {
@@ -217,3 +217,4 @@ class AlarmManager() : IAlarmManager {
         private const val OS_REGISTER_GAP = 3 * 1000L
     }
 }
+

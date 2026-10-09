@@ -1,16 +1,16 @@
-package app.aaps.plugins.sync.nsclientV3.workers
+﻿package app.gmaaps.plugins.sync.nsclientV3.workers
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.sync.NsClient
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.nssdk.interfaces.NSAndroidClient
-import app.aaps.core.objects.workflow.WorkOutcome
-import app.aaps.core.utils.safeGetLongAllowNull
-import app.aaps.core.utils.safeGetStringAllowNull
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.NsIncomingDataProcessor
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.sync.NsClient
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.nssdk.interfaces.NSAndroidClient
+import app.gmaaps.core.objects.workflow.WorkOutcome
+import app.gmaaps.core.utils.safeGetLongAllowNull
+import app.gmaaps.core.utils.safeGetStringAllowNull
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.NsIncomingDataProcessor
 import dev.zacsweers.metro.Inject
 import kotlinx.serialization.json.JsonObject
 import kotlin.math.max
@@ -68,3 +68,4 @@ class LoadProfileStoreRunner(
     }
 
 }
+

@@ -1,17 +1,17 @@
-package app.aaps.implementation.receivers
+﻿package app.gmaaps.implementation.receivers
 
 import android.content.Context
 import android.content.Intent
 import androidx.annotation.VisibleForTesting
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.Pump
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventTimeZoneChanged
-import app.aaps.core.objects.workflow.MetroBroadcastReceiver
-import app.aaps.core.utils.receivers.BundleLogger
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.Pump
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventTimeZoneChanged
+import app.gmaaps.core.objects.workflow.MetroBroadcastReceiver
+import app.gmaaps.core.utils.receivers.BundleLogger
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -86,3 +86,4 @@ class TimeDateOrTZChangeReceiver : MetroBroadcastReceiver() {
         }
     }
 }
+

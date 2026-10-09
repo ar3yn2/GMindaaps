@@ -1,8 +1,8 @@
-package app.aaps.pump.diaconn.keys
+﻿package app.gmaaps.pump.diaconn.keys
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.diaconn.R
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.diaconn.R
 
 enum class DiaconnBooleanKey(
     override val key: String,
@@ -21,3 +21,4 @@ enum class DiaconnBooleanKey(
     override val title: TextRef = TextRef.AndroidRes(titleResId)
     override val summary: TextRef? = summaryResId?.let { TextRef.AndroidRes(it) }
 }
+

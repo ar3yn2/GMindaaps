@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
@@ -12,16 +12,16 @@
 
     <application>
         <activity
-            android:name="app.aaps.pump.insight.app_layer.activities.InsightAlertActivity"
+            android:name="app.gmaaps.pump.insight.app_layer.activities.InsightAlertActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:label="@string/pump_alert"
             android:launchMode="singleInstance"
             android:theme="@style/InsightAlertDialog" />
 
-        <service android:name="app.aaps.pump.insight.connection_service.InsightConnectionService" />
+        <service android:name="app.gmaaps.pump.insight.connection_service.InsightConnectionService" />
         <service
-            android:name="app.aaps.pump.insight.InsightAlertService"
+            android:name="app.gmaaps.pump.insight.InsightAlertService"
             android:foregroundServiceType="connectedDevice" />
     </application>
 

@@ -1,8 +1,8 @@
-package app.aaps.pump.medtronic.defs
+﻿package app.gmaaps.pump.medtronic.defs
 
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.pump.medtronic.R
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.pump.medtronic.R
 
 enum class MedtronicNotificationType(
     val notificationId: NotificationId,
@@ -10,7 +10,7 @@ enum class MedtronicNotificationType(
     val notificationLevel: NotificationLevel
 ) {
 
-    PumpUnreachable(NotificationId.RILEYLINK_CONNECTION, app.aaps.core.ui.R.string.pump_unreachable, NotificationLevel.NORMAL),
+    PumpUnreachable(NotificationId.RILEYLINK_CONNECTION, app.gmaaps.core.ui.R.string.pump_unreachable, NotificationLevel.NORMAL),
     PumpTypeNotSame(NotificationId.MEDTRONIC_PUMP_ALARM, R.string.medtronic_error_pump_type_set_differs_from_detected, NotificationLevel.NORMAL),
     PumpBasalProfilesNotEnabled(NotificationId.MEDTRONIC_PUMP_ALARM, R.string.medtronic_error_pump_basal_profiles_not_enabled, NotificationLevel.IMPORTANT),
     PumpIncorrectBasalProfileSelected(NotificationId.MEDTRONIC_PUMP_ALARM, R.string.medtronic_error_pump_incorrect_basal_profile_selected, NotificationLevel.IMPORTANT),
@@ -23,3 +23,4 @@ enum class MedtronicNotificationType(
 
     constructor(resourceId: Int, notificationLevel: NotificationLevel) : this(NotificationId.MEDTRONIC_PUMP_ALARM, resourceId, notificationLevel)
 }
+

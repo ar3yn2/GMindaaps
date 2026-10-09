@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.versionChecker
+﻿package app.gmaaps.core.interfaces.versionChecker
 
 interface VersionCheckerUtils {
 

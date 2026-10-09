@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.smsCommunicator.compose
+﻿package app.gmaaps.plugins.sync.smsCommunicator.compose
 
-import app.aaps.core.interfaces.smsCommunicator.Sms
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.smsCommunicator.Sms
+import app.gmaaps.core.interfaces.utils.DateUtil
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -71,3 +71,4 @@ internal class SmsCommunicatorViewModelTest {
         assertThat(sut.uiState.value.messages[1].text).isEqualTo("newer")
     }
 }
+

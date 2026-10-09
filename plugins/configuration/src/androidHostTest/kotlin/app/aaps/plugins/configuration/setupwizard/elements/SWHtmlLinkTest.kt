@@ -1,14 +1,14 @@
-package app.aaps.plugins.configuration.setupwizard.elements
+﻿package app.gmaaps.plugins.configuration.setupwizard.elements
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.protection.PasswordCheck
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.protection.PasswordCheck
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -54,3 +54,4 @@ class SWHtmlLinkTest {
         compose.onNodeWithText("https://hidden.example.com").assertDoesNotExist()
     }
 }
+

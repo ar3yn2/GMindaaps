@@ -1,8 +1,8 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.runtime.compositionLocalOf
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.ui.compose.ComposeScreenContent
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.ui.compose.ComposeScreenContent
 
 /**
  * CompositionLocal for providing PreferenceVisibilityContext to preference composables.
@@ -42,3 +42,4 @@ val LocalHighlightKey = compositionLocalOf<String?> { null }
  * The lambda receives a composable content that takes an onBack callback.
  */
 val LocalNavigateToCompose = compositionLocalOf<((ComposeScreenContent) -> Unit)?> { null }
+

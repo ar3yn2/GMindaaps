@@ -1,4 +1,4 @@
-# Task-specific rules — Wear CustomWatchface: complication slots
+﻿# Task-specific rules — Wear CustomWatchface: complication slots
 
 This file supplements the root `CLAUDE.md`. It does not override it — if anything here
 conflicts with the root `CLAUDE.md`, the root file wins. This file exists only because the
@@ -76,7 +76,7 @@ This is not a style preference — it was violated once already this session (a 
 screen parsed `CwfData.json` directly, via `complicationDataRepository.getCustomWatchface()`
 then `JSONObject(it)`, to derive per-slot visibility on its own) and had to be rolled back.
 
-Note: `ComplicationDataRepository` (`app.aaps.wear.data`) is a general-purpose sync/persistence
+Note: `ComplicationDataRepository` (`app.gmaaps.wear.data`) is a general-purpose sync/persistence
 repository (BG, status, graph, treatment data, and CWF storage) — its name is misleading, it
 predates and is unrelated to complication *slots*, and it's also the backing store `CustomWatchface`
 itself reads from. Its existence does not create an exception to this rule: reading `.json` off

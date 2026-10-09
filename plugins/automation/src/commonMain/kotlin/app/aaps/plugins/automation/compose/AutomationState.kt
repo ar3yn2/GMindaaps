@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.compose
+﻿package app.gmaaps.plugins.automation.compose
 
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.AnnotatedString
-import app.aaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.navigation.ElementType
 
 sealed interface AutomationRoute {
     data object List : AutomationRoute
@@ -59,3 +59,4 @@ data class AutomationUiState(
     val events: List<AutomationEventUi> = emptyList(),
     val log: AnnotatedString = AnnotatedString("")
 )
+

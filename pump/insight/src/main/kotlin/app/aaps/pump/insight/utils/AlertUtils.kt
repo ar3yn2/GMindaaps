@@ -1,15 +1,15 @@
-package app.aaps.pump.insight.utils
+﻿package app.gmaaps.pump.insight.utils
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Alarm
 import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.Error
 import androidx.compose.material.icons.filled.Warning
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.pump.insight.R
-import app.aaps.pump.insight.descriptors.AlertCategory
-import app.aaps.pump.insight.descriptors.AlertType
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.pump.insight.R
+import app.gmaaps.pump.insight.descriptors.AlertCategory
+import app.gmaaps.pump.insight.descriptors.AlertType
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -80,7 +80,7 @@ class AlertUtils(private val rh: ResourceHelper) {
         }
     )
 
-    fun getAlertDescription(alert: app.aaps.pump.insight.descriptors.Alert): String? {
+    fun getAlertDescription(alert: app.gmaaps.pump.insight.descriptors.Alert): String? {
         val decimalFormat = NumberFormat.DECIMAL_2
         val hours = alert.tBRDuration / 60
         val minutes = alert.tBRDuration - hours * 60
@@ -122,3 +122,4 @@ class AlertUtils(private val rh: ResourceHelper) {
         AlertCategory.REMINDER    -> Icons.Default.Alarm
     }
 }
+

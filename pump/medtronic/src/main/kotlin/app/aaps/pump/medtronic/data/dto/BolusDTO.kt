@@ -1,8 +1,8 @@
-package app.aaps.pump.medtronic.data.dto
+﻿package app.gmaaps.pump.medtronic.data.dto
 
-import app.aaps.core.utils.StringUtil
-import app.aaps.core.utils.formatUS
-import app.aaps.pump.medtronic.defs.PumpBolusType
+import app.gmaaps.core.utils.StringUtil
+import app.gmaaps.core.utils.formatUS
+import app.gmaaps.pump.medtronic.defs.PumpBolusType
 import com.google.gson.annotations.Expose
 
 /**

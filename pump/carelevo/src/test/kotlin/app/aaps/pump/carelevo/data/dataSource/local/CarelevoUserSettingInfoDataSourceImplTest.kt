@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.data.dataSource.local
+﻿package app.gmaaps.pump.carelevo.data.dataSource.local
 
-import app.aaps.pump.carelevo.data.dao.CarelevoUserSettingInfoDao
-import app.aaps.pump.carelevo.data.model.entities.CarelevoUserSettingInfoEntity
+import app.gmaaps.pump.carelevo.data.dao.CarelevoUserSettingInfoDao
+import app.gmaaps.pump.carelevo.data.model.entities.CarelevoUserSettingInfoEntity
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Observable
 import org.junit.jupiter.api.BeforeEach
@@ -92,3 +92,4 @@ internal class CarelevoUserSettingInfoDataSourceImplTest {
         verify(dao).deleteUserSetting()
     }
 }
+

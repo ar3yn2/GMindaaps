@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.scenes
+﻿package app.gmaaps.core.interfaces.scenes
 
-import app.aaps.core.data.model.Scene
-import app.aaps.core.interfaces.bolus.WizardBolusExecutor
+import app.gmaaps.core.data.model.Scene
+import app.gmaaps.core.interfaces.bolus.WizardBolusExecutor
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 
@@ -115,3 +115,4 @@ sealed interface SceneAutomationResult {
         val totalCount: Int
     ) : SceneAutomationResult
 }
+

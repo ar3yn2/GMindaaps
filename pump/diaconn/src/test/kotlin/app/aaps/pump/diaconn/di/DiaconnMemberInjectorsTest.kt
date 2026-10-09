@@ -1,7 +1,7 @@
-package app.aaps.pump.diaconn.di
+﻿package app.gmaaps.pump.diaconn.di
 
-import app.aaps.pump.diaconn.packet.DiaconnG8Packet
-import app.aaps.shared.tests.missingMemberInjectorEntries
+import app.gmaaps.pump.diaconn.packet.DiaconnG8Packet
+import app.gmaaps.shared.tests.missingMemberInjectorEntries
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -23,3 +23,4 @@ class DiaconnMemberInjectorsTest {
         assertThat(missing).isEmpty()
     }
 }
+

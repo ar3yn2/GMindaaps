@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.services
+﻿package app.gmaaps.plugins.automation.services
 
 import android.Manifest
 import android.content.ComponentName
@@ -8,11 +8,11 @@ import android.content.ServiceConnection
 import android.content.pm.PackageManager
 import android.os.IBinder
 import androidx.core.app.ActivityCompat
-import app.aaps.core.interfaces.concurrent.AapsLock
-import app.aaps.core.interfaces.concurrent.withLock
-import app.aaps.core.interfaces.location.LocationServiceController
-import app.aaps.core.interfaces.notifications.NotificationHolder
-import app.aaps.core.utils.DeferredForegroundStart
+import app.gmaaps.core.interfaces.concurrent.AapsLock
+import app.gmaaps.core.interfaces.concurrent.withLock
+import app.gmaaps.core.interfaces.location.LocationServiceController
+import app.gmaaps.core.interfaces.notifications.NotificationHolder
+import app.gmaaps.core.utils.DeferredForegroundStart
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -121,3 +121,4 @@ class LocationServiceControllerImpl(
     }
 
 }
+

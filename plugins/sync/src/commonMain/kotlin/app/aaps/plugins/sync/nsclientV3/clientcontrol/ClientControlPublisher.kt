@@ -1,13 +1,13 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.nsclient.NSClientRepository
-import app.aaps.core.interfaces.scenes.ClientControlSendResult
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.nssdk.localmodel.clientcontrol.ClientControlMessage
-import app.aaps.core.nssdk.localmodel.clientcontrol.SignedEnvelope
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.nsclient.NSClientRepository
+import app.gmaaps.core.interfaces.scenes.ClientControlSendResult
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.ClientControlMessage
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.SignedEnvelope
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -183,3 +183,4 @@ class ClientControlPublisher(
             )
     }
 }
+

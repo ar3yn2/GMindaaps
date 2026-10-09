@@ -1,9 +1,9 @@
-package app.aaps.workflow
+﻿package app.gmaaps.workflow
 
-import app.aaps.core.interfaces.workflow.CalculationWorkflow.Companion.HISTORY_CALCULATION
-import app.aaps.core.interfaces.workflow.CalculationWorkflow.Companion.MAIN_CALCULATION
-import app.aaps.core.interfaces.workflow.CalculationWorkflow.Companion.UPDATE_PREDICTIONS
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.workflow.CalculationWorkflow.Companion.HISTORY_CALCULATION
+import app.gmaaps.core.interfaces.workflow.CalculationWorkflow.Companion.MAIN_CALCULATION
+import app.gmaaps.core.interfaces.workflow.CalculationWorkflow.Companion.UPDATE_PREDICTIONS
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -111,3 +111,4 @@ class WorkflowChainDataTest : TestBase() {
         assertThat(sut.prepareFor(MAIN_CALCULATION, winner)).isNotNull()
     }
 }
+

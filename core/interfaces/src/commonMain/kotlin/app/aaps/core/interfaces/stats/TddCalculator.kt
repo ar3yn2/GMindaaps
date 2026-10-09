@@ -1,8 +1,8 @@
-package app.aaps.core.interfaces.stats
+﻿package app.gmaaps.core.interfaces.stats
 
 import androidx.collection.LongSparseArray
-import app.aaps.core.data.aps.AverageTDD
-import app.aaps.core.data.model.TDD
+import app.gmaaps.core.data.aps.AverageTDD
+import app.gmaaps.core.data.model.TDD
 
 /**
  * Total Daily Dose calculations
@@ -82,3 +82,4 @@ interface TddCalculator {
      */
     fun averageTDD(tdds: LongSparseArray<TDD>?): AverageTDD?
 }
+

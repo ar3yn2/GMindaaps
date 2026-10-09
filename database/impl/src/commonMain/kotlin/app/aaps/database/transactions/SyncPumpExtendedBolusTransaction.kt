@@ -1,7 +1,7 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.ExtendedBolus
-import app.aaps.database.entities.interfaces.end
+import app.gmaaps.database.entities.ExtendedBolus
+import app.gmaaps.database.entities.interfaces.end
 
 /**
  * Creates or updates the extended bolus from pump synchronization

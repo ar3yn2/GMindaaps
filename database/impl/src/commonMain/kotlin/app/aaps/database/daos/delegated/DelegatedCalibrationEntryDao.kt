@@ -1,8 +1,8 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.CalibrationEntryDao
-import app.aaps.database.entities.CalibrationEntry
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.CalibrationEntryDao
+import app.gmaaps.database.entities.CalibrationEntry
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedCalibrationEntryDao(changes: MutableList<DBEntry>, private val dao: CalibrationEntryDao) : DelegatedDao(changes), CalibrationEntryDao by dao {
 
@@ -16,3 +16,4 @@ internal class DelegatedCalibrationEntryDao(changes: MutableList<DBEntry>, priva
         return dao.updateExistingEntry(entry)
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
 import com.google.common.truth.Truth.assertThat
 import org.apache.commons.codec.binary.Hex
 import org.junit.jupiter.api.Test
@@ -163,3 +163,4 @@ class ProgramBasalCommandTest {
         assertThat(encoded).asList().containsExactlyElementsIn(Hex.decodeHex(expected).asList()).inOrder()
     }
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.eros.driver.definition.schedule;
+package app.gmaaps.pump.omnipod.eros.driver.definition.schedule;
 
 import androidx.annotation.NonNull;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.communication.message.IRawRepresentable;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.IRawRepresentable;
 
 public class BasalTableEntry implements IRawRepresentable {
 
@@ -53,3 +53,4 @@ public class BasalTableEntry implements IRawRepresentable {
                 '}';
     }
 }
+

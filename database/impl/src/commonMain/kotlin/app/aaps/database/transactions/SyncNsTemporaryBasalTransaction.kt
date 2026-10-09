@@ -1,7 +1,7 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.TemporaryBasal
-import app.aaps.database.entities.interfaces.end
+import app.gmaaps.database.entities.TemporaryBasal
+import app.gmaaps.database.entities.interfaces.end
 import kotlin.math.abs
 
 /**

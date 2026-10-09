@@ -1,9 +1,9 @@
-package app.aaps.pump.insight.utils
+﻿package app.gmaaps.pump.insight.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import app.aaps.pump.insight.descriptors.FirmwareVersions
-import app.aaps.pump.insight.descriptors.SystemIdentification
+import app.gmaaps.pump.insight.descriptors.FirmwareVersions
+import app.gmaaps.pump.insight.descriptors.SystemIdentification
 import org.spongycastle.util.encoders.Hex
 
 class PairingDataStorage(context: Context) {

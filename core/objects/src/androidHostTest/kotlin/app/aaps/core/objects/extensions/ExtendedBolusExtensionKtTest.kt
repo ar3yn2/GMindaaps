@@ -1,11 +1,11 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.data.aps.SMBDefaults
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.aps.AutosensResult
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.aps.SMBDefaults
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.aps.AutosensResult
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.whenever
@@ -65,3 +65,4 @@ class ExtendedBolusExtensionKtTest : TestBaseWithProfile() {
         assertThat(tbr.type).isEqualTo(TB.Type.FAKE_EXTENDED)
     }
 }
+

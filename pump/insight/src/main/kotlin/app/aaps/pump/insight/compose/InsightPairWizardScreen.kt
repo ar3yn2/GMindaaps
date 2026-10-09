@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.compose
+﻿package app.gmaaps.pump.insight.compose
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -26,10 +26,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardScreen
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.insight.R
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardScreen
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.insight.R
 
 enum class InsightPairStep { SEARCH, CONNECTING, CODE_COMPARE, COMPLETED }
 
@@ -64,7 +64,7 @@ fun InsightPairWizardScreen(
         canGoBack = state.step == InsightPairStep.SEARCH,
         onBack = onCancel,
         cancelDialogTitle = stringResource(id = R.string.insight_pairing),
-        cancelDialogText = stringResource(id = app.aaps.core.ui.R.string.cancel)
+        cancelDialogText = stringResource(id = app.gmaaps.core.ui.R.string.cancel)
     ) { step, _ ->
         when (step) {
             InsightPairStep.SEARCH       -> SearchStep(
@@ -95,7 +95,7 @@ private fun SearchStep(
     WizardStepLayout(
         scrollable = false,
         secondaryButton = WizardButton(
-            text = stringResource(id = app.aaps.core.ui.R.string.cancel),
+            text = stringResource(id = app.gmaaps.core.ui.R.string.cancel),
             onClick = onCancel
         )
     ) {
@@ -156,7 +156,7 @@ private fun DeviceItem(device: InsightPairDevice, onClick: () -> Unit) {
 private fun ConnectingStep(onCancel: () -> Unit) {
     WizardStepLayout(
         secondaryButton = WizardButton(
-            text = stringResource(id = app.aaps.core.ui.R.string.cancel),
+            text = stringResource(id = app.gmaaps.core.ui.R.string.cancel),
             onClick = onCancel
         )
     ) {
@@ -168,7 +168,7 @@ private fun ConnectingStep(onCancel: () -> Unit) {
         )
         Spacer(modifier = Modifier.height(16.dp))
         Text(
-            text = stringResource(id = app.aaps.core.ui.R.string.please_wait),
+            text = stringResource(id = app.gmaaps.core.ui.R.string.please_wait),
             style = MaterialTheme.typography.bodyLarge,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()
@@ -184,11 +184,11 @@ private fun CodeCompareStep(
 ) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(id = app.aaps.core.ui.R.string.yes),
+            text = stringResource(id = app.gmaaps.core.ui.R.string.yes),
             onClick = onYes
         ),
         secondaryButton = WizardButton(
-            text = stringResource(id = app.aaps.core.ui.R.string.no),
+            text = stringResource(id = app.gmaaps.core.ui.R.string.no),
             onClick = onNo
         )
     ) {
@@ -214,7 +214,7 @@ private fun CodeCompareStep(
 private fun CompletedStep(onExit: () -> Unit) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(id = app.aaps.core.ui.R.string.exit),
+            text = stringResource(id = app.gmaaps.core.ui.R.string.exit),
             onClick = onExit
         )
     ) {
@@ -236,3 +236,4 @@ private fun CompletedStep(onExit: () -> Unit) {
         )
     }
 }
+

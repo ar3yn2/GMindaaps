@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.profile
+﻿package app.gmaaps.core.interfaces.profile
 
 /**
  * Types of profile validation errors, corresponding to profile editor tabs/sections.
@@ -37,3 +37,4 @@ data class ProfileValidationError(
     val type: ProfileErrorType,
     val message: String
 )
+

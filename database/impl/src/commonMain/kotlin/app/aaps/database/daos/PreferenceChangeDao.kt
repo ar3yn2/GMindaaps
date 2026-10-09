@@ -1,10 +1,10 @@
-package app.aaps.database.daos
+﻿package app.gmaaps.database.daos
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import app.aaps.database.entities.PreferenceChange
-import app.aaps.database.entities.TABLE_PREFERENCE_CHANGES
+import app.gmaaps.database.entities.PreferenceChange
+import app.gmaaps.database.entities.TABLE_PREFERENCE_CHANGES
 
 @Dao
 interface PreferenceChangeDao {

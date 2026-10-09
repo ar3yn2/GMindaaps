@@ -1,13 +1,13 @@
-package app.aaps.pump.danars.di
+﻿package app.gmaaps.pump.danars.di
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothManager
 import android.content.Context
-import app.aaps.pump.danars.comm.DanaRSPacket
-import app.aaps.pump.danars.comm.DanaRSPacketNotifyAlarm
-import app.aaps.pump.danars.comm.DanaRSPacketNotifyDeliveryComplete
-import app.aaps.pump.danars.comm.DanaRSPacketNotifyDeliveryRateDisplay
-import app.aaps.pump.danars.comm.DanaRSPacketNotifyMissedBolusAlarm
+import app.gmaaps.pump.danars.comm.DanaRSPacket
+import app.gmaaps.pump.danars.comm.DanaRSPacketNotifyAlarm
+import app.gmaaps.pump.danars.comm.DanaRSPacketNotifyDeliveryComplete
+import app.gmaaps.pump.danars.comm.DanaRSPacketNotifyDeliveryRateDisplay
+import app.gmaaps.pump.danars.comm.DanaRSPacketNotifyMissedBolusAlarm
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -34,3 +34,4 @@ object DanaRSBindings {
     fun providesBluetoothAdapter(context: Context): BluetoothAdapter? =
         (context.getSystemService(Context.BLUETOOTH_SERVICE) as BluetoothManager?)?.adapter
 }
+

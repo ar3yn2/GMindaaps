@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program
 
 import java.nio.ByteBuffer
 
@@ -9,3 +9,4 @@ class BolusShortInsulinProgramElement(
     override val encoded: ByteArray
         get() = ByteBuffer.allocate(2).putShort(numberOfPulses).array()
 }
+

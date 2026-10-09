@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.domain.repository
+﻿package app.gmaaps.pump.carelevo.domain.repository
 
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single

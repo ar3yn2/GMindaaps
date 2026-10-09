@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.tidepool.comm
+﻿package app.gmaaps.plugins.sync.tidepool.comm
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.plugins.sync.tidepool.events.EventTidepoolStatus
-import app.aaps.plugins.sync.tidepool.messages.AuthReplyMessage
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.plugins.sync.tidepool.events.EventTidepoolStatus
+import app.gmaaps.plugins.sync.tidepool.messages.AuthReplyMessage
 import com.google.common.truth.Truth.assertThat
 import okhttp3.Headers.Companion.headersOf
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -84,3 +84,4 @@ class TidepoolCallbackTest {
         assertThat(statusMessages().single()).contains("no route to host")
     }
 }
+

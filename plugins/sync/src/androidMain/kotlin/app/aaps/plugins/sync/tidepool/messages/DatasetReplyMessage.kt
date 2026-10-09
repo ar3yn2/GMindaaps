@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.tidepool.messages
+﻿package app.gmaaps.plugins.sync.tidepool.messages
 
 class DatasetReplyMessage {
 
@@ -41,3 +41,4 @@ class DatasetReplyMessage {
         return data?.uploadId ?: uploadId
     }
 }
+

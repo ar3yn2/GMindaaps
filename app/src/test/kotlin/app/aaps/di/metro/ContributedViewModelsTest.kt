@@ -1,17 +1,17 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
-import app.aaps.plugins.constraints.objectives.compose.ObjectivesViewModel
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.compose.AuthorizedClientsViewModel
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.compose.PairWithMasterViewModel
-import app.aaps.plugins.sync.nsclientV3.compose.NSClientViewModel
-import app.aaps.plugins.sync.smsCommunicator.compose.SmsCommunicatorViewModel
-import app.aaps.plugins.sync.tidepool.compose.TidepoolViewModel
-import app.aaps.plugins.sync.wear.compose.WearViewModel
-import app.aaps.plugins.sync.xdrip.compose.XdripViewModel
-import app.aaps.ui.compose.careDialog.CareDialogViewModel
-import app.aaps.ui.compose.fillDialog.FillDialogViewModel
-import app.aaps.ui.compose.scenes.wizard.SceneWizardViewModel
-import app.aaps.ui.compose.wizardDialog.WizardDialogViewModel
+import app.gmaaps.plugins.constraints.objectives.compose.ObjectivesViewModel
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.compose.AuthorizedClientsViewModel
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.compose.PairWithMasterViewModel
+import app.gmaaps.plugins.sync.nsclientV3.compose.NSClientViewModel
+import app.gmaaps.plugins.sync.smsCommunicator.compose.SmsCommunicatorViewModel
+import app.gmaaps.plugins.sync.tidepool.compose.TidepoolViewModel
+import app.gmaaps.plugins.sync.wear.compose.WearViewModel
+import app.gmaaps.plugins.sync.xdrip.compose.XdripViewModel
+import app.gmaaps.ui.compose.careDialog.CareDialogViewModel
+import app.gmaaps.ui.compose.fillDialog.FillDialogViewModel
+import app.gmaaps.ui.compose.scenes.wizard.SceneWizardViewModel
+import app.gmaaps.ui.compose.wizardDialog.WizardDialogViewModel
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -75,3 +75,4 @@ class ContributedViewModelsTest {
         assertThat(provider()).isNotSameInstanceAs(provider())
     }
 }
+

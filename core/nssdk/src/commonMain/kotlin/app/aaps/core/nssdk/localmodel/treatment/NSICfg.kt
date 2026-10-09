@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.treatment
+﻿package app.gmaaps.core.nssdk.localmodel.treatment
 
 import kotlinx.serialization.Serializable
 

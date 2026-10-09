@@ -1,15 +1,15 @@
-package app.aaps.implementation.protection
+﻿package app.gmaaps.implementation.protection
 
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.maintenance.FileListProvider
-import app.aaps.core.interfaces.protection.ExportPasswordPlatform
-import app.aaps.implementation.protection.AndroidExportPasswordPlatform.Companion.DATASTORE_NAME
-import app.aaps.implementation.protection.AndroidExportPasswordPlatform.Companion.PASSWORD_PREFERENCE_NAME
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.maintenance.FileListProvider
+import app.gmaaps.core.interfaces.protection.ExportPasswordPlatform
+import app.gmaaps.implementation.protection.AndroidExportPasswordPlatform.Companion.DATASTORE_NAME
+import app.gmaaps.implementation.protection.AndroidExportPasswordPlatform.Companion.PASSWORD_PREFERENCE_NAME
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -94,7 +94,8 @@ class AndroidExportPasswordPlatform(
 
     private companion object {
 
-        const val DATASTORE_NAME = "app.aaps.plugins.configuration.maintenance.ImportExport.datastore"
+        const val DATASTORE_NAME = "app.gmaaps.plugins.configuration.maintenance.ImportExport.datastore"
         const val PASSWORD_PREFERENCE_NAME = "$DATASTORE_NAME.unattended_export"
     }
 }
+

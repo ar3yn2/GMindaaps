@@ -1,17 +1,17 @@
-package app.aaps.pump.common.sync
+﻿package app.gmaaps.pump.common.sync
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.concurrent.AapsLock
-import app.aaps.core.interfaces.concurrent.withLock
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.keys.StringNonKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.concurrent.AapsLock
+import app.gmaaps.core.interfaces.concurrent.withLock
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.keys.StringNonKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -251,3 +251,4 @@ private fun StoredTbr.toEntry() = PumpDbEntryTBR(
     pumpId = pumpId, rate = rate, isAbsolute = isAbsolute, durationInSeconds = durationInSeconds,
     tbrType = PumpSync.TemporaryBasalType.valueOf(tbrType)
 )
+

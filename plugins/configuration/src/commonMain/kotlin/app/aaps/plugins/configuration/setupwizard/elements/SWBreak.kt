@@ -1,15 +1,15 @@
-package app.aaps.plugins.configuration.setupwizard.elements
+﻿package app.gmaaps.plugins.configuration.setupwizard.elements
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.protection.PasswordCheck
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.protection.PasswordCheck
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.AapsSpacing
 import dev.zacsweers.metro.Inject
 
 @Inject
@@ -28,3 +28,4 @@ class SWBreak(aapsLogger: AAPSLogger, rh: TextResolver, rxBus: RxBus, preference
         Spacer(modifier = Modifier.height(AapsSpacing.medium))
     }
 }
+

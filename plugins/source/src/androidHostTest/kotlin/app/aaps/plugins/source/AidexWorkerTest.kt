@@ -1,21 +1,21 @@
-package app.aaps.plugins.source
+﻿package app.gmaaps.plugins.source
 
 import androidx.work.ListenableWorker
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.receivers.Intents
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.receivers.Intents
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -82,7 +82,7 @@ class AidexWorkerTest : TestBaseWithProfile() {
 
     @Test
     fun `plugin disabled returns success no-op`() = runTest {
-        aidexPlugin.setPluginEnabled(app.aaps.core.data.plugin.PluginType.BGSOURCE, false)
+        aidexPlugin.setPluginEnabled(app.gmaaps.core.data.plugin.PluginType.BGSOURCE, false)
 
         val result = worker.doWork()
 
@@ -93,7 +93,7 @@ class AidexWorkerTest : TestBaseWithProfile() {
 
     @Test
     fun `valid mg per dl reading inserts data and refreshes overview`() = runTest {
-        aidexPlugin.setPluginEnabled(app.aaps.core.data.plugin.PluginType.BGSOURCE, true)
+        aidexPlugin.setPluginEnabled(app.gmaaps.core.data.plugin.PluginType.BGSOURCE, true)
         whenever(persistenceLayer.insertCgmSourceData(anyOrNull(), anyOrNull(), anyOrNull(), anyOrNull()))
             .thenReturn(PersistenceLayer.TransactionResult())
 
@@ -114,7 +114,7 @@ class AidexWorkerTest : TestBaseWithProfile() {
 
     @Test
     fun `mmol per l reading is converted to mg per dl before insert`() = runTest {
-        aidexPlugin.setPluginEnabled(app.aaps.core.data.plugin.PluginType.BGSOURCE, true)
+        aidexPlugin.setPluginEnabled(app.gmaaps.core.data.plugin.PluginType.BGSOURCE, true)
         whenever(persistenceLayer.insertCgmSourceData(anyOrNull(), anyOrNull(), anyOrNull(), anyOrNull()))
             .thenReturn(PersistenceLayer.TransactionResult())
         reMockInput(inputDataOf(bgType = "mmol/l", bgValue = 6.0))
@@ -134,7 +134,7 @@ class AidexWorkerTest : TestBaseWithProfile() {
 
     @Test
     fun `sensor error blocks insert`() = runTest {
-        aidexPlugin.setPluginEnabled(app.aaps.core.data.plugin.PluginType.BGSOURCE, true)
+        aidexPlugin.setPluginEnabled(app.gmaaps.core.data.plugin.PluginType.BGSOURCE, true)
         reMockInput(inputDataOf(sensorError = true))
 
         worker.doWork()
@@ -146,7 +146,7 @@ class AidexWorkerTest : TestBaseWithProfile() {
 
     @Test
     fun `sensor expired blocks insert and flips hasSensorError`() = runTest {
-        aidexPlugin.setPluginEnabled(app.aaps.core.data.plugin.PluginType.BGSOURCE, true)
+        aidexPlugin.setPluginEnabled(app.gmaaps.core.data.plugin.PluginType.BGSOURCE, true)
         reMockInput(inputDataOf(sensorExpired = true))
 
         worker.doWork()
@@ -157,7 +157,7 @@ class AidexWorkerTest : TestBaseWithProfile() {
 
     @Test
     fun `zero bg value blocks insert`() = runTest {
-        aidexPlugin.setPluginEnabled(app.aaps.core.data.plugin.PluginType.BGSOURCE, true)
+        aidexPlugin.setPluginEnabled(app.gmaaps.core.data.plugin.PluginType.BGSOURCE, true)
         reMockInput(inputDataOf(bgValue = 0.0))
 
         worker.doWork()
@@ -168,7 +168,7 @@ class AidexWorkerTest : TestBaseWithProfile() {
 
     @Test
     fun `hasSensorError clears after a clean reading following a faulted one`() = runTest {
-        aidexPlugin.setPluginEnabled(app.aaps.core.data.plugin.PluginType.BGSOURCE, true)
+        aidexPlugin.setPluginEnabled(app.gmaaps.core.data.plugin.PluginType.BGSOURCE, true)
         whenever(persistenceLayer.insertCgmSourceData(anyOrNull(), anyOrNull(), anyOrNull(), anyOrNull()))
             .thenReturn(PersistenceLayer.TransactionResult())
 
@@ -186,7 +186,7 @@ class AidexWorkerTest : TestBaseWithProfile() {
 
     @Test
     fun `persistence exception surfaces as Result failure`() = runTest {
-        aidexPlugin.setPluginEnabled(app.aaps.core.data.plugin.PluginType.BGSOURCE, true)
+        aidexPlugin.setPluginEnabled(app.gmaaps.core.data.plugin.PluginType.BGSOURCE, true)
         whenever(persistenceLayer.insertCgmSourceData(anyOrNull(), anyOrNull(), anyOrNull(), anyOrNull()))
             .thenThrow(RuntimeException("boom"))
 
@@ -195,3 +195,4 @@ class AidexWorkerTest : TestBaseWithProfile() {
         assertThat(result).isInstanceOf(ListenableWorker.Result.Failure::class.java)
     }
 }
+

@@ -1,14 +1,14 @@
-package app.aaps
+﻿package app.gmaaps
 
 import android.annotation.SuppressLint
 import android.os.SystemClock
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.di.testGraphs
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.di.testGraphs
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest

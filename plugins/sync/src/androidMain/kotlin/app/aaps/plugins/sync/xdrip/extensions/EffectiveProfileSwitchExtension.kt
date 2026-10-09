@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.xdrip.extensions
+﻿package app.gmaaps.plugins.sync.xdrip.extensions
 
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.TE
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.objects.profile.ProfileSealed
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.objects.profile.ProfileSealed
 import org.json.JSONObject
 
 fun EPS.toJson(isAdd: Boolean, dateUtil: DateUtil): JSONObject =
@@ -27,3 +27,4 @@ fun EPS.toJson(isAdd: Boolean, dateUtil: DateUtil): JSONObject =
             if (ids.pumpSerial != null) it.put("pumpSerial", ids.pumpSerial)
             if (isAdd && ids.nightscoutId != null) it.put("_id", ids.nightscoutId)
         }
+

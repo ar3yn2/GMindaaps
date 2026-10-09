@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     // NOT com.android.library. AGP 9 refuses that plugin together with the multiplatform plugin.
@@ -13,7 +13,7 @@ plugins {
 // named view of them that common code can reach.
 val generateMainStrings = tasks.register<GenerateKeyStringsTask>("generateMainStrings") {
     resDir.set(layout.projectDirectory.dir("src/androidMain/res"))
-    packageName.set("app.aaps.plugins.main")
+    packageName.set("app.gmaaps.plugins.main")
     owner.set("main")
     objectName.set("MainStrings")
     idsObjectName.set("MainStringIds")
@@ -26,7 +26,7 @@ val generateMainStrings = tasks.register<GenerateKeyStringsTask>("generateMainSt
 
 kotlin {
     android {
-        namespace = "app.aaps.plugins.main"
+        namespace = "app.gmaaps.plugins.main"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         androidResources { enable = true }
@@ -95,4 +95,5 @@ kotlin {
         }
     }
 }
+
 

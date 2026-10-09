@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.scenes
+﻿package app.gmaaps.core.interfaces.scenes
 
 /**
  * Domain owner of scene definitions. The whole scene list syncs as a plain blob over the generic key-sync
@@ -7,3 +7,4 @@ package app.aaps.core.interfaces.scenes
  * received — accepted because scene editing is effectively a one-time setup.)
  */
 interface Scenes
+

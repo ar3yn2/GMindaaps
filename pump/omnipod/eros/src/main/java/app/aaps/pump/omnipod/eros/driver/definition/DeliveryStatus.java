@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition;
+package app.gmaaps.pump.omnipod.eros.driver.definition;
 
 public enum DeliveryStatus {
     SUSPENDED((byte) 0x00),
@@ -35,3 +35,4 @@ public enum DeliveryStatus {
         return this.equals(TEMP_BASAL_RUNNING) || this.equals(BOLUS_AND_TEMP_BASAL);
     }
 }
+

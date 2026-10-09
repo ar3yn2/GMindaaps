@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.data.mapper
+﻿package app.gmaaps.pump.carelevo.data.mapper
 
-import app.aaps.pump.carelevo.data.model.entities.CarelevoAlarmInfoEntity
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
-import app.aaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.pump.carelevo.data.model.entities.CarelevoAlarmInfoEntity
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
 
 fun CarelevoAlarmInfoEntity.transformToDomainModel(): CarelevoAlarmInfo =
     CarelevoAlarmInfo(

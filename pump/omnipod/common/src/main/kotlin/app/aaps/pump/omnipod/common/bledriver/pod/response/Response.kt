@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.response
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.response
 
 import java.io.Serializable
 
@@ -7,3 +7,4 @@ interface Response : Serializable {
     val responseType: ResponseType
     val encoded: ByteArray
 }
+

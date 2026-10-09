@@ -1,14 +1,14 @@
-package app.aaps.plugins.aps.openAPSAutoISF
+﻿package app.gmaaps.plugins.aps.openAPSAutoISF
 
-import app.aaps.core.interfaces.aps.GlucoseStatusAutoIsf
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.plugins.aps.openAPS.DeltaCalculator
-import app.aaps.plugins.aps.openAPSAutoISF.extensions.asRounded
-import app.aaps.plugins.aps.openAPSAutoISF.extensions.log
+import app.gmaaps.core.interfaces.aps.GlucoseStatusAutoIsf
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.plugins.aps.openAPS.DeltaCalculator
+import app.gmaaps.plugins.aps.openAPSAutoISF.extensions.asRounded
+import app.gmaaps.plugins.aps.openAPSAutoISF.extensions.log
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn

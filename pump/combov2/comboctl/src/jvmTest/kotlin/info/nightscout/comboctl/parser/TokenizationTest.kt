@@ -1,6 +1,6 @@
-package info.nightscout.comboctl.parser
+﻿package info.nightscout.comboctl.parser
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -104,3 +104,4 @@ class TokenizationTest : TestBase() {
         assertEquals(Glyph.LargeSymbol(LargeSymbol.BOLUS), iterator.next().glyph)
     }
 }
+

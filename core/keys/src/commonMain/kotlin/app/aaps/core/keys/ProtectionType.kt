@@ -1,8 +1,8 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
 /**
  * Protection types for settings/application/bolus protection.
- * Must be kept in sync with app.aaps.core.interfaces.protection.ProtectionCheck.ProtectionType
+ * Must be kept in sync with app.gmaaps.core.interfaces.protection.ProtectionCheck.ProtectionType
  */
 enum class ProtectionType {
 
@@ -12,3 +12,4 @@ enum class ProtectionType {
     CUSTOM_PASSWORD,
     CUSTOM_PIN
 }
+

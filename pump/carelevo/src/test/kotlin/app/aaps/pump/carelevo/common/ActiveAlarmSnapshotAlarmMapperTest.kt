@@ -1,10 +1,10 @@
-package app.aaps.pump.carelevo.common
+﻿package app.gmaaps.pump.carelevo.common
 
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotFlags
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotResponse
-import app.aaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotTier
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
-import app.aaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotFlags
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotResponse
+import app.gmaaps.pump.carelevo.ble.commands.ActiveAlarmSnapshotTier
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
 import kotlin.time.Clock
@@ -140,3 +140,4 @@ internal class ActiveAlarmSnapshotAlarmMapperTest {
         assertThat(alarms.first { it.cause == AlarmCause.ALARM_ALERT_PATCH_EXPIRED_PHASE_2 }.value).isEqualTo(24)
     }
 }
+

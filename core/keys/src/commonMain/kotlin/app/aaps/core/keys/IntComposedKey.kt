@@ -1,6 +1,6 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
-import app.aaps.core.keys.interfaces.IntComposedNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.IntComposedNonPreferenceKey
 
 enum class IntComposedKey(
     override val key: String,

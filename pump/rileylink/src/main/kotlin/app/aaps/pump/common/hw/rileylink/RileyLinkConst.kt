@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink
+﻿package app.gmaaps.pump.common.hw.rileylink
 
 /**
  * Created by andy on 16/05/2018.
@@ -32,3 +32,4 @@ object RileyLinkConst {
         //const val MSG_ServiceCommand: String = PREFIX + "MSG_ServiceCommand"
     }
 }
+

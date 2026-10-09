@@ -1,13 +1,13 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import androidx.annotation.NonNull;
 
 import org.joda.time.Duration;
 
-import app.aaps.core.utils.pump.ByteUtil;
-import app.aaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
-import app.aaps.pump.omnipod.eros.driver.definition.BeepConfigType;
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.core.utils.pump.ByteUtil;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
+import app.gmaaps.pump.omnipod.eros.driver.definition.BeepConfigType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
 
 public class BeepConfigCommand extends MessageBlock {
     private final BeepConfigType beepType;
@@ -57,3 +57,4 @@ public class BeepConfigCommand extends MessageBlock {
                 '}';
     }
 }
+

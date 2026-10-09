@@ -1,4 +1,4 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
 import dev.zacsweers.metro.DependencyGraph
 import dev.zacsweers.metro.GraphExtension
@@ -118,3 +118,4 @@ class MetroScopingTest {
         assertNotSame(firstWindow.perWindow, secondWindow.perWindow)
     }
 }
+

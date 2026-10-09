@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition.schedule;
+package app.gmaaps.pump.omnipod.eros.driver.definition.schedule;
 
 import org.joda.time.Duration;
 import org.junit.jupiter.api.Assertions;

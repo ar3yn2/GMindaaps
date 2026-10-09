@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.insulin
+﻿package app.gmaaps.core.interfaces.insulin
 
-import app.aaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.ICfg
 
 /**
  * Management interface for insulin CRUD operations.
@@ -94,3 +94,4 @@ interface InsulinManager {
      */
     fun buildDisplaySuffix(nickname: String, peak: Int, dia: Double, concentration: Double, excludeIndex: Int = -1): String
 }
+

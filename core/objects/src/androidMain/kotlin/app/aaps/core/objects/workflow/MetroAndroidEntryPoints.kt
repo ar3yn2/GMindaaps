@@ -1,10 +1,10 @@
-package app.aaps.core.objects.workflow
+﻿package app.gmaaps.core.objects.workflow
 
 import android.app.Service
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import app.aaps.core.interfaces.di.injectMetroMembers
+import app.gmaaps.core.interfaces.di.injectMetroMembers
 
 /**
  * Android builds these classes itself, so they cannot take dependencies in a constructor - they have
@@ -34,3 +34,4 @@ abstract class MetroService : Service() {
         super.onCreate()
     }
 }
+

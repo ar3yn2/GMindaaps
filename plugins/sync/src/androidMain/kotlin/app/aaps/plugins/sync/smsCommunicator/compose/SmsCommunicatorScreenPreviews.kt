@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.smsCommunicator.compose
+﻿package app.gmaaps.plugins.sync.smsCommunicator.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -20,3 +20,4 @@ internal fun SmsCommunicatorScreenPreview() {
         )
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.ui.compose
+﻿package app.gmaaps.pump.omnipod.eros.ui.compose
 
 import android.content.Context
 import androidx.compose.material.icons.Icons
@@ -15,55 +15,55 @@ import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpRate
-import app.aaps.core.interfaces.pump.defs.determineCorrectBolusSize
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.readableDuration
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.ui.compose.StatusLevel
-import app.aaps.core.ui.compose.pump.ActionCategory
-import app.aaps.core.ui.compose.pump.PumpAction
-import app.aaps.core.ui.compose.pump.PumpCommunicationStatus
-import app.aaps.core.ui.compose.pump.PumpInfoRow
-import app.aaps.core.ui.compose.pump.PumpOverviewUiState
-import app.aaps.core.ui.compose.pump.tickerFlow
-import app.aaps.pump.common.events.EventRileyLinkDeviceStatusChange
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkTargetDevice
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
-import app.aaps.pump.common.hw.rileylink.service.tasks.ResetRileyLinkConfigurationTask
-import app.aaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
-import app.aaps.pump.omnipod.common.OMNIPOD_DURATION_LABELS
-import app.aaps.pump.omnipod.common.queue.command.CommandHandleTimeChange
-import app.aaps.pump.omnipod.common.queue.command.CommandPlayTestBeep
-import app.aaps.pump.omnipod.common.queue.command.CommandResumeDelivery
-import app.aaps.pump.omnipod.common.queue.command.CommandSilenceAlerts
-import app.aaps.pump.omnipod.common.queue.command.CommandSuspendDelivery
-import app.aaps.pump.omnipod.common.ui.wizard.compose.ActivationType
-import app.aaps.pump.omnipod.common.ui.wizard.compose.OmnipodOverviewEvent
-import app.aaps.pump.omnipod.eros.OmnipodErosPumpPlugin
-import app.aaps.pump.omnipod.eros.R
-import app.aaps.pump.omnipod.eros.driver.definition.ActivationProgress
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
-import app.aaps.pump.omnipod.eros.event.EventOmnipodErosPumpValuesChanged
-import app.aaps.pump.omnipod.eros.manager.AapsOmnipodErosManager
-import app.aaps.pump.omnipod.eros.queue.command.CommandGetPodStatus
-import app.aaps.pump.omnipod.eros.util.AapsOmnipodUtil
-import app.aaps.pump.omnipod.eros.util.OmnipodAlertUtil
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpRate
+import app.gmaaps.core.interfaces.pump.defs.determineCorrectBolusSize
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.readableDuration
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.ui.compose.StatusLevel
+import app.gmaaps.core.ui.compose.pump.ActionCategory
+import app.gmaaps.core.ui.compose.pump.PumpAction
+import app.gmaaps.core.ui.compose.pump.PumpCommunicationStatus
+import app.gmaaps.core.ui.compose.pump.PumpInfoRow
+import app.gmaaps.core.ui.compose.pump.PumpOverviewUiState
+import app.gmaaps.core.ui.compose.pump.tickerFlow
+import app.gmaaps.pump.common.events.EventRileyLinkDeviceStatusChange
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkServiceState
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkTargetDevice
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.ResetRileyLinkConfigurationTask
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
+import app.gmaaps.pump.omnipod.common.OMNIPOD_DURATION_LABELS
+import app.gmaaps.pump.omnipod.common.queue.command.CommandHandleTimeChange
+import app.gmaaps.pump.omnipod.common.queue.command.CommandPlayTestBeep
+import app.gmaaps.pump.omnipod.common.queue.command.CommandResumeDelivery
+import app.gmaaps.pump.omnipod.common.queue.command.CommandSilenceAlerts
+import app.gmaaps.pump.omnipod.common.queue.command.CommandSuspendDelivery
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.ActivationType
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.OmnipodOverviewEvent
+import app.gmaaps.pump.omnipod.eros.OmnipodErosPumpPlugin
+import app.gmaaps.pump.omnipod.eros.R
+import app.gmaaps.pump.omnipod.eros.driver.definition.ActivationProgress
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager
+import app.gmaaps.pump.omnipod.eros.event.EventOmnipodErosPumpValuesChanged
+import app.gmaaps.pump.omnipod.eros.manager.AapsOmnipodErosManager
+import app.gmaaps.pump.omnipod.eros.queue.command.CommandGetPodStatus
+import app.gmaaps.pump.omnipod.eros.util.AapsOmnipodUtil
+import app.gmaaps.pump.omnipod.eros.util.OmnipodAlertUtil
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -84,9 +84,9 @@ import kotlinx.coroutines.launch
 import org.joda.time.DateTime
 import org.joda.time.Duration
 import java.util.TimeZone
-import app.aaps.core.ui.R as CoreUiR
-import app.aaps.pump.common.hw.rileylink.R as RileyLinkR
-import app.aaps.pump.omnipod.common.R as CommonR
+import app.gmaaps.core.ui.R as CoreUiR
+import app.gmaaps.pump.common.hw.rileylink.R as RileyLinkR
+import app.gmaaps.pump.omnipod.common.R as CommonR
 
 @Stable
 // Registers itself: @ViewModelKey infers the key from the class. Deliberately unscoped, so each screen
@@ -575,3 +575,4 @@ class ErosOverviewViewModel(
         scope.cancel()
     }
 }
+

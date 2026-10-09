@@ -1,4 +1,4 @@
-package app.aaps.plugins.source
+﻿package app.gmaaps.plugins.source
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,34 +7,34 @@ import android.os.HandlerThread
 import android.os.PowerManager
 import android.os.SystemClock
 import androidx.annotation.VisibleForTesting
-import app.aaps.core.data.model.CA
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.EnforcedState
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginDescription
-import app.aaps.core.interfaces.pump.VirtualPump
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.source.BgSource
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.icons.IcPluginRandomBg
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.core.utils.isRunningTest
-import app.aaps.plugins.source.compose.BgSourceComposeContent
+import app.gmaaps.core.data.model.CA
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.EnforcedState
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginDescription
+import app.gmaaps.core.interfaces.pump.VirtualPump
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.source.BgSource
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.icons.IcPluginRandomBg
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.core.utils.isRunningTest
+import app.gmaaps.plugins.source.compose.BgSourceComposeContent
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesIntoMap
 import dev.zacsweers.metro.Inject
@@ -214,3 +214,4 @@ class RandomBgPlugin(
         icon = pluginDescription.icon
     )
 }
+

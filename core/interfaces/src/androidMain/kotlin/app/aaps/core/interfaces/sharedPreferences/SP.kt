@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.sharedPreferences
+﻿package app.gmaaps.core.interfaces.sharedPreferences
 
 import androidx.annotation.StringRes
 
@@ -27,3 +27,4 @@ interface SP : KeyValueStore {
     fun putInt(@StringRes resourceID: Int, value: Int)
     fun putString(@StringRes resourceID: Int, value: String)
 }
+

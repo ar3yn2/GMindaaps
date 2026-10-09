@@ -1,19 +1,19 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.state
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.state
 
-import app.aaps.pump.omnipod.common.bledriver.comm.Id
-import app.aaps.pump.omnipod.common.bledriver.comm.pair.PairResult
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ActivationProgress
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlarmType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.AlertType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BolusType
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.DeliveryStatus
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.SoftwareVersion
-import app.aaps.pump.omnipod.common.bledriver.pod.response.AlarmStatusResponse
-import app.aaps.pump.omnipod.common.bledriver.pod.response.DefaultStatusResponse
-import app.aaps.pump.omnipod.common.bledriver.pod.response.SetUniqueIdResponse
-import app.aaps.pump.omnipod.common.bledriver.pod.response.VersionResponse
+import app.gmaaps.pump.omnipod.common.bledriver.comm.Id
+import app.gmaaps.pump.omnipod.common.bledriver.comm.pair.PairResult
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ActivationProgress
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlarmType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.AlertType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BolusType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.DeliveryStatus
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.PodStatus
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.SoftwareVersion
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.AlarmStatusResponse
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.DefaultStatusResponse
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.SetUniqueIdResponse
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.VersionResponse
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Maybe
 import io.reactivex.rxjava3.core.Single
@@ -188,3 +188,4 @@ interface OmnipodDashPodStateManager {
         CONNECTING, CONNECTED, DISCONNECTED
     }
 }
+

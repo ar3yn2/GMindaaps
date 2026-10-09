@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import org.joda.time.Duration;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import app.aaps.core.utils.pump.ByteUtil;
+import app.gmaaps.core.utils.pump.ByteUtil;
 
 class BolusExtraCommandTest {
     @Test
@@ -59,3 +59,4 @@ class BolusExtraCommandTest {
 
     // TODO add square wave bolus tests
 }
+

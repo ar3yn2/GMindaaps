@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.state
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.state
 
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
@@ -312,3 +312,4 @@ class IntegrateExpectedDeliveryTest : TestBase() {
         assertThat(result).isNull()
     }
 }
+

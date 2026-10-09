@@ -1,11 +1,11 @@
-package app.aaps.pump.omnipod.eros.driver.communication.message.command;
+package app.gmaaps.pump.omnipod.eros.driver.communication.message.command;
 
 import androidx.annotation.NonNull;
 
 import java.nio.ByteBuffer;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
-import app.aaps.pump.omnipod.eros.driver.definition.MessageBlockType;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.MessageBlock;
+import app.gmaaps.pump.omnipod.eros.driver.definition.MessageBlockType;
 
 public class AssignAddressCommand extends MessageBlock {
     private final int address;
@@ -31,3 +31,4 @@ public class AssignAddressCommand extends MessageBlock {
                 '}';
     }
 }
+

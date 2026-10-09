@@ -1,9 +1,9 @@
-package app.aaps.core.data.ue
+﻿package app.gmaaps.core.data.ue
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.model.TT
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.model.TT
 
 sealed class ValueWithUnit {          //I use a sealed class because of StringResource that contains a listOf as second parameter
 
@@ -53,3 +53,4 @@ sealed class ValueWithUnit {          //I use a sealed class because of StringRe
             }
     }
 }
+

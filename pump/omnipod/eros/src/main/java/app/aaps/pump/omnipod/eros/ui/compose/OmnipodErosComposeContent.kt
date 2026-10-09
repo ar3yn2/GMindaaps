@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.ui.compose
+﻿package app.gmaaps.pump.omnipod.eros.ui.compose
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material.icons.Icons
@@ -15,27 +15,27 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.LocalSnackbarHostState
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.dialogs.OkDialog
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.core.ui.compose.pump.BlePreCheckHost
-import app.aaps.core.ui.compose.pump.KeepScreenOnEffect
-import app.aaps.core.ui.compose.pump.PumpOverviewScreen
-import app.aaps.pump.common.compose.RileyLinkPairWizardEvent
-import app.aaps.pump.common.compose.RileyLinkPairWizardScreen
-import app.aaps.pump.common.compose.RileyLinkPairWizardViewModel
-import app.aaps.pump.common.compose.RileyLinkStatusScreen
-import app.aaps.pump.common.compose.RileyLinkStatusViewModel
-import app.aaps.pump.omnipod.common.ui.compose.PodImage
-import app.aaps.pump.omnipod.common.ui.wizard.compose.ActivationType
-import app.aaps.pump.omnipod.common.ui.wizard.compose.OmnipodOverviewEvent
-import app.aaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardScreen
-import app.aaps.pump.omnipod.eros.ui.wizard.compose.ErosOmnipodWizardViewModel
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.LocalSnackbarHostState
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.dialogs.OkDialog
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.core.ui.compose.pump.BlePreCheckHost
+import app.gmaaps.core.ui.compose.pump.KeepScreenOnEffect
+import app.gmaaps.core.ui.compose.pump.PumpOverviewScreen
+import app.gmaaps.pump.common.compose.RileyLinkPairWizardEvent
+import app.gmaaps.pump.common.compose.RileyLinkPairWizardScreen
+import app.gmaaps.pump.common.compose.RileyLinkPairWizardViewModel
+import app.gmaaps.pump.common.compose.RileyLinkStatusScreen
+import app.gmaaps.pump.common.compose.RileyLinkStatusViewModel
+import app.gmaaps.pump.omnipod.common.ui.compose.PodImage
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.ActivationType
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.OmnipodOverviewEvent
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardScreen
+import app.gmaaps.pump.omnipod.eros.ui.wizard.compose.ErosOmnipodWizardViewModel
 
 class OmnipodErosComposeContent(
     private val pluginName: String,
@@ -73,13 +73,13 @@ class OmnipodErosComposeContent(
         // Overview toolbar
         val overviewNavIcon: @Composable () -> Unit = {
             IconButton(onClick = onNavigateBack) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.aaps.core.ui.R.string.back))
+                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.gmaaps.core.ui.R.string.back))
             }
         }
         val settingsAction: @Composable RowScope.() -> Unit = {
             onSettings?.let { action ->
                 IconButton(onClick = action) {
-                    Icon(Icons.Filled.Settings, contentDescription = stringResource(app.aaps.core.ui.R.string.settings))
+                    Icon(Icons.Filled.Settings, contentDescription = stringResource(app.gmaaps.core.ui.R.string.settings))
                 }
             }
         }
@@ -91,10 +91,10 @@ class OmnipodErosComposeContent(
             } else if (showRileyLinkStats) {
                 setToolbarConfig(
                     ToolbarConfig(
-                        title = context.getString(app.aaps.core.ui.R.string.settings),
+                        title = context.getString(app.gmaaps.core.ui.R.string.settings),
                         navigationIcon = {
                             IconButton(onClick = { showRileyLinkStats = false }) {
-                                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.aaps.core.ui.R.string.back))
+                                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.gmaaps.core.ui.R.string.back))
                             }
                         },
                         actions = {}
@@ -242,10 +242,10 @@ class OmnipodErosComposeContent(
                 LaunchedEffect(Unit) {
                     setToolbarConfig(
                         ToolbarConfig(
-                            title = context.getString(app.aaps.pump.omnipod.common.R.string.omnipod_common_pod_management_button_pod_history),
+                            title = context.getString(app.gmaaps.pump.omnipod.common.R.string.omnipod_common_pod_management_button_pod_history),
                             navigationIcon = {
                                 IconButton(onClick = { showHistory = false }) {
-                                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.aaps.core.ui.R.string.back))
+                                    Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(app.gmaaps.core.ui.R.string.back))
                                 }
                             },
                             actions = {}
@@ -270,3 +270,4 @@ class OmnipodErosComposeContent(
         }
     }
 }
+

@@ -1,25 +1,25 @@
-package app.aaps.pump.eopatch.alarm
+﻿package app.gmaaps.pump.eopatch.alarm
 
 import android.app.AlarmManager
 import android.app.AlarmManager.AlarmClockInfo
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.pump.eopatch.EoPatchRxBus
-import app.aaps.pump.eopatch.OsAlarmReceiver
-import app.aaps.pump.eopatch.alarm.AlarmCode.Companion.getUri
-import app.aaps.pump.eopatch.ble.PreferenceManager
-import app.aaps.pump.eopatch.code.PatchLifecycle
-import app.aaps.pump.eopatch.core.code.PatchAeCode
-import app.aaps.pump.eopatch.event.EventEoPatchAlarm
-import app.aaps.pump.eopatch.vo.Alarms
-import app.aaps.pump.eopatch.vo.PatchConfig
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.pump.eopatch.EoPatchRxBus
+import app.gmaaps.pump.eopatch.OsAlarmReceiver
+import app.gmaaps.pump.eopatch.alarm.AlarmCode.Companion.getUri
+import app.gmaaps.pump.eopatch.ble.PreferenceManager
+import app.gmaaps.pump.eopatch.code.PatchLifecycle
+import app.gmaaps.pump.eopatch.core.code.PatchAeCode
+import app.gmaaps.pump.eopatch.event.EventEoPatchAlarm
+import app.gmaaps.pump.eopatch.vo.Alarms
+import app.gmaaps.pump.eopatch.vo.PatchConfig
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -175,3 +175,4 @@ class AlarmRegistry(
         return PendingIntent.getBroadcast(mContext, 1, intent, PendingIntent.FLAG_IMMUTABLE or flag)
     }
 }
+

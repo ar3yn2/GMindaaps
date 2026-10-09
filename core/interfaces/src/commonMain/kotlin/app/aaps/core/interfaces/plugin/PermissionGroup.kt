@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.plugin
+﻿package app.gmaaps.core.interfaces.plugin
 
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * Declares a group of related runtime permissions that a plugin requires.
@@ -22,3 +22,4 @@ data class PermissionGroup(
     val special: Boolean = false,
     val alwaysShowAction: Boolean = false,
 )
+

@@ -1,4 +1,4 @@
-package app.aaps.core.data.format
+﻿package app.gmaaps.core.data.format
 
 import platform.Foundation.NSLocale
 import platform.Foundation.NSNumber
@@ -52,3 +52,4 @@ actual object NumberFormatPlatform {
             setLocale(NSLocale.currentLocale)
         }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.plugins.aps.loop
+﻿package app.gmaaps.plugins.aps.loop
 
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
@@ -7,11 +7,11 @@ import android.app.TaskStackBuilder
 import android.content.Context
 import android.content.Intent
 import androidx.core.app.NotificationCompat
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.ui.CarbSuggestionActions
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.plugins.aps.R
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.ui.CarbSuggestionActions
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.plugins.aps.R
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -77,7 +77,7 @@ class AndroidLoopNotifier(
 
     private fun baseBuilder(title: String, text: String): NotificationCompat.Builder =
         NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(app.aaps.core.ui.R.drawable.notif_icon)
+            .setSmallIcon(app.gmaaps.core.ui.R.drawable.notif_icon)
             .setContentTitle(title)
             .setContentText(text)
             .setAutoCancel(true)
@@ -87,7 +87,7 @@ class AndroidLoopNotifier(
 
     private fun ignoreAction(label: Int, fallback: String, minutes: Int, requestCode: Int) =
         NotificationCompat.Action(
-            app.aaps.core.ui.R.drawable.ic_notif_aaps,
+            app.gmaaps.core.ui.R.drawable.ic_notif_aaps,
             rh.gs(label, fallback),
             carbSuggestionActions.ignoreFor(minutes = minutes, requestCode = requestCode)
         )
@@ -110,3 +110,4 @@ class AndroidLoopNotifier(
         val VIBRATE_PATTERN = longArrayOf(1000, 1000, 1000, 1000, 1000)
     }
 }
+

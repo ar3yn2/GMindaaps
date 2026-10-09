@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.code
+﻿package app.gmaaps.pump.eopatch.code
 
 enum class DeactivationStatus {
     DEACTIVATION_FAILED,
@@ -20,3 +20,4 @@ enum class DeactivationStatus {
         }
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.utils
+﻿package app.gmaaps.core.interfaces.utils
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -110,3 +110,4 @@ class SafeParseTest {
         assertThat(SafeParse.stringToLong(null)).isEqualTo(0L)
     }
 }
+

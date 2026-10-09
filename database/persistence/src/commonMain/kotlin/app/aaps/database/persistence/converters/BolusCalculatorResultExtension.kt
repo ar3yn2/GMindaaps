@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.BCR
-import app.aaps.database.entities.BolusCalculatorResult
+import app.gmaaps.core.data.model.BCR
+import app.gmaaps.database.entities.BolusCalculatorResult
 
 fun BolusCalculatorResult.fromDb(): BCR =
     BCR(
@@ -84,3 +84,4 @@ fun BCR.toDb(): BolusCalculatorResult =
         profileName = this.profileName,
         note = this.note
     )
+

@@ -1,6 +1,6 @@
-package app.aaps.core.nssdk.networking
+﻿package app.gmaaps.core.nssdk.networking
 
-import app.aaps.core.nssdk.remotemodel.RemoteFood
+import app.gmaaps.core.nssdk.remotemodel.RemoteFood
 import com.google.common.truth.Truth.assertThat
 import io.ktor.client.HttpClient
 import kotlinx.coroutines.test.runTest
@@ -152,3 +152,4 @@ class NightscoutApiUrlTest {
         assertThat(server.requestCount).isEqualTo(0)
     }
 }
+

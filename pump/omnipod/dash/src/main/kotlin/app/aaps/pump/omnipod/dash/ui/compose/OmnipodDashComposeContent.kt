@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.dash.ui.compose
+﻿package app.gmaaps.pump.omnipod.dash.ui.compose
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -9,15 +9,15 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.ui.compose.ComposablePluginContent
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.pump.omnipod.common.R
-import app.aaps.pump.omnipod.common.ui.compose.OmnipodComposeHost
-import app.aaps.pump.omnipod.dash.ui.wizard.compose.DashOmnipodWizardViewModel
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.ui.compose.ComposablePluginContent
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.pump.omnipod.common.R
+import app.gmaaps.pump.omnipod.common.ui.compose.OmnipodComposeHost
+import app.gmaaps.pump.omnipod.dash.ui.wizard.compose.DashOmnipodWizardViewModel
+import app.gmaaps.core.ui.R as CoreUiR
 
 class OmnipodDashComposeContent(
     private val pluginName: String,
@@ -71,3 +71,4 @@ class OmnipodDashComposeContent(
         )
     }
 }
+

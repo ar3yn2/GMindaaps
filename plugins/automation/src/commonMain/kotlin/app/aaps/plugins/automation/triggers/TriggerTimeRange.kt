@@ -1,15 +1,15 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Timer
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.interfaces.utils.MidnightTime
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.utils.MidnightUtils
-import app.aaps.core.utils.lenientInt
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.InputTimeRange
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.interfaces.utils.MidnightTime
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.utils.MidnightUtils
+import app.gmaaps.core.utils.lenientInt
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.InputTimeRange
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put

@@ -1,4 +1,4 @@
-package app.aaps.core.graph
+﻿package app.gmaaps.core.graph
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -11,12 +11,12 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.iobCalc
-import app.aaps.core.data.time.T
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.iobCalc
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.stringResource
 import com.patrykandpatrick.vico.compose.cartesian.CartesianChartHost
 import com.patrykandpatrick.vico.compose.cartesian.Zoom
 import com.patrykandpatrick.vico.compose.cartesian.axis.Axis
@@ -189,3 +189,4 @@ fun InsulinGraphCompose(
             .padding(16.dp)
     )
 }
+

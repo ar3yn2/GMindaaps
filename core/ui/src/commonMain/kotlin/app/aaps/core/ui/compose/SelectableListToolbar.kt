@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material.icons.Icons
@@ -20,8 +20,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.ui.CoreUiStrings
 
 /**
  * Reusable toolbar builder for screens with selectable list items.
@@ -176,3 +176,4 @@ data class MenuItemData(
     val label: String,
     val onClick: () -> Unit
 )
+

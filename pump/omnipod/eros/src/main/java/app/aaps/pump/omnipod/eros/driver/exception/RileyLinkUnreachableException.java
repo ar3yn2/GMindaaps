@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
 // Indicates that we didn't get any response from the RL
 public class RileyLinkUnreachableException extends OmnipodException {
@@ -6,3 +6,4 @@ public class RileyLinkUnreachableException extends OmnipodException {
         super("Timeout in communication between phone and RileyLink", false);
     }
 }
+

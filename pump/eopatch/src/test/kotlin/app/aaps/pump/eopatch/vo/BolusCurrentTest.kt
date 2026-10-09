@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.pump.eopatch.core.code.BolusType
+import app.gmaaps.pump.eopatch.core.code.BolusType
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -286,3 +286,4 @@ class BolusCurrentTest {
         assertThat(observable).isNotNull()
     }
 }
+

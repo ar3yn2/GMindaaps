@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.entry
+﻿package app.gmaaps.core.nssdk.localmodel.entry
 
 import kotlinx.serialization.Serializable
 
@@ -20,3 +20,4 @@ data class NSSgvV3(
     val filtered: Double?, // number in doc (I found decimal values in API v1
     val unfiltered: Double? // number in doc (I found decimal values in API v1
 )
+

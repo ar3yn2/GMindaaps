@@ -1,8 +1,8 @@
-package app.aaps.pump.carelevo.presentation.model
+﻿package app.gmaaps.pump.carelevo.presentation.model
 
 import androidx.annotation.StringRes
-import app.aaps.pump.carelevo.common.model.Event
-import app.aaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
+import app.gmaaps.pump.carelevo.common.model.Event
+import app.gmaaps.pump.carelevo.domain.model.alarm.CarelevoAlarmInfo
 
 sealed class CarelevoOverviewEvent : Event {
 
@@ -86,3 +86,4 @@ sealed class AlarmEvent : Event {
         @StringRes val messageRes: Int
     ) : AlarmEvent()
 }
+

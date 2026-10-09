@@ -1,10 +1,10 @@
-package app.aaps.core.nssdk.networking
+﻿package app.gmaaps.core.nssdk.networking
 
-import app.aaps.core.nssdk.NSAndroidClientImpl
-import app.aaps.core.nssdk.exceptions.InvalidFormatNightscoutException
-import app.aaps.core.nssdk.localmodel.entry.Direction
-import app.aaps.core.nssdk.localmodel.entry.NSSgvV3
-import app.aaps.core.nssdk.localmodel.entry.NsUnits
+import app.gmaaps.core.nssdk.NSAndroidClientImpl
+import app.gmaaps.core.nssdk.exceptions.InvalidFormatNightscoutException
+import app.gmaaps.core.nssdk.localmodel.entry.Direction
+import app.gmaaps.core.nssdk.localmodel.entry.NSSgvV3
+import app.gmaaps.core.nssdk.localmodel.entry.NsUnits
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.runTest
@@ -242,3 +242,4 @@ class NsSdkResponseContractTest {
         assertThat(response.values).isEmpty()
     }
 }
+

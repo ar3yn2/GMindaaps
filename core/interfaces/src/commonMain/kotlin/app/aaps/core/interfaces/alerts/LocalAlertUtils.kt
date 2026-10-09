@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.alerts
+﻿package app.gmaaps.core.interfaces.alerts
 
 interface LocalAlertUtils {
 

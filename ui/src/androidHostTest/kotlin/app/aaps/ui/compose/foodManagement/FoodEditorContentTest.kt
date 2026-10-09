@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.foodManagement
+﻿package app.gmaaps.ui.compose.foodManagement
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -13,7 +13,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /** Robolectric composable test for [FoodEditorContent]: renders the editor fields + save/cancel actions. */
 @RunWith(RobolectricTestRunner::class)
@@ -60,3 +60,4 @@ class FoodEditorContentTest {
         compose.onNodeWithText(cancelLabel).assertIsDisplayed()
     }
 }
+

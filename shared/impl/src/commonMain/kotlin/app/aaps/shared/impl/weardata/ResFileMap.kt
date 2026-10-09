@@ -1,4 +1,4 @@
-package app.aaps.shared.impl.weardata
+﻿package app.gmaaps.shared.impl.weardata
 
 enum class ResFileMap(val fileName: String) {
     UNKNOWN("Unknown"),
@@ -35,3 +35,4 @@ enum class ResFileMap(val fileName: String) {
         fun fromFileName(file: String): ResFileMap = entries.firstOrNull { it.fileName == file.substringBeforeLast(".") } ?: UNKNOWN
     }
 }
+

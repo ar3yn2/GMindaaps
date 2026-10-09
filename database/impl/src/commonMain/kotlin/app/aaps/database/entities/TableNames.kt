@@ -1,4 +1,4 @@
-package app.aaps.database.entities
+﻿package app.gmaaps.database.entities
 
 const val TABLE_APS_RESULTS = "apsResults"
 const val TABLE_BOLUSES = "boluses"
@@ -21,3 +21,4 @@ const val TABLE_THERAPY_EVENTS = "therapyEvents"
 const val TABLE_PREFERENCE_CHANGES = "preferenceChanges"
 const val TABLE_VERSION_CHANGES = "versionChanges"
 const val TABLE_USER_ENTRY = "userEntry"
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.util
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.util
 
 import java.security.SecureRandom
 
@@ -8,3 +8,4 @@ class RandomByteGenerator {
 
     fun nextBytes(length: Int): ByteArray = ByteArray(length).also(secureRandom::nextBytes)
 }
+

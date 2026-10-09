@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.state
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.state
 
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -90,3 +90,4 @@ class CalculateBolusPulseIncreaseTest : TestBase() {
         assertThat(increase(100, 102, 3, 0)).isEqualTo(2.toShort())
     }
 }
+

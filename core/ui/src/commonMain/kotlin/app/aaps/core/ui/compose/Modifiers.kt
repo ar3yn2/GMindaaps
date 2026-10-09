@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.animation.core.AnimationConstants
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -117,3 +117,4 @@ fun rememberBringIntoViewOnExpand(expanded: Boolean): BringIntoViewRequester {
     }
     return requester
 }
+

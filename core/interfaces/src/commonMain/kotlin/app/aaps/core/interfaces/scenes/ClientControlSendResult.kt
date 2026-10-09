@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.scenes
+﻿package app.gmaaps.core.interfaces.scenes
 
 /**
  * Outcome of a low-level client→master publish (`ClientControlPublisher.publish` / the senders /
@@ -23,3 +23,4 @@ sealed class ClientControlSendResult {
 
     data class PublishFailed(val reason: String? = null) : ClientControlSendResult()
 }
+

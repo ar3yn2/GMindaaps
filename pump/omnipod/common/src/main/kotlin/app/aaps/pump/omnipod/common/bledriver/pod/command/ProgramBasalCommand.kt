@@ -1,13 +1,13 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.command
 
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.HeaderEnabledCommand
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.BasalInsulinProgramElement
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util.ProgramBasalUtil
-import app.aaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util.ProgramTempBasalUtil.mapTenthPulsesPerSlotToLongInsulinProgramElements
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
-import app.aaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.CommandType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.HeaderEnabledCommand
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.builder.NonceEnabledCommandBuilder
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.BasalInsulinProgramElement
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util.ProgramBasalUtil
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.insulin.program.util.ProgramTempBasalUtil.mapTenthPulsesPerSlotToLongInsulinProgramElements
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.BasalProgram
+import app.gmaaps.pump.omnipod.common.bledriver.pod.definition.ProgramReminder
 import java.nio.ByteBuffer
 import java.util.Date
 
@@ -144,3 +144,4 @@ class ProgramBasalCommand private constructor(
         this.delayUntilNextTenthPulseInUsec = delayUntilNextTenthPulseInUsec
     }
 }
+

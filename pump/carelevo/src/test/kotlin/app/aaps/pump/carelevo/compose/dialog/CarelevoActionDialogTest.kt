@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.dialog
+﻿package app.gmaaps.pump.carelevo.compose.dialog
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
@@ -347,3 +347,4 @@ class CarelevoActionDialogTest {
         assertThat(primary).isEqualTo(2)
     }
 }
+

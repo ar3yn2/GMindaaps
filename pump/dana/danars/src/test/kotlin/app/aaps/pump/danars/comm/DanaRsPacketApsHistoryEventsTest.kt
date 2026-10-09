@@ -1,14 +1,14 @@
-package app.aaps.pump.danars.comm
+﻿package app.gmaaps.pump.danars.comm
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.DetailedBolusInfoStorage
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.pump.TemporaryBasalStorage
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.keys.DanaBooleanKey
-import app.aaps.pump.danars.DanaRSTestBase
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfoStorage
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.pump.TemporaryBasalStorage
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.keys.DanaBooleanKey
+import app.gmaaps.pump.danars.DanaRSTestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test

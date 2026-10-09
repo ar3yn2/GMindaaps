@@ -1,6 +1,6 @@
-package app.aaps.pump.equil.driver.definition
+﻿package app.gmaaps.pump.equil.driver.definition
 
-import app.aaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.profile.Profile
 import org.joda.time.Duration
 import java.util.Objects
 
@@ -50,3 +50,4 @@ class BasalSchedule(private val entries: List<BasalScheduleEntry>) {
         }
     }
 }
+

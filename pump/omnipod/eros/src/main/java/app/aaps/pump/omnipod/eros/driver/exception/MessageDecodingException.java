@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
 public class MessageDecodingException extends OmnipodException {
     public MessageDecodingException(String message) {
@@ -9,3 +9,4 @@ public class MessageDecodingException extends OmnipodException {
         super(message, cause, false);
     }
 }
+

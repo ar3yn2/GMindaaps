@@ -1,4 +1,4 @@
-package app.aaps.pump.common.hw.rileylink.ble.data
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.data
 
 class FrequencyScanResults {
 
@@ -13,3 +13,4 @@ class FrequencyScanResults {
         }
     }
 }
+

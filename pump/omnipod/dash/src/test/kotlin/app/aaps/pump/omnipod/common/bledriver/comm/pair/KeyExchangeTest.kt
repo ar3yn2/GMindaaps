@@ -1,11 +1,11 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.pair
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.pair
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.pod.util.RandomByteGenerator
-import app.aaps.pump.omnipod.common.bledriver.pod.util.X25519KeyGenerator
-import app.aaps.shared.tests.AAPSLoggerTest
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.RandomByteGenerator
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.X25519KeyGenerator
+import app.gmaaps.shared.tests.AAPSLoggerTest
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.ArgumentMatchers.anyInt
@@ -50,3 +50,4 @@ class KeyExchangeTest : TestBase() {
         assertThat("341e16d13f1cbf73b19d1c2964fee02b").isEqualTo(ke.ltk.toHex())
     }
 }
+

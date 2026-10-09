@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.xdrip.keys
+﻿package app.gmaaps.plugins.sync.xdrip.keys
 
-import app.aaps.core.keys.interfaces.LongNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.LongNonPreferenceKey
 
 /**
  * How far THIS install has synced with xDrip. Every entry is a cursor, so the whole enum is
@@ -30,3 +30,4 @@ enum class XdripLongKey(
     RunningModeLastSyncedId("xdrip_running_mode_last_synced_id", 0L),
     ProfileStoreLastSyncedId("xdrip_profile_store_last_synced_timestamp", 0L),
 }
+

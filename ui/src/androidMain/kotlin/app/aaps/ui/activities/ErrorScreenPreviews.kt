@@ -1,4 +1,4 @@
-package app.aaps.ui.activities
+﻿package app.gmaaps.ui.activities
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -11,7 +11,7 @@ internal fun ErrorScreenPreview() {
         ErrorScreen(
             title = "Pump unreachable",
             status = "Last successful communication 25 minutes ago. Check Bluetooth and pump status.",
-            appIcon = app.aaps.core.ui.R.mipmap.ic_launcher,
+            appIcon = app.gmaaps.core.ui.R.mipmap.ic_launcher,
             onOk = {},
             onMute = {},
             onMute5Min = {},
@@ -27,7 +27,7 @@ internal fun ErrorScreenShortPreview() {
         ErrorScreen(
             title = "Bolus error",
             status = "Delivery failed.",
-            appIcon = app.aaps.core.ui.R.mipmap.ic_launcher,
+            appIcon = app.gmaaps.core.ui.R.mipmap.ic_launcher,
             onOk = {},
             onMute = {},
             onMute5Min = {},
@@ -35,3 +35,4 @@ internal fun ErrorScreenShortPreview() {
         )
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.preference
+﻿package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
@@ -59,3 +59,4 @@ fun PreferenceSheetContent(
         }
     }
 }
+

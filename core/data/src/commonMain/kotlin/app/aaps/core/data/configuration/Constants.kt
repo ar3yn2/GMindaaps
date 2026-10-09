@@ -1,4 +1,4 @@
-package app.aaps.core.data.configuration
+﻿package app.gmaaps.core.data.configuration
 
 /**
  * Created by mike on 07.06.2016.

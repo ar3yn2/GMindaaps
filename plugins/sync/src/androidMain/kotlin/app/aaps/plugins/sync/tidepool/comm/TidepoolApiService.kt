@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.tidepool.comm
+﻿package app.gmaaps.plugins.sync.tidepool.comm
 
-import app.aaps.plugins.sync.tidepool.messages.DatasetReplyMessage
-import app.aaps.plugins.sync.tidepool.messages.UploadReplyMessage
+import app.gmaaps.plugins.sync.tidepool.messages.DatasetReplyMessage
+import app.gmaaps.plugins.sync.tidepool.messages.UploadReplyMessage
 import okhttp3.RequestBody
 import retrofit2.Call
 import retrofit2.http.Body

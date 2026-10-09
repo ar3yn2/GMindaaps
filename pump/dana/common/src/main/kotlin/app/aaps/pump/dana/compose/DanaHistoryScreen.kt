@@ -1,4 +1,4 @@
-package app.aaps.pump.dana.compose
+﻿package app.gmaaps.pump.dana.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,11 +16,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.AapsCard
-import app.aaps.core.ui.compose.pump.PumpHistoryScreen
-import app.aaps.pump.dana.R
-import app.aaps.pump.dana.comm.RecordTypes
-import app.aaps.pump.dana.database.DanaHistoryRecord
+import app.gmaaps.core.ui.compose.AapsCard
+import app.gmaaps.core.ui.compose.pump.PumpHistoryScreen
+import app.gmaaps.pump.dana.R
+import app.gmaaps.pump.dana.comm.RecordTypes
+import app.gmaaps.pump.dana.database.DanaHistoryRecord
 
 @Composable
 fun DanaHistoryScreen(
@@ -95,8 +95,8 @@ private fun DanaHistoryItem(
                         horizontalArrangement = Arrangement.SpaceEvenly
                     ) {
                         LabeledValue(label = stringResource(R.string.danar_history_bolus), value = viewModel.formatDailyBolus(record))
-                        LabeledValue(label = stringResource(app.aaps.core.ui.R.string.basal), value = viewModel.formatDailyBasal(record))
-                        LabeledValue(label = stringResource(app.aaps.core.ui.R.string.wizard_total), value = viewModel.formatDailyTotal(record))
+                        LabeledValue(label = stringResource(app.gmaaps.core.ui.R.string.basal), value = viewModel.formatDailyBasal(record))
+                        LabeledValue(label = stringResource(app.gmaaps.core.ui.R.string.wizard_total), value = viewModel.formatDailyTotal(record))
                     }
                 }
 
@@ -123,3 +123,4 @@ private fun LabeledValue(label: String, value: String) {
         Text(text = value, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Medium)
     }
 }
+

@@ -1,14 +1,14 @@
-package app.aaps.pump.eopatch.compose.steps
+﻿package app.gmaaps.pump.eopatch.compose.steps
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.eopatch.R
-import app.aaps.pump.eopatch.code.PatchStep
-import app.aaps.pump.eopatch.compose.EopatchPatchViewModel
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.eopatch.R
+import app.gmaaps.pump.eopatch.code.PatchStep
+import app.gmaaps.pump.eopatch.compose.EopatchPatchViewModel
 
 /**
  * @see RemoveNeedleCapStepPreview
@@ -17,14 +17,14 @@ import app.aaps.pump.eopatch.compose.EopatchPatchViewModel
 fun RemoveNeedleCapStep(viewModel: EopatchPatchViewModel) {
     WizardStepLayout(
         primaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.next),
+            text = stringResource(app.gmaaps.core.ui.R.string.next),
             onClick = {
                 if (viewModel.showSiteLocationStep) viewModel.moveStep(PatchStep.SITE_LOCATION)
                 else viewModel.moveStep(PatchStep.REMOVE_PROTECTION_TAPE)
             }
         ),
         secondaryButton = WizardButton(
-            text = stringResource(app.aaps.core.ui.R.string.discard),
+            text = stringResource(app.gmaaps.core.ui.R.string.discard),
             onClick = { viewModel.discardPatchWithCommCheck() }
         )
     ) {
@@ -48,3 +48,4 @@ fun RemoveNeedleCapStep(viewModel: EopatchPatchViewModel) {
         )
     }
 }
+

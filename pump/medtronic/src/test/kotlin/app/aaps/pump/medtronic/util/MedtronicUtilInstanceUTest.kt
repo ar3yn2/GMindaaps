@@ -1,14 +1,14 @@
-package app.aaps.pump.medtronic.util
+﻿package app.gmaaps.pump.medtronic.util
 
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.pump.common.hw.rileylink.RileyLinkUtil
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
-import app.aaps.pump.medtronic.defs.MedtronicCommandType
-import app.aaps.pump.medtronic.defs.MedtronicDeviceType
-import app.aaps.pump.medtronic.defs.MedtronicNotificationType
-import app.aaps.pump.medtronic.driver.MedtronicPumpStatus
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.pump.common.hw.rileylink.RileyLinkUtil
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.medtronic.defs.MedtronicCommandType
+import app.gmaaps.pump.medtronic.defs.MedtronicDeviceType
+import app.gmaaps.pump.medtronic.defs.MedtronicNotificationType
+import app.gmaaps.pump.medtronic.driver.MedtronicPumpStatus
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -328,7 +328,7 @@ class MedtronicUtilInstanceUTest : TestBaseWithProfile() {
     fun `test pumpTime can be set and retrieved`() {
         assertThat(medtronicUtil.pumpTime).isNull()
 
-        val clockDTO = app.aaps.pump.medtronic.data.dto.ClockDTO(
+        val clockDTO = app.gmaaps.pump.medtronic.data.dto.ClockDTO(
             org.joda.time.LocalDateTime(2023, 1, 15, 10, 30, 0),
             org.joda.time.LocalDateTime(2023, 1, 15, 10, 28, 45)
         )
@@ -342,15 +342,15 @@ class MedtronicUtilInstanceUTest : TestBaseWithProfile() {
         assertThat(medtronicUtil.settings).isNull()
 
         val settings = mapOf(
-            "PCFG_MAX_BOLUS" to app.aaps.pump.medtronic.data.dto.PumpSettingDTO(
+            "PCFG_MAX_BOLUS" to app.gmaaps.pump.medtronic.data.dto.PumpSettingDTO(
                 "PCFG_MAX_BOLUS",
                 "10.0",
-                app.aaps.pump.medtronic.defs.PumpConfigurationGroup.Insulin
+                app.gmaaps.pump.medtronic.defs.PumpConfigurationGroup.Insulin
             ),
-            "PCFG_MAX_BASAL" to app.aaps.pump.medtronic.data.dto.PumpSettingDTO(
+            "PCFG_MAX_BASAL" to app.gmaaps.pump.medtronic.data.dto.PumpSettingDTO(
                 "PCFG_MAX_BASAL",
                 "5.0",
-                app.aaps.pump.medtronic.defs.PumpConfigurationGroup.Basal
+                app.gmaaps.pump.medtronic.defs.PumpConfigurationGroup.Basal
             )
         )
         medtronicUtil.settings = settings
@@ -367,3 +367,4 @@ class MedtronicUtilInstanceUTest : TestBaseWithProfile() {
         assertThat(json).contains("test")
     }
 }
+

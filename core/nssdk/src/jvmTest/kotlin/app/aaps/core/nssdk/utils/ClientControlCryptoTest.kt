@@ -1,9 +1,9 @@
-package app.aaps.core.nssdk.utils
+﻿package app.gmaaps.core.nssdk.utils
 
-import app.aaps.core.nssdk.localmodel.clientcontrol.AckEnvelope
-import app.aaps.core.nssdk.localmodel.clientcontrol.AckPhase
-import app.aaps.core.nssdk.localmodel.clientcontrol.AckStatus
-import app.aaps.core.nssdk.localmodel.clientcontrol.SignedEnvelope
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.AckEnvelope
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.AckPhase
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.AckStatus
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.SignedEnvelope
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -226,3 +226,4 @@ class ClientControlCryptoTest {
         assertThat(ClientControlCrypto.verifyAck(secret, tampered)).isFalse()
     }
 }
+

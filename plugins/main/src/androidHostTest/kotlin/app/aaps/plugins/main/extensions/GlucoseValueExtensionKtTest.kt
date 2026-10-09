@@ -1,21 +1,21 @@
-package app.aaps.plugins.main.extensions
+﻿package app.gmaaps.plugins.main.extensions
 
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.objects.extensions.valueToUnits
-import app.aaps.core.ui.compose.icons.IcArrowDoubleDown
-import app.aaps.core.ui.compose.icons.IcArrowDoubleUp
-import app.aaps.core.ui.compose.icons.IcArrowFlat
-import app.aaps.core.ui.compose.icons.IcArrowFortyfiveDown
-import app.aaps.core.ui.compose.icons.IcArrowFortyfiveUp
-import app.aaps.core.ui.compose.icons.IcArrowInvalid
-import app.aaps.core.ui.compose.icons.IcArrowSimpleDown
-import app.aaps.core.ui.compose.icons.IcArrowSimpleUp
-import app.aaps.core.ui.extensions.directionToIcon
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.objects.extensions.valueToUnits
+import app.gmaaps.core.ui.compose.icons.IcArrowDoubleDown
+import app.gmaaps.core.ui.compose.icons.IcArrowDoubleUp
+import app.gmaaps.core.ui.compose.icons.IcArrowFlat
+import app.gmaaps.core.ui.compose.icons.IcArrowFortyfiveDown
+import app.gmaaps.core.ui.compose.icons.IcArrowFortyfiveUp
+import app.gmaaps.core.ui.compose.icons.IcArrowInvalid
+import app.gmaaps.core.ui.compose.icons.IcArrowSimpleDown
+import app.gmaaps.core.ui.compose.icons.IcArrowSimpleUp
+import app.gmaaps.core.ui.extensions.directionToIcon
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -58,3 +58,4 @@ class GlucoseValueExtensionKtTest : TestBaseWithProfile() {
         assertThat(glucoseValue.trendArrow.directionToIcon()).isEqualTo(IcArrowDoubleUp)
     }
 }
+

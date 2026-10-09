@@ -1,4 +1,4 @@
-package app.aaps.core.utils.fabric
+﻿package app.gmaaps.core.utils.fabric
 
 import com.google.firebase.installations.FirebaseInstallations
 

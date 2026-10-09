@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.endecrypt
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.endecrypt
 
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessagePacket
-import app.aaps.shared.tests.AAPSLoggerTest
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessagePacket
+import app.gmaaps.shared.tests.AAPSLoggerTest
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.spongycastle.util.encoders.Hex
@@ -59,3 +59,4 @@ import org.spongycastle.util.encoders.Hex
         assertThat(encrypted.asByteArray().toHex()).isEqualTo(encryptedMessage.toHex())
     }
 }
+

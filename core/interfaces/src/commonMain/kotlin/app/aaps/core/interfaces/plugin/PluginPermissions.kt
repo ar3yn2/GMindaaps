@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.plugin
+﻿package app.gmaaps.core.interfaces.plugin
 
 /**
  * Permission state collected across all enabled plugins.
@@ -21,3 +21,4 @@ interface PluginPermissions {
      */
     fun collectAllPermissions(): List<PermissionGroup>
 }
+

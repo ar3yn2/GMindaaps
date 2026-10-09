@@ -1,9 +1,9 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
 import android.Manifest
 import android.annotation.SuppressLint
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.interfaces.plugin.PermissionGroup
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.interfaces.plugin.PermissionGroup
 
 /**
  * `InlinedApi` because BLUETOOTH_CONNECT and BLUETOOTH_SCAN are newer than minSdk. Inlining the
@@ -16,3 +16,4 @@ internal actual fun bluetoothPermissionGroup(): PermissionGroup? = PermissionGro
     rationaleTitle = InterfacesStrings.permission_bluetooth_title,
     rationaleDescription = InterfacesStrings.permission_bluetooth_description,
 )
+

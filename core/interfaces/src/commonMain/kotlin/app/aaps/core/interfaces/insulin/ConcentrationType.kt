@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.insulin
+﻿package app.gmaaps.core.interfaces.insulin
 
-import app.aaps.core.interfaces.InterfacesStrings
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.InterfacesStrings
+import app.gmaaps.core.keys.interfaces.TextRef
 
 enum class ConcentrationType(val value: Double, val label: TextRef) {
     UNKNOWN(-1.0, InterfacesStrings.unknown),
@@ -19,3 +19,4 @@ enum class ConcentrationType(val value: Double, val label: TextRef) {
         fun fromInt(type: Int) = entries.firstOrNull { it.value * 100 == type.toDouble() } ?: UNKNOWN
     }
 }
+

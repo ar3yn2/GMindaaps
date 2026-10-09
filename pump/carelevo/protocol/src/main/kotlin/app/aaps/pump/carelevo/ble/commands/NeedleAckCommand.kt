@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleCommand
 
 /**
  * `CMD_NEEDLE_INSERT_ACK` (0x19) → `CMD_CANNULA_INSERTION_RPT_ACK_RES` (0x7A). Confirms the cannula
@@ -36,3 +36,4 @@ class NeedleAckCommand(
         private const val MIN_RESPONSE_LENGTH = 2
     }
 }
+

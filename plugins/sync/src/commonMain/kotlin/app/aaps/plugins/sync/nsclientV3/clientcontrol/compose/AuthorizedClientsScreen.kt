@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol.compose
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -43,15 +43,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.nssdk.localmodel.clientcontrol.AuthorizedClient
-import app.aaps.core.nssdk.localmodel.clientcontrol.ClientState
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.AapsTopAppBar
-import app.aaps.core.ui.compose.clearFocusOnTap
-import app.aaps.core.ui.compose.metroViewModel
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.sync.SyncStrings
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.AuthorizedClient
+import app.gmaaps.core.nssdk.localmodel.clientcontrol.ClientState
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.AapsTopAppBar
+import app.gmaaps.core.ui.compose.clearFocusOnTap
+import app.gmaaps.core.ui.compose.metroViewModel
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.sync.SyncStrings
 import kotlinx.coroutines.delay
 import kotlin.time.Clock
 
@@ -433,3 +433,4 @@ private fun PublishStatusBanner(
         }
     }
 }
+

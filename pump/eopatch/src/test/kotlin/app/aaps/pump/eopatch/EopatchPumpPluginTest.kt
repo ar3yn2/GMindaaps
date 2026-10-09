@@ -1,18 +1,18 @@
-package app.aaps.pump.eopatch
+﻿package app.gmaaps.pump.eopatch
 
 import android.Manifest
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BlePreCheck
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.PumpProfile
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.pump.eopatch.core.scan.BleConnectionState
-import app.aaps.pump.eopatch.vo.PatchLifecycleEvent
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BlePreCheck
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.PumpProfile
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.pump.eopatch.core.scan.BleConnectionState
+import app.gmaaps.pump.eopatch.vo.PatchLifecycleEvent
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -43,7 +43,7 @@ class EopatchPumpPluginTest : EopatchTestBase() {
         whenever(bleConnectionState.isConnected).thenReturn(false)
         whenever(bleConnectionState.isConnecting).thenReturn(false)
         whenever(eopatchPreferenceManager.patchState).thenReturn(
-            app.aaps.pump.eopatch.vo.PatchState()
+            app.gmaaps.pump.eopatch.vo.PatchState()
         )
 
         // Setup profile mock to return valid basal values
@@ -101,7 +101,7 @@ class EopatchPumpPluginTest : EopatchTestBase() {
 
     @Test
     fun `isSuspended should return true when basal is paused`() {
-        val patchState = app.aaps.pump.eopatch.vo.PatchState()
+        val patchState = app.gmaaps.pump.eopatch.vo.PatchState()
         val bytes = ByteArray(20)
         bytes[4] = 0x04.toByte() // isNormalBasalReg=true (bit 2), isNormalBasalAct=false (bit 4) -> paused
         patchState.update(bytes, System.currentTimeMillis())
@@ -112,7 +112,7 @@ class EopatchPumpPluginTest : EopatchTestBase() {
 
     @Test
     fun `isSuspended should return false when basal is not paused`() {
-        val patchState = app.aaps.pump.eopatch.vo.PatchState()
+        val patchState = app.gmaaps.pump.eopatch.vo.PatchState()
         patchState.update(ByteArray(20), System.currentTimeMillis())
         whenever(eopatchPreferenceManager.patchState).thenReturn(patchState)
 
@@ -171,7 +171,7 @@ class EopatchPumpPluginTest : EopatchTestBase() {
     @Test
     fun `baseBasalRate should return 0 when basal is paused`() {
         patchConfig.lifecycleEvent = PatchLifecycleEvent.createActivated()
-        val patchState = app.aaps.pump.eopatch.vo.PatchState()
+        val patchState = app.gmaaps.pump.eopatch.vo.PatchState()
         val bytes = ByteArray(20)
         bytes[4] = 0x04.toByte() // isNormalBasalReg=true (bit 2), isNormalBasalAct=false (bit 4) -> paused
         patchState.update(bytes, System.currentTimeMillis())
@@ -190,7 +190,7 @@ class EopatchPumpPluginTest : EopatchTestBase() {
     @Test
     fun `reservoirLevel should return patch state value when activated`() {
         patchConfig.lifecycleEvent = PatchLifecycleEvent.createActivated()
-        val patchState = app.aaps.pump.eopatch.vo.PatchState()
+        val patchState = app.gmaaps.pump.eopatch.vo.PatchState()
         // Create bytes with remainedInsulin = 50.0f
         val bytes = ByteArray(20)
         patchState.update(bytes, System.currentTimeMillis())
@@ -253,3 +253,4 @@ class EopatchPumpPluginTest : EopatchTestBase() {
         assertThat(allPermissions).contains(Manifest.permission.BLUETOOTH_SCAN)
     }
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.xdrip.keys
+﻿package app.gmaaps.plugins.sync.xdrip.keys
 
-import app.aaps.core.keys.PreferenceType
-import app.aaps.core.keys.interfaces.IntentPreferenceKey
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.plugins.sync.SyncStrings
+import app.gmaaps.core.keys.PreferenceType
+import app.gmaaps.core.keys.interfaces.IntentPreferenceKey
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.plugins.sync.SyncStrings
 
 enum class XdripIntentKey(
     override val key: String,
@@ -22,3 +22,4 @@ enum class XdripIntentKey(
     ;
 
 }
+

@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action;
 
 import androidx.annotation.NonNull;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.GetStatusCommand;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoResponse;
-import app.aaps.pump.omnipod.eros.driver.definition.PodInfoType;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.GetStatusCommand;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoResponse;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodInfoType;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
 
 public class GetPodInfoAction implements OmnipodAction<PodInfoResponse> {
     @NonNull private final ErosPodStateManager podStateManager;
@@ -28,3 +28,4 @@ public class GetPodInfoAction implements OmnipodAction<PodInfoResponse> {
         return communicationService.sendCommand(PodInfoResponse.class, podStateManager, new GetStatusCommand(podInfoType));
     }
 }
+

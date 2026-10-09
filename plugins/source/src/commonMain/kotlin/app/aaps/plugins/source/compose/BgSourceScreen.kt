@@ -1,4 +1,4 @@
-package app.aaps.plugins.source.compose
+﻿package app.gmaaps.plugins.source.compose
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -37,20 +37,20 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.data.model.GV
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.AapsTheme
-import app.aaps.core.ui.compose.SelectableListToolbar
-import app.aaps.core.ui.compose.ToolbarConfig
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.icons.Ns
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.core.ui.extensions.directionToDescription
-import app.aaps.core.ui.extensions.directionToIcon
-import app.aaps.ui.compose.components.ContentContainer
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.AapsTheme
+import app.gmaaps.core.ui.compose.SelectableListToolbar
+import app.gmaaps.core.ui.compose.ToolbarConfig
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.icons.Ns
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.core.ui.extensions.directionToDescription
+import app.gmaaps.core.ui.extensions.directionToIcon
+import app.gmaaps.ui.compose.components.ContentContainer
 import kotlinx.coroutines.flow.distinctUntilChanged
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -343,3 +343,4 @@ private fun GlucoseValueItem(
         }
     }
 }
+

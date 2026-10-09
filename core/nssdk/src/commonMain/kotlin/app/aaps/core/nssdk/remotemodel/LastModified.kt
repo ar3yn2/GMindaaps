@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.remotemodel
+﻿package app.gmaaps.core.nssdk.remotemodel
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -34,3 +34,4 @@ data class LastModified(
         }
     }
 }
+

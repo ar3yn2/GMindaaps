@@ -1,10 +1,10 @@
-package app.aaps.pump.eopatch.compose
+﻿package app.gmaaps.pump.eopatch.compose
 
-import app.aaps.core.data.model.TE
-import app.aaps.core.keys.BooleanKey
-import app.aaps.pump.eopatch.code.PatchStep
-import app.aaps.pump.eopatch.core.scan.BleConnectionState
-import app.aaps.pump.eopatch.vo.PatchLifecycleEvent
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.pump.eopatch.code.PatchStep
+import app.gmaaps.pump.eopatch.core.scan.BleConnectionState
+import app.gmaaps.pump.eopatch.vo.PatchLifecycleEvent
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
@@ -195,3 +195,4 @@ class EopatchPatchViewModelStepTest : EopatchViewModelTestBase() {
         assertThat(viewModel.siteArrow.value).isEqualTo(TE.Arrow.NONE)
     }
 }
+

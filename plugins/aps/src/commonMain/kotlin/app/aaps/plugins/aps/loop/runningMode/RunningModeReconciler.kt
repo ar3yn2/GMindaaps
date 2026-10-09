@@ -1,31 +1,31 @@
-package app.aaps.plugins.aps.loop.runningMode
+﻿package app.gmaaps.plugins.aps.loop.runningMode
 
 import androidx.annotation.VisibleForTesting
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.db.ProcessedTbrEbData
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.plugins.aps.ApsStrings
-import app.aaps.plugins.aps.loop.runningMode.RunningModeReconciler.Companion.ALARM_AFTER_MS
-import app.aaps.plugins.aps.loop.runningMode.RunningModeReconciler.Companion.ALARM_REPEAT_MS
-import app.aaps.plugins.aps.loop.runningMode.RunningModeReconciler.Companion.RENEW_BEFORE_END_MS
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.db.ProcessedTbrEbData
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.plugins.aps.ApsStrings
+import app.gmaaps.plugins.aps.loop.runningMode.RunningModeReconciler.Companion.ALARM_AFTER_MS
+import app.gmaaps.plugins.aps.loop.runningMode.RunningModeReconciler.Companion.ALARM_REPEAT_MS
+import app.gmaaps.plugins.aps.loop.runningMode.RunningModeReconciler.Companion.RENEW_BEFORE_END_MS
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -393,3 +393,4 @@ class RunningModeReconciler(
         private val ALARM_REPEAT_MS = T.mins(15).msecs()
     }
 }
+

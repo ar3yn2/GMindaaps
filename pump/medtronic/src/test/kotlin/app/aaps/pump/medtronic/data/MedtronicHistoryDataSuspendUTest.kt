@@ -1,13 +1,13 @@
-package app.aaps.pump.medtronic.data
+﻿package app.gmaaps.pump.medtronic.data
 
-import app.aaps.pump.medtronic.MedtronicTestBase
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntryType
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryResult
-import app.aaps.pump.medtronic.data.dto.BolusDTO
-import app.aaps.pump.medtronic.defs.MedtronicDeviceType
-import app.aaps.pump.medtronic.defs.PumpBolusType
-import app.aaps.pump.medtronic.driver.MedtronicPumpStatus
+import app.gmaaps.pump.medtronic.MedtronicTestBase
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntryType
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryResult
+import app.gmaaps.pump.medtronic.data.dto.BolusDTO
+import app.gmaaps.pump.medtronic.defs.MedtronicDeviceType
+import app.gmaaps.pump.medtronic.defs.PumpBolusType
+import app.gmaaps.pump.medtronic.driver.MedtronicPumpStatus
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.Mock
@@ -214,3 +214,4 @@ class MedtronicHistoryDataSuspendUTest : MedtronicTestBase() {
         assertThat(data.hasRelevantConfigurationChanged()).isFalse()
     }
 }
+

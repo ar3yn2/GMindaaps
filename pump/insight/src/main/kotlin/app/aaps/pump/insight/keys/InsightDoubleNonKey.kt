@@ -1,6 +1,6 @@
-package app.aaps.pump.insight.keys
+﻿package app.gmaaps.pump.insight.keys
 
-import app.aaps.core.keys.interfaces.DoubleNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.DoubleNonPreferenceKey
 
 enum class InsightDoubleNonKey(
     override val key: String,
@@ -9,4 +9,5 @@ enum class InsightDoubleNonKey(
 
     LastBolusAmount("insight_last_bolus_amount", 0.0),
 }
+
 

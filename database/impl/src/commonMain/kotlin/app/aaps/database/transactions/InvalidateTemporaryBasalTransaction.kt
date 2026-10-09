@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.TemporaryBasal
+import app.gmaaps.database.entities.TemporaryBasal
 
 class InvalidateTemporaryBasalTransaction(val id: Long) : Transaction<InvalidateTemporaryBasalTransaction.TransactionResult>() {
 

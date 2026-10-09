@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.interfaces.utils.MidnightTime
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.asJsonObject
+import app.gmaaps.core.interfaces.utils.MidnightTime
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.asJsonObject
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -65,3 +65,4 @@ class TriggerTimeRangeTest : TriggerTestBase() {
         assertThat(TriggerTimeRange(triggerDeps).friendlyDescription()).isEqualTo("Time is between 12:34 PM and 12:34 PM")
     }
 }
+

@@ -1,17 +1,17 @@
-package app.aaps.plugins.source
+﻿package app.gmaaps.plugins.source
 
 import android.content.ContentResolver
 import android.database.Cursor
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.data.model.TrendArrow
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.plugins.source.keys.IntelligoLongKey
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.plugins.source.keys.IntelligoLongKey
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions
@@ -235,3 +235,4 @@ class IntelligoPluginTest : TestBaseWithProfile() {
         Assertions.assertNull(intelligoPlugin.handler)
     }
 }
+

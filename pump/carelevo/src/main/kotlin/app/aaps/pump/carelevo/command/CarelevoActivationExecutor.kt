@@ -1,35 +1,35 @@
-package app.aaps.pump.carelevo.command
+﻿package app.gmaaps.pump.carelevo.command
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.queue.CustomCommand
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.ble.commands.AlarmClearCommand
-import app.aaps.pump.carelevo.ble.commands.BuzzModeCommand
-import app.aaps.pump.carelevo.ble.commands.InfusionThresholdCommand
-import app.aaps.pump.carelevo.ble.commands.NeedleStatusCommand
-import app.aaps.pump.carelevo.ble.commands.NoticeThresholdCommand
-import app.aaps.pump.carelevo.ble.commands.PatchDiscardCommand
-import app.aaps.pump.carelevo.ble.commands.PumpResumeCommand
-import app.aaps.pump.carelevo.ble.commands.PumpStopCommand
-import app.aaps.pump.carelevo.ble.commands.SafetyCheckCommand
-import app.aaps.pump.carelevo.ble.commands.SetTimeCommand
-import app.aaps.pump.carelevo.ble.commands.SimpleResultResponse
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.domain.model.bt.SafetyCheckResult
-import app.aaps.pump.carelevo.domain.model.bt.SafetyCheckResultModel
-import app.aaps.pump.carelevo.domain.type.SafetyProgress
-import app.aaps.pump.carelevo.domain.usecase.alarm.AlarmClearPatchDiscardUseCase
-import app.aaps.pump.carelevo.domain.usecase.alarm.AlarmClearRequestUseCase
-import app.aaps.pump.carelevo.domain.usecase.basal.CarelevoSetBasalProgramUseCase
-import app.aaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpResumeUseCase
-import app.aaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpStopUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchNeedleInsertionCheckUseCase
-import app.aaps.pump.carelevo.domain.usecase.patch.CarelevoPatchSafetyCheckUseCase
-import app.aaps.pump.carelevo.domain.usecase.userSetting.CarelevoUpdateLowInsulinNoticeAmountUseCase
-import app.aaps.pump.carelevo.domain.usecase.userSetting.CarelevoUpdateMaxBolusDoseUseCase
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.ble.commands.AlarmClearCommand
+import app.gmaaps.pump.carelevo.ble.commands.BuzzModeCommand
+import app.gmaaps.pump.carelevo.ble.commands.InfusionThresholdCommand
+import app.gmaaps.pump.carelevo.ble.commands.NeedleStatusCommand
+import app.gmaaps.pump.carelevo.ble.commands.NoticeThresholdCommand
+import app.gmaaps.pump.carelevo.ble.commands.PatchDiscardCommand
+import app.gmaaps.pump.carelevo.ble.commands.PumpResumeCommand
+import app.gmaaps.pump.carelevo.ble.commands.PumpStopCommand
+import app.gmaaps.pump.carelevo.ble.commands.SafetyCheckCommand
+import app.gmaaps.pump.carelevo.ble.commands.SetTimeCommand
+import app.gmaaps.pump.carelevo.ble.commands.SimpleResultResponse
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.domain.model.bt.SafetyCheckResult
+import app.gmaaps.pump.carelevo.domain.model.bt.SafetyCheckResultModel
+import app.gmaaps.pump.carelevo.domain.type.SafetyProgress
+import app.gmaaps.pump.carelevo.domain.usecase.alarm.AlarmClearPatchDiscardUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.alarm.AlarmClearRequestUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.basal.CarelevoSetBasalProgramUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpResumeUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.infusion.CarelevoPumpStopUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchNeedleInsertionCheckUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.patch.CarelevoPatchSafetyCheckUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.userSetting.CarelevoUpdateLowInsulinNoticeAmountUseCase
+import app.gmaaps.pump.carelevo.domain.usecase.userSetting.CarelevoUpdateMaxBolusDoseUseCase
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.Provider
@@ -42,7 +42,7 @@ import kotlin.jvm.optionals.getOrNull
 import kotlin.time.Clock
 
 /**
- * Runs activation operations that are routed through the AAPS [app.aaps.core.interfaces.queue.CommandQueue]
+ * Runs activation operations that are routed through the AAPS [app.gmaaps.core.interfaces.queue.CommandQueue]
  * as custom commands. The plugin's `executeCustomCommand` delegates here; it is invoked on the queue
  * worker thread. Each op runs BLOCKING over the coroutine [CarelevoBleSession] (its own per-op
  * connection session — connect → exchange → close) and returns a [PumpEnactResult]. The use cases are
@@ -105,7 +105,7 @@ class CarelevoActivationExecutor @Inject constructor(
 
     /**
      * Initial basal program (**delivery-critical**): build the 3-program plan with the use case's exact
-     * mapping, send all three [app.aaps.pump.carelevo.ble.commands.BasalProgramCommand]s over ONE session
+     * mapping, send all three [app.gmaaps.pump.carelevo.ble.commands.BasalProgramCommand]s over ONE session
      * (via [CarelevoBleSession.runBasalProgram]), and only on all-success reuse the use case's `mode=1` +
      * infusion-info persist. Activation-only op.
      */
@@ -456,3 +456,4 @@ class CarelevoActivationExecutor @Inject constructor(
         }
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.domain.model.alarm
+﻿package app.gmaaps.pump.carelevo.domain.model.alarm
 
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
 
 data class CarelevoAlarmInfo(
     val alarmId: String,
@@ -13,3 +13,4 @@ data class CarelevoAlarmInfo(
     val isAcknowledged: Boolean,
     val occurrenceCount: Int? = null
 )
+

@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.openhumans.compose
+﻿package app.gmaaps.plugins.sync.openhumans.compose
 
-import app.aaps.plugins.sync.openhumans.OpenHumansState
-import app.aaps.plugins.sync.openhumans.delegates.OHStateDelegate
+import app.gmaaps.plugins.sync.openhumans.OpenHumansState
+import app.gmaaps.plugins.sync.openhumans.delegates.OHStateDelegate
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -74,3 +74,4 @@ internal class OHViewModelTest {
         assertThat(sut.uiState.value.projectMemberId).isNull()
     }
 }
+

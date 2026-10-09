@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.interfaces.io
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.io
 
 sealed class BleSendResult
 
@@ -11,3 +11,4 @@ sealed class BleConfirmResult
 object BleConfirmSuccess : BleConfirmResult()
 data class BleConfirmIncorrectData(val payload: ByteArray) : BleConfirmResult()
 data class BleConfirmError(val msg: String) : BleConfirmResult()
+

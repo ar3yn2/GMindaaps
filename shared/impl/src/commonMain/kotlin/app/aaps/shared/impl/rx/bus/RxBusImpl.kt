@@ -1,10 +1,10 @@
-package app.aaps.shared.impl.rx.bus
+﻿package app.gmaaps.shared.impl.rx.bus
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.Event
-import app.aaps.core.interfaces.rx.events.EventUpdateOverviewCalcProgress
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.Event
+import app.gmaaps.core.interfaces.rx.events.EventUpdateOverviewCalcProgress
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -33,3 +33,4 @@ class RxBusImpl(
             .filter { eventType.isInstance(it) }
             .map { it as T }
 }
+

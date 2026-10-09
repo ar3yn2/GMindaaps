@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.graphics.Color
@@ -54,3 +54,4 @@ internal val DarkProfileHelperColors = ProfileHelperColors(
  * Accessed via AapsTheme.profileHelperColors in composables.
  */
 internal val LocalProfileHelperColors = compositionLocalOf { LightProfileHelperColors }
+

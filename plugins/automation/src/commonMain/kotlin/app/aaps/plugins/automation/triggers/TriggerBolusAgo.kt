@@ -1,15 +1,15 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.data.model.BS
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.icons.IcBolus
-import app.aaps.core.utils.lenientInt
-import app.aaps.core.utils.lenientStringOrNull
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.Comparator
-import app.aaps.plugins.automation.elements.InputDuration
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.icons.IcBolus
+import app.gmaaps.core.utils.lenientInt
+import app.gmaaps.core.utils.lenientStringOrNull
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.Comparator
+import app.gmaaps.plugins.automation.elements.InputDuration
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put

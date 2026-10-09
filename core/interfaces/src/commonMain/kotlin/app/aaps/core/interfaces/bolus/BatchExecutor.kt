@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.bolus
+﻿package app.gmaaps.core.interfaces.bolus
 
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.interfaces.clientcontrol.ActionProgress
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.interfaces.clientcontrol.ActionProgress
 
 /**
  * Role-transparent multi-action apply: a dialog builds the [BatchAction] list and calls [apply]. On a paired
@@ -30,3 +30,4 @@ interface BatchExecutor {
      */
     suspend fun commit(id: Long, source: Sources, label: String, pumpDirect: Boolean = false): ActionProgress
 }
+

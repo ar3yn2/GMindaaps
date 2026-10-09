@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.insulin
+﻿package app.gmaaps.core.interfaces.insulin
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -53,3 +53,4 @@ class ConcentrationTypeTest {
         assertThat(ConcentrationType.UNKNOWN.value).isEqualTo(-1.0)
     }
 }
+

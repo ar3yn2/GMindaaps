@@ -1,29 +1,29 @@
-package app.aaps.pump.omnipod.common.bledriver.comm
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.BusyException
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.ConnectException
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.CouldNotSendCommandException
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.FailedToConnectException
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.MessageIOException
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.NotConnectedException
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.SessionEstablishmentException
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.device.BleDeviceManager
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.session.BleConnection
-import app.aaps.pump.omnipod.common.bledriver.comm.session.CommandAckError
-import app.aaps.pump.omnipod.common.bledriver.comm.session.CommandReceiveError
-import app.aaps.pump.omnipod.common.bledriver.comm.session.CommandReceiveSuccess
-import app.aaps.pump.omnipod.common.bledriver.comm.session.CommandSendErrorConfirming
-import app.aaps.pump.omnipod.common.bledriver.comm.session.CommandSendErrorSending
-import app.aaps.pump.omnipod.common.bledriver.comm.session.CommandSendSuccess
-import app.aaps.pump.omnipod.common.bledriver.comm.session.Connected
-import app.aaps.pump.omnipod.common.bledriver.comm.session.ConnectionState
-import app.aaps.pump.omnipod.common.bledriver.comm.session.ConnectionWaitCondition
-import app.aaps.pump.omnipod.common.bledriver.comm.session.NotConnected
-import app.aaps.pump.omnipod.common.bledriver.event.PodEvent
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.Command
-import app.aaps.pump.omnipod.common.bledriver.pod.response.Response
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.BusyException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.ConnectException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.CouldNotSendCommandException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.FailedToConnectException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.MessageIOException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.NotConnectedException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.SessionEstablishmentException
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.device.BleDeviceManager
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.session.BleConnection
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.CommandAckError
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.CommandReceiveError
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.CommandReceiveSuccess
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.CommandSendErrorConfirming
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.CommandSendErrorSending
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.CommandSendSuccess
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.Connected
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.ConnectionState
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.ConnectionWaitCondition
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.NotConnected
+import app.gmaaps.pump.omnipod.common.bledriver.event.PodEvent
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.Command
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.Response
 import io.reactivex.rxjava3.core.Observable
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.atomic.AtomicBoolean
@@ -214,3 +214,4 @@ abstract class SharedBleManager(
         bleDeviceManager.removeBond(address)
     }
 }
+

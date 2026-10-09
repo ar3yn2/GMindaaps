@@ -1,6 +1,6 @@
-package app.aaps.plugins.source.notificationreader
+﻿package app.gmaaps.plugins.source.notificationreader
 
-import app.aaps.core.data.model.SourceSensor
+import app.gmaaps.core.data.model.SourceSensor
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -168,3 +168,4 @@ class PackageConfigTest {
         assertThat(config.sensorForPackage("com.dexcom.g7")).isEqualTo(SourceSensor.DEXCOM_G7)
     }
 }
+

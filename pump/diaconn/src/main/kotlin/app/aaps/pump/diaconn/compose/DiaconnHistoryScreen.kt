@@ -1,4 +1,4 @@
-package app.aaps.pump.diaconn.compose
+﻿package app.gmaaps.pump.diaconn.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -16,10 +16,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.AapsCard
-import app.aaps.core.ui.compose.pump.PumpHistoryScreen
-import app.aaps.pump.diaconn.common.RecordTypes
-import app.aaps.pump.diaconn.database.DiaconnHistoryRecord
+import app.gmaaps.core.ui.compose.AapsCard
+import app.gmaaps.core.ui.compose.pump.PumpHistoryScreen
+import app.gmaaps.pump.diaconn.common.RecordTypes
+import app.gmaaps.pump.diaconn.database.DiaconnHistoryRecord
 
 @Composable
 fun DiaconnHistoryScreen(
@@ -98,9 +98,9 @@ private fun DiaconnHistoryItem(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceEvenly
                     ) {
-                        LabeledValue(label = stringResource(app.aaps.core.interfaces.R.string.bolus), value = viewModel.formatDailyBolus(record))
-                        LabeledValue(label = stringResource(app.aaps.core.ui.R.string.basal), value = viewModel.formatDailyBasal(record))
-                        LabeledValue(label = stringResource(app.aaps.core.ui.R.string.wizard_total), value = viewModel.formatDailyTotal(record))
+                        LabeledValue(label = stringResource(app.gmaaps.core.interfaces.R.string.bolus), value = viewModel.formatDailyBolus(record))
+                        LabeledValue(label = stringResource(app.gmaaps.core.ui.R.string.basal), value = viewModel.formatDailyBasal(record))
+                        LabeledValue(label = stringResource(app.gmaaps.core.ui.R.string.wizard_total), value = viewModel.formatDailyTotal(record))
                     }
                 }
 
@@ -154,3 +154,4 @@ private fun LabeledValue(label: String, value: String) {
         Text(text = value, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Medium)
     }
 }
+

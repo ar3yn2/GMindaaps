@@ -1,7 +1,7 @@
-package app.aaps.desktop.shell.platform
+﻿package app.gmaaps.desktop.shell.platform
 
-import app.aaps.core.objects.workflow.WorkOutcome
-import app.aaps.plugins.sync.nsclientV3.ws.NsLoadChain
+import app.gmaaps.core.objects.workflow.WorkOutcome
+import app.gmaaps.plugins.sync.nsclientV3.ws.NsLoadChain
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -65,3 +65,4 @@ class DesktopNsLoadExecutorTest {
         assertFalse(NsLoadChain.shouldContinue(WorkOutcome.Retry("later")))
     }
 }
+

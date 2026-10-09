@@ -1,14 +1,14 @@
-package app.aaps.core.interfaces.iob
+﻿package app.gmaaps.core.interfaces.iob
 
-import app.aaps.core.data.aps.BasalData
-import app.aaps.core.data.iob.CobInfo
-import app.aaps.core.interfaces.aps.AutosensData
-import app.aaps.core.interfaces.aps.AutosensDataStore
-import app.aaps.core.interfaces.aps.AutosensResult
-import app.aaps.core.interfaces.aps.IobTotal
-import app.aaps.core.interfaces.aps.MealData
-import app.aaps.core.interfaces.profile.EffectiveProfile
-import app.aaps.core.interfaces.profile.Profile
+import app.gmaaps.core.data.aps.BasalData
+import app.gmaaps.core.data.iob.CobInfo
+import app.gmaaps.core.interfaces.aps.AutosensData
+import app.gmaaps.core.interfaces.aps.AutosensDataStore
+import app.gmaaps.core.interfaces.aps.AutosensResult
+import app.gmaaps.core.interfaces.aps.IobTotal
+import app.gmaaps.core.interfaces.aps.MealData
+import app.gmaaps.core.interfaces.profile.EffectiveProfile
+import app.gmaaps.core.interfaces.profile.Profile
 
 interface IobCobCalculator {
 

@@ -1,16 +1,16 @@
-package app.aaps.pump.danars.di
+﻿package app.gmaaps.pump.danars.di
 
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.pump.ble.BleTransport
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danars.emulator.EmulatorBleTransport
-import app.aaps.pump.danars.emulator.NotificationPumpDisplay
-import app.aaps.pump.danars.encryption.EncryptionType
-import app.aaps.pump.danars.services.BleTransportImpl
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.pump.ble.BleTransport
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danars.emulator.EmulatorBleTransport
+import app.gmaaps.pump.danars.emulator.NotificationPumpDisplay
+import app.gmaaps.pump.danars.encryption.EncryptionType
+import app.gmaaps.pump.danars.services.BleTransportImpl
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.BindingContainer
 import dev.zacsweers.metro.ContributesTo
@@ -63,3 +63,4 @@ object DanaRSTransportBindings {
         }
     }
 }
+

@@ -1,9 +1,9 @@
-package app.aaps.receivers
+﻿package app.gmaaps.receivers
 
 import android.content.Intent
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.shared.tests.TestBase
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.ArgumentMatchers.anyInt
@@ -59,3 +59,4 @@ class CarbSuggestionReceiverTest : TestBase() {
         verify(loop).disableCarbSuggestions(5)
     }
 }
+

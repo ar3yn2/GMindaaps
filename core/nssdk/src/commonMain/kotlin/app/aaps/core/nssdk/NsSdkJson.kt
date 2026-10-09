@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk
+﻿package app.gmaaps.core.nssdk
 
 import kotlinx.serialization.json.Json
 
@@ -18,7 +18,7 @@ import kotlinx.serialization.json.Json
  * - **`isLenient`** - the one that needs justifying. It exists for a single measured difference:
  *   a bare **number arriving in a `String` field**. Strict kotlinx already accepts a quoted number
  *   in a `Long` / `Double` / `Int` field and `"true"` in a `Boolean` field, so those need nothing.
- *   The gap is real data, not a hypothetical: [app.aaps.core.nssdk.remotemodel.RemoteTreatment]
+ *   The gap is real data, not a hypothetical: [app.gmaaps.core.nssdk.remotemodel.RemoteTreatment]
  *   declares `created_at` as `String?` and its own comment records that servers send it "with string
  *   others with long".
  *
@@ -61,3 +61,4 @@ internal val nsSdkJson = Json {
     encodeDefaults = true
     coerceInputValues = true
 }
+

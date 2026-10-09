@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.database
+﻿package app.gmaaps.pump.equil.database
 
 import androidx.room.Entity
 import androidx.room.Index
@@ -27,3 +27,4 @@ class EquilHistoryPump {
     var serialNumber: String = ""
 
 }
+

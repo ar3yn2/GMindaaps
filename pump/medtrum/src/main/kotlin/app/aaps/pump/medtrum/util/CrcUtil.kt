@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.util
+﻿package app.gmaaps.pump.medtrum.util
 
 object CrcUtils {
 
@@ -270,3 +270,4 @@ object CrcUtils {
         return crc8.toByte()
     }
 }
+

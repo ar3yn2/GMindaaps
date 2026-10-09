@@ -1,4 +1,4 @@
-package app.aaps.plugins.configuration.setupwizard
+﻿package app.gmaaps.plugins.configuration.setupwizard
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
@@ -29,20 +29,20 @@ import androidx.compose.ui.Modifier
 import androidx.navigationevent.NavigationEventInfo
 import androidx.navigationevent.compose.NavigationBackHandler
 import androidx.navigationevent.compose.rememberNavigationEventState
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.rx.events.EventSWRLStatus
-import app.aaps.core.interfaces.rx.events.EventSWSyncStatus
-import app.aaps.core.interfaces.rx.events.EventSWUpdate
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsTopAppBar
-import app.aaps.core.ui.compose.dialogs.OkCancelDialog
-import app.aaps.core.ui.compose.preference.ProvidePreferenceTheme
-import app.aaps.core.ui.compose.pump.StepProgressIndicator
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.configuration.ConfigurationStrings
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.rx.events.EventSWRLStatus
+import app.gmaaps.core.interfaces.rx.events.EventSWSyncStatus
+import app.gmaaps.core.interfaces.rx.events.EventSWUpdate
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsTopAppBar
+import app.gmaaps.core.ui.compose.dialogs.OkCancelDialog
+import app.gmaaps.core.ui.compose.preference.ProvidePreferenceTheme
+import app.gmaaps.core.ui.compose.pump.StepProgressIndicator
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.configuration.ConfigurationStrings
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.merge
 import kotlinx.coroutines.withContext
@@ -64,8 +64,8 @@ fun SetupWizardScreen(
     onOpenNsReceiveSettings: () -> Unit,
     onRunObjectives: () -> Unit,
     onRequestDirectoryAccess: () -> Unit,
-    onRequestPermission: (app.aaps.core.interfaces.plugin.PermissionGroup) -> Unit,
-    permissionItems: () -> List<Pair<app.aaps.core.interfaces.plugin.PermissionGroup, Boolean>>,
+    onRequestPermission: (app.gmaaps.core.interfaces.plugin.PermissionGroup) -> Unit,
+    permissionItems: () -> List<Pair<app.gmaaps.core.interfaces.plugin.PermissionGroup, Boolean>>,
     isDirectoryAccessGranted: () -> Boolean,
     rxBus: RxBus,
     startPage: Int = 0
@@ -253,3 +253,4 @@ fun SetupWizardScreen(
         } // Scaffold
     } // ProvidePreferenceTheme
 }
+

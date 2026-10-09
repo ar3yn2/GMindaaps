@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.keys
+﻿package app.gmaaps.pump.eopatch.keys
 
-import app.aaps.core.keys.interfaces.StringNonPreferenceKey
+import app.gmaaps.core.keys.interfaces.StringNonPreferenceKey
 
 enum class EopatchStringNonKey(
     override val key: String,
@@ -14,3 +14,4 @@ enum class EopatchStringNonKey(
     NormalBasal("eopatch_normal_basal", ""),
     TempBasal("eopatch_temp_basal", ""),
 }
+

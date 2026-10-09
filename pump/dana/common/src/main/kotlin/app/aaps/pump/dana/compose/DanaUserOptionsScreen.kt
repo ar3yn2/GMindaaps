@@ -1,4 +1,4 @@
-package app.aaps.pump.dana.compose
+﻿package app.gmaaps.pump.dana.compose
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -36,11 +36,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.compose.NumberInputRow
-import app.aaps.core.ui.compose.bottomBarSafeArea
-import app.aaps.pump.dana.R
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.compose.NumberInputRow
+import app.gmaaps.core.ui.compose.bottomBarSafeArea
+import app.gmaaps.pump.dana.R
+import app.gmaaps.core.ui.R as CoreUiR
 
 @Composable
 fun DanaUserOptionsScreen(
@@ -164,7 +164,7 @@ internal fun DanaUserOptionsContent(
                     // Alarm mode
                     Column(modifier = itemModifier) {
                         Text(
-                            text = stringResource(app.aaps.core.ui.R.string.alarm),
+                            text = stringResource(app.gmaaps.core.ui.R.string.alarm),
                             style = MaterialTheme.typography.bodyLarge,
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
@@ -291,3 +291,4 @@ private fun AlarmRadioOption(
         )
     }
 }
+

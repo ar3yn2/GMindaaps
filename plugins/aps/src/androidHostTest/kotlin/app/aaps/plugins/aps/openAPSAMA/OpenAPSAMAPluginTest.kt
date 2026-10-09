@@ -1,11 +1,11 @@
-package app.aaps.plugins.aps.openAPSAMA
+﻿package app.gmaaps.plugins.aps.openAPSAMA
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.interfaces.constraints.ConstraintsChecker
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.iob.GlucoseStatusProvider
-import app.aaps.plugins.aps.openAPSSMB.GlucoseStatusCalculatorSMB
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.interfaces.constraints.ConstraintsChecker
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.iob.GlucoseStatusProvider
+import app.gmaaps.plugins.aps.openAPSSMB.GlucoseStatusCalculatorSMB
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -40,3 +40,4 @@ class OpenAPSAMAPluginTest : TestBaseWithProfile() {
         assertThat(openAPSAMAPlugin.getType()).isEqualTo(PluginType.APS)
     }
 }
+

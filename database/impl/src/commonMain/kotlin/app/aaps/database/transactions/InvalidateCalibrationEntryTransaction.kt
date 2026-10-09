@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.CalibrationEntry
+import app.gmaaps.database.entities.CalibrationEntry
 
 /**
  * Invalidates the CalibrationEntry with the specified id
@@ -24,3 +24,4 @@ class InvalidateCalibrationEntryTransaction(val id: Long) : Transaction<Invalida
         val invalidated = mutableListOf<CalibrationEntry>()
     }
 }
+

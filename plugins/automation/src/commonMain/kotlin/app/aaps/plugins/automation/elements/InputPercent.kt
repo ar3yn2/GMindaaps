@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation.elements
+﻿package app.gmaaps.plugins.automation.elements
 
 class InputPercent() {
 
@@ -14,3 +14,4 @@ class InputPercent() {
         const val MAX = 130.0
     }
 }
+

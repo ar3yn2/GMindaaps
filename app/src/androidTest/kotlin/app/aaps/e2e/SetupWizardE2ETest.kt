@@ -1,4 +1,4 @@
-package app.aaps.e2e
+﻿package app.gmaaps.e2e
 
 import android.content.Context
 import android.os.SystemClock
@@ -12,11 +12,11 @@ import androidx.test.uiautomator.StaleObjectException
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiObject2
 import androidx.test.uiautomator.Until
-import app.aaps.ComposeMainActivity
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.keys.BooleanNonKey
-import app.aaps.di.ResetGraphRule
-import app.aaps.di.testGraphs
+import app.gmaaps.ComposeMainActivity
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.keys.BooleanNonKey
+import app.gmaaps.di.ResetGraphRule
+import app.gmaaps.di.testGraphs
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -721,3 +721,4 @@ class SetupWizardE2ETest {
         private val EDIT_TEXT: BySelector = By.clazz("android.widget.EditText")
     }
 }
+

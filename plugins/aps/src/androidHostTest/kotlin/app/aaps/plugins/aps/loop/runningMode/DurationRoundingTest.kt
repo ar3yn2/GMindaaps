@@ -1,6 +1,6 @@
-package app.aaps.plugins.aps.loop.runningMode
+﻿package app.gmaaps.plugins.aps.loop.runningMode
 
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -192,3 +192,4 @@ class DurationRoundingTest : TestBase() {
         assertThat(r).isEqualTo(DurationRounding.Result.Issue(remaining))
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.persistentNotification
+﻿package app.gmaaps.persistentNotification
 
-import app.aaps.core.interfaces.rx.events.EventAutosensCalculationFinished
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.rx.events.EventAutosensCalculationFinished
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.TestScope
@@ -130,3 +130,4 @@ class PersistentNotificationPluginTest : TestBase() {
         assertThat(PersistentNotificationPlugin.samsungLiveTexts("x", " ", "y", "z")).isNull()
     }
 }
+

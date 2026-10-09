@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.maintenance
+﻿package app.gmaaps.ui.compose.maintenance
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -14,7 +14,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.ui.R as CoreUiR
 
 /** Robolectric composable test for [LogSettingBottomSheetContent] (empty log list): renders and fires
  *  the reset-to-defaults callback — headless JVM, no emulator. */
@@ -51,3 +51,4 @@ class LogSettingBottomSheetContentTest {
         assertThat(resetClicked).isTrue()
     }
 }
+

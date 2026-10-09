@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.exception
+﻿package app.gmaaps.pump.eopatch.core.exception
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -17,3 +17,4 @@ class PatchExceptionsTest {
         assertThat(ex).isInstanceOf(Exception::class.java)
     }
 }
+

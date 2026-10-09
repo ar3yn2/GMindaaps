@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.banner
+﻿package app.gmaaps.core.ui.compose.banner
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -18,9 +18,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.semantics.paneTitle
 import androidx.compose.ui.semantics.semantics
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.stringResource
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.stringResource
 
 /**
  * High-visibility banner for failure / error conditions (Material3 errorContainer).
@@ -119,3 +119,4 @@ private fun BannerCore(
         }
     }
 }
+

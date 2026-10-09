@@ -1,8 +1,8 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import app.aaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
 
 /**
  * It lives here rather than beside `MetroBroadcastReceiver` and `MetroService` in `:core:objects`,
@@ -22,3 +22,4 @@ abstract class MetroAppCompatActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
     }
 }
+

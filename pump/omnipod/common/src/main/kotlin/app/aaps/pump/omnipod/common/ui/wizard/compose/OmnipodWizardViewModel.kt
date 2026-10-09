@@ -1,25 +1,25 @@
-package app.aaps.pump.omnipod.common.ui.wizard.compose
+﻿package app.gmaaps.pump.omnipod.common.ui.wizard.compose
 
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.time.T
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.insulin.InsulinManager
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.rx.AapsSchedulers
-import app.aaps.core.ui.compose.pump.ProfileGateStepHost
-import app.aaps.core.ui.compose.siteRotation.SiteLocationStepHost
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.insulin.InsulinManager
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.rx.AapsSchedulers
+import app.gmaaps.core.ui.compose.pump.ProfileGateStepHost
+import app.gmaaps.core.ui.compose.siteRotation.SiteLocationStepHost
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.kotlin.plusAssign
@@ -439,3 +439,4 @@ abstract class OmnipodWizardViewModel(
         disposable.clear()
     }
 }
+

@@ -1,17 +1,17 @@
-package app.aaps.ui.compose.overview.graphs
+﻿package app.gmaaps.ui.compose.overview.graphs
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.overview.graph.BgDataPoint
-import app.aaps.core.interfaces.overview.graph.BgRange
-import app.aaps.core.interfaces.overview.graph.BgType
-import app.aaps.core.interfaces.overview.graph.GraphConfig
-import app.aaps.core.interfaces.overview.graph.GraphConfigRepository
-import app.aaps.core.interfaces.overview.graph.OverviewDataCache
-import app.aaps.core.interfaces.overview.graph.TimeRange
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.UnitDoubleKey
-import app.aaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.overview.graph.BgDataPoint
+import app.gmaaps.core.interfaces.overview.graph.BgRange
+import app.gmaaps.core.interfaces.overview.graph.BgType
+import app.gmaaps.core.interfaces.overview.graph.GraphConfig
+import app.gmaaps.core.interfaces.overview.graph.GraphConfigRepository
+import app.gmaaps.core.interfaces.overview.graph.OverviewDataCache
+import app.gmaaps.core.interfaces.overview.graph.TimeRange
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.UnitDoubleKey
+import app.gmaaps.core.keys.interfaces.Preferences
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -115,3 +115,4 @@ internal class GraphViewModelTest {
         assertThat(sut.lastInteractionMs).isEqualTo(1_700_000_000_000L)
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.ios.shell.config
+﻿package app.gmaaps.ios.shell.config
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
@@ -18,18 +18,18 @@ class IosClientFlavorTest {
 
     @Test
     fun `the plain identifier is client one`() {
-        assertEquals("aapsclient", clientFlavorFor("app.aaps.client"))
+        assertEquals("aapsclient", clientFlavorFor("app.gmaaps.client"))
     }
 
     /** The identifiers the two targets actually ship with today. */
     @Test
     fun `the shipping identifiers map to the right clients`() {
-        assertEquals("aapsclient", clientFlavorFor("app.aaps.client"))
-        assertEquals("aapsclient2", clientFlavorFor("app.aaps.client2"))
+        assertEquals("aapsclient", clientFlavorFor("app.gmaaps.client"))
+        assertEquals("aapsclient2", clientFlavorFor("app.gmaaps.client2"))
     }
 
     /**
-     * The targets used `info.nightscout.aapsclient` before the move to the `app.aaps` namespace.
+     * The targets used `info.nightscout.aapsclient` before the move to the `app.gmaaps` namespace.
      * Still recognised, so a device or build carrying the old identifier is not silently demoted to
      * client 1 - which is the bug this whole function exists to prevent.
      */
@@ -45,12 +45,12 @@ class IosClientFlavorTest {
      */
     @Test
     fun `the second target is client two and not client one`() {
-        assertEquals("aapsclient2", clientFlavorFor("app.aaps.client2"))
+        assertEquals("aapsclient2", clientFlavorFor("app.gmaaps.client2"))
     }
 
     @Test
     fun `a third client is recognised even though no target builds one yet`() {
-        assertEquals("aapsclient3", clientFlavorFor("app.aaps.client3"))
+        assertEquals("aapsclient3", clientFlavorFor("app.gmaaps.client3"))
     }
 
     /**
@@ -69,3 +69,4 @@ class IosClientFlavorTest {
         assertEquals("aapsclient2", clientFlavorFor("com.example.fork.client2"))
     }
 }
+

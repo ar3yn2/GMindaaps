@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.common
+﻿package app.gmaaps.pump.carelevo.common
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -29,7 +29,7 @@ class CarelevoReceiverDisposableTest {
 
     private val context: Context = RuntimeEnvironment.getApplication()
 
-    private val action = "app.aaps.pump.carelevo.test.DISPOSABLE_ACTION"
+    private val action = "app.gmaaps.pump.carelevo.test.DISPOSABLE_ACTION"
 
     private val shadowApplication: ShadowApplication
         get() = Shadows.shadowOf(RuntimeEnvironment.getApplication())
@@ -82,3 +82,4 @@ class CarelevoReceiverDisposableTest {
         context.unregisterReceiver(someoneElse)
     }
 }
+

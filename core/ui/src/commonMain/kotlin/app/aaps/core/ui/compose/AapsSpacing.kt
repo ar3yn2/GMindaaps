@@ -1,12 +1,12 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.AapsSpacing.extraLarge
-import app.aaps.core.ui.compose.AapsSpacing.extraSmall
-import app.aaps.core.ui.compose.AapsSpacing.large
-import app.aaps.core.ui.compose.AapsSpacing.medium
-import app.aaps.core.ui.compose.AapsSpacing.small
-import app.aaps.core.ui.compose.AapsSpacing.xxLarge
+import app.gmaaps.core.ui.compose.AapsSpacing.extraLarge
+import app.gmaaps.core.ui.compose.AapsSpacing.extraSmall
+import app.gmaaps.core.ui.compose.AapsSpacing.large
+import app.gmaaps.core.ui.compose.AapsSpacing.medium
+import app.gmaaps.core.ui.compose.AapsSpacing.small
+import app.gmaaps.core.ui.compose.AapsSpacing.xxLarge
 
 /**
  * Centralized spacing and dimension constants for AAPS Compose UI.
@@ -49,3 +49,4 @@ object AapsSpacing {
     val chipIconSize = 24.dp
     val chipProgressHeight = 3.dp
 }
+

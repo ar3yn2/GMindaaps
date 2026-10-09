@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.xdrip.extensions
+﻿package app.gmaaps.plugins.sync.xdrip.extensions
 
-import app.aaps.core.data.model.DS
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.model.DS
+import app.gmaaps.core.interfaces.utils.DateUtil
 
 import org.json.JSONObject
 
@@ -377,3 +377,4 @@ fun DS.toJson(dateUtil: DateUtil): JSONObject =
         "created_at": "2016-06-24T09:27:49.230Z"
         }
 */
+

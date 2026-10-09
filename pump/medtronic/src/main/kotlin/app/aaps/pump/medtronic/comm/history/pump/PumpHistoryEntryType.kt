@@ -1,7 +1,7 @@
-package app.aaps.pump.medtronic.comm.history.pump
+﻿package app.gmaaps.pump.medtronic.comm.history.pump
 
-import app.aaps.pump.common.defs.PumpHistoryEntryGroup
-import app.aaps.pump.medtronic.defs.MedtronicDeviceType
+import app.gmaaps.pump.common.defs.PumpHistoryEntryGroup
+import app.gmaaps.pump.medtronic.defs.MedtronicDeviceType
 
 /**
  * This file was taken from GGC - GNU Gluco Control (ggc.sourceforge.net), application for diabetes

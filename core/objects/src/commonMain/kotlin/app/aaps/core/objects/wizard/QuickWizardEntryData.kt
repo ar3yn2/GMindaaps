@@ -1,11 +1,11 @@
-package app.aaps.core.objects.wizard
+﻿package app.gmaaps.core.objects.wizard
 
-import app.aaps.core.objects.wizard.QuickWizardEntryData.Companion.DEVICE_ALL
-import app.aaps.core.objects.wizard.QuickWizardEntryData.Companion.fromJsonObject
-import app.aaps.core.utils.lenientDouble
-import app.aaps.core.utils.lenientInt
-import app.aaps.core.utils.lenientLong
-import app.aaps.core.utils.lenientString
+import app.gmaaps.core.objects.wizard.QuickWizardEntryData.Companion.DEVICE_ALL
+import app.gmaaps.core.objects.wizard.QuickWizardEntryData.Companion.fromJsonObject
+import app.gmaaps.core.utils.lenientDouble
+import app.gmaaps.core.utils.lenientInt
+import app.gmaaps.core.utils.lenientLong
+import app.gmaaps.core.utils.lenientString
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
@@ -133,3 +133,4 @@ data class QuickWizardEntryData(
             put("lastUsed", lastUsed)
         }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.database.entities.GlucoseValue
-import app.aaps.database.entities.HeartRate
-import app.aaps.database.entities.data.NewEntries
+import app.gmaaps.database.entities.GlucoseValue
+import app.gmaaps.database.entities.HeartRate
+import app.gmaaps.database.entities.data.NewEntries
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
@@ -10,7 +10,7 @@ import kotlin.test.assertTrue
 
 /**
  * Tests for [NewEntries.fromDb] which maps the Room aggregate entity [NewEntries]
- * to the domain aggregate [app.aaps.core.data.model.NE].
+ * to the domain aggregate [app.gmaaps.core.data.model.NE].
  *
  * The mapping is forward-only and lossy: the entity fields `apsResults`,
  * `preferencesChanges`, `versionChanges` and `stepsCount` have no counterpart in
@@ -143,3 +143,4 @@ internal class NewEntriesExtensionTest {
         assertTrue((ne.totalDailyDoses).isEmpty())
     }
 }
+

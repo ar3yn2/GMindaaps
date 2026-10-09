@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
 import java.math.BigDecimal
 import java.math.RoundingMode
 import kotlin.math.roundToInt
@@ -10,7 +10,7 @@ import kotlin.math.roundToInt
  * `CMD_IMMED_BOLUS_REQ` (0x24) → `CMD_IMMED_BOLUS_RES` (0x84).
  *
  * **Safety-critical.** Delivers an immediate bolus. The [actionId] is echoed by the
- * pump at byte 1 of the response and is used by [app.aaps.pump.carelevo.ble.BleClientImpl]
+ * pump at byte 1 of the response and is used by [app.gmaaps.pump.carelevo.ble.BleClientImpl]
  * as a second-level correlation guard on top of the opcode match — a response with
  * the wrong actionId is rejected rather than accepted, which protects against a stale
  * or mis-routed BOLUS_RES from a previous request being interpreted as the answer to
@@ -120,3 +120,4 @@ data class ImmediateBolusResponse(
     val expectedCompletionSeconds: Int,
     val remainingReservoirUnits: Double
 ) : BleResponse
+

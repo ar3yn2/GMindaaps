@@ -1,4 +1,4 @@
-package app.aaps.core.data.datetime
+﻿package app.gmaaps.core.data.datetime
 
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalDateTime
@@ -73,3 +73,4 @@ private val offsetAtEnd = Regex("""[+-]\d{2}:?\d{2}$""")
 /** `+0200` -> `+02:00`; already-correct input is returned unchanged. */
 private fun withOffsetColon(offset: String): String =
     if (offset.contains(':')) offset else offset.substring(0, 3) + ":" + offset.substring(3)
+

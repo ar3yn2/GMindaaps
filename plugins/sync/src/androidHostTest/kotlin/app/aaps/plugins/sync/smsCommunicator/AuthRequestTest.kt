@@ -1,15 +1,15 @@
-package app.aaps.plugins.sync.smsCommunicator
+﻿package app.gmaaps.plugins.sync.smsCommunicator
 
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.smsCommunicator.Sms
-import app.aaps.core.interfaces.smsCommunicator.SmsCommunicator
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.plugins.sync.SyncStringsValues
-import app.aaps.plugins.sync.smsCommunicator.otp.OneTimePassword
-import app.aaps.plugins.sync.smsCommunicator.otp.OneTimePasswordValidationResult
-import app.aaps.shared.tests.TestBase
-import app.aaps.shared.tests.generatedTextResolver
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.smsCommunicator.Sms
+import app.gmaaps.core.interfaces.smsCommunicator.SmsCommunicator
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.plugins.sync.SyncStringsValues
+import app.gmaaps.plugins.sync.smsCommunicator.otp.OneTimePassword
+import app.gmaaps.plugins.sync.smsCommunicator.otp.OneTimePasswordValidationResult
+import app.gmaaps.shared.tests.TestBase
+import app.gmaaps.shared.tests.generatedTextResolver
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -80,3 +80,4 @@ class AuthRequestTest : TestBase() {
         assertThat(actionCalled).isFalse()
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
 /**
  * One of the alarm sounds AAPS ships.
@@ -31,3 +31,4 @@ enum class AlarmSound {
     /** Bolus delivery failure. */
     BOLUS_ERROR
 }
+

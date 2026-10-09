@@ -1,6 +1,6 @@
-package app.aaps.pump.danar.emulator
+﻿package app.gmaaps.pump.danar.emulator
 
-import app.aaps.pump.dana.emulator.HistoryEventStore
+import app.gmaaps.pump.dana.emulator.HistoryEventStore
 
 enum class DanaRVariant(val hwModel: Int, val protocol: Int) {
     DANA_R(hwModel = 0x03, protocol = 0x00),
@@ -93,3 +93,4 @@ class DanaRPumpState(val variant: DanaRVariant = DanaRVariant.DANA_R_V2) {
     var shutdownHour: Int = 0
     var lowReservoirRate: Int = 20
 }
+

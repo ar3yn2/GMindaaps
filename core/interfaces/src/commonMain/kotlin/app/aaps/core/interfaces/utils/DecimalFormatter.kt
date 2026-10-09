@@ -1,7 +1,7 @@
-package app.aaps.core.interfaces.utils
+﻿package app.gmaaps.core.interfaces.utils
 
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.interfaces.pump.PumpInsulin
 
 /**
  * Format double values to strings

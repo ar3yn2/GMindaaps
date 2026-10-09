@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3.clientcontrol.compose
+﻿package app.gmaaps.plugins.sync.nsclientV3.clientcontrol.compose
 
 import androidx.compose.runtime.Composable
 
@@ -16,3 +16,4 @@ import androidx.compose.runtime.Composable
  */
 @Composable
 expect fun blockScreenshotsWhileVisible(): Boolean
+

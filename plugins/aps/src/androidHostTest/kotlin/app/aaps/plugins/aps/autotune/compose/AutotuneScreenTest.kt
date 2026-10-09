@@ -1,14 +1,14 @@
-package app.aaps.plugins.aps.autotune.compose
+﻿package app.gmaaps.plugins.aps.autotune.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.plugins.aps.R
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.plugins.aps.R
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -21,7 +21,7 @@ import org.robolectric.annotation.GraphicsMode
 
 /**
  * Stateless render test for [AutotuneScreen]. The VM ([AutotuneViewModel]) is intentionally not
- * tested here: it depends on the concrete [app.aaps.plugins.aps.autotune.AutotunePlugin] and runs
+ * tested here: it depends on the concrete [app.gmaaps.plugins.aps.autotune.AutotunePlugin] and runs
  * heavy work in init, which is impractical to stub. The screen is fully stateless, so it is
  * rendered directly with a default and a seeded [AutotuneUiState]. With the default
  * [DialogState.None] the rh/dateUtil/profileFunction/profileUtil mocks are never invoked.
@@ -96,3 +96,4 @@ class AutotuneScreenTest {
         compose.onNodeWithText("Check the results carefully!").assertIsDisplayed()
     }
 }
+

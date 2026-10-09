@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
 class KeyResponse(
     val publicKey: ByteArray?,
@@ -17,3 +17,4 @@ class KeyResponse(
         }
     }
 }
+

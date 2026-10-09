@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.definition
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.definition
 
 // FIXME names
 enum class BeepRepetitionType(
@@ -11,3 +11,4 @@ enum class BeepRepetitionType(
     XXX4(0x06.toByte()), // Used in imminent pod expiration alert, suspend in progress. No repeat?
     XXX5(0x08.toByte()); // Lump of coal alert
 }
+

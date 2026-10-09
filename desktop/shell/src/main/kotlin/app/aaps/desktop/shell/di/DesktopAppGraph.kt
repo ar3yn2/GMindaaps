@@ -1,52 +1,52 @@
-package app.aaps.desktop.shell.di
+﻿package app.gmaaps.desktop.shell.di
 
-import app.aaps.core.interfaces.bgQualityCheck.BgQualityCheck
-import app.aaps.core.interfaces.clientcontrol.ClientControlActionDispatcher
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.configuration.ConfigBuilder
-import app.aaps.core.interfaces.constraints.Objectives
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.maintenance.PrefsFileInfo
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.overview.graph.OverviewDataCache
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.plugin.PluginBase
-import app.aaps.core.interfaces.plugin.PluginPermissions
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.protection.ExportPasswordDataStore
-import app.aaps.core.interfaces.protection.PasswordCheck
-import app.aaps.core.interfaces.protection.PasswordHasher
-import app.aaps.core.interfaces.protection.ProtectionCheck
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.source.DexcomBoyda
-import app.aaps.core.interfaces.sync.NsClient
-import app.aaps.core.interfaces.ui.SnackbarHostPresence
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.ui.UiRestart
-import app.aaps.core.interfaces.ui.UrlOpener
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.DecimalFormatter
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.VisibilityContext
-import app.aaps.core.objects.di.CoreObjectsGraph
-import app.aaps.core.ui.compose.pump.PumpCommunicationStatus
-import app.aaps.database.AppRepository
-import app.aaps.database.di.JvmAppDatabaseBuilder
-import app.aaps.implementation.maintenance.DesktopFolders
-import app.aaps.implementation.maintenance.PeriodicMaintenance
-import app.aaps.implementation.maintenance.cloud.AuthBrowser
-import app.aaps.implementation.notifications.SnackbarNotificationFallback
-import app.aaps.implementation.plugin.PluginStore
-import app.aaps.plugins.automation.AutomationRuntime
-import app.aaps.plugins.configuration.setupwizard.SWDefinition
-import app.aaps.shared.clientbindings.ClientGraphBindings
-import app.aaps.ui.compose.overview.chips.ChipsViewModel
-import app.aaps.ui.compose.overview.graphs.GraphViewModel
-import app.aaps.ui.search.BuiltInSearchables
+import app.gmaaps.core.interfaces.bgQualityCheck.BgQualityCheck
+import app.gmaaps.core.interfaces.clientcontrol.ClientControlActionDispatcher
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.configuration.ConfigBuilder
+import app.gmaaps.core.interfaces.constraints.Objectives
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.maintenance.PrefsFileInfo
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.overview.graph.OverviewDataCache
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginPermissions
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.protection.ExportPasswordDataStore
+import app.gmaaps.core.interfaces.protection.PasswordCheck
+import app.gmaaps.core.interfaces.protection.PasswordHasher
+import app.gmaaps.core.interfaces.protection.ProtectionCheck
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.source.DexcomBoyda
+import app.gmaaps.core.interfaces.sync.NsClient
+import app.gmaaps.core.interfaces.ui.SnackbarHostPresence
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.ui.UiRestart
+import app.gmaaps.core.interfaces.ui.UrlOpener
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.objects.di.CoreObjectsGraph
+import app.gmaaps.core.ui.compose.pump.PumpCommunicationStatus
+import app.gmaaps.database.AppRepository
+import app.gmaaps.database.di.JvmAppDatabaseBuilder
+import app.gmaaps.implementation.maintenance.DesktopFolders
+import app.gmaaps.implementation.maintenance.PeriodicMaintenance
+import app.gmaaps.implementation.maintenance.cloud.AuthBrowser
+import app.gmaaps.implementation.notifications.SnackbarNotificationFallback
+import app.gmaaps.implementation.plugin.PluginStore
+import app.gmaaps.plugins.automation.AutomationRuntime
+import app.gmaaps.plugins.configuration.setupwizard.SWDefinition
+import app.gmaaps.shared.clientbindings.ClientGraphBindings
+import app.gmaaps.ui.compose.overview.chips.ChipsViewModel
+import app.gmaaps.ui.compose.overview.graphs.GraphViewModel
+import app.gmaaps.ui.search.BuiltInSearchables
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.DependencyGraph
 import dev.zacsweers.metro.Includes
@@ -60,7 +60,7 @@ import java.io.File
  * The real app's object graph on desktop - the counterpart of `AppRootGraph` in `:app` and
  * `IosAppGraph` in `:ios:shell`.
  *
- * The accessors that [app.aaps.appshell.AapsAppRoot] needs are listed below rather than declared,
+ * The accessors that [app.gmaaps.appshell.AapsAppRoot] needs are listed below rather than declared,
  * because Metro validates a graph as a whole: adding them before their bindings exist stops the
  * module compiling instead of leaving something that can be grown one binding at a time. The list is
  * kept by declaring them, reading what Metro reports and taking them out again.
@@ -68,7 +68,7 @@ import java.io.File
  * ## Where this stands
  *
  * The shell depends on the same 26 modules `:ios:shell` does, so every plugin that registers itself
- * with `@ContributesBinding` is already in the graph, and the classes in `app.aaps.desktop.shell.platform`
+ * with `@ContributesBinding` is already in the graph, and the classes in `app.gmaaps.desktop.shell.platform`
  * answer the platform half. Measured at **1**, down from 32:
  *
  * **`Autotune`** needs its plugin ported out of androidMain: about 2,700 lines of arithmetic whose
@@ -90,7 +90,7 @@ import java.io.File
  * work rather than refusals: `ReminderScheduler` and `SceneExpiryScheduler` both run on a coroutine
  * timer, and the second one has to, because scene expiry reverts an SMB toggle and a profile switch.
  *
- * The pattern to follow for the first group is `app.aaps.ios.shell.missing`: nothing returns a
+ * The pattern to follow for the first group is `app.gmaaps.ios.shell.missing`: nothing returns a
  * plausible value, and nothing is silent.
  */
 @DependencyGraph(AppScope::class)
@@ -181,3 +181,4 @@ interface DesktopAppGraph : MetroViewModelMultibindings {
         ): DesktopAppGraph
     }
 }
+

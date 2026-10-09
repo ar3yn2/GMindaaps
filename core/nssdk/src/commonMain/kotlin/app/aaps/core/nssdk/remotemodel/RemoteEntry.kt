@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.remotemodel
+﻿package app.gmaaps.core.nssdk.remotemodel
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -45,3 +45,4 @@ internal data class RemoteEntry(
     @SerialName("sensorMgdlAtPairing") val sensorMgdlAtPairing: Double? = null, // sensor value at the moment the fingerstick was entered
     @SerialName("isCalibration") val isCalibration: Boolean? = null // marker: true when this mbg is an AAPS calibration pair (vs a foreign manual BG)
 )
+

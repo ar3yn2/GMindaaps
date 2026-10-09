@@ -1,39 +1,39 @@
-package app.aaps.plugins.aps.autotune.compose
+﻿package app.gmaaps.plugins.aps.autotune.compose
 
 import android.view.View
 import androidx.compose.runtime.Immutable
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.ue.Action
-import app.aaps.core.data.ue.Sources
-import app.aaps.core.data.ue.ValueWithUnit
-import app.aaps.core.graph.profile.ProfileViewerData
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.logging.UserEntryLogger
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.profile.ProfileRepository
-import app.aaps.core.interfaces.profile.ProfileStore
-import app.aaps.core.interfaces.profile.ProfileUtil
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowDialog
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.interfaces.utils.MidnightTime
-import app.aaps.core.interfaces.utils.Round
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.IntKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.objects.profile.ProfileSealed
-import app.aaps.core.ui.compose.icons.IcCompareProfiles
-import app.aaps.core.ui.compose.icons.IcProfile
-import app.aaps.core.ui.elements.WeekDay
-import app.aaps.plugins.aps.R
-import app.aaps.plugins.aps.autotune.AutotuneFS
-import app.aaps.plugins.aps.autotune.AutotunePlugin
-import app.aaps.plugins.aps.autotune.data.ATProfile
-import app.aaps.plugins.aps.autotune.events.EventAutotuneUpdateGui
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.ue.Action
+import app.gmaaps.core.data.ue.Sources
+import app.gmaaps.core.data.ue.ValueWithUnit
+import app.gmaaps.core.graph.profile.ProfileViewerData
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.logging.UserEntryLogger
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.profile.ProfileRepository
+import app.gmaaps.core.interfaces.profile.ProfileStore
+import app.gmaaps.core.interfaces.profile.ProfileUtil
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowDialog
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.interfaces.utils.MidnightTime
+import app.gmaaps.core.interfaces.utils.Round
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.IntKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.objects.profile.ProfileSealed
+import app.gmaaps.core.ui.compose.icons.IcCompareProfiles
+import app.gmaaps.core.ui.compose.icons.IcProfile
+import app.gmaaps.core.ui.elements.WeekDay
+import app.gmaaps.plugins.aps.R
+import app.gmaaps.plugins.aps.autotune.AutotuneFS
+import app.gmaaps.plugins.aps.autotune.AutotunePlugin
+import app.gmaaps.plugins.aps.autotune.data.ATProfile
+import app.gmaaps.plugins.aps.autotune.events.EventAutotuneUpdateGui
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -300,7 +300,7 @@ class AutotuneViewModel(
             autotunePlugin.updateProfile(tunedProfile)
             if (loop.runningMode() == RM.Mode.DISCONNECTED_PUMP) {
                 _uiState.value = _uiState.value.copy(
-                    dialogState = DialogState.PumpDisconnected(rh.gs(app.aaps.core.ui.R.string.not_available_full))
+                    dialogState = DialogState.PumpDisconnected(rh.gs(app.gmaaps.core.ui.R.string.not_available_full))
                 )
                 return@launch
             }
@@ -320,8 +320,8 @@ class AutotuneViewModel(
                     val iCfg = profileFunction.getRunningOrRequestedICfg() ?: run {
                         rxBus.send(
                             EventShowDialog.Ok(
-                                title = rh.gs(app.aaps.core.ui.R.string.autotune),
-                                message = rh.gs(app.aaps.core.ui.R.string.profile_switch_no_insulin)
+                                title = rh.gs(app.gmaaps.core.ui.R.string.autotune),
+                                message = rh.gs(app.gmaaps.core.ui.R.string.profile_switch_no_insulin)
                             )
                         )
                         return@launch
@@ -424,7 +424,7 @@ class AutotuneViewModel(
     }
 
     private suspend fun addWarnings(): String {
-        val currentProfile = profileFunction.getProfile() ?: return rh.gs(app.aaps.core.ui.R.string.profileswitch_ismissing)
+        val currentProfile = profileFunction.getProfile() ?: return rh.gs(app.gmaaps.core.ui.R.string.profileswitch_ismissing)
         val profileStore = profileRepository.profile.value ?: profileStoreProvider().with(JsonObject(emptyMap()))
         val iCfg = currentProfile.iCfg
         val atProfile = atProfileProvider().with(
@@ -453,10 +453,10 @@ class AutotuneViewModel(
         val tuneInsulin = preferences.get(BooleanKey.AutotuneTuneInsulinCurve)
         if (tuneInsulin) {
             params += formatRow(rh.gs(R.string.autotune_peak), pumpProfile.iCfg.peak.toDouble(), tunedProfile.iCfg.peak.toDouble(), "%.0f")
-            params += formatRow(rh.gs(app.aaps.core.ui.R.string.dia), Round.roundTo(pumpProfile.iCfg.dia, 0.1), Round.roundTo(tunedProfile.iCfg.dia, 0.1), "%.1f")
+            params += formatRow(rh.gs(app.gmaaps.core.ui.R.string.dia), Round.roundTo(pumpProfile.iCfg.dia, 0.1), Round.roundTo(tunedProfile.iCfg.dia, 0.1), "%.1f")
         }
-        params += formatRow(rh.gs(app.aaps.core.ui.R.string.isf_short), Round.roundTo(pumpProfile.isf / toMgDl, 0.001), Round.roundTo(tunedProfile.isf / toMgDl, 0.001), isfFormat)
-        params += formatRow(rh.gs(app.aaps.core.ui.R.string.ic_short), Round.roundTo(pumpProfile.ic, 0.001), Round.roundTo(tunedProfile.ic, 0.001), "%.2f")
+        params += formatRow(rh.gs(app.gmaaps.core.ui.R.string.isf_short), Round.roundTo(pumpProfile.isf / toMgDl, 0.001), Round.roundTo(tunedProfile.isf / toMgDl, 0.001), isfFormat)
+        params += formatRow(rh.gs(app.gmaaps.core.ui.R.string.ic_short), Round.roundTo(pumpProfile.ic, 0.001), Round.roundTo(tunedProfile.ic, 0.001), "%.2f")
 
         val basals = mutableListOf<ResultRow>()
         val df = NumberFormat.INTEGER_2_DIGITS
@@ -487,7 +487,7 @@ class AutotuneViewModel(
     private suspend fun refreshState() {
         val profileStore = profileRepository.profile.value ?: profileStoreProvider().with(JsonObject(emptyMap()))
         val profileList = profileStore.getProfileList().toMutableList()
-        profileList.add(0, rh.gs(app.aaps.core.ui.R.string.active))
+        profileList.add(0, rh.gs(app.gmaaps.core.ui.R.string.active))
         val profileNames = profileList.map { it.toString() }
 
         val selectedIndex = if (autotunePlugin.selectedProfile.isNotEmpty())
@@ -536,3 +536,4 @@ class AutotuneViewModel(
         autotuneFS.atLog("[Fragment] $message")
     }
 }
+

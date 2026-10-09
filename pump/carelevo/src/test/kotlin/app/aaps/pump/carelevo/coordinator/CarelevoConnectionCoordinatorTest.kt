@@ -1,9 +1,9 @@
-package app.aaps.pump.carelevo.coordinator
+﻿package app.gmaaps.pump.carelevo.coordinator
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.pump.carelevo.ble.CarelevoBleSession
-import app.aaps.pump.carelevo.common.CarelevoPatch
-import app.aaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.pump.carelevo.ble.CarelevoBleSession
+import app.gmaaps.pump.carelevo.common.CarelevoPatch
+import app.gmaaps.pump.carelevo.domain.model.patch.CarelevoPatchInfoDomainModel
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.subjects.BehaviorSubject
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -148,3 +148,4 @@ internal class CarelevoConnectionCoordinatorTest {
         verify(bleSession).requestDisconnect("stopConnecting")
     }
 }
+

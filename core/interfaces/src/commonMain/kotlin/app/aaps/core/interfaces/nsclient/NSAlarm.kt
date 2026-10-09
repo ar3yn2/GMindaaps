@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.nsclient
+﻿package app.gmaaps.core.interfaces.nsclient
 
 interface NSAlarm {
     /*

@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel
+﻿package app.gmaaps.core.nssdk.localmodel
 
 data class ApiPermissions(
     val deviceStatus: ApiPermission,
@@ -12,3 +12,4 @@ data class ApiPermissions(
     fun isFull() = deviceStatus.full && entries.full && food.full && profile.full && settings.full && treatments.full
     fun isRead() = deviceStatus.read && entries.read && food.read && profile.read && settings.read && treatments.read
 }
+

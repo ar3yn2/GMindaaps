@@ -1,12 +1,12 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.interfaces.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.session
 
-import app.aaps.pump.omnipod.common.bledriver.comm.Ids
-import app.aaps.pump.omnipod.common.bledriver.comm.message.MessageIO
-import app.aaps.pump.omnipod.common.bledriver.comm.session.ConnectionState
-import app.aaps.pump.omnipod.common.bledriver.comm.session.ConnectionWaitCondition
-import app.aaps.pump.omnipod.common.bledriver.comm.session.DisconnectHandler
-import app.aaps.pump.omnipod.common.bledriver.comm.session.EapSqn
-import app.aaps.pump.omnipod.common.bledriver.comm.session.Session
+import app.gmaaps.pump.omnipod.common.bledriver.comm.Ids
+import app.gmaaps.pump.omnipod.common.bledriver.comm.message.MessageIO
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.ConnectionState
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.ConnectionWaitCondition
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.DisconnectHandler
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.EapSqn
+import app.gmaaps.pump.omnipod.common.bledriver.comm.session.Session
 
 /**
  * Abstraction for BLE GATT connection lifecycle.
@@ -26,3 +26,4 @@ interface BleConnection : DisconnectHandler {
         const val DEFAULT_CONNECT_TIMEOUT_MS = 30000L
     }
 }
+

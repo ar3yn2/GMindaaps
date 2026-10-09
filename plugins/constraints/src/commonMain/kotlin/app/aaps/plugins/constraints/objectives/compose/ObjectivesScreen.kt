@@ -1,4 +1,4 @@
-package app.aaps.plugins.constraints.objectives.compose
+﻿package app.gmaaps.plugins.constraints.objectives.compose
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateContentSize
@@ -59,9 +59,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.stringResource
-import app.aaps.plugins.constraints.ConstraintsStrings
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.stringResource
+import app.gmaaps.plugins.constraints.ConstraintsStrings
 
 @Composable
 fun ObjectivesScreen(
@@ -720,3 +720,4 @@ private fun LockedObjectiveContent(
         }
     }
 }
+

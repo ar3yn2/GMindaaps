@@ -1,8 +1,8 @@
-package app.aaps.pump.danar.comm
+﻿package app.gmaaps.pump.danar.comm
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.keys.interfaces.TextRef
 
 class MsgBolusStop(
     injector: MetroMemberInjector
@@ -21,7 +21,8 @@ class MsgBolusStop(
             bolusProgressData.updateProgress(percent = 100)
         } else {
             val currentPercent = bolusProgressData.state.value?.percent ?: 0
-            bolusProgressData.updateProgress(currentPercent, TextRef.AndroidRes(app.aaps.pump.dana.R.string.overview_bolusprogress_stoped))
+            bolusProgressData.updateProgress(currentPercent, TextRef.AndroidRes(app.gmaaps.pump.dana.R.string.overview_bolusprogress_stoped))
         }
     }
 }
+

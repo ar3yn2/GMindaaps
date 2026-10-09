@@ -1,26 +1,26 @@
-package app.aaps.pump.common.hw.rileylink
+﻿package app.gmaaps.pump.common.hw.rileylink
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.pump.defs.PumpDeviceState
-import app.aaps.core.interfaces.utils.Round.isSame
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.utils.pump.ByteUtil.shortHexString
-import app.aaps.pump.common.hw.rileylink.ble.RFSpy
-import app.aaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
-import app.aaps.pump.common.hw.rileylink.ble.data.FrequencyScanResults
-import app.aaps.pump.common.hw.rileylink.ble.data.FrequencyTrial
-import app.aaps.pump.common.hw.rileylink.ble.data.RLMessage
-import app.aaps.pump.common.hw.rileylink.ble.data.RadioPacket
-import app.aaps.pump.common.hw.rileylink.ble.data.RadioResponse
-import app.aaps.pump.common.hw.rileylink.ble.defs.RLMessageType
-import app.aaps.pump.common.hw.rileylink.ble.defs.RileyLinkBLEError
-import app.aaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
-import app.aaps.pump.common.hw.rileylink.keys.RileyLinkLongKey
-import app.aaps.pump.common.hw.rileylink.service.RileyLinkServiceData
-import app.aaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
-import app.aaps.pump.common.hw.rileylink.service.tasks.WakeAndTuneTask
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.pump.defs.PumpDeviceState
+import app.gmaaps.core.interfaces.utils.Round.isSame
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.utils.pump.ByteUtil.shortHexString
+import app.gmaaps.pump.common.hw.rileylink.ble.RFSpy
+import app.gmaaps.pump.common.hw.rileylink.ble.RileyLinkCommunicationException
+import app.gmaaps.pump.common.hw.rileylink.ble.data.FrequencyScanResults
+import app.gmaaps.pump.common.hw.rileylink.ble.data.FrequencyTrial
+import app.gmaaps.pump.common.hw.rileylink.ble.data.RLMessage
+import app.gmaaps.pump.common.hw.rileylink.ble.data.RadioPacket
+import app.gmaaps.pump.common.hw.rileylink.ble.data.RadioResponse
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RLMessageType
+import app.gmaaps.pump.common.hw.rileylink.ble.defs.RileyLinkBLEError
+import app.gmaaps.pump.common.hw.rileylink.defs.RileyLinkPumpDevice
+import app.gmaaps.pump.common.hw.rileylink.keys.RileyLinkLongKey
+import app.gmaaps.pump.common.hw.rileylink.service.RileyLinkServiceData
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.ServiceTaskExecutor
+import app.gmaaps.pump.common.hw.rileylink.service.tasks.WakeAndTuneTask
 import java.util.Locale
 
 /**
@@ -307,3 +307,4 @@ abstract class RileyLinkCommunicationManager<T : RLMessage>(
 
     abstract fun isDeviceReachable(): Boolean
 }
+

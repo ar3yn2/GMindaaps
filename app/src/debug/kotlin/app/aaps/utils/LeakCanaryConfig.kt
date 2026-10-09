@@ -1,6 +1,6 @@
-package app.aaps.utils
+﻿package app.gmaaps.utils
 
-import app.aaps.core.interfaces.utils.fabric.FabricPrivacy
+import app.gmaaps.core.interfaces.utils.fabric.FabricPrivacy
 import leakcanary.LeakCanary
 
 /**
@@ -23,3 +23,4 @@ fun configureLeakCanary(isEnabled: Boolean = false, fabricPrivacy: FabricPrivacy
     )
     LeakCanary.showLeakDisplayActivityLauncherIcon(isEnabled)
 }
+

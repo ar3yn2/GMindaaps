@@ -1,14 +1,14 @@
-/*
+﻿/*
  * Adaptive Preference List for Jetpack Compose
  * Provides generic rendering for lists of PreferenceItems
  */
 
-package app.aaps.core.ui.compose.preference
+package app.gmaaps.core.ui.compose.preference
 
 import androidx.compose.runtime.Composable
-import app.aaps.core.keys.interfaces.PreferenceItem
-import app.aaps.core.keys.interfaces.PreferenceKey
-import app.aaps.core.keys.interfaces.VisibilityContext
+import app.gmaaps.core.keys.interfaces.PreferenceItem
+import app.gmaaps.core.keys.interfaces.PreferenceKey
+import app.gmaaps.core.keys.interfaces.VisibilityContext
 
 /**
  * Renders a list of preference items (keys, subscreens, custom items).
@@ -48,3 +48,4 @@ fun AdaptivePreferenceList(
         }
     }
 }
+

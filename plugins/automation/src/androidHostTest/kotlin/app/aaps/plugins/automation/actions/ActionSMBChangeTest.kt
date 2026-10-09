@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.keys.interfaces.BooleanPreferenceKey
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.InputDropdownOnOffMenu
+import app.gmaaps.core.keys.interfaces.BooleanPreferenceKey
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.InputDropdownOnOffMenu
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -54,3 +54,4 @@ class ActionSMBChangeTest : ActionsTestBase() {
         assertThat(sut.smbState.value).isEqualTo(false)
     }
 }
+

@@ -1,8 +1,8 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
-import app.aaps.core.data.plugin.PluginType
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.data.plugin.PluginType
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
 
 /**
  * Single source of truth for the plugin-category → title string mapping, shared by the Configuration
@@ -22,3 +22,4 @@ fun pluginCategoryTitle(type: PluginType): TextRef = when (type) {
     PluginType.SYNC        -> CoreUiStrings.configbuilder_sync
     PluginType.GENERAL     -> CoreUiStrings.configbuilder_general
 }
+

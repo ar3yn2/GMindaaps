@@ -1,4 +1,4 @@
-package app.aaps.core.keys
+﻿package app.gmaaps.core.keys
 
 /**
  * Enum defining unit types for preference values.
@@ -45,3 +45,4 @@ fun UnitType.step(): Double = when (this) {
     UnitType.INSULIN, UnitType.INSULIN_RATE, UnitType.DOUBLE, UnitType.HOURS_DOUBLE -> 0.1
     else                                                                            -> 1.0
 }
+

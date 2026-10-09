@@ -1,17 +1,17 @@
-package app.aaps.pump.danar.services
+﻿package app.gmaaps.pump.danar.services
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.PumpEnactResult
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.comm.RecordTypes
-import app.aaps.pump.dana.keys.DanaStringNonKey
-import app.aaps.pump.danar.comm.MessageHashTableBase
-import app.aaps.pump.danar.comm.MsgBolusStop
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.PumpEnactResult
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.comm.RecordTypes
+import app.gmaaps.pump.dana.keys.DanaStringNonKey
+import app.gmaaps.pump.danar.comm.MessageHashTableBase
+import app.gmaaps.pump.danar.comm.MsgBolusStop
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -147,7 +147,7 @@ class AbstractDanaRExecutionServiceTest : TestBaseWithProfile() {
     @Test
     fun testDoSanityCheck_temporaryBasalMismatch() = runTest {
         val temporaryBasal = mock(PumpSync.PumpState.TemporaryBasal::class.java)
-        val activePump = mock(app.aaps.core.interfaces.pump.PumpWithConcentration::class.java)
+        val activePump = mock(app.gmaaps.core.interfaces.pump.PumpWithConcentration::class.java)
 
         `when`(temporaryBasal.rate).thenReturn(150.0)
         `when`(temporaryBasal.timestamp).thenReturn(1000000L)
@@ -173,7 +173,7 @@ class AbstractDanaRExecutionServiceTest : TestBaseWithProfile() {
 
     @Test
     fun testDoSanityCheck_noTemporaryBasalInAAPSButInPump() = runTest {
-        val activePump = mock(app.aaps.core.interfaces.pump.PumpWithConcentration::class.java)
+        val activePump = mock(app.gmaaps.core.interfaces.pump.PumpWithConcentration::class.java)
 
         // Create real PumpState for proper destructuring
         val pumpState = PumpSync.PumpState(null, null, null, null, "TEST123")
@@ -197,7 +197,7 @@ class AbstractDanaRExecutionServiceTest : TestBaseWithProfile() {
     @Test
     fun testDoSanityCheck_temporaryBasalInAAPSButNotInPump() = runTest {
         val temporaryBasal = mock(PumpSync.PumpState.TemporaryBasal::class.java)
-        val activePump = mock(app.aaps.core.interfaces.pump.PumpWithConcentration::class.java)
+        val activePump = mock(app.gmaaps.core.interfaces.pump.PumpWithConcentration::class.java)
 
         // Set dateUtil.now() first, before checking isTempBasalInProgress
         `when`(dateUtil.now()).thenReturn(2000000L)
@@ -224,7 +224,7 @@ class AbstractDanaRExecutionServiceTest : TestBaseWithProfile() {
     @Test
     fun testDoSanityCheck_extendedBolusMismatch() = runTest {
         val extendedBolus = mock(PumpSync.PumpState.ExtendedBolus::class.java)
-        val activePump = mock(app.aaps.core.interfaces.pump.PumpWithConcentration::class.java)
+        val activePump = mock(app.gmaaps.core.interfaces.pump.PumpWithConcentration::class.java)
 
         // Set dateUtil.now() FIRST to ensure it's available for all property getters
         `when`(dateUtil.now()).thenReturn(1500000L) // Within the extended bolus range
@@ -279,3 +279,4 @@ class AbstractDanaRExecutionServiceTest : TestBaseWithProfile() {
         // Should handle null socket gracefully
     }
 }
+

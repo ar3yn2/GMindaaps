@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.command
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.command
 
 enum class BleCommandType(val value: Byte) {
     RTS(0x00.toByte()),
@@ -17,3 +17,4 @@ enum class BleCommandType(val value: Byte) {
                 ?: throw IllegalArgumentException("Unknown BleCommandType: $value")
     }
 }
+

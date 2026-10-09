@@ -1,7 +1,7 @@
-package app.aaps.plugins.calibration
+﻿package app.gmaaps.plugins.calibration
 
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.time.T
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.time.T
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -170,3 +170,4 @@ class CalibrationMathTest {
             sensorMgdlAtPairing = sensor
         )
 }
+

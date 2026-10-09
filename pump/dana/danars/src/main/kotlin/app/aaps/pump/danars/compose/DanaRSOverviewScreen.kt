@@ -1,8 +1,8 @@
-package app.aaps.pump.danars.compose
+﻿package app.gmaaps.pump.danars.compose
 
 import androidx.compose.runtime.Composable
-import app.aaps.pump.dana.DanaPump
-import app.aaps.pump.dana.compose.DanaOverviewScreen
+import app.gmaaps.pump.dana.DanaPump
+import app.gmaaps.pump.dana.compose.DanaOverviewScreen
 
 @Composable
 fun DanaRSOverviewScreen(
@@ -14,3 +14,4 @@ fun DanaRSOverviewScreen(
         danaPump = danaPump
     )
 }
+

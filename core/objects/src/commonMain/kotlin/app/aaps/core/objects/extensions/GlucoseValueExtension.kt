@@ -1,10 +1,10 @@
-package app.aaps.core.objects.extensions
+﻿package app.gmaaps.core.objects.extensions
 
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.iob.InMemoryGlucoseValue
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.iob.InMemoryGlucoseValue
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.interfaces.utils.DateUtil
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
@@ -40,3 +40,4 @@ fun GV.toJsonObject(isAdd: Boolean, dateUtil: DateUtil): JsonObject =
 fun InMemoryGlucoseValue.valueToUnits(units: GlucoseUnit): Double =
     if (units == GlucoseUnit.MGDL) recalculated
     else recalculated * Constants.MGDL_TO_MMOLL
+

@@ -1,9 +1,9 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.nsSdkJson
-import app.aaps.core.nssdk.remotemodel.NSResponse
-import app.aaps.core.nssdk.remotemodel.RemoteEntry
-import app.aaps.core.nssdk.remotemodel.RemoteFood
+import app.gmaaps.core.nssdk.nsSdkJson
+import app.gmaaps.core.nssdk.remotemodel.NSResponse
+import app.gmaaps.core.nssdk.remotemodel.RemoteEntry
+import app.gmaaps.core.nssdk.remotemodel.RemoteFood
 import com.google.common.truth.Truth.assertThat
 import kotlinx.serialization.builtins.ListSerializer
 import org.junit.jupiter.api.Test
@@ -135,3 +135,4 @@ class FoodAndEntryToleranceTest {
         assertThat(entries.count { it.type == "sgv" }).isEqualTo(2)
     }
 }
+

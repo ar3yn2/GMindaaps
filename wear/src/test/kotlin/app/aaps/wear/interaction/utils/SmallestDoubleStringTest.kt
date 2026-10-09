@@ -1,6 +1,6 @@
-package app.aaps.wear.interaction.utils
+﻿package app.gmaaps.wear.interaction.utils
 
-import app.aaps.wear.interaction.utils.SmallestDoubleString.Units
+import app.gmaaps.wear.interaction.utils.SmallestDoubleString.Units
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -78,3 +78,4 @@ class SmallestDoubleStringTest {
         assertThat(SmallestDoubleString("+1.2").minimise(3)).isEqualTo("1.2")
     }
 }
+

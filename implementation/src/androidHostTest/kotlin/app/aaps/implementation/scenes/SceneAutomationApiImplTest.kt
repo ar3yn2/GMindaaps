@@ -1,8 +1,8 @@
-package app.aaps.implementation.scenes
+﻿package app.gmaaps.implementation.scenes
 
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.Mock
@@ -56,3 +56,4 @@ class SceneAutomationApiImplTest : TestBase() {
         assertThat(createSut().hasSceneToStop()).isFalse()
     }
 }
+

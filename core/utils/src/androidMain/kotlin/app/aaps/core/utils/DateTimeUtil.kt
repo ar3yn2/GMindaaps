@@ -1,6 +1,6 @@
-package app.aaps.core.utils
+﻿package app.gmaaps.core.utils
 
-import app.aaps.core.utils.DateTimeUtil.toATechDate
+import app.gmaaps.core.utils.DateTimeUtil.toATechDate
 import org.joda.time.LocalDateTime
 import org.joda.time.Minutes
 import org.joda.time.Seconds
@@ -211,3 +211,4 @@ object DateTimeUtil {
         return minutes * 60
     }
 }
+

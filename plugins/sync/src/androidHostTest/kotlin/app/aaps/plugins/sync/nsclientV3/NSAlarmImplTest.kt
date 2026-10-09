@@ -1,7 +1,7 @@
-package app.aaps.plugins.sync.nsclientV3
+﻿package app.gmaaps.plugins.sync.nsclientV3
 
-import app.aaps.plugins.sync.nsclientV3.json.JsonBridge.toKotlinxJson
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.plugins.sync.nsclientV3.json.JsonBridge.toKotlinxJson
+import app.gmaaps.shared.tests.TestBase
 import org.json.JSONObject
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertFalse

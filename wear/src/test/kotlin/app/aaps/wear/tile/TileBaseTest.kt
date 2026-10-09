@@ -1,4 +1,4 @@
-package app.aaps.wear.tile
+﻿package app.gmaaps.wear.tile
 
 import androidx.wear.protolayout.DeviceParametersBuilders.DeviceParameters
 import androidx.wear.protolayout.DeviceParametersBuilders.SCREEN_SHAPE_ROUND
@@ -9,10 +9,10 @@ import androidx.wear.protolayout.LayoutElementBuilders.Text
 import androidx.wear.tiles.RequestBuilders
 import androidx.wear.tiles.ResourceBuilders
 import androidx.wear.tiles.TileBuilders
-import app.aaps.core.keys.BooleanKey
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.wear.AAPSLoggerTest
-import app.aaps.wear.tile.source.ActionSource
+import app.gmaaps.core.keys.BooleanKey
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.wear.AAPSLoggerTest
+import app.gmaaps.wear.tile.source.ActionSource
 import com.google.common.truth.Truth.assertThat
 import com.google.common.util.concurrent.ListenableFuture
 import org.junit.Test
@@ -45,7 +45,7 @@ internal class TileBaseTest {
         }
 
     private fun action(text: String? = "Bolus", sub: String? = "1.0U") =
-        Action(buttonText = text, buttonTextSub = sub, activityClass = "app.aaps.wear.Foo", iconRes = 0, action = null, message = null)
+        Action(buttonText = text, buttonTextSub = sub, activityClass = "app.gmaaps.wear.Foo", iconRes = 0, action = null, message = null)
 
     private fun request(round: Boolean = true, widthDp: Int = 220, heightDp: Int = 220): RequestBuilders.TileRequest {
         // Only ROUND is a named constant here; leaving the shape unset (undefined) is != ROUND, so it drives the
@@ -194,3 +194,4 @@ internal class TileBaseTest {
         }
     }
 }
+

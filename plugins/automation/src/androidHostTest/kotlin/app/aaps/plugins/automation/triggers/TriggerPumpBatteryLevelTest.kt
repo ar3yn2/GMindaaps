@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.triggers
+﻿package app.gmaaps.plugins.automation.triggers
 
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.plugins.automation.asJsonObject
-import app.aaps.plugins.automation.elements.Comparator
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.plugins.automation.asJsonObject
+import app.gmaaps.plugins.automation.elements.Comparator
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.test.runTest
@@ -68,3 +68,4 @@ class TriggerPumpBatteryLevelTest : TriggerTestBase() {
         assertThat(t2.pumpBatteryLevel.value).isWithin(0.01).of(4.0)
     }
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.code
+﻿package app.gmaaps.pump.medtrum.code
 
 enum class ConnectionState {
     CONNECTED,
@@ -6,3 +6,4 @@ enum class ConnectionState {
     CONNECTING,
     DISCONNECTING;
 }
+

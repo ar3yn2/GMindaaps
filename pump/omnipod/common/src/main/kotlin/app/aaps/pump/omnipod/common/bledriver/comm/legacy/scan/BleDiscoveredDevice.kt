@@ -1,9 +1,9 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.legacy.scan
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.legacy.scan
 
 import android.bluetooth.le.ScanRecord
 import android.bluetooth.le.ScanResult
 import android.os.ParcelUuid
-import app.aaps.pump.omnipod.common.bledriver.comm.interfaces.scan.BleDiscoveredDevice as BleDiscoveredDeviceInterface
+import app.gmaaps.pump.omnipod.common.bledriver.comm.interfaces.scan.BleDiscoveredDevice as BleDiscoveredDeviceInterface
 
 class BleDiscoveredDevice(
     val scanResult: ScanResult,
@@ -85,3 +85,4 @@ class BleDiscoveredDevice(
         sequenceNo = parseSeqNo()
     }
 }
+

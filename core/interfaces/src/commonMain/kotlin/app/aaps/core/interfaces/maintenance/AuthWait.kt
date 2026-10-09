@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.maintenance
+﻿package app.gmaaps.core.interfaces.maintenance
 
 /**
  * How long a cloud sign in waits for the browser to come back.
@@ -8,3 +8,4 @@ package app.aaps.core.interfaces.maintenance
  * listener while the longer one is still waiting - and the sign in fails with nothing to show why.
  */
 const val AUTH_WAIT_MS: Long = 5 * 60 * 1000
+

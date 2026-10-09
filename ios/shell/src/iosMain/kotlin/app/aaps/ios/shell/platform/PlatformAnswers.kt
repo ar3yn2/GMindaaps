@@ -1,7 +1,7 @@
-package app.aaps.ios.shell.platform
+﻿package app.gmaaps.ios.shell.platform
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 
 /**
  * Says that something is absent **by design**, at debug level.
@@ -22,3 +22,4 @@ import app.aaps.core.interfaces.logging.LTag
 internal fun AAPSLogger.notOnThisPlatform(what: String) {
     debug(LTag.CORE, "Not available on an iOS client: $what")
 }
+

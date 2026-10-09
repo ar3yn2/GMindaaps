@@ -1,15 +1,15 @@
-package app.aaps.plugins.source.notificationreader
+﻿package app.gmaaps.plugins.source.notificationreader
 
 import android.app.Notification
 import android.os.Bundle
 import android.service.notification.StatusBarNotification
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.SourceSensor
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.plugins.source.NotificationReaderPlugin
-import app.aaps.shared.tests.AAPSLoggerTest
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.SourceSensor
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.plugins.source.NotificationReaderPlugin
+import app.gmaaps.shared.tests.AAPSLoggerTest
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Test
@@ -132,3 +132,4 @@ class NotificationCollectorServiceTest {
         service.onNotificationRemoved(sbn("com.foo"))
     }
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.resources
+﻿package app.gmaaps.core.interfaces.resources
 
-import app.aaps.core.data.format.NumberFormat
+import app.gmaaps.core.data.format.NumberFormat
 
 /**
  * Substitutes arguments into an Android format string, for the platforms that have no
@@ -71,3 +71,4 @@ private fun pad(text: String, width: Int, leftAlign: Boolean, zeroFill: Boolean)
 
 /** `%`, optional `index$`, optional flags, optional width, optional `.precision`, conversion. */
 private val SPEC = Regex("""%(?:(\d+)\$)?([-+ 0#,]*)(\d+)?(?:\.(\d+))?([a-zA-Z%])""")
+

@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.common.bledriver.event
+﻿package app.gmaaps.pump.omnipod.common.bledriver.event
 
-import app.aaps.pump.omnipod.common.bledriver.comm.Id
-import app.aaps.pump.omnipod.common.bledriver.pod.command.base.Command
-import app.aaps.pump.omnipod.common.bledriver.pod.response.Response
+import app.gmaaps.pump.omnipod.common.bledriver.comm.Id
+import app.gmaaps.pump.omnipod.common.bledriver.pod.command.base.Command
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.Response
 
 sealed class PodEvent {
 
@@ -71,3 +71,4 @@ sealed class PodEvent {
         return this is CommandSent || this is CommandSendNotConfirmed
     }
 }
+

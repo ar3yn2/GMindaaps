@@ -1,4 +1,4 @@
-package app.aaps.shared.impl.utils
+﻿package app.gmaaps.shared.impl.utils
 
 import android.content.Context
 import kotlin.time.Clock
@@ -27,3 +27,4 @@ fun DateUtilImpl(
 private fun JavaClock.asKotlinClock(): Clock = object : Clock {
     override fun now(): Instant = Instant.fromEpochMilliseconds(millis())
 }
+

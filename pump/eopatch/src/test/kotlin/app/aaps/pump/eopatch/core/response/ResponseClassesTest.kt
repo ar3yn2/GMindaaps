@@ -1,8 +1,8 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
-import app.aaps.pump.eopatch.core.code.PatchAeCode
-import app.aaps.pump.eopatch.core.code.PatchBleResultCode
-import app.aaps.pump.eopatch.core.scan.PatchSelfTestResult
+import app.gmaaps.pump.eopatch.core.code.PatchAeCode
+import app.gmaaps.pump.eopatch.core.code.PatchBleResultCode
+import app.gmaaps.pump.eopatch.core.scan.PatchSelfTestResult
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import kotlin.time.Duration.Companion.seconds
@@ -284,3 +284,4 @@ class ResponseClassesTest {
         assertThat(r.alarmCount).isEqualTo(2)
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.pump.eopatch.AppConstant
-import app.aaps.pump.eopatch.code.BasalStatus
+import app.gmaaps.pump.eopatch.AppConstant
+import app.gmaaps.pump.eopatch.code.BasalStatus
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -195,3 +195,4 @@ class NormalBasalTest {
         return cal.timeInMillis
     }
 }
+

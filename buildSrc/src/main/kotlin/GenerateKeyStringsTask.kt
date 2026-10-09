@@ -1,4 +1,4 @@
-import org.gradle.api.DefaultTask
+﻿import org.gradle.api.DefaultTask
 import org.gradle.api.GradleException
 import org.gradle.api.file.DirectoryProperty
 import org.gradle.api.file.RegularFileProperty
@@ -122,7 +122,7 @@ abstract class GenerateKeyStringsTask : DefaultTask() {
             buildString {
                 append(GENERATED_HEADER)
                 append("package $pkg\n\n")
-                append("import app.aaps.core.keys.interfaces.TextRef\n\n")
+                append("import app.gmaaps.core.keys.interfaces.TextRef\n\n")
                 append("/**\n")
                 append(" * Every string this module owns, as a platform neutral [TextRef].\n")
                 append(" *\n")
@@ -458,3 +458,4 @@ abstract class GenerateKeyStringsTask : DefaultTask() {
         )
     }
 }
+

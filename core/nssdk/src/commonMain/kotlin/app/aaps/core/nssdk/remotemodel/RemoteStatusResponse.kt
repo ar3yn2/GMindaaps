@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.remotemodel
+﻿package app.gmaaps.core.nssdk.remotemodel
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -58,3 +58,4 @@ internal val RemoteApiPermission.readCreate: Boolean
 
 internal val RemoteApiPermission.full: Boolean
     get() = this.create && this.read && this.update && this.delete
+

@@ -1,14 +1,14 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.session
 
-import app.aaps.pump.omnipod.common.bledriver.comm.exceptions.CouldNotParseResponseException
-import app.aaps.pump.omnipod.common.bledriver.pod.response.AlarmStatusResponse
-import app.aaps.pump.omnipod.common.bledriver.pod.response.DefaultStatusResponse
-import app.aaps.pump.omnipod.common.bledriver.pod.response.NakResponse
-import app.aaps.pump.omnipod.common.bledriver.pod.response.Response
-import app.aaps.pump.omnipod.common.bledriver.pod.response.ResponseType
-import app.aaps.pump.omnipod.common.bledriver.pod.response.SetUniqueIdResponse
-import app.aaps.pump.omnipod.common.bledriver.pod.response.VersionResponse
-import app.aaps.pump.omnipod.common.bledriver.pod.util.byValue
+import app.gmaaps.pump.omnipod.common.bledriver.comm.exceptions.CouldNotParseResponseException
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.AlarmStatusResponse
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.DefaultStatusResponse
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.NakResponse
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.Response
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.ResponseType
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.SetUniqueIdResponse
+import app.gmaaps.pump.omnipod.common.bledriver.pod.response.VersionResponse
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.byValue
 
 object ResponseUtil {
 
@@ -48,3 +48,4 @@ object ResponseUtil {
         }
     }
 }
+

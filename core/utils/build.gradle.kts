@@ -1,4 +1,4 @@
-import kotlin.math.min
+﻿import kotlin.math.min
 
 plugins {
     id("kmp-test-defaults")
@@ -10,7 +10,7 @@ plugins {
 
 kotlin {
     android {
-        namespace = "app.aaps.core.utils"
+        namespace = "app.gmaaps.core.utils"
         compileSdk = Versions.compileSdk
         minSdk = min(Versions.minSdk, Versions.wearMinSdk)  // Compatible with wear module
         // Creates the androidHostTest compilation, which also pulls in commonTest.
@@ -104,3 +104,4 @@ kotlin {
         }
     }
 }
+

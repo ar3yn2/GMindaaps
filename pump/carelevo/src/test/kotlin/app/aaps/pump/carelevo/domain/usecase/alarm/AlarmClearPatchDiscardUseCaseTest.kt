@@ -1,10 +1,10 @@
-package app.aaps.pump.carelevo.domain.usecase.alarm
+﻿package app.gmaaps.pump.carelevo.domain.usecase.alarm
 
-import app.aaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
-import app.aaps.pump.carelevo.domain.repository.CarelevoAlarmInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
-import app.aaps.pump.carelevo.domain.repository.CarelevoUserSettingInfoRepository
+import app.gmaaps.pump.carelevo.domain.model.userSetting.CarelevoUserSettingInfoDomainModel
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoAlarmInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoInfusionInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoUserSettingInfoRepository
 import com.google.common.truth.Truth.assertThat
 import io.reactivex.rxjava3.core.Completable
 import org.junit.jupiter.api.BeforeEach
@@ -217,3 +217,4 @@ internal class AlarmClearPatchDiscardUseCaseTest {
         verify(alarmRepository).removeAlarm(eq("alarm-42"))
     }
 }
+

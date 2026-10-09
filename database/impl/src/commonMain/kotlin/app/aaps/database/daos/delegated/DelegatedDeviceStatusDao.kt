@@ -1,6 +1,6 @@
-package app.aaps.database.daos.delegated
+﻿package app.gmaaps.database.daos.delegated
 
-import app.aaps.database.daos.DeviceStatusDao
-import app.aaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.daos.DeviceStatusDao
+import app.gmaaps.database.entities.interfaces.DBEntry
 
 internal class DelegatedDeviceStatusDao(changes: MutableList<DBEntry>, private val dao: DeviceStatusDao) : DelegatedDao(changes), DeviceStatusDao by dao

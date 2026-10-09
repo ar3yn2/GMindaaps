@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import android.Manifest
 import android.bluetooth.BluetoothManager
@@ -32,3 +32,4 @@ class AndroidPairedBtDevices(
         return manager?.adapter?.bondedDevices.orEmpty().mapNotNull { it.name }
     }
 }
+

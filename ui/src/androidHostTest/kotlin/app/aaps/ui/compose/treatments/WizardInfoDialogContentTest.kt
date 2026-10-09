@@ -1,11 +1,11 @@
-package app.aaps.ui.compose.treatments
+﻿package app.gmaaps.ui.compose.treatments
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.data.model.BCR
-import app.aaps.core.interfaces.utils.DecimalFormatter
+import app.gmaaps.core.data.model.BCR
+import app.gmaaps.core.interfaces.utils.DecimalFormatter
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -58,3 +58,4 @@ class WizardInfoDialogContentTest {
         compose.onNodeWithText("MYTREND", substring = true).assertIsDisplayed()
     }
 }
+

@@ -1,25 +1,25 @@
-package app.aaps.pump.eopatch.core
+﻿package app.gmaaps.pump.eopatch.core
 
 import android.bluetooth.BluetoothDevice
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.core.ble.Cipher
-import app.aaps.pump.eopatch.core.ble.ICipher
-import app.aaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.ALARM_UUID
-import app.aaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.BIG_CALL_UUID
-import app.aaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.BIG_READ_UUID
-import app.aaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.INFO_UUID
-import app.aaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.MTU_SIZE
-import app.aaps.pump.eopatch.core.ble.MacVerifier
-import app.aaps.pump.eopatch.core.ble.PatchFunc
-import app.aaps.pump.eopatch.core.noti.AlarmNotification
-import app.aaps.pump.eopatch.core.noti.InfoNotification
-import app.aaps.pump.eopatch.core.scan.BleConnectionState
-import app.aaps.pump.eopatch.core.scan.IBleDevice
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.core.ble.Cipher
+import app.gmaaps.pump.eopatch.core.ble.ICipher
+import app.gmaaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.ALARM_UUID
+import app.gmaaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.BIG_CALL_UUID
+import app.gmaaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.BIG_READ_UUID
+import app.gmaaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.INFO_UUID
+import app.gmaaps.pump.eopatch.core.ble.IPatchPacketConstant.Companion.MTU_SIZE
+import app.gmaaps.pump.eopatch.core.ble.MacVerifier
+import app.gmaaps.pump.eopatch.core.ble.PatchFunc
+import app.gmaaps.pump.eopatch.core.noti.AlarmNotification
+import app.gmaaps.pump.eopatch.core.noti.InfoNotification
+import app.gmaaps.pump.eopatch.core.scan.BleConnectionState
+import app.gmaaps.pump.eopatch.core.scan.IBleDevice
 import com.jakewharton.rx3.ReplayingShare
 import com.polidea.rxandroidble3.RxBleClient
 import com.polidea.rxandroidble3.RxBleConnection
@@ -321,3 +321,4 @@ class Patch(
         private val TIMEOUT_PATCH = Timeout(4, TimeUnit.DAYS)
     }
 }
+

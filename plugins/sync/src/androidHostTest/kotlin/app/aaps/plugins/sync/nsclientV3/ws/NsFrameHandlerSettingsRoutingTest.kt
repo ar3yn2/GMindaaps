@@ -1,16 +1,16 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
-import app.aaps.core.interfaces.nsclient.StoreDataForDb
-import app.aaps.core.nssdk.interfaces.RunningConfiguration
-import app.aaps.core.nssdk.remotemodel.LastModified
-import app.aaps.plugins.sync.nsclientV3.NSClientV3Plugin
-import app.aaps.plugins.sync.nsclientV3.NsIncomingDataProcessor
-import app.aaps.plugins.sync.nsclientV3.SettingsIdentifiers
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.ClientControlPublisher
-import app.aaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector
-import app.aaps.plugins.sync.nsclientV3.compose.NSClientRepositoryImpl
-import app.aaps.plugins.sync.nsclientV3.data.NSDeviceStatusHandler
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.interfaces.nsclient.StoreDataForDb
+import app.gmaaps.core.nssdk.interfaces.RunningConfiguration
+import app.gmaaps.core.nssdk.remotemodel.LastModified
+import app.gmaaps.plugins.sync.nsclientV3.NSClientV3Plugin
+import app.gmaaps.plugins.sync.nsclientV3.NsIncomingDataProcessor
+import app.gmaaps.plugins.sync.nsclientV3.SettingsIdentifiers
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.ClientControlPublisher
+import app.gmaaps.plugins.sync.nsclientV3.clientcontrol.OrphanDetector
+import app.gmaaps.plugins.sync.nsclientV3.compose.NSClientRepositoryImpl
+import app.gmaaps.plugins.sync.nsclientV3.data.NSDeviceStatusHandler
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.runTest
@@ -29,7 +29,7 @@ import org.mockito.kotlin.whenever
  * `settings` is how client control travels. It was in this class's subscribe list from the day the
  * class was written, with no branch to receive it, so every frame was dropped: pairing and every
  * command after it were inert on the two platforms that use this class - iOS and desktop - while
- * Android, which has its own [app.aaps.plugins.sync.nsclientV3.services.NSClientV3Service], worked.
+ * Android, which has its own [app.gmaaps.plugins.sync.nsclientV3.services.NSClientV3Service], worked.
  * Nothing failed loudly, because a `when` with no matching branch is not an error.
  *
  * These mirror the settings cases in `NSClientV3ServiceHandlersTest` deliberately. Two routings for
@@ -161,3 +161,4 @@ class NsFrameHandlerSettingsRoutingTest : TestBaseWithProfile() {
         verify(runningConfiguration, never()).applyCold(any())
     }
 }
+

@@ -1,13 +1,13 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.core.api.GetGlobalTime
-import app.aaps.pump.eopatch.core.api.GetTemperature
-import app.aaps.pump.eopatch.core.api.GetVoltageLevelB4Priming
-import app.aaps.pump.eopatch.core.response.BatteryVoltageLevelPairingResponse
-import app.aaps.pump.eopatch.core.response.GlobalTimeResponse
-import app.aaps.pump.eopatch.core.response.TemperatureResponse
-import app.aaps.pump.eopatch.core.scan.PatchSelfTestResult
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.core.api.GetGlobalTime
+import app.gmaaps.pump.eopatch.core.api.GetTemperature
+import app.gmaaps.pump.eopatch.core.api.GetVoltageLevelB4Priming
+import app.gmaaps.pump.eopatch.core.response.BatteryVoltageLevelPairingResponse
+import app.gmaaps.pump.eopatch.core.response.GlobalTimeResponse
+import app.gmaaps.pump.eopatch.core.response.TemperatureResponse
+import app.gmaaps.pump.eopatch.core.scan.PatchSelfTestResult
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -41,3 +41,4 @@ class SelfTestTask() : TaskBase(TaskFunc.SELF_TEST) {
             .doOnError(Consumer { e: Throwable -> aapsLogger.error(LTag.PUMPCOMM, e.message ?: "SelfTestTask error") })
     }
 }
+

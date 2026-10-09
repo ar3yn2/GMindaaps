@@ -1,4 +1,4 @@
-package app.aaps
+﻿package app.gmaaps
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -11,7 +11,7 @@ import javax.xml.parsers.DocumentBuilderFactory
  * that exists.
  *
  * This exists because it already went wrong. Moving `CarbSuggestionReceiver` out of :plugins:aps and
- * into :app left the manifest pointing at `app.aaps.plugins.aps.loop.CarbSuggestionReceiver`, a class
+ * into :app left the manifest pointing at `app.gmaaps.plugins.aps.loop.CarbSuggestionReceiver`, a class
  * that no longer existed, while the real receiver was declared nowhere. Android drops an explicit
  * broadcast to an undeclared receiver without an error, so the "ignore carb suggestion for 5m/15m/30m"
  * notification buttons simply stopped working, and nothing - not the build, not a test, not a lint
@@ -64,3 +64,4 @@ class ManifestComponentsTest {
         error("Cannot locate the app AndroidManifest.xml from ${File("").absolutePath}")
     }
 }
+

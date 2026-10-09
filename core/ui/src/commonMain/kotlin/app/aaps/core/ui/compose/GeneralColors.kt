@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.graphics.Color
@@ -226,3 +226,4 @@ val DarkGeneralColors = GeneralColors(
  * Accessed via AapsTheme.generalColors in composables.
  */
 internal val LocalGeneralColors = compositionLocalOf { LightGeneralColors }
+

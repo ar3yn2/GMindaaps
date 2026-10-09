@@ -1,4 +1,4 @@
-package app.aaps.ui.widget.glance
+﻿package app.gmaaps.ui.widget.glance
 
 import android.content.Context
 import androidx.compose.runtime.Composable
@@ -32,7 +32,7 @@ import androidx.glance.text.Text
 import androidx.glance.text.TextDecoration
 import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
-import app.aaps.core.interfaces.configuration.awaitInitialized
+import app.gmaaps.core.interfaces.configuration.awaitInitialized
 
 class BgGraphGlanceWidget : GlanceAppWidget() {
 
@@ -118,3 +118,4 @@ private fun LoadingContent() {
         )
     }
 }
+

@@ -1,7 +1,7 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.ui.CoreUiStrings
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.ui.CoreUiStrings
 import com.google.common.truth.Truth.assertThat
 import org.json.JSONObject
 import org.junit.jupiter.api.BeforeEach
@@ -47,3 +47,4 @@ class ActionSettingsExportTest : ActionsTestBase() {
         assertThat(json.getJSONObject("data").getString("text")).isEqualTo("hello")
     }
 }
+

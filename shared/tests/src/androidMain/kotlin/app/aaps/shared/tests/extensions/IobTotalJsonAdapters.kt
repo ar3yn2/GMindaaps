@@ -1,9 +1,9 @@
-package app.aaps.shared.tests.extensions
+﻿package app.gmaaps.shared.tests.extensions
 
-import app.aaps.core.interfaces.aps.IobTotal
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.objects.extensions.determineBasalJsonObject
-import app.aaps.core.objects.extensions.jsonObject
+import app.gmaaps.core.interfaces.aps.IobTotal
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.objects.extensions.determineBasalJsonObject
+import app.gmaaps.core.objects.extensions.jsonObject
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -34,3 +34,4 @@ fun Array<IobTotal>.convertToJSONArray(dateUtil: DateUtil): JSONArray {
     }
     return array
 }
+

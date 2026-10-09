@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.ksp)
     id("android-module-dependencies")
@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "app.aaps.pump.carelevo.emulator"
+    namespace = "app.gmaaps.pump.carelevo.emulator"
 }
 
 dependencies {
@@ -16,3 +16,4 @@ dependencies {
 
     testImplementation(project(":shared:tests"))
 }
+

@@ -1,19 +1,19 @@
-package app.aaps.core.interfaces.sync
+﻿package app.gmaaps.core.interfaces.sync
 
-import app.aaps.core.data.model.BCR
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.model.CA
-import app.aaps.core.data.model.CAL
-import app.aaps.core.data.model.DS
-import app.aaps.core.data.model.EB
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.FD
-import app.aaps.core.data.model.GV
-import app.aaps.core.data.model.PS
-import app.aaps.core.data.model.RM
-import app.aaps.core.data.model.TB
-import app.aaps.core.data.model.TE
-import app.aaps.core.data.model.TT
+import app.gmaaps.core.data.model.BCR
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.model.CA
+import app.gmaaps.core.data.model.CAL
+import app.gmaaps.core.data.model.DS
+import app.gmaaps.core.data.model.EB
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.FD
+import app.gmaaps.core.data.model.GV
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.core.data.model.RM
+import app.gmaaps.core.data.model.TB
+import app.gmaaps.core.data.model.TE
+import app.gmaaps.core.data.model.TT
 import kotlinx.serialization.json.JsonObject
 
 interface DataSyncSelector {

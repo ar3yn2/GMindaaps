@@ -1,9 +1,9 @@
-package app.aaps.pump.medtronic.data.dto
+﻿package app.gmaaps.pump.medtronic.data.dto
 
-import app.aaps.core.utils.formatUS
-import app.aaps.core.utils.pump.ByteUtil
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntryType
+import app.gmaaps.core.utils.formatUS
+import app.gmaaps.core.utils.pump.ByteUtil
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntryType
 import com.google.gson.annotations.Expose
 import org.apache.commons.lang3.builder.ToStringBuilder
 import java.util.Locale

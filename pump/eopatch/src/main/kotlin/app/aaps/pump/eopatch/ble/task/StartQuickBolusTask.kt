@@ -1,11 +1,11 @@
-package app.aaps.pump.eopatch.ble.task
+﻿package app.gmaaps.pump.eopatch.ble.task
 
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.pump.eopatch.code.BolusExDuration
-import app.aaps.pump.eopatch.core.api.BolusStart
-import app.aaps.pump.eopatch.core.api.ComboBolusStart
-import app.aaps.pump.eopatch.core.api.ExtBolusStart
-import app.aaps.pump.eopatch.core.response.BolusResponse
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.pump.eopatch.code.BolusExDuration
+import app.gmaaps.pump.eopatch.core.api.BolusStart
+import app.gmaaps.pump.eopatch.core.api.ComboBolusStart
+import app.gmaaps.pump.eopatch.core.api.ExtBolusStart
+import app.gmaaps.pump.eopatch.core.response.BolusResponse
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.Inject
 import dev.zacsweers.metro.SingleIn
@@ -55,3 +55,4 @@ class StartQuickBolusTask() : BolusTask(TaskFunc.START_QUICK_BOLUS) {
         checkPatchConnected()
     }
 }
+

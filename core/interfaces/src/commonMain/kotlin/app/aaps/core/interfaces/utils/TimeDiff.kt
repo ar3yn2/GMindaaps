@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.utils
+﻿package app.gmaaps.core.interfaces.utils
 
 /**
  * A duration split into whole calendar-style components.
@@ -16,3 +16,4 @@ data class TimeDiff(
     val microseconds: Long,
     val nanoseconds: Long
 )
+

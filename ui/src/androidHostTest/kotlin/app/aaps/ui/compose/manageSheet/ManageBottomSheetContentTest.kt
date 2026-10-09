@@ -1,4 +1,4 @@
-package app.aaps.ui.compose.manageSheet
+﻿package app.gmaaps.ui.compose.manageSheet
 
 import android.content.Context
 import androidx.compose.material3.MaterialTheme
@@ -6,7 +6,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onNodeWithText
-import app.aaps.core.ui.compose.LocalConfig
+import app.gmaaps.core.ui.compose.LocalConfig
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -16,8 +16,8 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
-import app.aaps.core.interfaces.configuration.Config as AppConfig
-import app.aaps.core.ui.R as CoreUiR
+import app.gmaaps.core.interfaces.configuration.Config as AppConfig
+import app.gmaaps.core.ui.R as CoreUiR
 
 /** Robolectric composable test for [ManageBottomSheetContent]: header renders (actions shown) + cancel-TB fires. */
 @RunWith(RobolectricTestRunner::class)
@@ -62,3 +62,4 @@ class ManageBottomSheetContentTest {
         compose.onNodeWithText(manageHeader).assertIsDisplayed()
     }
 }
+

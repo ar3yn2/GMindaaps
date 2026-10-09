@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.nsclientV3.ws
+﻿package app.gmaaps.plugins.sync.nsclientV3.ws
 
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
@@ -70,3 +70,4 @@ class SocketIoNsSocketFactory() : NsSocketFactory {
             null
         }
 }
+

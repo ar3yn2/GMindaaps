@@ -1,4 +1,4 @@
-plugins {
+﻿plugins {
     id("kmp-test-defaults")
     kotlin("multiplatform")
     // NOT com.android.library. AGP 9 refuses that plugin together with the multiplatform plugin.
@@ -15,7 +15,7 @@ plugins {
 // named view of them that common code can reach.
 val generateSensitivityStrings = tasks.register<GenerateKeyStringsTask>("generateSensitivityStrings") {
     resDir.set(layout.projectDirectory.dir("src/androidMain/res"))
-    packageName.set("app.aaps.plugins.sensitivity")
+    packageName.set("app.gmaaps.plugins.sensitivity")
     owner.set("sensitivity")
     objectName.set("SensitivityStrings")
     idsObjectName.set("SensitivityStringIds")
@@ -28,7 +28,7 @@ val generateSensitivityStrings = tasks.register<GenerateKeyStringsTask>("generat
 
 kotlin {
     android {
-        namespace = "app.aaps.plugins.sensitivity"
+        namespace = "app.gmaaps.plugins.sensitivity"
         compileSdk = Versions.compileSdk
         minSdk = Versions.minSdk
         androidResources { enable = true }
@@ -95,4 +95,5 @@ kotlin {
         }
     }
 }
+
 

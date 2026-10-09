@@ -1,6 +1,6 @@
-package app.aaps.pump.common.hw.rileylink.defs
+﻿package app.gmaaps.pump.common.hw.rileylink.defs
 
-import app.aaps.pump.common.hw.rileylink.R
+import app.gmaaps.pump.common.hw.rileylink.R
 
 /**
  * Created by andy on 14/05/2018.
@@ -18,7 +18,7 @@ enum class RileyLinkError(val resourceId: Int, val resourceIdPod: Int? = null) {
 
     // Device
     TuneUpOfDeviceFailed(R.string.rileylink_error_tuneup_failed),
-    NoContactWithDevice(app.aaps.core.ui.R.string.pump_unreachable, R.string.rileylink_error_pod_unreachable),
+    NoContactWithDevice(app.gmaaps.core.ui.R.string.pump_unreachable, R.string.rileylink_error_pod_unreachable),
     ;
 
     fun getResourceId(targetDevice: RileyLinkTargetDevice?): Int =
@@ -27,3 +27,4 @@ enum class RileyLinkError(val resourceId: Int, val resourceIdPod: Int? = null) {
             else resourceIdPod
         } else resourceId
 }
+

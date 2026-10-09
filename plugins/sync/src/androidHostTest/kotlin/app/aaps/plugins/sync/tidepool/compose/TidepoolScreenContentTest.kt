@@ -1,4 +1,4 @@
-package app.aaps.plugins.sync.tidepool.compose
+﻿package app.gmaaps.plugins.sync.tidepool.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.test.assertIsDisplayed
@@ -51,3 +51,4 @@ class TidepoolScreenContentTest {
         compose.onNodeWithText("NOT_LOGGED_IN").assertIsDisplayed()
     }
 }
+

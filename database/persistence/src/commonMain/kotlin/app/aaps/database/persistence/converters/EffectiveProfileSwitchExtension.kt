@@ -1,9 +1,9 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.EPS
-import app.aaps.core.data.model.data.Block
-import app.aaps.core.data.model.data.TargetBlock
-import app.aaps.database.entities.EffectiveProfileSwitch
+import app.gmaaps.core.data.model.EPS
+import app.gmaaps.core.data.model.data.Block
+import app.gmaaps.core.data.model.data.TargetBlock
+import app.gmaaps.database.entities.EffectiveProfileSwitch
 
 fun EffectiveProfileSwitch.fromDb(): EPS =
     EPS(
@@ -40,10 +40,10 @@ fun EPS.toDb(): EffectiveProfileSwitch =
         timestamp = this.timestamp,
         utcOffset = this.utcOffset,
         interfaceIDs_backing = this.ids.toDb(),
-        basalBlocks = mutableListOf<app.aaps.database.entities.data.Block>().also { list -> this.basalBlocks.forEach { list.add(it.toDb()) } },
-        isfBlocks = mutableListOf<app.aaps.database.entities.data.Block>().also { list -> this.isfBlocks.forEach { list.add(it.toDb()) } },
-        icBlocks = mutableListOf<app.aaps.database.entities.data.Block>().also { list -> this.icBlocks.forEach { list.add(it.toDb()) } },
-        targetBlocks = mutableListOf<app.aaps.database.entities.data.TargetBlock>().also { list -> this.targetBlocks.forEach { list.add(it.toDb()) } },
+        basalBlocks = mutableListOf<app.gmaaps.database.entities.data.Block>().also { list -> this.basalBlocks.forEach { list.add(it.toDb()) } },
+        isfBlocks = mutableListOf<app.gmaaps.database.entities.data.Block>().also { list -> this.isfBlocks.forEach { list.add(it.toDb()) } },
+        icBlocks = mutableListOf<app.gmaaps.database.entities.data.Block>().also { list -> this.icBlocks.forEach { list.add(it.toDb()) } },
+        targetBlocks = mutableListOf<app.gmaaps.database.entities.data.TargetBlock>().also { list -> this.targetBlocks.forEach { list.add(it.toDb()) } },
         glucoseUnit = this.glucoseUnit.toDb(),
         originalProfileName = this.originalProfileName,
         originalCustomizedName = this.originalCustomizedName,
@@ -54,3 +54,4 @@ fun EPS.toDb(): EffectiveProfileSwitch =
         originalPsId = this.originalPsId,
         insulinConfiguration = this.iCfg.toDb()
     )
+

@@ -1,8 +1,8 @@
-package app.aaps.ui.widget.glance
+﻿package app.gmaaps.ui.widget.glance
 
 import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
-import app.aaps.core.data.model.TrendArrow
+import app.gmaaps.core.data.model.TrendArrow
 
 data class WidgetRenderState(
     val bgText: String,
@@ -46,3 +46,4 @@ data class WidgetRenderState(
     val iobLabel: String,
     val cobLabel: String
 )
+

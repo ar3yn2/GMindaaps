@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
@@ -46,3 +46,4 @@ internal class BasalProgramCommandTest {
         assertFailsWith<IllegalArgumentException> { BasalProgramCommand(false, 0, listOf(1.0)).decode(byteArrayOf(0x81.toByte(), 0x00)) }
     }
 }
+

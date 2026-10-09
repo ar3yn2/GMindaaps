@@ -1,4 +1,4 @@
-package app.aaps.database.entities
+﻿package app.gmaaps.database.entities
 
 sealed class ValueWithUnit {
 
@@ -64,3 +64,4 @@ sealed class ValueWithUnit {
         }
     }
 }
+

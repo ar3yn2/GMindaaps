@@ -1,17 +1,17 @@
-package app.aaps.desktop.shell.platform
+﻿package app.gmaaps.desktop.shell.platform
 
-import app.aaps.core.interfaces.autotune.Autotune
-import app.aaps.core.interfaces.bgQualityCheck.BgQualityCheck
-import app.aaps.core.interfaces.iob.IobCobCalculator
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.maintenance.ExportResult
-import app.aaps.core.interfaces.maintenance.Maintenance
-import app.aaps.core.interfaces.overview.OverviewData
-import app.aaps.core.interfaces.overview.graph.OverviewDataCache
-import app.aaps.core.interfaces.workflow.CalculationSignalsEmitter
-import app.aaps.implementation.maintenance.DesktopFolders
-import app.aaps.ui.compose.history.HistoryScope
+import app.gmaaps.core.interfaces.autotune.Autotune
+import app.gmaaps.core.interfaces.bgQualityCheck.BgQualityCheck
+import app.gmaaps.core.interfaces.iob.IobCobCalculator
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.maintenance.ExportResult
+import app.gmaaps.core.interfaces.maintenance.Maintenance
+import app.gmaaps.core.interfaces.overview.OverviewData
+import app.gmaaps.core.interfaces.overview.graph.OverviewDataCache
+import app.gmaaps.core.interfaces.workflow.CalculationSignalsEmitter
+import app.gmaaps.implementation.maintenance.DesktopFolders
+import app.gmaaps.ui.compose.history.HistoryScope
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -167,3 +167,4 @@ class DesktopHistoryScope(
         "HistoryScope needs a scope of its own on desktop - sharing the loop's calculation state would corrupt it"
     )
 }
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.core.response
+﻿package app.gmaaps.pump.eopatch.core.response
 
-import app.aaps.pump.eopatch.core.code.PatchBleResultCode
+import app.gmaaps.pump.eopatch.core.code.PatchBleResultCode
 
 class BolusStopResponse : BolusResponse {
 
@@ -26,3 +26,4 @@ class BolusStopResponse : BolusResponse {
     override fun toString(): String =
         "BolusStopResponse{injected=$injectedBolusAmount, injecting=$injectingBolusAmount, target=$targetBolusAmount, timestamp=$timestamp, resultCode=$resultCode}"
 }
+

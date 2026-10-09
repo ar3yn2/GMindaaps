@@ -1,6 +1,6 @@
-package app.aaps.pump.common.hw.rileylink.ble.operations
+﻿package app.gmaaps.pump.common.hw.rileylink.ble.operations
 
-import app.aaps.pump.common.hw.rileylink.ble.RileyLinkBLE
+import app.gmaaps.pump.common.hw.rileylink.ble.RileyLinkBLE
 import java.util.UUID
 import java.util.concurrent.Semaphore
 
@@ -22,3 +22,4 @@ abstract class BLECommOperation {
 
     fun getGattOperationTimeout_ms(): Int = 22000
 }
+

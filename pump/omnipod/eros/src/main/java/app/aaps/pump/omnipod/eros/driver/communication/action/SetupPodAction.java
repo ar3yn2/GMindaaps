@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.communication.action;
+package app.gmaaps.pump.omnipod.eros.driver.communication.action;
 
 import androidx.annotation.NonNull;
 
@@ -6,20 +6,20 @@ import org.joda.time.DateTime;
 
 import java.util.Collections;
 
-import app.aaps.core.interfaces.logging.AAPSLogger;
-import app.aaps.pump.omnipod.eros.driver.communication.message.OmnipodMessage;
-import app.aaps.pump.omnipod.eros.driver.communication.message.command.SetupPodCommand;
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.VersionResponse;
-import app.aaps.pump.omnipod.eros.driver.definition.ActivationProgress;
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
-import app.aaps.pump.omnipod.eros.driver.definition.PacketType;
-import app.aaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalMessageAddressException;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalPacketTypeException;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalPodProgressException;
-import app.aaps.pump.omnipod.eros.driver.exception.IllegalVersionResponseTypeException;
-import app.aaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
-import app.aaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
+import app.gmaaps.core.interfaces.logging.AAPSLogger;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.OmnipodMessage;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.command.SetupPodCommand;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.VersionResponse;
+import app.gmaaps.pump.omnipod.eros.driver.definition.ActivationProgress;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PacketType;
+import app.gmaaps.pump.omnipod.eros.driver.definition.PodProgressStatus;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalMessageAddressException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalPacketTypeException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalPodProgressException;
+import app.gmaaps.pump.omnipod.eros.driver.exception.IllegalVersionResponseTypeException;
+import app.gmaaps.pump.omnipod.eros.driver.manager.ErosPodStateManager;
+import app.gmaaps.pump.omnipod.eros.rileylink.manager.OmnipodRileyLinkCommunicationManager;
 
 public class SetupPodAction implements OmnipodAction<Void> {
     @NonNull private final ErosPodStateManager podStateManager;
@@ -69,3 +69,4 @@ public class SetupPodAction implements OmnipodAction<Void> {
         return null;
     }
 }
+

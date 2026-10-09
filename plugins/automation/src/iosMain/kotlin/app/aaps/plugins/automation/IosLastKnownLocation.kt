@@ -1,7 +1,7 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -84,3 +84,4 @@ class IosLastKnownLocation(
 @OptIn(ExperimentalForeignApi::class)
 internal fun CLLocation.toGeoPosition(): GeoPosition =
     coordinate.useContents { GeoPosition(latitude = latitude, longitude = longitude) }
+

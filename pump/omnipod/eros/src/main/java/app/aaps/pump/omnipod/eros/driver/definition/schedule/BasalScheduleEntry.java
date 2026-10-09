@@ -1,4 +1,4 @@
-package app.aaps.pump.omnipod.eros.driver.definition.schedule;
+package app.gmaaps.pump.omnipod.eros.driver.definition.schedule;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -7,7 +7,7 @@ import org.joda.time.Duration;
 
 import java.util.Objects;
 
-import app.aaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
+import app.gmaaps.pump.omnipod.eros.driver.definition.OmnipodConstants;
 
 public class BasalScheduleEntry {
     private final double rate;
@@ -55,3 +55,4 @@ public class BasalScheduleEntry {
         return Objects.hash(rate, startTime);
     }
 }
+

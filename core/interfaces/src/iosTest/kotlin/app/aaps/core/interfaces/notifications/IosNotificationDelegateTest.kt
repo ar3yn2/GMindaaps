@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
 import platform.UserNotifications.UNNotificationPresentationOptionBanner
 import platform.UserNotifications.UNNotificationPresentationOptionList
@@ -107,3 +107,4 @@ class IosNotificationDelegateTest {
         assertTrue(notifierSaw)
     }
 }
+

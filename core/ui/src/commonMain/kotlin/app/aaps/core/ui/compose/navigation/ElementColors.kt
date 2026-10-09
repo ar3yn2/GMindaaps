@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.navigation
+﻿package app.gmaaps.core.ui.compose.navigation
 
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.ui.graphics.Color
@@ -160,3 +160,4 @@ val DarkElementColors = ElementColors(
  * Accessed via AapsTheme.treatmentIconColors in composables.
  */
 internal val LocalElementColors = compositionLocalOf { LightElementColors }
+

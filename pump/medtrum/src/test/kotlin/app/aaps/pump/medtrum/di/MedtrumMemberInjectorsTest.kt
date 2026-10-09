@@ -1,7 +1,7 @@
-package app.aaps.pump.medtrum.di
+﻿package app.gmaaps.pump.medtrum.di
 
-import app.aaps.pump.medtrum.comm.packets.MedtrumPacket
-import app.aaps.shared.tests.missingMemberInjectorEntries
+import app.gmaaps.pump.medtrum.comm.packets.MedtrumPacket
+import app.gmaaps.shared.tests.missingMemberInjectorEntries
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -23,3 +23,4 @@ class MedtrumMemberInjectorsTest {
         assertThat(missing).isEmpty()
     }
 }
+

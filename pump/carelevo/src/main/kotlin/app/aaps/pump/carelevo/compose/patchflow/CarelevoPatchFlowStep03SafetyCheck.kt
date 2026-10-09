@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.patchflow
+﻿package app.gmaaps.pump.carelevo.compose.patchflow
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -24,15 +24,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.aaps.core.ui.compose.AapsSpacing
-import app.aaps.core.ui.compose.banner.ErrorBanner
-import app.aaps.core.ui.compose.pump.WizardButton
-import app.aaps.core.ui.compose.pump.WizardStepLayout
-import app.aaps.pump.carelevo.R
-import app.aaps.pump.carelevo.compose.dialog.CarelevoActionDialog
-import app.aaps.pump.carelevo.presentation.model.CarelevoConnectSafetyCheckEvent
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
-import app.aaps.pump.carelevo.presentation.viewmodel.CarelevoPatchSafetyCheckViewModel
+import app.gmaaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.banner.ErrorBanner
+import app.gmaaps.core.ui.compose.pump.WizardButton
+import app.gmaaps.core.ui.compose.pump.WizardStepLayout
+import app.gmaaps.pump.carelevo.R
+import app.gmaaps.pump.carelevo.compose.dialog.CarelevoActionDialog
+import app.gmaaps.pump.carelevo.presentation.model.CarelevoConnectSafetyCheckEvent
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchConnectionFlowViewModel
+import app.gmaaps.pump.carelevo.presentation.viewmodel.CarelevoPatchSafetyCheckViewModel
 
 @Composable
 internal fun CarelevoPatchFlowStep03SafetyCheck(
@@ -335,3 +335,4 @@ private fun CarelevoPatchFlowStep03SafetyCheckSuccessPreview() {
         )
     }
 }
+

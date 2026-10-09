@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.EffectiveProfileSwitch
+import app.gmaaps.database.entities.EffectiveProfileSwitch
 
 /**
  * Sync the EffectiveProfileSwitch from NS

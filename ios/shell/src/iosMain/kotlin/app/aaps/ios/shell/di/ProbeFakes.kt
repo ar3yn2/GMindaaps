@@ -1,7 +1,7 @@
-package app.aaps.ios.shell.di
+﻿package app.gmaaps.ios.shell.di
 
-import app.aaps.core.interfaces.resources.TextResolver
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.resources.TextResolver
+import app.gmaaps.core.keys.interfaces.TextRef
 
 /**
  * The one leaf the probe graph still has to supply itself.
@@ -22,3 +22,4 @@ internal object ProbeTextResolver : TextResolver {
     override fun gsNotLocalised(ref: TextRef): String = gs(ref)
     override fun shortTextMode(): Boolean = false
 }
+

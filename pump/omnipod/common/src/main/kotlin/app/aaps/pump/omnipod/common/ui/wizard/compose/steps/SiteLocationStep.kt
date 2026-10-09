@@ -1,8 +1,8 @@
-package app.aaps.pump.omnipod.common.ui.wizard.compose.steps
+﻿package app.gmaaps.pump.omnipod.common.ui.wizard.compose.steps
 
 import androidx.compose.runtime.Composable
-import app.aaps.core.ui.compose.siteRotation.SiteLocationWizardStep
-import app.aaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardViewModel
+import app.gmaaps.core.ui.compose.siteRotation.SiteLocationWizardStep
+import app.gmaaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardViewModel
 
 /**
  * Site location selection step — shown when site rotation management is enabled.
@@ -14,3 +14,4 @@ import app.aaps.pump.omnipod.common.ui.wizard.compose.OmnipodWizardViewModel
 fun SiteLocationStep(viewModel: OmnipodWizardViewModel) {
     SiteLocationWizardStep(host = viewModel)
 }
+

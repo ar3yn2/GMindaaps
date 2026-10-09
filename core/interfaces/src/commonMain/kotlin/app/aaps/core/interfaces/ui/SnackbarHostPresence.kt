@@ -1,4 +1,4 @@
-package app.aaps.core.interfaces.ui
+﻿package app.gmaaps.core.interfaces.ui
 
 import kotlinx.coroutines.flow.StateFlow
 
@@ -32,3 +32,4 @@ interface SnackbarHostPresence {
      */
     fun acquire(): AutoCloseable
 }
+

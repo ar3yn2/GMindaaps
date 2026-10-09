@@ -1,10 +1,10 @@
-package app.aaps.pump.danarkorean.comm
+﻿package app.gmaaps.pump.danarkorean.comm
 
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.pump.danar.comm.MessageBase
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.pump.danar.comm.MessageBase
 
 class MsgInitConnStatusBolusK(
     injector: MetroMemberInjector
@@ -30,7 +30,7 @@ class MsgInitConnStatusBolusK(
         aapsLogger.debug(LTag.PUMPCOMM, "Bolus max: " + danaPump.maxBolus)
         aapsLogger.debug(LTag.PUMPCOMM, "Delivery status: $deliveryStatus")
         if (!danaPump.isExtendedBolusEnabled) {
-            notificationManager.post(NotificationId.EXTENDED_BOLUS_DISABLED, TextRef.AndroidRes(app.aaps.pump.dana.R.string.danar_enableextendedbolus))
+            notificationManager.post(NotificationId.EXTENDED_BOLUS_DISABLED, TextRef.AndroidRes(app.gmaaps.pump.dana.R.string.danar_enableextendedbolus))
         } else {
             notificationManager.dismiss(NotificationId.EXTENDED_BOLUS_DISABLED)
         }

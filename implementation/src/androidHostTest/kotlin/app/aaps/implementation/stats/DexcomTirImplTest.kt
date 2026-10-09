@@ -1,4 +1,4 @@
-package app.aaps.implementation.stats
+﻿package app.gmaaps.implementation.stats
 
 import com.google.common.truth.Truth.assertThat
 import org.junit.Test
@@ -56,3 +56,4 @@ internal class DexcomTirImplTest {
         assertThat(tir.highNightTirMgdl()).isLessThan(tir.highTirMgdl())
     }
 }
+

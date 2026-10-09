@@ -1,10 +1,10 @@
-package app.aaps.pump.danar.di
+﻿package app.gmaaps.pump.danar.di
 
-import app.aaps.core.interfaces.pump.rfcomm.RfcommTransport
-import app.aaps.pump.dana.di.DanaAccessors
-import app.aaps.pump.danar.DanaRPlugin
-import app.aaps.pump.danarkorean.DanaRKoreanPlugin
-import app.aaps.pump.danarv2.DanaRv2Plugin
+import app.gmaaps.core.interfaces.pump.rfcomm.RfcommTransport
+import app.gmaaps.pump.dana.di.DanaAccessors
+import app.gmaaps.pump.danar.DanaRPlugin
+import app.gmaaps.pump.danarkorean.DanaRKoreanPlugin
+import app.gmaaps.pump.danarv2.DanaRv2Plugin
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesTo
 
@@ -24,3 +24,4 @@ interface DanaRAccessors : DanaAccessors {
     val danaRv2Plugin: DanaRv2Plugin
     val rfcommTransport: RfcommTransport
 }
+

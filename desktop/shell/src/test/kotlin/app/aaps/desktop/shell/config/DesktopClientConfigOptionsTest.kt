@@ -1,7 +1,7 @@
-package app.aaps.desktop.shell.config
+﻿package app.gmaaps.desktop.shell.config
 
-import app.aaps.core.interfaces.configuration.ExternalOptions
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.interfaces.configuration.ExternalOptions
+import app.gmaaps.core.keys.interfaces.TextRef
 import java.io.File
 import java.nio.file.Files
 import kotlin.test.AfterTest
@@ -117,7 +117,7 @@ class DesktopClientConfigOptionsTest {
     /**
      * Init progress must not close a reconfiguration window it does not own.
      *
-     * These three replace the whole [app.aaps.core.interfaces.configuration.InitProgress] rather than
+     * These three replace the whole [app.gmaaps.core.interfaces.configuration.InitProgress] rather than
      * copying it, so the depth has to be carried across by hand. Getting it wrong reopens the app to
      * readers while a settings import still believes plugin state is being rebuilt - and this shape is
      * shared with `IosClientConfig`, where it is worse: iOS starts at `done = true` and has no start-up
@@ -143,3 +143,4 @@ class DesktopClientConfigOptionsTest {
         assertTrue(config.appInitialized)
     }
 }
+

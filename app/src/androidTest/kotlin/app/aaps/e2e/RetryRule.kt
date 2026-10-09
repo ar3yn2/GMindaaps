@@ -1,4 +1,4 @@
-package app.aaps.e2e
+﻿package app.gmaaps.e2e
 
 import org.junit.internal.AssumptionViolatedException
 import org.junit.rules.TestRule
@@ -37,3 +37,4 @@ class RetryRule(private val attempts: Int = 3) : TestRule {
             }
         }
 }
+

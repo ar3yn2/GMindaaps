@@ -1,22 +1,22 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
-import app.aaps.implementation.maintenance.ImportExportPrefsImpl
-import app.aaps.implementation.receivers.KeepAliveWorker
-import app.aaps.implementation.scenes.SceneExpiryWorker
-import app.aaps.plugins.aps.loop.runningMode.RunningModeExpiryWorker
-import app.aaps.plugins.sync.nsclientV3.workers.DataSyncWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadBgWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadDeviceStatusWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadFoodsWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadLastModificationWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadProfileStoreWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadSettingsWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadStatusWorker
-import app.aaps.plugins.sync.nsclientV3.workers.LoadTreatmentsWorker
-import app.aaps.plugins.sync.smsCommunicator.SmsCommunicatorPlugin
-import app.aaps.plugins.sync.xdrip.workers.XdripDataSyncWorker
-import app.aaps.workflow.PostCalculationWorker
-import app.aaps.workflow.PrepareGraphDataWorker
+import app.gmaaps.implementation.maintenance.ImportExportPrefsImpl
+import app.gmaaps.implementation.receivers.KeepAliveWorker
+import app.gmaaps.implementation.scenes.SceneExpiryWorker
+import app.gmaaps.plugins.aps.loop.runningMode.RunningModeExpiryWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.DataSyncWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadBgWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadDeviceStatusWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadFoodsWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadLastModificationWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadProfileStoreWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadSettingsWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadStatusWorker
+import app.gmaaps.plugins.sync.nsclientV3.workers.LoadTreatmentsWorker
+import app.gmaaps.plugins.sync.smsCommunicator.SmsCommunicatorPlugin
+import app.gmaaps.plugins.sync.xdrip.workers.XdripDataSyncWorker
+import app.gmaaps.workflow.PostCalculationWorker
+import app.gmaaps.workflow.PrepareGraphDataWorker
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -56,3 +56,4 @@ class AppWorkersGraphTest {
         )
     }
 }
+

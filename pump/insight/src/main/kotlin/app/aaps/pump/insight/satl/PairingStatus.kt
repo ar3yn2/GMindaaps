@@ -1,4 +1,4 @@
-package app.aaps.pump.insight.satl
+﻿package app.gmaaps.pump.insight.satl
 
 enum class PairingStatus(val id: Int) {
     CONFIRMED(11835),

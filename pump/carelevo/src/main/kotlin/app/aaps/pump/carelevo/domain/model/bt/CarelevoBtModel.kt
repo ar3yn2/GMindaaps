@@ -1,15 +1,15 @@
-package app.aaps.pump.carelevo.domain.model.bt
+﻿package app.gmaaps.pump.carelevo.domain.model.bt
 
-import app.aaps.pump.carelevo.domain.model.bt.InfusionInfoResult.Companion.codeToInfusionInfoCommand
-import app.aaps.pump.carelevo.domain.model.bt.InfusionModeResult.Companion.codeToInfusionModeCommand
-import app.aaps.pump.carelevo.domain.model.bt.PumpStateResult.Companion.codeToPumpStateCommand
-import app.aaps.pump.carelevo.domain.model.bt.Result.Companion.codeToResultCommand
-import app.aaps.pump.carelevo.domain.model.bt.SafetyCheckResult.Companion.codeToSafetyCheckCommand
-import app.aaps.pump.carelevo.domain.model.bt.SetBasalProgramResult.Companion.codeToSetBasalProgramCommand
-import app.aaps.pump.carelevo.domain.model.bt.SetBolusProgramResult.Companion.codeToSetBolusProgramCommand
-import app.aaps.pump.carelevo.domain.model.bt.StopPumpResult.Companion.codeToStopPumpCommand
-import app.aaps.pump.carelevo.domain.type.AlarmCause
-import app.aaps.pump.carelevo.domain.type.AlarmType
+import app.gmaaps.pump.carelevo.domain.model.bt.InfusionInfoResult.Companion.codeToInfusionInfoCommand
+import app.gmaaps.pump.carelevo.domain.model.bt.InfusionModeResult.Companion.codeToInfusionModeCommand
+import app.gmaaps.pump.carelevo.domain.model.bt.PumpStateResult.Companion.codeToPumpStateCommand
+import app.gmaaps.pump.carelevo.domain.model.bt.Result.Companion.codeToResultCommand
+import app.gmaaps.pump.carelevo.domain.model.bt.SafetyCheckResult.Companion.codeToSafetyCheckCommand
+import app.gmaaps.pump.carelevo.domain.model.bt.SetBasalProgramResult.Companion.codeToSetBasalProgramCommand
+import app.gmaaps.pump.carelevo.domain.model.bt.SetBolusProgramResult.Companion.codeToSetBolusProgramCommand
+import app.gmaaps.pump.carelevo.domain.model.bt.StopPumpResult.Companion.codeToStopPumpCommand
+import app.gmaaps.pump.carelevo.domain.type.AlarmCause
+import app.gmaaps.pump.carelevo.domain.type.AlarmType
 
 internal interface PatchResultModel
 

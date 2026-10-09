@@ -1,6 +1,6 @@
-package app.aaps.di
+﻿package app.gmaaps.di
 
-import app.aaps.core.interfaces.plugin.PluginBase
+import app.gmaaps.core.interfaces.plugin.PluginBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.kotlin.mock
@@ -77,3 +77,4 @@ class PluginListMergeTest {
         assertThat(problems).isEmpty()
     }
 }
+

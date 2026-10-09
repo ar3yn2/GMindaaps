@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.common.bledriver.pod.definition
+﻿package app.gmaaps.pump.omnipod.common.bledriver.pod.definition
 
-import app.aaps.pump.omnipod.common.bledriver.pod.util.HasValue
+import app.gmaaps.pump.omnipod.common.bledriver.pod.util.HasValue
 
 enum class PodStatus(override val value: Byte) : HasValue {
 
@@ -24,3 +24,4 @@ enum class PodStatus(override val value: Byte) : HasValue {
 
     fun isRunning(): Boolean = this == RUNNING_ABOVE_MIN_VOLUME || this == RUNNING_BELOW_MIN_VOLUME
 }
+

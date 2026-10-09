@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.awaitEachGesture
@@ -33,10 +33,10 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import app.aaps.core.data.format.NumberFormat
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.ui.CoreUiStrings
-import app.aaps.core.ui.compose.dialogs.ValueInputDialog
+import app.gmaaps.core.data.format.NumberFormat
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.ui.CoreUiStrings
+import app.gmaaps.core.ui.compose.dialogs.ValueInputDialog
 import kotlinx.coroutines.delay
 import kotlin.math.pow
 import kotlin.math.roundToInt
@@ -351,3 +351,4 @@ fun RepeatingIconButton(
         content()
     }
 }
+

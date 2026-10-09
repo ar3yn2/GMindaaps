@@ -1,14 +1,14 @@
-package app.aaps.ui.compose.loopSheet
+﻿package app.gmaaps.ui.compose.loopSheet
 
-import app.aaps.core.interfaces.aps.Loop
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.ProfileFunction
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventAcceptOpenLoopChange
-import app.aaps.core.interfaces.rx.events.EventLoopUpdateGui
-import app.aaps.core.interfaces.rx.events.EventNewOpenLoopNotification
-import app.aaps.core.interfaces.rx.events.EventRefreshOverview
+import app.gmaaps.core.interfaces.aps.Loop
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.ProfileFunction
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventAcceptOpenLoopChange
+import app.gmaaps.core.interfaces.rx.events.EventLoopUpdateGui
+import app.gmaaps.core.interfaces.rx.events.EventNewOpenLoopNotification
+import app.gmaaps.core.interfaces.rx.events.EventRefreshOverview
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -58,3 +58,4 @@ internal class LoopActionViewModelTest {
         assertThat(state.reason).isEmpty()
     }
 }
+

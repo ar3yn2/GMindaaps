@@ -1,4 +1,4 @@
-package app.aaps.pump.common.defs
+﻿package app.gmaaps.pump.common.defs
 
 enum class PumpTypeGroupConfig {
     All,

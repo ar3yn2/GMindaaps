@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleCommand
 
 /**
  * `CMD_BUZZ_CHANGE_REQ` (0x18) → `CMD_BUZZ_CHANGE_RES` (0x78). Turns the patch buzzer reminder on/off.
@@ -33,3 +33,4 @@ class BuzzModeCommand(
         private const val MIN_RESPONSE_LENGTH = 2
     }
 }
+

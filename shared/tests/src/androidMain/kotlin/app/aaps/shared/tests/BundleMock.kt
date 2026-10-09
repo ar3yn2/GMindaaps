@@ -1,4 +1,4 @@
-package app.aaps.shared.tests
+﻿package app.gmaaps.shared.tests
 
 import android.os.Build
 import android.os.Bundle

@@ -1,7 +1,7 @@
-package app.aaps.plugins.source.instara
+﻿package app.gmaaps.plugins.source.instara
 
-import app.aaps.core.ui.compose.preference.PreferenceSubScreenDef
-import app.aaps.shared.tests.TestBaseWithProfile
+import app.gmaaps.core.ui.compose.preference.PreferenceSubScreenDef
+import app.gmaaps.shared.tests.TestBaseWithProfile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -25,3 +25,4 @@ class InstaraPluginTest : TestBaseWithProfile() {
         assertThat(instaraPlugin.getPreferenceScreenContent()).isInstanceOf(PreferenceSubScreenDef::class.java)
     }
 }
+

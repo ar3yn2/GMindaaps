@@ -1,8 +1,8 @@
-package app.aaps.implementation.alerts
+﻿package app.gmaaps.implementation.alerts
 
-import app.aaps.core.interfaces.alerts.ReminderScheduler
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.alerts.ReminderScheduler
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -92,3 +92,4 @@ class IosReminderScheduler(
         const val IDENTIFIER_PREFIX = "aaps-reminder-"
     }
 }
+

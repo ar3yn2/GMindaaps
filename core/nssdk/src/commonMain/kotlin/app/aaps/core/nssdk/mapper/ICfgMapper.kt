@@ -1,7 +1,7 @@
-package app.aaps.core.nssdk.mapper
+﻿package app.gmaaps.core.nssdk.mapper
 
-import app.aaps.core.nssdk.localmodel.treatment.NSICfg
-import app.aaps.core.nssdk.remotemodel.RemoteICfg
+import app.gmaaps.core.nssdk.localmodel.treatment.NSICfg
+import app.gmaaps.core.nssdk.remotemodel.RemoteICfg
 
 internal fun RemoteICfg?.toNSICfg(): NSICfg? {
 

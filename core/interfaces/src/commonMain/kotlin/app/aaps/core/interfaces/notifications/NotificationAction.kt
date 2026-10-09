@@ -1,8 +1,9 @@
-package app.aaps.core.interfaces.notifications
+﻿package app.gmaaps.core.interfaces.notifications
 
-import app.aaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.keys.interfaces.TextRef
 
 data class NotificationAction(
     val buttonText: TextRef,
     val action: () -> Unit
 )
+

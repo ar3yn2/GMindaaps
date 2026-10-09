@@ -1,7 +1,7 @@
-package app.aaps.database.persistence.converters
+﻿package app.gmaaps.database.persistence.converters
 
-import app.aaps.core.data.model.NE
-import app.aaps.database.entities.data.NewEntries
+import app.gmaaps.core.data.model.NE
+import app.gmaaps.database.entities.data.NewEntries
 
 fun NewEntries.fromDb(): NE =
     NE(
@@ -19,3 +19,4 @@ fun NewEntries.fromDb(): NE =
         totalDailyDoses = this.totalDailyDoses.asSequence().map { it.fromDb() }.toList(),
         heartRates = this.heartRates.asSequence().map { it.fromDb() }.toList()
     )
+

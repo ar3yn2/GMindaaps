@@ -1,4 +1,4 @@
-package app.aaps.core.data.format
+﻿package app.gmaaps.core.data.format
 
 import java.math.RoundingMode
 import java.text.DecimalFormat
@@ -47,3 +47,4 @@ actual object NumberFormatPlatform {
             }
         }
 }
+

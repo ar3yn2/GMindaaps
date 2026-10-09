@@ -1,7 +1,7 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
-import app.aaps.pump.carelevo.ble.BleResponse
+import app.gmaaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleResponse
 
 /**
  * `CMD_INFUSION_INFO_REQ` (0x31) → `CMD_INFUSION_INFO_RPT` (0x91). The periodic status read: reservoir,
@@ -92,3 +92,4 @@ data class InfusionInfoResponse(
     val currentInfusedProgramVolume: Double,
     val realInfusedTime: Int
 ) : BleResponse
+

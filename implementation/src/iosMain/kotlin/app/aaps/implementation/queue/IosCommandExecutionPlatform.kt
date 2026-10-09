@@ -1,4 +1,4 @@
-package app.aaps.implementation.queue
+﻿package app.gmaaps.implementation.queue
 
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
@@ -62,3 +62,4 @@ class IosCommandExecutionPlatform() : CommandExecutionPlatform {
 
     override suspend fun restartBluetooth() = error("Bluetooth cannot be restarted on iOS; guard with canRestartBluetooth")
 }
+

@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -47,3 +47,4 @@ internal fun AapsTopAppBarWithNavAndActionsPreview() {
         )
     }
 }
+

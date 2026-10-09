@@ -1,6 +1,6 @@
-package app.aaps.pump.omnipod.eros.driver.exception;
+package app.gmaaps.pump.omnipod.eros.driver.exception;
 
-import app.aaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoDetailedStatus;
+import app.gmaaps.pump.omnipod.eros.driver.communication.message.response.podinfo.PodInfoDetailedStatus;
 
 public class PodFaultException extends OmnipodException {
     private final PodInfoDetailedStatus detailedStatus;
@@ -14,3 +14,4 @@ public class PodFaultException extends OmnipodException {
         return detailedStatus;
     }
 }
+

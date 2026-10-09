@@ -1,4 +1,4 @@
-package app.aaps.pump.equil.database
+﻿package app.gmaaps.pump.equil.database
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -26,3 +26,4 @@ abstract class EquilHistoryPumpDao {
     @Query("SELECT * from $TABLE_EQUIL_HISTORY_PUMP WHERE serialNumber=:serialNumber and eventTimestamp >= :startTime and eventTimestamp<=:endTime ORDER BY eventTimestamp DESC")
     abstract suspend fun allFromByType(startTime: Long, endTime: Long, serialNumber: String): List<EquilHistoryPump>
 }
+

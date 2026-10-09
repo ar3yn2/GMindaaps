@@ -1,4 +1,4 @@
-package app.aaps.plugins.automation
+﻿package app.gmaaps.plugins.automation
 
 import kotlin.test.Test
 import kotlin.test.assertTrue
@@ -26,3 +26,4 @@ class IosLocationPermissionsTest {
         assertTrue(permissions.groups().isEmpty())
     }
 }
+

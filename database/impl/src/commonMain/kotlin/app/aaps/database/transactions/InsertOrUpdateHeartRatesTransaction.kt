@@ -1,6 +1,6 @@
-package app.aaps.database.transactions
+﻿package app.gmaaps.database.transactions
 
-import app.aaps.database.entities.HeartRate
+import app.gmaaps.database.entities.HeartRate
 
 /**
  * Batch variant of [InsertOrUpdateHeartRateTransaction]. Runs all inserts/updates inside
@@ -27,3 +27,4 @@ class InsertOrUpdateHeartRatesTransaction(private val heartRates: List<HeartRate
 
     data class TransactionResult(val inserted: List<HeartRate>, val updated: List<HeartRate>)
 }
+

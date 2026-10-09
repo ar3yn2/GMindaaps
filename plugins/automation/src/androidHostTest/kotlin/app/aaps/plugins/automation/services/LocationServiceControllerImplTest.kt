@@ -1,8 +1,8 @@
-package app.aaps.plugins.automation.services
+﻿package app.gmaaps.plugins.automation.services
 
 import android.content.Context
-import app.aaps.core.interfaces.notifications.NotificationHolder
-import app.aaps.shared.tests.TestBase
+import app.gmaaps.core.interfaces.notifications.NotificationHolder
+import app.gmaaps.shared.tests.TestBase
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -15,7 +15,7 @@ import org.mockito.kotlin.verify
 import org.mockito.kotlin.whenever
 
 /**
- * Covers the Android implementation of [app.aaps.core.interfaces.location.LocationServiceController].
+ * Covers the Android implementation of [app.gmaaps.core.interfaces.location.LocationServiceController].
  *
  * Narrow on purpose: `ActivityCompat.checkSelfPermission` is a static call and the unit-test Android
  * jar answers it with 0, which happens to equal PERMISSION_GRANTED, so the permission-denied branch
@@ -64,3 +64,4 @@ class LocationServiceControllerImplTest : TestBase() {
         verify(context).stopService(anyOrNull())
     }
 }
+

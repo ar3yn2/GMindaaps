@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose
+﻿package app.gmaaps.core.ui.compose
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.runtime.Composable
@@ -15,3 +15,4 @@ data class ToolbarConfig(
     val navigationIcon: @Composable () -> Unit,
     val actions: @Composable RowScope.() -> Unit
 )
+

@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.domain.usecase.patch
+﻿package app.gmaaps.pump.carelevo.domain.usecase.patch
 
-import app.aaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
+import app.gmaaps.pump.carelevo.domain.repository.CarelevoPatchInfoRepository
 import dev.zacsweers.metro.Inject
 import kotlin.time.Clock
 
@@ -22,3 +22,4 @@ class CarelevoPatchNeedleInsertionCheckUseCase @Inject constructor(
         }
     }
 }
+

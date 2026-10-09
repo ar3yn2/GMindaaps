@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.pump
+﻿package app.gmaaps.core.ui.compose.pump
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
@@ -18,7 +18,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.unit.dp
-import app.aaps.core.ui.compose.AapsSpacing
+import app.gmaaps.core.ui.compose.AapsSpacing
 
 @Composable
 fun StepProgressIndicator(
@@ -95,3 +95,4 @@ fun StepProgressIndicator(
         }
     }
 }
+

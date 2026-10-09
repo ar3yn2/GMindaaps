@@ -1,12 +1,12 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.data.model.IDs
-import app.aaps.core.data.model.TT
-import app.aaps.core.interfaces.db.PersistenceLayer
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.InputDuration
-import app.aaps.plugins.automation.elements.InputTempTarget
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.data.model.IDs
+import app.gmaaps.core.data.model.TT
+import app.gmaaps.core.interfaces.db.PersistenceLayer
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.InputDuration
+import app.gmaaps.plugins.automation.elements.InputTempTarget
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.BeforeEach
@@ -96,3 +96,4 @@ class ActionStartTempTargetTest : ActionsTestBase() {
         assertThat(sut.duration.getMinutes().toDouble()).isWithin(0.001).of(30.0)
     }
 }
+

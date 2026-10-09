@@ -1,4 +1,4 @@
-package app.aaps.pump.medtrum.ble
+﻿package app.gmaaps.pump.medtrum.ble
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -21,22 +21,22 @@ import android.os.Handler
 import android.os.HandlerThread
 import android.os.SystemClock
 import androidx.core.app.ActivityCompat
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.pump.ble.BleAdapter
-import app.aaps.core.interfaces.pump.ble.BleGatt
-import app.aaps.core.interfaces.pump.ble.BleScanner
-import app.aaps.core.interfaces.pump.ble.BleTransportListener
-import app.aaps.core.interfaces.pump.ble.PairingState
-import app.aaps.core.interfaces.pump.ble.ScannedDevice
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.events.EventShowSnackbar
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.pump.medtrum.comm.ManufacturerData
-import app.aaps.pump.medtrum.comm.ReadDataPacket
-import app.aaps.pump.medtrum.comm.WriteCommandPackets
-import app.aaps.pump.medtrum.extension.toInt
-import app.aaps.pump.medtrum.keys.MedtrumBooleanKey
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.pump.ble.BleAdapter
+import app.gmaaps.core.interfaces.pump.ble.BleGatt
+import app.gmaaps.core.interfaces.pump.ble.BleScanner
+import app.gmaaps.core.interfaces.pump.ble.BleTransportListener
+import app.gmaaps.core.interfaces.pump.ble.PairingState
+import app.gmaaps.core.interfaces.pump.ble.ScannedDevice
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.events.EventShowSnackbar
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.pump.medtrum.comm.ManufacturerData
+import app.gmaaps.pump.medtrum.comm.ReadDataPacket
+import app.gmaaps.pump.medtrum.comm.WriteCommandPackets
+import app.gmaaps.pump.medtrum.extension.toInt
+import app.gmaaps.pump.medtrum.keys.MedtrumBooleanKey
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -138,7 +138,7 @@ class MedtrumBleTransportImpl(
     @Synchronized
     override fun connect(from: String, deviceSN: Long): Boolean {
         if (!hasPermission(Manifest.permission.BLUETOOTH_CONNECT) || !hasPermission(Manifest.permission.BLUETOOTH_SCAN)) {
-            rxBus.send(EventShowSnackbar(context.getString(app.aaps.core.ui.R.string.need_connect_permission), EventShowSnackbar.Type.Error))
+            rxBus.send(EventShowSnackbar(context.getString(app.gmaaps.core.ui.R.string.need_connect_permission), EventShowSnackbar.Type.Error))
             aapsLogger.error(LTag.PUMPBTCOMM, "missing permission: $from")
             return false
         }
@@ -578,3 +578,4 @@ class MedtrumBleTransportImpl(
         }
     }
 }
+

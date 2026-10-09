@@ -1,4 +1,4 @@
-package app.aaps.implementation.queue
+﻿package app.gmaaps.implementation.queue
 
 import android.Manifest
 import android.bluetooth.BluetoothManager
@@ -6,8 +6,8 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.PowerManager
 import androidx.core.content.ContextCompat
-import app.aaps.core.utils.extensions.safeDisable
-import app.aaps.core.utils.extensions.safeEnable
+import app.gmaaps.core.utils.extensions.safeDisable
+import app.gmaaps.core.utils.extensions.safeEnable
 import dev.zacsweers.metro.AppScope
 import dev.zacsweers.metro.ContributesBinding
 import dev.zacsweers.metro.Inject
@@ -59,3 +59,4 @@ class AndroidCommandExecutionPlatform(
         delay(1000)
     }
 }
+

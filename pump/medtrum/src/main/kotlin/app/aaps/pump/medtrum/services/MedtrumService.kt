@@ -1,72 +1,72 @@
-package app.aaps.pump.medtrum.services
+﻿package app.gmaaps.pump.medtrum.services
 
 import android.content.Context
 import android.content.Intent
 import android.os.Binder
 import android.os.IBinder
 import android.os.SystemClock
-import app.aaps.core.data.model.BS
-import app.aaps.core.data.time.T
-import app.aaps.core.interfaces.di.MetroMemberInjector
-import app.aaps.core.interfaces.insulin.ConcentrationHelper
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.interfaces.notifications.AlarmSound
-import app.aaps.core.interfaces.notifications.NotificationId
-import app.aaps.core.interfaces.notifications.NotificationLevel
-import app.aaps.core.interfaces.notifications.NotificationManager
-import app.aaps.core.interfaces.plugin.ActivePlugin
-import app.aaps.core.interfaces.profile.Profile
-import app.aaps.core.interfaces.pump.BolusProgressData
-import app.aaps.core.interfaces.pump.DetailedBolusInfo
-import app.aaps.core.interfaces.pump.DetailedBolusInfoStorage
-import app.aaps.core.interfaces.pump.PumpInsulin
-import app.aaps.core.interfaces.pump.PumpSync
-import app.aaps.core.interfaces.queue.CommandQueue
-import app.aaps.core.interfaces.resources.ResourceHelper
-import app.aaps.core.interfaces.rx.bus.RxBus
-import app.aaps.core.interfaces.rx.collectResilient
-import app.aaps.core.interfaces.rx.events.EventAppExit
-import app.aaps.core.interfaces.rx.events.EventPumpStatusChanged
-import app.aaps.core.interfaces.ui.UiInteraction
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.core.keys.interfaces.Preferences
-import app.aaps.core.keys.interfaces.TextRef
-import app.aaps.core.objects.workflow.MetroService
-import app.aaps.pump.medtrum.MedtrumPlugin
-import app.aaps.pump.medtrum.MedtrumPump
-import app.aaps.pump.medtrum.R
-import app.aaps.pump.medtrum.ble.MedtrumBleCallback
-import app.aaps.pump.medtrum.ble.MedtrumBleTransport
-import app.aaps.pump.medtrum.code.ConnectionState
-import app.aaps.pump.medtrum.comm.enums.AlarmState
-import app.aaps.pump.medtrum.comm.enums.MedtrumPumpState
-import app.aaps.pump.medtrum.comm.packets.ActivatePacket
-import app.aaps.pump.medtrum.comm.packets.AuthorizePacket
-import app.aaps.pump.medtrum.comm.packets.CancelBolusPacket
-import app.aaps.pump.medtrum.comm.packets.CancelTempBasalPacket
-import app.aaps.pump.medtrum.comm.packets.ClearPumpAlarmPacket
-import app.aaps.pump.medtrum.comm.packets.GetDeviceTypePacket
-import app.aaps.pump.medtrum.comm.packets.GetRecordPacket
-import app.aaps.pump.medtrum.comm.packets.GetTimePacket
-import app.aaps.pump.medtrum.comm.packets.MedtrumPacket
-import app.aaps.pump.medtrum.comm.packets.NotificationPacket
-import app.aaps.pump.medtrum.comm.packets.PrimePacket
-import app.aaps.pump.medtrum.comm.packets.ResumePumpPacket
-import app.aaps.pump.medtrum.comm.packets.SetBasalProfilePacket
-import app.aaps.pump.medtrum.comm.packets.SetBolusPacket
-import app.aaps.pump.medtrum.comm.packets.SetPatchPacket
-import app.aaps.pump.medtrum.comm.packets.SetTempBasalPacket
-import app.aaps.pump.medtrum.comm.packets.SetTimePacket
-import app.aaps.pump.medtrum.comm.packets.SetTimeZonePacket
-import app.aaps.pump.medtrum.comm.packets.StopPatchPacket
-import app.aaps.pump.medtrum.comm.packets.SubscribePacket
-import app.aaps.pump.medtrum.comm.packets.SynchronizePacket
-import app.aaps.pump.medtrum.keys.MedtrumBooleanKey
-import app.aaps.pump.medtrum.keys.MedtrumIntKey
-import app.aaps.pump.medtrum.keys.MedtrumStringKey
-import app.aaps.pump.medtrum.keys.MedtrumStringNonKey
-import app.aaps.pump.medtrum.util.MedtrumSnUtil
+import app.gmaaps.core.data.model.BS
+import app.gmaaps.core.data.time.T
+import app.gmaaps.core.interfaces.di.MetroMemberInjector
+import app.gmaaps.core.interfaces.insulin.ConcentrationHelper
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.interfaces.notifications.AlarmSound
+import app.gmaaps.core.interfaces.notifications.NotificationId
+import app.gmaaps.core.interfaces.notifications.NotificationLevel
+import app.gmaaps.core.interfaces.notifications.NotificationManager
+import app.gmaaps.core.interfaces.plugin.ActivePlugin
+import app.gmaaps.core.interfaces.profile.Profile
+import app.gmaaps.core.interfaces.pump.BolusProgressData
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfo
+import app.gmaaps.core.interfaces.pump.DetailedBolusInfoStorage
+import app.gmaaps.core.interfaces.pump.PumpInsulin
+import app.gmaaps.core.interfaces.pump.PumpSync
+import app.gmaaps.core.interfaces.queue.CommandQueue
+import app.gmaaps.core.interfaces.resources.ResourceHelper
+import app.gmaaps.core.interfaces.rx.bus.RxBus
+import app.gmaaps.core.interfaces.rx.collectResilient
+import app.gmaaps.core.interfaces.rx.events.EventAppExit
+import app.gmaaps.core.interfaces.rx.events.EventPumpStatusChanged
+import app.gmaaps.core.interfaces.ui.UiInteraction
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.core.keys.interfaces.Preferences
+import app.gmaaps.core.keys.interfaces.TextRef
+import app.gmaaps.core.objects.workflow.MetroService
+import app.gmaaps.pump.medtrum.MedtrumPlugin
+import app.gmaaps.pump.medtrum.MedtrumPump
+import app.gmaaps.pump.medtrum.R
+import app.gmaaps.pump.medtrum.ble.MedtrumBleCallback
+import app.gmaaps.pump.medtrum.ble.MedtrumBleTransport
+import app.gmaaps.pump.medtrum.code.ConnectionState
+import app.gmaaps.pump.medtrum.comm.enums.AlarmState
+import app.gmaaps.pump.medtrum.comm.enums.MedtrumPumpState
+import app.gmaaps.pump.medtrum.comm.packets.ActivatePacket
+import app.gmaaps.pump.medtrum.comm.packets.AuthorizePacket
+import app.gmaaps.pump.medtrum.comm.packets.CancelBolusPacket
+import app.gmaaps.pump.medtrum.comm.packets.CancelTempBasalPacket
+import app.gmaaps.pump.medtrum.comm.packets.ClearPumpAlarmPacket
+import app.gmaaps.pump.medtrum.comm.packets.GetDeviceTypePacket
+import app.gmaaps.pump.medtrum.comm.packets.GetRecordPacket
+import app.gmaaps.pump.medtrum.comm.packets.GetTimePacket
+import app.gmaaps.pump.medtrum.comm.packets.MedtrumPacket
+import app.gmaaps.pump.medtrum.comm.packets.NotificationPacket
+import app.gmaaps.pump.medtrum.comm.packets.PrimePacket
+import app.gmaaps.pump.medtrum.comm.packets.ResumePumpPacket
+import app.gmaaps.pump.medtrum.comm.packets.SetBasalProfilePacket
+import app.gmaaps.pump.medtrum.comm.packets.SetBolusPacket
+import app.gmaaps.pump.medtrum.comm.packets.SetPatchPacket
+import app.gmaaps.pump.medtrum.comm.packets.SetTempBasalPacket
+import app.gmaaps.pump.medtrum.comm.packets.SetTimePacket
+import app.gmaaps.pump.medtrum.comm.packets.SetTimeZonePacket
+import app.gmaaps.pump.medtrum.comm.packets.StopPatchPacket
+import app.gmaaps.pump.medtrum.comm.packets.SubscribePacket
+import app.gmaaps.pump.medtrum.comm.packets.SynchronizePacket
+import app.gmaaps.pump.medtrum.keys.MedtrumBooleanKey
+import app.gmaaps.pump.medtrum.keys.MedtrumIntKey
+import app.gmaaps.pump.medtrum.keys.MedtrumStringKey
+import app.gmaaps.pump.medtrum.keys.MedtrumStringNonKey
+import app.gmaaps.pump.medtrum.util.MedtrumSnUtil
 import dev.zacsweers.metro.Inject
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
@@ -286,9 +286,9 @@ class MedtrumService : MetroService(), MedtrumBleCallback {
                 detailedBolusInfoStorage.add(detailedBolusInfo) // Reinsert
             }
             if (detailedBolusInfo?.bolusType == BS.Type.SMB) {
-                rxBus.send(EventPumpStatusChanged(rh.gs(app.aaps.core.ui.R.string.smb_bolus_u, detailedBolusInfo.insulin)))
+                rxBus.send(EventPumpStatusChanged(rh.gs(app.gmaaps.core.ui.R.string.smb_bolus_u, detailedBolusInfo.insulin)))
             } else {
-                rxBus.send(EventPumpStatusChanged(rh.gs(app.aaps.core.ui.R.string.bolus_u_min, detailedBolusInfo?.insulin ?: 0.0)))
+                rxBus.send(EventPumpStatusChanged(rh.gs(app.gmaaps.core.ui.R.string.bolus_u_min, detailedBolusInfo?.insulin ?: 0.0)))
             }
             waitForBolusProgress()
         }
@@ -300,7 +300,7 @@ class MedtrumService : MetroService(), MedtrumBleCallback {
             aapsLogger.debug(LTag.PUMPCOMM, "Pump time updated")
             notificationManager.post(
                 NotificationId.INSIGHT_DATE_TIME_UPDATED, // :---)
-                rh.gs(app.aaps.core.ui.R.string.pump_time_updated),
+                rh.gs(app.gmaaps.core.ui.R.string.pump_time_updated),
             )
         } else {
             aapsLogger.error(LTag.PUMPCOMM, "Failed to update pump time")
@@ -763,7 +763,7 @@ class MedtrumService : MetroService(), MedtrumBleCallback {
                     sound = AlarmSound.ALARM)
                 // Get pump status, use readStatus here as for loadEvents() we cannot be sure callback is executed
                 scope.launch {
-                    commandQueue.readStatus(rh.gs(app.aaps.core.ui.R.string.device_changed))
+                    commandQueue.readStatus(rh.gs(app.gmaaps.core.ui.R.string.device_changed))
                     // Make sure a 0 temp is set
                     medtrumPump.setFakeTBRIfNotSet()
                 }
@@ -1203,3 +1203,4 @@ class MedtrumService : MetroService(), MedtrumBleCallback {
         }
     }
 }
+

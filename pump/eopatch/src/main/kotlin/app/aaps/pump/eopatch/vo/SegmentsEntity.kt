@@ -1,6 +1,6 @@
-package app.aaps.pump.eopatch.vo
+﻿package app.gmaaps.pump.eopatch.vo
 
-import app.aaps.pump.eopatch.AppConstant
+import app.gmaaps.pump.eopatch.AppConstant
 import java.util.Calendar
 import java.util.function.BiFunction
 
@@ -116,3 +116,4 @@ abstract class SegmentsEntity<T : SegmentEntity<T>> {
         return Pair(list[list.size - 1].endIndex, 48)
     }
 }
+

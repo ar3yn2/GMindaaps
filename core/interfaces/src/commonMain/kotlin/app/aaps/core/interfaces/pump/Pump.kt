@@ -1,18 +1,18 @@
-package app.aaps.core.interfaces.pump
+﻿package app.gmaaps.core.interfaces.pump
 
-import app.aaps.core.data.pump.defs.ManufacturerType
-import app.aaps.core.data.pump.defs.PumpDescription
-import app.aaps.core.data.pump.defs.PumpType
-import app.aaps.core.data.pump.defs.TimeChangeType
-import app.aaps.core.interfaces.pump.actions.CustomAction
-import app.aaps.core.interfaces.pump.actions.CustomActionType
-import app.aaps.core.interfaces.queue.CustomCommand
+import app.gmaaps.core.data.pump.defs.ManufacturerType
+import app.gmaaps.core.data.pump.defs.PumpDescription
+import app.gmaaps.core.data.pump.defs.PumpType
+import app.gmaaps.core.data.pump.defs.TimeChangeType
+import app.gmaaps.core.interfaces.pump.actions.CustomAction
+import app.gmaaps.core.interfaces.pump.actions.CustomActionType
+import app.gmaaps.core.interfaces.queue.CustomCommand
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.serialization.json.JsonObject
 
 /**
  * This interface defines the communication from AAPS-core to pump drivers.
- * Pump drivers communicate data changes back to AAPS-core using [app.aaps.core.interfaces.pump.PumpSync].
+ * Pump drivers communicate data changes back to AAPS-core using [app.gmaaps.core.interfaces.pump.PumpSync].
  *
  * Created by mike on 04.06.2016.
  */
@@ -229,7 +229,7 @@ interface Pump {
     /**
      * Pump model
      *
-     * If new model is covered by driver, model and it's capabilities must be added to [app.aaps.core.data.pump.defs.PumpType]
+     * If new model is covered by driver, model and it's capabilities must be added to [app.gmaaps.core.data.pump.defs.PumpType]
      *
      * @return PumpType
      */
@@ -287,7 +287,7 @@ interface Pump {
 
     /**
      * Executes a custom queued command
-     * See [app.aaps.core.interfaces.queue.CustomCommand] for queuing a custom command.
+     * See [app.gmaaps.core.interfaces.queue.CustomCommand] for queuing a custom command.
      *
      * @param customCommand the custom command to be executed
      * @return PumpEnactResult that represents the command execution result
@@ -320,3 +320,4 @@ interface Pump {
      */
     fun isUseRileyLinkBatteryLevel(): Boolean = false
 }
+

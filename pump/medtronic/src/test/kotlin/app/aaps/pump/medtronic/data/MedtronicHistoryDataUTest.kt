@@ -1,17 +1,17 @@
-package app.aaps.pump.medtronic.data
+﻿package app.gmaaps.pump.medtronic.data
 
-import app.aaps.core.data.configuration.Constants
-import app.aaps.core.data.model.GlucoseUnit
-import app.aaps.core.keys.StringKey
-import app.aaps.core.utils.DateTimeUtil
-import app.aaps.pump.medtronic.MedtronicTestBase
-import app.aaps.pump.medtronic.comm.history.pump.MedtronicPumpHistoryDecoder
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
-import app.aaps.pump.medtronic.comm.history.pump.PumpHistoryEntryType
-import app.aaps.pump.medtronic.data.dto.TempBasalPair
-import app.aaps.pump.medtronic.defs.MedtronicDeviceType
-import app.aaps.pump.medtronic.driver.MedtronicPumpStatus
-import app.aaps.pump.medtronic.util.MedtronicUtil
+import app.gmaaps.core.data.configuration.Constants
+import app.gmaaps.core.data.model.GlucoseUnit
+import app.gmaaps.core.keys.StringKey
+import app.gmaaps.core.utils.DateTimeUtil
+import app.gmaaps.pump.medtronic.MedtronicTestBase
+import app.gmaaps.pump.medtronic.comm.history.pump.MedtronicPumpHistoryDecoder
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntry
+import app.gmaaps.pump.medtronic.comm.history.pump.PumpHistoryEntryType
+import app.gmaaps.pump.medtronic.data.dto.TempBasalPair
+import app.gmaaps.pump.medtronic.defs.MedtronicDeviceType
+import app.gmaaps.pump.medtronic.driver.MedtronicPumpStatus
+import app.gmaaps.pump.medtronic.util.MedtronicUtil
 import com.google.gson.Gson
 import com.google.gson.internal.LinkedTreeMap
 import com.google.gson.reflect.TypeToken
@@ -182,3 +182,4 @@ class MedtronicHistoryDataUTest : MedtronicTestBase() {
     }
 
 }
+

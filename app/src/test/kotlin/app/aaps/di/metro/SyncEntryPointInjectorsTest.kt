@@ -1,8 +1,8 @@
-package app.aaps.di.metro
+﻿package app.gmaaps.di.metro
 
-import app.aaps.plugins.sync.nsclientV3.services.NSClientV3Service
-import app.aaps.plugins.sync.wear.receivers.WearDataReceiver
-import app.aaps.plugins.sync.wear.wearintegration.DataLayerListenerServiceMobile
+import app.gmaaps.plugins.sync.nsclientV3.services.NSClientV3Service
+import app.gmaaps.plugins.sync.wear.receivers.WearDataReceiver
+import app.gmaaps.plugins.sync.wear.wearintegration.DataLayerListenerServiceMobile
 import com.google.common.truth.Truth.assertThat
 import org.junit.jupiter.api.Test
 
@@ -34,3 +34,4 @@ class SyncEntryPointInjectorsTest {
         assertThat(injectors.keys).contains(NSClientV3Service::class)
     }
 }
+

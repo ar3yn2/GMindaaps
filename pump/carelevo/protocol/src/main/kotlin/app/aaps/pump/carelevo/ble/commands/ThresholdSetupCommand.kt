@@ -1,6 +1,6 @@
-package app.aaps.pump.carelevo.ble.commands
+﻿package app.gmaaps.pump.carelevo.ble.commands
 
-import app.aaps.pump.carelevo.ble.BleCommand
+import app.gmaaps.pump.carelevo.ble.BleCommand
 
 /**
  * `CMD_THRESHOLD_SETUP_REQ` (0x1B) → `CMD_THRESHOLD_SETUP_RES` (0x7B). Activation bundle that sets all
@@ -63,3 +63,4 @@ class ThresholdSetupCommand(
         private const val MIN_RESPONSE_LENGTH = 2
     }
 }
+

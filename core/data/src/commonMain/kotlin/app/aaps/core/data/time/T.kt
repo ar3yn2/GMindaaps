@@ -1,4 +1,4 @@
-package app.aaps.core.data.time
+﻿package app.gmaaps.core.data.time
 
 @Suppress("SpellCheckingInspection")
 class T(val time: Long = 0L) {

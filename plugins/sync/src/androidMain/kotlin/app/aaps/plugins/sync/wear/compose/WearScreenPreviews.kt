@@ -1,10 +1,10 @@
-package app.aaps.plugins.sync.wear.compose
+﻿package app.gmaaps.plugins.sync.wear.compose
 
 import android.content.res.Configuration
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.keys.PushedWatchfaceId
+import app.gmaaps.core.keys.PushedWatchfaceId
 
 @Preview(showBackground = true)
 @Preview(showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
@@ -111,3 +111,4 @@ internal fun CwfInfosContentPreview() {
         )
     }
 }
+

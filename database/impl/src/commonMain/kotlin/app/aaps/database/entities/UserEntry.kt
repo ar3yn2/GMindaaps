@@ -1,10 +1,10 @@
-package app.aaps.database.entities
+﻿package app.gmaaps.database.entities
 
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import app.aaps.database.entities.interfaces.DBEntry
-import app.aaps.database.entities.interfaces.DBEntryWithTime
+import app.gmaaps.database.entities.interfaces.DBEntry
+import app.gmaaps.database.entities.interfaces.DBEntryWithTime
 import kotlin.jvm.JvmSuppressWildcards
 
 @Entity(
@@ -227,3 +227,4 @@ data class UserEntry(
         }
     }
 }
+

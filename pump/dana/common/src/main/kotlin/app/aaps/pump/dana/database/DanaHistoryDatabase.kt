@@ -1,4 +1,4 @@
-package app.aaps.pump.dana.database
+﻿package app.gmaaps.pump.dana.database
 
 import android.content.Context
 import androidx.room.Database
@@ -30,3 +30,4 @@ abstract class DanaHistoryDatabase : RoomDatabase() {
                 .build()
     }
 }
+

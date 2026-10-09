@@ -1,4 +1,4 @@
-package app.aaps.core.ui.compose.icons.library.unused
+﻿package app.gmaaps.core.ui.compose.icons.library.unused
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
@@ -170,3 +170,4 @@ val IcPluginConfigBuilder: ImageVector by lazy {
         }
     }.build()
 }
+

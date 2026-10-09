@@ -1,4 +1,4 @@
-package app.aaps.pump.eopatch
+﻿package app.gmaaps.pump.eopatch
 
 interface AppConstant {
     companion object {

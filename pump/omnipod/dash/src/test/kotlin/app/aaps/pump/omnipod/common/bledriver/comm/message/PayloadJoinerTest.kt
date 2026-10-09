@@ -1,7 +1,7 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.message
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.message
 
-import app.aaps.core.utils.toHex
-import app.aaps.pump.omnipod.common.bledriver.comm.packet.PayloadJoiner
+import app.gmaaps.core.utils.toHex
+import app.gmaaps.pump.omnipod.common.bledriver.comm.packet.PayloadJoiner
 import com.google.common.truth.Truth.assertThat
 import com.google.crypto.tink.subtle.Hex
 import org.junit.jupiter.api.Test
@@ -18,3 +18,4 @@ class PayloadJoinerTest {
         assertThat(result.toHex()).isEqualTo(payload)
     }
 }
+

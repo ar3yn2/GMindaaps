@@ -1,6 +1,6 @@
-package app.aaps.core.interfaces.configuration
+﻿package app.gmaaps.core.interfaces.configuration
 
-import app.aaps.core.keys.interfaces.NonPreferenceKey
+import app.gmaaps.core.keys.interfaces.NonPreferenceKey
 
 /**
  * Exposes the union of preference keys whose changes should trigger a republish of
@@ -25,3 +25,4 @@ interface RunningConfigurationKeys {
      */
     fun hotKeys(): List<NonPreferenceKey>
 }
+

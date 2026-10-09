@@ -1,6 +1,6 @@
-package app.aaps.plugins.sync.extensions
+﻿package app.gmaaps.plugins.sync.extensions
 
-import app.aaps.core.data.model.IDs
+import app.gmaaps.core.data.model.IDs
 
 fun IDs.contentEqualsTo(other: IDs): Boolean =
     nightscoutId == other.nightscoutId &&
@@ -11,4 +11,5 @@ fun IDs.contentEqualsTo(other: IDs): Boolean =
         pumpId == other.pumpId &&
         startId == other.startId &&
         endId == other.endId
+
 

@@ -1,4 +1,4 @@
-package app.aaps.pump.carelevo.compose.dialog
+﻿package app.gmaaps.pump.carelevo.compose.dialog
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -80,3 +80,4 @@ private fun CarelevoActionDialogPreview() {
         onSecondaryClick = {}
     )
 }
+

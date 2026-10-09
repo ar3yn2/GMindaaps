@@ -1,13 +1,13 @@
-package app.aaps.core.ui.compose.dialogs
+﻿package app.gmaaps.core.ui.compose.dialogs
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.AnnotatedString
-import app.aaps.core.data.ui.ConfirmationLine
-import app.aaps.core.interfaces.navigation.ElementType
-import app.aaps.core.ui.compose.navigation.color
-import app.aaps.core.ui.compose.navigation.icon
-import app.aaps.core.ui.compose.navigation.label
-import app.aaps.core.ui.compose.stringResourceOrNull
+import app.gmaaps.core.data.ui.ConfirmationLine
+import app.gmaaps.core.interfaces.navigation.ElementType
+import app.gmaaps.core.ui.compose.navigation.color
+import app.gmaaps.core.ui.compose.navigation.icon
+import app.gmaaps.core.ui.compose.navigation.label
+import app.gmaaps.core.ui.compose.stringResourceOrNull
 
 /**
  * Shared confirmation dialog for the action dialogs (wizard, treatment, insulin, temp-basal, care, …).
@@ -67,3 +67,4 @@ fun ElementConfirmationDialog(
         onDismiss = onDismiss
     )
 }
+

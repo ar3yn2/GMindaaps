@@ -1,9 +1,9 @@
-package app.aaps.plugins.sync.nsclientV3.compose
+﻿package app.gmaaps.plugins.sync.nsclientV3.compose
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import app.aaps.core.interfaces.nsclient.NSClientLog
+import app.gmaaps.core.interfaces.nsclient.NSClientLog
 
 @Preview(showBackground = true)
 @Composable
@@ -24,3 +24,4 @@ internal fun NSClientScreenPreview() {
         )
     }
 }
+

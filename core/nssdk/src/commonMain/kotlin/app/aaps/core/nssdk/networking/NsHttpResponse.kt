@@ -1,6 +1,6 @@
-package app.aaps.core.nssdk.networking
+﻿package app.gmaaps.core.nssdk.networking
 
-import app.aaps.core.nssdk.nsSdkJson
+import app.gmaaps.core.nssdk.nsSdkJson
 import kotlinx.serialization.DeserializationStrategy
 
 /**
@@ -57,3 +57,4 @@ internal class NsHttpResponse<T>(
      */
     fun eTagAsLong(): Long? = eTagHeader?.substring(3, eTagHeader.length - 1)?.toLong()
 }
+

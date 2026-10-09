@@ -1,4 +1,4 @@
-package app.aaps.core.nssdk.localmodel.clientcontrol
+﻿package app.gmaaps.core.nssdk.localmodel.clientcontrol
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -44,3 +44,4 @@ enum class ProgressPhase {
     @SerialName("Complete") Complete,
     @SerialName("Cleared") Cleared
 }
+

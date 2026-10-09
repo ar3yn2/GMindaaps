@@ -1,10 +1,10 @@
-package app.aaps.pump.omnipod.common.bledriver.comm.session
+﻿package app.gmaaps.pump.omnipod.common.bledriver.comm.session
 
 import android.annotation.SuppressLint
-import app.aaps.core.interfaces.configuration.Config
-import app.aaps.core.interfaces.logging.AAPSLogger
-import app.aaps.core.interfaces.logging.LTag
-import app.aaps.core.utils.toHex
+import app.gmaaps.core.interfaces.configuration.Config
+import app.gmaaps.core.interfaces.logging.AAPSLogger
+import app.gmaaps.core.interfaces.logging.LTag
+import app.gmaaps.core.utils.toHex
 import org.spongycastle.util.encoders.Hex
 import java.security.SecureRandom
 import javax.crypto.Cipher
@@ -143,3 +143,4 @@ private infix fun ByteArray.xor(other: ByteArray): ByteArray {
     for (i in indices) out[i] = (this[i].toInt() xor other[i].toInt()).toByte()
     return out
 }
+

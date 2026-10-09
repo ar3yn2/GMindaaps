@@ -1,9 +1,9 @@
-package app.aaps.plugins.automation.actions
+﻿package app.gmaaps.plugins.automation.actions
 
-import app.aaps.core.data.model.ICfg
-import app.aaps.core.data.model.PS
-import app.aaps.plugins.automation.AutomationStrings
-import app.aaps.plugins.automation.elements.InputProfileName
+import app.gmaaps.core.data.model.ICfg
+import app.gmaaps.core.data.model.PS
+import app.gmaaps.plugins.automation.AutomationStrings
+import app.gmaaps.plugins.automation.elements.InputProfileName
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runTest
@@ -95,3 +95,4 @@ class ActionProfileSwitchTest : ActionsTestBase() {
         assertThat(sut.inputProfileName.value).isEqualTo("Test")
     }
 }
+

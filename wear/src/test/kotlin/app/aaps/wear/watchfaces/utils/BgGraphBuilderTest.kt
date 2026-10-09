@@ -1,12 +1,12 @@
-package app.aaps.wear.watchfaces.utils
+﻿package app.gmaaps.wear.watchfaces.utils
 
-import app.aaps.core.interfaces.rx.weardata.EventData.SingleBg
-import app.aaps.core.interfaces.rx.weardata.EventData.TreatmentData.Basal
-import app.aaps.core.interfaces.rx.weardata.EventData.TreatmentData.TempBasal
-import app.aaps.core.interfaces.rx.weardata.EventData.TreatmentData.Treatment
-import app.aaps.core.interfaces.sharedPreferences.SP
-import app.aaps.core.interfaces.utils.DateUtil
-import app.aaps.wear.R
+import app.gmaaps.core.interfaces.rx.weardata.EventData.SingleBg
+import app.gmaaps.core.interfaces.rx.weardata.EventData.TreatmentData.Basal
+import app.gmaaps.core.interfaces.rx.weardata.EventData.TreatmentData.TempBasal
+import app.gmaaps.core.interfaces.rx.weardata.EventData.TreatmentData.Treatment
+import app.gmaaps.core.interfaces.sharedPreferences.SP
+import app.gmaaps.core.interfaces.utils.DateUtil
+import app.gmaaps.wear.R
 import com.google.common.truth.Truth.assertThat
 import lecho.lib.hellocharts.model.Line
 import lecho.lib.hellocharts.model.LineChartData
@@ -312,3 +312,4 @@ class BgGraphBuilderTest {
         assertThat(endNoPred).isWithin(1f).of(fuzz(now + 6 * minuteMs))
     }
 }
+
